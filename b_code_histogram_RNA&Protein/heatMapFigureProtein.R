@@ -1,4 +1,4 @@
-# Generate Heatmap by hand
+# Calculate significant changes
 
 ###*****************************
 # INITIAL COMMANDS TO RESET THE SYSTEM
@@ -8,7 +8,7 @@ if (is.integer(dev.list())){dev.off()}
 cat("\014")
 
 # Set Working Directory
-setwd('/Users/umut/GitHub/AG3C_Analyze/initialPaper02c_histogram_RNA&Protein/') # mac computer
+setwd('/Users/umut/GitHub/ecoli_multiple_growth_conditions/b_code_histogram_RNA&Protein/') # mac computer
 ###*****************************
 
 
@@ -83,7 +83,7 @@ conditionName=paste0("condition_",normalizationMethodChoice,"_",deSeqNormChoice,
 
 ###*****************************
 # Load data
-load(file = paste0("../initialPaper01r/",step03,".RData")) #Used for parameters data
+load(file = paste0("../a_results/",step03,".RData")) #Used for parameters data
 assign(x = "mainDataFrame",value = get(step03))
 ###*****************************
 
@@ -255,7 +255,7 @@ METree_x_d = as.dendrogram(METree_x)
 #Reordering
 METree.reorder_x_d=rev(reorder(METree_x_d, desiredOrderNo.x))
 save(list = c("METree_x","METree.reorder_x_d","dist_x","conditionSummary"),
-     file = paste0("../initialPaper02r/treeFile_",step03,".RData"))
+     file = paste0("../b_results/treeFile_",step03,".RData"))
 
 
 ddata <- dendro_data(METree.reorder_x_d, type = "rectangle")
@@ -306,7 +306,8 @@ listColors=c("#bcbddc","#9e9ac8",
              "#bae4b3","#74c476","#238b45",
              "#bdd7e7","#6baed6","#2171b5")
 
-fig02a<-ggplot(conditionSummaryTidy, aes( y=columnName,x= factor(orderNoCurrent)))+
+browser()
+fig02a<-ggplot(conditionSummaryTidy, aes( y=columnName,x=factor(orderNoCurrent)))+
   geom_tile(aes(fill=condition), color="black")+
   #geom_text(aes(label=orderNo,angle = 90))+
   scale_fill_manual(values = listColors)+
@@ -502,7 +503,7 @@ g.main <- gtable_add_rows(g.main, unit.c(unit(0.3, "in")), index$b-3)
 
 figComb=ggdraw(g.main)
 
-figureName=paste0("../initialPaper02f/","heatmap_",step03,".png")
+figureName=paste0("../b_figures/","heatmap_",step03,".png")
 cowplot::save_plot(plot = figComb, filename = figureName,ncol = 4,nrow = 3, dpi=300)
 
 g.main$layout

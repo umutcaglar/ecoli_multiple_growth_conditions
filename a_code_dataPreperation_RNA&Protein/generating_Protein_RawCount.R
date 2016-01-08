@@ -8,7 +8,7 @@ cat("\014")
 
 #***************************
 # Set Working Directory
-setwd('/Users/umut/GitHub/AG3C_Analyze/Code') # mac computer
+setwd('/Users/umut/GitHub/ecoli_multiple_growth_conditions/a_code_dataPreperation_RNA&Protein/') # mac computer
 #***************************
 
 

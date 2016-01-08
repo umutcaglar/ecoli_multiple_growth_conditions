@@ -12,7 +12,7 @@ if (is.integer(dev.list())){dev.off()}
 cat("\014")
 
 # Set Working Directory
-setwd('/Users/umut/GitHub/AG3C_Analyze/Code') # mac computer
+setwd('/Users/umut/GitHub/ecoli_multiple_growth_conditions/a_code_dataPreperation_RNA&Protein/') # mac computer
 #***************************************
 
 #***************************************
@@ -283,7 +283,7 @@ meta_protein %>%
 
 
 # *******************************
-savedFilename=paste0("../initialPaper01r/","metaRawData.Rda")
+savedFilename=paste0("../a_results/","metaRawData.Rda")
 savingList=c("meta_data",
              "meta_rna",
              "meta_protein",
@@ -293,15 +293,15 @@ save(list=savingList,file=savedFilename)
 
 
 # Save as csv files
-savedFilename=paste0("../initialPaper01r/","metaData.csv")
+savedFilename=paste0("../a_results/","metaData.csv")
 write.csv(meta_data, file = savedFilename, row.names = FALSE)
 
-savedFilename=paste0("../initialPaper01r/","metaRNA.csv")
+savedFilename=paste0("../a_results/","metaRNA.csv")
 write.csv(meta_rna, file = savedFilename, row.names = FALSE)
 
-savedFilename=paste0("../initialPaper01r/","metaProtein.csv")
+savedFilename=paste0("../a_results/","metaProtein.csv")
 write.csv(meta_protein, file = savedFilename, row.names = FALSE)
 
-savedFilename=paste0("../initialPaper01r/","sampleSizeDf.csv")
+savedFilename=paste0("../a_results/","sampleSizeDf.csv")
 write.csv(sampleSizeDf, file = savedFilename, row.names = FALSE)
 

@@ -6,7 +6,6 @@
 # Generate DeSeq Object (With P1) function
 generate_p1_object=function(unnormalized_sampleData, meta_condition){
   
-  browser()
   # Generate "p1 Data Object"
   unnormalized_sampleData_p1=unnormalized_sampleData+1;
   rnaObject_p1=DESeqDataSetFromMatrix(countData = unnormalized_sampleData_p1,
@@ -314,7 +313,7 @@ generateNormalizedData=function(unnormalized_rna_Input,
   
   ###*****************************
   #SAVE FILES
-  savedFilename=paste0("../initialPaper01r/",step03,".RData")
+  savedFilename=paste0("../a_results/",step03,".RData")
   save(list = c(step02,step03,conditionName, parametersName),
        file=savedFilename, compress = "xz")
   

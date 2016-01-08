@@ -8,7 +8,7 @@ if (is.integer(dev.list())){dev.off()}
 cat("\014")
 
 # Set Working Directory
-setwd('/Users/umut/GitHub/AG3C_Analyze/initialPaper02c_histogram_RNA&Protein/') # mac computer
+setwd('/Users/umut/GitHub/ecoli_multiple_growth_conditions/b_code_histogram_RNA&Protein/') # mac computer
 ###*****************************
 
 
@@ -84,7 +84,7 @@ conditionName=paste0("condition_",normalizationMethodChoice,"_",deSeqNormChoice,
 
 ###*****************************
 # Load data
-load(file = paste0("../initialPaper01r/",step03,".RData"))
+load(file = paste0("../a_results/",step03,".RData"))
 assign(x = "mainDataFrameRNA",value = get(step03))
 assign(x = "conditionRNA",value = get(conditionName))
 ###*****************************
@@ -172,7 +172,7 @@ conditionName=paste0("condition_",normalizationMethodChoice,"_",deSeqNormChoice,
 
 ###*****************************
 # Load data
-load(file = paste0("../initialPaper01r/",step03,".RData")) #Used for parameters data
+load(file = paste0("../a_results/",step03,".RData")) #Used for parameters data
 assign(x = "mainDataFrameProtein",value = get(step03))
 assign(x = "conditionProtein",value = get(conditionName))
 ###*****************************

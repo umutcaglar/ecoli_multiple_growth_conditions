@@ -19,7 +19,7 @@ if (is.integer(dev.list())){dev.off()}
 cat("\014")
 
 # Set Working Directory
-setwd('/Users/umut/GitHub/AG3C_Analyze/Code') # mac computer
+setwd('/Users/umut/GitHub/ecoli_multiple_growth_conditions/a_code_dataPreperation_RNA&Protein/') # mac computer
 #***************************************
 
 #***************************************
@@ -151,7 +151,7 @@ fig01<-ggplot(p,aes_string(x = "log2amount")) +
 plot(fig01)
 
 ggsave(fig01, 
-       filename = paste0("../figures/log2AmountDensity.pdf"), 
+       filename = paste0("../a_figures/log2AmountDensity.pdf"), 
        width = 8, 
        height = 6, 
        units = "in", 

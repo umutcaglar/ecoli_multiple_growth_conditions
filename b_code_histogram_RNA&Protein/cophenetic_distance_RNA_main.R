@@ -8,7 +8,7 @@ if (is.integer(dev.list())){dev.off()}
 cat("\014")
 
 # Set Working Directory
-setwd('/Users/umut/GitHub/AG3C_Analyze/initialPaper02c_histogram_RNA&Protein/') # mac computer
+setwd('/Users/umut/GitHub/ecoli_multiple_growth_conditions/b_code_histogram_RNA&Protein/') # mac computer
 ###*****************************
 
 
@@ -67,7 +67,7 @@ step03=paste0("normalized_",normalizationMethodChoice,"_",deSeqNormChoice,"_",
 
 ###*****************************
 # Load data
-load(file = paste0("../initialPaper02r/treeFile_",step03,".RData"))
+load(file = paste0("../b_results/treeFile_",step03,".RData"))
 tidyr::gather(conditionSummary, category, condition, growthPhase:batchNumber)->conditionSummary_tidy
 ###*****************************
 
@@ -278,9 +278,9 @@ assign(x=new_name_all_results_Summary,all_results_Summary)
 
 #******************************
 save(list = c(new_name_all_results,new_name_all_results_Summary),
-     file = paste0("../initialPaper02r/clustering_",step03,".RData"))
+     file = paste0("../b_results/clustering_",step03,".RData"))
 
 write.csv(x = all_results_Summary, 
-          file = paste0("../initialPaper02r/clustering_",step03,".csv"),
+          file = paste0("../b_results/clustering_",step03,".csv"),
           row.names = F)
 #******************************

@@ -13,7 +13,7 @@ if (is.integer(dev.list())){dev.off()}
 cat("\014")
 
 # Set Working Directory
-setwd('/Users/umut/GitHub/AG3C_Analyze/initialPaper01c_dataPreperation_RNA&Protein/') # mac computer
+setwd('/Users/umut/GitHub/ecoli_multiple_growth_conditions/a_code_dataPreperation_RNA&Protein/') # mac computer
 ###*****************************
 
 
@@ -36,8 +36,8 @@ unnormalized_rna_data=read.csv(file=paste0("../Processed_RNA/","rnaMatrix_RNA.cs
 unnormalized_mrna_data=read.csv(file=paste0("../Processed_RNA/","rnaMatrix_mRNA.csv")) #The main unnormalized mRNA matrix
 unnormalized_protein_data=read.csv(file=paste0("../Processed_Protein/","proteinMatrix.csv")) # The main unnormalized protein matrix
 unnormalized_protein_data_wo_NA=read.csv(file=paste0("../Processed_Protein/","proteinMatrix_wo_NA.csv")) # The unnormalized protein matrix contains proteins that are measured for all datasets
-meta_rna=read.csv(paste0("../initialPaper01r/","metaRNA.csv")) #Main Meta data Frame
-meta_protein=read.csv(paste0("../initialPaper01r/","metaProtein.csv")) #Main Meta data Frame
+meta_rna=read.csv(paste0("../a_results/","metaRNA.csv")) #Main Meta data Frame
+meta_protein=read.csv(paste0("../a_results/","metaProtein.csv")) #Main Meta data Frame
 ###*****************************
 
 
