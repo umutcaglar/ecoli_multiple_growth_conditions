@@ -21,8 +21,8 @@ library("dplyr")
 
 ###*****************************
 # LOAD DATA
-unnormalized_mrna_data=read.csv(file=paste0("../Processed_RNA/","rnaMatrix_mRNA.csv")) #The main unnormalized mRNA matrix
-unnormalized_protein_data_wo_NA=read.csv(file=paste0("../Processed_Protein/","proteinMatrix_wo_NA.csv")) # The unnormalized protein matrix contains proteins that are measured for all datasets
+unnormalized_mrna_data=read.csv(file=paste0("../a_results/","rnaMatrix_mRNA.csv")) #The main unnormalized mRNA matrix
+unnormalized_protein_data_wo_NA=read.csv(file=paste0("../a_results/","proteinMatrix_wo_NA.csv")) # The unnormalized protein matrix contains proteins that are measured for all datasets
 meta_rna=read.csv(paste0("../a_results/","metaRNA.csv")) #Main Meta data Frame
 meta_protein=read.csv(paste0("../a_results/","metaProtein.csv")) #Main Meta data Frame
 ###*****************************

@@ -98,7 +98,7 @@ rnaMatrix_RNA<-dplyr::filter(rnaMatrix,gene_Type!="rRNA" & gene_Type!="meta")
 
 # *******************************
 
-savedFilename=paste0("../Processed_RNA/","rnaRawData.Rda")
+savedFilename=paste0("../a_results/","rnaRawData.Rda")
 savingList=c("rnaMatrix",
              "rnaMatrix_meta",
              "rnaMatrix_mRNA",
@@ -110,22 +110,22 @@ save(list=savingList,file=savedFilename)
 
 
 # Save as csv files
-savedFilename=paste0("../Processed_RNA/","rnaMatrix.csv")
+savedFilename=paste0("../a_results/","rnaMatrix.csv")
 write.csv(rnaMatrix, file = savedFilename, row.names = FALSE)
 
-savedFilename=paste0("../Processed_RNA/","rnaMatrix_meta.csv")
+savedFilename=paste0("../a_results/","rnaMatrix_meta.csv")
 write.csv(rnaMatrix_meta, file = savedFilename, row.names = FALSE)
 
-savedFilename=paste0("../Processed_RNA/","rnaMatrix_mRNA.csv")
+savedFilename=paste0("../a_results/","rnaMatrix_mRNA.csv")
 write.csv(rnaMatrix_mRNA, file = savedFilename, row.names = FALSE)
 
-savedFilename=paste0("../Processed_RNA/","rnaMatrix_rRNA.csv")
+savedFilename=paste0("../a_results/","rnaMatrix_rRNA.csv")
 write.csv(rnaMatrix_rRNA, file = savedFilename, row.names = FALSE)
 
-savedFilename=paste0("../Processed_RNA/","rnaMatrix_tRNA.csv")
+savedFilename=paste0("../a_results/","rnaMatrix_tRNA.csv")
 write.csv(rnaMatrix_tRNA, file = savedFilename, row.names = FALSE)
 
-savedFilename=paste0("../Processed_RNA/","rnaMatrix_RNA.csv")
+savedFilename=paste0("../a_results/","rnaMatrix_RNA.csv")
 write.csv(rnaMatrix_RNA, file = savedFilename, row.names = FALSE)
 
 ## Drawing Distribution Graph

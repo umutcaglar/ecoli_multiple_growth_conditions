@@ -161,8 +161,8 @@ proteinMatrix %>%
 proteinMatrix_wo_NA <- proteinMatrix[rowSums(is.na(proteinMatrix)) == 0,]
 
 # Save as csv files
-savedFilename=paste0("../Processed_Protein/","proteinMatrix.csv")
+savedFilename=paste0("../a_results/","proteinMatrix.csv")
 write.csv(proteinMatrix, file = savedFilename, row.names = FALSE)
 
-savedFilename=paste0("../Processed_Protein/","proteinMatrix_wo_NA.csv")
+savedFilename=paste0("../a_results/","proteinMatrix_wo_NA.csv")
 write.csv(proteinMatrix_wo_NA, file = savedFilename, row.names = FALSE)
