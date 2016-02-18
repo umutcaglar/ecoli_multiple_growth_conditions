@@ -32,10 +32,10 @@ library("dplyr")
 
 ###*****************************
 # LOAD DATA
-unnormalized_rna_data=read.csv(file=paste0("../Processed_RNA/","rnaMatrix_RNA.csv")) #The main data matrix (includes everything [mRNA , tRNA, RF] )
-unnormalized_mrna_data=read.csv(file=paste0("../Processed_RNA/","rnaMatrix_mRNA.csv")) #The main unnormalized mRNA matrix
-unnormalized_protein_data=read.csv(file=paste0("../Processed_Protein/","proteinMatrix.csv")) # The main unnormalized protein matrix
-unnormalized_protein_data_wo_NA=read.csv(file=paste0("../Processed_Protein/","proteinMatrix_wo_NA.csv")) # The unnormalized protein matrix contains proteins that are measured for all datasets
+unnormalized_rna_data=read.csv(file=paste0("../a_results/","rnaMatrix_RNA.csv")) #The main data matrix (includes everything [mRNA , tRNA, RF] )
+unnormalized_mrna_data=read.csv(file=paste0("../a_results/","rnaMatrix_mRNA.csv")) #The main unnormalized mRNA matrix
+unnormalized_protein_data=read.csv(file=paste0("../a_results/","proteinMatrix.csv")) # The main unnormalized protein matrix
+unnormalized_protein_data_wo_NA=read.csv(file=paste0("../a_results/","proteinMatrix_wo_NA.csv")) # The unnormalized protein matrix contains proteins that are measured for all datasets
 meta_rna=read.csv(paste0("../a_results/","metaRNA.csv")) #Main Meta data Frame
 meta_protein=read.csv(paste0("../a_results/","metaProtein.csv")) #Main Meta data Frame
 ###*****************************
@@ -43,7 +43,7 @@ meta_protein=read.csv(paste0("../a_results/","metaProtein.csv")) #Main Meta data
 
 ###*****************************
 # FUNCTIONS
-source("GB00_DeSeq2_Data_Functions.R")
+source("DeSeq2_Data_Functions.R")
 ###*****************************
 
 
@@ -86,7 +86,7 @@ finalData<-generateNormalizedData(unnormalized_rna_Input=unnormalized_rna_data,
                        #meta_Input=meta_rna,  # meta_rna or meta_protein
                        conditionNumberChoice="uniqueCondition",  # "uniqueCondition", "uniqueCondition02"
                        badDataFilterSetChoice="set02", # "set00", set01" , "set02"
-                       dataTypeChoice="mrna", # can be "rna", "mrna","protein","protein_wo_NA","protein_wo_NAx6"
+                       dataTypeChoice="protein_wo_NA", # can be "rna", "mrna","protein","protein_wo_NA","protein_wo_NAx6"
                        dataTimeChoice="wholeSet", # can be "wholeSet", "exponential", "stationary", "late_stationary"
                        MgLevelChoice="allMg",  # can be "lowMg", "midMg", "highMg", "allMg"
                        NaLevelChoice="allNa",  # can be "lowNa","highNa", "allNa"

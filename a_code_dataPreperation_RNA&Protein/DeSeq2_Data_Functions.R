@@ -310,7 +310,7 @@ generateNormalizedData=function(unnormalized_rna_Input,
   assign(x=parametersName, value = parameters)
   ###*****************************
   
-  
+  browser()
   ###*****************************
   #SAVE FILES
   savedFilename=paste0("../a_results/",step03,".RData")
