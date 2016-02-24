@@ -74,7 +74,7 @@ conditionName=paste0("condition_",normalizationMethodChoice,"_",deSeqNormChoice,
 load(file = paste0("../b_results/treeFile_",step03,".RData"))
 tidyr::gather(conditionSummary, category, condition, growthPhase:batchNumber)->conditionSummary_tidy
 ###*****************************
-
+browser()
 
 ###*****************************
 # Install Functions

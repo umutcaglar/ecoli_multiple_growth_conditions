@@ -40,109 +40,141 @@ source("data_normalization_functions.R")
 
 
 ###*****************************
-# @Title pick_data
-# @Param data name could be 
-#  "rna" (that installs all rna data including mRNA tRNA and RF)
-#  "mrna" (that installs all mrna data)
-#  "protein" (that installs all protein data)
-#  "protein_wo_NA" (that installs protein data with removed NA rows)
-# @Description installs necessary rawData and metaData
-mainData=pick_data(data_name="mrna")
+# The data filtering function that controls sub functions.
+mainData=filter_data(data_name = "mrna", # can be "rna", "mrna", "protein", "protein_wo_NA"
+                     problematic_set = "set03", # can be "set00",set01","set02", "set03"
+                     referenceParameters=c("growthPhase",
+                                           "Mg_mM_Levels", 
+                                           "Na_mM_Levels", 
+                                           "carbonSource", 
+                                           "experiment"),
+                     referenceLevels=c("exponential",
+                                       "baseMg", 
+                                       "baseNa", 
+                                       "glucose", 
+                                       "glucose_time_course"),
+                     experimentVector = c("Stc","Mgl"), # can be "Stc","Ytc","Nas","Agr","Ngr","Mgl","Mgh" // "allEx"
+                     carbonSourceVector = "S", # can be any sub combination of "SYAN"
+                     MgLevelVector = c("baseMg","lowMg"), # can be "lowMg","baseMg","highMg" // "allMg"
+                     NaLevelVector = c("baseNa"), # can be "baseNa","highNa" // "allNa"
+                     growthPhaseVector = c("exponential"), # can be "exponential","stationary","late_stationary" // "allPhase"
+                     filtering_method = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
+                     threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
+                     round_data=TRUE,
+                     sum_technical_replicates=TRUE,
+                     deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf"
+                     normalizationMethodChoice= "noNorm") # can be "vst", "rlog", "log10", "noNorm"
+###*****************************
+
+###*****************************
+#Decompose the container
+deseq_DataObj=mainData[[1]]
+objectName=mainData[[2]]
+
+###*****************************
+
+###*****************************
+# To do
+# Change level boundries for MgLevel, NaLevel, growthPhase
 ###*****************************
 
 
-for(counter01 in 1:2)
+###*****************************
+# Run DESeq2 test For
+if(objectName$normalizationMethodChoice=="noNorm")
 {
   ###*****************************
-  # Remove problematic data sets
-  # problematic data sets are categorized in 3 different sets
-  #@param problematic_set can be one of the three options.
-  # Set 0. No filtering
-  # set 1 all problematic rna related files
-  # set 2 filtered problematic rna related files
-  mainData=filter_bad_quality_data(dataInput = mainData, problematic_set = "set02")
+  # Do the DeSeq2 test
+  test_for="Mg_mM_Levels"
+  DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ",test_for))
+  differentialGeneAnalResults<-DESeq2::DESeq(deseq_DataObj)
+  (res <- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod ="fdr"))
+  mcols(res, use.names=TRUE)  
+  DESeq2::summary.DESeqResults(object = res,alpha = 0.05)
   ###*****************************
   
   
   ###*****************************
-  # @Title pick_experiment
-  # @ParamexperimentVector Experiment vector can be composed of abbrevations of experiment names
-  #   Stc="glucose_time_course", 
-  #   Ytc="glycerol_time_course", 
-  #   Nas="NaCl_stress", 
-  #   Agr="lactate_growth", 
-  #   Ngr="gluconate_growth", 
-  #   Mgl="MgSO4_stress_low", 
-  #   Mgh="MgSO4_stress_high"
-  # @Description it filters the experiments from raw data and meta data 
-  #      also adds remainng experiments to fileName
-  mainData=pick_experiments(dataInput = mainData, experimentVector = c("allEx"))
+  # Prepeare dictionaries
+  if(objectName$pick_data %in% c("rna","mrna"))
+  {
+    dictionary=read.csv(file = "../generateDictionary/nameDictionary_RNA_barrick.csv")
+    colnames(dictionary)[1]<-"id"
+  }
+  if(objectName$pick_data %in% c("protein","protein_wo_NA"))
+  {
+    dictionary=read.csv(file = "../generateDictionary/nameDictionary_Protein.csv")
+    colnames(dictionary)[1]<-"id"
+  }
   ###*****************************
   
   
   ###*****************************
-  # @Title pick_carbonSource
-  # @ParamexperimentVector Experiment vector can be composed of abbrevations of carbon sources
-  #   "S"="glucose_time_course", 
-  #   "Y"="glycerol_time_course", 
-  #   "A="lactate_growth", 
-  #   "N"="gluconate_growth", 
-  # @Description it filters the carbon sources from raw data and meta data 
-  #      also adds remainng carbon sources to fileName
-  mainData=pick_carbonSource(dataInput = mainData, carbonSourceVector="Y")
+  #Update objectName
+  objectName$pick_data=as.character(objectName$pick_data)
+  objectName$test_for=test_for
+  ###*****************************
+  
+  ###*****************************
+  # Generate the metaData 
+  metaData<-as.data.frame(colData(deseq_DataObj))
   ###*****************************
   
   
   ###*****************************
-  # @Title pick_MgLevel
-  # @Param MgLevelVector MgLevel vector can be composed of abbrevations of MgLevel names
-  #   "lowMg"="low Mg levels", 
-  #   "midMg"="midium Mg levels", 
-  #   "highMg"="high Mg levels"
-  # @Description it filters the Mg levels from raw data and meta data 
-  #      also adds remainng Mg levels to fileName
-  mainData=pick_MgLevel(dataInput = mainData, MgLevelVector=c("allMg"))
+  # Prepeare p value data frame
+  vs=paste(as.vector(unique(metaData[[test_for]])),collapse = "");
+  
+  res_df<-as.data.frame(res)
+  res_df<-cbind(id=rownames(res_df),res_df)
+  res_df%>%
+    dplyr::left_join(.,dictionary)%>%
+    dplyr::mutate(signChange=sign(log2FoldChange))-> res_df
+  
+  res_df %>%dplyr::mutate(pick_data=as.vector(objectName$pick_data),
+                          growthPhase=as.vector(objectName$growthPhase_names),
+                          test_for=test_for,
+                          vs=vs)->res_df
+  
+  res_df %>%
+    dplyr::filter(padj<0.05)%>%
+    dplyr::arrange(padj)->res_df_filtered
+  
+  genes_0.05=as.vector(res_df_filtered$gene_name)
   ###*****************************
   
   
   ###*****************************
-  # @Title pick_NaLevel
-  # @Param NaLevelVector NaLevel vector can be composed of abbrevations of NaLevel names
-  #   "baseNa"="midium Na levels", 
-  #   "highNa"="high Na levels"
-  # @Description it filters the Na levels from raw data and meta data 
-  #      also adds remainng Na levels to fileName
-  mainData=pick_NaLevel(dataInput = mainData, NaLevelVector=c("baseNa"))
-  ###*****************************
+  # SAVE FILES
+  # save genes0.05
+  objectName$initial="genes0.05"
+  fileName=paste(objectName,collapse = "_")
+  write.table(x = genes_0.05, 
+              file = paste0("../c_results/",fileName,".csv"),
+              row.names = FALSE,
+              col.names = "genes",
+              quote = FALSE)
   
+  # save resDF
+  objectName$initial="resDf"
+  fileName=paste(objectName,collapse = "_")
+  write.csv(x = res_df, 
+            file = paste0("../c_results/",fileName,".csv"),
+            row.names = FALSE,
+            quote = FALSE)
   
-  ###*****************************
-  # @Title pick_growthPhase
-  # @Param growthPhaseVector growthPhase vector can be composed of abbrevations of growthPhase names
-  #   "exponential" = "exponential phase"
-  #   "stationary" = "stationary phase", 
-  #   "late_stationary" = "late stationary phase"
-  # @Description it filters the growth phase from raw data and meta data 
-  #      also adds remainng chosen growth phase to fileName
-  mainData=pick_growthPhase(dataInput = mainData, growthPhaseVector = c("allPhase"))
-  ###*****************************
-  
-  
-  ###*****************************
-  # @Title filter_rows
-  # @Param fitering method is the way tha we filter out the mon-significant rows
-  #   methods are
-  #   "noFilter" (basically keeps all the rows)
-  #   "meanFilter" (filter out the rows whose mean is below threshold)
-  #   "maxFilter" (filter out the rows whose max is below threshold)
-  #   "sdFilter" (filter out the rows whose standard deviation is below threshold)
-  # @param threshold the threshold related with relevant model. Default is 0.
-  # @Description The function filter out the meaningless rows from data
-  mainData=filter_rows(dataInput=mainData, filtering_method="noFilter")
+  # save resDF
+  objectName$initial="metaData"
+  fileName=paste(objectName,collapse = "_")
+  write.csv(x = metaData, 
+            file = paste0("../c_results/",fileName,".csv"),
+            row.names = FALSE,
+            quote = FALSE)
   ###*****************************
 }
 
-
-
-
-
+if(objectName$normalizationMethodChoice!="noNorm")
+{
+  processedData<-as.data.frame(assay(deseq_DataObj))
+  metaData<-as.data.frame(colData(deseq_DataObj))
+}

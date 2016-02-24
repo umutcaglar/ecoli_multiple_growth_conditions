@@ -81,7 +81,6 @@ conditionName=paste0("condition_",normalizationMethodChoice,"_",deSeqNormChoice,
 ###*****************************
 
 
-
 ###*****************************
 # Load data
 load(file = paste0("../a_results/",step03,".RData"))
@@ -470,7 +469,7 @@ g.main <- gtable_add_rows(g.main, unit.c(unit(0.3, "in")), index$b-3)
 
 figComb=ggdraw(g.main)
 
-figureName=paste0("../b_figure/","heatmap_",step03,".png")
+figureName=paste0("../b_figures/","heatmap_",step03,".png")
 cowplot::save_plot(plot = figComb, filename = figureName,ncol = 4,nrow = 3, dpi=300)
 
 g.main$layout

@@ -86,7 +86,7 @@ conditionName=paste0("condition_",normalizationMethodChoice,"_",deSeqNormChoice,
 load(file = paste0("../a_results/",step03,".RData")) #Used for parameters data
 assign(x = "mainDataFrame",value = get(step03))
 ###*****************************
-
+browser()
 
 ###*****************************
 # Calculate the average of repeated conditions

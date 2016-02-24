@@ -9,7 +9,8 @@ generate_p1_object=function(unnormalized_sampleData, meta_condition){
   # Generate "p1 Data Object"
   unnormalized_sampleData_p1=unnormalized_sampleData+1;
   rnaObject_p1=DESeqDataSetFromMatrix(countData = unnormalized_sampleData_p1,
-                                      colData = meta_condition,design = ~ uniqueCondition)
+                                      colData = meta_condition,
+                                      design = ~ uniqueCondition)
   levelList<-as.character(unique(meta_condition)[["uniqueCondition"]]);
   colData(rnaObject_p1)$uniqueCondition=factor(colData(rnaObject_p1)$uniqueCondition, levels=levelList)
   
@@ -310,7 +311,7 @@ generateNormalizedData=function(unnormalized_rna_Input,
   assign(x=parametersName, value = parameters)
   ###*****************************
   
-  browser()
+
   ###*****************************
   #SAVE FILES
   savedFilename=paste0("../a_results/",step03,".RData")
