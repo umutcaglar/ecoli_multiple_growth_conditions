@@ -63,7 +63,7 @@ mainData=filter_data(dataType = "mrna", # can be "rna", "mrna", "protein", "prot
                      MgLevelVector = c("allMg"), # can be "lowMg","baseMg","highMg" // "allMg"
                      NaLevelVector = c("allNa"), # can be "baseNa","highNa" // "allNa"
                      growthPhaseVector = c("allPhase"), # can be "exponential","stationary","late_stationary" // "allPhase"
-                     filtering_method = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
+                     filterGenes = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
                      threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
                      round_data=TRUE,
                      sum_technical_replicates=TRUE,

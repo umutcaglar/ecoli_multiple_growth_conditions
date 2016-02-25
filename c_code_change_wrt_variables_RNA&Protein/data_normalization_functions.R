@@ -10,7 +10,7 @@ filter_data<-function(dataType, # can be "rna", "mrna", "protein", "protein_wo_N
                       MgLevelVector, # can be "lowMg","baseMg","highMg" // "allMg"
                       NaLevelVector, # can be "baseNa","highNa" // "allNa"
                       growthPhaseVector, # can be "exponential","stationary","late_stationary" // "allPhase"
-                      filtering_method, # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
+                      filterGenes, # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
                       threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
                       round_data,
                       sum_technical_replicates,
@@ -35,7 +35,7 @@ filter_data<-function(dataType, # can be "rna", "mrna", "protein", "protein_wo_N
     mainData_internal=pick_NaLevel(dataInput = mainData_internal, NaLevelVector=NaLevelVector)
     mainData_internal=pick_growthPhase(dataInput = mainData_internal, 
                                        growthPhaseVector = growthPhaseVector)
-    mainData_internal=filter_rows(dataInput=mainData_internal, filtering_method=filtering_method)
+    mainData_internal=filter_rows(dataInput=mainData_internal, filterGenes=filterGenes)
   }
   mainData_internal=sizefactors_deseq(dataInput=mainData_internal, deSeqSfChoice)
   mainData_internal=normalizeData(dataInput=mainData_internal, normalizationMethodChoice)
@@ -720,7 +720,7 @@ pick_growthPhase<-function(dataInput,growthPhaseVector)
 #   "sdFilter" (filter out the rows whose standard deviation is below threshold)
 # @param threshold the threshold related with relevant model. Default is 0.
 # @Description The function filter out the meaningless rows from data
-filter_rows<-function(dataInput, filtering_method, threshold=NA)
+filter_rows<-function(dataInput, filterGenes, threshold=NA)
 {
   # Seperate data input
   objectName=dataInput$objectName
@@ -745,14 +745,14 @@ filter_rows<-function(dataInput, filtering_method, threshold=NA)
   
   
   # Do the filtering
-  if(filtering_method=="noFilter"){rawData = rawData }
-  if(filtering_method=="meanFilter")
+  if(filterGenes=="noFilter"){rawData = rawData }
+  if(filterGenes=="meanFilter")
   {rawData %>%dplyr::filter(meanValue>threshold)->rawData}
   
-  if(filtering_method=="sdFilter")
+  if(filterGenes=="sdFilter")
   {rawData %>% dplyr::filter(sdValue>threshold)->rawData}
   
-  if(filtering_method=="maxFilter")
+  if(filterGenes=="maxFilter")
   {rawData %>% dplyr::filter(maxValue>threshold)->rawData}
   
   # get rid of additional columns
@@ -760,10 +760,10 @@ filter_rows<-function(dataInput, filtering_method, threshold=NA)
     dplyr::select(-meanValue, -maxValue, -sdValue)->rawData
   
   # add information to file name
-  if(filtering_method=="noFilter")
-  {objectName$filter_Name=paste(filtering_method)}
-  if(!filtering_method=="noFilter")
-  {objectName$filter_Name=paste0(filtering_method, "_", threshold)}
+  if(filterGenes=="noFilter")
+  {objectName$filter_Name=paste(filterGenes)}
+  if(!filterGenes=="noFilter")
+  {objectName$filter_Name=paste0(filterGenes, "_", threshold)}
   
   objectName=as.data.frame(objectName)
   
