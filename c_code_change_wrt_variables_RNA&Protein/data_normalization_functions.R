@@ -1,4 +1,3 @@
-
 ###*****************************
 # @Title filter_data function
 # The data filtering function that controls sub functions.
@@ -83,13 +82,14 @@ prepeare_data<-function(dataInput=data_name,
                         round_data=TRUE,
                         sum_technical_replicates=TRUE)
 {
+  
+  # Seperate data input
+  objectName=dataInput$objectName
+  rawData=dataInput$rawData
+  metaData=dataInput$metaData
+  
   if(sum_technical_replicates==TRUE)
   {
-    # Seperate data input
-    objectName=dataInput$objectName
-    rawData=dataInput$rawData
-    metaData=dataInput$metaData
-    
     # Find technical replicates and get rid of them
     metaData2<-cbind(metaData,dataSet2=substr(x = metaData$dataSet,1,8))
     metaData2<-cbind(metaData2,sampleNum2=sub("_.","",metaData$sampleNum))
@@ -100,7 +100,7 @@ prepeare_data<-function(dataInput=data_name,
       dplyr::select_(.dots=c("sampleNum"="sampleNum2",
                              "dataSet"="dataSet2",
                              setdiff(colnames(metaData),
-                                     c("sampleNum","dataSet"))))->metaData2
+                                     c("sampleNum","dataSet"))))->metaData
     
     
     
@@ -115,22 +115,12 @@ prepeare_data<-function(dataInput=data_name,
       dplyr::mutate(dataSet2=substr(x = dataSet,start = 1,stop = 8)) %>%
       dplyr::group_by_(.dots=c(unselected_colnames,"dataSet2"))%>%
       dplyr::summarize(numRead=sum(numRead)) %>%
-      tidyr::spread(key = dataSet2, value=numRead)->rawData2
-    
-    # Package the results
-    dataOutput=list()
-    dataOutput$objectName=objectName
-    dataOutput$rawData=rawData2
-    dataOutput$metaData=metaData2
+      tidyr::spread(key = dataSet2, value=numRead)->rawData
   }
   
   if(round_data==TRUE)
   {
     if("dataOutput" %in% ls()){dataInput=dataOutput}
-    # Seperate data input
-    objectName=dataInput$objectName
-    rawData=dataInput$rawData
-    metaData=dataInput$metaData
     
     # round the measurements
     all_colnames=as.vector(colnames(rawData))
@@ -143,14 +133,18 @@ prepeare_data<-function(dataInput=data_name,
                      selected_colnames) %>%
       dplyr::mutate(numRead=round(numRead))%>%
       dplyr::group_by_(.dots=c(unselected_colnames))%>%
-      tidyr::spread(key = dataSet, value=numRead)->rawData2
-    
-    # Package the results
-    dataOutput=list()
-    dataOutput$objectName=objectName
-    dataOutput$rawData=rawData2
-    dataOutput$metaData=metaData
+      tidyr::spread(key = dataSet, value=numRead)->rawData
   }
+  
+  # Modify objectName
+  if(sum_technical_replicates==TRUE){objectName$sumTechRep="trT"}
+  if(sum_technical_replicates==FALSE){objectName$sumTechRep="trF"}
+  
+  # Package the results
+  dataOutput=list()
+  dataOutput$objectName=objectName
+  dataOutput$rawData=rawData
+  dataOutput$metaData=metaData
   
   
   return(dataOutput)
@@ -352,7 +346,11 @@ pick_experiments<-function(dataInput,experimentVector)
   
   # add information to file name
   if (all(completeExperimentVector == experimentVector))
-  {objectName$experiment_names=c("allEx")}
+  {
+    refLevLong=levels(metaData$experiment)[1]
+    refLev=completeExperimentVector[which(refLevLong==completeExperimentVectorLong)]
+    objectName$experiment_names=paste0(refLev,"AllEx")
+  }
   if (!all(completeExperimentVector == experimentVector))
   {
     refLevLong=levels(metaData$experiment)[1]
@@ -517,7 +515,10 @@ pick_MgLevel<-function(dataInput,MgLevelVector)
   
   # add information to file name
   if (all(completeMgLevelVector == MgLevelVector))
-  {objectName$MgLevel_names=c("allMg")}
+  {
+    refLev=levels(metaData$Mg_mM_Levels)[1]
+    objectName$MgLevel_names=paste0(refLev,"AllMg")
+  }
   if (!all(completeMgLevelVector == MgLevelVector))
   {
     refLev=levels(metaData$Mg_mM_Levels)[1]
@@ -595,7 +596,10 @@ pick_NaLevel<-function(dataInput,NaLevelVector)
   
   # add information to file name
   if (all(completeNaLevelVector == NaLevelVector))
-  {objectName$NaLevel_names=c("allNa")}
+  {
+    refLev=levels(metaData$Na_mM_Levels)[1]
+    objectName$NaLevel_names=paste0(refLev,"AllNa")
+  }
   if (!all(completeNaLevelVector == NaLevelVector))
   {
     refLev=levels(metaData$Na_mM_Levels)[1]
@@ -672,7 +676,13 @@ pick_growthPhase<-function(dataInput,growthPhaseVector)
   
   # add information to file name
   if (all(completeGrowthPhaseVector == growthPhaseVector))
-  {objectName$growthPhase_names=c("allPhase")}
+  {
+    refLev=levels(metaData$growthPhase)[1]
+    if(refLev=="exponential"){refLev="Exp"}
+    if(refLev=="stationary"){refLev="Sta"}
+    if(refLev=="late_stationary"){refLev="Ltsta"}
+    objectName$growthPhase_names=paste0(refLev,"AllPhase")
+  }
   if (!all(completeGrowthPhaseVector == growthPhaseVector))
   {
     refLev=levels(metaData$growthPhase)[1]
@@ -886,8 +896,3 @@ normalizeData<-function(dataInput=mainData_internal, normalizationMethodChoice)
   deseq_Data_Container=list(deseq_DataObj,objectName)
   return(deseq_Data_Container)
 }
-
-
-
-
-

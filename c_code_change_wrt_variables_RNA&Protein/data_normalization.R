@@ -40,9 +40,10 @@ source("data_normalization_functions.R")
 
 
 ###*****************************
+saveFiles=FALSE
 # The data filtering function that controls sub functions.
 mainData=filter_data(data_name = "mrna", # can be "rna", "mrna", "protein", "protein_wo_NA"
-                     problematic_set = "set03", # can be "set00",set01","set02", "set03"
+                     problematic_set = "set02", # can be "set00",set01","set02", "set03"
                      referenceParameters=c("growthPhase",
                                            "Mg_mM_Levels", 
                                            "Na_mM_Levels", 
@@ -53,17 +54,17 @@ mainData=filter_data(data_name = "mrna", # can be "rna", "mrna", "protein", "pro
                                        "baseNa", 
                                        "glucose", 
                                        "glucose_time_course"),
-                     experimentVector = c("Stc","Mgl"), # can be "Stc","Ytc","Nas","Agr","Ngr","Mgl","Mgh" // "allEx"
-                     carbonSourceVector = "S", # can be any sub combination of "SYAN"
-                     MgLevelVector = c("baseMg","lowMg"), # can be "lowMg","baseMg","highMg" // "allMg"
-                     NaLevelVector = c("baseNa"), # can be "baseNa","highNa" // "allNa"
-                     growthPhaseVector = c("exponential"), # can be "exponential","stationary","late_stationary" // "allPhase"
+                     experimentVector = c("allEx"), # can be "Stc","Ytc","Nas","Agr","Ngr","Mgl","Mgh" // "allEx"
+                     carbonSourceVector = "SYAN", # can be any sub combination of "SYAN"
+                     MgLevelVector = c("allMg"), # can be "lowMg","baseMg","highMg" // "allMg"
+                     NaLevelVector = c("allNa"), # can be "baseNa","highNa" // "allNa"
+                     growthPhaseVector = c("allPhase"), # can be "exponential","stationary","late_stationary" // "allPhase"
                      filtering_method = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
                      threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
                      round_data=TRUE,
                      sum_technical_replicates=TRUE,
                      deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf"
-                     normalizationMethodChoice= "noNorm") # can be "vst", "rlog", "log10", "noNorm"
+                     normalizationMethodChoice= "vst") # can be "vst", "rlog", "log10", "noNorm"
 ###*****************************
 
 ###*****************************
@@ -146,35 +147,59 @@ if(objectName$normalizationMethodChoice=="noNorm")
   
   ###*****************************
   # SAVE FILES
-  # save genes0.05
-  objectName$initial="genes0.05"
-  fileName=paste(objectName,collapse = "_")
-  write.table(x = genes_0.05, 
+  if(saveFiles){
+    # save genes0.05
+    objectName$initial="genes0.05"
+    fileName=paste(objectName,collapse = "_")
+    write.table(x = genes_0.05, 
+                file = paste0("../c_results/",fileName,".csv"),
+                row.names = FALSE,
+                col.names = "genes",
+                quote = FALSE)
+    
+    # save resDF
+    objectName$initial="resDf"
+    fileName=paste(objectName,collapse = "_")
+    write.csv(x = res_df, 
               file = paste0("../c_results/",fileName,".csv"),
               row.names = FALSE,
-              col.names = "genes",
               quote = FALSE)
-  
-  # save resDF
-  objectName$initial="resDf"
-  fileName=paste(objectName,collapse = "_")
-  write.csv(x = res_df, 
-            file = paste0("../c_results/",fileName,".csv"),
-            row.names = FALSE,
-            quote = FALSE)
-  
-  # save resDF
-  objectName$initial="metaData"
-  fileName=paste(objectName,collapse = "_")
-  write.csv(x = metaData, 
-            file = paste0("../c_results/",fileName,".csv"),
-            row.names = FALSE,
-            quote = FALSE)
+    
+    # save metaData
+    objectName$initial="metaData"
+    fileName=paste(objectName,collapse = "_")
+    write.csv(x = metaData, 
+              file = paste0("../c_results/",fileName,".csv"),
+              row.names = FALSE,
+              quote = FALSE)
+  }
   ###*****************************
 }
 
 if(objectName$normalizationMethodChoice!="noNorm")
 {
-  processedData<-as.data.frame(assay(deseq_DataObj))
+  res_df<-as.data.frame(assay(deseq_DataObj))
   metaData<-as.data.frame(colData(deseq_DataObj))
+  
+  ###*****************************
+  # SAVE FILES
+  if(saveFiles){
+    
+    # save resDF
+    objectName$initial="resDf"
+    fileName=paste(objectName,collapse = "_")
+    write.csv(x = res_df, 
+              file = paste0("../c_results/",fileName,".csv"),
+              row.names = FALSE,
+              quote = FALSE)
+    
+    # save metaData
+    objectName$initial="metaData"
+    fileName=paste(objectName,collapse = "_")
+    write.csv(x = metaData, 
+              file = paste0("../c_results/",fileName,".csv"),
+              row.names = FALSE,
+              quote = FALSE)
+  }
+  ###*****************************
 }
