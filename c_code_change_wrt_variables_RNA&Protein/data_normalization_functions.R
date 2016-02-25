@@ -12,14 +12,14 @@ filter_data<-function(dataType, # can be "rna", "mrna", "protein", "protein_wo_N
                       growthPhaseVector, # can be "exponential","stationary","late_stationary" // "allPhase"
                       filterGenes, # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
                       threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
-                      round_data,
+                      roundData,
                       sum_technical_replicates,
                       deSeqSfChoice, # can be "regSf", "p1Sf"
                       normalizationMethodChoice) # can be "vst", "rlog", "log10", "noNorm") 
 {
   mainData_internal=pick_data(dataType=dataType)
   mainData_internal=prepeare_data(dataInput = mainData_internal,
-                                  round_data,
+                                  roundData,
                                   sum_technical_replicates)
   for(counter01 in 1:2)
   {
@@ -79,7 +79,7 @@ pick_data<-function(dataType){
 ###*****************************
 # Prepeare data and sum technical replicates
 prepeare_data<-function(dataInput=dataType,
-                        round_data=TRUE,
+                        roundData=TRUE,
                         sum_technical_replicates=TRUE)
 {
   
@@ -118,7 +118,7 @@ prepeare_data<-function(dataInput=dataType,
       tidyr::spread(key = dataSet2, value=numRead)->rawData
   }
   
-  if(round_data==TRUE)
+  if(roundData==TRUE)
   {
     if("dataOutput" %in% ls()){dataInput=dataOutput}
     

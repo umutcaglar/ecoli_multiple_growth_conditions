@@ -65,7 +65,7 @@ mainData=filter_data(dataType = "mrna", # can be "rna", "mrna", "protein", "prot
                      growthPhaseVector = c("allPhase"), # can be "exponential","stationary","late_stationary" // "allPhase"
                      filterGenes = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
                      threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
-                     round_data=TRUE,
+                     roundData=TRUE,
                      sum_technical_replicates=TRUE,
                      deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf"
                      normalizationMethodChoice= "vst") # can be "vst", "rlog", "log10", "noNorm"
