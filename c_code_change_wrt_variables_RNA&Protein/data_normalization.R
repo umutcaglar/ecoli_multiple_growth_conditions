@@ -42,7 +42,8 @@ source("data_normalization_functions.R")
 ###*****************************
 saveFiles=FALSE
 # The data filtering function that controls sub functions.
-mainData=filter_data(dataType = "mrna", # can be "rna", "mrna", "protein", "protein_wo_NA"
+mainData=filter_data(nameGenerator=FALSE,
+                     dataType = "mrna", # can be "rna", "mrna", "protein", "protein_wo_NA"
                      badDataSet = "set02", # can be "set00",set01","set02", "set03"
                      # referenceParameters can be a vector like
                      # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
@@ -70,6 +71,7 @@ mainData=filter_data(dataType = "mrna", # can be "rna", "mrna", "protein", "prot
                      deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf"
                      normalizationMethodChoice= "vst") # can be "vst", "rlog", "log10", "noNorm"
 ###*****************************
+
 
 ###*****************************
 #Decompose the container
@@ -117,7 +119,7 @@ if(objectName$normalizationMethodChoice=="noNorm")
   ###*****************************
   #Update objectName
   objectName$pick_data=as.character(objectName$pick_data)
-  objectName$test_for=test_for
+  objectName$test_for=paste0("_",test_for)
   ###*****************************
   
   ###*****************************
