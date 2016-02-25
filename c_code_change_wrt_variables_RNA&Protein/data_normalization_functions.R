@@ -13,14 +13,14 @@ filter_data<-function(dataType, # can be "rna", "mrna", "protein", "protein_wo_N
                       filterGenes, # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
                       threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
                       roundData,
-                      sum_technical_replicates,
+                      sumTechnicalReplicates,
                       deSeqSfChoice, # can be "regSf", "p1Sf"
                       normalizationMethodChoice) # can be "vst", "rlog", "log10", "noNorm") 
 {
   mainData_internal=pick_data(dataType=dataType)
   mainData_internal=prepeare_data(dataInput = mainData_internal,
                                   roundData,
-                                  sum_technical_replicates)
+                                  sumTechnicalReplicates)
   for(counter01 in 1:2)
   {
     mainData_internal=select_reference_levels(dataInput = mainData_internal, 
@@ -80,7 +80,7 @@ pick_data<-function(dataType){
 # Prepeare data and sum technical replicates
 prepeare_data<-function(dataInput=dataType,
                         roundData=TRUE,
-                        sum_technical_replicates=TRUE)
+                        sumTechnicalReplicates=TRUE)
 {
   
   # Seperate data input
@@ -88,7 +88,7 @@ prepeare_data<-function(dataInput=dataType,
   rawData=dataInput$rawData
   metaData=dataInput$metaData
   
-  if(sum_technical_replicates==TRUE)
+  if(sumTechnicalReplicates==TRUE)
   {
     # Find technical replicates and get rid of them
     metaData2<-cbind(metaData,dataSet2=substr(x = metaData$dataSet,1,8))
@@ -137,8 +137,8 @@ prepeare_data<-function(dataInput=dataType,
   }
   
   # Modify objectName
-  if(sum_technical_replicates==TRUE){objectName$sumTechRep="trT"}
-  if(sum_technical_replicates==FALSE){objectName$sumTechRep="trF"}
+  if(sumTechnicalReplicates==TRUE){objectName$sumTechRep="trT"}
+  if(sumTechnicalReplicates==FALSE){objectName$sumTechRep="trF"}
   
   # Package the results
   dataOutput=list()
