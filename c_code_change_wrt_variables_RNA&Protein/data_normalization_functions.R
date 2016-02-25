@@ -4,7 +4,7 @@
 filter_data<-function(dataType, # can be "rna", "mrna", "protein", "protein_wo_NA"
                       referenceParameters=NA, # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
                       referenceLevels=NA, # c("exponential", "baseMg", "baseNa", "glucose", "glucose_time_course")
-                      problematic_set, # can be "set00","set01","set02", "set03"
+                      badDataSet, # can be "set00","set01","set02", "set03"
                       experimentVector, # can be "Stc","Ytc","Nas","Agr","Ngr","Mgl","Mgh" // "allEx"
                       carbonSourceVector, # can be any sub combination of "SYAN"
                       MgLevelVector, # can be "lowMg","baseMg","highMg" // "allMg"
@@ -26,7 +26,7 @@ filter_data<-function(dataType, # can be "rna", "mrna", "protein", "protein_wo_N
     mainData_internal=select_reference_levels(dataInput = mainData_internal, 
                                               referenceParameters,referenceLevels)
     mainData_internal=filter_bad_quality_data(dataInput = mainData_internal, 
-                                              problematic_set = problematic_set)
+                                              badDataSet = badDataSet)
     mainData_internal=pick_experiments(dataInput = mainData_internal, 
                                        experimentVector = experimentVector)
     mainData_internal=pick_carbonSource(dataInput = mainData_internal, 
@@ -154,35 +154,35 @@ prepeare_data<-function(dataInput=dataType,
 ###*****************************
 # Remove problematic data sets
 # problematic data sets are categorized in 3 different sets
-#@param problematic_set can be one of the three options.
+#@param badDataSet can be one of the three options.
 # Set 0. No filtering
 # set 1 all problematic rna related files
 # set 2 filtered problematic rna related files
 # set 3 test file to filter our random genes 
-filter_bad_quality_data<-function(dataInput,problematic_set)
+filter_bad_quality_data<-function(dataInput,badDataSet)
 {
   complete_problematicSets=c("set00","set01","set02", "set03")
-  if(length(problematic_set)!=1 | !problematic_set %in% complete_problematicSets)
+  if(length(badDataSet)!=1 | !badDataSet %in% complete_problematicSets)
   {stop(paste0("there should be only one set and it should be one of ",
                paste(complete_problematicSets,collapse = " ")))}
   
-  if(problematic_set=="set00")
-  {badDataSet=c()}
-  if(problematic_set=="set01")
-  {badDataSet=c("MURI_029","MURI_067","MURI_075","MURI_084",
+  if(badDataSet=="set00")
+  {badDataVector=c()}
+  if(badDataSet=="set01")
+  {badDataVector=c("MURI_029","MURI_067","MURI_075","MURI_084",
                 "MURI_086","MURI_091","MURI_136","MURI_138")}
-  if(problematic_set=="set02")
-  {badDataSet=c("MURI_029","MURI_067","MURI_075","MURI_084",
+  if(badDataSet=="set02")
+  {badDataVector=c("MURI_029","MURI_067","MURI_075","MURI_084",
                 "MURI_136","MURI_138")}
-  if(problematic_set=="set03")
-  {badDataSet=c("MURI_029","MURI_067","MURI_075","MURI_084",
+  if(badDataSet=="set03")
+  {badDataVector=c("MURI_029","MURI_067","MURI_075","MURI_084",
                 "MURI_136","MURI_138","MURI_131","MURI_119","MURI_107")}
   
   #find related samples
   all_colnames=as.vector(colnames(dataInput$rawData))
-  if(problematic_set!="set00")
-  {badDataSet_fullName=grep(paste(badDataSet,collapse = "|"),all_colnames,value = TRUE)}
-  if(problematic_set=="set00"){badDataSet_fullName=vector()}
+  if(badDataSet!="set00")
+  {badDataVector_fullName=grep(paste(badDataVector,collapse = "|"),all_colnames,value = TRUE)}
+  if(badDataSet=="set00"){badDataVector_fullName=vector()}
   
   
   # Seperate data input
@@ -191,17 +191,17 @@ filter_bad_quality_data<-function(dataInput,problematic_set)
   metaData=dataInput$metaData
   
   # find remaining columns in raw data
-  if(length(badDataSet_fullName)!=0){
+  if(length(badDataVector_fullName)!=0){
     rawData %>%
-      dplyr::select_(.dots=paste0("-",badDataSet_fullName))->rawData
+      dplyr::select_(.dots=paste0("-",badDataVector_fullName))->rawData
     
     # find remaining rows in meta data
     metaData %>%
-      dplyr::filter(!dataSet %in% badDataSet_fullName) ->metaData
+      dplyr::filter(!dataSet %in% badDataVector_fullName) ->metaData
   }
   
   # add information to file name
-  objectName$bad_data_set=problematic_set
+  objectName$bad_data_set=badDataSet
   objectName=as.data.frame(objectName)
   
   # Package the results
