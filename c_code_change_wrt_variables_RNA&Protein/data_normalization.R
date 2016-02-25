@@ -42,13 +42,17 @@ source("data_normalization_functions.R")
 ###*****************************
 saveFiles=FALSE
 # The data filtering function that controls sub functions.
-mainData=filter_data(data_name = "mrna", # can be "rna", "mrna", "protein", "protein_wo_NA"
+mainData=filter_data(dataType = "mrna", # can be "rna", "mrna", "protein", "protein_wo_NA"
                      problematic_set = "set02", # can be "set00",set01","set02", "set03"
+                     # referenceParameters can be a vector like
+                     # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
                      referenceParameters=c("growthPhase",
                                            "Mg_mM_Levels", 
                                            "Na_mM_Levels", 
                                            "carbonSource", 
                                            "experiment"),
+                     # referenceLevels can be a vector like
+                     # c("exponential", "baseMg", "baseNa", "glucose", "glucose_time_course")
                      referenceLevels=c("exponential",
                                        "baseMg", 
                                        "baseNa", 

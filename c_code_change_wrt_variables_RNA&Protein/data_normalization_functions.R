@@ -1,9 +1,9 @@
 ###*****************************
 # @Title filter_data function
 # The data filtering function that controls sub functions.
-filter_data<-function(data_name, # can be "rna", "mrna", "protein", "protein_wo_NA"
-                      referenceParameters=NA,
-                      referenceLevels=NA,
+filter_data<-function(dataType, # can be "rna", "mrna", "protein", "protein_wo_NA"
+                      referenceParameters=NA, # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
+                      referenceLevels=NA, # c("exponential", "baseMg", "baseNa", "glucose", "glucose_time_course")
                       problematic_set, # can be "set00","set01","set02", "set03"
                       experimentVector, # can be "Stc","Ytc","Nas","Agr","Ngr","Mgl","Mgh" // "allEx"
                       carbonSourceVector, # can be any sub combination of "SYAN"
@@ -17,7 +17,7 @@ filter_data<-function(data_name, # can be "rna", "mrna", "protein", "protein_wo_
                       deSeqSfChoice, # can be "regSf", "p1Sf"
                       normalizationMethodChoice) # can be "vst", "rlog", "log10", "noNorm") 
 {
-  mainData_internal=pick_data(data_name=data_name)
+  mainData_internal=pick_data(dataType=dataType)
   mainData_internal=prepeare_data(dataInput = mainData_internal,
                                   round_data,
                                   sum_technical_replicates)
@@ -52,23 +52,23 @@ filter_data<-function(data_name, # can be "rna", "mrna", "protein", "protein_wo_
 #  "protein" (that installs all protein data)
 #  "protein_wo_NA" (that installs protein data with removed NA rows)
 # @Description installs necessary rawData and metaData
-pick_data<-function(data_name){
-  if(! data_name %in% c("rna", "mrna", "protein", "protein_wo_NA"))
-  {stop("data_name should be one of those rna, mrna, protein, protein_wo")}
-  objectName=c(initial="unnormalized", pick_data=data_name)
+pick_data<-function(dataType){
+  if(! dataType %in% c("rna", "mrna", "protein", "protein_wo_NA"))
+  {stop("dataType should be one of those rna, mrna, protein, protein_wo")}
+  objectName=c(initial="unnormalized", pick_data=dataType)
   
-  if(data_name=="rna")
+  if(dataType=="rna")
   {rawData=read.csv(file=paste0("../a_results/","rnaMatrix_RNA.csv"))}
-  if(data_name=="mrna")
+  if(dataType=="mrna")
   {rawData=read.csv(file=paste0("../a_results/","rnaMatrix_mRNA.csv"))}
-  if(data_name=="protein")
+  if(dataType=="protein")
   {rawData=read.csv(file=paste0("../a_results/","proteinMatrix.csv"))}
-  if(data_name=="protein_wo_NA")
+  if(dataType=="protein_wo_NA")
   {rawData=read.csv(file=paste0("../a_results/","proteinMatrix_wo_NA.csv"))}
   
-  if(data_name %in% c("rna","mrna"))
+  if(dataType %in% c("rna","mrna"))
   {metaData=read.csv(paste0("../a_results/","metaRNA.csv"))}
-  if(data_name %in% c("protein","protein_wo_NA"))
+  if(dataType %in% c("protein","protein_wo_NA"))
   {metaData=read.csv(paste0("../a_results/","metaProtein.csv"))}
   
   output=list(objectName=objectName, rawData=rawData, metaData=metaData)
@@ -78,7 +78,7 @@ pick_data<-function(data_name){
 
 ###*****************************
 # Prepeare data and sum technical replicates
-prepeare_data<-function(dataInput=data_name,
+prepeare_data<-function(dataInput=dataType,
                         round_data=TRUE,
                         sum_technical_replicates=TRUE)
 {
