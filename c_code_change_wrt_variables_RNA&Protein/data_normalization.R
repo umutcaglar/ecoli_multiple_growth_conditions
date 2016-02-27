@@ -20,7 +20,8 @@ cat("\014")
 # Set Working Directory
 # One needs to arrange the correct pathway if this is not umut's computer ;)
 if(as.vector(Sys.info()["effective_user"]=="umut"))
-{setwd('/Users/umut/GitHub/ecoli_multiple_growth_conditions/c_code_change_wrt_variables_RNA&Protein/')} # mac computer
+{setwd(paste0("/Users/umut/GitHub/ecoli_multiple_growth_conditions/",
+              "c_code_change_wrt_variables_RNA&Protein/"))} # mac computer
 ###*****************************
 
 
@@ -40,11 +41,10 @@ source("data_normalization_functions.R")
 
 
 ###*****************************
-saveFiles=FALSE
+saveFiles=TRUE
 # The data filtering function that controls sub functions.
-mainData=filter_data(nameGenerator=FALSE,
-                     dataType = "mrna", # can be "rna", "mrna", "protein", "protein_wo_NA"
-                     badDataSet = "set02", # can be "set00",set01","set02", "set03"
+mainData=filter_data(dataType = "protein_wo_NA", # can be "rna", "mrna", "protein", "protein_wo_NA"
+                     badDataSet = "set00", # can be "set00",set01","set02", "set03"
                      # referenceParameters can be a vector like
                      # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
                      referenceParameters=c("growthPhase",
@@ -54,22 +54,23 @@ mainData=filter_data(nameGenerator=FALSE,
                                            "experiment"),
                      # referenceLevels can be a vector like
                      # c("exponential", "baseMg", "baseNa", "glucose", "glucose_time_course")
-                     referenceLevels=c("exponential",
+                     referenceLevels=c("stationary",
                                        "baseMg", 
                                        "baseNa", 
                                        "glucose", 
                                        "glucose_time_course"),
                      experimentVector = c("allEx"), # can be "Stc","Ytc","Nas","Agr","Ngr","Mgl","Mgh" // "allEx"
-                     carbonSourceVector = "SYAN", # can be any sub combination of "SYAN"
-                     MgLevelVector = c("allMg"), # can be "lowMg","baseMg","highMg" // "allMg"
-                     NaLevelVector = c("allNa"), # can be "baseNa","highNa" // "allNa"
-                     growthPhaseVector = c("allPhase"), # can be "exponential","stationary","late_stationary" // "allPhase"
+                     carbonSourceVector = "SY", # can be any sub combination of "SYAN"
+                     MgLevelVector = c("baseMg"), # can be "lowMg","baseMg","highMg" // "allMg"
+                     NaLevelVector = c("baseNa"), # can be "baseNa","highNa" // "allNa"
+                     # can be "exponential","stationary","late_stationary" // "allPhase"
+                     growthPhaseVector = c("stationary"), 
                      filterGenes = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
                      threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
-                     roundData=FALSE,
+                     roundData=TRUE,
                      sumTechnicalReplicates=TRUE,
                      deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf"
-                     normalizationMethodChoice= "vst") # can be "vst", "rlog", "log10", "noNorm"
+                     normalizationMethodChoice= "noNorm") # can be "vst", "rlog", "log10", "noNorm"
 ###*****************************
 
 
@@ -92,7 +93,7 @@ if(objectName$normalizationMethodChoice=="noNorm")
 {
   ###*****************************
   # Do the DeSeq2 test
-  test_for="Mg_mM_Levels"
+  test_for="carbonSource"
   DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ",test_for))
   differentialGeneAnalResults<-DESeq2::DESeq(deseq_DataObj)
   (res <- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod ="fdr"))

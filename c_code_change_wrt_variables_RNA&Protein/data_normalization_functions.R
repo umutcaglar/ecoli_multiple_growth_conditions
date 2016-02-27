@@ -1,8 +1,7 @@
 ###*****************************
 # @Title filter_data function
 # The data filtering function that controls sub functions.
-filter_data<-function(nameGenerator=FALSE, # only generate file name
-                      dataType, # can be "rna", "mrna", "protein", "protein_wo_NA"
+filter_data<-function(dataType, # can be "rna", "mrna", "protein", "protein_wo_NA"
                       referenceParameters=NA, # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
                       referenceLevels=NA, # c("exponential", "baseMg", "baseNa", "glucose", "glucose_time_course")
                       badDataSet, # can be "set00","set01","set02", "set03"
@@ -18,38 +17,32 @@ filter_data<-function(nameGenerator=FALSE, # only generate file name
                       deSeqSfChoice, # can be "regSf", "p1Sf"
                       normalizationMethodChoice) # can be "vst", "rlog", "log10", "noNorm") 
 {
-  mainData_internal=pick_data(dataType=dataType, nameGenerator)
+  mainData_internal=pick_data(dataType=dataType)
   mainData_internal=prepeare_data(dataInput = mainData_internal,
                                   roundData,
-                                  sumTechnicalReplicates,
-                                  nameGenerator)
-  
+                                  sumTechnicalReplicates)
   for(counter01 in 1:2)
   {
     mainData_internal=select_reference_levels(dataInput = mainData_internal, 
-                                              referenceParameters,referenceLevels,
-                                              nameGenerator)
+                                              referenceParameters,referenceLevels)
     mainData_internal=filter_bad_quality_data(dataInput = mainData_internal, 
-                                              badDataSet = badDataSet,
-                                              nameGenerator)
+                                              badDataSet = badDataSet)
     mainData_internal=pick_experiments(dataInput = mainData_internal, 
-                                       experimentVector = experimentVector,
-                                       nameGenerator)
+                                       experimentVector = experimentVector)
     mainData_internal=pick_carbonSource(dataInput = mainData_internal, 
-                                        carbonSourceVector=carbonSourceVector,
-                                        nameGenerator)
-    mainData_internal=pick_MgLevel(dataInput = mainData_internal, MgLevelVector=MgLevelVector,
-                                   nameGenerator)
-    mainData_internal=pick_NaLevel(dataInput = mainData_internal, NaLevelVector=NaLevelVector,
-                                   nameGenerator)
+                                        carbonSourceVector=carbonSourceVector)
+    mainData_internal=pick_MgLevel(dataInput = mainData_internal, MgLevelVector=MgLevelVector)
+    mainData_internal=pick_NaLevel(dataInput = mainData_internal, NaLevelVector=NaLevelVector)
     mainData_internal=pick_growthPhase(dataInput = mainData_internal, 
-                                       growthPhaseVector = growthPhaseVector,
-                                       nameGenerator = nameGenerator)
-    mainData_internal=filter_rows(dataInput=mainData_internal, filterGenes=filterGenes,
-                                  nameGenerator = nameGenerator)
+                                       growthPhaseVector = growthPhaseVector)
+    mainData_internal=filter_rows(dataInput=mainData_internal, filterGenes=filterGenes)
   }
-  mainData_internal=sizefactors_deseq(dataInput=mainData_internal, deSeqSfChoice, nameGenerator)
-  mainData_internal=normalizeData(dataInput=mainData_internal, normalizationMethodChoice, nameGenerator)
+  mainData_internal=sizefactors_deseq(dataInput=mainData_internal, deSeqSfChoice)
+  mainData_internal=normalizeData(dataInput=mainData_internal, normalizationMethodChoice)
+  
+  for(counter01 in 1:length(mainData_internal$objectName))
+  {mainData_internal$objectName[[counter01]]=as.character(mainData_internal$objectName[[counter01]])}
+  
   return(mainData_internal)
 }
 ###*****************************
@@ -63,32 +56,26 @@ filter_data<-function(nameGenerator=FALSE, # only generate file name
 #  "protein" (that installs all protein data)
 #  "protein_wo_NA" (that installs protein data with removed NA rows)
 # @Description installs necessary rawData and metaData
-pick_data<-function(dataType,nameGenerator=FALSE){
+pick_data<-function(dataType){
   if(! dataType %in% c("rna", "mrna", "protein", "protein_wo_NA"))
   {stop("dataType should be one of those rna, mrna, protein, protein_wo")}
   objectName=c(initial="unnormalized", pick_data=dataType)
   
-  if(!nameGenerator)
-  {
-    if(dataType=="rna")
-    {rawData=read.csv(file=paste0("../a_results/","rnaMatrix_RNA.csv"))}
-    if(dataType=="mrna")
-    {rawData=read.csv(file=paste0("../a_results/","rnaMatrix_mRNA.csv"))}
-    if(dataType=="protein")
-    {rawData=read.csv(file=paste0("../a_results/","proteinMatrix.csv"))}
-    if(dataType=="protein_wo_NA")
-    {rawData=read.csv(file=paste0("../a_results/","proteinMatrix_wo_NA.csv"))}
-  }
+  if(dataType=="rna")
+  {rawData=read.csv(file=paste0("../a_results/","rnaMatrix_RNA.csv"))}
+  if(dataType=="mrna")
+  {rawData=read.csv(file=paste0("../a_results/","rnaMatrix_mRNA.csv"))}
+  if(dataType=="protein")
+  {rawData=read.csv(file=paste0("../a_results/","proteinMatrix.csv"))}
+  if(dataType=="protein_wo_NA")
+  {rawData=read.csv(file=paste0("../a_results/","proteinMatrix_wo_NA.csv"))}
   
   if(dataType %in% c("rna","mrna"))
   {metaData=read.csv(paste0("../a_results/","metaRNA.csv"))}
   if(dataType %in% c("protein","protein_wo_NA"))
   {metaData=read.csv(paste0("../a_results/","metaProtein.csv"))}
   
-  if(nameGenerator==FALSE)
-  {output=list(objectName=objectName, rawData=rawData, metaData=metaData)}
-  if(nameGenerator==TRUE)
-  {output=list(objectName=objectName, metaData=metaData)}
+  output=list(objectName=objectName, rawData=rawData, metaData=metaData)
   return(output)
 }
 ###*****************************
@@ -97,64 +84,60 @@ pick_data<-function(dataType,nameGenerator=FALSE){
 # Prepeare data and sum technical replicates
 prepeare_data<-function(dataInput=dataType,
                         roundData=TRUE,
-                        sumTechnicalReplicates=TRUE,
-                        nameGenerator=FALSE)
+                        sumTechnicalReplicates=TRUE)
 {
   
   # Seperate data input
   objectName=dataInput$objectName
-  if(nameGenerator==FALSE){rawData=dataInput$rawData}
+  rawData=dataInput$rawData
   metaData=dataInput$metaData
   
-  if(!nameGenerator)
+  if(sumTechnicalReplicates==TRUE)
   {
-    if(sumTechnicalReplicates==TRUE)
-    {
-      # Find technical replicates and get rid of them
-      metaData2<-cbind(metaData,dataSet2=substr(x = metaData$dataSet,1,8))
-      metaData2<-cbind(metaData2,sampleNum2=sub("_.","",metaData$sampleNum))
-      metaData2 %>%
-        dplyr::select(-sampleNum,-dataSet)%>%
-        dplyr::group_by(dataSet2)%>%
-        dplyr::filter(row_number(experiment) == 1) %>%
-        dplyr::select_(.dots=c("sampleNum"="sampleNum2",
-                               "dataSet"="dataSet2",
-                               setdiff(colnames(metaData),
-                                       c("sampleNum","dataSet"))))->metaData
-      
-      
-      
-      all_colnames=as.vector(colnames(rawData))
-      selected_colnames=grep(pattern = "MURI*",x = all_colnames,value = TRUE)
-      unselected_colnames=all_colnames[-grep(pattern = "MURI*",x = all_colnames)]
-      
-      rawData %>%
-        tidyr::gather_(key = "dataSet", 
-                       value = "numRead", 
-                       selected_colnames) %>%
-        dplyr::mutate(dataSet2=substr(x = dataSet,start = 1,stop = 8)) %>%
-        dplyr::group_by_(.dots=c(unselected_colnames,"dataSet2"))%>%
-        dplyr::summarize(numRead=sum(numRead)) %>%
-        tidyr::spread(key = dataSet2, value=numRead)->rawData
-    }
+    # Find technical replicates and get rid of them
+    metaData2<-cbind(metaData,dataSet2=substr(x = metaData$dataSet,1,8))
+    metaData2<-cbind(metaData2,sampleNum2=sub("_.","",metaData$sampleNum))
+    metaData2 %>%
+      dplyr::select(-sampleNum,-dataSet)%>%
+      dplyr::group_by(dataSet2)%>%
+      dplyr::filter(row_number(experiment) == 1) %>%
+      dplyr::select_(.dots=c("sampleNum"="sampleNum2",
+                             "dataSet"="dataSet2",
+                             setdiff(colnames(metaData),
+                                     c("sampleNum","dataSet"))))->metaData
     
-    if(roundData==TRUE)
-    {
-      if("dataOutput" %in% ls()){dataInput=dataOutput}
-      
-      # round the measurements
-      all_colnames=as.vector(colnames(rawData))
-      selected_colnames=grep(pattern = "MURI*",x = all_colnames,value = TRUE)
-      unselected_colnames=all_colnames[-grep(pattern = "MURI*",x = all_colnames)]
-      
-      rawData %>%
-        tidyr::gather_(key = "dataSet", 
-                       value = "numRead", 
-                       selected_colnames) %>%
-        dplyr::mutate(numRead=round(numRead))%>%
-        dplyr::group_by_(.dots=c(unselected_colnames))%>%
-        tidyr::spread(key = dataSet, value=numRead)->rawData
-    }
+    
+    
+    all_colnames=as.vector(colnames(rawData))
+    selected_colnames=grep(pattern = "MURI*",x = all_colnames,value = TRUE)
+    unselected_colnames=all_colnames[-grep(pattern = "MURI*",x = all_colnames)]
+    
+    rawData %>%
+      tidyr::gather_(key = "dataSet", 
+                     value = "numRead", 
+                     selected_colnames) %>%
+      dplyr::mutate(dataSet2=substr(x = dataSet,start = 1,stop = 8)) %>%
+      dplyr::group_by_(.dots=c(unselected_colnames,"dataSet2"))%>%
+      dplyr::summarize(numRead=sum(numRead)) %>%
+      tidyr::spread(key = dataSet2, value=numRead)->rawData
+  }
+  
+  if(roundData==TRUE)
+  {
+    if("dataOutput" %in% ls()){dataInput=dataOutput}
+    
+    # round the measurements
+    all_colnames=as.vector(colnames(rawData))
+    selected_colnames=grep(pattern = "MURI*",x = all_colnames,value = TRUE)
+    unselected_colnames=all_colnames[-grep(pattern = "MURI*",x = all_colnames)]
+    
+    rawData %>%
+      tidyr::gather_(key = "dataSet", 
+                     value = "numRead", 
+                     selected_colnames) %>%
+      dplyr::mutate(numRead=round(numRead))%>%
+      dplyr::group_by_(.dots=c(unselected_colnames))%>%
+      tidyr::spread(key = dataSet, value=numRead)->rawData
   }
   
   # Modify objectName
@@ -164,7 +147,7 @@ prepeare_data<-function(dataInput=dataType,
   # Package the results
   dataOutput=list()
   dataOutput$objectName=objectName
-  if(nameGenerator==FALSE){dataOutput$rawData=rawData}
+  dataOutput$rawData=rawData
   dataOutput$metaData=metaData
   
   
@@ -180,7 +163,7 @@ prepeare_data<-function(dataInput=dataType,
 # set 1 all problematic rna related files
 # set 2 filtered problematic rna related files
 # set 3 test file to filter our random genes 
-filter_bad_quality_data<-function(dataInput,badDataSet, nameGenerator=FALSE)
+filter_bad_quality_data<-function(dataInput,badDataSet)
 {
   complete_problematicSets=c("set00","set01","set02", "set03")
   if(length(badDataSet)!=1 | !badDataSet %in% complete_problematicSets)
@@ -208,15 +191,13 @@ filter_bad_quality_data<-function(dataInput,badDataSet, nameGenerator=FALSE)
   
   # Seperate data input
   objectName=dataInput$objectName
-  if(nameGenerator==FALSE){rawData=dataInput$rawData}
+  rawData=dataInput$rawData
   metaData=dataInput$metaData
   
   # find remaining columns in raw data
-  if(nameGenerator==FALSE){
-    if(length(badDataVector_fullName)!=0){
-      rawData %>%
-        dplyr::select_(.dots=paste0("-",badDataVector_fullName))->rawData
-    }
+  if(length(badDataVector_fullName)!=0){
+    rawData %>%
+      dplyr::select_(.dots=paste0("-",badDataVector_fullName))->rawData
     
     # find remaining rows in meta data
     metaData %>%
@@ -230,7 +211,7 @@ filter_bad_quality_data<-function(dataInput,badDataSet, nameGenerator=FALSE)
   # Package the results
   dataOutput=list()
   dataOutput$objectName=objectName
-  if(nameGenerator==FALSE){dataOutput$rawData=rawData}
+  dataOutput$rawData=rawData
   dataOutput$metaData=metaData
   
   # return the results
@@ -245,8 +226,7 @@ filter_bad_quality_data<-function(dataInput,badDataSet, nameGenerator=FALSE)
 # select the reference levels in metaData by using relevel
 select_reference_levels<-function(dataInput,
                                   referenceParameters=NA,
-                                  referenceLevels=NA,
-                                  nameGenerator=FALSE)
+                                  referenceLevels=NA)
 {
   # if no reference related parameter is mentioned the output is same as input
   if(any(is.na(referenceParameters))&any(is.na(referenceLevels)))
@@ -263,7 +243,7 @@ select_reference_levels<-function(dataInput,
   
   # Seperate data input
   objectName=dataInput$objectName
-  if(nameGenerator==FALSE){rawData=dataInput$rawData}
+  rawData=dataInput$rawData
   metaData=dataInput$metaData
   
   # check for each reference parameter
@@ -287,7 +267,7 @@ select_reference_levels<-function(dataInput,
   # Package the results
   dataOutput=list()
   dataOutput$objectName=objectName
-  if(nameGenerator==FALSE){dataOutput$rawData=rawData}
+  dataOutput$rawData=rawData
   dataOutput$metaData=metaData
   
   # return the results
@@ -308,7 +288,7 @@ select_reference_levels<-function(dataInput,
 #   "Mgh"="MgSO4_stress_high"
 # @Description it filters the experiments from raw data and meta data 
 #      also adds remainng experiments to objectName
-pick_experiments<-function(dataInput,experimentVector,nameGenerator=FALSE)
+pick_experiments<-function(dataInput,experimentVector)
 {
   completeExperimentVector=c("Stc","Ytc","Nas","Agr","Ngr","Mgl","Mgh")
   completeExperimentVectorLong = c("glucose_time_course", 
@@ -349,7 +329,7 @@ pick_experiments<-function(dataInput,experimentVector,nameGenerator=FALSE)
   
   # Seperate data input
   objectName=dataInput$objectName
-  if(nameGenerator==FALSE){rawData=dataInput$rawData}
+  rawData=dataInput$rawData
   metaData=dataInput$metaData
   
   # Filter meta data
@@ -357,21 +337,16 @@ pick_experiments<-function(dataInput,experimentVector,nameGenerator=FALSE)
     dplyr::filter(experiment %in% experimentVectorLong) -> metaData
   
   # get column names that do not start with MURI in raw data
-  if(nameGenerator==FALSE){
-    colnames_rawData=as.vector(colnames(dataInput$rawData))
-    colnames_wo_MURI=colnames_rawData[-grep("MURI*",colnames_rawData)]
-  }
+  colnames_rawData=as.vector(colnames(dataInput$rawData))
+  colnames_wo_MURI=colnames_rawData[-grep("MURI*",colnames_rawData)]
   # get the col names from already filtered meta data
   colnames_from_metaData=as.vector(metaData$dataSet)
   # combine those two to obtain new set of column names
-  if(nameGenerator==FALSE)
-  {colnames_rawData_new=c(colnames_wo_MURI,colnames_from_metaData)}
+  colnames_rawData_new=c(colnames_wo_MURI,colnames_from_metaData)
   
   # filter raw data
-  if(nameGenerator==FALSE){
-    rawData %>%
-      dplyr::select_(.dots=colnames_rawData_new)->rawData
-  }
+  rawData %>%
+    dplyr::select_(.dots=colnames_rawData_new)->rawData
   
   # add information to file name
   if (all(completeExperimentVector == experimentVector))
@@ -394,7 +369,7 @@ pick_experiments<-function(dataInput,experimentVector,nameGenerator=FALSE)
   # Package the results
   dataOutput=list()
   dataOutput$objectName=objectName
-  if(nameGenerator==FALSE){dataOutput$rawData=rawData}
+  dataOutput$rawData=rawData
   dataOutput$metaData=metaData
   
   # return the results
@@ -412,7 +387,7 @@ pick_experiments<-function(dataInput,experimentVector,nameGenerator=FALSE)
 #   "N"="gluconate_growth" 
 # @Description it filters the carbon sources from raw data and meta data 
 #      also adds remainig carbon sources to objectName
-pick_carbonSource<-function(dataInput,carbonSourceVector, nameGenerator=FALSE)
+pick_carbonSource<-function(dataInput,carbonSourceVector)
 {
   completeCarbonSourceVector=c("S","Y","A","N")
   completeCarbonSourceVectorLong = c("glucose", 
@@ -449,27 +424,24 @@ pick_carbonSource<-function(dataInput,carbonSourceVector, nameGenerator=FALSE)
   
   # Seperate data input
   objectName=dataInput$objectName
-  if(nameGenerator==FALSE){rawData=dataInput$rawData}
+  rawData=dataInput$rawData
   metaData=dataInput$metaData
   
   # Filter meta data
   metaData %>% 
     dplyr::filter(carbonSource %in% carbonSourceVectorLong) -> metaData
   
-  if(nameGenerator==FALSE){
-    # get column names that do not start with MURI in raw data
-    colnames_rawData=as.vector(colnames(dataInput$rawData))
-    colnames_wo_MURI=colnames_rawData[-grep("MURI*",colnames_rawData)]
-    
-    # get the col names from already filtered meta data
-    colnames_from_metaData=as.vector(metaData$dataSet)
-    # combine those two to obtain new set of column names
-    colnames_rawData_new=c(colnames_wo_MURI,colnames_from_metaData)
-    
-    # filter raw data
-    rawData %>%
-      dplyr::select_(.dots=colnames_rawData_new)->rawData
-  }
+  # get column names that do not start with MURI in raw data
+  colnames_rawData=as.vector(colnames(dataInput$rawData))
+  colnames_wo_MURI=colnames_rawData[-grep("MURI*",colnames_rawData)]
+  # get the col names from already filtered meta data
+  colnames_from_metaData=as.vector(metaData$dataSet)
+  # combine those two to obtain new set of column names
+  colnames_rawData_new=c(colnames_wo_MURI,colnames_from_metaData)
+  
+  # filter raw data
+  rawData %>%
+    dplyr::select_(.dots=colnames_rawData_new)->rawData
   
   # add information to file name
   refLevLong=levels(metaData$carbonSource)[1]
@@ -482,7 +454,7 @@ pick_carbonSource<-function(dataInput,carbonSourceVector, nameGenerator=FALSE)
   # Package the results
   dataOutput=list()
   dataOutput$objectName=objectName
-  if(nameGenerator==FALSE){dataOutput$rawData=rawData}
+  dataOutput$rawData=rawData
   dataOutput$metaData=metaData
   
   # return the results
@@ -499,7 +471,7 @@ pick_carbonSource<-function(dataInput,carbonSourceVector, nameGenerator=FALSE)
 #   "highMg"="high Mg levels"
 # @Description it filters the Mg levels from raw data and meta data 
 #      also adds remainng Mg levels to objectName
-pick_MgLevel<-function(dataInput,MgLevelVector,nameGenerator=FALSE)
+pick_MgLevel<-function(dataInput,MgLevelVector)
 {
   completeMgLevelVector=c("lowMg","baseMg","highMg")
   if ("allMg" %in% MgLevelVector & length(MgLevelVector)!=1)
@@ -526,26 +498,24 @@ pick_MgLevel<-function(dataInput,MgLevelVector,nameGenerator=FALSE)
   
   # Seperate data input
   objectName=dataInput$objectName
-  if(nameGenerator==FALSE){rawData=dataInput$rawData}
+  rawData=dataInput$rawData
   metaData=dataInput$metaData
   
   # Filter meta data
   metaData %>% 
     dplyr::filter(Mg_mM_Levels %in% MgLevelVector) -> metaData
   
-  if(nameGenerator==FALSE){
-    # get column names that do not start with MURI in raw data
-    colnames_rawData=as.vector(colnames(dataInput$rawData))
-    colnames_wo_MURI=colnames_rawData[-grep("MURI*",colnames_rawData)]
-    # get the col names from already filtered meta data
-    colnames_from_metaData=as.vector(metaData$dataSet)
-    # combine those two to obtain new set of column names
-    colnames_rawData_new=c(colnames_wo_MURI,colnames_from_metaData)
-    
-    # filter raw data
-    rawData %>%
-      dplyr::select_(.dots=colnames_rawData_new)->rawData
-  }
+  # get column names that do not start with MURI in raw data
+  colnames_rawData=as.vector(colnames(dataInput$rawData))
+  colnames_wo_MURI=colnames_rawData[-grep("MURI*",colnames_rawData)]
+  # get the col names from already filtered meta data
+  colnames_from_metaData=as.vector(metaData$dataSet)
+  # combine those two to obtain new set of column names
+  colnames_rawData_new=c(colnames_wo_MURI,colnames_from_metaData)
+  
+  # filter raw data
+  rawData %>%
+    dplyr::select_(.dots=colnames_rawData_new)->rawData
   
   # add information to file name
   if (all(completeMgLevelVector == MgLevelVector))
@@ -566,7 +536,7 @@ pick_MgLevel<-function(dataInput,MgLevelVector,nameGenerator=FALSE)
   # Package the results
   dataOutput=list()
   dataOutput$objectName=objectName
-  if(nameGenerator==FALSE){dataOutput$rawData=rawData}
+  dataOutput$rawData=rawData
   dataOutput$metaData=metaData
   
   # return the results
@@ -582,7 +552,7 @@ pick_MgLevel<-function(dataInput,MgLevelVector,nameGenerator=FALSE)
 #   "highNa"="high Na levels"
 # @Description it filters the Na levels from raw data and meta data 
 #      also adds remainng Na levels to objectName
-pick_NaLevel<-function(dataInput,NaLevelVector, nameGenerator=FALSE)
+pick_NaLevel<-function(dataInput,NaLevelVector)
 {
   completeNaLevelVector=c("baseNa","highNa")
   if ("allNa" %in% NaLevelVector & length(NaLevelVector)!=1)
@@ -609,26 +579,24 @@ pick_NaLevel<-function(dataInput,NaLevelVector, nameGenerator=FALSE)
   
   # Seperate data input
   objectName=dataInput$objectName
-  if(nameGenerator==FALSE){rawData=dataInput$rawData}
+  rawData=dataInput$rawData
   metaData=dataInput$metaData
   
   # Filter meta data
   metaData %>% 
     dplyr::filter(Na_mM_Levels %in% NaLevelVector) -> metaData
   
-  if(nameGenerator==FALSE){
-    # get column names that do not start with MURI in raw data
-    colnames_rawData=as.vector(colnames(dataInput$rawData))
-    colnames_wo_MURI=colnames_rawData[-grep("MURI*",colnames_rawData)]
-    # get the col names from already filtered meta data
-    colnames_from_metaData=as.vector(metaData$dataSet)
-    # combine those two to obtain new set of column names
-    colnames_rawData_new=c(colnames_wo_MURI,colnames_from_metaData)
-    
-    # filter raw data
-    rawData %>%
-      dplyr::select_(.dots=colnames_rawData_new)->rawData
-  }
+  # get column names that do not start with MURI in raw data
+  colnames_rawData=as.vector(colnames(dataInput$rawData))
+  colnames_wo_MURI=colnames_rawData[-grep("MURI*",colnames_rawData)]
+  # get the col names from already filtered meta data
+  colnames_from_metaData=as.vector(metaData$dataSet)
+  # combine those two to obtain new set of column names
+  colnames_rawData_new=c(colnames_wo_MURI,colnames_from_metaData)
+  
+  # filter raw data
+  rawData %>%
+    dplyr::select_(.dots=colnames_rawData_new)->rawData
   
   # add information to file name
   if (all(completeNaLevelVector == NaLevelVector))
@@ -648,7 +616,7 @@ pick_NaLevel<-function(dataInput,NaLevelVector, nameGenerator=FALSE)
   # Package the results
   dataOutput=list()
   dataOutput$objectName=objectName
-  if(nameGenerator==FALSE){dataOutput$rawData=rawData}
+  dataOutput$rawData=rawData
   dataOutput$metaData=metaData
   
   # return the results
@@ -665,7 +633,7 @@ pick_NaLevel<-function(dataInput,NaLevelVector, nameGenerator=FALSE)
 #   "late_stationary" = "late stationary phase"
 # @Description it filters the growth phase from raw data and meta data 
 #      also adds remainng chosen growth phase to objectName
-pick_growthPhase<-function(dataInput,growthPhaseVector, nameGenerator=FALSE)
+pick_growthPhase<-function(dataInput,growthPhaseVector)
 {
   completeGrowthPhaseVector=c("exponential","stationary","late_stationary")
   if ("allPhase" %in% growthPhaseVector & length(growthPhaseVector)!=1)
@@ -691,26 +659,24 @@ pick_growthPhase<-function(dataInput,growthPhaseVector, nameGenerator=FALSE)
   
   # Seperate data input
   objectName=dataInput$objectName
-  if(nameGenerator==FALSE){rawData=dataInput$rawData}
+  rawData=dataInput$rawData
   metaData=dataInput$metaData
   
   # Filter meta data
   metaData %>% 
     dplyr::filter(growthPhase %in% growthPhaseVector) -> metaData
   
-  if(nameGenerator==FALSE){
-    # get column names that do not start with MURI in raw data
-    colnames_rawData=as.vector(colnames(dataInput$rawData))
-    colnames_wo_MURI=colnames_rawData[-grep("MURI*",colnames_rawData)]
-    # get the col names from already filtered meta data
-    colnames_from_metaData=as.vector(metaData$dataSet)
-    # combine those two to obtain new set of column names
-    colnames_rawData_new=c(colnames_wo_MURI,colnames_from_metaData)
-    
-    # filter raw data
-    rawData %>%
-      dplyr::select_(.dots=colnames_rawData_new)->rawData
-  }
+  # get column names that do not start with MURI in raw data
+  colnames_rawData=as.vector(colnames(dataInput$rawData))
+  colnames_wo_MURI=colnames_rawData[-grep("MURI*",colnames_rawData)]
+  # get the col names from already filtered meta data
+  colnames_from_metaData=as.vector(metaData$dataSet)
+  # combine those two to obtain new set of column names
+  colnames_rawData_new=c(colnames_wo_MURI,colnames_from_metaData)
+  
+  # filter raw data
+  rawData %>%
+    dplyr::select_(.dots=colnames_rawData_new)->rawData
   
   # add information to file name
   if (all(completeGrowthPhaseVector == growthPhaseVector))
@@ -738,7 +704,7 @@ pick_growthPhase<-function(dataInput,growthPhaseVector, nameGenerator=FALSE)
   # Package the results
   dataOutput=list()
   dataOutput$objectName=objectName
-  if(nameGenerator==FALSE){dataOutput$rawData=rawData}
+  dataOutput$rawData=rawData
   dataOutput$metaData=metaData
   
   # return the results
@@ -758,46 +724,44 @@ pick_growthPhase<-function(dataInput,growthPhaseVector, nameGenerator=FALSE)
 #   "sdFilter" (filter out the rows whose standard deviation is below threshold)
 # @param threshold the threshold related with relevant model. Default is 0.
 # @Description The function filter out the meaningless rows from data
-filter_rows<-function(dataInput, filterGenes, threshold=NA, nameGenerator=FALSE)
+filter_rows<-function(dataInput, filterGenes, threshold=NA)
 {
   # Seperate data input
   objectName=dataInput$objectName
-  if(nameGenerator==FALSE){rawData=dataInput$rawData}
+  rawData=dataInput$rawData
   metaData=dataInput$metaData
   
-  if(nameGenerator==FALSE){
-    all_colnames=as.vector(colnames(rawData))
-    selected_colnames=grep(pattern = "MURI*",x = all_colnames,value = TRUE)
-    unselected_colnames=all_colnames[-grep(pattern = "MURI*",x = all_colnames)]
-    
-    rawData %>%
-      tidyr::gather_(key = "dataSet", 
-                     value = "numRead", 
-                     selected_colnames)%>% 
-      dplyr::group_by_(unselected_colnames) %>% 
-      dplyr::summarize(meanValue=mean(numRead),
-                       sdValue=sd(numRead),
-                       maxValue=max(numRead))->rawData_summarize
-    
-    dplyr::left_join(rawData,rawData_summarize)->rawData
-    
-    
-    
-    # Do the filtering
-    if(filterGenes=="noFilter"){rawData = rawData }
-    if(filterGenes=="meanFilter")
-    {rawData %>%dplyr::filter(meanValue>threshold)->rawData}
-    
-    if(filterGenes=="sdFilter")
-    {rawData %>% dplyr::filter(sdValue>threshold)->rawData}
-    
-    if(filterGenes=="maxFilter")
-    {rawData %>% dplyr::filter(maxValue>threshold)->rawData}
-    
-    # get rid of additional columns
-    rawData %>%
-      dplyr::select(-meanValue, -maxValue, -sdValue)->rawData
-  }
+  all_colnames=as.vector(colnames(rawData))
+  selected_colnames=grep(pattern = "MURI*",x = all_colnames,value = TRUE)
+  unselected_colnames=all_colnames[-grep(pattern = "MURI*",x = all_colnames)]
+  
+  rawData %>%
+    tidyr::gather_(key = "dataSet", 
+                   value = "numRead", 
+                   selected_colnames)%>% 
+    dplyr::group_by_(unselected_colnames) %>% 
+    dplyr::summarize(meanValue=mean(numRead),
+                     sdValue=sd(numRead),
+                     maxValue=max(numRead))->rawData_summarize
+  
+  dplyr::left_join(rawData,rawData_summarize)->rawData
+  
+  
+  
+  # Do the filtering
+  if(filterGenes=="noFilter"){rawData = rawData }
+  if(filterGenes=="meanFilter")
+  {rawData %>%dplyr::filter(meanValue>threshold)->rawData}
+  
+  if(filterGenes=="sdFilter")
+  {rawData %>% dplyr::filter(sdValue>threshold)->rawData}
+  
+  if(filterGenes=="maxFilter")
+  {rawData %>% dplyr::filter(maxValue>threshold)->rawData}
+  
+  # get rid of additional columns
+  rawData %>%
+    dplyr::select(-meanValue, -maxValue, -sdValue)->rawData
   
   # add information to file name
   if(filterGenes=="noFilter")
@@ -810,7 +774,7 @@ filter_rows<-function(dataInput, filterGenes, threshold=NA, nameGenerator=FALSE)
   # Package the results
   dataOutput=list()
   dataOutput$objectName=objectName
-  if(nameGenerator==FALSE){dataOutput$rawData=rawData}
+  dataOutput$rawData=rawData
   dataOutput$metaData=metaData
   
   # return the results
@@ -823,44 +787,40 @@ filter_rows<-function(dataInput, filterGenes, threshold=NA, nameGenerator=FALSE)
 # @Title sizefactors_deseq
 # @Description calculates size factors for data by using DeSeq2
 # @Param deSeqSfChoice picks the method for DeSeqSf Calculation
-sizefactors_deseq<-function(dataInput=mainData_internal, deSeqSfChoice, nameGenerator=FALSE)
+sizefactors_deseq<-function(dataInput=mainData_internal, deSeqSfChoice)
 {
   if(!deSeqSfChoice %in% c("regSf", "p1Sf"))
   {stop("deSeqSfChoice should be one of regSf p1Sf")}
   
   # Seperate data input
   objectName=dataInput$objectName
-  if(nameGenerator==FALSE){rawData=dataInput$rawData}
+  rawData=dataInput$rawData
   metaData=dataInput$metaData
   
-  if(nameGenerator==FALSE){
-    # Prepeare the inputs to DeSeq
-    # a) convert "rawData" into rawData_matrix
-    colnames_rawData=as.vector(colnames(rawData))
-    colnames_w_MURI=as.vector(colnames_rawData[grep("MURI*",colnames_rawData)])
-    
-    rawData %>%
-      dplyr::group_by()%>%
-      dplyr::select_(.dots=colnames_w_MURI)->rawData_matrix
-    rawData_matrix=as.matrix(rawData_matrix)
-    row.names(rawData_matrix)<-rawData[[grep("*.id",colnames(rawData),ignore.case = TRUE)]]
-    
-    # b) change rowNames of metaData
-    row.names(metaData)<-as.vector(metaData$dataSet)
-  }
+  # Prepeare the inputs to DeSeq
+  # a) convert "rawData" into rawData_matrix
+  colnames_rawData=as.vector(colnames(rawData))
+  colnames_w_MURI=as.vector(colnames_rawData[grep("MURI*",colnames_rawData)])
+  
+  rawData %>%
+    dplyr::group_by()%>%
+    dplyr::select_(.dots=colnames_w_MURI)->rawData_matrix
+  rawData_matrix=as.matrix(rawData_matrix)
+  row.names(rawData_matrix)<-rawData[[grep("*.id",colnames(rawData),ignore.case = TRUE)]]
+  
+  # b) change rowNames of metaData
+  row.names(metaData)<-as.vector(metaData$dataSet)
   
   
   if(deSeqSfChoice=="regSf")
   {
-    if(nameGenerator==FALSE){
-      # generate DeSeq2 object from data matrix with trivial design formula
-      deseq_DataObj <- DESeqDataSetFromMatrix(countData = rawData_matrix, 
-                                              colData = metaData, 
-                                              design = ~ 1) 
-      
-      # calculate size factors
-      deseq_DataObj=estimateSizeFactors(deseq_DataObj)
-    }
+    # generate DeSeq2 object from data matrix with trivial design formula
+    deseq_DataObj <- DESeqDataSetFromMatrix(countData = rawData_matrix, 
+                                            colData = metaData, 
+                                            design = ~ 1) 
+    
+    # calculate size factors
+    deseq_DataObj=estimateSizeFactors(deseq_DataObj)
     
     # modify object name
     objectName$deSeqSfChoice="regSf"
@@ -869,32 +829,28 @@ sizefactors_deseq<-function(dataInput=mainData_internal, deSeqSfChoice, nameGene
   
   if(deSeqSfChoice=="p1Sf")
   {
-    if(nameGenerator==FALSE){
-      # generate DeSeq2 P1 object from data matrix with trivial design formula
-      deseq_DataObj_p1 <- DESeqDataSetFromMatrix(countData = rawData_matrix+1, 
-                                                 colData = metaData, 
-                                                 design = ~ 1) 
-      
-      # calculate size factors
-      deseq_DataObj_p1=estimateSizeFactors(deseq_DataObj_p1)
-      sizeFactors_p1=sizeFactors(deseq_DataObj_p1)
-      
-      # generate DeSeq2 object from data matrix with trivial design formula
-      deseq_DataObj <- DESeqDataSetFromMatrix(countData = rawData_matrix, 
-                                              colData = metaData, 
-                                              design = ~ 1) 
-      
-      # Import size factors from P1 object
-      sizeFactors(deseq_DataObj) <- sizeFactors_p1
-    }
+    # generate DeSeq2 P1 object from data matrix with trivial design formula
+    deseq_DataObj_p1 <- DESeqDataSetFromMatrix(countData = rawData_matrix+1, 
+                                               colData = metaData, 
+                                               design = ~ 1) 
+    
+    # calculate size factors
+    deseq_DataObj_p1=estimateSizeFactors(deseq_DataObj_p1)
+    sizeFactors_p1=sizeFactors(deseq_DataObj_p1)
+    
+    # generate DeSeq2 object from data matrix with trivial design formula
+    deseq_DataObj <- DESeqDataSetFromMatrix(countData = rawData_matrix, 
+                                            colData = metaData, 
+                                            design = ~ 1) 
+    
+    # Import size factors from P1 object
+    sizeFactors(deseq_DataObj) <- sizeFactors_p1
     
     # modify object name
     objectName$deSeqSfChoice="p1Sf"
   }
   
-  if(nameGenerator==FALSE){deseq_Data_Container=list(deseq_DataObj=deseq_DataObj,
-                                                     objectName=objectName)}
-  if(nameGenerator==TRUE){deseq_Data_Container=list(objectName=objectName)}
+  deseq_Data_Container=list(deseq_DataObj=deseq_DataObj,objectName=objectName)
   return(deseq_Data_Container)
 }
 ###*****************************
@@ -904,47 +860,44 @@ sizefactors_deseq<-function(dataInput=mainData_internal, deSeqSfChoice, nameGene
 # @Title normalizeData
 # @Description The function normalize the data by 
 # @Param deSeqSfChoice picks the method for DeSeqSf Calculation
-normalizeData<-function(dataInput=mainData_internal, normalizationMethodChoice, nameGenerator=FALSE)
+normalizeData<-function(dataInput=mainData_internal, normalizationMethodChoice)
 {
   # decompose the container
-  if(nameGenerator==FALSE){deseq_DataObj=dataInput[["deseq_DataObj"]]}
+  deseq_DataObj=dataInput[["deseq_DataObj"]]
   objectName=dataInput[["objectName"]]
   
-  if(nameGenerator==FALSE){
-    if(!length(normalizationMethodChoice) == 1)
-    {stop("normalizationMethodChoice should have length 1")}
-    
-    if(!normalizationMethodChoice %in% c("vst", "rlog" , "log10", "noNorm"))
-    {stop("normalizationMethodChoice should be one of vst, rlog, log10, noNorm")}
-    
-    if(normalizationMethodChoice == "vst")
-    {
-      objectName$normalizationMethodChoice="vst"
-      deseq_DataObj=varianceStabilizingTransformation(deseq_DataObj)
-    }
-    
-    if(normalizationMethodChoice == "rlog")
-    {
-      objectName$normalizationMethodChoice="rlog"
-      deseq_DataObj=DESeq2::rlog(deseq_DataObj)
-    }
-    
-    if(normalizationMethodChoice == "noNorm")
-    {
-      objectName$normalizationMethodChoice="noNorm"
-    }
-    
-    if(normalizationMethodChoice == "log10")
-    {
-      objectName$normalizationMethodChoice="log10"
-      deseq_DataObj=log10(counts(deseq_DataObj, normalized=TRUE)+1)
-    }
+  if(!length(normalizationMethodChoice) == 1)
+  {stop("normalizationMethodChoice should have length 1")}
+  
+  if(!normalizationMethodChoice %in% c("vst", "rlog" , "log10", "noNorm"))
+  {stop("normalizationMethodChoice should be one of vst, rlog, log10, noNorm")}
+  
+  if(normalizationMethodChoice == "vst")
+  {
+    objectName$normalizationMethodChoice="vst"
+    deseq_DataObj=varianceStabilizingTransformation(deseq_DataObj)
+  }
+  
+  if(normalizationMethodChoice == "rlog")
+  {
+    objectName$normalizationMethodChoice="rlog"
+    deseq_DataObj=DESeq2::rlog(deseq_DataObj)
+  }
+  
+  if(normalizationMethodChoice == "noNorm")
+  {
+    objectName$normalizationMethodChoice="noNorm"
+  }
+  
+  if(normalizationMethodChoice == "log10")
+  {
+    objectName$normalizationMethodChoice="log10"
+    deseq_DataObj=log10(counts(deseq_DataObj, normalized=TRUE)+1)
   }
   
   # recompose the container
-  if(nameGenerator==FALSE){deseq_Data_Container=list(deseq_DataObj=deseq_DataObj,
-                                                     objectName=objectName)}
-  if(nameGenerator==TRUE){deseq_Data_Container=list(objectName=objectName)}
   
+  deseq_Data_Container=list(deseq_DataObj=deseq_DataObj,
+                            objectName=objectName)
   return(deseq_Data_Container)
 }
