@@ -1,4 +1,4 @@
-# Analayze Kegg Pathways DESeq + DAVID
+# Analayze Go Annotations Molecular function DESeq + DAVID
 
 # Aim of the code is to find the genes in kegg pathways and send files to generate figures
 
@@ -39,7 +39,7 @@ source("../c_code_change_wrt_variables_RNA&Protein/data_naming_functions.R")
 ###*****************************
 
 
-###*****************************
+###****************************
 # Download the DAVID input and output
 dataName=name_data(initialValue="genes0.05", # can be "genes0.05"
                    dataType = "mrna", # can be "rna", "mrna", "protein", "protein_wo_NA"
@@ -74,17 +74,18 @@ dataName=name_data(initialValue="genes0.05", # can be "genes0.05"
 
 objectName=paste(dataName$objectName,collapse = "_")
 
-kegg_input<-read.csv(file = paste0("../c_results/DeSeq2_diffGene_Results/",objectName,".csv"),
+GoMF_input<-read.csv(file = paste0("../c_results/DeSeq2_diffGene_Results/",objectName,".csv"),
                      header = TRUE)
 objectName_df=dataName$objectName
 objectName_df$initial="resDf"
 objectName_df=paste(objectName_df,collapse = "_")
-kegg_input_df<-read.csv(file = paste0("../c_results/DeSeq2_diffGene_Results/",objectName_df,".csv"),
+GoMF_input_df<-read.csv(file = paste0("../c_results/DeSeq2_diffGene_Results/",objectName_df,".csv"),
                         header = TRUE)
 
-kegg_result<-read.table(file=paste0("../c_results/david_results/",objectName,"_kegg.txt"),
+GoMF_result<-read.table(file=paste0("../c_results/david_results/",objectName,"_mf.txt"),
                         sep = "\t",header = TRUE)
-kegg_result<-kegg_result[grep("eco",as.vector(kegg_result$Term)),]
+
+names(GoMF_result)[names(GoMF_result) == 'Term'] <- 'MF_Name'
 ###*****************************
 
 
@@ -94,33 +95,33 @@ dataType=dataName$objectName$pick_data
 
 if(dataType %in% c("rna","mrna"))
 {
-  kegg_pathway_david_ref_2009_tidy<-read.table(file = paste0("../d_Mf_Pathway_Analyze/ReferenceFiles/",
-                                                             "kegg_pathway_david_mrna_ref_2009_tidy.txt"),
-                                               sep = "\t",header = TRUE,fill = TRUE, quote = "")
+  MF_david_ref_2009_tidy<-read.table(file = paste0("../d_Mf_Pathway_Analyze/ReferenceFiles/",
+                                                   "MF_david_mrna_ref_2009_tidy.txt"),
+                                     sep = "\t",header = TRUE,fill = TRUE, quote = "")
 }
 
 
 if(dataType %in% c("protein_wo_NA", "protein"))
 {
-  kegg_pathway_david_ref_2009_tidy<-read.table(paste0("../d_Mf_Pathway_Analyze/ReferenceFiles/",
-                                                      "kegg_pathway_david_protein_ref_2009_tidy.txt"),
-                                               sep = "\t",header = TRUE,fill = TRUE, quote = "")
+  MF_david_ref_2009_tidy<-read.table(paste0("../d_Mf_Pathway_Analyze/ReferenceFiles/",
+                                            "MF_david_protein_ref_2009_tidy.txt"),
+                                     sep = "\t",header = TRUE,fill = TRUE, quote = "")
 }
 ###*****************************
 
 
 ###*****************************
-# Find KEGG output pathways in ref 
+# Find MF output in ref 
 # do the consistency check if everything is in
 
-for(counter01 in 1:nrow(kegg_result))
+for(counter01 in 1:nrow(GoMF_result))
 {
-  thePathway=as.vector(kegg_result[["Term"]][counter01])
-  kegg_pathway_david_ref_2009_tidy %>%
-    dplyr::filter(KEGG_PATH_Name==thePathway)->temp
+  theGoMF=as.vector(GoMF_result[["MF_Name"]][counter01])
+  MF_david_ref_2009_tidy %>%
+    dplyr::filter(MF_Name==theGoMF)->temp
   
   m2<-as.vector(temp$ID)
-  m1<-strsplit(x=as.vector(kegg_result$Genes[counter01]),split = ",")
+  m1<-strsplit(x=as.vector(GoMF_result$Genes[counter01]),split = ",")
   m1<-sub(" ","",noquote(m1[[1]]))
   m1<-paste0(tolower(substr(start = 1,stop = 3,x = m1)),substr(start = 4,stop = 4,x = m1))
   print(all(m1 %in% m2))
@@ -129,64 +130,67 @@ for(counter01 in 1:nrow(kegg_result))
 
 
 ###*****************************
-# Find pathways // 
-# select pathway related genes 
-# // find the gens in our data related with pathway//
-
-kegg_result ->kegg_result_short
-pathway_list=as.vector(kegg_result_short$Term)
-inputGenes=unique(as.vector(kegg_input_df$gene_name))
-kegg_input_df %>%
+# Find go annotations (MF) // 
+# select go annotation (MF) related genes 
+# // find the genes in our data related with Go annotation//
+GoMF_result ->GoMF_result_short
+GoMF_list=as.vector(GoMF_result_short$MF_Name)
+inputGenes=unique(as.vector(GoMF_input_df$gene_name))
+GoMF_input_df %>%
   dplyr::select(ID=gene_name,padj_gene=padj,signChange)%>%
-  dplyr::mutate(score_gene=-signChange*log10(padj_gene))->kegg_input_df_narrow
+  dplyr::mutate(score_gene=-signChange*log10(padj_gene))->GoMF_input_df_narrow
 
-kegg_result_short %>%
-  dplyr::select(KEGG_Path=Term, FDR_KEGG_Path=FDR)%>%
-  dplyr::mutate(FDR_KEGG_Path=FDR_KEGG_Path/100)->kegg_result_narrow
+GoMF_result_short %>%
+  dplyr::select(MF_Name, FDR_GoMF=FDR)%>%
+  dplyr::mutate(FDR_GoMF=FDR_GoMF/100)->GoMF_result_narrow
 
-kegg_pathway_david_ref_2009_tidy %>%
-  dplyr::select(ID, KEGG_Path=KEGG_PATH_Name)%>%
-  dplyr::filter(KEGG_Path %in% pathway_list)%>%
-  dplyr::group_by(KEGG_Path)%>%
-  dplyr::summarise(numGenesInCat=length(KEGG_Path))->numGenesInCat_df
+MF_david_ref_2009_tidy %>%
+  dplyr::select(ID, MF_Name)%>%
+  dplyr::filter(MF_Name %in% GoMF_list)%>%
+  dplyr::group_by(MF_Name)%>%
+  dplyr::summarise(numGenesInCat=length(MF_Name))->numGenesInCat_df
 
-kegg_pathway_david_ref_2009_tidy %>%
-  dplyr::select(ID, KEGG_Path=KEGG_PATH_Name)%>%
-  dplyr::filter(KEGG_Path %in% pathway_list,
+MF_david_ref_2009_tidy %>%
+  dplyr::select(ID, MF_Name)%>%
+  dplyr::filter(MF_Name %in% GoMF_list,
                 ID %in% inputGenes) %>%
-  dplyr::left_join(.,kegg_input_df_narrow) %>%
-  dplyr::left_join(.,kegg_result_narrow) %>%
+  dplyr::left_join(.,GoMF_input_df_narrow) %>%
+  dplyr::left_join(.,GoMF_result_narrow) %>%
   dplyr::left_join(.,numGenesInCat_df) %>%
   dplyr::filter(!is.na(padj_gene))%>%
-  dplyr::group_by(KEGG_Path)%>%
+  dplyr::group_by(MF_Name)%>%
   dplyr::arrange(desc(score_gene))->selectedDf
+
+
 
 # add limitations for figures
 selectedDf %>%
-  dplyr::filter(padj_gene<0.05,FDR_KEGG_Path<0.05) %>%
+  dplyr::filter(padj_gene<0.05,FDR_GoMF<0.05) %>%
   dplyr::mutate(abs_score=abs(score_gene))%>%
-  dplyr::group_by(ID,KEGG_Path)%>%
-  dplyr::mutate(KEGG_Path_short=paste0(sub(".*:","",KEGG_Path),
-                                       "\n padj=",
-                                       sprintf("%.5f", FDR_KEGG_Path),
-                                       " numGenes :",numGenesInCat))%>%
-  dplyr::group_by(KEGG_Path,signChange)%>%
+  dplyr::group_by(ID,MF_Name)%>%
+  dplyr::mutate(MF_Name_short=paste0(sub(".*~","",MF_Name),
+                                     "\n padj=",
+                                     sprintf("%.5f", FDR_GoMF),
+                                     " numGenes :",numGenesInCat))%>%
+  dplyr::group_by(MF_Name,signChange)%>%
   dplyr::arrange(abs_score)%>%
   dplyr::mutate(rank=signChange*seq(1,n()))%>%
-  dplyr::group_by(KEGG_Path)%>%
+  dplyr::group_by(MF_Name)%>%
   dplyr::arrange(desc(score_gene))-> selectedDf
 
 
 selectedDf %>%
-  dplyr::group_by(KEGG_Path_short)%>%
-  dplyr::summarise(FDR_KEGG_Path=unique(FDR_KEGG_Path))%>%
-  dplyr::arrange(FDR_KEGG_Path)->summary_df
+  dplyr::group_by(MF_Name_short)%>%
+  dplyr::summarise(FDR_GoMF=unique(FDR_GoMF))%>%
+  dplyr::arrange(FDR_GoMF)->summary_df
 
-as.vector(summary_df$KEGG_Path_short)
+as.vector(summary_df$MF_Name_short)
 
 
-selectedDf$KEGG_Path_short <- factor(selectedDf$KEGG_Path_short, 
-                                     levels = rev(as.vector(summary_df$KEGG_Path_short)))
+selectedDf$MF_Name_short <- factor(selectedDf$MF_Name_short, 
+                                   levels = rev(as.vector(summary_df$MF_Name_short)))
+
+
 ###*****************************
 
 
@@ -196,7 +200,7 @@ scaleMid=0
 scaleLow=-max(abs(selectedDf$score_gene))
 
 #Generate Fancy Figures
-fig01=ggplot( selectedDf, aes( x=rank,y=KEGG_Path_short)) +
+fig01=ggplot( selectedDf, aes( x=rank,y=MF_Name_short)) +
   geom_tile(aes(fill=score_gene))+
   scale_fill_gradientn(colours=c("Blue","Grey50","Red"),
                        values=rescale(c(scaleLow,scaleMid,scaleHigh)),
