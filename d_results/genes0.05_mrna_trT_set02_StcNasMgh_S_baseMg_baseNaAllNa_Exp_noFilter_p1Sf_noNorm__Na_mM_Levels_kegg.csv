@@ -1,0 +1,125 @@
+"","ID","KEGG_Path","padj_gene","signChange","score_gene","FDR_KEGG_Path","numGenesInCat","abs_score","rank","numSigP","numSigN","KEGG_Path_long","KEGG_Path_short","pick_data","growthPhase","test_for","vs","df_category"
+"1","fbaB","eco00030:Pentose phosphate pathway",0.00102898594564605,1,2.98759055698689,0.000723530469762035,27,2.98759055698689,3,3,3,"Pentose phosphate pathway
+ padj:0.00072 N( -3/ +3/ 27)","Pentose phosphate pathway","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"2","talA","eco00030:Pentose phosphate pathway",0.0181363473864846,1,1.74145017425624,0.000723530469762035,27,1.74145017425624,2,3,3,"Pentose phosphate pathway
+ padj:0.00072 N( -3/ +3/ 27)","Pentose phosphate pathway","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"3","tktB","eco00030:Pentose phosphate pathway",0.0407534008490521,1,1.38983614377433,0.000723530469762035,27,1.38983614377433,1,3,3,"Pentose phosphate pathway
+ padj:0.00072 N( -3/ +3/ 27)","Pentose phosphate pathway","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"4","rpiB","eco00030:Pentose phosphate pathway",0.0318109186714425,-1,-1.49742378866764,0.000723530469762035,27,1.49742378866764,-1,3,3,"Pentose phosphate pathway
+ padj:0.00072 N( -3/ +3/ 27)","Pentose phosphate pathway","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"5","talB","eco00030:Pentose phosphate pathway",0.0197554821082045,-1,-1.70431236743138,0.000723530469762035,27,1.70431236743138,-2,3,3,"Pentose phosphate pathway
+ padj:0.00072 N( -3/ +3/ 27)","Pentose phosphate pathway","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"6","deoC","eco00030:Pentose phosphate pathway",0.0193720013096449,-1,-1.712825510265,0.000723530469762035,27,1.712825510265,-3,3,3,"Pentose phosphate pathway
+ padj:0.00072 N( -3/ +3/ 27)","Pentose phosphate pathway","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"7","thrA","eco00260:Glycine, serine and threonine metabolism",0.0494686717455921,-1,-1.30566975046671,0.013548174745145,30,1.30566975046671,-1,0,5,"Glycine, serine and threonine metabolism
+ padj:0.01355 N( -5/ +0/ 30)","Glycine, serine and threonine metabolism","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"8","thrC","eco00260:Glycine, serine and threonine metabolism",0.0310764267034955,-1,-1.50756892398214,0.013548174745145,30,1.50756892398214,-2,0,5,"Glycine, serine and threonine metabolism
+ padj:0.01355 N( -5/ +0/ 30)","Glycine, serine and threonine metabolism","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"9","thrB","eco00260:Glycine, serine and threonine metabolism",0.0142571469752738,-1,-1.84596737328231,0.013548174745145,30,1.84596737328231,-3,0,5,"Glycine, serine and threonine metabolism
+ padj:0.01355 N( -5/ +0/ 30)","Glycine, serine and threonine metabolism","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"10","trpB","eco00260:Glycine, serine and threonine metabolism",0.0127808318387704,-1,-1.89344087925812,0.013548174745145,30,1.89344087925812,-4,0,5,"Glycine, serine and threonine metabolism
+ padj:0.01355 N( -5/ +0/ 30)","Glycine, serine and threonine metabolism","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"11","trpA","eco00260:Glycine, serine and threonine metabolism",0.00572710374153973,-1,-2.24206494994583,0.013548174745145,30,2.24206494994583,-5,0,5,"Glycine, serine and threonine metabolism
+ padj:0.01355 N( -5/ +0/ 30)","Glycine, serine and threonine metabolism","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"12","trpC","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",0.0416902369530569,-1,-1.3799656364853,0.00254275252155256,21,1.3799656364853,-1,0,5,"Phenylalanine, tyrosine and tryptophan biosynthesis
+ padj:0.00254 N( -5/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"13","trpD","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",0.0211328303661513,-1,-1.67504233304319,0.00254275252155256,21,1.67504233304319,-2,0,5,"Phenylalanine, tyrosine and tryptophan biosynthesis
+ padj:0.00254 N( -5/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"14","trpE","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",0.0137673315486273,-1,-1.86115022866177,0.00254275252155256,21,1.86115022866177,-3,0,5,"Phenylalanine, tyrosine and tryptophan biosynthesis
+ padj:0.00254 N( -5/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"15","trpB","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",0.0127808318387704,-1,-1.89344087925812,0.00254275252155256,21,1.89344087925812,-4,0,5,"Phenylalanine, tyrosine and tryptophan biosynthesis
+ padj:0.00254 N( -5/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"16","trpA","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",0.00572710374153973,-1,-2.24206494994583,0.00254275252155256,21,2.24206494994583,-5,0,5,"Phenylalanine, tyrosine and tryptophan biosynthesis
+ padj:0.00254 N( -5/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"17","galU","eco00520:Amino sugar and nucleotide sugar metabolism",0.021100962880519,-1,-1.67569772649591,0.044476026883301,33,1.67569772649591,-1,0,5,"Amino sugar and nucleotide sugar metabolism
+ padj:0.04448 N( -5/ +0/ 33)","Amino sugar and nucleotide sugar metabolism","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"18","nagB","eco00520:Amino sugar and nucleotide sugar metabolism",0.0128647164761568,-1,-1.89059978070878,0.044476026883301,33,1.89059978070878,-2,0,5,"Amino sugar and nucleotide sugar metabolism
+ padj:0.04448 N( -5/ +0/ 33)","Amino sugar and nucleotide sugar metabolism","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"19","nagA","eco00520:Amino sugar and nucleotide sugar metabolism",0.00940529716410298,-1,-2.02662747819002,0.044476026883301,33,2.02662747819002,-3,0,5,"Amino sugar and nucleotide sugar metabolism
+ padj:0.04448 N( -5/ +0/ 33)","Amino sugar and nucleotide sugar metabolism","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"20","ptsG","eco00520:Amino sugar and nucleotide sugar metabolism",0.00572710374153973,-1,-2.24206494994583,0.044476026883301,33,2.24206494994583,-4,0,5,"Amino sugar and nucleotide sugar metabolism
+ padj:0.04448 N( -5/ +0/ 33)","Amino sugar and nucleotide sugar metabolism","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"21","nagE","eco00520:Amino sugar and nucleotide sugar metabolism",0.00558073332659577,-1,-2.25330872959855,0.044476026883301,33,2.25330872959855,-5,0,5,"Amino sugar and nucleotide sugar metabolism
+ padj:0.04448 N( -5/ +0/ 33)","Amino sugar and nucleotide sugar metabolism","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"22","proX","eco02010:ABC transporters",4.60555903817821e-21,1,20.336717646149,3.29801362886073e-08,153,20.336717646149,8,8,9,"ABC transporters
+ padj:0.00000 N( -9/ +8/ 153)","ABC transporters","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"23","proW","eco02010:ABC transporters",3.79719678395471e-14,1,13.4205368956252,3.29801362886073e-08,153,13.4205368956252,7,8,9,"ABC transporters
+ padj:0.00000 N( -9/ +8/ 153)","ABC transporters","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"24","proV","eco02010:ABC transporters",1.30139699015878e-12,1,11.8855902020274,3.29801362886073e-08,153,11.8855902020274,6,8,9,"ABC transporters
+ padj:0.00000 N( -9/ +8/ 153)","ABC transporters","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"25","ugpA","eco02010:ABC transporters",0.0169869318861593,1,1.76988505463513,3.29801362886073e-08,153,1.76988505463513,4,8,9,"ABC transporters
+ padj:0.00000 N( -9/ +8/ 153)","ABC transporters","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"26","ugpC","eco02010:ABC transporters",0.0169869318861593,1,1.76988505463513,3.29801362886073e-08,153,1.76988505463513,5,8,9,"ABC transporters
+ padj:0.00000 N( -9/ +8/ 153)","ABC transporters","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"27","yehX","eco02010:ABC transporters",0.034098530918333,1,1.46726433150032,3.29801362886073e-08,153,1.46726433150032,3,8,9,"ABC transporters
+ padj:0.00000 N( -9/ +8/ 153)","ABC transporters","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"28","pstS","eco02010:ABC transporters",0.0391901977021387,1,1.40682254563822,3.29801362886073e-08,153,1.40682254563822,2,8,9,"ABC transporters
+ padj:0.00000 N( -9/ +8/ 153)","ABC transporters","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"29","dppA","eco02010:ABC transporters",0.0441898262560742,1,1.35467770597734,3.29801362886073e-08,153,1.35467770597734,1,8,9,"ABC transporters
+ padj:0.00000 N( -9/ +8/ 153)","ABC transporters","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"30","potI","eco02010:ABC transporters",0.0444565842218441,-1,-1.35206390894681,3.29801362886073e-08,153,1.35206390894681,-1,8,9,"ABC transporters
+ padj:0.00000 N( -9/ +8/ 153)","ABC transporters","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"31","ftsE","eco02010:ABC transporters",0.0300618728637496,-1,-1.521983966229,3.29801362886073e-08,153,1.521983966229,-2,8,9,"ABC transporters
+ padj:0.00000 N( -9/ +8/ 153)","ABC transporters","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"32","tauC","eco02010:ABC transporters",0.0260611798889834,-1,-1.58400592601119,3.29801362886073e-08,153,1.58400592601119,-3,8,9,"ABC transporters
+ padj:0.00000 N( -9/ +8/ 153)","ABC transporters","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"33","sbp","eco02010:ABC transporters",0.017273702963095,-1,-1.76261455275946,3.29801362886073e-08,153,1.76261455275946,-4,8,9,"ABC transporters
+ padj:0.00000 N( -9/ +8/ 153)","ABC transporters","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"34","nlpA","eco02010:ABC transporters",0.0137673315486273,-1,-1.86115022866177,3.29801362886073e-08,153,1.86115022866177,-5,8,9,"ABC transporters
+ padj:0.00000 N( -9/ +8/ 153)","ABC transporters","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"35","tauB","eco02010:ABC transporters",0.0116497512975984,-1,-1.93368334598848,3.29801362886073e-08,153,1.93368334598848,-6,8,9,"ABC transporters
+ padj:0.00000 N( -9/ +8/ 153)","ABC transporters","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"36","fecB","eco02010:ABC transporters",0.00895744341299924,-1,-2.04781592672867,3.29801362886073e-08,153,2.04781592672867,-7,8,9,"ABC transporters
+ padj:0.00000 N( -9/ +8/ 153)","ABC transporters","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"37","metQ","eco02010:ABC transporters",0.00191969666452649,-1,-2.71676738969738,3.29801362886073e-08,153,2.71676738969738,-8,8,9,"ABC transporters
+ padj:0.00000 N( -9/ +8/ 153)","ABC transporters","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"38","tauA","eco02010:ABC transporters",0.000409810475614111,-1,-3.38741694431634,3.29801362886073e-08,153,3.38741694431634,-9,8,9,"ABC transporters
+ padj:0.00000 N( -9/ +8/ 153)","ABC transporters","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"39","kdpC","eco02020:Two-component system",0.0043776530995575,1,2.35875865640835,0.00675886881789289,115,2.35875865640835,3,3,6,"Two-component system
+ padj:0.00676 N( -6/ +3/ 115)","Two-component system","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"40","kdpB","eco02020:Two-component system",0.0257153161942627,1,1.58980813124648,0.00675886881789289,115,1.58980813124648,2,3,6,"Two-component system
+ padj:0.00676 N( -6/ +3/ 115)","Two-component system","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"41","pstS","eco02020:Two-component system",0.0391901977021387,1,1.40682254563822,0.00675886881789289,115,1.40682254563822,1,3,6,"Two-component system
+ padj:0.00676 N( -6/ +3/ 115)","Two-component system","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"42","trpC","eco02020:Two-component system",0.0416902369530569,-1,-1.3799656364853,0.00675886881789289,115,1.3799656364853,-1,3,6,"Two-component system
+ padj:0.00676 N( -6/ +3/ 115)","Two-component system","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"43","trpD","eco02020:Two-component system",0.0211328303661513,-1,-1.67504233304319,0.00675886881789289,115,1.67504233304319,-2,3,6,"Two-component system
+ padj:0.00676 N( -6/ +3/ 115)","Two-component system","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"44","trpE","eco02020:Two-component system",0.0137673315486273,-1,-1.86115022866177,0.00675886881789289,115,1.86115022866177,-3,3,6,"Two-component system
+ padj:0.00676 N( -6/ +3/ 115)","Two-component system","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"45","trpB","eco02020:Two-component system",0.0127808318387704,-1,-1.89344087925812,0.00675886881789289,115,1.89344087925812,-4,3,6,"Two-component system
+ padj:0.00676 N( -6/ +3/ 115)","Two-component system","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"46","glnG","eco02020:Two-component system",0.0116035256189299,-1,-1.93541003454813,0.00675886881789289,115,1.93541003454813,-5,3,6,"Two-component system
+ padj:0.00676 N( -6/ +3/ 115)","Two-component system","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"47","trpA","eco02020:Two-component system",0.00572710374153973,-1,-2.24206494994583,0.00675886881789289,115,2.24206494994583,-6,3,6,"Two-component system
+ padj:0.00676 N( -6/ +3/ 115)","Two-component system","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"48","flgI","eco02040:Flagellar assembly",0.00417909707707473,-1,-2.37891754042656,3.34417175837406e-16,19,2.37891754042656,-1,0,15,"Flagellar assembly
+ padj:0.00000 N( -15/ +0/ 19)","Flagellar assembly","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"49","flgL","eco02040:Flagellar assembly",0.00148339632298115,-1,-2.82874280184504,3.34417175837406e-16,19,2.82874280184504,-2,0,15,"Flagellar assembly
+ padj:0.00000 N( -15/ +0/ 19)","Flagellar assembly","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"50","flgK","eco02040:Flagellar assembly",0.000215831831615131,-1,-3.66588450369702,3.34417175837406e-16,19,3.66588450369702,-3,0,15,"Flagellar assembly
+ padj:0.00000 N( -15/ +0/ 19)","Flagellar assembly","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"51","flgH","eco02040:Flagellar assembly",6.71551954554245e-06,-1,-5.17292038254347,3.34417175837406e-16,19,5.17292038254347,-4,0,15,"Flagellar assembly
+ padj:0.00000 N( -15/ +0/ 19)","Flagellar assembly","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"52","flgB","eco02040:Flagellar assembly",1.63358940292476e-06,-1,-5.78685709251122,3.34417175837406e-16,19,5.78685709251122,-5,0,15,"Flagellar assembly
+ padj:0.00000 N( -15/ +0/ 19)","Flagellar assembly","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"53","flhA","eco02040:Flagellar assembly",4.25086483136252e-07,-1,-6.37152270447223,3.34417175837406e-16,19,6.37152270447223,-6,0,15,"Flagellar assembly
+ padj:0.00000 N( -15/ +0/ 19)","Flagellar assembly","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"54","flgF","eco02040:Flagellar assembly",1.20807921561092e-07,-1,-6.91790458742453,3.34417175837406e-16,19,6.91790458742453,-7,0,15,"Flagellar assembly
+ padj:0.00000 N( -15/ +0/ 19)","Flagellar assembly","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"55","flgG","eco02040:Flagellar assembly",1.11281534217922e-07,-1,-6.95357689543707,3.34417175837406e-16,19,6.95357689543707,-8,0,15,"Flagellar assembly
+ padj:0.00000 N( -15/ +0/ 19)","Flagellar assembly","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"56","flgE","eco02040:Flagellar assembly",1.94952976710934e-08,-1,-7.710070129241,3.34417175837406e-16,19,7.710070129241,-9,0,15,"Flagellar assembly
+ padj:0.00000 N( -15/ +0/ 19)","Flagellar assembly","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"57","flgN","eco02040:Flagellar assembly",6.71051148548103e-10,-1,-9.17324437597765,3.34417175837406e-16,19,9.17324437597765,-10,0,15,"Flagellar assembly
+ padj:0.00000 N( -15/ +0/ 19)","Flagellar assembly","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"58","flhB","eco02040:Flagellar assembly",6.71051148548103e-10,-1,-9.17324437597765,3.34417175837406e-16,19,9.17324437597765,-11,0,15,"Flagellar assembly
+ padj:0.00000 N( -15/ +0/ 19)","Flagellar assembly","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"59","flgA","eco02040:Flagellar assembly",1.86161838034606e-10,-1,-9.73010934177361,3.34417175837406e-16,19,9.73010934177361,-12,0,15,"Flagellar assembly
+ padj:0.00000 N( -15/ +0/ 19)","Flagellar assembly","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"60","flgC","eco02040:Flagellar assembly",1.18350725914074e-10,-1,-9.92682907394521,3.34417175837406e-16,19,9.92682907394521,-13,0,15,"Flagellar assembly
+ padj:0.00000 N( -15/ +0/ 19)","Flagellar assembly","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"61","flgM","eco02040:Flagellar assembly",1.16578759594341e-10,-1,-9.9333805699138,3.34417175837406e-16,19,9.9333805699138,-14,0,15,"Flagellar assembly
+ padj:0.00000 N( -15/ +0/ 19)","Flagellar assembly","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"
+"62","flgD","eco02040:Flagellar assembly",1.12899228550815e-11,-1,-10.9473090256328,3.34417175837406e-16,19,10.9473090256328,-15,0,15,"Flagellar assembly
+ padj:0.00000 N( -15/ +0/ 19)","Flagellar assembly","mrna","Exp","Na_mM_Levels","baseNahighNa","kegg"

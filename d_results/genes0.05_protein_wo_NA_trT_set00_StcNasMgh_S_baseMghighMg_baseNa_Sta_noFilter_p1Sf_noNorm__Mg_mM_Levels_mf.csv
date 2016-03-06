@@ -1,0 +1,5 @@
+"","ID","MF_Name","padj_gene","signChange","score_gene","FDR_GoMF","numGenesInCat","abs_score","rank","numSigP","numSigN","MF_Name_long","MF_Name_short","pick_data","growthPhase","test_for","vs","df_category"
+"1","gss","GO:0008884~glutathionylspermidine amidase activity",0.038644961488782,1,1.41290712115732,0.0406714129363744,2,1.41290712115732,1,1,1,"glutathionylspermidine amidase activity
+ padj:0.04067 N( -1/ +1/ 2)","glutathionylspermidine amidase activity","protein_wo_NA","Sta","Mg_mM_Levels","baseMghighMg","MF"
+"2","gss","GO:0008885~glutathionylspermidine synthase activity",0.038644961488782,1,1.41290712115732,0.0273007171319215,2,1.41290712115732,1,1,1,"glutathionylspermidine synthase activity
+ padj:0.02730 N( -1/ +1/ 2)","glutathionylspermidine synthase activity","protein_wo_NA","Sta","Mg_mM_Levels","baseMghighMg","MF"

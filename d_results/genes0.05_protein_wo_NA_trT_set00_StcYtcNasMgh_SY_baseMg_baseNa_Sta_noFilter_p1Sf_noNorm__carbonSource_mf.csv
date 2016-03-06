@@ -1,0 +1,181 @@
+"","ID","MF_Name","padj_gene","signChange","score_gene","FDR_GoMF","numGenesInCat","abs_score","rank","numSigP","numSigN","MF_Name_long","MF_Name_short","pick_data","growthPhase","test_for","vs","df_category"
+"1","cca","GO:0000049~tRNA binding",0.0229071439305552,1,1.64002905539907,0.000871799090641723,18,1.64002905539907,2,2,4,"tRNA binding
+ padj:0.00087 N( -4/ +2/ 18)","tRNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"2","rpsS","GO:0000049~tRNA binding",0.0255715983989616,1,1.59224212476392,0.000871799090641723,18,1.59224212476392,1,2,4,"tRNA binding
+ padj:0.00087 N( -4/ +2/ 18)","tRNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"3","metG","GO:0000049~tRNA binding",0.0313717395285624,-1,-1.50346139948171,0.000871799090641723,18,1.50346139948171,-1,2,4,"tRNA binding
+ padj:0.00087 N( -4/ +2/ 18)","tRNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"4","rpsL","GO:0000049~tRNA binding",0.0102087890352398,-1,-1.991025770793,0.000871799090641723,18,1.991025770793,-2,2,4,"tRNA binding
+ padj:0.00087 N( -4/ +2/ 18)","tRNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"5","rplE","GO:0000049~tRNA binding",0.00378126067070206,-1,-2.42236338242448,0.000871799090641723,18,2.42236338242448,-3,2,4,"tRNA binding
+ padj:0.00087 N( -4/ +2/ 18)","tRNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"6","rpmA","GO:0000049~tRNA binding",1.97459929987926e-06,-1,-5.70452102130691,0.000871799090641723,18,5.70452102130691,-4,2,4,"tRNA binding
+ padj:0.00087 N( -4/ +2/ 18)","tRNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"7","cca","GO:0003723~RNA binding",0.0229071439305552,1,1.64002905539907,5.71198699214071e-05,114,1.64002905539907,2,2,19,"RNA binding
+ padj:0.00006 N( -19/ +2/ 114)","RNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"8","rpsS","GO:0003723~RNA binding",0.0255715983989616,1,1.59224212476392,5.71198699214071e-05,114,1.59224212476392,1,2,19,"RNA binding
+ padj:0.00006 N( -19/ +2/ 114)","RNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"9","yhbY","GO:0003723~RNA binding",0.031499863560999,-1,-1.50169132731623,5.71198699214071e-05,114,1.50169132731623,-1,2,19,"RNA binding
+ padj:0.00006 N( -19/ +2/ 114)","RNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"10","metG","GO:0003723~RNA binding",0.0313717395285624,-1,-1.50346139948171,5.71198699214071e-05,114,1.50346139948171,-2,2,19,"RNA binding
+ padj:0.00006 N( -19/ +2/ 114)","RNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"11","rpsH","GO:0003723~RNA binding",0.0112012980168943,-1,-1.95073164796276,5.71198699214071e-05,114,1.95073164796276,-3,2,19,"RNA binding
+ padj:0.00006 N( -19/ +2/ 114)","RNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"12","nusA","GO:0003723~RNA binding",0.0110795506765689,-1,-1.95547785175953,5.71198699214071e-05,114,1.95547785175953,-4,2,19,"RNA binding
+ padj:0.00006 N( -19/ +2/ 114)","RNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"13","rpsL","GO:0003723~RNA binding",0.0102087890352398,-1,-1.991025770793,5.71198699214071e-05,114,1.991025770793,-5,2,19,"RNA binding
+ padj:0.00006 N( -19/ +2/ 114)","RNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"14","rplN","GO:0003723~RNA binding",0.00970140387800843,-1,-2.01316541497541,5.71198699214071e-05,114,2.01316541497541,-6,2,19,"RNA binding
+ padj:0.00006 N( -19/ +2/ 114)","RNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"15","rplU","GO:0003723~RNA binding",0.00582557142320603,-1,-2.23466146879573,5.71198699214071e-05,114,2.23466146879573,-7,2,19,"RNA binding
+ padj:0.00006 N( -19/ +2/ 114)","RNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"16","rplE","GO:0003723~RNA binding",0.00378126067070206,-1,-2.42236338242448,5.71198699214071e-05,114,2.42236338242448,-8,2,19,"RNA binding
+ padj:0.00006 N( -19/ +2/ 114)","RNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"17","tyrS","GO:0003723~RNA binding",0.00290297628511816,-1,-2.53715651197556,5.71198699214071e-05,114,2.53715651197556,-9,2,19,"RNA binding
+ padj:0.00006 N( -19/ +2/ 114)","RNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"18","ftsY","GO:0003723~RNA binding",0.00206710645166153,-1,-2.68463715753877,5.71198699214071e-05,114,2.68463715753877,-10,2,19,"RNA binding
+ padj:0.00006 N( -19/ +2/ 114)","RNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"19","ksgA","GO:0003723~RNA binding",0.000369119850652314,-1,-3.4328325985406,5.71198699214071e-05,114,3.4328325985406,-11,2,19,"RNA binding
+ padj:0.00006 N( -19/ +2/ 114)","RNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"20","rplR","GO:0003723~RNA binding",0.000365483574381438,-1,-3.43713213639641,5.71198699214071e-05,114,3.43713213639641,-12,2,19,"RNA binding
+ padj:0.00006 N( -19/ +2/ 114)","RNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"21","rpsN","GO:0003723~RNA binding",5.76361545937857e-05,-1,-4.23930500243143,5.71198699214071e-05,114,4.23930500243143,-13,2,19,"RNA binding
+ padj:0.00006 N( -19/ +2/ 114)","RNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"22","rpmC","GO:0003723~RNA binding",2.43988328825239e-05,-1,-4.61263094762859,5.71198699214071e-05,114,4.61263094762859,-14,2,19,"RNA binding
+ padj:0.00006 N( -19/ +2/ 114)","RNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"23","rpsQ","GO:0003723~RNA binding",5.89389286598648e-06,-1,-5.22959776263841,5.71198699214071e-05,114,5.22959776263841,-15,2,19,"RNA binding
+ padj:0.00006 N( -19/ +2/ 114)","RNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"24","rpmA","GO:0003723~RNA binding",1.97459929987926e-06,-1,-5.70452102130691,5.71198699214071e-05,114,5.70452102130691,-16,2,19,"RNA binding
+ padj:0.00006 N( -19/ +2/ 114)","RNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"25","rpsO","GO:0003723~RNA binding",2.42505815029212e-07,-1,-6.61527784302122,5.71198699214071e-05,114,6.61527784302122,-17,2,19,"RNA binding
+ padj:0.00006 N( -19/ +2/ 114)","RNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"26","rpsF","GO:0003723~RNA binding",2.55622112804768e-08,-1,-7.59240157988101,5.71198699214071e-05,114,7.59240157988101,-18,2,19,"RNA binding
+ padj:0.00006 N( -19/ +2/ 114)","RNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"27","rpsD","GO:0003723~RNA binding",3.7149051392686e-09,-1,-8.43005227154491,5.71198699214071e-05,114,8.43005227154491,-19,2,19,"RNA binding
+ padj:0.00006 N( -19/ +2/ 114)","RNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"28","rpmB","GO:0003735~structural constituent of ribosome",0.015427319668878,1,1.81170952138539,5.52768941730619e-12,57,1.81170952138539,2,2,14,"structural constituent of ribosome
+ padj:0.00000 N( -14/ +2/ 57)","structural constituent of ribosome","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"29","rpsS","GO:0003735~structural constituent of ribosome",0.0255715983989616,1,1.59224212476392,5.52768941730619e-12,57,1.59224212476392,1,2,14,"structural constituent of ribosome
+ padj:0.00000 N( -14/ +2/ 57)","structural constituent of ribosome","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"30","rpsH","GO:0003735~structural constituent of ribosome",0.0112012980168943,-1,-1.95073164796276,5.52768941730619e-12,57,1.95073164796276,-1,2,14,"structural constituent of ribosome
+ padj:0.00000 N( -14/ +2/ 57)","structural constituent of ribosome","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"31","rpsL","GO:0003735~structural constituent of ribosome",0.0102087890352398,-1,-1.991025770793,5.52768941730619e-12,57,1.991025770793,-2,2,14,"structural constituent of ribosome
+ padj:0.00000 N( -14/ +2/ 57)","structural constituent of ribosome","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"32","rplN","GO:0003735~structural constituent of ribosome",0.00970140387800843,-1,-2.01316541497541,5.52768941730619e-12,57,2.01316541497541,-3,2,14,"structural constituent of ribosome
+ padj:0.00000 N( -14/ +2/ 57)","structural constituent of ribosome","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"33","rplU","GO:0003735~structural constituent of ribosome",0.00582557142320603,-1,-2.23466146879573,5.52768941730619e-12,57,2.23466146879573,-4,2,14,"structural constituent of ribosome
+ padj:0.00000 N( -14/ +2/ 57)","structural constituent of ribosome","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"34","rplL","GO:0003735~structural constituent of ribosome",0.0042565100378892,-1,-2.37094633809805,5.52768941730619e-12,57,2.37094633809805,-5,2,14,"structural constituent of ribosome
+ padj:0.00000 N( -14/ +2/ 57)","structural constituent of ribosome","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"35","rplE","GO:0003735~structural constituent of ribosome",0.00378126067070206,-1,-2.42236338242448,5.52768941730619e-12,57,2.42236338242448,-6,2,14,"structural constituent of ribosome
+ padj:0.00000 N( -14/ +2/ 57)","structural constituent of ribosome","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"36","rplR","GO:0003735~structural constituent of ribosome",0.000365483574381438,-1,-3.43713213639641,5.52768941730619e-12,57,3.43713213639641,-7,2,14,"structural constituent of ribosome
+ padj:0.00000 N( -14/ +2/ 57)","structural constituent of ribosome","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"37","rpsN","GO:0003735~structural constituent of ribosome",5.76361545937857e-05,-1,-4.23930500243143,5.52768941730619e-12,57,4.23930500243143,-8,2,14,"structural constituent of ribosome
+ padj:0.00000 N( -14/ +2/ 57)","structural constituent of ribosome","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"38","rpmC","GO:0003735~structural constituent of ribosome",2.43988328825239e-05,-1,-4.61263094762859,5.52768941730619e-12,57,4.61263094762859,-9,2,14,"structural constituent of ribosome
+ padj:0.00000 N( -14/ +2/ 57)","structural constituent of ribosome","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"39","rpsQ","GO:0003735~structural constituent of ribosome",5.89389286598648e-06,-1,-5.22959776263841,5.52768941730619e-12,57,5.22959776263841,-10,2,14,"structural constituent of ribosome
+ padj:0.00000 N( -14/ +2/ 57)","structural constituent of ribosome","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"40","rpmA","GO:0003735~structural constituent of ribosome",1.97459929987926e-06,-1,-5.70452102130691,5.52768941730619e-12,57,5.70452102130691,-11,2,14,"structural constituent of ribosome
+ padj:0.00000 N( -14/ +2/ 57)","structural constituent of ribosome","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"41","rpsO","GO:0003735~structural constituent of ribosome",2.42505815029212e-07,-1,-6.61527784302122,5.52768941730619e-12,57,6.61527784302122,-12,2,14,"structural constituent of ribosome
+ padj:0.00000 N( -14/ +2/ 57)","structural constituent of ribosome","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"42","rpsF","GO:0003735~structural constituent of ribosome",2.55622112804768e-08,-1,-7.59240157988101,5.52768941730619e-12,57,7.59240157988101,-13,2,14,"structural constituent of ribosome
+ padj:0.00000 N( -14/ +2/ 57)","structural constituent of ribosome","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"43","rpsD","GO:0003735~structural constituent of ribosome",3.7149051392686e-09,-1,-8.43005227154491,5.52768941730619e-12,57,8.43005227154491,-14,2,14,"structural constituent of ribosome
+ padj:0.00000 N( -14/ +2/ 57)","structural constituent of ribosome","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"44","fabI","GO:0004312~fatty-acid synthase activity",0.0281755064242199,-1,-1.55012826923864,0.0118574866938603,6,1.55012826923864,-1,0,5,"fatty-acid synthase activity
+ padj:0.01186 N( -5/ +0/ 6)","fatty-acid synthase activity","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"45","fabD","GO:0004312~fatty-acid synthase activity",0.00315272597184652,-1,-2.50131377555301,0.0118574866938603,6,2.50131377555301,-2,0,5,"fatty-acid synthase activity
+ padj:0.01186 N( -5/ +0/ 6)","fatty-acid synthase activity","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"46","fabF","GO:0004312~fatty-acid synthase activity",0.000791643103406259,-1,-3.10147056734354,0.0118574866938603,6,3.10147056734354,-3,0,5,"fatty-acid synthase activity
+ padj:0.01186 N( -5/ +0/ 6)","fatty-acid synthase activity","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"47","fabB","GO:0004312~fatty-acid synthase activity",0.000491139052776784,-1,-3.30879553169788,0.0118574866938603,6,3.30879553169788,-4,0,5,"fatty-acid synthase activity
+ padj:0.01186 N( -5/ +0/ 6)","fatty-acid synthase activity","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"48","fabG","GO:0004312~fatty-acid synthase activity",1.29713011040106e-05,-1,-4.88701645923191,0.0118574866938603,6,4.88701645923191,-5,0,5,"fatty-acid synthase activity
+ padj:0.01186 N( -5/ +0/ 6)","fatty-acid synthase activity","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"49","serB","GO:0004647~phosphoserine phosphatase activity",0.0281755064242199,-1,-1.55012826923864,0.00919988148017259,3,1.55012826923864,-1,0,3,"phosphoserine phosphatase activity
+ padj:0.00920 N( -3/ +0/ 3)","phosphoserine phosphatase activity","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"50","yidA","GO:0004647~phosphoserine phosphatase activity",0.00742856619245084,-1,-2.12909500249741,0.00919988148017259,3,2.12909500249741,-2,0,3,"phosphoserine phosphatase activity
+ padj:0.00920 N( -3/ +0/ 3)","phosphoserine phosphatase activity","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"51","gcvR","GO:0004647~phosphoserine phosphatase activity",0.000248700717268469,-1,-3.60432296219573,0.00919988148017259,3,3.60432296219573,-3,0,3,"phosphoserine phosphatase activity
+ padj:0.00920 N( -3/ +0/ 3)","phosphoserine phosphatase activity","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"52","rpmB","GO:0005198~structural molecule activity",0.015427319668878,1,1.81170952138539,1.16294940344375e-09,70,1.81170952138539,2,2,16,"structural molecule activity
+ padj:0.00000 N( -16/ +2/ 70)","structural molecule activity","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"53","rpsS","GO:0005198~structural molecule activity",0.0255715983989616,1,1.59224212476392,1.16294940344375e-09,70,1.59224212476392,1,2,16,"structural molecule activity
+ padj:0.00000 N( -16/ +2/ 70)","structural molecule activity","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"54","flgG","GO:0005198~structural molecule activity",0.0242849774959163,-1,-1.61466229463706,1.16294940344375e-09,70,1.61466229463706,-1,2,16,"structural molecule activity
+ padj:0.00000 N( -16/ +2/ 70)","structural molecule activity","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"55","rpsH","GO:0005198~structural molecule activity",0.0112012980168943,-1,-1.95073164796276,1.16294940344375e-09,70,1.95073164796276,-2,2,16,"structural molecule activity
+ padj:0.00000 N( -16/ +2/ 70)","structural molecule activity","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"56","rpsL","GO:0005198~structural molecule activity",0.0102087890352398,-1,-1.991025770793,1.16294940344375e-09,70,1.991025770793,-3,2,16,"structural molecule activity
+ padj:0.00000 N( -16/ +2/ 70)","structural molecule activity","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"57","rplN","GO:0005198~structural molecule activity",0.00970140387800843,-1,-2.01316541497541,1.16294940344375e-09,70,2.01316541497541,-4,2,16,"structural molecule activity
+ padj:0.00000 N( -16/ +2/ 70)","structural molecule activity","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"58","rplU","GO:0005198~structural molecule activity",0.00582557142320603,-1,-2.23466146879573,1.16294940344375e-09,70,2.23466146879573,-5,2,16,"structural molecule activity
+ padj:0.00000 N( -16/ +2/ 70)","structural molecule activity","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"59","rplL","GO:0005198~structural molecule activity",0.0042565100378892,-1,-2.37094633809805,1.16294940344375e-09,70,2.37094633809805,-6,2,16,"structural molecule activity
+ padj:0.00000 N( -16/ +2/ 70)","structural molecule activity","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"60","rplE","GO:0005198~structural molecule activity",0.00378126067070206,-1,-2.42236338242448,1.16294940344375e-09,70,2.42236338242448,-7,2,16,"structural molecule activity
+ padj:0.00000 N( -16/ +2/ 70)","structural molecule activity","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"61","sufA","GO:0005198~structural molecule activity",0.00144742647321689,-1,-2.83940348845525,1.16294940344375e-09,70,2.83940348845525,-8,2,16,"structural molecule activity
+ padj:0.00000 N( -16/ +2/ 70)","structural molecule activity","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"62","rplR","GO:0005198~structural molecule activity",0.000365483574381438,-1,-3.43713213639641,1.16294940344375e-09,70,3.43713213639641,-9,2,16,"structural molecule activity
+ padj:0.00000 N( -16/ +2/ 70)","structural molecule activity","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"63","rpsN","GO:0005198~structural molecule activity",5.76361545937857e-05,-1,-4.23930500243143,1.16294940344375e-09,70,4.23930500243143,-10,2,16,"structural molecule activity
+ padj:0.00000 N( -16/ +2/ 70)","structural molecule activity","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"64","rpmC","GO:0005198~structural molecule activity",2.43988328825239e-05,-1,-4.61263094762859,1.16294940344375e-09,70,4.61263094762859,-11,2,16,"structural molecule activity
+ padj:0.00000 N( -16/ +2/ 70)","structural molecule activity","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"65","rpsQ","GO:0005198~structural molecule activity",5.89389286598648e-06,-1,-5.22959776263841,1.16294940344375e-09,70,5.22959776263841,-12,2,16,"structural molecule activity
+ padj:0.00000 N( -16/ +2/ 70)","structural molecule activity","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"66","rpmA","GO:0005198~structural molecule activity",1.97459929987926e-06,-1,-5.70452102130691,1.16294940344375e-09,70,5.70452102130691,-13,2,16,"structural molecule activity
+ padj:0.00000 N( -16/ +2/ 70)","structural molecule activity","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"67","rpsO","GO:0005198~structural molecule activity",2.42505815029212e-07,-1,-6.61527784302122,1.16294940344375e-09,70,6.61527784302122,-14,2,16,"structural molecule activity
+ padj:0.00000 N( -16/ +2/ 70)","structural molecule activity","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"68","rpsF","GO:0005198~structural molecule activity",2.55622112804768e-08,-1,-7.59240157988101,1.16294940344375e-09,70,7.59240157988101,-15,2,16,"structural molecule activity
+ padj:0.00000 N( -16/ +2/ 70)","structural molecule activity","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"69","rpsD","GO:0005198~structural molecule activity",3.7149051392686e-09,-1,-8.43005227154491,1.16294940344375e-09,70,8.43005227154491,-16,2,16,"structural molecule activity
+ padj:0.00000 N( -16/ +2/ 70)","structural molecule activity","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"70","rpsS","GO:0019843~rRNA binding",0.0255715983989616,1,1.59224212476392,5.16431342134638e-12,38,1.59224212476392,1,1,13,"rRNA binding
+ padj:0.00000 N( -13/ +1/ 38)","rRNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"71","rpsH","GO:0019843~rRNA binding",0.0112012980168943,-1,-1.95073164796276,5.16431342134638e-12,38,1.95073164796276,-1,1,13,"rRNA binding
+ padj:0.00000 N( -13/ +1/ 38)","rRNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"72","rpsL","GO:0019843~rRNA binding",0.0102087890352398,-1,-1.991025770793,5.16431342134638e-12,38,1.991025770793,-2,1,13,"rRNA binding
+ padj:0.00000 N( -13/ +1/ 38)","rRNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"73","rplN","GO:0019843~rRNA binding",0.00970140387800843,-1,-2.01316541497541,5.16431342134638e-12,38,2.01316541497541,-3,1,13,"rRNA binding
+ padj:0.00000 N( -13/ +1/ 38)","rRNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"74","rplU","GO:0019843~rRNA binding",0.00582557142320603,-1,-2.23466146879573,5.16431342134638e-12,38,2.23466146879573,-4,1,13,"rRNA binding
+ padj:0.00000 N( -13/ +1/ 38)","rRNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"75","rplE","GO:0019843~rRNA binding",0.00378126067070206,-1,-2.42236338242448,5.16431342134638e-12,38,2.42236338242448,-5,1,13,"rRNA binding
+ padj:0.00000 N( -13/ +1/ 38)","rRNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"76","rplR","GO:0019843~rRNA binding",0.000365483574381438,-1,-3.43713213639641,5.16431342134638e-12,38,3.43713213639641,-6,1,13,"rRNA binding
+ padj:0.00000 N( -13/ +1/ 38)","rRNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"77","rpsN","GO:0019843~rRNA binding",5.76361545937857e-05,-1,-4.23930500243143,5.16431342134638e-12,38,4.23930500243143,-7,1,13,"rRNA binding
+ padj:0.00000 N( -13/ +1/ 38)","rRNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"78","rpmC","GO:0019843~rRNA binding",2.43988328825239e-05,-1,-4.61263094762859,5.16431342134638e-12,38,4.61263094762859,-8,1,13,"rRNA binding
+ padj:0.00000 N( -13/ +1/ 38)","rRNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"79","rpsQ","GO:0019843~rRNA binding",5.89389286598648e-06,-1,-5.22959776263841,5.16431342134638e-12,38,5.22959776263841,-9,1,13,"rRNA binding
+ padj:0.00000 N( -13/ +1/ 38)","rRNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"80","rpmA","GO:0019843~rRNA binding",1.97459929987926e-06,-1,-5.70452102130691,5.16431342134638e-12,38,5.70452102130691,-10,1,13,"rRNA binding
+ padj:0.00000 N( -13/ +1/ 38)","rRNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"81","rpsO","GO:0019843~rRNA binding",2.42505815029212e-07,-1,-6.61527784302122,5.16431342134638e-12,38,6.61527784302122,-11,1,13,"rRNA binding
+ padj:0.00000 N( -13/ +1/ 38)","rRNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"82","rpsF","GO:0019843~rRNA binding",2.55622112804768e-08,-1,-7.59240157988101,5.16431342134638e-12,38,7.59240157988101,-12,1,13,"rRNA binding
+ padj:0.00000 N( -13/ +1/ 38)","rRNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"83","rpsD","GO:0019843~rRNA binding",3.7149051392686e-09,-1,-8.43005227154491,5.16431342134638e-12,38,8.43005227154491,-13,1,13,"rRNA binding
+ padj:0.00000 N( -13/ +1/ 38)","rRNA binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"84","dapE","GO:0050897~cobalt ion binding",0.0468958295976963,-1,-1.32886577697018,0.00303179168367662,22,1.32886577697018,-1,0,7,"cobalt ion binding
+ padj:0.00303 N( -7/ +0/ 22)","cobalt ion binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"85","metK","GO:0050897~cobalt ion binding",0.0125978266813206,-1,-1.89970437089199,0.00303179168367662,22,1.89970437089199,-2,0,7,"cobalt ion binding
+ padj:0.00303 N( -7/ +0/ 22)","cobalt ion binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"86","ispD","GO:0050897~cobalt ion binding",0.0125133432940859,-1,-1.90262664073123,0.00303179168367662,22,1.90262664073123,-3,0,7,"cobalt ion binding
+ padj:0.00303 N( -7/ +0/ 22)","cobalt ion binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"87","map","GO:0050897~cobalt ion binding",0.00875486640680541,-1,-2.05775047656282,0.00303179168367662,22,2.05775047656282,-4,0,7,"cobalt ion binding
+ padj:0.00303 N( -7/ +0/ 22)","cobalt ion binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"88","yfbR","GO:0050897~cobalt ion binding",0.00205400722394288,-1,-2.68739803332247,0.00303179168367662,22,2.68739803332247,-5,0,7,"cobalt ion binding
+ padj:0.00303 N( -7/ +0/ 22)","cobalt ion binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"89","slyD","GO:0050897~cobalt ion binding",0.00139083989001477,-1,-2.85672286201749,0.00303179168367662,22,2.85672286201749,-6,0,7,"cobalt ion binding
+ padj:0.00303 N( -7/ +0/ 22)","cobalt ion binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"
+"90","argE","GO:0050897~cobalt ion binding",0.00029021407012082,-1,-3.53728153597925,0.00303179168367662,22,3.53728153597925,-7,0,7,"cobalt ion binding
+ padj:0.00303 N( -7/ +0/ 22)","cobalt ion binding","protein_wo_NA","Sta","carbonSource","glucoseglycerol","MF"

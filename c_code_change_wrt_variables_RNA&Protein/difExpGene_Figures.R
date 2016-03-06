@@ -209,12 +209,19 @@ df_summary %>%
   dplyr::mutate(data_type_abv = ifelse(data_type=="mrna", "mRNA", NA),
                 data_type_abv = ifelse(data_type=="protein_wo_NA", "Protein", data_type_abv))->df_summary
 df_summary$data_type_abv <- factor(df_summary$data_type_abv, levels = c("mRNA", "Protein"))
+
+
+df_summary %>%
+  dplyr::filter(data_type=="mrna") -> df_summary_mrna
+
+df_summary %>%
+  dplyr::filter(data_type=="protein_wo_NA") -> df_summary_protein
 ###*****************************
 
 
 ###*****************************
-# Figure
-figBarGraph=ggplot(df_summary, aes(x=investigated_conditions, 
+# Figures
+figBarGraph01=ggplot(df_summary, aes(x=investigated_conditions, 
                                    y=padj_0.05,
                                    fill=as.factor(signChange))) +
   facet_grid(growthPhase ~ data_type_abv)+
@@ -239,16 +246,82 @@ figBarGraph=ggplot(df_summary, aes(x=investigated_conditions,
                                                     alpha = .4)))
 
 
-print(figBarGraph)
+print(figBarGraph01)
+
+
+figBarGraph02a=ggplot(df_summary_mrna, aes(x=investigated_conditions, 
+                                     y=padj_0.05,
+                                     fill=as.factor(signChange))) +
+  facet_grid(. ~ growthPhase)+
+  geom_bar(position="dodge",stat="identity",width=.75)+
+  scale_fill_manual(values = c("blue","red"),
+                    name="Regulation",
+                    breaks=c("-1", "1"),
+                    labels=c("Down Regulated", "Up Regulated"))+
+  ylim(0,1700)+
+  theme_bw()+
+  xlab("Test Condition") + ylab("Count") +
+  theme(panel.grid.minor.x = element_blank(),
+        legend.position=c(0.88,0.8),
+        strip.text.x = element_text(size = 16),
+        strip.text.y = element_text(size = 16),
+        axis.text.x=element_text(size=10),
+        axis.text.y=element_text(size=12),
+        axis.title.x=element_text(size=16),
+        axis.title.y=element_text(size=16),
+        legend.title=element_text(size=14),
+        legend.text=element_text(size=14),
+        legend.background = element_rect(fill=alpha(colour = "white",
+                                                    alpha = .4)))
+print(figBarGraph02a)
+
+
+figBarGraph02b=ggplot(df_summary_protein, aes(x=investigated_conditions, 
+                                           y=padj_0.05,
+                                           fill=as.factor(signChange))) +
+  facet_grid(. ~ growthPhase)+
+  geom_bar(position="dodge",stat="identity",width=.75)+
+  scale_fill_manual(values = c("blue","red"),
+                    name="Regulation",
+                    breaks=c("-1", "1"),
+                    labels=c("Down Regulated", "Up Regulated"))+
+  ylim(0,1700)+
+  theme_bw()+
+  xlab("Test Condition") + ylab("Count") +
+  theme(panel.grid.minor.x = element_blank(),
+        legend.position=c(0.88,0.8),
+        strip.text.x = element_text(size = 16),
+        strip.text.y = element_text(size = 16),
+        axis.text.x=element_text(size=10),
+        axis.text.y=element_text(size=12),
+        axis.title.x=element_text(size=16),
+        axis.title.y=element_text(size=16),
+        legend.title=element_text(size=14),
+        legend.text=element_text(size=14),
+        legend.background = element_rect(fill=alpha(colour = "white",
+                                                    alpha = .4)))
+print(figBarGraph02b)
 ###*****************************
 
 
 ###*****************************
 # Save Figure
 cowplot::save_plot(filename = paste0("../c_figures/difExpressedGenes",".pdf"),
-                   plot = figBarGraph, 
+                   plot = figBarGraph01, 
                    ncol = 2, nrow = 2, 
                    base_height = 3.075,base_width = 4.5,
+                   units = "in",useDingbats=FALSE)
+
+cowplot::save_plot(filename = paste0("../c_figures/difExpressedGenes_mrna",".pdf"),
+                   plot = figBarGraph02a, 
+                   ncol = 2, nrow = 1, 
+                   base_height = 4,base_width = 4.5,
+                   units = "in",useDingbats=FALSE)
+
+cowplot::save_plot(filename = paste0("../c_figures/difExpressedGenes_protein",".pdf"),
+                   plot = figBarGraph02b, 
+                   ncol = 2, nrow = 1, 
+                   base_height = 4,base_width = 4.5,
                    units = "in",useDingbats=FALSE)
 
 ###*****************************

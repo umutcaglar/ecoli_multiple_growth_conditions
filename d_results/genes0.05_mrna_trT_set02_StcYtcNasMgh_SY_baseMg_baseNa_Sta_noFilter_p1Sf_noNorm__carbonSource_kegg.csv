@@ -1,0 +1,43 @@
+"","ID","KEGG_Path","padj_gene","signChange","score_gene","FDR_KEGG_Path","numGenesInCat","abs_score","rank","numSigP","numSigN","KEGG_Path_long","KEGG_Path_short","pick_data","growthPhase","test_for","vs","df_category"
+"1","argI","eco00330:Arginine and proline metabolism",0.00471771047111758,1,2.32626871556028,0.00939754330522213,35,2.32626871556028,3,3,2,"Arginine and proline metabolism
+ padj:0.00940 N( -2/ +3/ 35)","Arginine and proline metabolism","mrna","Sta","carbonSource","glucoseglycerol","kegg"
+"2","argD","eco00330:Arginine and proline metabolism",0.00617861458964721,1,2.20910889441317,0.00939754330522213,35,2.20910889441317,2,3,2,"Arginine and proline metabolism
+ padj:0.00940 N( -2/ +3/ 35)","Arginine and proline metabolism","mrna","Sta","carbonSource","glucoseglycerol","kegg"
+"3","glnA","eco00330:Arginine and proline metabolism",0.014702758315545,1,1.8326011816569,0.00939754330522213,35,1.8326011816569,1,3,2,"Arginine and proline metabolism
+ padj:0.00940 N( -2/ +3/ 35)","Arginine and proline metabolism","mrna","Sta","carbonSource","glucoseglycerol","kegg"
+"4","astD","eco00330:Arginine and proline metabolism",0.00182407821247229,-1,-2.73895654401369,0.00939754330522213,35,2.73895654401369,-1,3,2,"Arginine and proline metabolism
+ padj:0.00940 N( -2/ +3/ 35)","Arginine and proline metabolism","mrna","Sta","carbonSource","glucoseglycerol","kegg"
+"5","speA","eco00330:Arginine and proline metabolism",0.00073051639709447,-1,-3.13637003149187,0.00939754330522213,35,3.13637003149187,-2,3,2,"Arginine and proline metabolism
+ padj:0.00940 N( -2/ +3/ 35)","Arginine and proline metabolism","mrna","Sta","carbonSource","glucoseglycerol","kegg"
+"6","treF","eco00500:Starch and sucrose metabolism",0.0367294424292826,-1,-1.43498566440515,0.0459930547076851,28,1.43498566440515,-1,0,4,"Starch and sucrose metabolism
+ padj:0.04599 N( -4/ +0/ 28)","Starch and sucrose metabolism","mrna","Sta","carbonSource","glucoseglycerol","kegg"
+"7","galU","eco00500:Starch and sucrose metabolism",0.0284898587974914,-1,-1.54530970322182,0.0459930547076851,28,1.54530970322182,-2,0,4,"Starch and sucrose metabolism
+ padj:0.04599 N( -4/ +0/ 28)","Starch and sucrose metabolism","mrna","Sta","carbonSource","glucoseglycerol","kegg"
+"8","otsA","eco00500:Starch and sucrose metabolism",0.0218683442651735,-1,-1.66018409779089,0.0459930547076851,28,1.66018409779089,-3,0,4,"Starch and sucrose metabolism
+ padj:0.04599 N( -4/ +0/ 28)","Starch and sucrose metabolism","mrna","Sta","carbonSource","glucoseglycerol","kegg"
+"9","crr","eco00500:Starch and sucrose metabolism",0.000246218561907059,-1,-3.60867920960967,0.0459930547076851,28,3.60867920960967,-4,0,4,"Starch and sucrose metabolism
+ padj:0.04599 N( -4/ +0/ 28)","Starch and sucrose metabolism","mrna","Sta","carbonSource","glucoseglycerol","kegg"
+"10","argS","eco00970:Aminoacyl-tRNA biosynthesis",0.0323955163959739,-1,-1.48951509285604,0.0253208767015272,25,1.48951509285604,-1,0,4,"Aminoacyl-tRNA biosynthesis
+ padj:0.02532 N( -4/ +0/ 25)","Aminoacyl-tRNA biosynthesis","mrna","Sta","carbonSource","glucoseglycerol","kegg"
+"11","asnS","eco00970:Aminoacyl-tRNA biosynthesis",0.0163486188556078,-1,-1.78651893099907,0.0253208767015272,25,1.78651893099907,-2,0,4,"Aminoacyl-tRNA biosynthesis
+ padj:0.02532 N( -4/ +0/ 25)","Aminoacyl-tRNA biosynthesis","mrna","Sta","carbonSource","glucoseglycerol","kegg"
+"12","fmt","eco00970:Aminoacyl-tRNA biosynthesis",0.00917168123076838,-1,-2.03755104793731,0.0253208767015272,25,2.03755104793731,-3,0,4,"Aminoacyl-tRNA biosynthesis
+ padj:0.02532 N( -4/ +0/ 25)","Aminoacyl-tRNA biosynthesis","mrna","Sta","carbonSource","glucoseglycerol","kegg"
+"13","proS","eco00970:Aminoacyl-tRNA biosynthesis",1.32574807742237e-05,-1,-4.87753899401552,0.0253208767015272,25,4.87753899401552,-4,0,4,"Aminoacyl-tRNA biosynthesis
+ padj:0.02532 N( -4/ +0/ 25)","Aminoacyl-tRNA biosynthesis","mrna","Sta","carbonSource","glucoseglycerol","kegg"
+"14","cysP","eco02010:ABC transporters",0.000324202685420022,1,3.48918339214553,0.0192519246034073,153,3.48918339214553,5,5,3,"ABC transporters
+ padj:0.01925 N( -3/ +5/ 153)","ABC transporters","mrna","Sta","carbonSource","glucoseglycerol","kegg"
+"15","artJ","eco02010:ABC transporters",0.0158198191607816,1,1.80079848530886,0.0192519246034073,153,1.80079848530886,4,5,3,"ABC transporters
+ padj:0.01925 N( -3/ +5/ 153)","ABC transporters","mrna","Sta","carbonSource","glucoseglycerol","kegg"
+"16","metN","eco02010:ABC transporters",0.0184196136311599,1,1.73471948378168,0.0192519246034073,153,1.73471948378168,3,5,3,"ABC transporters
+ padj:0.01925 N( -3/ +5/ 153)","ABC transporters","mrna","Sta","carbonSource","glucoseglycerol","kegg"
+"17","sbp","eco02010:ABC transporters",0.0409862720062499,1,1.38736158206759,0.0192519246034073,153,1.38736158206759,2,5,3,"ABC transporters
+ padj:0.01925 N( -3/ +5/ 153)","ABC transporters","mrna","Sta","carbonSource","glucoseglycerol","kegg"
+"18","dppF","eco02010:ABC transporters",0.0488626037051481,1,1.31102339481959,0.0192519246034073,153,1.31102339481959,1,5,3,"ABC transporters
+ padj:0.01925 N( -3/ +5/ 153)","ABC transporters","mrna","Sta","carbonSource","glucoseglycerol","kegg"
+"19","yhdW","eco02010:ABC transporters",0.0460900488059555,-1,-1.33639283198948,0.0192519246034073,153,1.33639283198948,-1,5,3,"ABC transporters
+ padj:0.01925 N( -3/ +5/ 153)","ABC transporters","mrna","Sta","carbonSource","glucoseglycerol","kegg"
+"20","sapB","eco02010:ABC transporters",0.0336961878826764,-1,-1.47241922895549,0.0192519246034073,153,1.47241922895549,-2,5,3,"ABC transporters
+ padj:0.01925 N( -3/ +5/ 153)","ABC transporters","mrna","Sta","carbonSource","glucoseglycerol","kegg"
+"21","yadH","eco02010:ABC transporters",0.0291992484129488,-1,-1.53462832712384,0.0192519246034073,153,1.53462832712384,-3,5,3,"ABC transporters
+ padj:0.01925 N( -3/ +5/ 153)","ABC transporters","mrna","Sta","carbonSource","glucoseglycerol","kegg"

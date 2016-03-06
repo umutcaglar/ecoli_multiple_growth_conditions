@@ -53,23 +53,23 @@ dataName=name_data(initialValue="genes0.05", # can be "genes0.05"
                                          "experiment"),
                    # referenceLevels can be a vector like
                    # c("exponential", "baseMg", "baseNa", "glucose", "glucose_time_course")
-                   referenceLevels=c("exponential",
+                   referenceLevels=c("stationary",
                                      "baseMg", 
                                      "baseNa", 
                                      "glucose", 
                                      "glucose_time_course"),
                    experimentVector = c("allEx"), # can be "Stc","Ytc","Nas","Agr","Ngr","Mgl","Mgh" // "allEx"
                    carbonSourceVector = "S", # can be any sub combination of "SYAN"
-                   MgLevelVector = c("baseMg"), # can be "lowMg","baseMg","highMg" // "allMg"
-                   NaLevelVector = c("allNa"), # can be "baseNa","highNa" // "allNa"
-                   growthPhaseVector = c("exponential"), # can be "exponential","stationary","late_stationary" // "allPhase"
+                   MgLevelVector = c("baseMg","highMg"), # can be "lowMg","baseMg","highMg" // "allMg"
+                   NaLevelVector = c("baseNa"), # can be "baseNa","highNa" // "allNa"
+                   growthPhaseVector = c("stationary"), # can be "exponential","stationary","late_stationary" // "allPhase"
                    filterGenes = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
                    threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
                    roundData=TRUE,
                    sumTechnicalReplicates=TRUE,
                    deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf"
                    normalizationMethodChoice= "noNorm", # can be "vst", "rlog", "log10", "noNorm"
-                   test_for = "Na_mM_Levels")  # works only if normalizationMethodChoice == noNorm
+                   test_for = "Mg_mM_Levels")  # works only if normalizationMethodChoice == noNorm
 # c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
 
 objectName=paste(dataName$objectName,collapse = "_")
@@ -165,53 +165,155 @@ kegg_pathway_david_ref_2009_tidy %>%
 selectedDf %>%
   dplyr::filter(padj_gene<0.05,FDR_KEGG_Path<0.05) %>%
   dplyr::mutate(abs_score=abs(score_gene))%>%
-  dplyr::group_by(ID,KEGG_Path)%>%
-  dplyr::mutate(KEGG_Path_short=paste0(sub(".*:","",KEGG_Path),
-                                       "\n padj=",
-                                       sprintf("%.5f", FDR_KEGG_Path),
-                                       " numGenes :",numGenesInCat))%>%
   dplyr::group_by(KEGG_Path,signChange)%>%
   dplyr::arrange(abs_score)%>%
   dplyr::mutate(rank=signChange*seq(1,n()))%>%
+  dplyr::group_by(KEGG_Path)%>%
+  dplyr::mutate(numSigP=(max(rank)+abs(max(rank)))/2,
+                numSigN=abs(min(rank)))%>%
+  dplyr::group_by(ID,KEGG_Path)%>%
+  dplyr::mutate(KEGG_Path_long=paste0(sub(".*:","",KEGG_Path),
+                                      "\n padj:",
+                                      sprintf("%.5f", FDR_KEGG_Path),
+                                      " N( -",numSigN,"/ +",numSigP,"/ ",numGenesInCat,")"))%>%
+  dplyr::mutate(KEGG_Path_short=paste0(sub(".*:","",KEGG_Path)))%>%
   dplyr::group_by(KEGG_Path)%>%
   dplyr::arrange(desc(score_gene))-> selectedDf
 
 
 selectedDf %>%
-  dplyr::group_by(KEGG_Path_short)%>%
+  dplyr::group_by(KEGG_Path_long)%>%
   dplyr::summarise(FDR_KEGG_Path=unique(FDR_KEGG_Path))%>%
   dplyr::arrange(FDR_KEGG_Path)->summary_df
 
-as.vector(summary_df$KEGG_Path_short)
+as.vector(summary_df$KEGG_Path_long)
 
 
-selectedDf$KEGG_Path_short <- factor(selectedDf$KEGG_Path_short, 
-                                     levels = rev(as.vector(summary_df$KEGG_Path_short)))
+selectedDf$KEGG_Path_long <- factor(selectedDf$KEGG_Path_long, 
+                                    levels = rev(as.vector(summary_df$KEGG_Path_long)))
 ###*****************************
 
 
 ###*****************************
+# Generate simple Data Frame
+# Additional Parameters
+maxPathway=7
+maxGene=7
+
+if(length(unique(as.vector(selectedDf$FDR_KEGG_Path)))<maxPathway)
+{maxPathway=length(unique(as.vector(selectedDf$FDR_KEGG_Path)))}
+
+FDR_KEGG_PathTopn=sort(unique(as.vector(selectedDf$FDR_KEGG_Path)))[maxPathway]
+
+selectedDf %>%
+  dplyr::group_by()%>%
+  dplyr::filter(FDR_KEGG_Path<=FDR_KEGG_PathTopn) %>%
+  dplyr::group_by(KEGG_Path) %>%
+  dplyr::top_n(n=maxGene, wt = padj_gene)%>%
+  dplyr::group_by(KEGG_Path,signChange)%>%
+  dplyr::arrange(abs_score)%>%
+  dplyr::mutate(rank=signChange*seq(1,n()))->selectedDf_simp
+
+selectedDf_simp %>%
+  dplyr::group_by(KEGG_Path_short)%>%
+  dplyr::summarise(FDR_KEGG_Path=unique(FDR_KEGG_Path))%>%
+  dplyr::arrange(FDR_KEGG_Path)->summary_df_simp
+
+as.vector(summary_df_simp$KEGG_Path_short)
+
+
+selectedDf_simp$KEGG_Path_short <- factor(selectedDf_simp$KEGG_Path_short, 
+                                          levels = rev(as.vector(summary_df_simp$KEGG_Path_short)))
+###*****************************
+
+
+###*****************************
+# Generate Figures 
+# a) Complex figure
 scaleHigh=max(abs(selectedDf$score_gene))
 scaleMid=0
 scaleLow=-max(abs(selectedDf$score_gene))
 
-#Generate Fancy Figures
-fig01=ggplot( selectedDf, aes( x=rank,y=KEGG_Path_short)) +
+fig01=ggplot( selectedDf, aes( x=rank,y=KEGG_Path_long)) +
   geom_tile(aes(fill=score_gene))+
   scale_fill_gradientn(colours=c("Blue","Grey50","Red"),
                        values=rescale(c(scaleLow,scaleMid,scaleHigh)),
                        limits=c(scaleLow,scaleHigh),
                        guide = guide_colorbar(title = "-sign(cor)*P_log10"))+
   geom_text(aes(label=ID),size=3, colour="White", fontface="bold")+
-  theme_classic()+
+  theme_bw()+
   scale_x_continuous(breaks=min(selectedDf$rank):max(selectedDf$rank))+
-  ggtitle(objectName)+
+  ggtitle(paste0(objectName,"_kegg"))+
   theme(axis.line.y = element_blank(),
         legend.position="bottom",
-        axis.title.y = element_blank())
+        axis.title.y = element_blank(),
+        panel.grid.minor=element_blank(),
+        panel.grid.major.x=element_blank())
 
 print(fig01)
+
+
+# b) Simple Figure
+scaleHigh_simp=max(abs(selectedDf_simp$score_gene))
+scaleMid_simp=0
+scaleLow_simp=-max(abs(selectedDf_simp$score_gene))
+
+
+fig02=ggplot( selectedDf_simp, aes( x=rank,y=KEGG_Path_short)) +
+  geom_tile(aes(fill=score_gene))+
+  scale_fill_gradientn(colours=c("Blue","Grey50","Red"),
+                       values=rescale(c(scaleLow_simp,scaleMid_simp,scaleHigh_simp)),
+                       limits=c(scaleLow_simp,scaleHigh_simp),
+                       guide = guide_colorbar(title = "-sign(cor)*P_log10"))+
+  geom_text(aes(label=ID),size=3, colour="White", fontface="bold")+
+  theme_bw()+
+  scale_x_continuous(breaks=min(selectedDf_simp$rank):max(selectedDf_simp$rank))+
+  theme(axis.line.y = element_blank(),
+        legend.position="bottom",
+        axis.title.y = element_blank(),
+        panel.grid.minor=element_blank(),
+        panel.grid.major.x=element_blank())
+
+print(fig02)
 ###*****************************
+
+
+###*****************************
+# Save Files
+selectedDf<-cbind(selectedDf, 
+                  unique(kegg_input_df[,c("pick_data","growthPhase","test_for","vs")]),
+                  df_category="kegg")
+write.csv(x = selectedDf, file = paste0("../d_results/",objectName,"_kegg.csv"))
+###*****************************
+
+
+###*****************************
+# Save Figures
+
+# Detailed Figure
+colWidth=ifelse(max(selectedDf$rank)-min(selectedDf$rank)+1<16, 
+                16, 
+                max(selectedDf$rank)-min(selectedDf$rank))
+rowWidth=ifelse(nrow(summary_df)*1<3,3,nrow(summary_df)*1)
+
+cowplot::save_plot(filename = paste0("../d_figures/",objectName,"_kegg.pdf"),
+                   plot = fig01,
+                   base_height = rowWidth,
+                   base_width = colWidth,
+                   limitsize = FALSE)
+
+# Save simple figure
+# Detailed Figure
+colWidth=ifelse(max(selectedDf_simp$rank)-min(selectedDf_simp$rank)+1<8, 
+                8, 
+                max(selectedDf_simp$rank)-min(selectedDf_simp$rank))
+rowWidth=ifelse(nrow(summary_df_simp)*1<3,3,nrow(summary_df_simp)*1)
+
+cowplot::save_plot(filename = paste0("../d_figures/simple",objectName,"_kegg.pdf"),
+                   plot = fig02,
+                   base_height = rowWidth,
+                   base_width = colWidth,
+                   limitsize = FALSE)
 
 
 

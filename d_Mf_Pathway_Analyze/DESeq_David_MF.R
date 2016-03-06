@@ -53,23 +53,23 @@ dataName=name_data(initialValue="genes0.05", # can be "genes0.05"
                                          "experiment"),
                    # referenceLevels can be a vector like
                    # c("exponential", "baseMg", "baseNa", "glucose", "glucose_time_course")
-                   referenceLevels=c("exponential",
+                   referenceLevels=c("stationary",
                                      "baseMg", 
                                      "baseNa", 
                                      "glucose", 
                                      "glucose_time_course"),
                    experimentVector = c("allEx"), # can be "Stc","Ytc","Nas","Agr","Ngr","Mgl","Mgh" // "allEx"
                    carbonSourceVector = "S", # can be any sub combination of "SYAN"
-                   MgLevelVector = c("baseMg"), # can be "lowMg","baseMg","highMg" // "allMg"
-                   NaLevelVector = c("allNa"), # can be "baseNa","highNa" // "allNa"
-                   growthPhaseVector = c("exponential"), # can be "exponential","stationary","late_stationary" // "allPhase"
+                   MgLevelVector = c("baseMg","highMg"), # can be "lowMg","baseMg","highMg" // "allMg"
+                   NaLevelVector = c("baseNa"), # can be "baseNa","highNa" // "allNa"
+                   growthPhaseVector = c("stationary"), # can be "exponential","stationary","late_stationary" // "allPhase"
                    filterGenes = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
                    threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
                    roundData=TRUE,
                    sumTechnicalReplicates=TRUE,
                    deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf"
                    normalizationMethodChoice= "noNorm", # can be "vst", "rlog", "log10", "noNorm"
-                   test_for = "Na_mM_Levels")  # works only if normalizationMethodChoice == noNorm
+                   test_for = "Mg_mM_Levels")  # works only if normalizationMethodChoice == noNorm
 # c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
 
 objectName=paste(dataName$objectName,collapse = "_")
@@ -150,6 +150,7 @@ MF_david_ref_2009_tidy %>%
   dplyr::group_by(MF_Name)%>%
   dplyr::summarise(numGenesInCat=length(MF_Name))->numGenesInCat_df
 
+
 MF_david_ref_2009_tidy %>%
   dplyr::select(ID, MF_Name)%>%
   dplyr::filter(MF_Name %in% GoMF_list,
@@ -157,6 +158,7 @@ MF_david_ref_2009_tidy %>%
   dplyr::left_join(.,GoMF_input_df_narrow) %>%
   dplyr::left_join(.,GoMF_result_narrow) %>%
   dplyr::left_join(.,numGenesInCat_df) %>%
+  dplyr::distinct()%>%
   dplyr::filter(!is.na(padj_gene))%>%
   dplyr::group_by(MF_Name)%>%
   dplyr::arrange(desc(score_gene))->selectedDf
@@ -167,55 +169,151 @@ MF_david_ref_2009_tidy %>%
 selectedDf %>%
   dplyr::filter(padj_gene<0.05,FDR_GoMF<0.05) %>%
   dplyr::mutate(abs_score=abs(score_gene))%>%
-  dplyr::group_by(ID,MF_Name)%>%
-  dplyr::mutate(MF_Name_short=paste0(sub(".*~","",MF_Name),
-                                     "\n padj=",
-                                     sprintf("%.5f", FDR_GoMF),
-                                     " numGenes :",numGenesInCat))%>%
   dplyr::group_by(MF_Name,signChange)%>%
   dplyr::arrange(abs_score)%>%
   dplyr::mutate(rank=signChange*seq(1,n()))%>%
   dplyr::group_by(MF_Name)%>%
-  dplyr::arrange(desc(score_gene))-> selectedDf
-
+  dplyr::mutate(numSigP=(max(rank)+abs(max(rank)))/2,
+                numSigN=abs(min(rank)))%>%
+  dplyr::group_by(ID,MF_Name)%>%
+  dplyr::mutate(MF_Name_long=paste0(sub(".*~","",MF_Name),
+                                    "\n padj:",
+                                    sprintf("%.5f", FDR_GoMF),
+                                    " N( -",numSigN,"/ +",numSigP,"/ ",numGenesInCat,")"))%>%
+  dplyr::mutate(MF_Name_short=paste0(sub(".*~","",MF_Name)))%>%
+  dplyr::group_by(MF_Name)%>%
+  dplyr::arrange(desc(score_gene)) -> selectedDf
 
 selectedDf %>%
-  dplyr::group_by(MF_Name_short)%>%
+  dplyr::group_by(MF_Name_long)%>%
   dplyr::summarise(FDR_GoMF=unique(FDR_GoMF))%>%
   dplyr::arrange(FDR_GoMF)->summary_df
 
-as.vector(summary_df$MF_Name_short)
+as.vector(summary_df$MF_Name_long)
 
 
-selectedDf$MF_Name_short <- factor(selectedDf$MF_Name_short, 
-                                   levels = rev(as.vector(summary_df$MF_Name_short)))
-
-
+selectedDf$MF_Name_long <- factor(selectedDf$MF_Name_long, 
+                                  levels = rev(as.vector(summary_df$MF_Name_long)))
 ###*****************************
 
 
 ###*****************************
+# Generate simple Data Frame
+# Additional Parameters
+maxPathway=5
+maxGene=7
+
+if(length(unique(as.vector(selectedDf$FDR_GoMF)))<maxPathway)
+{maxPathway=length(unique(as.vector(selectedDf$FDR_GoMF)))}
+
+FDR_GoMFTopn=sort(unique(as.vector(selectedDf$FDR_GoMF)))[maxPathway]
+selectedDf %>%
+  dplyr::group_by()%>%
+  dplyr::filter(FDR_GoMF<=FDR_GoMFTopn) %>%
+  dplyr::group_by(MF_Name) %>%
+  dplyr::top_n(n=maxGene, wt = padj_gene)%>%
+  dplyr::group_by(MF_Name,signChange)%>%
+  dplyr::arrange(abs_score)%>%
+  dplyr::mutate(rank=signChange*seq(1,n()))->selectedDf_simp
+
+selectedDf_simp %>%
+  dplyr::group_by(MF_Name_short)%>%
+  dplyr::summarise(FDR_GoMF=unique(FDR_GoMF))%>%
+  dplyr::arrange(FDR_GoMF)->summary_df_simp
+
+as.vector(summary_df_simp$MF_Name_short)
+
+
+selectedDf_simp$MF_Name_short <- factor(selectedDf_simp$MF_Name_short, 
+                                        levels = rev(as.vector(summary_df_simp$MF_Name_short)))
+###*****************************
+
+
+###*****************************
+# Generate Figures 
+# a) Complex figure
 scaleHigh=max(abs(selectedDf$score_gene))
 scaleMid=0
 scaleLow=-max(abs(selectedDf$score_gene))
 
-#Generate Fancy Figures
-fig01=ggplot( selectedDf, aes( x=rank,y=MF_Name_short)) +
+fig01=ggplot( selectedDf, aes( x=rank,y=MF_Name_long)) +
   geom_tile(aes(fill=score_gene))+
   scale_fill_gradientn(colours=c("Blue","Grey50","Red"),
                        values=rescale(c(scaleLow,scaleMid,scaleHigh)),
                        limits=c(scaleLow,scaleHigh),
                        guide = guide_colorbar(title = "-sign(cor)*P_log10"))+
   geom_text(aes(label=ID),size=3, colour="White", fontface="bold")+
-  theme_classic()+
+  theme_bw()+
   scale_x_continuous(breaks=min(selectedDf$rank):max(selectedDf$rank))+
-  ggtitle(objectName)+
+  ggtitle(paste0(objectName,"_mf"))+
   theme(axis.line.y = element_blank(),
         legend.position="bottom",
-        axis.title.y = element_blank())
+        axis.title.y = element_blank(),
+        panel.grid.minor=element_blank(),
+        panel.grid.major.x=element_blank())
 
 print(fig01)
+
+# b) Simple Figure
+scaleHigh_simp=max(abs(selectedDf_simp$score_gene))
+scaleMid_simp=0
+scaleLow_simp=-max(abs(selectedDf_simp$score_gene))
+
+fig02=ggplot( selectedDf_simp, aes( x=rank,y=MF_Name_short)) +
+  geom_tile(aes(fill=score_gene))+
+  scale_fill_gradientn(colours=c("Blue","Grey50","Red"),
+                       values=rescale(c(scaleLow_simp,scaleMid_simp,scaleHigh_simp)),
+                       limits=c(scaleLow_simp,scaleHigh_simp),
+                       guide = guide_colorbar(title = "-sign(cor)*P_log10",barwidth = 12))+
+  geom_text(aes(label=ID),size=3, colour="White", fontface="bold")+
+  theme_bw()+
+  scale_x_continuous(breaks=min(selectedDf_simp$rank):max(selectedDf_simp$rank))+
+  theme(axis.line.y = element_blank(),
+        legend.position="bottom",
+        axis.title.y = element_blank(),
+        panel.grid.minor=element_blank(),
+        panel.grid.major.x=element_blank())
+
+print(fig02)
 ###*****************************
+
+
+###*****************************
+# Save Files
+selectedDf<-cbind(selectedDf, 
+                  unique(GoMF_input_df[,c("pick_data","growthPhase","test_for","vs")]),
+                  df_category="MF")
+write.csv(x = selectedDf, file = paste0("../d_results/",objectName,"_mf.csv"))
+###*****************************
+
+
+###*****************************
+# Save Figures
+
+# Detailed Figure
+colWidth=ifelse(max(selectedDf$rank)-min(selectedDf$rank)+1<16, 
+                16, 
+                max(selectedDf$rank)-min(selectedDf$rank))
+rowWidth=ifelse(nrow(summary_df)*1<3,3,nrow(summary_df)*1)
+cowplot::save_plot(filename = paste0("../d_figures/",objectName,"_mf.pdf"),
+                   plot = fig01,
+                   base_height = rowWidth,
+                   base_width = colWidth,
+                   limitsize = FALSE)
+
+# Save simple figure
+# Detailed Figure
+colWidth=ifelse(max(selectedDf_simp$rank)-min(selectedDf_simp$rank)+1<8, 
+                8, 
+                max(selectedDf_simp$rank)-min(selectedDf_simp$rank))
+rowWidth=ifelse(nrow(summary_df_simp)*1<3,3,nrow(summary_df_simp)*1)
+
+cowplot::save_plot(filename = paste0("../d_figures/simple",objectName,"_mf.pdf"),
+                   plot = fig02,
+                   base_height = rowWidth,
+                   base_width = colWidth,
+                   ncol=1,
+                   limitsize = FALSE)
 
 
 

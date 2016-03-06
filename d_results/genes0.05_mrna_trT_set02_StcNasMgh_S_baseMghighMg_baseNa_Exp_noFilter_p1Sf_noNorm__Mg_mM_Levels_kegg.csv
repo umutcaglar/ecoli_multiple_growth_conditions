@@ -1,0 +1,705 @@
+"","ID","KEGG_Path","padj_gene","signChange","score_gene","FDR_KEGG_Path","numGenesInCat","abs_score","rank","numSigP","numSigN","KEGG_Path_long","KEGG_Path_short","pick_data","growthPhase","test_for","vs","df_category"
+"1","fabZ","eco00061:Fatty acid biosynthesis",0.00796600432065297,-1,-2.09875946237118,0.000222825508552349,12,2.09875946237118,-1,0,7,"Fatty acid biosynthesis
+ padj:0.00022 N( -7/ +0/ 12)","Fatty acid biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"2","fabF","eco00061:Fatty acid biosynthesis",0.00594810789188951,-1,-2.22562116247233,0.000222825508552349,12,2.22562116247233,-2,0,7,"Fatty acid biosynthesis
+ padj:0.00022 N( -7/ +0/ 12)","Fatty acid biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"3","accA","eco00061:Fatty acid biosynthesis",0.00564708719842202,-1,-2.24817550613577,0.000222825508552349,12,2.24817550613577,-3,0,7,"Fatty acid biosynthesis
+ padj:0.00022 N( -7/ +0/ 12)","Fatty acid biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"4","fabH","eco00061:Fatty acid biosynthesis",0.0051825490147535,-1,-2.2854565818079,0.000222825508552349,12,2.2854565818079,-4,0,7,"Fatty acid biosynthesis
+ padj:0.00022 N( -7/ +0/ 12)","Fatty acid biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"5","fabD","eco00061:Fatty acid biosynthesis",0.000580972389087314,-1,-3.2358445071139,0.000222825508552349,12,3.2358445071139,-5,0,7,"Fatty acid biosynthesis
+ padj:0.00022 N( -7/ +0/ 12)","Fatty acid biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"6","fabI","eco00061:Fatty acid biosynthesis",1.22738511550626e-05,-1,-4.91101914770737,0.000222825508552349,12,4.91101914770737,-6,0,7,"Fatty acid biosynthesis
+ padj:0.00022 N( -7/ +0/ 12)","Fatty acid biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"7","fabG","eco00061:Fatty acid biosynthesis",4.47732087550638e-06,-1,-5.3489817799815,0.000222825508552349,12,5.3489817799815,-7,0,7,"Fatty acid biosynthesis
+ padj:0.00022 N( -7/ +0/ 12)","Fatty acid biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"8","menD","eco00130:Ubiquinone and other terpenoid-quinone biosynthesis",0.0480123726545886,-1,-1.31864683172435,0.0223924091702383,17,1.31864683172435,-1,0,6,"Ubiquinone and other terpenoid-quinone biosynthesis
+ padj:0.02239 N( -6/ +0/ 17)","Ubiquinone and other terpenoid-quinone biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"9","ubiD","eco00130:Ubiquinone and other terpenoid-quinone biosynthesis",0.0371718854362488,-1,-1.4297854100156,0.0223924091702383,17,1.4297854100156,-2,0,6,"Ubiquinone and other terpenoid-quinone biosynthesis
+ padj:0.02239 N( -6/ +0/ 17)","Ubiquinone and other terpenoid-quinone biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"10","ubiG","eco00130:Ubiquinone and other terpenoid-quinone biosynthesis",0.026111073525162,-1,-1.58317527231839,0.0223924091702383,17,1.58317527231839,-3,0,6,"Ubiquinone and other terpenoid-quinone biosynthesis
+ padj:0.02239 N( -6/ +0/ 17)","Ubiquinone and other terpenoid-quinone biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"11","ubiH","eco00130:Ubiquinone and other terpenoid-quinone biosynthesis",0.0253823631570202,-1,-1.59546794653302,0.0223924091702383,17,1.59546794653302,-4,0,6,"Ubiquinone and other terpenoid-quinone biosynthesis
+ padj:0.02239 N( -6/ +0/ 17)","Ubiquinone and other terpenoid-quinone biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"12","menC","eco00130:Ubiquinone and other terpenoid-quinone biosynthesis",0.00212852143581829,-1,-2.67192197179142,0.0223924091702383,17,2.67192197179142,-5,0,6,"Ubiquinone and other terpenoid-quinone biosynthesis
+ padj:0.02239 N( -6/ +0/ 17)","Ubiquinone and other terpenoid-quinone biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"13","menE","eco00130:Ubiquinone and other terpenoid-quinone biosynthesis",0.000306317479442629,-1,-3.51382822027182,0.0223924091702383,17,3.51382822027182,-6,0,6,"Ubiquinone and other terpenoid-quinone biosynthesis
+ padj:0.02239 N( -6/ +0/ 17)","Ubiquinone and other terpenoid-quinone biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"14","cyoC","eco00190:Oxidative phosphorylation",0.0401591925636583,-1,-1.3962150276527,5.64814861547802e-12,41,1.3962150276527,-1,0,19,"Oxidative phosphorylation
+ padj:0.00000 N( -19/ +0/ 41)","Oxidative phosphorylation","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"15","appC","eco00190:Oxidative phosphorylation",0.0377567917214086,-1,-1.42300491577451,5.64814861547802e-12,41,1.42300491577451,-2,0,19,"Oxidative phosphorylation
+ padj:0.00000 N( -19/ +0/ 41)","Oxidative phosphorylation","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"16","appB","eco00190:Oxidative phosphorylation",0.0345820421345784,-1,-1.46114936439952,5.64814861547802e-12,41,1.46114936439952,-3,0,19,"Oxidative phosphorylation
+ padj:0.00000 N( -19/ +0/ 41)","Oxidative phosphorylation","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"17","nuoG","eco00190:Oxidative phosphorylation",0.0330923721392054,-1,-1.48027210047259,5.64814861547802e-12,41,1.48027210047259,-4,0,19,"Oxidative phosphorylation
+ padj:0.00000 N( -19/ +0/ 41)","Oxidative phosphorylation","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"18","atpA","eco00190:Oxidative phosphorylation",0.0238014514127914,-1,-1.62339655885329,5.64814861547802e-12,41,1.62339655885329,-5,0,19,"Oxidative phosphorylation
+ padj:0.00000 N( -19/ +0/ 41)","Oxidative phosphorylation","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"19","nuoH","eco00190:Oxidative phosphorylation",0.0137758173766771,-1,-1.86088262320946,5.64814861547802e-12,41,1.86088262320946,-6,0,19,"Oxidative phosphorylation
+ padj:0.00000 N( -19/ +0/ 41)","Oxidative phosphorylation","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"20","ndh","eco00190:Oxidative phosphorylation",0.00893943403834345,-1,-2.04868997581314,5.64814861547802e-12,41,2.04868997581314,-7,0,19,"Oxidative phosphorylation
+ padj:0.00000 N( -19/ +0/ 41)","Oxidative phosphorylation","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"21","atpC","eco00190:Oxidative phosphorylation",0.00762175307724548,-1,-2.117945125221,5.64814861547802e-12,41,2.117945125221,-8,0,19,"Oxidative phosphorylation
+ padj:0.00000 N( -19/ +0/ 41)","Oxidative phosphorylation","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"22","cyoB","eco00190:Oxidative phosphorylation",0.0057014332702038,-1,-2.24401595431094,5.64814861547802e-12,41,2.24401595431094,-9,0,19,"Oxidative phosphorylation
+ padj:0.00000 N( -19/ +0/ 41)","Oxidative phosphorylation","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"23","atpG","eco00190:Oxidative phosphorylation",0.00545080406259907,-1,-2.26353942906411,5.64814861547802e-12,41,2.26353942906411,-10,0,19,"Oxidative phosphorylation
+ padj:0.00000 N( -19/ +0/ 41)","Oxidative phosphorylation","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"24","ppa","eco00190:Oxidative phosphorylation",0.00387460786482862,-1,-2.41177224432119,5.64814861547802e-12,41,2.41177224432119,-11,0,19,"Oxidative phosphorylation
+ padj:0.00000 N( -19/ +0/ 41)","Oxidative phosphorylation","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"25","nuoK","eco00190:Oxidative phosphorylation",0.00334520377712051,-1,-2.47557742151846,5.64814861547802e-12,41,2.47557742151846,-12,0,19,"Oxidative phosphorylation
+ padj:0.00000 N( -19/ +0/ 41)","Oxidative phosphorylation","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"26","cyoA","eco00190:Oxidative phosphorylation",0.000998446363229565,-1,-3.00067526056704,5.64814861547802e-12,41,3.00067526056704,-13,0,19,"Oxidative phosphorylation
+ padj:0.00000 N( -19/ +0/ 41)","Oxidative phosphorylation","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"27","nuoI","eco00190:Oxidative phosphorylation",0.000569118852691324,-1,-3.24479702766843,5.64814861547802e-12,41,3.24479702766843,-14,0,19,"Oxidative phosphorylation
+ padj:0.00000 N( -19/ +0/ 41)","Oxidative phosphorylation","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"28","nuoN","eco00190:Oxidative phosphorylation",0.000271207923543346,-1,-3.56669762637989,5.64814861547802e-12,41,3.56669762637989,-15,0,19,"Oxidative phosphorylation
+ padj:0.00000 N( -19/ +0/ 41)","Oxidative phosphorylation","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"29","atpD","eco00190:Oxidative phosphorylation",0.000211753750919991,-1,-3.67416888801295,5.64814861547802e-12,41,3.67416888801295,-16,0,19,"Oxidative phosphorylation
+ padj:0.00000 N( -19/ +0/ 41)","Oxidative phosphorylation","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"30","nuoL","eco00190:Oxidative phosphorylation",0.000188327059044331,-1,-3.72508727557889,5.64814861547802e-12,41,3.72508727557889,-17,0,19,"Oxidative phosphorylation
+ padj:0.00000 N( -19/ +0/ 41)","Oxidative phosphorylation","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"31","nuoM","eco00190:Oxidative phosphorylation",4.95558847339903e-05,-1,-4.30490476588609,5.64814861547802e-12,41,4.30490476588609,-18,0,19,"Oxidative phosphorylation
+ padj:0.00000 N( -19/ +0/ 41)","Oxidative phosphorylation","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"32","nuoJ","eco00190:Oxidative phosphorylation",2.62291770467568e-05,-1,-4.58121533539742,5.64814861547802e-12,41,4.58121533539742,-19,0,19,"Oxidative phosphorylation
+ padj:0.00000 N( -19/ +0/ 41)","Oxidative phosphorylation","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"33","nrdE","eco00230:Purine metabolism",0.0225797924448888,1,1.64628005445949,2.78078492532696e-06,76,1.64628005445949,2,2,17,"Purine metabolism
+ padj:0.00000 N( -17/ +2/ 76)","Purine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"34","cpdB","eco00230:Purine metabolism",0.0328929524058596,1,1.48289714336055,2.78078492532696e-06,76,1.48289714336055,1,2,17,"Purine metabolism
+ padj:0.00000 N( -17/ +2/ 76)","Purine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"35","holB","eco00230:Purine metabolism",0.0430471818956913,-1,-1.36605527457527,2.78078492532696e-06,76,1.36605527457527,-1,2,17,"Purine metabolism
+ padj:0.00000 N( -17/ +2/ 76)","Purine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"36","hpt","eco00230:Purine metabolism",0.0369362617765572,-1,-1.43254706049202,2.78078492532696e-06,76,1.43254706049202,-2,2,17,"Purine metabolism
+ padj:0.00000 N( -17/ +2/ 76)","Purine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"37","purC","eco00230:Purine metabolism",0.0283775302999956,-1,-1.54702540393689,2.78078492532696e-06,76,1.54702540393689,-3,2,17,"Purine metabolism
+ padj:0.00000 N( -17/ +2/ 76)","Purine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"38","dnaE","eco00230:Purine metabolism",0.0191164516461123,-1,-1.71859271736984,2.78078492532696e-06,76,1.71859271736984,-4,2,17,"Purine metabolism
+ padj:0.00000 N( -17/ +2/ 76)","Purine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"39","nrdB","eco00230:Purine metabolism",0.0167559127780135,-1,-1.77583190900108,2.78078492532696e-06,76,1.77583190900108,-5,2,17,"Purine metabolism
+ padj:0.00000 N( -17/ +2/ 76)","Purine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"40","guaA","eco00230:Purine metabolism",0.00721875781438171,-1,-2.14153752829914,2.78078492532696e-06,76,2.14153752829914,-6,2,17,"Purine metabolism
+ padj:0.00000 N( -17/ +2/ 76)","Purine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"41","purL","eco00230:Purine metabolism",0.00711494149253847,-1,-2.14782866684775,2.78078492532696e-06,76,2.14782866684775,-7,2,17,"Purine metabolism
+ padj:0.00000 N( -17/ +2/ 76)","Purine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"42","add","eco00230:Purine metabolism",0.00637898200226435,-1,-2.19524862317142,2.78078492532696e-06,76,2.19524862317142,-8,2,17,"Purine metabolism
+ padj:0.00000 N( -17/ +2/ 76)","Purine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"43","pykF","eco00230:Purine metabolism",0.00275168688643373,-1,-2.56040098585459,2.78078492532696e-06,76,2.56040098585459,-9,2,17,"Purine metabolism
+ padj:0.00000 N( -17/ +2/ 76)","Purine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"44","rpoA","eco00230:Purine metabolism",0.00264139111443625,-1,-2.57816728744691,2.78078492532696e-06,76,2.57816728744691,-10,2,17,"Purine metabolism
+ padj:0.00000 N( -17/ +2/ 76)","Purine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"45","rpoB","eco00230:Purine metabolism",0.00202469403718415,-1,-2.69364059615403,2.78078492532696e-06,76,2.69364059615403,-11,2,17,"Purine metabolism
+ padj:0.00000 N( -17/ +2/ 76)","Purine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"46","rpoC","eco00230:Purine metabolism",0.000998220281728399,-1,-3.00077361043339,2.78078492532696e-06,76,3.00077361043339,-12,2,17,"Purine metabolism
+ padj:0.00000 N( -17/ +2/ 76)","Purine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"47","pnp","eco00230:Purine metabolism",0.000466226779288133,-1,-3.33140278494875,2.78078492532696e-06,76,3.33140278494875,-13,2,17,"Purine metabolism
+ padj:0.00000 N( -17/ +2/ 76)","Purine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"48","purD","eco00230:Purine metabolism",0.000292294539215935,-1,-3.53417929826056,2.78078492532696e-06,76,3.53417929826056,-14,2,17,"Purine metabolism
+ padj:0.00000 N( -17/ +2/ 76)","Purine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"49","cysC","eco00230:Purine metabolism",0.000189615331583556,-1,-3.72212655015754,2.78078492532696e-06,76,3.72212655015754,-15,2,17,"Purine metabolism
+ padj:0.00000 N( -17/ +2/ 76)","Purine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"50","cysN","eco00230:Purine metabolism",0.000134674920466044,-1,-3.87071327225996,2.78078492532696e-06,76,3.87071327225996,-16,2,17,"Purine metabolism
+ padj:0.00000 N( -17/ +2/ 76)","Purine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"51","cysD","eco00230:Purine metabolism",7.04881456170359e-05,-1,-4.15188391458295,2.78078492532696e-06,76,4.15188391458295,-17,2,17,"Purine metabolism
+ padj:0.00000 N( -17/ +2/ 76)","Purine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"52","nrdE","eco00240:Pyrimidine metabolism",0.0225797924448888,1,1.64628005445949,3.41437907988018e-05,52,1.64628005445949,3,3,11,"Pyrimidine metabolism
+ padj:0.00003 N( -11/ +3/ 52)","Pyrimidine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"53","cpdB","eco00240:Pyrimidine metabolism",0.0328929524058596,1,1.48289714336055,3.41437907988018e-05,52,1.48289714336055,2,3,11,"Pyrimidine metabolism
+ padj:0.00003 N( -11/ +3/ 52)","Pyrimidine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"54","pyrI","eco00240:Pyrimidine metabolism",0.0449446468178461,1,1.34732202797785,3.41437907988018e-05,52,1.34732202797785,1,3,11,"Pyrimidine metabolism
+ padj:0.00003 N( -11/ +3/ 52)","Pyrimidine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"55","codA","eco00240:Pyrimidine metabolism",0.0466229289493343,-1,-1.33140044667608,3.41437907988018e-05,52,1.33140044667608,-1,3,11,"Pyrimidine metabolism
+ padj:0.00003 N( -11/ +3/ 52)","Pyrimidine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"56","holB","eco00240:Pyrimidine metabolism",0.0430471818956913,-1,-1.36605527457527,3.41437907988018e-05,52,1.36605527457527,-2,3,11,"Pyrimidine metabolism
+ padj:0.00003 N( -11/ +3/ 52)","Pyrimidine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"57","dnaE","eco00240:Pyrimidine metabolism",0.0191164516461123,-1,-1.71859271736984,3.41437907988018e-05,52,1.71859271736984,-3,3,11,"Pyrimidine metabolism
+ padj:0.00003 N( -11/ +3/ 52)","Pyrimidine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"58","nrdB","eco00240:Pyrimidine metabolism",0.0167559127780135,-1,-1.77583190900108,3.41437907988018e-05,52,1.77583190900108,-4,3,11,"Pyrimidine metabolism
+ padj:0.00003 N( -11/ +3/ 52)","Pyrimidine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"59","cdd","eco00240:Pyrimidine metabolism",0.0154040116952812,-1,-1.81236616031715,3.41437907988018e-05,52,1.81236616031715,-5,3,11,"Pyrimidine metabolism
+ padj:0.00003 N( -11/ +3/ 52)","Pyrimidine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"60","deoA","eco00240:Pyrimidine metabolism",0.00813583863940043,-1,-2.08959767349644,3.41437907988018e-05,52,2.08959767349644,-6,3,11,"Pyrimidine metabolism
+ padj:0.00003 N( -11/ +3/ 52)","Pyrimidine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"61","rpoA","eco00240:Pyrimidine metabolism",0.00264139111443625,-1,-2.57816728744691,3.41437907988018e-05,52,2.57816728744691,-7,3,11,"Pyrimidine metabolism
+ padj:0.00003 N( -11/ +3/ 52)","Pyrimidine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"62","rpoB","eco00240:Pyrimidine metabolism",0.00202469403718415,-1,-2.69364059615403,3.41437907988018e-05,52,2.69364059615403,-8,3,11,"Pyrimidine metabolism
+ padj:0.00003 N( -11/ +3/ 52)","Pyrimidine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"63","rpoC","eco00240:Pyrimidine metabolism",0.000998220281728399,-1,-3.00077361043339,3.41437907988018e-05,52,3.00077361043339,-9,3,11,"Pyrimidine metabolism
+ padj:0.00003 N( -11/ +3/ 52)","Pyrimidine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"64","pnp","eco00240:Pyrimidine metabolism",0.000466226779288133,-1,-3.33140278494875,3.41437907988018e-05,52,3.33140278494875,-10,3,11,"Pyrimidine metabolism
+ padj:0.00003 N( -11/ +3/ 52)","Pyrimidine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"65","pyrH","eco00240:Pyrimidine metabolism",0.00039741707053207,-1,-3.40075348227236,3.41437907988018e-05,52,3.40075348227236,-11,3,11,"Pyrimidine metabolism
+ padj:0.00003 N( -11/ +3/ 52)","Pyrimidine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"66","putA","eco00250:Alanine, aspartate and glutamate metabolism",0.00350195617535046,1,2.4556892931248,0.00134142565751094,28,2.4556892931248,2,2,7,"Alanine, aspartate and glutamate metabolism
+ padj:0.00134 N( -7/ +2/ 28)","Alanine, aspartate and glutamate metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"67","pyrI","eco00250:Alanine, aspartate and glutamate metabolism",0.0449446468178461,1,1.34732202797785,0.00134142565751094,28,1.34732202797785,1,2,7,"Alanine, aspartate and glutamate metabolism
+ padj:0.00134 N( -7/ +2/ 28)","Alanine, aspartate and glutamate metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"68","nadB","eco00250:Alanine, aspartate and glutamate metabolism",0.0423297068245097,-1,-1.37335473943855,0.00134142565751094,28,1.37335473943855,-1,2,7,"Alanine, aspartate and glutamate metabolism
+ padj:0.00134 N( -7/ +2/ 28)","Alanine, aspartate and glutamate metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"69","glnA","eco00250:Alanine, aspartate and glutamate metabolism",0.0313729020149636,-1,-1.50344530690657,0.00134142565751094,28,1.50344530690657,-2,2,7,"Alanine, aspartate and glutamate metabolism
+ padj:0.00134 N( -7/ +2/ 28)","Alanine, aspartate and glutamate metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"70","gltD","eco00250:Alanine, aspartate and glutamate metabolism",0.0126521001731437,-1,-1.89783737821132,0.00134142565751094,28,1.89783737821132,-3,2,7,"Alanine, aspartate and glutamate metabolism
+ padj:0.00134 N( -7/ +2/ 28)","Alanine, aspartate and glutamate metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"71","aspC","eco00250:Alanine, aspartate and glutamate metabolism",0.00532441911020111,-1,-2.2737277664799,0.00134142565751094,28,2.2737277664799,-4,2,7,"Alanine, aspartate and glutamate metabolism
+ padj:0.00134 N( -7/ +2/ 28)","Alanine, aspartate and glutamate metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"72","gdhA","eco00250:Alanine, aspartate and glutamate metabolism",0.00412800594022869,-1,-2.38425968642768,0.00134142565751094,28,2.38425968642768,-5,2,7,"Alanine, aspartate and glutamate metabolism
+ padj:0.00134 N( -7/ +2/ 28)","Alanine, aspartate and glutamate metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"73","glmS","eco00250:Alanine, aspartate and glutamate metabolism",0.00411385622643188,-1,-2.38575089036574,0.00134142565751094,28,2.38575089036574,-6,2,7,"Alanine, aspartate and glutamate metabolism
+ padj:0.00134 N( -7/ +2/ 28)","Alanine, aspartate and glutamate metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"74","asnA","eco00250:Alanine, aspartate and glutamate metabolism",0.000415135818594682,-1,-3.38180979336947,0.00134142565751094,28,3.38180979336947,-7,2,7,"Alanine, aspartate and glutamate metabolism
+ padj:0.00134 N( -7/ +2/ 28)","Alanine, aspartate and glutamate metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"75","serA","eco00260:Glycine, serine and threonine metabolism",0.0432030813099278,-1,-1.36448527753286,4.87088480729536e-05,30,1.36448527753286,-1,0,11,"Glycine, serine and threonine metabolism
+ padj:0.00005 N( -11/ +0/ 30)","Glycine, serine and threonine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"76","lysC","eco00260:Glycine, serine and threonine metabolism",0.0419308853048838,-1,-1.37746596805274,4.87088480729536e-05,30,1.37746596805274,-2,0,11,"Glycine, serine and threonine metabolism
+ padj:0.00005 N( -11/ +0/ 30)","Glycine, serine and threonine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"77","betA","eco00260:Glycine, serine and threonine metabolism",0.0401889655067203,-1,-1.39589317272076,4.87088480729536e-05,30,1.39589317272076,-3,0,11,"Glycine, serine and threonine metabolism
+ padj:0.00005 N( -11/ +0/ 30)","Glycine, serine and threonine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"78","serC","eco00260:Glycine, serine and threonine metabolism",0.0169654776881873,-1,-1.77043390764143,4.87088480729536e-05,30,1.77043390764143,-4,0,11,"Glycine, serine and threonine metabolism
+ padj:0.00005 N( -11/ +0/ 30)","Glycine, serine and threonine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"79","asd","eco00260:Glycine, serine and threonine metabolism",0.0037784869529737,-1,-2.42268207305222,4.87088480729536e-05,30,2.42268207305222,-5,0,11,"Glycine, serine and threonine metabolism
+ padj:0.00005 N( -11/ +0/ 30)","Glycine, serine and threonine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"80","trpA","eco00260:Glycine, serine and threonine metabolism",0.00107754975827674,-1,-2.96756266618248,4.87088480729536e-05,30,2.96756266618248,-6,0,11,"Glycine, serine and threonine metabolism
+ padj:0.00005 N( -11/ +0/ 30)","Glycine, serine and threonine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"81","trpB","eco00260:Glycine, serine and threonine metabolism",0.000155181403066638,-1,-3.80916032579347,4.87088480729536e-05,30,3.80916032579347,-7,0,11,"Glycine, serine and threonine metabolism
+ padj:0.00005 N( -11/ +0/ 30)","Glycine, serine and threonine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"82","ilvA","eco00260:Glycine, serine and threonine metabolism",0.000153753812457548,-1,-3.81317410671516,4.87088480729536e-05,30,3.81317410671516,-8,0,11,"Glycine, serine and threonine metabolism
+ padj:0.00005 N( -11/ +0/ 30)","Glycine, serine and threonine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"83","thrC","eco00260:Glycine, serine and threonine metabolism",0.000134674920466044,-1,-3.87071327225996,4.87088480729536e-05,30,3.87071327225996,-9,0,11,"Glycine, serine and threonine metabolism
+ padj:0.00005 N( -11/ +0/ 30)","Glycine, serine and threonine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"84","thrA","eco00260:Glycine, serine and threonine metabolism",0.000134587205801738,-1,-3.87099622327551,4.87088480729536e-05,30,3.87099622327551,-10,0,11,"Glycine, serine and threonine metabolism
+ padj:0.00005 N( -11/ +0/ 30)","Glycine, serine and threonine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"85","thrB","eco00260:Glycine, serine and threonine metabolism",1.53154959122774e-05,-1,-4.8148689362731,4.87088480729536e-05,30,4.8148689362731,-11,0,11,"Glycine, serine and threonine metabolism
+ padj:0.00005 N( -11/ +0/ 30)","Glycine, serine and threonine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"86","metB","eco00270:Cysteine and methionine metabolism",0.032436720783329,1,1.4889630575956,1.19480952958106e-05,23,1.4889630575956,1,1,10,"Cysteine and methionine metabolism
+ padj:0.00001 N( -10/ +1/ 23)","Cysteine and methionine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"87","lysC","eco00270:Cysteine and methionine metabolism",0.0419308853048838,-1,-1.37746596805274,1.19480952958106e-05,23,1.37746596805274,-1,1,10,"Cysteine and methionine metabolism
+ padj:0.00001 N( -10/ +1/ 23)","Cysteine and methionine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"88","speE","eco00270:Cysteine and methionine metabolism",0.0343984392274815,-1,-1.46346126237818,1.19480952958106e-05,23,1.46346126237818,-2,1,10,"Cysteine and methionine metabolism
+ padj:0.00001 N( -10/ +1/ 23)","Cysteine and methionine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"89","speD","eco00270:Cysteine and methionine metabolism",0.0330923721392054,-1,-1.48027210047259,1.19480952958106e-05,23,1.48027210047259,-3,1,10,"Cysteine and methionine metabolism
+ padj:0.00001 N( -10/ +1/ 23)","Cysteine and methionine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"90","cysE","eco00270:Cysteine and methionine metabolism",0.0311309381095022,-1,-1.50680779195348,1.19480952958106e-05,23,1.50680779195348,-4,1,10,"Cysteine and methionine metabolism
+ padj:0.00001 N( -10/ +1/ 23)","Cysteine and methionine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"91","cysK","eco00270:Cysteine and methionine metabolism",0.00855589782404892,-1,-2.06773441048629,1.19480952958106e-05,23,2.06773441048629,-5,1,10,"Cysteine and methionine metabolism
+ padj:0.00001 N( -10/ +1/ 23)","Cysteine and methionine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"92","aspC","eco00270:Cysteine and methionine metabolism",0.00532441911020111,-1,-2.2737277664799,1.19480952958106e-05,23,2.2737277664799,-6,1,10,"Cysteine and methionine metabolism
+ padj:0.00001 N( -10/ +1/ 23)","Cysteine and methionine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"93","metH","eco00270:Cysteine and methionine metabolism",0.00378472371465237,-1,-2.42196581856323,1.19480952958106e-05,23,2.42196581856323,-7,1,10,"Cysteine and methionine metabolism
+ padj:0.00001 N( -10/ +1/ 23)","Cysteine and methionine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"94","asd","eco00270:Cysteine and methionine metabolism",0.0037784869529737,-1,-2.42268207305222,1.19480952958106e-05,23,2.42268207305222,-8,1,10,"Cysteine and methionine metabolism
+ padj:0.00001 N( -10/ +1/ 23)","Cysteine and methionine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"95","thrA","eco00270:Cysteine and methionine metabolism",0.000134587205801738,-1,-3.87099622327551,1.19480952958106e-05,23,3.87099622327551,-9,1,10,"Cysteine and methionine metabolism
+ padj:0.00001 N( -10/ +1/ 23)","Cysteine and methionine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"96","cysM","eco00270:Cysteine and methionine metabolism",0.000117434870074524,-1,-3.93020292836624,1.19480952958106e-05,23,3.93020292836624,-10,1,10,"Cysteine and methionine metabolism
+ padj:0.00001 N( -10/ +1/ 23)","Cysteine and methionine metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"97","aceE","eco00290:Valine, leucine and isoleucine biosynthesis",0.0371718854362488,-1,-1.4297854100156,2.35702128925652e-08,19,1.4297854100156,-1,0,12,"Valine, leucine and isoleucine biosynthesis
+ padj:0.00000 N( -12/ +0/ 19)","Valine, leucine and isoleucine biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"98","ilvI","eco00290:Valine, leucine and isoleucine biosynthesis",0.0215480559896165,-1,-1.66659190467101,2.35702128925652e-08,19,1.66659190467101,-2,0,12,"Valine, leucine and isoleucine biosynthesis
+ padj:0.00000 N( -12/ +0/ 19)","Valine, leucine and isoleucine biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"99","ileS","eco00290:Valine, leucine and isoleucine biosynthesis",0.0188021105489783,-1,-1.72579339816565,2.35702128925652e-08,19,1.72579339816565,-3,0,12,"Valine, leucine and isoleucine biosynthesis
+ padj:0.00000 N( -12/ +0/ 19)","Valine, leucine and isoleucine biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"100","ilvC","eco00290:Valine, leucine and isoleucine biosynthesis",0.0156334107508641,-1,-1.80594626134851,2.35702128925652e-08,19,1.80594626134851,-4,0,12,"Valine, leucine and isoleucine biosynthesis
+ padj:0.00000 N( -12/ +0/ 19)","Valine, leucine and isoleucine biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"101","leuD","eco00290:Valine, leucine and isoleucine biosynthesis",0.012227932092602,-1,-1.91264698177864,2.35702128925652e-08,19,1.91264698177864,-5,0,12,"Valine, leucine and isoleucine biosynthesis
+ padj:0.00000 N( -12/ +0/ 19)","Valine, leucine and isoleucine biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"102","leuC","eco00290:Valine, leucine and isoleucine biosynthesis",0.00632951200730811,-1,-2.19862977192623,2.35702128925652e-08,19,2.19862977192623,-6,0,12,"Valine, leucine and isoleucine biosynthesis
+ padj:0.00000 N( -12/ +0/ 19)","Valine, leucine and isoleucine biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"103","valS","eco00290:Valine, leucine and isoleucine biosynthesis",0.0052971342771716,-1,-2.27595901798463,2.35702128925652e-08,19,2.27595901798463,-7,0,12,"Valine, leucine and isoleucine biosynthesis
+ padj:0.00000 N( -12/ +0/ 19)","Valine, leucine and isoleucine biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"104","leuB","eco00290:Valine, leucine and isoleucine biosynthesis",0.00387460786482862,-1,-2.41177224432119,2.35702128925652e-08,19,2.41177224432119,-8,0,12,"Valine, leucine and isoleucine biosynthesis
+ padj:0.00000 N( -12/ +0/ 19)","Valine, leucine and isoleucine biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"105","ilvE","eco00290:Valine, leucine and isoleucine biosynthesis",0.00275168688643373,-1,-2.56040098585459,2.35702128925652e-08,19,2.56040098585459,-9,0,12,"Valine, leucine and isoleucine biosynthesis
+ padj:0.00000 N( -12/ +0/ 19)","Valine, leucine and isoleucine biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"106","ilvD","eco00290:Valine, leucine and isoleucine biosynthesis",0.000579923870374436,-1,-3.23662901479284,2.35702128925652e-08,19,3.23662901479284,-10,0,12,"Valine, leucine and isoleucine biosynthesis
+ padj:0.00000 N( -12/ +0/ 19)","Valine, leucine and isoleucine biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"107","ilvA","eco00290:Valine, leucine and isoleucine biosynthesis",0.000153753812457548,-1,-3.81317410671516,2.35702128925652e-08,19,3.81317410671516,-11,0,12,"Valine, leucine and isoleucine biosynthesis
+ padj:0.00000 N( -12/ +0/ 19)","Valine, leucine and isoleucine biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"108","ilvH","eco00290:Valine, leucine and isoleucine biosynthesis",4.72343496833289e-05,-1,-4.3257420595792,2.35702128925652e-08,19,4.3257420595792,-12,0,12,"Valine, leucine and isoleucine biosynthesis
+ padj:0.00000 N( -12/ +0/ 19)","Valine, leucine and isoleucine biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"109","dapE","eco00300:Lysine biosynthesis",0.0423587776627467,-1,-1.37305658071714,0.016547925801624,14,1.37305658071714,-1,0,6,"Lysine biosynthesis
+ padj:0.01655 N( -6/ +0/ 14)","Lysine biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"110","lysC","eco00300:Lysine biosynthesis",0.0419308853048838,-1,-1.37746596805274,0.016547925801624,14,1.37746596805274,-2,0,6,"Lysine biosynthesis
+ padj:0.01655 N( -6/ +0/ 14)","Lysine biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"111","murE","eco00300:Lysine biosynthesis",0.0401591925636583,-1,-1.3962150276527,0.016547925801624,14,1.3962150276527,-3,0,6,"Lysine biosynthesis
+ padj:0.01655 N( -6/ +0/ 14)","Lysine biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"112","dapF","eco00300:Lysine biosynthesis",0.0207676473523783,-1,-1.68261269940864,0.016547925801624,14,1.68261269940864,-4,0,6,"Lysine biosynthesis
+ padj:0.01655 N( -6/ +0/ 14)","Lysine biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"113","asd","eco00300:Lysine biosynthesis",0.0037784869529737,-1,-2.42268207305222,0.016547925801624,14,2.42268207305222,-5,0,6,"Lysine biosynthesis
+ padj:0.01655 N( -6/ +0/ 14)","Lysine biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"114","thrA","eco00300:Lysine biosynthesis",0.000134587205801738,-1,-3.87099622327551,0.016547925801624,14,3.87099622327551,-6,0,6,"Lysine biosynthesis
+ padj:0.01655 N( -6/ +0/ 14)","Lysine biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"115","putA","eco00330:Arginine and proline metabolism",0.00350195617535046,1,2.4556892931248,0.0236961895943427,35,2.4556892931248,2,2,7,"Arginine and proline metabolism
+ padj:0.02370 N( -7/ +2/ 35)","Arginine and proline metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"116","argA","eco00330:Arginine and proline metabolism",0.00503278366935216,1,2.29819173704292,0.0236961895943427,35,2.29819173704292,1,2,7,"Arginine and proline metabolism
+ padj:0.02370 N( -7/ +2/ 35)","Arginine and proline metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"117","codA","eco00330:Arginine and proline metabolism",0.0466229289493343,-1,-1.33140044667608,0.0236961895943427,35,1.33140044667608,-1,2,7,"Arginine and proline metabolism
+ padj:0.02370 N( -7/ +2/ 35)","Arginine and proline metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"118","speE","eco00330:Arginine and proline metabolism",0.0343984392274815,-1,-1.46346126237818,0.0236961895943427,35,1.46346126237818,-2,2,7,"Arginine and proline metabolism
+ padj:0.02370 N( -7/ +2/ 35)","Arginine and proline metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"119","speD","eco00330:Arginine and proline metabolism",0.0330923721392054,-1,-1.48027210047259,0.0236961895943427,35,1.48027210047259,-3,2,7,"Arginine and proline metabolism
+ padj:0.02370 N( -7/ +2/ 35)","Arginine and proline metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"120","glnA","eco00330:Arginine and proline metabolism",0.0313729020149636,-1,-1.50344530690657,0.0236961895943427,35,1.50344530690657,-4,2,7,"Arginine and proline metabolism
+ padj:0.02370 N( -7/ +2/ 35)","Arginine and proline metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"121","pepD","eco00330:Arginine and proline metabolism",0.0267159569895309,-1,-1.57322926438474,0.0236961895943427,35,1.57322926438474,-5,2,7,"Arginine and proline metabolism
+ padj:0.02370 N( -7/ +2/ 35)","Arginine and proline metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"122","aspC","eco00330:Arginine and proline metabolism",0.00532441911020111,-1,-2.2737277664799,0.0236961895943427,35,2.2737277664799,-6,2,7,"Arginine and proline metabolism
+ padj:0.02370 N( -7/ +2/ 35)","Arginine and proline metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"123","gdhA","eco00330:Arginine and proline metabolism",0.00412800594022869,-1,-2.38425968642768,0.0236961895943427,35,2.38425968642768,-7,2,7,"Arginine and proline metabolism
+ padj:0.02370 N( -7/ +2/ 35)","Arginine and proline metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"124","aroF","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",0.0404776808304519,-1,-1.39278437836664,1.03685093844064e-09,21,1.39278437836664,-1,0,13,"Phenylalanine, tyrosine and tryptophan biosynthesis
+ padj:0.00000 N( -13/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"125","aroL","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",0.0298968693184745,-1,-1.5243742868895,1.03685093844064e-09,21,1.5243742868895,-2,0,13,"Phenylalanine, tyrosine and tryptophan biosynthesis
+ padj:0.00000 N( -13/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"126","aroA","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",0.0229351862746647,-1,-1.63949772827102,1.03685093844064e-09,21,1.63949772827102,-3,0,13,"Phenylalanine, tyrosine and tryptophan biosynthesis
+ padj:0.00000 N( -13/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"127","aroC","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",0.0150672913245208,-1,-1.82196481460946,1.03685093844064e-09,21,1.82196481460946,-4,0,13,"Phenylalanine, tyrosine and tryptophan biosynthesis
+ padj:0.00000 N( -13/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"128","aspC","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",0.00532441911020111,-1,-2.2737277664799,1.03685093844064e-09,21,2.2737277664799,-5,0,13,"Phenylalanine, tyrosine and tryptophan biosynthesis
+ padj:0.00000 N( -13/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"129","aroE","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",0.00275168688643373,-1,-2.56040098585459,1.03685093844064e-09,21,2.56040098585459,-6,0,13,"Phenylalanine, tyrosine and tryptophan biosynthesis
+ padj:0.00000 N( -13/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"130","aroG","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",0.0016467374234775,-1,-2.78337564468328,1.03685093844064e-09,21,2.78337564468328,-7,0,13,"Phenylalanine, tyrosine and tryptophan biosynthesis
+ padj:0.00000 N( -13/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"131","trpA","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",0.00107754975827674,-1,-2.96756266618248,1.03685093844064e-09,21,2.96756266618248,-8,0,13,"Phenylalanine, tyrosine and tryptophan biosynthesis
+ padj:0.00000 N( -13/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"132","pheA","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",0.000234244164448534,-1,-3.63033121956235,1.03685093844064e-09,21,3.63033121956235,-9,0,13,"Phenylalanine, tyrosine and tryptophan biosynthesis
+ padj:0.00000 N( -13/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"133","trpB","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",0.000155181403066638,-1,-3.80916032579347,1.03685093844064e-09,21,3.80916032579347,-10,0,13,"Phenylalanine, tyrosine and tryptophan biosynthesis
+ padj:0.00000 N( -13/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"134","trpD","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",8.4924746330163e-05,-1,-4.07096574169167,1.03685093844064e-09,21,4.07096574169167,-11,0,13,"Phenylalanine, tyrosine and tryptophan biosynthesis
+ padj:0.00000 N( -13/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"135","trpE","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",4.47732087550638e-06,-1,-5.3489817799815,1.03685093844064e-09,21,5.3489817799815,-12,0,13,"Phenylalanine, tyrosine and tryptophan biosynthesis
+ padj:0.00000 N( -13/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"136","trpC","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",2.10991023449682e-06,-1,-5.67573602123879,1.03685093844064e-09,21,5.67573602123879,-13,0,13,"Phenylalanine, tyrosine and tryptophan biosynthesis
+ padj:0.00000 N( -13/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"137","metB","eco00450:Selenoamino acid metabolism",0.032436720783329,1,1.4889630575956,0.00830033828174237,14,1.4889630575956,1,1,5,"Selenoamino acid metabolism
+ padj:0.00830 N( -5/ +1/ 14)","Selenoamino acid metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"138","cysK","eco00450:Selenoamino acid metabolism",0.00855589782404892,-1,-2.06773441048629,0.00830033828174237,14,2.06773441048629,-1,1,5,"Selenoamino acid metabolism
+ padj:0.00830 N( -5/ +1/ 14)","Selenoamino acid metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"139","cysC","eco00450:Selenoamino acid metabolism",0.000189615331583556,-1,-3.72212655015754,0.00830033828174237,14,3.72212655015754,-2,1,5,"Selenoamino acid metabolism
+ padj:0.00830 N( -5/ +1/ 14)","Selenoamino acid metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"140","cysN","eco00450:Selenoamino acid metabolism",0.000134674920466044,-1,-3.87071327225996,0.00830033828174237,14,3.87071327225996,-3,1,5,"Selenoamino acid metabolism
+ padj:0.00830 N( -5/ +1/ 14)","Selenoamino acid metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"141","cysM","eco00450:Selenoamino acid metabolism",0.000117434870074524,-1,-3.93020292836624,0.00830033828174237,14,3.93020292836624,-4,1,5,"Selenoamino acid metabolism
+ padj:0.00830 N( -5/ +1/ 14)","Selenoamino acid metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"142","cysD","eco00450:Selenoamino acid metabolism",7.04881456170359e-05,-1,-4.15188391458295,0.00830033828174237,14,4.15188391458295,-5,1,5,"Selenoamino acid metabolism
+ padj:0.00830 N( -5/ +1/ 14)","Selenoamino acid metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"143","speE","eco00480:Glutathione metabolism",0.0343984392274815,-1,-1.46346126237818,0.00238684620549379,16,1.46346126237818,-1,0,7,"Glutathione metabolism
+ padj:0.00239 N( -7/ +0/ 16)","Glutathione metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"144","gor","eco00480:Glutathione metabolism",0.0278452068366317,-1,-1.55524955178485,0.00238684620549379,16,1.55524955178485,-2,0,7,"Glutathione metabolism
+ padj:0.00239 N( -7/ +0/ 16)","Glutathione metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"145","pepD","eco00480:Glutathione metabolism",0.0267159569895309,-1,-1.57322926438474,0.00238684620549379,16,1.57322926438474,-3,0,7,"Glutathione metabolism
+ padj:0.00239 N( -7/ +0/ 16)","Glutathione metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"146","gshB","eco00480:Glutathione metabolism",0.0148099084585843,-1,-1.82944762588491,0.00238684620549379,16,1.82944762588491,-4,0,7,"Glutathione metabolism
+ padj:0.00239 N( -7/ +0/ 16)","Glutathione metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"147","zwf","eco00480:Glutathione metabolism",0.00969948510880462,-1,-2.01325131937706,0.00238684620549379,16,2.01325131937706,-5,0,7,"Glutathione metabolism
+ padj:0.00239 N( -7/ +0/ 16)","Glutathione metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"148","pepB","eco00480:Glutathione metabolism",0.00132070027370536,-1,-2.87919573215488,0.00238684620549379,16,2.87919573215488,-6,0,7,"Glutathione metabolism
+ padj:0.00239 N( -7/ +0/ 16)","Glutathione metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"149","gnd","eco00480:Glutathione metabolism",0.000258094189604138,-1,-3.58822177248544,0.00238684620549379,16,3.58822177248544,-7,0,7,"Glutathione metabolism
+ padj:0.00239 N( -7/ +0/ 16)","Glutathione metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"150","nagE","eco00520:Amino sugar and nucleotide sugar metabolism",0.0287341421903379,1,1.54160176347072,0.0058258367687718,33,1.54160176347072,3,3,7,"Amino sugar and nucleotide sugar metabolism
+ padj:0.00583 N( -7/ +3/ 33)","Amino sugar and nucleotide sugar metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"151","ugd","eco00520:Amino sugar and nucleotide sugar metabolism",0.0293630199666812,1,1.53219927956603,0.0058258367687718,33,1.53219927956603,2,3,7,"Amino sugar and nucleotide sugar metabolism
+ padj:0.00583 N( -7/ +3/ 33)","Amino sugar and nucleotide sugar metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"152","nagA","eco00520:Amino sugar and nucleotide sugar metabolism",0.0356330296182492,1,1.44814725116703,0.0058258367687718,33,1.44814725116703,1,3,7,"Amino sugar and nucleotide sugar metabolism
+ padj:0.00583 N( -7/ +3/ 33)","Amino sugar and nucleotide sugar metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"153","galU","eco00520:Amino sugar and nucleotide sugar metabolism",0.0284380885451626,-1,-1.54609959789256,0.0058258367687718,33,1.54609959789256,-1,3,7,"Amino sugar and nucleotide sugar metabolism
+ padj:0.00583 N( -7/ +3/ 33)","Amino sugar and nucleotide sugar metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"154","glmU","eco00520:Amino sugar and nucleotide sugar metabolism",0.0194531887909965,-1,-1.7110091984091,0.0058258367687718,33,1.7110091984091,-2,3,7,"Amino sugar and nucleotide sugar metabolism
+ padj:0.00583 N( -7/ +3/ 33)","Amino sugar and nucleotide sugar metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"155","crr","eco00520:Amino sugar and nucleotide sugar metabolism",0.0184769086307452,-1,-1.73337068879312,0.0058258367687718,33,1.73337068879312,-3,3,7,"Amino sugar and nucleotide sugar metabolism
+ padj:0.00583 N( -7/ +3/ 33)","Amino sugar and nucleotide sugar metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"156","manA","eco00520:Amino sugar and nucleotide sugar metabolism",0.0141055367805509,-1,-1.85061038229163,0.0058258367687718,33,1.85061038229163,-4,3,7,"Amino sugar and nucleotide sugar metabolism
+ padj:0.00583 N( -7/ +3/ 33)","Amino sugar and nucleotide sugar metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"157","nagZ","eco00520:Amino sugar and nucleotide sugar metabolism",0.0125226820229852,-1,-1.90230264692106,0.0058258367687718,33,1.90230264692106,-5,3,7,"Amino sugar and nucleotide sugar metabolism
+ padj:0.00583 N( -7/ +3/ 33)","Amino sugar and nucleotide sugar metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"158","ptsG","eco00520:Amino sugar and nucleotide sugar metabolism",0.00503808509561903,-1,-2.29773450133857,0.0058258367687718,33,2.29773450133857,-6,3,7,"Amino sugar and nucleotide sugar metabolism
+ padj:0.00583 N( -7/ +3/ 33)","Amino sugar and nucleotide sugar metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"159","glmS","eco00520:Amino sugar and nucleotide sugar metabolism",0.00411385622643188,-1,-2.38575089036574,0.0058258367687718,33,2.38575089036574,-7,3,7,"Amino sugar and nucleotide sugar metabolism
+ padj:0.00583 N( -7/ +3/ 33)","Amino sugar and nucleotide sugar metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"160","ftsI","eco00550:Peptidoglycan biosynthesis",0.0277863176266996,1,1.5561690041535,0.00190953597063082,19,1.5561690041535,1,1,7,"Peptidoglycan biosynthesis
+ padj:0.00191 N( -7/ +1/ 19)","Peptidoglycan biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"161","murE","eco00550:Peptidoglycan biosynthesis",0.0401591925636583,-1,-1.3962150276527,0.00190953597063082,19,1.3962150276527,-1,1,7,"Peptidoglycan biosynthesis
+ padj:0.00191 N( -7/ +1/ 19)","Peptidoglycan biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"162","dacA","eco00550:Peptidoglycan biosynthesis",0.0345383736339564,-1,-1.46169811663619,0.00190953597063082,19,1.46169811663619,-2,1,7,"Peptidoglycan biosynthesis
+ padj:0.00191 N( -7/ +1/ 19)","Peptidoglycan biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"163","murG","eco00550:Peptidoglycan biosynthesis",0.0113098693200645,-1,-1.94654241310308,0.00190953597063082,19,1.94654241310308,-3,1,7,"Peptidoglycan biosynthesis
+ padj:0.00191 N( -7/ +1/ 19)","Peptidoglycan biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"164","mraY","eco00550:Peptidoglycan biosynthesis",0.00563068951507439,-1,-2.24943841966797,0.00190953597063082,19,2.24943841966797,-4,1,7,"Peptidoglycan biosynthesis
+ padj:0.00191 N( -7/ +1/ 19)","Peptidoglycan biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"165","murD","eco00550:Peptidoglycan biosynthesis",0.00460383907183145,-1,-2.3368798656324,0.00190953597063082,19,2.3368798656324,-5,1,7,"Peptidoglycan biosynthesis
+ padj:0.00191 N( -7/ +1/ 19)","Peptidoglycan biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"166","mrcB","eco00550:Peptidoglycan biosynthesis",0.00168682697442495,-1,-2.77292946270209,0.00190953597063082,19,2.77292946270209,-6,1,7,"Peptidoglycan biosynthesis
+ padj:0.00191 N( -7/ +1/ 19)","Peptidoglycan biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"167","murC","eco00550:Peptidoglycan biosynthesis",0.00166566357203114,-1,-2.77841271215183,0.00190953597063082,19,2.77841271215183,-7,1,7,"Peptidoglycan biosynthesis
+ padj:0.00191 N( -7/ +1/ 19)","Peptidoglycan biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"168","pdxK","eco00750:Vitamin B6 metabolism",0.0212209606894678,-1,-1.67323495913918,0.0121702827571726,9,1.67323495913918,-1,0,5,"Vitamin B6 metabolism
+ padj:0.01217 N( -5/ +0/ 9)","Vitamin B6 metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"169","serC","eco00750:Vitamin B6 metabolism",0.0169654776881873,-1,-1.77043390764143,0.0121702827571726,9,1.77043390764143,-2,0,5,"Vitamin B6 metabolism
+ padj:0.01217 N( -5/ +0/ 9)","Vitamin B6 metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"170","pdxY","eco00750:Vitamin B6 metabolism",0.00632951200730811,-1,-2.19862977192623,0.0121702827571726,9,2.19862977192623,-3,0,5,"Vitamin B6 metabolism
+ padj:0.01217 N( -5/ +0/ 9)","Vitamin B6 metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"171","pdxA","eco00750:Vitamin B6 metabolism",0.00264139111443625,-1,-2.57816728744691,0.0121702827571726,9,2.57816728744691,-4,0,5,"Vitamin B6 metabolism
+ padj:0.01217 N( -5/ +0/ 9)","Vitamin B6 metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"172","thrC","eco00750:Vitamin B6 metabolism",0.000134674920466044,-1,-3.87071327225996,0.0121702827571726,9,3.87071327225996,-5,0,5,"Vitamin B6 metabolism
+ padj:0.01217 N( -5/ +0/ 9)","Vitamin B6 metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"173","narJ","eco00910:Nitrogen metabolism",0.000117434870074524,1,3.93020292836624,0.00558136601483916,33,3.93020292836624,5,5,4,"Nitrogen metabolism
+ padj:0.00558 N( -4/ +5/ 33)","Nitrogen metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"174","narH","eco00910:Nitrogen metabolism",0.00168682697442495,1,2.77292946270209,0.00558136601483916,33,2.77292946270209,4,5,4,"Nitrogen metabolism
+ padj:0.00558 N( -4/ +5/ 33)","Nitrogen metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"175","tnaA","eco00910:Nitrogen metabolism",0.00257090081095231,1,2.58991467873911,0.00558136601483916,33,2.58991467873911,3,5,4,"Nitrogen metabolism
+ padj:0.00558 N( -4/ +5/ 33)","Nitrogen metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"176","narG","eco00910:Nitrogen metabolism",0.011442682659548,1,1.94147214620234,0.00558136601483916,33,1.94147214620234,2,5,4,"Nitrogen metabolism
+ padj:0.00558 N( -4/ +5/ 33)","Nitrogen metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"177","narI","eco00910:Nitrogen metabolism",0.0118681812382247,1,1.92561583022174,0.00558136601483916,33,1.92561583022174,1,5,4,"Nitrogen metabolism
+ padj:0.00558 N( -4/ +5/ 33)","Nitrogen metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"178","glnA","eco00910:Nitrogen metabolism",0.0313729020149636,-1,-1.50344530690657,0.00558136601483916,33,1.50344530690657,-1,5,4,"Nitrogen metabolism
+ padj:0.00558 N( -4/ +5/ 33)","Nitrogen metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"179","gltD","eco00910:Nitrogen metabolism",0.0126521001731437,-1,-1.89783737821132,0.00558136601483916,33,1.89783737821132,-2,5,4,"Nitrogen metabolism
+ padj:0.00558 N( -4/ +5/ 33)","Nitrogen metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"180","gdhA","eco00910:Nitrogen metabolism",0.00412800594022869,-1,-2.38425968642768,0.00558136601483916,33,2.38425968642768,-3,5,4,"Nitrogen metabolism
+ padj:0.00558 N( -4/ +5/ 33)","Nitrogen metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"181","asnA","eco00910:Nitrogen metabolism",0.000415135818594682,-1,-3.38180979336947,0.00558136601483916,33,3.38180979336947,-4,5,4,"Nitrogen metabolism
+ padj:0.00558 N( -4/ +5/ 33)","Nitrogen metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"182","metB","eco00920:Sulfur metabolism",0.032436720783329,1,1.4889630575956,2.47956000176686e-08,13,1.4889630575956,1,1,9,"Sulfur metabolism
+ padj:0.00000 N( -9/ +1/ 13)","Sulfur metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"183","cysE","eco00920:Sulfur metabolism",0.0311309381095022,-1,-1.50680779195348,2.47956000176686e-08,13,1.50680779195348,-1,1,9,"Sulfur metabolism
+ padj:0.00000 N( -9/ +1/ 13)","Sulfur metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"184","cysK","eco00920:Sulfur metabolism",0.00855589782404892,-1,-2.06773441048629,2.47956000176686e-08,13,2.06773441048629,-2,1,9,"Sulfur metabolism
+ padj:0.00000 N( -9/ +1/ 13)","Sulfur metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"185","cysC","eco00920:Sulfur metabolism",0.000189615331583556,-1,-3.72212655015754,2.47956000176686e-08,13,3.72212655015754,-3,1,9,"Sulfur metabolism
+ padj:0.00000 N( -9/ +1/ 13)","Sulfur metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"186","cysJ","eco00920:Sulfur metabolism",0.000188327059044331,-1,-3.72508727557889,2.47956000176686e-08,13,3.72508727557889,-4,1,9,"Sulfur metabolism
+ padj:0.00000 N( -9/ +1/ 13)","Sulfur metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"187","cysN","eco00920:Sulfur metabolism",0.000134674920466044,-1,-3.87071327225996,2.47956000176686e-08,13,3.87071327225996,-5,1,9,"Sulfur metabolism
+ padj:0.00000 N( -9/ +1/ 13)","Sulfur metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"188","cysM","eco00920:Sulfur metabolism",0.000117434870074524,-1,-3.93020292836624,2.47956000176686e-08,13,3.93020292836624,-6,1,9,"Sulfur metabolism
+ padj:0.00000 N( -9/ +1/ 13)","Sulfur metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"189","cysD","eco00920:Sulfur metabolism",7.04881456170359e-05,-1,-4.15188391458295,2.47956000176686e-08,13,4.15188391458295,-7,1,9,"Sulfur metabolism
+ padj:0.00000 N( -9/ +1/ 13)","Sulfur metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"190","cysH","eco00920:Sulfur metabolism",4.46248327435361e-06,-1,-5.35042339863763,2.47956000176686e-08,13,5.35042339863763,-8,1,9,"Sulfur metabolism
+ padj:0.00000 N( -9/ +1/ 13)","Sulfur metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"191","cysI","eco00920:Sulfur metabolism",2.19288687480643e-06,-1,-5.65898377184028,2.47956000176686e-08,13,5.65898377184028,-9,1,9,"Sulfur metabolism
+ padj:0.00000 N( -9/ +1/ 13)","Sulfur metabolism","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"192","asnS","eco00970:Aminoacyl-tRNA biosynthesis",0.0465636619989083,-1,-1.33195287192821,7.43368699929192e-11,25,1.33195287192821,-1,0,15,"Aminoacyl-tRNA biosynthesis
+ padj:0.00000 N( -15/ +0/ 25)","Aminoacyl-tRNA biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"193","hisS","eco00970:Aminoacyl-tRNA biosynthesis",0.0415639798165814,-1,-1.38128287474266,7.43368699929192e-11,25,1.38128287474266,-2,0,15,"Aminoacyl-tRNA biosynthesis
+ padj:0.00000 N( -15/ +0/ 25)","Aminoacyl-tRNA biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"194","tyrS","eco00970:Aminoacyl-tRNA biosynthesis",0.0369362617765572,-1,-1.43254706049202,7.43368699929192e-11,25,1.43254706049202,-3,0,15,"Aminoacyl-tRNA biosynthesis
+ padj:0.00000 N( -15/ +0/ 25)","Aminoacyl-tRNA biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"195","glyS","eco00970:Aminoacyl-tRNA biosynthesis",0.0223519269334898,-1,-1.65068503089856,7.43368699929192e-11,25,1.65068503089856,-4,0,15,"Aminoacyl-tRNA biosynthesis
+ padj:0.00000 N( -15/ +0/ 25)","Aminoacyl-tRNA biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"196","ileS","eco00970:Aminoacyl-tRNA biosynthesis",0.0188021105489783,-1,-1.72579339816565,7.43368699929192e-11,25,1.72579339816565,-5,0,15,"Aminoacyl-tRNA biosynthesis
+ padj:0.00000 N( -15/ +0/ 25)","Aminoacyl-tRNA biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"197","proS","eco00970:Aminoacyl-tRNA biosynthesis",0.0159655827679106,-1,-1.79681522442998,7.43368699929192e-11,25,1.79681522442998,-6,0,15,"Aminoacyl-tRNA biosynthesis
+ padj:0.00000 N( -15/ +0/ 25)","Aminoacyl-tRNA biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"198","alaS","eco00970:Aminoacyl-tRNA biosynthesis",0.0142684715262981,-1,-1.8456225470849,7.43368699929192e-11,25,1.8456225470849,-7,0,15,"Aminoacyl-tRNA biosynthesis
+ padj:0.00000 N( -15/ +0/ 25)","Aminoacyl-tRNA biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"199","aspS","eco00970:Aminoacyl-tRNA biosynthesis",0.0142411242749504,-1,-1.84645572368137,7.43368699929192e-11,25,1.84645572368137,-8,0,15,"Aminoacyl-tRNA biosynthesis
+ padj:0.00000 N( -15/ +0/ 25)","Aminoacyl-tRNA biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"200","gltX","eco00970:Aminoacyl-tRNA biosynthesis",0.0141055367805509,-1,-1.85061038229163,7.43368699929192e-11,25,1.85061038229163,-9,0,15,"Aminoacyl-tRNA biosynthesis
+ padj:0.00000 N( -15/ +0/ 25)","Aminoacyl-tRNA biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"201","lysS","eco00970:Aminoacyl-tRNA biosynthesis",0.0122087308867036,-1,-1.91332947917943,7.43368699929192e-11,25,1.91332947917943,-10,0,15,"Aminoacyl-tRNA biosynthesis
+ padj:0.00000 N( -15/ +0/ 25)","Aminoacyl-tRNA biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"202","valS","eco00970:Aminoacyl-tRNA biosynthesis",0.0052971342771716,-1,-2.27595901798463,7.43368699929192e-11,25,2.27595901798463,-11,0,15,"Aminoacyl-tRNA biosynthesis
+ padj:0.00000 N( -15/ +0/ 25)","Aminoacyl-tRNA biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"203","fmt","eco00970:Aminoacyl-tRNA biosynthesis",0.00391918561028034,-1,-2.4068041681086,7.43368699929192e-11,25,2.4068041681086,-12,0,15,"Aminoacyl-tRNA biosynthesis
+ padj:0.00000 N( -15/ +0/ 25)","Aminoacyl-tRNA biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"204","pheS","eco00970:Aminoacyl-tRNA biosynthesis",0.00361692337272432,-1,-2.4416606920002,7.43368699929192e-11,25,2.4416606920002,-13,0,15,"Aminoacyl-tRNA biosynthesis
+ padj:0.00000 N( -15/ +0/ 25)","Aminoacyl-tRNA biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"205","thrS","eco00970:Aminoacyl-tRNA biosynthesis",0.000880546272913745,-1,-3.05524781681986,7.43368699929192e-11,25,3.05524781681986,-14,0,15,"Aminoacyl-tRNA biosynthesis
+ padj:0.00000 N( -15/ +0/ 25)","Aminoacyl-tRNA biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"206","pheT","eco00970:Aminoacyl-tRNA biosynthesis",1.53356008174232e-05,-1,-4.81429920458009,7.43368699929192e-11,25,4.81429920458009,-15,0,15,"Aminoacyl-tRNA biosynthesis
+ padj:0.00000 N( -15/ +0/ 25)","Aminoacyl-tRNA biosynthesis","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"207","pstS","eco02010:ABC transporters",2.23656030424833e-07,1,6.65041938747603,3.46004481820582e-19,153,6.65041938747603,13,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"208","modA","eco02010:ABC transporters",3.68639746951937e-07,1,6.43339784070872,3.46004481820582e-19,153,6.43339784070872,12,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"209","alsB","eco02010:ABC transporters",0.00017917232857709,1,3.74672906205238,3.46004481820582e-19,153,3.74672906205238,11,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"210","ssuC","eco02010:ABC transporters",0.000244442195696208,1,3.61182382389484,3.46004481820582e-19,153,3.61182382389484,10,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"211","proW","eco02010:ABC transporters",0.000246951552615932,1,3.60738823902901,3.46004481820582e-19,153,3.60738823902901,9,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"212","ssuA","eco02010:ABC transporters",0.000810720240819352,1,3.09112898404894,3.46004481820582e-19,153,3.09112898404894,8,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"213","alsA","eco02010:ABC transporters",0.000957671862809631,1,3.01878327232316,3.46004481820582e-19,153,3.01878327232316,7,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"214","proX","eco02010:ABC transporters",0.00220144759723765,1,2.65729164792937,3.46004481820582e-19,153,2.65729164792937,6,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"215","ssuB","eco02010:ABC transporters",0.00228319654766921,1,2.64145670090836,3.46004481820582e-19,153,2.64145670090836,5,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"216","mppA","eco02010:ABC transporters",0.00312782458572108,1,2.50475761097969,3.46004481820582e-19,153,2.50475761097969,4,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"217","pstC","eco02010:ABC transporters",0.00341921012999686,1,2.46607420850616,3.46004481820582e-19,153,2.46607420850616,3,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"218","alsC","eco02010:ABC transporters",0.0109089321495544,1,1.96221775942573,3.46004481820582e-19,153,1.96221775942573,2,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"219","ugpA","eco02010:ABC transporters",0.0444025924741848,1,1.35259167257988,3.46004481820582e-19,153,1.35259167257988,1,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"220","glnQ","eco02010:ABC transporters",0.0484030270793964,-1,-1.31512747714135,3.46004481820582e-19,153,1.31512747714135,-1,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"221","cydD","eco02010:ABC transporters",0.0429121168124389,-1,-1.36742006162005,3.46004481820582e-19,153,1.36742006162005,-2,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"222","cydC","eco02010:ABC transporters",0.042202177802998,-1,-1.37466513710893,3.46004481820582e-19,153,1.37466513710893,-3,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"223","oppA","eco02010:ABC transporters",0.0328232358400936,-1,-1.48381860676177,3.46004481820582e-19,153,1.48381860676177,-4,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"224","tauC","eco02010:ABC transporters",0.0298968693184745,-1,-1.5243742868895,3.46004481820582e-19,153,1.5243742868895,-5,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"225","oppC","eco02010:ABC transporters",0.0287341421903379,-1,-1.54160176347072,3.46004481820582e-19,153,1.54160176347072,-6,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"226","dppD","eco02010:ABC transporters",0.0252501597674809,-1,-1.59773586958826,3.46004481820582e-19,153,1.59773586958826,-7,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"227","glnP","eco02010:ABC transporters",0.0252501597674809,-1,-1.59773586958826,3.46004481820582e-19,153,1.59773586958826,-8,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"228","dppF","eco02010:ABC transporters",0.0217778016438105,-1,-1.66198596214445,3.46004481820582e-19,153,1.66198596214445,-9,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"229","fecB","eco02010:ABC transporters",0.0189348283556342,-1,-1.72273862740816,3.46004481820582e-19,153,1.72273862740816,-10,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"230","sapC","eco02010:ABC transporters",0.0166172852190859,-1,-1.77943992583913,3.46004481820582e-19,153,1.77943992583913,-11,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"231","oppF","eco02010:ABC transporters",0.0148099084585843,-1,-1.82944762588491,3.46004481820582e-19,153,1.82944762588491,-12,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"232","livJ","eco02010:ABC transporters",0.0122087308867036,-1,-1.91332947917943,3.46004481820582e-19,153,1.91332947917943,-13,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"233","tauB","eco02010:ABC transporters",0.00850078791531237,-1,-2.07054081882528,3.46004481820582e-19,153,2.07054081882528,-14,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"234","modF","eco02010:ABC transporters",0.00540255424997603,-1,-2.2674008634365,3.46004481820582e-19,153,2.2674008634365,-15,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"235","ftsE","eco02010:ABC transporters",0.0052971342771716,-1,-2.27595901798463,3.46004481820582e-19,153,2.27595901798463,-16,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"236","dppC","eco02010:ABC transporters",0.00449227924505165,-1,-2.34753325534565,3.46004481820582e-19,153,2.34753325534565,-17,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"237","macB","eco02010:ABC transporters",0.0042622440945549,-1,-2.37036168228895,3.46004481820582e-19,153,2.37036168228895,-18,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"238","dppB","eco02010:ABC transporters",0.00419884416182201,-1,-2.37687024370374,3.46004481820582e-19,153,2.37687024370374,-19,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"239","livF","eco02010:ABC transporters",0.00224065723628321,-1,-2.64962457442261,3.46004481820582e-19,153,2.64962457442261,-20,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"240","livM","eco02010:ABC transporters",0.00118254216679739,-1,-2.92718336434835,3.46004481820582e-19,153,2.92718336434835,-21,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"241","tauA","eco02010:ABC transporters",0.0011451254048576,-1,-2.94114695030628,3.46004481820582e-19,153,2.94114695030628,-22,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"242","livH","eco02010:ABC transporters",0.0010556486076279,-1,-2.97648062078378,3.46004481820582e-19,153,2.97648062078378,-23,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"243","livK","eco02010:ABC transporters",0.000998220281728399,-1,-3.00077361043339,3.46004481820582e-19,153,3.00077361043339,-24,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"244","metQ","eco02010:ABC transporters",0.000900529109389614,-1,-3.04550224415155,3.46004481820582e-19,153,3.04550224415155,-25,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"245","nlpA","eco02010:ABC transporters",0.000590533487465243,-1,-3.2287554697541,3.46004481820582e-19,153,3.2287554697541,-26,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"246","cysU","eco02010:ABC transporters",0.000514421963473764,-1,-3.28868049729257,3.46004481820582e-19,153,3.28868049729257,-27,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"247","ftsX","eco02010:ABC transporters",0.000484889249214336,-1,-3.31435744479487,3.46004481820582e-19,153,3.31435744479487,-28,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"248","cysA","eco02010:ABC transporters",0.000415135818594682,-1,-3.38180979336947,3.46004481820582e-19,153,3.38180979336947,-29,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"249","cysW","eco02010:ABC transporters",0.000270219303222287,-1,-3.56828363020857,3.46004481820582e-19,153,3.56828363020857,-30,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"250","cysP","eco02010:ABC transporters",0.000151348574119056,-1,-3.82002166625113,3.46004481820582e-19,153,3.82002166625113,-31,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"251","fecC","eco02010:ABC transporters",0.00014361398589297,-1,-3.84280326413012,3.46004481820582e-19,153,3.84280326413012,-32,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"252","fecE","eco02010:ABC transporters",0.000116738904100488,-1,-3.93278438799472,3.46004481820582e-19,153,3.93278438799472,-33,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"253","fecD","eco02010:ABC transporters",6.03839956372759e-05,-1,-4.2190781528928,3.46004481820582e-19,153,4.2190781528928,-34,13,34,"ABC transporters
+ padj:0.00000 N( -34/ +13/ 153)","ABC transporters","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"254","pstS","eco02020:Two-component system",2.23656030424833e-07,1,6.65041938747603,0.000843222174060521,115,6.65041938747603,6,6,14,"Two-component system
+ padj:0.00084 N( -14/ +6/ 115)","Two-component system","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"255","narJ","eco02020:Two-component system",0.000117434870074524,1,3.93020292836624,0.000843222174060521,115,3.93020292836624,5,6,14,"Two-component system
+ padj:0.00084 N( -14/ +6/ 115)","Two-component system","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"256","narH","eco02020:Two-component system",0.00168682697442495,1,2.77292946270209,0.000843222174060521,115,2.77292946270209,4,6,14,"Two-component system
+ padj:0.00084 N( -14/ +6/ 115)","Two-component system","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"257","narG","eco02020:Two-component system",0.011442682659548,1,1.94147214620234,0.000843222174060521,115,1.94147214620234,3,6,14,"Two-component system
+ padj:0.00084 N( -14/ +6/ 115)","Two-component system","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"258","narI","eco02020:Two-component system",0.0118681812382247,1,1.92561583022174,0.000843222174060521,115,1.92561583022174,2,6,14,"Two-component system
+ padj:0.00084 N( -14/ +6/ 115)","Two-component system","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"259","phoB","eco02020:Two-component system",0.0278452068366317,1,1.55524955178485,0.000843222174060521,115,1.55524955178485,1,6,14,"Two-component system
+ padj:0.00084 N( -14/ +6/ 115)","Two-component system","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"260","arcB","eco02020:Two-component system",0.0375561458050927,-1,-1.42531898353764,0.000843222174060521,115,1.42531898353764,-1,6,14,"Two-component system
+ padj:0.00084 N( -14/ +6/ 115)","Two-component system","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"261","glnA","eco02020:Two-component system",0.0313729020149636,-1,-1.50344530690657,0.000843222174060521,115,1.50344530690657,-2,6,14,"Two-component system
+ padj:0.00084 N( -14/ +6/ 115)","Two-component system","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"262","cusA","eco02020:Two-component system",0.0132145652153266,-1,-1.87894712142298,0.000843222174060521,115,1.87894712142298,-3,6,14,"Two-component system
+ padj:0.00084 N( -14/ +6/ 115)","Two-component system","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"263","flhC","eco02020:Two-component system",0.00988248379772149,-1,-2.00513388900785,0.000843222174060521,115,2.00513388900785,-4,6,14,"Two-component system
+ padj:0.00084 N( -14/ +6/ 115)","Two-component system","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"264","cusB","eco02020:Two-component system",0.00951155330379991,-1,-2.02174855391608,0.000843222174060521,115,2.02174855391608,-5,6,14,"Two-component system
+ padj:0.00084 N( -14/ +6/ 115)","Two-component system","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"265","ompF","eco02020:Two-component system",0.00166566357203114,-1,-2.77841271215183,0.000843222174060521,115,2.77841271215183,-6,6,14,"Two-component system
+ padj:0.00084 N( -14/ +6/ 115)","Two-component system","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"266","trpA","eco02020:Two-component system",0.00107754975827674,-1,-2.96756266618248,0.000843222174060521,115,2.96756266618248,-7,6,14,"Two-component system
+ padj:0.00084 N( -14/ +6/ 115)","Two-component system","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"267","cusC","eco02020:Two-component system",0.000998220281728399,-1,-3.00077361043339,0.000843222174060521,115,3.00077361043339,-8,6,14,"Two-component system
+ padj:0.00084 N( -14/ +6/ 115)","Two-component system","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"268","phoQ","eco02020:Two-component system",0.000578744811988606,-1,-3.23751288907951,0.000843222174060521,115,3.23751288907951,-9,6,14,"Two-component system
+ padj:0.00084 N( -14/ +6/ 115)","Two-component system","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"269","trpB","eco02020:Two-component system",0.000155181403066638,-1,-3.80916032579347,0.000843222174060521,115,3.80916032579347,-10,6,14,"Two-component system
+ padj:0.00084 N( -14/ +6/ 115)","Two-component system","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"270","trpD","eco02020:Two-component system",8.4924746330163e-05,-1,-4.07096574169167,0.000843222174060521,115,4.07096574169167,-11,6,14,"Two-component system
+ padj:0.00084 N( -14/ +6/ 115)","Two-component system","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"271","trpE","eco02020:Two-component system",4.47732087550638e-06,-1,-5.3489817799815,0.000843222174060521,115,5.3489817799815,-12,6,14,"Two-component system
+ padj:0.00084 N( -14/ +6/ 115)","Two-component system","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"272","trpC","eco02020:Two-component system",2.10991023449682e-06,-1,-5.67573602123879,0.000843222174060521,115,5.67573602123879,-13,6,14,"Two-component system
+ padj:0.00084 N( -14/ +6/ 115)","Two-component system","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"273","baeR","eco02020:Two-component system",2.35788402980421e-08,-1,-7.62747755906055,0.000843222174060521,115,7.62747755906055,-14,6,14,"Two-component system
+ padj:0.00084 N( -14/ +6/ 115)","Two-component system","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"274","flgN","eco02040:Flagellar assembly",0.0403044047381446,-1,-1.39464748862474,3.60762811359994e-05,19,1.39464748862474,-1,0,12,"Flagellar assembly
+ padj:0.00004 N( -12/ +0/ 19)","Flagellar assembly","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"275","flgB","eco02040:Flagellar assembly",0.0122087308867036,-1,-1.91332947917943,3.60762811359994e-05,19,1.91332947917943,-2,0,12,"Flagellar assembly
+ padj:0.00004 N( -12/ +0/ 19)","Flagellar assembly","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"276","flhC","eco02040:Flagellar assembly",0.00988248379772149,-1,-2.00513388900785,3.60762811359994e-05,19,2.00513388900785,-3,0,12,"Flagellar assembly
+ padj:0.00004 N( -12/ +0/ 19)","Flagellar assembly","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"277","flgE","eco02040:Flagellar assembly",0.00170366667759294,-1,-2.76861537097913,3.60762811359994e-05,19,2.76861537097913,-4,0,12,"Flagellar assembly
+ padj:0.00004 N( -12/ +0/ 19)","Flagellar assembly","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"278","flgD","eco02040:Flagellar assembly",0.000504709207179383,-1,-3.29695877255832,3.60762811359994e-05,19,3.29695877255832,-5,0,12,"Flagellar assembly
+ padj:0.00004 N( -12/ +0/ 19)","Flagellar assembly","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"279","flgL","eco02040:Flagellar assembly",0.000292294539215935,-1,-3.53417929826056,3.60762811359994e-05,19,3.53417929826056,-6,0,12,"Flagellar assembly
+ padj:0.00004 N( -12/ +0/ 19)","Flagellar assembly","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"280","flgK","eco02040:Flagellar assembly",0.000188327059044331,-1,-3.72508727557889,3.60762811359994e-05,19,3.72508727557889,-7,0,12,"Flagellar assembly
+ padj:0.00004 N( -12/ +0/ 19)","Flagellar assembly","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"281","flgG","eco02040:Flagellar assembly",0.000143003458116601,-1,-3.84465346027761,3.60762811359994e-05,19,3.84465346027761,-8,0,12,"Flagellar assembly
+ padj:0.00004 N( -12/ +0/ 19)","Flagellar assembly","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"282","flgF","eco02040:Flagellar assembly",5.3450379002064e-05,-1,-4.27204921098053,3.60762811359994e-05,19,4.27204921098053,-9,0,12,"Flagellar assembly
+ padj:0.00004 N( -12/ +0/ 19)","Flagellar assembly","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"283","flgH","eco02040:Flagellar assembly",2.97565753994255e-05,-1,-4.52641705198075,3.60762811359994e-05,19,4.52641705198075,-10,0,12,"Flagellar assembly
+ padj:0.00004 N( -12/ +0/ 19)","Flagellar assembly","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"284","flgI","eco02040:Flagellar assembly",1.9171999824645e-05,-1,-4.71733258365249,3.60762811359994e-05,19,4.71733258365249,-11,0,12,"Flagellar assembly
+ padj:0.00004 N( -12/ +0/ 19)","Flagellar assembly","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"285","flhA","eco02040:Flagellar assembly",7.53721250879486e-06,-1,-5.12278923979045,3.60762811359994e-05,19,5.12278923979045,-12,0,12,"Flagellar assembly
+ padj:0.00004 N( -12/ +0/ 19)","Flagellar assembly","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"286","rplK","eco03010:Ribosome",0.03767243110717,-1,-1.42397635265681,6.191438806215e-34,77,1.42397635265681,-1,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"287","rpsU","eco03010:Ribosome",0.0356330296182492,-1,-1.44814725116703,6.191438806215e-34,77,1.44814725116703,-2,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"288","rplM","eco03010:Ribosome",0.0309068294352811,-1,-1.50994554457716,6.191438806215e-34,77,1.50994554457716,-3,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"289","rpsL","eco03010:Ribosome",0.0208244387763825,-1,-1.68142669410387,6.191438806215e-34,77,1.68142669410387,-4,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"290","rplI","eco03010:Ribosome",0.0156334107508641,-1,-1.80594626134851,6.191438806215e-34,77,1.80594626134851,-5,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"291","rpsR","eco03010:Ribosome",0.0116360196607052,-1,-1.93419555362225,6.191438806215e-34,77,1.93419555362225,-6,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"292","rpsF","eco03010:Ribosome",0.00951155330379991,-1,-2.02174855391608,6.191438806215e-34,77,2.02174855391608,-7,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"293","rplJ","eco03010:Ribosome",0.00637560963894945,-1,-2.19547828145512,6.191438806215e-34,77,2.19547828145512,-8,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"294","rplA","eco03010:Ribosome",0.0058913320363981,-1,-2.22978649966907,6.191438806215e-34,77,2.22978649966907,-9,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"295","rplX","eco03010:Ribosome",0.00555148483788708,-1,-2.25559084198466,6.191438806215e-34,77,2.25559084198466,-10,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"296","rpsJ","eco03010:Ribosome",0.00539980629158975,-1,-2.26762181943677,6.191438806215e-34,77,2.26762181943677,-11,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"297","rplE","eco03010:Ribosome",0.00469508888461161,-1,-2.32835618151694,6.191438806215e-34,77,2.32835618151694,-12,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"298","rplS","eco03010:Ribosome",0.0040521690084066,-1,-2.39231244932171,6.191438806215e-34,77,2.39231244932171,-13,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"299","rpsI","eco03010:Ribosome",0.00398460393370597,-1,-2.39961484063035,6.191438806215e-34,77,2.39961484063035,-14,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"300","rpsO","eco03010:Ribosome",0.00391918561028034,-1,-2.4068041681086,6.191438806215e-34,77,2.4068041681086,-15,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"301","rplN","eco03010:Ribosome",0.00341921012999686,-1,-2.46607420850616,6.191438806215e-34,77,2.46607420850616,-16,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"302","rpsM","eco03010:Ribosome",0.00341921012999686,-1,-2.46607420850616,6.191438806215e-34,77,2.46607420850616,-17,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"303","rpsD","eco03010:Ribosome",0.00337506952990628,-1,-2.47171727582745,6.191438806215e-34,77,2.47171727582745,-18,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"304","rpsG","eco03010:Ribosome",0.00288302129034171,-1,-2.54015215045127,6.191438806215e-34,77,2.54015215045127,-19,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"305","rplT","eco03010:Ribosome",0.00282859530515093,-1,-2.54842918379511,6.191438806215e-34,77,2.54842918379511,-20,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"306","rpsP","eco03010:Ribosome",0.00272370152511209,-1,-2.56484048600266,6.191438806215e-34,77,2.56484048600266,-21,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"307","rpsC","eco03010:Ribosome",0.00257090081095231,-1,-2.58991467873911,6.191438806215e-34,77,2.58991467873911,-22,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"308","rpsN","eco03010:Ribosome",0.00228655632181166,-1,-2.64081809673212,6.191438806215e-34,77,2.64081809673212,-23,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"309","rplR","eco03010:Ribosome",0.00209792857074825,-1,-2.67820930253806,6.191438806215e-34,77,2.67820930253806,-24,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"310","rpsB","eco03010:Ribosome",0.00204754164433631,-1,-2.68876725649231,6.191438806215e-34,77,2.68876725649231,-25,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"311","rplB","eco03010:Ribosome",0.00202469403718415,-1,-2.69364059615403,6.191438806215e-34,77,2.69364059615403,-26,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"312","rplF","eco03010:Ribosome",0.00201531848393286,-1,-2.69565631186287,6.191438806215e-34,77,2.69565631186287,-27,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"313","rplC","eco03010:Ribosome",0.00178505662159516,-1,-2.74834800360987,6.191438806215e-34,77,2.74834800360987,-28,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"314","rplD","eco03010:Ribosome",0.00170366667759294,-1,-2.76861537097913,6.191438806215e-34,77,2.76861537097913,-29,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"315","rpmE","eco03010:Ribosome",0.00144070762225968,-1,-2.84142414612763,6.191438806215e-34,77,2.84142414612763,-30,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"316","rplQ","eco03010:Ribosome",0.00133249750717232,-1,-2.87533359477593,6.191438806215e-34,77,2.87533359477593,-31,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"317","rpsE","eco03010:Ribosome",0.00117995438212764,-1,-2.92813478250167,6.191438806215e-34,77,2.92813478250167,-32,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"318","rplO","eco03010:Ribosome",0.000933981520512219,-1,-3.0296617165097,6.191438806215e-34,77,3.0296617165097,-33,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"319","rplL","eco03010:Ribosome",0.000580899254836722,-1,-3.23589918062569,6.191438806215e-34,77,3.23589918062569,-34,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"320","rpsK","eco03010:Ribosome",0.000569118852691324,-1,-3.24479702766843,6.191438806215e-34,77,3.24479702766843,-35,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"321","rpmD","eco03010:Ribosome",0.000519773485087312,-1,-3.28418587869029,6.191438806215e-34,77,3.28418587869029,-36,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"322","rpsH","eco03010:Ribosome",0.000415135818594682,-1,-3.38180979336947,6.191438806215e-34,77,3.38180979336947,-37,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"323","rpmI","eco03010:Ribosome",0.000412956717612071,-1,-3.38409546477771,6.191438806215e-34,77,3.38409546477771,-38,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"324","rpsA","eco03010:Ribosome",0.000185780638220625,-1,-3.7309995495033,6.191438806215e-34,77,3.7309995495033,-39,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"325","rplP","eco03010:Ribosome",0.00017917232857709,-1,-3.74672906205238,6.191438806215e-34,77,3.74672906205238,-40,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"326","rpmC","eco03010:Ribosome",0.000155181403066638,-1,-3.80916032579347,6.191438806215e-34,77,3.80916032579347,-41,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"327","rplV","eco03010:Ribosome",0.00010812928897524,-1,-3.96605665278644,6.191438806215e-34,77,3.96605665278644,-42,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"328","rplW","eco03010:Ribosome",3.19120142500601e-05,-1,-4.49604578276737,6.191438806215e-34,77,4.49604578276737,-43,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"329","rpsS","eco03010:Ribosome",2.9891734341247e-05,-1,-4.52444888613229,6.191438806215e-34,77,4.52444888613229,-44,0,44,"Ribosome
+ padj:0.00000 N( -44/ +0/ 77)","Ribosome","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"330","rho","eco03018:RNA degradation",0.0440453030948404,-1,-1.35610039709873,7.20699217399146e-05,13,1.35610039709873,-1,0,8,"RNA degradation
+ padj:0.00007 N( -8/ +0/ 13)","RNA degradation","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"331","hfq","eco03018:RNA degradation",0.0395832772589977,-1,-1.40248825165118,7.20699217399146e-05,13,1.40248825165118,-2,0,8,"RNA degradation
+ padj:0.00007 N( -8/ +0/ 13)","RNA degradation","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"332","rhlE","eco03018:RNA degradation",0.0371718854362488,-1,-1.4297854100156,7.20699217399146e-05,13,1.4297854100156,-3,0,8,"RNA degradation
+ padj:0.00007 N( -8/ +0/ 13)","RNA degradation","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"333","rhlB","eco03018:RNA degradation",0.0298968693184745,-1,-1.5243742868895,7.20699217399146e-05,13,1.5243742868895,-4,0,8,"RNA degradation
+ padj:0.00007 N( -8/ +0/ 13)","RNA degradation","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"334","deaD","eco03018:RNA degradation",0.0016467374234775,-1,-2.78337564468328,7.20699217399146e-05,13,2.78337564468328,-5,0,8,"RNA degradation
+ padj:0.00007 N( -8/ +0/ 13)","RNA degradation","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"335","rnr","eco03018:RNA degradation",0.000484889249214336,-1,-3.31435744479487,7.20699217399146e-05,13,3.31435744479487,-6,0,8,"RNA degradation
+ padj:0.00007 N( -8/ +0/ 13)","RNA degradation","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"336","pnp","eco03018:RNA degradation",0.000466226779288133,-1,-3.33140278494875,7.20699217399146e-05,13,3.33140278494875,-7,0,8,"RNA degradation
+ padj:0.00007 N( -8/ +0/ 13)","RNA degradation","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"337","rne","eco03018:RNA degradation",0.000279440392712675,-1,-3.55371081703249,7.20699217399146e-05,13,3.55371081703249,-8,0,8,"RNA degradation
+ padj:0.00007 N( -8/ +0/ 13)","RNA degradation","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"338","ftsY","eco03060:Protein export",0.0484030270793964,-1,-1.31512747714135,0.000311029772708804,16,1.31512747714135,-1,0,8,"Protein export
+ padj:0.00031 N( -8/ +0/ 16)","Protein export","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"339","ffh","eco03060:Protein export",0.0200042619187322,-1,-1.69887746780586,0.000311029772708804,16,1.69887746780586,-2,0,8,"Protein export
+ padj:0.00031 N( -8/ +0/ 16)","Protein export","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"340","secE","eco03060:Protein export",0.0132655623866503,-1,-1.87727433360162,0.000311029772708804,16,1.87727433360162,-3,0,8,"Protein export
+ padj:0.00031 N( -8/ +0/ 16)","Protein export","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"341","lepB","eco03060:Protein export",0.0106381116045236,-1,-1.97313545780426,0.000311029772708804,16,1.97313545780426,-4,0,8,"Protein export
+ padj:0.00031 N( -8/ +0/ 16)","Protein export","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"342","lspA","eco03060:Protein export",0.0106193888537826,-1,-1.97390047619872,0.000311029772708804,16,1.97390047619872,-5,0,8,"Protein export
+ padj:0.00031 N( -8/ +0/ 16)","Protein export","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"343","secD","eco03060:Protein export",0.00562432195776175,-1,-2.2499298265947,0.000311029772708804,16,2.2499298265947,-6,0,8,"Protein export
+ padj:0.00031 N( -8/ +0/ 16)","Protein export","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"344","secF","eco03060:Protein export",0.000424004613806851,-1,-3.37262941760549,0.000311029772708804,16,3.37262941760549,-7,0,8,"Protein export
+ padj:0.00031 N( -8/ +0/ 16)","Protein export","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"345","secA","eco03060:Protein export",6.48636580013632e-05,-1,-4.18799856283218,0.000311029772708804,16,4.18799856283218,-8,0,8,"Protein export
+ padj:0.00031 N( -8/ +0/ 16)","Protein export","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"346","holB","eco03430:Mismatch repair",0.0430471818956913,-1,-1.36605527457527,0.0114826730100879,21,1.36605527457527,-1,0,7,"Mismatch repair
+ padj:0.01148 N( -7/ +0/ 21)","Mismatch repair","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"347","mutS","eco03430:Mismatch repair",0.0414428591909228,-1,-1.38255028974918,0.0114826730100879,21,1.38255028974918,-2,0,7,"Mismatch repair
+ padj:0.01148 N( -7/ +0/ 21)","Mismatch repair","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"348","uvrD","eco03430:Mismatch repair",0.0386051505781598,-1,-1.41335474925444,0.0114826730100879,21,1.41335474925444,-3,0,7,"Mismatch repair
+ padj:0.01148 N( -7/ +0/ 21)","Mismatch repair","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"349","dnaE","eco03430:Mismatch repair",0.0191164516461123,-1,-1.71859271736984,0.0114826730100879,21,1.71859271736984,-4,0,7,"Mismatch repair
+ padj:0.01148 N( -7/ +0/ 21)","Mismatch repair","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"350","recJ","eco03430:Mismatch repair",0.0188021105489783,-1,-1.72579339816565,0.0114826730100879,21,1.72579339816565,-5,0,7,"Mismatch repair
+ padj:0.01148 N( -7/ +0/ 21)","Mismatch repair","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"351","sbcB","eco03430:Mismatch repair",0.00562432195776175,-1,-2.2499298265947,0.0114826730100879,21,2.2499298265947,-6,0,7,"Mismatch repair
+ padj:0.01148 N( -7/ +0/ 21)","Mismatch repair","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"352","ligA","eco03430:Mismatch repair",0.00106614422131959,-1,-2.9721840426953,0.0114826730100879,21,2.9721840426953,-7,0,7,"Mismatch repair
+ padj:0.01148 N( -7/ +0/ 21)","Mismatch repair","mrna","Exp","Mg_mM_Levels","baseMghighMg","kegg"

@@ -1,0 +1,75 @@
+"","ID","KEGG_Path","padj_gene","signChange","score_gene","FDR_KEGG_Path","numGenesInCat","abs_score","rank","numSigP","numSigN","KEGG_Path_long","KEGG_Path_short","pick_data","growthPhase","test_for","vs","df_category"
+"1","acnA","eco00020:Citrate cycle (TCA cycle)",0.0182869546649651,-1,-1.73785861176357,0.00187554318498395,26,1.73785861176357,-1,0,5,"Citrate cycle (TCA cycle)
+ padj:0.00188 N( -5/ +0/ 26)","Citrate cycle (TCA cycle)","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"2","frdA","eco00020:Citrate cycle (TCA cycle)",0.016140380065295,-1,-1.79208624295242,0.00187554318498395,26,1.79208624295242,-2,0,5,"Citrate cycle (TCA cycle)
+ padj:0.00188 N( -5/ +0/ 26)","Citrate cycle (TCA cycle)","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"3","sdhA","eco00020:Citrate cycle (TCA cycle)",0.0119454137530762,-1,-1.92279880300361,0.00187554318498395,26,1.92279880300361,-3,0,5,"Citrate cycle (TCA cycle)
+ padj:0.00188 N( -5/ +0/ 26)","Citrate cycle (TCA cycle)","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"4","fumB","eco00020:Citrate cycle (TCA cycle)",0.00340260872918487,-1,-2.46818798817296,0.00187554318498395,26,2.46818798817296,-4,0,5,"Citrate cycle (TCA cycle)
+ padj:0.00188 N( -5/ +0/ 26)","Citrate cycle (TCA cycle)","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"5","fumC","eco00020:Citrate cycle (TCA cycle)",0.00306496302868401,-1,-2.51357475981942,0.00187554318498395,26,2.51357475981942,-5,0,5,"Citrate cycle (TCA cycle)
+ padj:0.00188 N( -5/ +0/ 26)","Citrate cycle (TCA cycle)","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"6","yqeF","eco00071:Fatty acid metabolism",0.0496420255888896,-1,-1.30415050589753,0.00458074286052534,13,1.30415050589753,-1,0,4,"Fatty acid metabolism
+ padj:0.00458 N( -4/ +0/ 13)","Fatty acid metabolism","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"7","fadB","eco00071:Fatty acid metabolism",0.00733091108591375,-1,-2.13484204786961,0.00458074286052534,13,2.13484204786961,-2,0,4,"Fatty acid metabolism
+ padj:0.00458 N( -4/ +0/ 13)","Fatty acid metabolism","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"8","fadD","eco00071:Fatty acid metabolism",0.00733091108591375,-1,-2.13484204786961,0.00458074286052534,13,2.13484204786961,-3,0,4,"Fatty acid metabolism
+ padj:0.00458 N( -4/ +0/ 13)","Fatty acid metabolism","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"9","fadA","eco00071:Fatty acid metabolism",0.00338382974297909,-1,-2.47059149656234,0.00458074286052534,13,2.47059149656234,-4,0,4,"Fatty acid metabolism
+ padj:0.00458 N( -4/ +0/ 13)","Fatty acid metabolism","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"10","mqo","eco00620:Pyruvate metabolism",0.0403101332734108,1,1.39458576597964,0.000654978067050282,40,1.39458576597964,1,1,5,"Pyruvate metabolism
+ padj:0.00065 N( -5/ +1/ 40)","Pyruvate metabolism","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"11","aceB","eco00620:Pyruvate metabolism",0.0496420255888896,-1,-1.30415050589753,0.000654978067050282,40,1.30415050589753,-1,1,5,"Pyruvate metabolism
+ padj:0.00065 N( -5/ +1/ 40)","Pyruvate metabolism","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"12","yqeF","eco00620:Pyruvate metabolism",0.0496420255888896,-1,-1.30415050589753,0.000654978067050282,40,1.30415050589753,-2,1,5,"Pyruvate metabolism
+ padj:0.00065 N( -5/ +1/ 40)","Pyruvate metabolism","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"13","poxB","eco00620:Pyruvate metabolism",0.0152075155797624,-1,-1.81794172993975,0.000654978067050282,40,1.81794172993975,-3,1,5,"Pyruvate metabolism
+ padj:0.00065 N( -5/ +1/ 40)","Pyruvate metabolism","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"14","acs","eco00620:Pyruvate metabolism",0.0127794298166217,-1,-1.89348852278318,0.000654978067050282,40,1.89348852278318,-4,1,5,"Pyruvate metabolism
+ padj:0.00065 N( -5/ +1/ 40)","Pyruvate metabolism","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"15","glcB","eco00620:Pyruvate metabolism",0.00321507283806503,-1,-2.49280918360714,0.000654978067050282,40,2.49280918360714,-5,1,5,"Pyruvate metabolism
+ padj:0.00065 N( -5/ +1/ 40)","Pyruvate metabolism","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"16","yqeF","eco00632:Benzoate degradation via CoA ligation",0.0496420255888896,-1,-1.30415050589753,0.00948573950637122,16,1.30415050589753,-1,0,4,"Benzoate degradation via CoA ligation
+ padj:0.00949 N( -4/ +0/ 16)","Benzoate degradation via CoA ligation","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"17","frdA","eco00632:Benzoate degradation via CoA ligation",0.016140380065295,-1,-1.79208624295242,0.00948573950637122,16,1.79208624295242,-2,0,4,"Benzoate degradation via CoA ligation
+ padj:0.00949 N( -4/ +0/ 16)","Benzoate degradation via CoA ligation","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"18","sdhA","eco00632:Benzoate degradation via CoA ligation",0.0119454137530762,-1,-1.92279880300361,0.00948573950637122,16,1.92279880300361,-3,0,4,"Benzoate degradation via CoA ligation
+ padj:0.00949 N( -4/ +0/ 16)","Benzoate degradation via CoA ligation","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"19","fadB","eco00632:Benzoate degradation via CoA ligation",0.00733091108591375,-1,-2.13484204786961,0.00948573950637122,16,2.13484204786961,-4,0,4,"Benzoate degradation via CoA ligation
+ padj:0.00949 N( -4/ +0/ 16)","Benzoate degradation via CoA ligation","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"20","yqeF","eco00650:Butanoate metabolism",0.0496420255888896,-1,-1.30415050589753,0.00396674861248059,31,1.30415050589753,-1,0,5,"Butanoate metabolism
+ padj:0.00397 N( -5/ +0/ 31)","Butanoate metabolism","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"21","gabD","eco00650:Butanoate metabolism",0.0403101332734108,-1,-1.39458576597964,0.00396674861248059,31,1.39458576597964,-2,0,5,"Butanoate metabolism
+ padj:0.00397 N( -5/ +0/ 31)","Butanoate metabolism","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"22","frdA","eco00650:Butanoate metabolism",0.016140380065295,-1,-1.79208624295242,0.00396674861248059,31,1.79208624295242,-3,0,5,"Butanoate metabolism
+ padj:0.00397 N( -5/ +0/ 31)","Butanoate metabolism","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"23","sdhA","eco00650:Butanoate metabolism",0.0119454137530762,-1,-1.92279880300361,0.00396674861248059,31,1.92279880300361,-4,0,5,"Butanoate metabolism
+ padj:0.00397 N( -5/ +0/ 31)","Butanoate metabolism","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"24","fadB","eco00650:Butanoate metabolism",0.00733091108591375,-1,-2.13484204786961,0.00396674861248059,31,2.13484204786961,-5,0,5,"Butanoate metabolism
+ padj:0.00397 N( -5/ +0/ 31)","Butanoate metabolism","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"25","yfbR","eco00760:Nicotinate and nicotinamide metabolism",0.0439700274446768,-1,-1.35684326330756,0.00804497565695594,16,1.35684326330756,-1,0,4,"Nicotinate and nicotinamide metabolism
+ padj:0.00804 N( -4/ +0/ 16)","Nicotinate and nicotinamide metabolism","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"26","nadD","eco00760:Nicotinate and nicotinamide metabolism",0.0289578562370644,-1,-1.53823359229791,0.00804497565695594,16,1.53823359229791,-2,0,4,"Nicotinate and nicotinamide metabolism
+ padj:0.00804 N( -4/ +0/ 16)","Nicotinate and nicotinamide metabolism","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"27","nadA","eco00760:Nicotinate and nicotinamide metabolism",0.0152075155797624,-1,-1.81794172993975,0.00804497565695594,16,1.81794172993975,-3,0,4,"Nicotinate and nicotinamide metabolism
+ padj:0.00804 N( -4/ +0/ 16)","Nicotinate and nicotinamide metabolism","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"28","nadR","eco00760:Nicotinate and nicotinamide metabolism",0.00128561669265529,-1,-2.89088849725823,0.00804497565695594,16,2.89088849725823,-4,0,4,"Nicotinate and nicotinamide metabolism
+ padj:0.00804 N( -4/ +0/ 16)","Nicotinate and nicotinamide metabolism","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"29","ompF","eco02020:Two-component system",0.0139688548614818,1,1.85483919501136,0.000349500041983641,114,1.85483919501136,1,1,8,"Two-component system
+ padj:0.00035 N( -8/ +1/ 114)","Two-component system","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"30","yqeF","eco02020:Two-component system",0.0496420255888896,-1,-1.30415050589753,0.000349500041983641,114,1.30415050589753,-1,1,8,"Two-component system
+ padj:0.00035 N( -8/ +1/ 114)","Two-component system","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"31","phoQ","eco02020:Two-component system",0.0426622745735173,-1,-1.36995599350935,0.000349500041983641,114,1.36995599350935,-2,1,8,"Two-component system
+ padj:0.00035 N( -8/ +1/ 114)","Two-component system","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"32","narP","eco02020:Two-component system",0.0411235731104504,-1,-1.3859091577595,0.000349500041983641,114,1.3859091577595,-3,1,8,"Two-component system
+ padj:0.00035 N( -8/ +1/ 114)","Two-component system","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"33","frdA","eco02020:Two-component system",0.016140380065295,-1,-1.79208624295242,0.000349500041983641,114,1.79208624295242,-4,1,8,"Two-component system
+ padj:0.00035 N( -8/ +1/ 114)","Two-component system","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"34","phoP","eco02020:Two-component system",0.00733091108591375,-1,-2.13484204786961,0.000349500041983641,114,2.13484204786961,-5,1,8,"Two-component system
+ padj:0.00035 N( -8/ +1/ 114)","Two-component system","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"35","barA","eco02020:Two-component system",0.00363597108131204,-1,-2.43937957959654,0.000349500041983641,114,2.43937957959654,-6,1,8,"Two-component system
+ padj:0.00035 N( -8/ +1/ 114)","Two-component system","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"36","rstA","eco02020:Two-component system",0.00273306258081895,-1,-2.56335042385319,0.000349500041983641,114,2.56335042385319,-7,1,8,"Two-component system
+ padj:0.00035 N( -8/ +1/ 114)","Two-component system","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"
+"37","rstB","eco02020:Two-component system",1.49288417805569e-05,-1,-4.82597388469459,0.000349500041983641,114,4.82597388469459,-8,1,8,"Two-component system
+ padj:0.00035 N( -8/ +1/ 114)","Two-component system","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","kegg"

@@ -1,0 +1,5 @@
+"","ID","KEGG_Path","padj_gene","signChange","score_gene","FDR_KEGG_Path","numGenesInCat","abs_score","rank","numSigP","numSigN","KEGG_Path_long","KEGG_Path_short","pick_data","growthPhase","test_for","vs","df_category"
+"1","idnK","eco00030:Pentose phosphate pathway",1.12577647600521e-36,1,35.9485478305096,0.0325643842903784,27,35.9485478305096,2,2,1,"Pentose phosphate pathway
+ padj:0.03256 N( -1/ +2/ 27)","Pentose phosphate pathway","mrna","Exp","carbonSource","glucosegluconate","kegg"
+"2","gntK","eco00030:Pentose phosphate pathway",6.57069062403918e-06,1,5.18238898075283,0.0325643842903784,27,5.18238898075283,1,2,1,"Pentose phosphate pathway
+ padj:0.03256 N( -1/ +2/ 27)","Pentose phosphate pathway","mrna","Exp","carbonSource","glucosegluconate","kegg"

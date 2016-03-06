@@ -1,0 +1,363 @@
+"","ID","MF_Name","padj_gene","signChange","score_gene","FDR_GoMF","numGenesInCat","abs_score","rank","numSigP","numSigN","MF_Name_long","MF_Name_short","pick_data","growthPhase","test_for","vs","df_category"
+"1","fepB","GO:0005506~iron ion binding",0.00449134028048353,1,2.34762403994109,4.5526831293774e-07,236,2.34762403994109,3,3,13,"iron ion binding
+ padj:0.00000 N( -13/ +3/ 236)","iron ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"2","entA","GO:0005506~iron ion binding",0.0054761721481176,1,2.26152290790795,4.5526831293774e-07,236,2.26152290790795,2,3,13,"iron ion binding
+ padj:0.00000 N( -13/ +3/ 236)","iron ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"3","entD","GO:0005506~iron ion binding",0.0444331578028059,1,1.35229282095674,4.5526831293774e-07,236,1.35229282095674,1,3,13,"iron ion binding
+ padj:0.00000 N( -13/ +3/ 236)","iron ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"4","cyoA","GO:0005506~iron ion binding",0.0411235731104504,-1,-1.3859091577595,4.5526831293774e-07,236,1.3859091577595,-1,3,13,"iron ion binding
+ padj:0.00000 N( -13/ +3/ 236)","iron ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"5","nth","GO:0005506~iron ion binding",0.0346385287177548,-1,-1.46044056305569,4.5526831293774e-07,236,1.46044056305569,-2,3,13,"iron ion binding
+ padj:0.00000 N( -13/ +3/ 236)","iron ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"6","fdx","GO:0005506~iron ion binding",0.0332726142185985,-1,-1.47791307541284,4.5526831293774e-07,236,1.47791307541284,-3,3,13,"iron ion binding
+ padj:0.00000 N( -13/ +3/ 236)","iron ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"7","bfr","GO:0005506~iron ion binding",0.0258564368702199,-1,-1.58743132300626,4.5526831293774e-07,236,1.58743132300626,-4,3,13,"iron ion binding
+ padj:0.00000 N( -13/ +3/ 236)","iron ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"8","rimO","GO:0005506~iron ion binding",0.0214939121202492,-1,-1.66768453110659,4.5526831293774e-07,236,1.66768453110659,-5,3,13,"iron ion binding
+ padj:0.00000 N( -13/ +3/ 236)","iron ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"9","ydbK","GO:0005506~iron ion binding",0.0187365420790293,-1,-1.72731055723512,4.5526831293774e-07,236,1.72731055723512,-6,3,13,"iron ion binding
+ padj:0.00000 N( -13/ +3/ 236)","iron ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"10","acnA","GO:0005506~iron ion binding",0.0182869546649651,-1,-1.73785861176357,4.5526831293774e-07,236,1.73785861176357,-7,3,13,"iron ion binding
+ padj:0.00000 N( -13/ +3/ 236)","iron ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"11","nadA","GO:0005506~iron ion binding",0.0152075155797624,-1,-1.81794172993975,4.5526831293774e-07,236,1.81794172993975,-8,3,13,"iron ion binding
+ padj:0.00000 N( -13/ +3/ 236)","iron ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"12","rumB","GO:0005506~iron ion binding",0.0062305085071844,-1,-2.20547650665514,4.5526831293774e-07,236,2.20547650665514,-9,3,13,"iron ion binding
+ padj:0.00000 N( -13/ +3/ 236)","iron ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"13","ygiQ","GO:0005506~iron ion binding",0.00573724900187957,-1,-2.24129630092886,4.5526831293774e-07,236,2.24129630092886,-10,3,13,"iron ion binding
+ padj:0.00000 N( -13/ +3/ 236)","iron ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"14","fumB","GO:0005506~iron ion binding",0.00340260872918487,-1,-2.46818798817296,4.5526831293774e-07,236,2.46818798817296,-11,3,13,"iron ion binding
+ padj:0.00000 N( -13/ +3/ 236)","iron ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"15","yncD","GO:0005506~iron ion binding",0.00340260872918487,-1,-2.46818798817296,4.5526831293774e-07,236,2.46818798817296,-12,3,13,"iron ion binding
+ padj:0.00000 N( -13/ +3/ 236)","iron ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"16","rnfB","GO:0005506~iron ion binding",0.00306496302868401,-1,-2.51357475981942,4.5526831293774e-07,236,2.51357475981942,-13,3,13,"iron ion binding
+ padj:0.00000 N( -13/ +3/ 236)","iron ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"17","fepB","GO:0043167~ion binding",0.00449134028048353,1,2.34762403994109,1.09360907371014e-05,656,2.34762403994109,3,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"18","entA","GO:0043167~ion binding",0.0054761721481176,1,2.26152290790795,1.09360907371014e-05,656,2.26152290790795,2,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"19","entD","GO:0043167~ion binding",0.0444331578028059,1,1.35229282095674,1.09360907371014e-05,656,1.35229282095674,1,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"20","bisC","GO:0043167~ion binding",0.0496420255888896,-1,-1.30415050589753,1.09360907371014e-05,656,1.30415050589753,-1,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"21","nudF","GO:0043167~ion binding",0.048732673060398,-1,-1.31217976625996,1.09360907371014e-05,656,1.31217976625996,-2,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"22","ptr","GO:0043167~ion binding",0.048732673060398,-1,-1.31217976625996,1.09360907371014e-05,656,1.31217976625996,-3,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"23","yfbR","GO:0043167~ion binding",0.0439700274446768,-1,-1.35684326330756,1.09360907371014e-05,656,1.35684326330756,-4,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"24","phoQ","GO:0043167~ion binding",0.0426622745735173,-1,-1.36995599350935,1.09360907371014e-05,656,1.36995599350935,-5,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"25","cyoA","GO:0043167~ion binding",0.0411235731104504,-1,-1.3859091577595,1.09360907371014e-05,656,1.3859091577595,-6,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"26","gudD","GO:0043167~ion binding",0.0399637180899606,-1,-1.39833411326799,1.09360907371014e-05,656,1.39833411326799,-7,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"27","ubiD","GO:0043167~ion binding",0.0380996041654416,-1,-1.41907953638888,1.09360907371014e-05,656,1.41907953638888,-8,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"28","dapE","GO:0043167~ion binding",0.0346385287177548,-1,-1.46044056305569,1.09360907371014e-05,656,1.46044056305569,-9,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"29","nth","GO:0043167~ion binding",0.0346385287177548,-1,-1.46044056305569,1.09360907371014e-05,656,1.46044056305569,-10,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"30","elaC","GO:0043167~ion binding",0.0332726142185985,-1,-1.47791307541284,1.09360907371014e-05,656,1.47791307541284,-11,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"31","fdx","GO:0043167~ion binding",0.0332726142185985,-1,-1.47791307541284,1.09360907371014e-05,656,1.47791307541284,-12,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"32","hypB","GO:0043167~ion binding",0.032000203009327,-1,-1.49484726650663,1.09360907371014e-05,656,1.49484726650663,-13,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"33","idi","GO:0043167~ion binding",0.0309501612396651,-1,-1.50933708411351,1.09360907371014e-05,656,1.50933708411351,-14,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"34","bfr","GO:0043167~ion binding",0.0258564368702199,-1,-1.58743132300626,1.09360907371014e-05,656,1.58743132300626,-15,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"35","speD","GO:0043167~ion binding",0.0244502242097954,-1,-1.61171715401969,1.09360907371014e-05,656,1.61171715401969,-16,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"36","rimO","GO:0043167~ion binding",0.0214939121202492,-1,-1.66768453110659,1.09360907371014e-05,656,1.66768453110659,-17,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"37","yajD","GO:0043167~ion binding",0.018963662443969,-1,-1.72207778379109,1.09360907371014e-05,656,1.72207778379109,-18,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"38","ydbK","GO:0043167~ion binding",0.0187365420790293,-1,-1.72731055723512,1.09360907371014e-05,656,1.72731055723512,-19,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"39","acnA","GO:0043167~ion binding",0.0182869546649651,-1,-1.73785861176357,1.09360907371014e-05,656,1.73785861176357,-20,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"40","nadA","GO:0043167~ion binding",0.0152075155797624,-1,-1.81794172993975,1.09360907371014e-05,656,1.81794172993975,-21,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"41","poxB","GO:0043167~ion binding",0.0152075155797624,-1,-1.81794172993975,1.09360907371014e-05,656,1.81794172993975,-22,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"42","zntA","GO:0043167~ion binding",0.00629756057309879,-1,-2.20082764654743,1.09360907371014e-05,656,2.20082764654743,-23,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"43","rumB","GO:0043167~ion binding",0.0062305085071844,-1,-2.20547650665514,1.09360907371014e-05,656,2.20547650665514,-24,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"44","ygiQ","GO:0043167~ion binding",0.00573724900187957,-1,-2.24129630092886,1.09360907371014e-05,656,2.24129630092886,-25,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"45","fumB","GO:0043167~ion binding",0.00340260872918487,-1,-2.46818798817296,1.09360907371014e-05,656,2.46818798817296,-26,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"46","yncD","GO:0043167~ion binding",0.00340260872918487,-1,-2.46818798817296,1.09360907371014e-05,656,2.46818798817296,-27,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"47","ribD","GO:0043167~ion binding",0.00338382974297909,-1,-2.47059149656234,1.09360907371014e-05,656,2.47059149656234,-28,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"48","glcB","GO:0043167~ion binding",0.00321507283806503,-1,-2.49280918360714,1.09360907371014e-05,656,2.49280918360714,-29,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"49","rnfB","GO:0043167~ion binding",0.00306496302868401,-1,-2.51357475981942,1.09360907371014e-05,656,2.51357475981942,-30,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"50","sfcA","GO:0043167~ion binding",0.000790010878176968,-1,-3.10236692858335,1.09360907371014e-05,656,3.10236692858335,-31,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"51","thiM","GO:0043167~ion binding",1.82828488844503e-05,-1,-4.737956130353,1.09360907371014e-05,656,4.737956130353,-32,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"52","mgtA","GO:0043167~ion binding",3.85184099125126e-14,-1,-13.4143316493895,1.09360907371014e-05,656,13.4143316493895,-33,3,33,"ion binding
+ padj:0.00001 N( -33/ +3/ 656)","ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"53","fepB","GO:0043169~cation binding",0.00449134028048353,1,2.34762403994109,9.4477920165037e-06,654,2.34762403994109,3,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"54","entA","GO:0043169~cation binding",0.0054761721481176,1,2.26152290790795,9.4477920165037e-06,654,2.26152290790795,2,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"55","entD","GO:0043169~cation binding",0.0444331578028059,1,1.35229282095674,9.4477920165037e-06,654,1.35229282095674,1,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"56","bisC","GO:0043169~cation binding",0.0496420255888896,-1,-1.30415050589753,9.4477920165037e-06,654,1.30415050589753,-1,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"57","nudF","GO:0043169~cation binding",0.048732673060398,-1,-1.31217976625996,9.4477920165037e-06,654,1.31217976625996,-2,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"58","ptr","GO:0043169~cation binding",0.048732673060398,-1,-1.31217976625996,9.4477920165037e-06,654,1.31217976625996,-3,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"59","yfbR","GO:0043169~cation binding",0.0439700274446768,-1,-1.35684326330756,9.4477920165037e-06,654,1.35684326330756,-4,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"60","phoQ","GO:0043169~cation binding",0.0426622745735173,-1,-1.36995599350935,9.4477920165037e-06,654,1.36995599350935,-5,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"61","cyoA","GO:0043169~cation binding",0.0411235731104504,-1,-1.3859091577595,9.4477920165037e-06,654,1.3859091577595,-6,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"62","gudD","GO:0043169~cation binding",0.0399637180899606,-1,-1.39833411326799,9.4477920165037e-06,654,1.39833411326799,-7,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"63","ubiD","GO:0043169~cation binding",0.0380996041654416,-1,-1.41907953638888,9.4477920165037e-06,654,1.41907953638888,-8,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"64","dapE","GO:0043169~cation binding",0.0346385287177548,-1,-1.46044056305569,9.4477920165037e-06,654,1.46044056305569,-9,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"65","nth","GO:0043169~cation binding",0.0346385287177548,-1,-1.46044056305569,9.4477920165037e-06,654,1.46044056305569,-10,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"66","elaC","GO:0043169~cation binding",0.0332726142185985,-1,-1.47791307541284,9.4477920165037e-06,654,1.47791307541284,-11,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"67","fdx","GO:0043169~cation binding",0.0332726142185985,-1,-1.47791307541284,9.4477920165037e-06,654,1.47791307541284,-12,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"68","hypB","GO:0043169~cation binding",0.032000203009327,-1,-1.49484726650663,9.4477920165037e-06,654,1.49484726650663,-13,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"69","idi","GO:0043169~cation binding",0.0309501612396651,-1,-1.50933708411351,9.4477920165037e-06,654,1.50933708411351,-14,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"70","bfr","GO:0043169~cation binding",0.0258564368702199,-1,-1.58743132300626,9.4477920165037e-06,654,1.58743132300626,-15,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"71","speD","GO:0043169~cation binding",0.0244502242097954,-1,-1.61171715401969,9.4477920165037e-06,654,1.61171715401969,-16,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"72","rimO","GO:0043169~cation binding",0.0214939121202492,-1,-1.66768453110659,9.4477920165037e-06,654,1.66768453110659,-17,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"73","yajD","GO:0043169~cation binding",0.018963662443969,-1,-1.72207778379109,9.4477920165037e-06,654,1.72207778379109,-18,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"74","ydbK","GO:0043169~cation binding",0.0187365420790293,-1,-1.72731055723512,9.4477920165037e-06,654,1.72731055723512,-19,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"75","acnA","GO:0043169~cation binding",0.0182869546649651,-1,-1.73785861176357,9.4477920165037e-06,654,1.73785861176357,-20,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"76","nadA","GO:0043169~cation binding",0.0152075155797624,-1,-1.81794172993975,9.4477920165037e-06,654,1.81794172993975,-21,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"77","poxB","GO:0043169~cation binding",0.0152075155797624,-1,-1.81794172993975,9.4477920165037e-06,654,1.81794172993975,-22,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"78","zntA","GO:0043169~cation binding",0.00629756057309879,-1,-2.20082764654743,9.4477920165037e-06,654,2.20082764654743,-23,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"79","rumB","GO:0043169~cation binding",0.0062305085071844,-1,-2.20547650665514,9.4477920165037e-06,654,2.20547650665514,-24,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"80","ygiQ","GO:0043169~cation binding",0.00573724900187957,-1,-2.24129630092886,9.4477920165037e-06,654,2.24129630092886,-25,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"81","fumB","GO:0043169~cation binding",0.00340260872918487,-1,-2.46818798817296,9.4477920165037e-06,654,2.46818798817296,-26,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"82","yncD","GO:0043169~cation binding",0.00340260872918487,-1,-2.46818798817296,9.4477920165037e-06,654,2.46818798817296,-27,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"83","ribD","GO:0043169~cation binding",0.00338382974297909,-1,-2.47059149656234,9.4477920165037e-06,654,2.47059149656234,-28,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"84","glcB","GO:0043169~cation binding",0.00321507283806503,-1,-2.49280918360714,9.4477920165037e-06,654,2.49280918360714,-29,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"85","rnfB","GO:0043169~cation binding",0.00306496302868401,-1,-2.51357475981942,9.4477920165037e-06,654,2.51357475981942,-30,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"86","sfcA","GO:0043169~cation binding",0.000790010878176968,-1,-3.10236692858335,9.4477920165037e-06,654,3.10236692858335,-31,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"87","thiM","GO:0043169~cation binding",1.82828488844503e-05,-1,-4.737956130353,9.4477920165037e-06,654,4.737956130353,-32,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"88","mgtA","GO:0043169~cation binding",3.85184099125126e-14,-1,-13.4143316493895,9.4477920165037e-06,654,13.4143316493895,-33,3,33,"cation binding
+ padj:0.00001 N( -33/ +3/ 654)","cation binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"89","fepB","GO:0046872~metal ion binding",0.00449134028048353,1,2.34762403994109,4.10711537202069e-06,640,2.34762403994109,3,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"90","entA","GO:0046872~metal ion binding",0.0054761721481176,1,2.26152290790795,4.10711537202069e-06,640,2.26152290790795,2,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"91","entD","GO:0046872~metal ion binding",0.0444331578028059,1,1.35229282095674,4.10711537202069e-06,640,1.35229282095674,1,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"92","bisC","GO:0046872~metal ion binding",0.0496420255888896,-1,-1.30415050589753,4.10711537202069e-06,640,1.30415050589753,-1,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"93","nudF","GO:0046872~metal ion binding",0.048732673060398,-1,-1.31217976625996,4.10711537202069e-06,640,1.31217976625996,-2,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"94","ptr","GO:0046872~metal ion binding",0.048732673060398,-1,-1.31217976625996,4.10711537202069e-06,640,1.31217976625996,-3,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"95","yfbR","GO:0046872~metal ion binding",0.0439700274446768,-1,-1.35684326330756,4.10711537202069e-06,640,1.35684326330756,-4,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"96","phoQ","GO:0046872~metal ion binding",0.0426622745735173,-1,-1.36995599350935,4.10711537202069e-06,640,1.36995599350935,-5,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"97","cyoA","GO:0046872~metal ion binding",0.0411235731104504,-1,-1.3859091577595,4.10711537202069e-06,640,1.3859091577595,-6,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"98","gudD","GO:0046872~metal ion binding",0.0399637180899606,-1,-1.39833411326799,4.10711537202069e-06,640,1.39833411326799,-7,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"99","ubiD","GO:0046872~metal ion binding",0.0380996041654416,-1,-1.41907953638888,4.10711537202069e-06,640,1.41907953638888,-8,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"100","dapE","GO:0046872~metal ion binding",0.0346385287177548,-1,-1.46044056305569,4.10711537202069e-06,640,1.46044056305569,-9,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"101","nth","GO:0046872~metal ion binding",0.0346385287177548,-1,-1.46044056305569,4.10711537202069e-06,640,1.46044056305569,-10,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"102","elaC","GO:0046872~metal ion binding",0.0332726142185985,-1,-1.47791307541284,4.10711537202069e-06,640,1.47791307541284,-11,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"103","fdx","GO:0046872~metal ion binding",0.0332726142185985,-1,-1.47791307541284,4.10711537202069e-06,640,1.47791307541284,-12,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"104","hypB","GO:0046872~metal ion binding",0.032000203009327,-1,-1.49484726650663,4.10711537202069e-06,640,1.49484726650663,-13,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"105","idi","GO:0046872~metal ion binding",0.0309501612396651,-1,-1.50933708411351,4.10711537202069e-06,640,1.50933708411351,-14,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"106","bfr","GO:0046872~metal ion binding",0.0258564368702199,-1,-1.58743132300626,4.10711537202069e-06,640,1.58743132300626,-15,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"107","speD","GO:0046872~metal ion binding",0.0244502242097954,-1,-1.61171715401969,4.10711537202069e-06,640,1.61171715401969,-16,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"108","rimO","GO:0046872~metal ion binding",0.0214939121202492,-1,-1.66768453110659,4.10711537202069e-06,640,1.66768453110659,-17,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"109","yajD","GO:0046872~metal ion binding",0.018963662443969,-1,-1.72207778379109,4.10711537202069e-06,640,1.72207778379109,-18,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"110","ydbK","GO:0046872~metal ion binding",0.0187365420790293,-1,-1.72731055723512,4.10711537202069e-06,640,1.72731055723512,-19,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"111","acnA","GO:0046872~metal ion binding",0.0182869546649651,-1,-1.73785861176357,4.10711537202069e-06,640,1.73785861176357,-20,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"112","nadA","GO:0046872~metal ion binding",0.0152075155797624,-1,-1.81794172993975,4.10711537202069e-06,640,1.81794172993975,-21,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"113","poxB","GO:0046872~metal ion binding",0.0152075155797624,-1,-1.81794172993975,4.10711537202069e-06,640,1.81794172993975,-22,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"114","zntA","GO:0046872~metal ion binding",0.00629756057309879,-1,-2.20082764654743,4.10711537202069e-06,640,2.20082764654743,-23,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"115","rumB","GO:0046872~metal ion binding",0.0062305085071844,-1,-2.20547650665514,4.10711537202069e-06,640,2.20547650665514,-24,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"116","ygiQ","GO:0046872~metal ion binding",0.00573724900187957,-1,-2.24129630092886,4.10711537202069e-06,640,2.24129630092886,-25,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"117","fumB","GO:0046872~metal ion binding",0.00340260872918487,-1,-2.46818798817296,4.10711537202069e-06,640,2.46818798817296,-26,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"118","yncD","GO:0046872~metal ion binding",0.00340260872918487,-1,-2.46818798817296,4.10711537202069e-06,640,2.46818798817296,-27,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"119","ribD","GO:0046872~metal ion binding",0.00338382974297909,-1,-2.47059149656234,4.10711537202069e-06,640,2.47059149656234,-28,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"120","glcB","GO:0046872~metal ion binding",0.00321507283806503,-1,-2.49280918360714,4.10711537202069e-06,640,2.49280918360714,-29,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"121","rnfB","GO:0046872~metal ion binding",0.00306496302868401,-1,-2.51357475981942,4.10711537202069e-06,640,2.51357475981942,-30,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"122","sfcA","GO:0046872~metal ion binding",0.000790010878176968,-1,-3.10236692858335,4.10711537202069e-06,640,3.10236692858335,-31,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"123","thiM","GO:0046872~metal ion binding",1.82828488844503e-05,-1,-4.737956130353,4.10711537202069e-06,640,4.737956130353,-32,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"124","mgtA","GO:0046872~metal ion binding",3.85184099125126e-14,-1,-13.4143316493895,4.10711537202069e-06,640,13.4143316493895,-33,3,33,"metal ion binding
+ padj:0.00000 N( -33/ +3/ 640)","metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"125","fepB","GO:0046914~transition metal ion binding",0.00449134028048353,1,2.34762403994109,7.69385165888536e-06,485,2.34762403994109,3,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"126","entA","GO:0046914~transition metal ion binding",0.0054761721481176,1,2.26152290790795,7.69385165888536e-06,485,2.26152290790795,2,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"127","entD","GO:0046914~transition metal ion binding",0.0444331578028059,1,1.35229282095674,7.69385165888536e-06,485,1.35229282095674,1,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"128","bisC","GO:0046914~transition metal ion binding",0.0496420255888896,-1,-1.30415050589753,7.69385165888536e-06,485,1.30415050589753,-1,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"129","nudF","GO:0046914~transition metal ion binding",0.048732673060398,-1,-1.31217976625996,7.69385165888536e-06,485,1.31217976625996,-2,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"130","ptr","GO:0046914~transition metal ion binding",0.048732673060398,-1,-1.31217976625996,7.69385165888536e-06,485,1.31217976625996,-3,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"131","yfbR","GO:0046914~transition metal ion binding",0.0439700274446768,-1,-1.35684326330756,7.69385165888536e-06,485,1.35684326330756,-4,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"132","cyoA","GO:0046914~transition metal ion binding",0.0411235731104504,-1,-1.3859091577595,7.69385165888536e-06,485,1.3859091577595,-5,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"133","ubiD","GO:0046914~transition metal ion binding",0.0380996041654416,-1,-1.41907953638888,7.69385165888536e-06,485,1.41907953638888,-6,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"134","dapE","GO:0046914~transition metal ion binding",0.0346385287177548,-1,-1.46044056305569,7.69385165888536e-06,485,1.46044056305569,-7,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"135","nth","GO:0046914~transition metal ion binding",0.0346385287177548,-1,-1.46044056305569,7.69385165888536e-06,485,1.46044056305569,-8,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"136","elaC","GO:0046914~transition metal ion binding",0.0332726142185985,-1,-1.47791307541284,7.69385165888536e-06,485,1.47791307541284,-9,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"137","fdx","GO:0046914~transition metal ion binding",0.0332726142185985,-1,-1.47791307541284,7.69385165888536e-06,485,1.47791307541284,-10,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"138","hypB","GO:0046914~transition metal ion binding",0.032000203009327,-1,-1.49484726650663,7.69385165888536e-06,485,1.49484726650663,-11,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"139","idi","GO:0046914~transition metal ion binding",0.0309501612396651,-1,-1.50933708411351,7.69385165888536e-06,485,1.50933708411351,-12,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"140","bfr","GO:0046914~transition metal ion binding",0.0258564368702199,-1,-1.58743132300626,7.69385165888536e-06,485,1.58743132300626,-13,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"141","rimO","GO:0046914~transition metal ion binding",0.0214939121202492,-1,-1.66768453110659,7.69385165888536e-06,485,1.66768453110659,-14,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"142","yajD","GO:0046914~transition metal ion binding",0.018963662443969,-1,-1.72207778379109,7.69385165888536e-06,485,1.72207778379109,-15,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"143","ydbK","GO:0046914~transition metal ion binding",0.0187365420790293,-1,-1.72731055723512,7.69385165888536e-06,485,1.72731055723512,-16,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"144","acnA","GO:0046914~transition metal ion binding",0.0182869546649651,-1,-1.73785861176357,7.69385165888536e-06,485,1.73785861176357,-17,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"145","nadA","GO:0046914~transition metal ion binding",0.0152075155797624,-1,-1.81794172993975,7.69385165888536e-06,485,1.81794172993975,-18,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"146","zntA","GO:0046914~transition metal ion binding",0.00629756057309879,-1,-2.20082764654743,7.69385165888536e-06,485,2.20082764654743,-19,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"147","rumB","GO:0046914~transition metal ion binding",0.0062305085071844,-1,-2.20547650665514,7.69385165888536e-06,485,2.20547650665514,-20,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"148","ygiQ","GO:0046914~transition metal ion binding",0.00573724900187957,-1,-2.24129630092886,7.69385165888536e-06,485,2.24129630092886,-21,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"149","fumB","GO:0046914~transition metal ion binding",0.00340260872918487,-1,-2.46818798817296,7.69385165888536e-06,485,2.46818798817296,-22,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"150","yncD","GO:0046914~transition metal ion binding",0.00340260872918487,-1,-2.46818798817296,7.69385165888536e-06,485,2.46818798817296,-23,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"151","ribD","GO:0046914~transition metal ion binding",0.00338382974297909,-1,-2.47059149656234,7.69385165888536e-06,485,2.47059149656234,-24,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"152","rnfB","GO:0046914~transition metal ion binding",0.00306496302868401,-1,-2.51357475981942,7.69385165888536e-06,485,2.51357475981942,-25,3,25,"transition metal ion binding
+ padj:0.00001 N( -25/ +3/ 485)","transition metal ion binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"153","nth","GO:0051536~iron-sulfur cluster binding",0.0346385287177548,-1,-1.46044056305569,0.000190192978086423,143,1.46044056305569,-1,0,10,"iron-sulfur cluster binding
+ padj:0.00019 N( -10/ +0/ 143)","iron-sulfur cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"154","fdx","GO:0051536~iron-sulfur cluster binding",0.0332726142185985,-1,-1.47791307541284,0.000190192978086423,143,1.47791307541284,-2,0,10,"iron-sulfur cluster binding
+ padj:0.00019 N( -10/ +0/ 143)","iron-sulfur cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"155","rimO","GO:0051536~iron-sulfur cluster binding",0.0214939121202492,-1,-1.66768453110659,0.000190192978086423,143,1.66768453110659,-3,0,10,"iron-sulfur cluster binding
+ padj:0.00019 N( -10/ +0/ 143)","iron-sulfur cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"156","ydbK","GO:0051536~iron-sulfur cluster binding",0.0187365420790293,-1,-1.72731055723512,0.000190192978086423,143,1.72731055723512,-4,0,10,"iron-sulfur cluster binding
+ padj:0.00019 N( -10/ +0/ 143)","iron-sulfur cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"157","acnA","GO:0051536~iron-sulfur cluster binding",0.0182869546649651,-1,-1.73785861176357,0.000190192978086423,143,1.73785861176357,-5,0,10,"iron-sulfur cluster binding
+ padj:0.00019 N( -10/ +0/ 143)","iron-sulfur cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"158","nadA","GO:0051536~iron-sulfur cluster binding",0.0152075155797624,-1,-1.81794172993975,0.000190192978086423,143,1.81794172993975,-6,0,10,"iron-sulfur cluster binding
+ padj:0.00019 N( -10/ +0/ 143)","iron-sulfur cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"159","rumB","GO:0051536~iron-sulfur cluster binding",0.0062305085071844,-1,-2.20547650665514,0.000190192978086423,143,2.20547650665514,-7,0,10,"iron-sulfur cluster binding
+ padj:0.00019 N( -10/ +0/ 143)","iron-sulfur cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"160","ygiQ","GO:0051536~iron-sulfur cluster binding",0.00573724900187957,-1,-2.24129630092886,0.000190192978086423,143,2.24129630092886,-8,0,10,"iron-sulfur cluster binding
+ padj:0.00019 N( -10/ +0/ 143)","iron-sulfur cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"161","fumB","GO:0051536~iron-sulfur cluster binding",0.00340260872918487,-1,-2.46818798817296,0.000190192978086423,143,2.46818798817296,-9,0,10,"iron-sulfur cluster binding
+ padj:0.00019 N( -10/ +0/ 143)","iron-sulfur cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"162","rnfB","GO:0051536~iron-sulfur cluster binding",0.00306496302868401,-1,-2.51357475981942,0.000190192978086423,143,2.51357475981942,-10,0,10,"iron-sulfur cluster binding
+ padj:0.00019 N( -10/ +0/ 143)","iron-sulfur cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"163","nth","GO:0051539~4 iron, 4 sulfur cluster binding",0.0346385287177548,-1,-1.46044056305569,1.89326327293404e-06,107,1.46044056305569,-1,0,9,"4 iron, 4 sulfur cluster binding
+ padj:0.00000 N( -9/ +0/ 107)","4 iron, 4 sulfur cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"164","rimO","GO:0051539~4 iron, 4 sulfur cluster binding",0.0214939121202492,-1,-1.66768453110659,1.89326327293404e-06,107,1.66768453110659,-2,0,9,"4 iron, 4 sulfur cluster binding
+ padj:0.00000 N( -9/ +0/ 107)","4 iron, 4 sulfur cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"165","ydbK","GO:0051539~4 iron, 4 sulfur cluster binding",0.0187365420790293,-1,-1.72731055723512,1.89326327293404e-06,107,1.72731055723512,-3,0,9,"4 iron, 4 sulfur cluster binding
+ padj:0.00000 N( -9/ +0/ 107)","4 iron, 4 sulfur cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"166","acnA","GO:0051539~4 iron, 4 sulfur cluster binding",0.0182869546649651,-1,-1.73785861176357,1.89326327293404e-06,107,1.73785861176357,-4,0,9,"4 iron, 4 sulfur cluster binding
+ padj:0.00000 N( -9/ +0/ 107)","4 iron, 4 sulfur cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"167","nadA","GO:0051539~4 iron, 4 sulfur cluster binding",0.0152075155797624,-1,-1.81794172993975,1.89326327293404e-06,107,1.81794172993975,-5,0,9,"4 iron, 4 sulfur cluster binding
+ padj:0.00000 N( -9/ +0/ 107)","4 iron, 4 sulfur cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"168","rumB","GO:0051539~4 iron, 4 sulfur cluster binding",0.0062305085071844,-1,-2.20547650665514,1.89326327293404e-06,107,2.20547650665514,-6,0,9,"4 iron, 4 sulfur cluster binding
+ padj:0.00000 N( -9/ +0/ 107)","4 iron, 4 sulfur cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"169","ygiQ","GO:0051539~4 iron, 4 sulfur cluster binding",0.00573724900187957,-1,-2.24129630092886,1.89326327293404e-06,107,2.24129630092886,-7,0,9,"4 iron, 4 sulfur cluster binding
+ padj:0.00000 N( -9/ +0/ 107)","4 iron, 4 sulfur cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"170","fumB","GO:0051539~4 iron, 4 sulfur cluster binding",0.00340260872918487,-1,-2.46818798817296,1.89326327293404e-06,107,2.46818798817296,-8,0,9,"4 iron, 4 sulfur cluster binding
+ padj:0.00000 N( -9/ +0/ 107)","4 iron, 4 sulfur cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"171","rnfB","GO:0051539~4 iron, 4 sulfur cluster binding",0.00306496302868401,-1,-2.51357475981942,1.89326327293404e-06,107,2.51357475981942,-9,0,9,"4 iron, 4 sulfur cluster binding
+ padj:0.00000 N( -9/ +0/ 107)","4 iron, 4 sulfur cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"172","nth","GO:0051540~metal cluster binding",0.0346385287177548,-1,-1.46044056305569,0.000190192978086423,143,1.46044056305569,-1,0,10,"metal cluster binding
+ padj:0.00019 N( -10/ +0/ 143)","metal cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"173","fdx","GO:0051540~metal cluster binding",0.0332726142185985,-1,-1.47791307541284,0.000190192978086423,143,1.47791307541284,-2,0,10,"metal cluster binding
+ padj:0.00019 N( -10/ +0/ 143)","metal cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"174","rimO","GO:0051540~metal cluster binding",0.0214939121202492,-1,-1.66768453110659,0.000190192978086423,143,1.66768453110659,-3,0,10,"metal cluster binding
+ padj:0.00019 N( -10/ +0/ 143)","metal cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"175","ydbK","GO:0051540~metal cluster binding",0.0187365420790293,-1,-1.72731055723512,0.000190192978086423,143,1.72731055723512,-4,0,10,"metal cluster binding
+ padj:0.00019 N( -10/ +0/ 143)","metal cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"176","acnA","GO:0051540~metal cluster binding",0.0182869546649651,-1,-1.73785861176357,0.000190192978086423,143,1.73785861176357,-5,0,10,"metal cluster binding
+ padj:0.00019 N( -10/ +0/ 143)","metal cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"177","nadA","GO:0051540~metal cluster binding",0.0152075155797624,-1,-1.81794172993975,0.000190192978086423,143,1.81794172993975,-6,0,10,"metal cluster binding
+ padj:0.00019 N( -10/ +0/ 143)","metal cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"178","rumB","GO:0051540~metal cluster binding",0.0062305085071844,-1,-2.20547650665514,0.000190192978086423,143,2.20547650665514,-7,0,10,"metal cluster binding
+ padj:0.00019 N( -10/ +0/ 143)","metal cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"179","ygiQ","GO:0051540~metal cluster binding",0.00573724900187957,-1,-2.24129630092886,0.000190192978086423,143,2.24129630092886,-8,0,10,"metal cluster binding
+ padj:0.00019 N( -10/ +0/ 143)","metal cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"180","fumB","GO:0051540~metal cluster binding",0.00340260872918487,-1,-2.46818798817296,0.000190192978086423,143,2.46818798817296,-9,0,10,"metal cluster binding
+ padj:0.00019 N( -10/ +0/ 143)","metal cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
+"181","rnfB","GO:0051540~metal cluster binding",0.00306496302868401,-1,-2.51357475981942,0.000190192978086423,143,2.51357475981942,-10,0,10,"metal cluster binding
+ padj:0.00019 N( -10/ +0/ 143)","metal cluster binding","protein_wo_NA","Exp","Mg_mM_Levels","baseMghighMg","MF"
