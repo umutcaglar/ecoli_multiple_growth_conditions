@@ -223,12 +223,14 @@ fig02=ggplot(mf_metabolism_summary, aes(x=grouping,
 print(fig02)
 
 fig03<-ggplot(metaData,aes(x=Mg_mM_Levels, y=doublingTimeMinutes))+
-  geom_violin(fill="blue")+
+  geom_point()+
   ylim(0,90)+
   theme_bw()+
   xlab("conditions")+
-  ylab("doubling time")
-  
+  ylab("doubling time")+
+  theme(panel.grid.minor.y=element_blank(),
+        panel.grid.major.y=element_blank())
+
 print(fig03)
 ###*****************************
 

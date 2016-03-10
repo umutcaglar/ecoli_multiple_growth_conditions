@@ -30,6 +30,7 @@ require("ggplot2")
 require("RColorBrewer")
 require("scales")
 require("cowplot")
+require("ggrepel")
 ###*****************************
 
 
@@ -53,7 +54,7 @@ dataName=name_data(initialValue="genes0.05", # can be "genes0.05"
                                          "experiment"),
                    # referenceLevels can be a vector like
                    # c("exponential", "baseMg", "baseNa", "glucose", "glucose_time_course")
-                   referenceLevels=c("stationary",
+                   referenceLevels=c("exponential",
                                      "baseMg", 
                                      "baseNa", 
                                      "glucose", 
@@ -62,7 +63,7 @@ dataName=name_data(initialValue="genes0.05", # can be "genes0.05"
                    carbonSourceVector = "S", # can be any sub combination of "SYAN"
                    MgLevelVector = c("baseMg","highMg"), # can be "lowMg","baseMg","highMg" // "allMg"
                    NaLevelVector = c("baseNa"), # can be "baseNa","highNa" // "allNa"
-                   growthPhaseVector = c("stationary"), # can be "exponential","stationary","late_stationary" // "allPhase"
+                   growthPhaseVector = c("exponential"), # can be "exponential","stationary","late_stationary" // "allPhase"
                    filterGenes = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
                    threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
                    roundData=TRUE,
@@ -137,7 +138,7 @@ GoMF_result ->GoMF_result_short
 GoMF_list=as.vector(GoMF_result_short$MF_Name)
 inputGenes=unique(as.vector(GoMF_input_df$gene_name))
 GoMF_input_df %>%
-  dplyr::select(ID=gene_name,padj_gene=padj,signChange)%>%
+  dplyr::select(ID=gene_name,padj_gene=padj, log2=log2FoldChange, signChange)%>%
   dplyr::mutate(score_gene=-signChange*log10(padj_gene))->GoMF_input_df_narrow
 
 GoMF_result_short %>%
@@ -201,7 +202,7 @@ selectedDf$MF_Name_long <- factor(selectedDf$MF_Name_long,
 # Generate simple Data Frame
 # Additional Parameters
 maxPathway=5
-maxGene=7
+maxGene=10
 
 if(length(unique(as.vector(selectedDf$FDR_GoMF)))<maxPathway)
 {maxPathway=length(unique(as.vector(selectedDf$FDR_GoMF)))}
@@ -254,27 +255,65 @@ fig01=ggplot( selectedDf, aes( x=rank,y=MF_Name_long)) +
 
 print(fig01)
 
-# b) Simple Figure
-scaleHigh_simp=max(abs(selectedDf_simp$score_gene))
-scaleMid_simp=0
-scaleLow_simp=-max(abs(selectedDf_simp$score_gene))
+# # b) Simple Figure
+# scaleHigh_simp=max(abs(selectedDf_simp$score_gene))
+# scaleMid_simp=0
+# scaleLow_simp=-max(abs(selectedDf_simp$score_gene))
+# 
+# fig02=ggplot( selectedDf_simp, aes( x=rank,y=MF_Name_short)) +
+#   geom_tile(aes(fill=score_gene))+
+#   scale_fill_gradientn(colours=c("Blue","Grey50","Red"),
+#                        values=rescale(c(scaleLow_simp,scaleMid_simp,scaleHigh_simp)),
+#                        limits=c(scaleLow_simp,scaleHigh_simp),
+#                        guide = guide_colorbar(title = "-sign(cor)*P_log10",barwidth = 12))+
+#   geom_text(aes(label=ID),size=3, colour="White", fontface="bold")+
+#   theme_bw()+
+#   scale_x_continuous(breaks=min(selectedDf_simp$rank):max(selectedDf_simp$rank))+
+#   theme(axis.line.y = element_blank(),
+#         legend.position="bottom",
+#         axis.title.y = element_blank(),
+#         panel.grid.minor=element_blank(),
+#         panel.grid.major.x=element_blank())
+# 
+# print(fig02)
 
-fig02=ggplot( selectedDf_simp, aes( x=rank,y=MF_Name_short)) +
-  geom_tile(aes(fill=score_gene))+
-  scale_fill_gradientn(colours=c("Blue","Grey50","Red"),
-                       values=rescale(c(scaleLow_simp,scaleMid_simp,scaleHigh_simp)),
-                       limits=c(scaleLow_simp,scaleHigh_simp),
-                       guide = guide_colorbar(title = "-sign(cor)*P_log10",barwidth = 12))+
-  geom_text(aes(label=ID),size=3, colour="White", fontface="bold")+
+# c) simple figure with geom_point
+scaleHigh_simp=max(abs(selectedDf_simp$log2))
+scaleMid_simp=0
+scaleLow_simp=-max(abs(selectedDf_simp$log2))
+
+minimumFold=min(selectedDf_simp$log2)
+if(minimumFold>-1){minimumFold=-1}
+maximumFold=max(selectedDf_simp$log2)
+if(maximumFold<1){maximumFold=1}
+
+fig03=ggplot(selectedDf_simp, aes( x=log2,y=MF_Name_short)) +
+  geom_point(aes(colour = log2),size=2.5)+
+  geom_vline(xintercept = c(log2(1/2),log2(2)), colour="orange", linetype = "longdash")+
+  geom_vline(xintercept = c(log2(1)), colour="black", linetype = "longdash")+
+  geom_text_repel(aes(label=ID),size=5, colour="Black", fontface="bold")+
+  scale_colour_gradientn(colours=c("Blue","Grey50","Red"),
+                         values=rescale(c(scaleLow_simp,scaleMid_simp,scaleHigh_simp)),
+                         limits=c(scaleLow_simp,scaleHigh_simp),
+                         guide = guide_colorbar(title = "log2FoldChange",barwidth = 12))+
   theme_bw()+
-  scale_x_continuous(breaks=min(selectedDf_simp$rank):max(selectedDf_simp$rank))+
+  scale_x_continuous(breaks=seq(floor(minimumFold),ceiling(maximumFold)))+
+  xlab("fold change")+
   theme(axis.line.y = element_blank(),
         legend.position="bottom",
         axis.title.y = element_blank(),
         panel.grid.minor=element_blank(),
         panel.grid.major.x=element_blank())
 
-print(fig02)
+print(fig03)
+
+GoMF_input_df %>%
+  dplyr::mutate(score_gene=-signChange*log10(padj))->GoMF_input_df
+
+fig04=ggplot2::ggplot(GoMF_input_df, aes( x=log2FoldChange,y=score_gene))+
+  geom_point()
+
+print(fig04)
 ###*****************************
 
 
@@ -302,17 +341,12 @@ cowplot::save_plot(filename = paste0("../d_figures/",objectName,"_mf.pdf"),
                    limitsize = FALSE)
 
 # Save simple figure
-# Detailed Figure
-colWidth=ifelse(max(selectedDf_simp$rank)-min(selectedDf_simp$rank)+1<8, 
-                8, 
-                max(selectedDf_simp$rank)-min(selectedDf_simp$rank))
 rowWidth=ifelse(nrow(summary_df_simp)*1<3,3,nrow(summary_df_simp)*1)
 
 cowplot::save_plot(filename = paste0("../d_figures/simple",objectName,"_mf.pdf"),
-                   plot = fig02,
+                   plot = fig03,
                    base_height = rowWidth,
-                   base_width = colWidth,
-                   ncol=1,
+                   ncol=2,
                    limitsize = FALSE)
 
 

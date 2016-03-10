@@ -63,7 +63,7 @@ for(counter01 in 1 : length(fileList))
 }
 ###*****************************
 
-browser()
+
 ###*****************************
 # Generate flegellar data frame kegg
 mainLoadedFile_kegg$vs=as.character(mainLoadedFile_kegg$vs)
@@ -77,13 +77,11 @@ mainLoadedFile_kegg %>%
   dplyr::filter(pick_data != "protein")%>%
   dplyr::mutate(grouping=paste(vs,sep = "-"))->kegg_binding_df
 
-kegg_flagellar_assembly_df$grouping <- factor(kegg_flagellar_assembly_df$grouping, 
-                                            levels = rev(c("lowMg", "highMg", "highNa")))
 ###*****************************
 
 
 ###*****************************
-# Generate flegellar data frame mf
+# Generate binding data frame mf
 mainLoadedFile_mf$vs=as.character(mainLoadedFile_mf$vs)
 mainLoadedFile_mf %>%
   dplyr::filter(grepl("*.*binding*.*",MF_Name_short)) %>%
@@ -95,82 +93,74 @@ mainLoadedFile_mf %>%
   dplyr::mutate(grouping=paste(pick_data,
                                growthPhase,
                                vs,sep = "-"))->mf_binding_df
-###*****************************
+
+mf_binding_df %>%
+  dplyr::group_by(pick_data, growthPhase, vs, grouping, signChange) %>%
+  dplyr::summarize(lengthObj=length(score_gene))%>%
+  dplyr::group_by() %>%
+  tidyr::complete(grouping,signChange)->mf_binding_summary
+
+mf_binding_df %>% 
+  dplyr::filter(MF_Name_short %in% c("magnesium ion binding",
+                                     "iron ion binding",
+                                     "zinc ion binding",
+                                     "manganese ion binding",
+                                     "cobalt ion binding",
+                                     "calcium ion binding"))%>%
+  dplyr::filter(test_for !="carbonSource",
+                pick_data=="mrna")%>%
+  dplyr::group_by(MF_Name, padj_gene, pick_data,growthPhase,vs) %>%
+  dplyr::mutate(grouping=paste(vs,
+                               sep = "-"))->mf_binding_ions_df
+
+mf_binding_ions_df$MF_Name_short=factor((mf_binding_ions_df$MF_Name_short))
+
+mf_binding_ions_df %>%
+  dplyr::group_by(MF_Name_short, pick_data, growthPhase, vs, grouping, signChange) %>%
+  dplyr::summarize(lengthObj=length(score_gene))%>%
+  dplyr::group_by() %>%
+  tidyr::complete(grouping,signChange,MF_Name_short,pick_data)->mf_binding_ions_summary
+
+mf_binding_ions_summary$MF_Name_short=factor((mf_binding_ions_summary$MF_Name_short))
+
+mf_binding_ions_summary$grouping <- factor(mf_binding_ions_summary$grouping, 
+                                           levels = rev(c("lowMg", "highMg", "highNa")))
 
 
 ###*****************************
-# Generate filegellar figure kegg
-scaleHigh=max(abs(kegg_flagellar_assembly_df$score_gene))
-scaleMid=0
-scaleLow=-max(abs(kegg_flagellar_assembly_df$score_gene))
 
-fig01=ggplot(kegg_flagellar_assembly_df, aes( x=rank,y=grouping)) +
-  geom_tile(aes(fill=score_gene))+
-  scale_fill_gradientn(colours=c("Blue","Grey50","Red"),
-                       values=rescale(c(scaleLow,scaleMid,scaleHigh)),
-                       limits=c(scaleLow,scaleHigh),
-                       guide = guide_colorbar(title = "-sign(cor)*P_log10"))+
-  geom_text(aes(label=ID),size=3, colour="White", fontface="bold")+
+
+###*****************************
+# Generate binding figure mf
+fig01=ggplot(mf_binding_summary, aes(x=grouping,
+                                     y=lengthObj,
+                                     fill=as.factor(signChange))) +
+  geom_bar(position="dodge", stat="identity",width=.75)+
+  scale_fill_manual(values = c("blue","red"),
+                    name="Regulation",
+                    breaks=c("-1", "1"),
+                    labels=c("Down Regulated", "Up Regulated"))+
+  xlab("conditions")+
+  ylab("number of differentially expressed")+
   theme_bw()+
-  scale_x_continuous(breaks=min(kegg_flagellar_assembly_df$rank):max(kegg_flagellar_assembly_df$rank))+
-  theme(axis.line.y = element_blank(),
-        legend.position="bottom",
-        axis.title.y = element_blank(),
-        panel.grid.minor=element_blank(),
-        panel.grid.major.x=element_blank())
+  coord_flip()
 
 print(fig01)
-###*****************************
 
-
-###*****************************
-# Generate filegellar figure mf
-scaleHigh=max(abs(mf_flagellar_assembly_df$score_gene))
-scaleMid=0
-scaleLow=-max(abs(mf_flagellar_assembly_df$score_gene))
-
-fig02=ggplot(mf_flagellar_assembly_df, aes( x=rank,y=grouping)) +
-  geom_tile(aes(fill=score_gene))+
-  scale_fill_gradientn(colours=c("Blue","Grey50","Red"),
-                       values=rescale(c(scaleLow,scaleMid,scaleHigh)),
-                       limits=c(scaleLow,scaleHigh),
-                       guide = guide_colorbar(title = "-sign(cor)*P_log10"))+
-  geom_text(aes(label=ID),size=3, colour="White", fontface="bold")+
-  theme_bw()+
-  scale_x_continuous(breaks=min(mf_flagellar_assembly_df$rank):max(mf_flagellar_assembly_df$rank))+
-  theme(axis.line.y = element_blank(),
-        legend.position="bottom",
-        axis.title.y = element_blank(),
-        panel.grid.minor=element_blank(),
-        panel.grid.major.x=element_blank())
+fig02=ggplot(mf_binding_ions_summary, aes(x=MF_Name_short,
+                                          y=lengthObj,
+                                          fill=as.factor(signChange))) +
+  #facet_grid( ~ MF_Name_short)+
+  geom_bar(position="dodge", stat="identity",width=.5)+
+  scale_fill_manual(values = c("blue","red"),
+                    name="Regulation",
+                    breaks=c("-1", "1"),
+                    labels=c("Down Regulated", "Up Regulated"))+
+  xlab("conditions")+
+  ylab("number of differentially expressed")+
+  theme_bw()
 
 print(fig02)
-###*****************************
 
-
-###*****************************
-# Save figure 1
-colWidth=0.6*ifelse(max(kegg_flagellar_assembly_df$rank)-min(kegg_flagellar_assembly_df$rank)+1<8, 
-                8, 
-                max(kegg_flagellar_assembly_df$rank)-min(kegg_flagellar_assembly_df$rank))
-rowWidth=3.5
-
-cowplot::save_plot(filename = paste0("../d_figures/kegg_flagellar_assembly.pdf"),
-                   plot = fig01,
-                   base_height = rowWidth,
-                   base_width = colWidth,
-                   limitsize = FALSE)
-
-
-# Save figure 2
-colWidth=ifelse(max(mf_flagellar_assembly_df$rank)-min(mf_flagellar_assembly_df$rank)+1<8, 
-                8, 
-                max(mf_flagellar_assembly_df$rank)-min(mf_flagellar_assembly_df$rank))
-rowWidth=3
-
-cowplot::save_plot(filename = paste0("../d_figures/mf_flagellar_assembly.pdf"),
-                   plot = fig01,
-                   base_height = rowWidth,
-                   base_width = colWidth,
-                   limitsize = FALSE)
-###*****************************
+cowplot::save_plot(filename = paste0("../d_figures/binding_mf.pdf"),
+                   plot = fig02,ncol = 2.5,limitsize = FALSE)

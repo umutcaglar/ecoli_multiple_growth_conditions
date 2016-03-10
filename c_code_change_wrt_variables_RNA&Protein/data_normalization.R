@@ -41,7 +41,7 @@ source("data_normalization_functions.R")
 
 
 ###*****************************
-saveFiles=TRUE
+saveFiles=FALSE
 # The data filtering function that controls sub functions.
 mainData=filter_data(dataType = "protein_wo_NA", # can be "rna", "mrna", "protein", "protein_wo_NA"
                      badDataSet = "set00", # can be "set00",set01","set02", "set03"
@@ -145,10 +145,11 @@ if(objectName$normalizationMethodChoice=="noNorm")
                           vs=vs)->res_df
   
   res_df %>%
-    dplyr::filter(padj<0.05)%>%
+    dplyr::filter(padj<0.05, abs(log2FoldChange)>1)%>%
     dplyr::arrange(padj)->res_df_filtered
   
   genes_0.05=as.vector(res_df_filtered$gene_name)
+  genes_0.05=genes_0.05[-grep(pattern = "^[[:blank:]]*$",x = noquote(genes_0.05))]
   ###*****************************
   
   
