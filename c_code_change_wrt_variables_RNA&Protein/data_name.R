@@ -27,13 +27,13 @@ require("tidyr")
 
 ###*****************************
 #Load Functions
-source("data_naming_functions.R")
+source("../a_code_dataPreperation_RNA&Protein/data_naming_functions.R")
 ###*****************************
 
 
 ###*****************************
 # The data filtering function that controls sub functions.
-dataName=name_data(initialValue, # can be "genes0.05"
+dataName=name_data(initialValue="resDf", # can be c("genes0.05","resDf")
                    dataType = "mrna", # can be "rna", "mrna", "protein", "protein_wo_NA"
                    badDataSet = "set02", # can be "set00",set01","set02", "set03"
                    # referenceParameters can be a vector like
@@ -61,6 +61,9 @@ dataName=name_data(initialValue, # can be "genes0.05"
                    sumTechnicalReplicates=TRUE,
                    deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf"
                    normalizationMethodChoice= "noNorm", # can be "vst", "rlog", "log10", "noNorm"
-                   test_for = "Na_mM_Levels")  # works only if normalizationMethodChoice == noNorm
-# c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
+                   test_for = "noTest")  # works only if normalizationMethodChoice == noNorm
+# c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource", "noTest")
 ###*****************************
+
+dataName=as.data.frame(dataName)
+print(paste(dataName,collapse = "_"))

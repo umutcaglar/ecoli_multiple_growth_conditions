@@ -36,15 +36,15 @@ require("tidyr")
 
 ###*****************************
 #Load Functions
-source("data_normalization_functions.R")
+source("../a_code_dataPreperation_RNA&Protein/data_filter_normalization_functions.R")
 ###*****************************
 
 
 ###*****************************
-saveFiles=FALSE
+saveFiles=TRUE
 # The data filtering function that controls sub functions.
-mainData=filter_data(dataType = "protein_wo_NA", # can be "rna", "mrna", "protein", "protein_wo_NA"
-                     badDataSet = "set00", # can be "set00",set01","set02", "set03"
+mainData=filter_data(dataType = "mrna", # can be "rna", "mrna", "protein", "protein_wo_NA"
+                     badDataSet = "set02", # can be "set00",set01","set02", "set03"
                      # referenceParameters can be a vector like
                      # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
                      referenceParameters=c("growthPhase",
@@ -60,7 +60,7 @@ mainData=filter_data(dataType = "protein_wo_NA", # can be "rna", "mrna", "protei
                                        "glucose", 
                                        "glucose_time_course"),
                      experimentVector = c("allEx"), # can be "Stc","Ytc","Nas","Agr","Ngr","Mgl","Mgh" // "allEx"
-                     carbonSourceVector = "SY", # can be any sub combination of "SYAN"
+                     carbonSourceVector = "SN", # can be any sub combination of "SYAN"
                      MgLevelVector = c("baseMg"), # can be "lowMg","baseMg","highMg" // "allMg"
                      NaLevelVector = c("baseNa"), # can be "baseNa","highNa" // "allNa"
                      # can be "exponential","stationary","late_stationary" // "allPhase"
@@ -93,6 +93,7 @@ if(objectName$normalizationMethodChoice=="noNorm")
 {
   ###*****************************
   # Do the DeSeq2 test
+  # c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
   test_for="carbonSource"
   DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ",test_for))
   differentialGeneAnalResults<-DESeq2::DESeq(deseq_DataObj)
@@ -149,7 +150,9 @@ if(objectName$normalizationMethodChoice=="noNorm")
     dplyr::arrange(padj)->res_df_filtered
   
   genes_0.05=as.vector(res_df_filtered$gene_name)
-  genes_0.05=genes_0.05[-grep(pattern = "^[[:blank:]]*$",x = noquote(genes_0.05))]
+  listOfEmptyCells<-grep(pattern = "^[[:blank:]]*$",x = noquote(genes_0.05))
+  listOfFilledCells=setdiff(seq(1,length(genes_0.05)),listOfEmptyCells)
+  genes_0.05<-genes_0.05[listOfFilledCells]
   ###*****************************
   
   
