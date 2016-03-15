@@ -1,7 +1,7 @@
 ###*****************************
 # @Title filter_data function
 # The data filtering function that controls sub functions.
-name_data<-function(initialValue, # can be "genes0.05"
+name_data<-function(initialValue, # can be "genes0.05", "genes_P0.05Fold2"
                     dataType, # can be "rna", "mrna", "protein", "protein_wo_NA"
                     referenceParameters=NA, # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
                     referenceLevels=NA, # c("exponential", "baseMg", "baseNa", "glucose", "glucose_time_course")

@@ -1,0 +1,65 @@
+"","ID","MF_Name","padj_gene","log2","signChange","score_gene","FDR_GoMF","numGenesInCat","abs_score","rank","numSigP","numSigN","MF_Name_long","MF_Name_short","pick_data","growthPhase","test_for","vs","df_category"
+"1","rplC","GO:0003723~RNA binding",1.64900026304022e-05,1.94540354698165,1,4.78277927507901,0.00110846950438925,114,4.78277927507901,7,7,1,"RNA binding
+ padj:0.00111 N( -1/ +7/ 114)","RNA binding","protein","Exp","carbonSource","glucosegluconate","MF"
+"2","rplW","GO:0003723~RNA binding",4.76380029018923e-05,2.1012654814557,1,4.32204645346273,0.00110846950438925,114,4.32204645346273,6,7,1,"RNA binding
+ padj:0.00111 N( -1/ +7/ 114)","RNA binding","protein","Exp","carbonSource","glucosegluconate","MF"
+"3","rplV","GO:0003723~RNA binding",0.00610751288722262,1.33528705634363,1,2.21413560796586,0.00110846950438925,114,2.21413560796586,5,7,1,"RNA binding
+ padj:0.00111 N( -1/ +7/ 114)","RNA binding","protein","Exp","carbonSource","glucosegluconate","MF"
+"4","rpsR","GO:0003723~RNA binding",0.00707378776427065,1.14215237542527,1,2.15034797451686,0.00110846950438925,114,2.15034797451686,4,7,1,"RNA binding
+ padj:0.00111 N( -1/ +7/ 114)","RNA binding","protein","Exp","carbonSource","glucosegluconate","MF"
+"5","rplU","GO:0003723~RNA binding",0.0133942357961992,2.13909347705828,1,1.87308205988044,0.00110846950438925,114,1.87308205988044,3,7,1,"RNA binding
+ padj:0.00111 N( -1/ +7/ 114)","RNA binding","protein","Exp","carbonSource","glucosegluconate","MF"
+"6","rplX","GO:0003723~RNA binding",0.0183053857279625,1.53070256127711,1,1.73742111530686,0.00110846950438925,114,1.73742111530686,2,7,1,"RNA binding
+ padj:0.00111 N( -1/ +7/ 114)","RNA binding","protein","Exp","carbonSource","glucosegluconate","MF"
+"7","rplT","GO:0003723~RNA binding",0.0469480215985788,2.07384466120649,1,1.32838270429081,0.00110846950438925,114,1.32838270429081,1,7,1,"RNA binding
+ padj:0.00111 N( -1/ +7/ 114)","RNA binding","protein","Exp","carbonSource","glucosegluconate","MF"
+"8","rplC","GO:0003735~structural constituent of ribosome",1.64900026304022e-05,1.94540354698165,1,4.78277927507901,1.20211618437338e-11,57,4.78277927507901,9,9,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +9/ 57)","structural constituent of ribosome","protein","Exp","carbonSource","glucosegluconate","MF"
+"9","rplW","GO:0003735~structural constituent of ribosome",4.76380029018923e-05,2.1012654814557,1,4.32204645346273,1.20211618437338e-11,57,4.32204645346273,8,9,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +9/ 57)","structural constituent of ribosome","protein","Exp","carbonSource","glucosegluconate","MF"
+"10","rplV","GO:0003735~structural constituent of ribosome",0.00610751288722262,1.33528705634363,1,2.21413560796586,1.20211618437338e-11,57,2.21413560796586,7,9,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +9/ 57)","structural constituent of ribosome","protein","Exp","carbonSource","glucosegluconate","MF"
+"11","rplM","GO:0003735~structural constituent of ribosome",0.00665477222538553,1.94301653099663,1,2.17686680464476,1.20211618437338e-11,57,2.17686680464476,6,9,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +9/ 57)","structural constituent of ribosome","protein","Exp","carbonSource","glucosegluconate","MF"
+"12","rpsR","GO:0003735~structural constituent of ribosome",0.00707378776427065,1.14215237542527,1,2.15034797451686,1.20211618437338e-11,57,2.15034797451686,5,9,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +9/ 57)","structural constituent of ribosome","protein","Exp","carbonSource","glucosegluconate","MF"
+"13","rplU","GO:0003735~structural constituent of ribosome",0.0133942357961992,2.13909347705828,1,1.87308205988044,1.20211618437338e-11,57,1.87308205988044,4,9,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +9/ 57)","structural constituent of ribosome","protein","Exp","carbonSource","glucosegluconate","MF"
+"14","rplX","GO:0003735~structural constituent of ribosome",0.0183053857279625,1.53070256127711,1,1.73742111530686,1.20211618437338e-11,57,1.73742111530686,3,9,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +9/ 57)","structural constituent of ribosome","protein","Exp","carbonSource","glucosegluconate","MF"
+"15","rplQ","GO:0003735~structural constituent of ribosome",0.0186683112703112,1.71604112514971,1,1.72889496641922,1.20211618437338e-11,57,1.72889496641922,2,9,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +9/ 57)","structural constituent of ribosome","protein","Exp","carbonSource","glucosegluconate","MF"
+"16","rplT","GO:0003735~structural constituent of ribosome",0.0469480215985788,2.07384466120649,1,1.32838270429081,1.20211618437338e-11,57,1.32838270429081,1,9,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +9/ 57)","structural constituent of ribosome","protein","Exp","carbonSource","glucosegluconate","MF"
+"17","rplC","GO:0005198~structural molecule activity",1.64900026304022e-05,1.94540354698165,1,4.78277927507901,2.59760468690473e-09,70,4.78277927507901,9,9,1,"structural molecule activity
+ padj:0.00000 N( -1/ +9/ 70)","structural molecule activity","protein","Exp","carbonSource","glucosegluconate","MF"
+"18","rplW","GO:0005198~structural molecule activity",4.76380029018923e-05,2.1012654814557,1,4.32204645346273,2.59760468690473e-09,70,4.32204645346273,8,9,1,"structural molecule activity
+ padj:0.00000 N( -1/ +9/ 70)","structural molecule activity","protein","Exp","carbonSource","glucosegluconate","MF"
+"19","rplV","GO:0005198~structural molecule activity",0.00610751288722262,1.33528705634363,1,2.21413560796586,2.59760468690473e-09,70,2.21413560796586,7,9,1,"structural molecule activity
+ padj:0.00000 N( -1/ +9/ 70)","structural molecule activity","protein","Exp","carbonSource","glucosegluconate","MF"
+"20","rplM","GO:0005198~structural molecule activity",0.00665477222538553,1.94301653099663,1,2.17686680464476,2.59760468690473e-09,70,2.17686680464476,6,9,1,"structural molecule activity
+ padj:0.00000 N( -1/ +9/ 70)","structural molecule activity","protein","Exp","carbonSource","glucosegluconate","MF"
+"21","rpsR","GO:0005198~structural molecule activity",0.00707378776427065,1.14215237542527,1,2.15034797451686,2.59760468690473e-09,70,2.15034797451686,5,9,1,"structural molecule activity
+ padj:0.00000 N( -1/ +9/ 70)","structural molecule activity","protein","Exp","carbonSource","glucosegluconate","MF"
+"22","rplU","GO:0005198~structural molecule activity",0.0133942357961992,2.13909347705828,1,1.87308205988044,2.59760468690473e-09,70,1.87308205988044,4,9,1,"structural molecule activity
+ padj:0.00000 N( -1/ +9/ 70)","structural molecule activity","protein","Exp","carbonSource","glucosegluconate","MF"
+"23","rplX","GO:0005198~structural molecule activity",0.0183053857279625,1.53070256127711,1,1.73742111530686,2.59760468690473e-09,70,1.73742111530686,3,9,1,"structural molecule activity
+ padj:0.00000 N( -1/ +9/ 70)","structural molecule activity","protein","Exp","carbonSource","glucosegluconate","MF"
+"24","rplQ","GO:0005198~structural molecule activity",0.0186683112703112,1.71604112514971,1,1.72889496641922,2.59760468690473e-09,70,1.72889496641922,2,9,1,"structural molecule activity
+ padj:0.00000 N( -1/ +9/ 70)","structural molecule activity","protein","Exp","carbonSource","glucosegluconate","MF"
+"25","rplT","GO:0005198~structural molecule activity",0.0469480215985788,2.07384466120649,1,1.32838270429081,2.59760468690473e-09,70,1.32838270429081,1,9,1,"structural molecule activity
+ padj:0.00000 N( -1/ +9/ 70)","structural molecule activity","protein","Exp","carbonSource","glucosegluconate","MF"
+"26","rplC","GO:0019843~rRNA binding",1.64900026304022e-05,1.94540354698165,1,4.78277927507901,4.763090255544e-09,38,4.78277927507901,7,7,1,"rRNA binding
+ padj:0.00000 N( -1/ +7/ 38)","rRNA binding","protein","Exp","carbonSource","glucosegluconate","MF"
+"27","rplW","GO:0019843~rRNA binding",4.76380029018923e-05,2.1012654814557,1,4.32204645346273,4.763090255544e-09,38,4.32204645346273,6,7,1,"rRNA binding
+ padj:0.00000 N( -1/ +7/ 38)","rRNA binding","protein","Exp","carbonSource","glucosegluconate","MF"
+"28","rplV","GO:0019843~rRNA binding",0.00610751288722262,1.33528705634363,1,2.21413560796586,4.763090255544e-09,38,2.21413560796586,5,7,1,"rRNA binding
+ padj:0.00000 N( -1/ +7/ 38)","rRNA binding","protein","Exp","carbonSource","glucosegluconate","MF"
+"29","rpsR","GO:0019843~rRNA binding",0.00707378776427065,1.14215237542527,1,2.15034797451686,4.763090255544e-09,38,2.15034797451686,4,7,1,"rRNA binding
+ padj:0.00000 N( -1/ +7/ 38)","rRNA binding","protein","Exp","carbonSource","glucosegluconate","MF"
+"30","rplU","GO:0019843~rRNA binding",0.0133942357961992,2.13909347705828,1,1.87308205988044,4.763090255544e-09,38,1.87308205988044,3,7,1,"rRNA binding
+ padj:0.00000 N( -1/ +7/ 38)","rRNA binding","protein","Exp","carbonSource","glucosegluconate","MF"
+"31","rplX","GO:0019843~rRNA binding",0.0183053857279625,1.53070256127711,1,1.73742111530686,4.763090255544e-09,38,1.73742111530686,2,7,1,"rRNA binding
+ padj:0.00000 N( -1/ +7/ 38)","rRNA binding","protein","Exp","carbonSource","glucosegluconate","MF"
+"32","rplT","GO:0019843~rRNA binding",0.0469480215985788,2.07384466120649,1,1.32838270429081,4.763090255544e-09,38,1.32838270429081,1,7,1,"rRNA binding
+ padj:0.00000 N( -1/ +7/ 38)","rRNA binding","protein","Exp","carbonSource","glucosegluconate","MF"

@@ -65,8 +65,12 @@ for(counter01 in 1 : length(fileList))
 metaData=read.csv(paste0(file="../c_results/",
                          "metaData_mrna_trT_set02_StcNasMgh_S_baseMghighMg_baseNa",
                          "_Sta_noFilter_p1Sf_noNorm__Mg_mM_Levels.csv"))
+
+referaneMF=read.table(file = "ReferenceFiles/MF_david_mrna_ref_2009_tidy.txt",header = TRUE,sep="\t",quote = "")
 ###*****************************
 
+
+left_join(referaneMF,mainLoadedFile_mf)->q
 
 ###*****************************
 # Kegg Vector
@@ -107,9 +111,9 @@ kegg_vector=c("Pyruvate metabolism",
 # Generate flegellar data frame kegg
 mainLoadedFile_kegg$vs=as.character(mainLoadedFile_kegg$vs)
 mainLoadedFile_kegg %>%
-  dplyr::filter(pick_data=="mrna",test_for!="carbonSource")%>%
+  dplyr::filter(test_for!="carbonSource")%>%
   dplyr::filter(KEGG_Path_short %in% kegg_vector) %>%
-  dplyr::mutate(pick_data=ifelse(pick_data=="mrna","mrna","protein"))%>%
+  dplyr::mutate(pick_data=ifelse(pick_data=="mrna","mRNA","Protein"))%>%
   dplyr::mutate(vs=ifelse(vs=="baseNahighNa","highNa",vs),
                 vs=ifelse(vs=="baseMghighMg","highMg",vs),
                 vs=ifelse(vs=="baseMglowMg","lowMg",vs))%>%
@@ -118,13 +122,13 @@ mainLoadedFile_kegg %>%
                                vs,sep = "-"))->kegg_metabolism_df
 
 kegg_metabolism_df %>%
-  dplyr::group_by(grouping,signChange) %>%
+  dplyr::group_by(grouping,signChange,pick_data) %>%
   dplyr::summarize(lengthObj=length(score_gene))%>%
   dplyr::group_by() %>%
-  tidyr::complete(grouping,signChange)->kegg_metabolism_summary
+  tidyr::complete(grouping,signChange,pick_data)->kegg_metabolism_summary
 
 kegg_metabolism_summary$grouping <- factor(kegg_metabolism_summary$grouping, 
-                                           levels = rev(c("Exp-lowMg", "Exp-highMg", "Exp-highNa",
+                                           levels = (c("Exp-lowMg", "Exp-highMg", "Exp-highNa",
                                                           "Sta-lowMg", "Sta-highMg", "Sta-highNa")))
 ###*****************************
 
@@ -171,7 +175,7 @@ mainLoadedFile_mf$vs=as.character(mainLoadedFile_mf$vs)
 mainLoadedFile_mf %>%
   dplyr::filter(MF_Name_short %in% mf_vector) %>%
   dplyr::filter(pick_data=="mrna",test_for!="carbonSource")%>%
-  dplyr::mutate(pick_data=ifelse(pick_data=="mrna","mrna","protein"))%>%
+  dplyr::mutate(pick_data=ifelse(pick_data=="mrna","mRNA","Protein"))%>%
   dplyr::mutate(vs=ifelse(vs=="baseNahighNa","highNa",vs),
                 vs=ifelse(vs=="baseMghighMg","highMg",vs),
                 vs=ifelse(vs=="baseMglowMg","lowMg",vs))%>%
@@ -196,14 +200,30 @@ mf_metabolism_summary$grouping <- factor(mf_metabolism_summary$grouping,
 fig01=ggplot(kegg_metabolism_summary, aes(x=grouping,
                                           y=lengthObj,
                                           fill=as.factor(signChange))) +
+  facet_grid(pick_data~.)+
   geom_bar(position="dodge", stat="identity",width=.75)+
+  scale_y_continuous(expand = c(0, 0),limits = c(0,600))+
   scale_fill_manual(values = c("blue","red"),
                     name="Regulation",
                     breaks=c("-1", "1"),
                     labels=c("Down Regulated", "Up Regulated"))+
   xlab("conditions")+
   ylab("number of differentially expressed")+
-  theme_bw()
+  theme_bw()+
+  theme(panel.grid.minor.x = element_blank(),
+        legend.position=c(0.8,0.9),
+        strip.text.x = element_text(size = 16),
+        strip.text.y = element_text(size = 16),
+        axis.text.x=element_text(size=10),
+        axis.text.y=element_text(size=12),
+        axis.title.x=element_text(size=16),
+        axis.title.y=element_text(size=16),
+        legend.title=element_text(size=14),
+        legend.text=element_text(size=14),
+        panel.grid.minor.y=element_blank(),
+        panel.grid.major.y=element_blank(),
+        legend.background = element_rect(fill=alpha(colour = "white",
+                                                    alpha = .4)))
 
 print(fig01)
 
@@ -239,7 +259,7 @@ print(fig03)
 ###*****************************
 # Save Figures
 cowplot::save_plot(filename = paste0("../d_figures/metabolism_kegg.pdf"),
-                   plot = fig01,ncol = 2,limitsize = FALSE)
+                   plot = fig01,ncol = 2,nrow=2,limitsize = FALSE)
 
 cowplot::save_plot(filename = paste0("../d_figures/metabolism_growthtime.pdf"),
                    plot = fig03,ncol = 1,limitsize = FALSE)

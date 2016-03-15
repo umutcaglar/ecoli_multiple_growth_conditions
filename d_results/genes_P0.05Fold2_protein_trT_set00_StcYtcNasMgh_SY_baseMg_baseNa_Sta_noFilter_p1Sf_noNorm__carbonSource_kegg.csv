@@ -1,0 +1,17 @@
+"","ID","KEGG_Path","padj_gene","log2","signChange","score_gene","FDR_KEGG_Path","numGenesInCat","abs_score","rank","numSigP","numSigN","KEGG_Path_long","KEGG_Path_short","pick_data","growthPhase","test_for","vs","df_category"
+"1","ybaS","eco00330:Arginine and proline metabolism",0.0436364888203872,-3.90318254571922,-1,-1.36015020188018,0.00772701581417257,36,1.36015020188018,-1,0,4,"Arginine and proline metabolism
+ padj:0.00773 N( -4/ +0/ 36)","Arginine and proline metabolism","protein","Sta","carbonSource","glucoseglycerol","kegg"
+"2","astB","eco00330:Arginine and proline metabolism",0.0236456614332319,-2.66267019992041,-1,-1.62624853308501,0.00772701581417257,36,1.62624853308501,-2,0,4,"Arginine and proline metabolism
+ padj:0.00773 N( -4/ +0/ 36)","Arginine and proline metabolism","protein","Sta","carbonSource","glucoseglycerol","kegg"
+"3","astA","eco00330:Arginine and proline metabolism",0.00822503361352653,-2.68234938156508,-1,-2.08486231852823,0.00772701581417257,36,2.08486231852823,-3,0,4,"Arginine and proline metabolism
+ padj:0.00773 N( -4/ +0/ 36)","Arginine and proline metabolism","protein","Sta","carbonSource","glucoseglycerol","kegg"
+"4","astD","eco00330:Arginine and proline metabolism",0.00397085947712903,-3.35567685272113,-1,-2.40111548170652,0.00772701581417257,36,2.40111548170652,-4,0,4,"Arginine and proline metabolism
+ padj:0.00773 N( -4/ +0/ 36)","Arginine and proline metabolism","protein","Sta","carbonSource","glucoseglycerol","kegg"
+"5","entE","eco01053:Biosynthesis of siderophore group nonribosomal peptides",0.00902113150890541,-4.41317371847441,-1,-2.04473898604407,1.38028824852032e-05,6,2.04473898604407,-1,0,4,"Biosynthesis of siderophore group nonribosomal peptides
+ padj:0.00001 N( -4/ +0/ 6)","Biosynthesis of siderophore group nonribosomal peptides","protein","Sta","carbonSource","glucoseglycerol","kegg"
+"6","entF","eco01053:Biosynthesis of siderophore group nonribosomal peptides",0.0048350918361126,-4.21950658956084,-1,-2.31559527265892,1.38028824852032e-05,6,2.31559527265892,-2,0,4,"Biosynthesis of siderophore group nonribosomal peptides
+ padj:0.00001 N( -4/ +0/ 6)","Biosynthesis of siderophore group nonribosomal peptides","protein","Sta","carbonSource","glucoseglycerol","kegg"
+"7","entC","eco01053:Biosynthesis of siderophore group nonribosomal peptides",0.00274783107715502,-5.18401844198843,-1,-2.56100996903402,1.38028824852032e-05,6,2.56100996903402,-3,0,4,"Biosynthesis of siderophore group nonribosomal peptides
+ padj:0.00001 N( -4/ +0/ 6)","Biosynthesis of siderophore group nonribosomal peptides","protein","Sta","carbonSource","glucoseglycerol","kegg"
+"8","entB","eco01053:Biosynthesis of siderophore group nonribosomal peptides",0.000384902895585798,-5.81136932870284,-1,-3.41464882173938,1.38028824852032e-05,6,3.41464882173938,-4,0,4,"Biosynthesis of siderophore group nonribosomal peptides
+ padj:0.00001 N( -4/ +0/ 6)","Biosynthesis of siderophore group nonribosomal peptides","protein","Sta","carbonSource","glucoseglycerol","kegg"

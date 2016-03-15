@@ -56,22 +56,22 @@ for(counter01 in 1: length(resultList_Exp_mrna))
 df_combined %>%
   dplyr::filter(!is.na(padj))%>%
   dplyr::group_by(vs,signChange) %>%
-  dplyr::summarise(padj_0.05=sum(padj<0.05)+0,
+  dplyr::filter(padj<0.05 & abs(log2FoldChange)>1)%>%
+  dplyr::summarise(P0.05Fold2=length(padj),
                    growthPhase=unique(growthPhase),
                    data_type=unique(pick_data))->df_summary_exp_mrna
 
-
 df_combined %>%
   dplyr::filter(vs %in% "baseNahighNa", 
-                padj<0.05)->temp
+                padj<0.05, abs(log2FoldChange)>1)->temp
 exp_mrna_Na=unique(as.vector(temp$gene_name))
 df_combined %>%
   dplyr::filter(vs %in% c("baseMghighMg" , "baseMglowMg"),
-                padj<0.05)->temp
+                padj<0.05, abs(log2FoldChange)>1)->temp
 exp_mrna_Mg=unique(as.vector(temp$gene_name))
 df_combined %>%
   dplyr::filter(vs %in% c("glucoselactate","glucosegluconate","glucoseglycerol"), 
-                padj<0.05)->temp
+                padj<0.05, abs(log2FoldChange)>1)->temp
 exp_mrna_Carb=unique(as.vector(temp$gene_name))
 ###*****************************
 
@@ -86,24 +86,26 @@ for(counter01 in 1: length(resultList_Sta_mrna))
   if(counter01!=1){df_combined=rbind(df_combined,temp)}
 }
 
+
 df_combined %>%
   dplyr::filter(!is.na(padj))%>%
   dplyr::group_by(vs,signChange) %>%
-  dplyr::summarise(padj_0.05=sum(padj<0.05)+0,
+  dplyr::filter(padj<0.05 & abs(log2FoldChange)>1)%>%
+  dplyr::summarise(P0.05Fold2=length(padj),
                    growthPhase=unique(growthPhase),
                    data_type=unique(pick_data))->df_summary_sta_mrna
 
 df_combined %>%
   dplyr::filter(vs %in% "baseNahighNa", 
-                padj<0.05)->temp
+                padj<0.05, abs(log2FoldChange)>1)->temp
 sta_mrna_Na=unique(as.vector(temp$gene_name))
 df_combined %>%
   dplyr::filter(vs %in% c("baseMghighMg" , "baseMglowMg"),
-                padj<0.05)->temp
+                padj<0.05, abs(log2FoldChange)>1)->temp
 sta_mrna_Mg=unique(as.vector(temp$gene_name))
 df_combined %>%
   dplyr::filter(vs %in% c("glucoselactate","glucosegluconate","glucoseglycerol"), 
-                padj<0.05)->temp
+                padj<0.05, abs(log2FoldChange)>1)->temp
 sta_mrna_Carb=unique(as.vector(temp$gene_name))
 ###*****************************
 
@@ -121,21 +123,22 @@ for(counter01 in 1: length(resultList_Exp_protein))
 df_combined %>%
   dplyr::filter(!is.na(padj))%>%
   dplyr::group_by(vs,signChange) %>%
-  dplyr::summarise(padj_0.05=sum(padj<0.05)+0,
+  dplyr::filter(padj<0.05 & abs(log2FoldChange)>1)%>%
+  dplyr::summarise(P0.05Fold2=length(padj),
                    growthPhase=unique(growthPhase),
                    data_type=unique(pick_data))->df_summary_exp_protein
 
 df_combined %>%
   dplyr::filter(vs %in% "baseNahighNa", 
-                padj<0.05)->temp
+                padj<0.05, abs(log2FoldChange)>1)->temp
 exp_protein_Na=unique(as.vector(temp$gene_name))
 df_combined %>%
   dplyr::filter(vs %in% c("baseMghighMg" , "baseMglowMg"),
-                padj<0.05)->temp
+                padj<0.05, abs(log2FoldChange)>1)->temp
 exp_protein_Mg=unique(as.vector(temp$gene_name))
 df_combined %>%
   dplyr::filter(vs %in% c("glucoselactate","glucosegluconate","glucoseglycerol"), 
-                padj<0.05)->temp
+                padj<0.05, abs(log2FoldChange)>1)->temp
 exp_protein_Carb=unique(as.vector(temp$gene_name))
 ###*****************************
 
@@ -153,21 +156,22 @@ for(counter01 in 1: length(resultList_Sta_protein))
 df_combined %>%
   dplyr::filter(!is.na(padj))%>%
   dplyr::group_by(vs,signChange) %>%
-  dplyr::summarise(padj_0.05=sum(padj<0.05)+0,
+  dplyr::filter(padj<0.05 & abs(log2FoldChange)>1)%>%
+  dplyr::summarise(P0.05Fold2=length(padj),
                    growthPhase=unique(growthPhase),
                    data_type=unique(pick_data))->df_summary_sta_protein
 
 df_combined %>%
   dplyr::filter(vs %in% "baseNahighNa", 
-                padj<0.05)->temp
+                padj<0.05, abs(log2FoldChange)>1)->temp
 sta_protein_Na=unique(as.vector(temp$gene_name))
 df_combined %>%
   dplyr::filter(vs %in% c("baseMghighMg" , "baseMglowMg"),
-                padj<0.05)->temp
+                padj<0.05, abs(log2FoldChange)>1)->temp
 sta_protein_Mg=unique(as.vector(temp$gene_name))
 df_combined %>%
   dplyr::filter(vs %in% c("glucoselactate","glucosegluconate","glucoseglycerol"), 
-                padj<0.05)->temp
+                padj<0.05, abs(log2FoldChange)>1)->temp
 sta_protein_Carb=unique(as.vector(temp$gene_name))
 ###*****************************
 
@@ -207,7 +211,7 @@ df_summary$growthPhase <- factor(df_summary$growthPhase, levels = c("Exponential
 
 df_summary %>% 
   dplyr::mutate(data_type_abv = ifelse(data_type=="mrna", "mRNA", NA),
-                data_type_abv = ifelse(data_type=="protein_wo_NA", "Protein", data_type_abv))->df_summary
+                data_type_abv = ifelse(data_type=="protein", "Protein", data_type_abv))->df_summary
 df_summary$data_type_abv <- factor(df_summary$data_type_abv, levels = c("mRNA", "Protein"))
 
 
@@ -215,14 +219,14 @@ df_summary %>%
   dplyr::filter(data_type=="mrna") -> df_summary_mrna
 
 df_summary %>%
-  dplyr::filter(data_type=="protein_wo_NA") -> df_summary_protein
+  dplyr::filter(data_type=="protein") -> df_summary_protein
 ###*****************************
 
 
 ###*****************************
 # Figures
 figBarGraph01=ggplot(df_summary, aes(x=investigated_conditions, 
-                                   y=padj_0.05,
+                                   y=P0.05Fold2,
                                    fill=as.factor(signChange))) +
   facet_grid(growthPhase ~ data_type_abv)+
   geom_bar(position="dodge",stat="identity",width=.75)+
@@ -250,7 +254,7 @@ print(figBarGraph01)
 
 
 figBarGraph02a=ggplot(df_summary_mrna, aes(x=investigated_conditions, 
-                                     y=padj_0.05,
+                                     y=P0.05Fold2,
                                      fill=as.factor(signChange))) +
   facet_grid(. ~ growthPhase)+
   geom_bar(position="dodge",stat="identity",width=.75)+
@@ -277,7 +281,7 @@ print(figBarGraph02a)
 
 
 figBarGraph02b=ggplot(df_summary_protein, aes(x=investigated_conditions, 
-                                           y=padj_0.05,
+                                           y=P0.05Fold2,
                                            fill=as.factor(signChange))) +
   facet_grid(. ~ growthPhase)+
   geom_bar(position="dodge",stat="identity",width=.75)+

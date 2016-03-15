@@ -36,15 +36,15 @@ require("ggrepel")
 
 ###*****************************
 # Load Files
-source("../c_code_change_wrt_variables_RNA&Protein/data_naming_functions.R")
+source("../a_code_dataPreperation_RNA&Protein/data_naming_functions.R")
 ###*****************************
 
 
 ###****************************
 # Download the DAVID input and output
-dataName=name_data(initialValue="genes0.05", # can be "genes0.05"
-                   dataType = "mrna", # can be "rna", "mrna", "protein", "protein_wo_NA"
-                   badDataSet = "set02", # can be "set00",set01","set02", "set03"
+dataName=name_data(initialValue="genes_P0.05Fold2", # can be "genes0.05"
+                   dataType = "protein", # can be "rna", "mrna", "protein", "protein_wo_NA"
+                   badDataSet = "set00", # can be "set00",set01","set02", "set03"
                    # referenceParameters can be a vector like
                    # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
                    referenceParameters=c("growthPhase",
@@ -54,23 +54,23 @@ dataName=name_data(initialValue="genes0.05", # can be "genes0.05"
                                          "experiment"),
                    # referenceLevels can be a vector like
                    # c("exponential", "baseMg", "baseNa", "glucose", "glucose_time_course")
-                   referenceLevels=c("exponential",
+                   referenceLevels=c("stationary",
                                      "baseMg", 
                                      "baseNa", 
                                      "glucose", 
                                      "glucose_time_course"),
                    experimentVector = c("allEx"), # can be "Stc","Ytc","Nas","Agr","Ngr","Mgl","Mgh" // "allEx"
                    carbonSourceVector = "S", # can be any sub combination of "SYAN"
-                   MgLevelVector = c("baseMg","highMg"), # can be "lowMg","baseMg","highMg" // "allMg"
-                   NaLevelVector = c("baseNa"), # can be "baseNa","highNa" // "allNa"
-                   growthPhaseVector = c("exponential"), # can be "exponential","stationary","late_stationary" // "allPhase"
+                   MgLevelVector = c("baseMg"), # can be "lowMg","baseMg","highMg" // "allMg"
+                   NaLevelVector = c("allNa"), # can be "baseNa","highNa" // "allNa"
+                   growthPhaseVector = c("stationary"), # can be "exponential","stationary","late_stationary" // "allPhase"
                    filterGenes = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
                    threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
                    roundData=TRUE,
                    sumTechnicalReplicates=TRUE,
                    deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf"
                    normalizationMethodChoice= "noNorm", # can be "vst", "rlog", "log10", "noNorm"
-                   test_for = "Mg_mM_Levels")  # works only if normalizationMethodChoice == noNorm
+                   test_for = "Na_mM_Levels")  # works only if normalizationMethodChoice == noNorm
 # c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
 
 objectName=paste(dataName$objectName,collapse = "_")
@@ -168,7 +168,7 @@ MF_david_ref_2009_tidy %>%
 
 # add limitations for figures
 selectedDf %>%
-  dplyr::filter(padj_gene<0.05,FDR_GoMF<0.05) %>%
+  dplyr::filter(padj_gene<0.05,FDR_GoMF<0.05, abs(log2)>1) %>%
   dplyr::mutate(abs_score=abs(score_gene))%>%
   dplyr::group_by(MF_Name,signChange)%>%
   dplyr::arrange(abs_score)%>%
@@ -212,7 +212,8 @@ selectedDf %>%
   dplyr::group_by()%>%
   dplyr::filter(FDR_GoMF<=FDR_GoMFTopn) %>%
   dplyr::group_by(MF_Name) %>%
-  dplyr::top_n(n=maxGene, wt = padj_gene)%>%
+  dplyr::arrange(desc(abs_score))%>%
+  dplyr::top_n(n=maxGene, wt = abs_score)%>%
   dplyr::group_by(MF_Name,signChange)%>%
   dplyr::arrange(abs_score)%>%
   dplyr::mutate(rank=signChange*seq(1,n()))->selectedDf_simp
@@ -278,9 +279,11 @@ print(fig01)
 # print(fig02)
 
 # c) simple figure with geom_point
-scaleHigh_simp=max(abs(selectedDf_simp$log2))
-scaleMid_simp=0
-scaleLow_simp=-max(abs(selectedDf_simp$log2))
+scaleHigh_score_gene=max((selectedDf_simp$score_gene))
+if(scaleHigh_score_gene<0.1){scaleHigh_score_gene=0.1}
+scaleMid_score_gene=0
+scaleLow_score_gene=min((selectedDf_simp$score_gene))
+if(scaleLow_score_gene>-0.1){scaleLow_score_gene=-0.1}
 
 minimumFold=min(selectedDf_simp$log2)
 if(minimumFold>-1){minimumFold=-1}
@@ -288,17 +291,17 @@ maximumFold=max(selectedDf_simp$log2)
 if(maximumFold<1){maximumFold=1}
 
 fig03=ggplot(selectedDf_simp, aes( x=log2,y=MF_Name_short)) +
-  geom_point(aes(colour = log2),size=2.5)+
+  geom_point(aes(colour = score_gene),size=2.5)+
   geom_vline(xintercept = c(log2(1/2),log2(2)), colour="orange", linetype = "longdash")+
   geom_vline(xintercept = c(log2(1)), colour="black", linetype = "longdash")+
   geom_text_repel(aes(label=ID),size=5, colour="Black", fontface="bold")+
   scale_colour_gradientn(colours=c("Blue","Grey50","Red"),
-                         values=rescale(c(scaleLow_simp,scaleMid_simp,scaleHigh_simp)),
-                         limits=c(scaleLow_simp,scaleHigh_simp),
-                         guide = guide_colorbar(title = "log2FoldChange",barwidth = 12))+
+                         values=rescale(c(scaleLow_score_gene,scaleMid_score_gene,scaleHigh_score_gene)),
+                         limits=c(scaleLow_score_gene,scaleHigh_score_gene),
+                         guide = guide_colorbar(title = "Gene Score",barwidth = 12))+
   theme_bw()+
   scale_x_continuous(breaks=seq(floor(minimumFold),ceiling(maximumFold)))+
-  xlab("fold change")+
+  xlab("Log2 Fold Change")+
   theme(axis.line.y = element_blank(),
         legend.position="bottom",
         axis.title.y = element_blank(),

@@ -43,8 +43,8 @@ source("../a_code_dataPreperation_RNA&Protein/data_filter_normalization_function
 ###*****************************
 saveFiles=TRUE
 # The data filtering function that controls sub functions.
-mainData=filter_data(dataType = "mrna", # can be "rna", "mrna", "protein", "protein_wo_NA"
-                     badDataSet = "set02", # can be "set00",set01","set02", "set03"
+mainData=filter_data(dataType = "protein", # can be "rna", "mrna", "protein", "protein_wo_NA"
+                     badDataSet = "set00", # can be "set00",set01","set02", "set03"
                      # referenceParameters can be a vector like
                      # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
                      referenceParameters=c("growthPhase",
@@ -60,9 +60,9 @@ mainData=filter_data(dataType = "mrna", # can be "rna", "mrna", "protein", "prot
                                        "glucose", 
                                        "glucose_time_course"),
                      experimentVector = c("allEx"), # can be "Stc","Ytc","Nas","Agr","Ngr","Mgl","Mgh" // "allEx"
-                     carbonSourceVector = "SN", # can be any sub combination of "SYAN"
+                     carbonSourceVector = "S", # can be any sub combination of "SYAN"
                      MgLevelVector = c("baseMg"), # can be "lowMg","baseMg","highMg" // "allMg"
-                     NaLevelVector = c("baseNa"), # can be "baseNa","highNa" // "allNa"
+                     NaLevelVector = c("allNa"), # can be "baseNa","highNa" // "allNa"
                      # can be "exponential","stationary","late_stationary" // "allPhase"
                      growthPhaseVector = c("stationary"), 
                      filterGenes = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
@@ -94,7 +94,7 @@ if(objectName$normalizationMethodChoice=="noNorm")
   ###*****************************
   # Do the DeSeq2 test
   # c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
-  test_for="carbonSource"
+  test_for="Na_mM_Levels"
   DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ",test_for))
   differentialGeneAnalResults<-DESeq2::DESeq(deseq_DataObj)
   (res <- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod ="fdr"))
@@ -160,7 +160,7 @@ if(objectName$normalizationMethodChoice=="noNorm")
   # SAVE FILES
   if(saveFiles){
     # save genes0.05
-    objectName$initial="genes0.05"
+    objectName$initial="genes_P0.05Fold2"
     fileName=paste(objectName,collapse = "_")
     write.table(x = genes_0.05, 
                 file = paste0("../c_results/",fileName,".csv"),
@@ -173,7 +173,7 @@ if(objectName$normalizationMethodChoice=="noNorm")
     fileName=paste(objectName,collapse = "_")
     write.csv(x = res_df, 
               file = paste0("../c_results/",fileName,".csv"),
-              row.names = FALSE,
+              row.names = TRUE,
               quote = FALSE)
     
     # save metaData
@@ -201,7 +201,7 @@ if(objectName$normalizationMethodChoice!="noNorm")
     fileName=paste(objectName,collapse = "_")
     write.csv(x = res_df, 
               file = paste0("../c_results/",fileName,".csv"),
-              row.names = FALSE,
+              row.names = TRUE,
               quote = FALSE)
     
     # save metaData

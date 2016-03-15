@@ -1,0 +1,281 @@
+"","ID","MF_Name","padj_gene","log2","signChange","score_gene","FDR_GoMF","numGenesInCat","abs_score","rank","numSigP","numSigN","MF_Name_long","MF_Name_short","pick_data","growthPhase","test_for","vs","df_category"
+"1","fecB","GO:0005381~iron ion transmembrane transporter activity",0.0381106620336745,-2.40427468896987,-1,-1.41895350688057,0.0119833861717104,13,1.41895350688057,-1,0,5,"iron ion transmembrane transporter activity
+ padj:0.01198 N( -5/ +0/ 13)","iron ion transmembrane transporter activity","protein","Sta","carbonSource","glucoseglycerol","MF"
+"2","ybiL","GO:0005381~iron ion transmembrane transporter activity",0.0333034418854627,-4.15217096811267,-1,-1.47751088016881,0.0119833861717104,13,1.47751088016881,-2,0,5,"iron ion transmembrane transporter activity
+ padj:0.01198 N( -5/ +0/ 13)","iron ion transmembrane transporter activity","protein","Sta","carbonSource","glucoseglycerol","MF"
+"3","fecA","GO:0005381~iron ion transmembrane transporter activity",0.0236456614332319,-2.30284593571194,-1,-1.62624853308501,0.0119833861717104,13,1.62624853308501,-3,0,5,"iron ion transmembrane transporter activity
+ padj:0.01198 N( -5/ +0/ 13)","iron ion transmembrane transporter activity","protein","Sta","carbonSource","glucoseglycerol","MF"
+"4","fhuE","GO:0005381~iron ion transmembrane transporter activity",0.0128564187103477,-4.03167690973181,-1,-1.89087999182714,0.0119833861717104,13,1.89087999182714,-4,0,5,"iron ion transmembrane transporter activity
+ padj:0.01198 N( -5/ +0/ 13)","iron ion transmembrane transporter activity","protein","Sta","carbonSource","glucoseglycerol","MF"
+"5","fepA","GO:0005381~iron ion transmembrane transporter activity",0.00173153774902173,-3.84208369174197,-1,-2.76156803601569,0.0119833861717104,13,2.76156803601569,-5,0,5,"iron ion transmembrane transporter activity
+ padj:0.01198 N( -5/ +0/ 13)","iron ion transmembrane transporter activity","protein","Sta","carbonSource","glucoseglycerol","MF"
+"6","fecE","GO:0005506~iron ion binding",0.04641711591475,-2.87712910605108,-1,-1.33332184753416,9.32384568996802e-07,236,1.33332184753416,-1,0,17,"iron ion binding
+ padj:0.00000 N( -17/ +0/ 236)","iron ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"7","nrdF","GO:0005506~iron ion binding",0.0397325801841042,-3.96262740303915,-1,-1.40085323148795,9.32384568996802e-07,236,1.40085323148795,-2,0,17,"iron ion binding
+ padj:0.00000 N( -17/ +0/ 236)","iron ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"8","fecB","GO:0005506~iron ion binding",0.0381106620336745,-2.40427468896987,-1,-1.41895350688057,9.32384568996802e-07,236,1.41895350688057,-3,0,17,"iron ion binding
+ padj:0.00000 N( -17/ +0/ 236)","iron ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"9","ybiL","GO:0005506~iron ion binding",0.0333034418854627,-4.15217096811267,-1,-1.47751088016881,9.32384568996802e-07,236,1.47751088016881,-4,0,17,"iron ion binding
+ padj:0.00000 N( -17/ +0/ 236)","iron ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"10","rumB","GO:0005506~iron ion binding",0.0313872725029328,-4.0675805120167,-1,-1.5032464220633,9.32384568996802e-07,236,1.5032464220633,-5,0,17,"iron ion binding
+ padj:0.00000 N( -17/ +0/ 236)","iron ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"11","yddV","GO:0005506~iron ion binding",0.028011840807723,-3.19258046508326,-1,-1.55265835042786,9.32384568996802e-07,236,1.55265835042786,-6,0,17,"iron ion binding
+ padj:0.00000 N( -17/ +0/ 236)","iron ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"12","ybiX","GO:0005506~iron ion binding",0.0249774253075267,-3.72594267927125,-1,-1.60245233106849,9.32384568996802e-07,236,1.60245233106849,-7,0,17,"iron ion binding
+ padj:0.00000 N( -17/ +0/ 236)","iron ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"13","fecA","GO:0005506~iron ion binding",0.0236456614332319,-2.30284593571194,-1,-1.62624853308501,9.32384568996802e-07,236,1.62624853308501,-8,0,17,"iron ion binding
+ padj:0.00000 N( -17/ +0/ 236)","iron ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"14","iscR","GO:0005506~iron ion binding",0.0144658232254101,-2.82154900643575,-1,-1.839656846352,9.32384568996802e-07,236,1.839656846352,-9,0,17,"iron ion binding
+ padj:0.00000 N( -17/ +0/ 236)","iron ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"15","fhuE","GO:0005506~iron ion binding",0.0128564187103477,-4.03167690973181,-1,-1.89087999182714,9.32384568996802e-07,236,1.89087999182714,-10,0,17,"iron ion binding
+ padj:0.00000 N( -17/ +0/ 236)","iron ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"16","entE","GO:0005506~iron ion binding",0.00902113150890541,-4.41317371847441,-1,-2.04473898604407,9.32384568996802e-07,236,2.04473898604407,-11,0,17,"iron ion binding
+ padj:0.00000 N( -17/ +0/ 236)","iron ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"17","ydbK","GO:0005506~iron ion binding",0.00492800596319261,-2.57652199269542,-1,-2.30732877532008,9.32384568996802e-07,236,2.30732877532008,-12,0,17,"iron ion binding
+ padj:0.00000 N( -17/ +0/ 236)","iron ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"18","entF","GO:0005506~iron ion binding",0.0048350918361126,-4.21950658956084,-1,-2.31559527265892,9.32384568996802e-07,236,2.31559527265892,-13,0,17,"iron ion binding
+ padj:0.00000 N( -17/ +0/ 236)","iron ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"19","cirA","GO:0005506~iron ion binding",0.00471450489125205,-4.39468633573489,-1,-2.32656390935029,9.32384568996802e-07,236,2.32656390935029,-14,0,17,"iron ion binding
+ padj:0.00000 N( -17/ +0/ 236)","iron ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"20","entC","GO:0005506~iron ion binding",0.00274783107715502,-5.18401844198843,-1,-2.56100996903402,9.32384568996802e-07,236,2.56100996903402,-15,0,17,"iron ion binding
+ padj:0.00000 N( -17/ +0/ 236)","iron ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"21","fepA","GO:0005506~iron ion binding",0.00173153774902173,-3.84208369174197,-1,-2.76156803601569,9.32384568996802e-07,236,2.76156803601569,-16,0,17,"iron ion binding
+ padj:0.00000 N( -17/ +0/ 236)","iron ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"22","entB","GO:0005506~iron ion binding",0.000384902895585798,-5.81136932870284,-1,-3.41464882173938,9.32384568996802e-07,236,3.41464882173938,-17,0,17,"iron ion binding
+ padj:0.00000 N( -17/ +0/ 236)","iron ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"23","fecB","GO:0015082~di-, tri-valent inorganic cation transmembrane transporter activity",0.0381106620336745,-2.40427468896987,-1,-1.41895350688057,0.0280079703998515,23,1.41895350688057,-1,0,5,"di-, tri-valent inorganic cation transmembrane transporter activity
+ padj:0.02801 N( -5/ +0/ 23)","di-, tri-valent inorganic cation transmembrane transporter activity","protein","Sta","carbonSource","glucoseglycerol","MF"
+"24","ybiL","GO:0015082~di-, tri-valent inorganic cation transmembrane transporter activity",0.0333034418854627,-4.15217096811267,-1,-1.47751088016881,0.0280079703998515,23,1.47751088016881,-2,0,5,"di-, tri-valent inorganic cation transmembrane transporter activity
+ padj:0.02801 N( -5/ +0/ 23)","di-, tri-valent inorganic cation transmembrane transporter activity","protein","Sta","carbonSource","glucoseglycerol","MF"
+"25","fecA","GO:0015082~di-, tri-valent inorganic cation transmembrane transporter activity",0.0236456614332319,-2.30284593571194,-1,-1.62624853308501,0.0280079703998515,23,1.62624853308501,-3,0,5,"di-, tri-valent inorganic cation transmembrane transporter activity
+ padj:0.02801 N( -5/ +0/ 23)","di-, tri-valent inorganic cation transmembrane transporter activity","protein","Sta","carbonSource","glucoseglycerol","MF"
+"26","fhuE","GO:0015082~di-, tri-valent inorganic cation transmembrane transporter activity",0.0128564187103477,-4.03167690973181,-1,-1.89087999182714,0.0280079703998515,23,1.89087999182714,-4,0,5,"di-, tri-valent inorganic cation transmembrane transporter activity
+ padj:0.02801 N( -5/ +0/ 23)","di-, tri-valent inorganic cation transmembrane transporter activity","protein","Sta","carbonSource","glucoseglycerol","MF"
+"27","fepA","GO:0015082~di-, tri-valent inorganic cation transmembrane transporter activity",0.00173153774902173,-3.84208369174197,-1,-2.76156803601569,0.0280079703998515,23,2.76156803601569,-5,0,5,"di-, tri-valent inorganic cation transmembrane transporter activity
+ padj:0.02801 N( -5/ +0/ 23)","di-, tri-valent inorganic cation transmembrane transporter activity","protein","Sta","carbonSource","glucoseglycerol","MF"
+"28","ybiL","GO:0015343~siderophore-iron transmembrane transporter activity",0.0333034418854627,-4.15217096811267,-1,-1.47751088016881,0.0100684878856493,6,1.47751088016881,-1,0,4,"siderophore-iron transmembrane transporter activity
+ padj:0.01007 N( -4/ +0/ 6)","siderophore-iron transmembrane transporter activity","protein","Sta","carbonSource","glucoseglycerol","MF"
+"29","fecA","GO:0015343~siderophore-iron transmembrane transporter activity",0.0236456614332319,-2.30284593571194,-1,-1.62624853308501,0.0100684878856493,6,1.62624853308501,-2,0,4,"siderophore-iron transmembrane transporter activity
+ padj:0.01007 N( -4/ +0/ 6)","siderophore-iron transmembrane transporter activity","protein","Sta","carbonSource","glucoseglycerol","MF"
+"30","fhuE","GO:0015343~siderophore-iron transmembrane transporter activity",0.0128564187103477,-4.03167690973181,-1,-1.89087999182714,0.0100684878856493,6,1.89087999182714,-3,0,4,"siderophore-iron transmembrane transporter activity
+ padj:0.01007 N( -4/ +0/ 6)","siderophore-iron transmembrane transporter activity","protein","Sta","carbonSource","glucoseglycerol","MF"
+"31","fepA","GO:0015343~siderophore-iron transmembrane transporter activity",0.00173153774902173,-3.84208369174197,-1,-2.76156803601569,0.0100684878856493,6,2.76156803601569,-4,0,4,"siderophore-iron transmembrane transporter activity
+ padj:0.01007 N( -4/ +0/ 6)","siderophore-iron transmembrane transporter activity","protein","Sta","carbonSource","glucoseglycerol","MF"
+"32","ybiL","GO:0042927~siderophore transporter activity",0.0333034418854627,-4.15217096811267,-1,-1.47751088016881,0.0100684878856493,6,1.47751088016881,-1,0,4,"siderophore transporter activity
+ padj:0.01007 N( -4/ +0/ 6)","siderophore transporter activity","protein","Sta","carbonSource","glucoseglycerol","MF"
+"33","fecA","GO:0042927~siderophore transporter activity",0.0236456614332319,-2.30284593571194,-1,-1.62624853308501,0.0100684878856493,6,1.62624853308501,-2,0,4,"siderophore transporter activity
+ padj:0.01007 N( -4/ +0/ 6)","siderophore transporter activity","protein","Sta","carbonSource","glucoseglycerol","MF"
+"34","fhuE","GO:0042927~siderophore transporter activity",0.0128564187103477,-4.03167690973181,-1,-1.89087999182714,0.0100684878856493,6,1.89087999182714,-3,0,4,"siderophore transporter activity
+ padj:0.01007 N( -4/ +0/ 6)","siderophore transporter activity","protein","Sta","carbonSource","glucoseglycerol","MF"
+"35","fepA","GO:0042927~siderophore transporter activity",0.00173153774902173,-3.84208369174197,-1,-2.76156803601569,0.0100684878856493,6,2.76156803601569,-4,0,4,"siderophore transporter activity
+ padj:0.01007 N( -4/ +0/ 6)","siderophore transporter activity","protein","Sta","carbonSource","glucoseglycerol","MF"
+"36","glpQ","GO:0043167~ion binding",0.00262205960642986,2.68847829524549,1,2.58135743985824,0.000123657751027739,656,2.58135743985824,2,2,24,"ion binding
+ padj:0.00012 N( -24/ +2/ 656)","ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"37","glpK","GO:0043167~ion binding",0.00432747881242754,2.30433435252638,1,2.36376504977685,0.000123657751027739,656,2.36376504977685,1,2,24,"ion binding
+ padj:0.00012 N( -24/ +2/ 656)","ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"38","fecE","GO:0043167~ion binding",0.04641711591475,-2.87712910605108,-1,-1.33332184753416,0.000123657751027739,656,1.33332184753416,-1,2,24,"ion binding
+ padj:0.00012 N( -24/ +2/ 656)","ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"39","cdd","GO:0043167~ion binding",0.04324660364878,-2.2314998275665,-1,-1.36404799396823,0.000123657751027739,656,1.36404799396823,-2,2,24,"ion binding
+ padj:0.00012 N( -24/ +2/ 656)","ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"40","nrdF","GO:0043167~ion binding",0.0397325801841042,-3.96262740303915,-1,-1.40085323148795,0.000123657751027739,656,1.40085323148795,-3,2,24,"ion binding
+ padj:0.00012 N( -24/ +2/ 656)","ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"41","fecB","GO:0043167~ion binding",0.0381106620336745,-2.40427468896987,-1,-1.41895350688057,0.000123657751027739,656,1.41895350688057,-4,2,24,"ion binding
+ padj:0.00012 N( -24/ +2/ 656)","ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"42","yobA","GO:0043167~ion binding",0.0381106620336745,-3.95746810008994,-1,-1.41895350688057,0.000123657751027739,656,1.41895350688057,-5,2,24,"ion binding
+ padj:0.00012 N( -24/ +2/ 656)","ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"43","ybiL","GO:0043167~ion binding",0.0333034418854627,-4.15217096811267,-1,-1.47751088016881,0.000123657751027739,656,1.47751088016881,-6,2,24,"ion binding
+ padj:0.00012 N( -24/ +2/ 656)","ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"44","rumB","GO:0043167~ion binding",0.0313872725029328,-4.0675805120167,-1,-1.5032464220633,0.000123657751027739,656,1.5032464220633,-7,2,24,"ion binding
+ padj:0.00012 N( -24/ +2/ 656)","ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"45","gltS","GO:0043167~ion binding",0.028127430214215,-3.5373516838178,-1,-1.55086994415071,0.000123657751027739,656,1.55086994415071,-8,2,24,"ion binding
+ padj:0.00012 N( -24/ +2/ 656)","ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"46","yddV","GO:0043167~ion binding",0.028011840807723,-3.19258046508326,-1,-1.55265835042786,0.000123657751027739,656,1.55265835042786,-9,2,24,"ion binding
+ padj:0.00012 N( -24/ +2/ 656)","ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"47","ybiX","GO:0043167~ion binding",0.0249774253075267,-3.72594267927125,-1,-1.60245233106849,0.000123657751027739,656,1.60245233106849,-10,2,24,"ion binding
+ padj:0.00012 N( -24/ +2/ 656)","ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"48","fecA","GO:0043167~ion binding",0.0236456614332319,-2.30284593571194,-1,-1.62624853308501,0.000123657751027739,656,1.62624853308501,-11,2,24,"ion binding
+ padj:0.00012 N( -24/ +2/ 656)","ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"49","ybiI","GO:0043167~ion binding",0.0202164415056832,-4.3013694417137,-1,-1.69429528645279,0.000123657751027739,656,1.69429528645279,-12,2,24,"ion binding
+ padj:0.00012 N( -24/ +2/ 656)","ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"50","ptsI","GO:0043167~ion binding",0.0194548930375704,-1.94691735998435,-1,-1.71097115259196,0.000123657751027739,656,1.71097115259196,-13,2,24,"ion binding
+ padj:0.00012 N( -24/ +2/ 656)","ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"51","iscR","GO:0043167~ion binding",0.0144658232254101,-2.82154900643575,-1,-1.839656846352,0.000123657751027739,656,1.839656846352,-14,2,24,"ion binding
+ padj:0.00012 N( -24/ +2/ 656)","ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"52","fhuE","GO:0043167~ion binding",0.0128564187103477,-4.03167690973181,-1,-1.89087999182714,0.000123657751027739,656,1.89087999182714,-15,2,24,"ion binding
+ padj:0.00012 N( -24/ +2/ 656)","ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"53","entE","GO:0043167~ion binding",0.00902113150890541,-4.41317371847441,-1,-2.04473898604407,0.000123657751027739,656,2.04473898604407,-16,2,24,"ion binding
+ padj:0.00012 N( -24/ +2/ 656)","ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"54","sodC","GO:0043167~ion binding",0.00588191317885306,-3.26226141346162,-1,-2.23048139027154,0.000123657751027739,656,2.23048139027154,-17,2,24,"ion binding
+ padj:0.00012 N( -24/ +2/ 656)","ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"55","ydbK","GO:0043167~ion binding",0.00492800596319261,-2.57652199269542,-1,-2.30732877532008,0.000123657751027739,656,2.30732877532008,-18,2,24,"ion binding
+ padj:0.00012 N( -24/ +2/ 656)","ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"56","entF","GO:0043167~ion binding",0.0048350918361126,-4.21950658956084,-1,-2.31559527265892,0.000123657751027739,656,2.31559527265892,-19,2,24,"ion binding
+ padj:0.00012 N( -24/ +2/ 656)","ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"57","cirA","GO:0043167~ion binding",0.00471450489125205,-4.39468633573489,-1,-2.32656390935029,0.000123657751027739,656,2.32656390935029,-20,2,24,"ion binding
+ padj:0.00012 N( -24/ +2/ 656)","ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"58","entC","GO:0043167~ion binding",0.00274783107715502,-5.18401844198843,-1,-2.56100996903402,0.000123657751027739,656,2.56100996903402,-21,2,24,"ion binding
+ padj:0.00012 N( -24/ +2/ 656)","ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"59","fepA","GO:0043167~ion binding",0.00173153774902173,-3.84208369174197,-1,-2.76156803601569,0.000123657751027739,656,2.76156803601569,-22,2,24,"ion binding
+ padj:0.00012 N( -24/ +2/ 656)","ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"60","entB","GO:0043167~ion binding",0.000384902895585798,-5.81136932870284,-1,-3.41464882173938,0.000123657751027739,656,3.41464882173938,-23,2,24,"ion binding
+ padj:0.00012 N( -24/ +2/ 656)","ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"61","poxB","GO:0043167~ion binding",0.000284700563102967,-3.99031877203554,-1,-3.54561167387071,0.000123657751027739,656,3.54561167387071,-24,2,24,"ion binding
+ padj:0.00012 N( -24/ +2/ 656)","ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"62","glpQ","GO:0043169~cation binding",0.00262205960642986,2.68847829524549,1,2.58135743985824,0.000112601415522828,654,2.58135743985824,2,2,24,"cation binding
+ padj:0.00011 N( -24/ +2/ 654)","cation binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"63","glpK","GO:0043169~cation binding",0.00432747881242754,2.30433435252638,1,2.36376504977685,0.000112601415522828,654,2.36376504977685,1,2,24,"cation binding
+ padj:0.00011 N( -24/ +2/ 654)","cation binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"64","fecE","GO:0043169~cation binding",0.04641711591475,-2.87712910605108,-1,-1.33332184753416,0.000112601415522828,654,1.33332184753416,-1,2,24,"cation binding
+ padj:0.00011 N( -24/ +2/ 654)","cation binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"65","cdd","GO:0043169~cation binding",0.04324660364878,-2.2314998275665,-1,-1.36404799396823,0.000112601415522828,654,1.36404799396823,-2,2,24,"cation binding
+ padj:0.00011 N( -24/ +2/ 654)","cation binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"66","nrdF","GO:0043169~cation binding",0.0397325801841042,-3.96262740303915,-1,-1.40085323148795,0.000112601415522828,654,1.40085323148795,-3,2,24,"cation binding
+ padj:0.00011 N( -24/ +2/ 654)","cation binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"67","fecB","GO:0043169~cation binding",0.0381106620336745,-2.40427468896987,-1,-1.41895350688057,0.000112601415522828,654,1.41895350688057,-4,2,24,"cation binding
+ padj:0.00011 N( -24/ +2/ 654)","cation binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"68","yobA","GO:0043169~cation binding",0.0381106620336745,-3.95746810008994,-1,-1.41895350688057,0.000112601415522828,654,1.41895350688057,-5,2,24,"cation binding
+ padj:0.00011 N( -24/ +2/ 654)","cation binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"69","ybiL","GO:0043169~cation binding",0.0333034418854627,-4.15217096811267,-1,-1.47751088016881,0.000112601415522828,654,1.47751088016881,-6,2,24,"cation binding
+ padj:0.00011 N( -24/ +2/ 654)","cation binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"70","rumB","GO:0043169~cation binding",0.0313872725029328,-4.0675805120167,-1,-1.5032464220633,0.000112601415522828,654,1.5032464220633,-7,2,24,"cation binding
+ padj:0.00011 N( -24/ +2/ 654)","cation binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"71","gltS","GO:0043169~cation binding",0.028127430214215,-3.5373516838178,-1,-1.55086994415071,0.000112601415522828,654,1.55086994415071,-8,2,24,"cation binding
+ padj:0.00011 N( -24/ +2/ 654)","cation binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"72","yddV","GO:0043169~cation binding",0.028011840807723,-3.19258046508326,-1,-1.55265835042786,0.000112601415522828,654,1.55265835042786,-9,2,24,"cation binding
+ padj:0.00011 N( -24/ +2/ 654)","cation binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"73","ybiX","GO:0043169~cation binding",0.0249774253075267,-3.72594267927125,-1,-1.60245233106849,0.000112601415522828,654,1.60245233106849,-10,2,24,"cation binding
+ padj:0.00011 N( -24/ +2/ 654)","cation binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"74","fecA","GO:0043169~cation binding",0.0236456614332319,-2.30284593571194,-1,-1.62624853308501,0.000112601415522828,654,1.62624853308501,-11,2,24,"cation binding
+ padj:0.00011 N( -24/ +2/ 654)","cation binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"75","ybiI","GO:0043169~cation binding",0.0202164415056832,-4.3013694417137,-1,-1.69429528645279,0.000112601415522828,654,1.69429528645279,-12,2,24,"cation binding
+ padj:0.00011 N( -24/ +2/ 654)","cation binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"76","ptsI","GO:0043169~cation binding",0.0194548930375704,-1.94691735998435,-1,-1.71097115259196,0.000112601415522828,654,1.71097115259196,-13,2,24,"cation binding
+ padj:0.00011 N( -24/ +2/ 654)","cation binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"77","iscR","GO:0043169~cation binding",0.0144658232254101,-2.82154900643575,-1,-1.839656846352,0.000112601415522828,654,1.839656846352,-14,2,24,"cation binding
+ padj:0.00011 N( -24/ +2/ 654)","cation binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"78","fhuE","GO:0043169~cation binding",0.0128564187103477,-4.03167690973181,-1,-1.89087999182714,0.000112601415522828,654,1.89087999182714,-15,2,24,"cation binding
+ padj:0.00011 N( -24/ +2/ 654)","cation binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"79","entE","GO:0043169~cation binding",0.00902113150890541,-4.41317371847441,-1,-2.04473898604407,0.000112601415522828,654,2.04473898604407,-16,2,24,"cation binding
+ padj:0.00011 N( -24/ +2/ 654)","cation binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"80","sodC","GO:0043169~cation binding",0.00588191317885306,-3.26226141346162,-1,-2.23048139027154,0.000112601415522828,654,2.23048139027154,-17,2,24,"cation binding
+ padj:0.00011 N( -24/ +2/ 654)","cation binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"81","ydbK","GO:0043169~cation binding",0.00492800596319261,-2.57652199269542,-1,-2.30732877532008,0.000112601415522828,654,2.30732877532008,-18,2,24,"cation binding
+ padj:0.00011 N( -24/ +2/ 654)","cation binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"82","entF","GO:0043169~cation binding",0.0048350918361126,-4.21950658956084,-1,-2.31559527265892,0.000112601415522828,654,2.31559527265892,-19,2,24,"cation binding
+ padj:0.00011 N( -24/ +2/ 654)","cation binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"83","cirA","GO:0043169~cation binding",0.00471450489125205,-4.39468633573489,-1,-2.32656390935029,0.000112601415522828,654,2.32656390935029,-20,2,24,"cation binding
+ padj:0.00011 N( -24/ +2/ 654)","cation binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"84","entC","GO:0043169~cation binding",0.00274783107715502,-5.18401844198843,-1,-2.56100996903402,0.000112601415522828,654,2.56100996903402,-21,2,24,"cation binding
+ padj:0.00011 N( -24/ +2/ 654)","cation binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"85","fepA","GO:0043169~cation binding",0.00173153774902173,-3.84208369174197,-1,-2.76156803601569,0.000112601415522828,654,2.76156803601569,-22,2,24,"cation binding
+ padj:0.00011 N( -24/ +2/ 654)","cation binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"86","entB","GO:0043169~cation binding",0.000384902895585798,-5.81136932870284,-1,-3.41464882173938,0.000112601415522828,654,3.41464882173938,-23,2,24,"cation binding
+ padj:0.00011 N( -24/ +2/ 654)","cation binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"87","poxB","GO:0043169~cation binding",0.000284700563102967,-3.99031877203554,-1,-3.54561167387071,0.000112601415522828,654,3.54561167387071,-24,2,24,"cation binding
+ padj:0.00011 N( -24/ +2/ 654)","cation binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"88","glpQ","GO:0046872~metal ion binding",0.00262205960642986,2.68847829524549,1,2.58135743985824,6.61836429268758e-05,640,2.58135743985824,2,2,24,"metal ion binding
+ padj:0.00007 N( -24/ +2/ 640)","metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"89","glpK","GO:0046872~metal ion binding",0.00432747881242754,2.30433435252638,1,2.36376504977685,6.61836429268758e-05,640,2.36376504977685,1,2,24,"metal ion binding
+ padj:0.00007 N( -24/ +2/ 640)","metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"90","fecE","GO:0046872~metal ion binding",0.04641711591475,-2.87712910605108,-1,-1.33332184753416,6.61836429268758e-05,640,1.33332184753416,-1,2,24,"metal ion binding
+ padj:0.00007 N( -24/ +2/ 640)","metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"91","cdd","GO:0046872~metal ion binding",0.04324660364878,-2.2314998275665,-1,-1.36404799396823,6.61836429268758e-05,640,1.36404799396823,-2,2,24,"metal ion binding
+ padj:0.00007 N( -24/ +2/ 640)","metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"92","nrdF","GO:0046872~metal ion binding",0.0397325801841042,-3.96262740303915,-1,-1.40085323148795,6.61836429268758e-05,640,1.40085323148795,-3,2,24,"metal ion binding
+ padj:0.00007 N( -24/ +2/ 640)","metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"93","fecB","GO:0046872~metal ion binding",0.0381106620336745,-2.40427468896987,-1,-1.41895350688057,6.61836429268758e-05,640,1.41895350688057,-4,2,24,"metal ion binding
+ padj:0.00007 N( -24/ +2/ 640)","metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"94","yobA","GO:0046872~metal ion binding",0.0381106620336745,-3.95746810008994,-1,-1.41895350688057,6.61836429268758e-05,640,1.41895350688057,-5,2,24,"metal ion binding
+ padj:0.00007 N( -24/ +2/ 640)","metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"95","ybiL","GO:0046872~metal ion binding",0.0333034418854627,-4.15217096811267,-1,-1.47751088016881,6.61836429268758e-05,640,1.47751088016881,-6,2,24,"metal ion binding
+ padj:0.00007 N( -24/ +2/ 640)","metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"96","rumB","GO:0046872~metal ion binding",0.0313872725029328,-4.0675805120167,-1,-1.5032464220633,6.61836429268758e-05,640,1.5032464220633,-7,2,24,"metal ion binding
+ padj:0.00007 N( -24/ +2/ 640)","metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"97","gltS","GO:0046872~metal ion binding",0.028127430214215,-3.5373516838178,-1,-1.55086994415071,6.61836429268758e-05,640,1.55086994415071,-8,2,24,"metal ion binding
+ padj:0.00007 N( -24/ +2/ 640)","metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"98","yddV","GO:0046872~metal ion binding",0.028011840807723,-3.19258046508326,-1,-1.55265835042786,6.61836429268758e-05,640,1.55265835042786,-9,2,24,"metal ion binding
+ padj:0.00007 N( -24/ +2/ 640)","metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"99","ybiX","GO:0046872~metal ion binding",0.0249774253075267,-3.72594267927125,-1,-1.60245233106849,6.61836429268758e-05,640,1.60245233106849,-10,2,24,"metal ion binding
+ padj:0.00007 N( -24/ +2/ 640)","metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"100","fecA","GO:0046872~metal ion binding",0.0236456614332319,-2.30284593571194,-1,-1.62624853308501,6.61836429268758e-05,640,1.62624853308501,-11,2,24,"metal ion binding
+ padj:0.00007 N( -24/ +2/ 640)","metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"101","ybiI","GO:0046872~metal ion binding",0.0202164415056832,-4.3013694417137,-1,-1.69429528645279,6.61836429268758e-05,640,1.69429528645279,-12,2,24,"metal ion binding
+ padj:0.00007 N( -24/ +2/ 640)","metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"102","ptsI","GO:0046872~metal ion binding",0.0194548930375704,-1.94691735998435,-1,-1.71097115259196,6.61836429268758e-05,640,1.71097115259196,-13,2,24,"metal ion binding
+ padj:0.00007 N( -24/ +2/ 640)","metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"103","iscR","GO:0046872~metal ion binding",0.0144658232254101,-2.82154900643575,-1,-1.839656846352,6.61836429268758e-05,640,1.839656846352,-14,2,24,"metal ion binding
+ padj:0.00007 N( -24/ +2/ 640)","metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"104","fhuE","GO:0046872~metal ion binding",0.0128564187103477,-4.03167690973181,-1,-1.89087999182714,6.61836429268758e-05,640,1.89087999182714,-15,2,24,"metal ion binding
+ padj:0.00007 N( -24/ +2/ 640)","metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"105","entE","GO:0046872~metal ion binding",0.00902113150890541,-4.41317371847441,-1,-2.04473898604407,6.61836429268758e-05,640,2.04473898604407,-16,2,24,"metal ion binding
+ padj:0.00007 N( -24/ +2/ 640)","metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"106","sodC","GO:0046872~metal ion binding",0.00588191317885306,-3.26226141346162,-1,-2.23048139027154,6.61836429268758e-05,640,2.23048139027154,-17,2,24,"metal ion binding
+ padj:0.00007 N( -24/ +2/ 640)","metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"107","ydbK","GO:0046872~metal ion binding",0.00492800596319261,-2.57652199269542,-1,-2.30732877532008,6.61836429268758e-05,640,2.30732877532008,-18,2,24,"metal ion binding
+ padj:0.00007 N( -24/ +2/ 640)","metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"108","entF","GO:0046872~metal ion binding",0.0048350918361126,-4.21950658956084,-1,-2.31559527265892,6.61836429268758e-05,640,2.31559527265892,-19,2,24,"metal ion binding
+ padj:0.00007 N( -24/ +2/ 640)","metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"109","cirA","GO:0046872~metal ion binding",0.00471450489125205,-4.39468633573489,-1,-2.32656390935029,6.61836429268758e-05,640,2.32656390935029,-20,2,24,"metal ion binding
+ padj:0.00007 N( -24/ +2/ 640)","metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"110","entC","GO:0046872~metal ion binding",0.00274783107715502,-5.18401844198843,-1,-2.56100996903402,6.61836429268758e-05,640,2.56100996903402,-21,2,24,"metal ion binding
+ padj:0.00007 N( -24/ +2/ 640)","metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"111","fepA","GO:0046872~metal ion binding",0.00173153774902173,-3.84208369174197,-1,-2.76156803601569,6.61836429268758e-05,640,2.76156803601569,-22,2,24,"metal ion binding
+ padj:0.00007 N( -24/ +2/ 640)","metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"112","entB","GO:0046872~metal ion binding",0.000384902895585798,-5.81136932870284,-1,-3.41464882173938,6.61836429268758e-05,640,3.41464882173938,-23,2,24,"metal ion binding
+ padj:0.00007 N( -24/ +2/ 640)","metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"113","poxB","GO:0046872~metal ion binding",0.000284700563102967,-3.99031877203554,-1,-3.54561167387071,6.61836429268758e-05,640,3.54561167387071,-24,2,24,"metal ion binding
+ padj:0.00007 N( -24/ +2/ 640)","metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"114","glpK","GO:0046914~transition metal ion binding",0.00432747881242754,2.30433435252638,1,2.36376504977685,7.9644512854915e-05,485,2.36376504977685,1,1,21,"transition metal ion binding
+ padj:0.00008 N( -21/ +1/ 485)","transition metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"115","fecE","GO:0046914~transition metal ion binding",0.04641711591475,-2.87712910605108,-1,-1.33332184753416,7.9644512854915e-05,485,1.33332184753416,-1,1,21,"transition metal ion binding
+ padj:0.00008 N( -21/ +1/ 485)","transition metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"116","cdd","GO:0046914~transition metal ion binding",0.04324660364878,-2.2314998275665,-1,-1.36404799396823,7.9644512854915e-05,485,1.36404799396823,-2,1,21,"transition metal ion binding
+ padj:0.00008 N( -21/ +1/ 485)","transition metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"117","nrdF","GO:0046914~transition metal ion binding",0.0397325801841042,-3.96262740303915,-1,-1.40085323148795,7.9644512854915e-05,485,1.40085323148795,-3,1,21,"transition metal ion binding
+ padj:0.00008 N( -21/ +1/ 485)","transition metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"118","fecB","GO:0046914~transition metal ion binding",0.0381106620336745,-2.40427468896987,-1,-1.41895350688057,7.9644512854915e-05,485,1.41895350688057,-4,1,21,"transition metal ion binding
+ padj:0.00008 N( -21/ +1/ 485)","transition metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"119","yobA","GO:0046914~transition metal ion binding",0.0381106620336745,-3.95746810008994,-1,-1.41895350688057,7.9644512854915e-05,485,1.41895350688057,-5,1,21,"transition metal ion binding
+ padj:0.00008 N( -21/ +1/ 485)","transition metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"120","ybiL","GO:0046914~transition metal ion binding",0.0333034418854627,-4.15217096811267,-1,-1.47751088016881,7.9644512854915e-05,485,1.47751088016881,-6,1,21,"transition metal ion binding
+ padj:0.00008 N( -21/ +1/ 485)","transition metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"121","rumB","GO:0046914~transition metal ion binding",0.0313872725029328,-4.0675805120167,-1,-1.5032464220633,7.9644512854915e-05,485,1.5032464220633,-7,1,21,"transition metal ion binding
+ padj:0.00008 N( -21/ +1/ 485)","transition metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"122","yddV","GO:0046914~transition metal ion binding",0.028011840807723,-3.19258046508326,-1,-1.55265835042786,7.9644512854915e-05,485,1.55265835042786,-8,1,21,"transition metal ion binding
+ padj:0.00008 N( -21/ +1/ 485)","transition metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"123","ybiX","GO:0046914~transition metal ion binding",0.0249774253075267,-3.72594267927125,-1,-1.60245233106849,7.9644512854915e-05,485,1.60245233106849,-9,1,21,"transition metal ion binding
+ padj:0.00008 N( -21/ +1/ 485)","transition metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"124","fecA","GO:0046914~transition metal ion binding",0.0236456614332319,-2.30284593571194,-1,-1.62624853308501,7.9644512854915e-05,485,1.62624853308501,-10,1,21,"transition metal ion binding
+ padj:0.00008 N( -21/ +1/ 485)","transition metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"125","ybiI","GO:0046914~transition metal ion binding",0.0202164415056832,-4.3013694417137,-1,-1.69429528645279,7.9644512854915e-05,485,1.69429528645279,-11,1,21,"transition metal ion binding
+ padj:0.00008 N( -21/ +1/ 485)","transition metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"126","iscR","GO:0046914~transition metal ion binding",0.0144658232254101,-2.82154900643575,-1,-1.839656846352,7.9644512854915e-05,485,1.839656846352,-12,1,21,"transition metal ion binding
+ padj:0.00008 N( -21/ +1/ 485)","transition metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"127","fhuE","GO:0046914~transition metal ion binding",0.0128564187103477,-4.03167690973181,-1,-1.89087999182714,7.9644512854915e-05,485,1.89087999182714,-13,1,21,"transition metal ion binding
+ padj:0.00008 N( -21/ +1/ 485)","transition metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"128","entE","GO:0046914~transition metal ion binding",0.00902113150890541,-4.41317371847441,-1,-2.04473898604407,7.9644512854915e-05,485,2.04473898604407,-14,1,21,"transition metal ion binding
+ padj:0.00008 N( -21/ +1/ 485)","transition metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"129","sodC","GO:0046914~transition metal ion binding",0.00588191317885306,-3.26226141346162,-1,-2.23048139027154,7.9644512854915e-05,485,2.23048139027154,-15,1,21,"transition metal ion binding
+ padj:0.00008 N( -21/ +1/ 485)","transition metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"130","ydbK","GO:0046914~transition metal ion binding",0.00492800596319261,-2.57652199269542,-1,-2.30732877532008,7.9644512854915e-05,485,2.30732877532008,-16,1,21,"transition metal ion binding
+ padj:0.00008 N( -21/ +1/ 485)","transition metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"131","entF","GO:0046914~transition metal ion binding",0.0048350918361126,-4.21950658956084,-1,-2.31559527265892,7.9644512854915e-05,485,2.31559527265892,-17,1,21,"transition metal ion binding
+ padj:0.00008 N( -21/ +1/ 485)","transition metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"132","cirA","GO:0046914~transition metal ion binding",0.00471450489125205,-4.39468633573489,-1,-2.32656390935029,7.9644512854915e-05,485,2.32656390935029,-18,1,21,"transition metal ion binding
+ padj:0.00008 N( -21/ +1/ 485)","transition metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"133","entC","GO:0046914~transition metal ion binding",0.00274783107715502,-5.18401844198843,-1,-2.56100996903402,7.9644512854915e-05,485,2.56100996903402,-19,1,21,"transition metal ion binding
+ padj:0.00008 N( -21/ +1/ 485)","transition metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"134","fepA","GO:0046914~transition metal ion binding",0.00173153774902173,-3.84208369174197,-1,-2.76156803601569,7.9644512854915e-05,485,2.76156803601569,-20,1,21,"transition metal ion binding
+ padj:0.00008 N( -21/ +1/ 485)","transition metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"135","entB","GO:0046914~transition metal ion binding",0.000384902895585798,-5.81136932870284,-1,-3.41464882173938,7.9644512854915e-05,485,3.41464882173938,-21,1,21,"transition metal ion binding
+ padj:0.00008 N( -21/ +1/ 485)","transition metal ion binding","protein","Sta","carbonSource","glucoseglycerol","MF"
+"136","fecB","GO:0046915~transition metal ion transmembrane transporter activity",0.0381106620336745,-2.40427468896987,-1,-1.41895350688057,0.0248778503094138,22,1.41895350688057,-1,0,5,"transition metal ion transmembrane transporter activity
+ padj:0.02488 N( -5/ +0/ 22)","transition metal ion transmembrane transporter activity","protein","Sta","carbonSource","glucoseglycerol","MF"
+"137","ybiL","GO:0046915~transition metal ion transmembrane transporter activity",0.0333034418854627,-4.15217096811267,-1,-1.47751088016881,0.0248778503094138,22,1.47751088016881,-2,0,5,"transition metal ion transmembrane transporter activity
+ padj:0.02488 N( -5/ +0/ 22)","transition metal ion transmembrane transporter activity","protein","Sta","carbonSource","glucoseglycerol","MF"
+"138","fecA","GO:0046915~transition metal ion transmembrane transporter activity",0.0236456614332319,-2.30284593571194,-1,-1.62624853308501,0.0248778503094138,22,1.62624853308501,-3,0,5,"transition metal ion transmembrane transporter activity
+ padj:0.02488 N( -5/ +0/ 22)","transition metal ion transmembrane transporter activity","protein","Sta","carbonSource","glucoseglycerol","MF"
+"139","fhuE","GO:0046915~transition metal ion transmembrane transporter activity",0.0128564187103477,-4.03167690973181,-1,-1.89087999182714,0.0248778503094138,22,1.89087999182714,-4,0,5,"transition metal ion transmembrane transporter activity
+ padj:0.02488 N( -5/ +0/ 22)","transition metal ion transmembrane transporter activity","protein","Sta","carbonSource","glucoseglycerol","MF"
+"140","fepA","GO:0046915~transition metal ion transmembrane transporter activity",0.00173153774902173,-3.84208369174197,-1,-2.76156803601569,0.0248778503094138,22,2.76156803601569,-5,0,5,"transition metal ion transmembrane transporter activity
+ padj:0.02488 N( -5/ +0/ 22)","transition metal ion transmembrane transporter activity","protein","Sta","carbonSource","glucoseglycerol","MF"

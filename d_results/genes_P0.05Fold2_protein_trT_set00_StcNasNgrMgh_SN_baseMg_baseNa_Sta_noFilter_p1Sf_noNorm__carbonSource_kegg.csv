@@ -1,0 +1,21 @@
+"","ID","KEGG_Path","padj_gene","log2","signChange","score_gene","FDR_KEGG_Path","numGenesInCat","abs_score","rank","numSigP","numSigN","KEGG_Path_long","KEGG_Path_short","pick_data","growthPhase","test_for","vs","df_category"
+"1","edd","eco00030:Pentose phosphate pathway",3.05438160928347e-23,3.9048406436405,1,22.5150767038701,0.0152945060657033,28,22.5150767038701,3,3,1,"Pentose phosphate pathway
+ padj:0.01529 N( -1/ +3/ 28)","Pentose phosphate pathway","protein","Sta","carbonSource","glucosegluconate","kegg"
+"2","gntK","eco00030:Pentose phosphate pathway",2.84911412540264e-14,4.74549224923791,1,13.5452901541161,0.0152945060657033,28,13.5452901541161,2,3,1,"Pentose phosphate pathway
+ padj:0.01529 N( -1/ +3/ 28)","Pentose phosphate pathway","protein","Sta","carbonSource","glucosegluconate","kegg"
+"3","idnK","eco00030:Pentose phosphate pathway",0.0120846206154597,3.10657991885272,1,1.91776697928187,0.0152945060657033,28,1.91776697928187,1,3,1,"Pentose phosphate pathway
+ padj:0.01529 N( -1/ +3/ 28)","Pentose phosphate pathway","protein","Sta","carbonSource","glucosegluconate","kegg"
+"4","araA","eco00040:Pentose and glucuronate interconversions",3.0129504442455e-11,3.8370881377859,1,10.5210080113627,0.0123959720170995,24,10.5210080113627,3,3,1,"Pentose and glucuronate interconversions
+ padj:0.01240 N( -1/ +3/ 24)","Pentose and glucuronate interconversions","protein","Sta","carbonSource","glucosegluconate","kegg"
+"5","araD","eco00040:Pentose and glucuronate interconversions",9.3986270893951e-06,4.03255852230704,1,5.026935581618,0.0123959720170995,24,5.026935581618,2,3,1,"Pentose and glucuronate interconversions
+ padj:0.01240 N( -1/ +3/ 24)","Pentose and glucuronate interconversions","protein","Sta","carbonSource","glucosegluconate","kegg"
+"6","araB","eco00040:Pentose and glucuronate interconversions",0.000164185193651563,3.30906838709033,1,3.78466601046481,0.0123959720170995,24,3.78466601046481,1,3,1,"Pentose and glucuronate interconversions
+ padj:0.01240 N( -1/ +3/ 24)","Pentose and glucuronate interconversions","protein","Sta","carbonSource","glucosegluconate","kegg"
+"7","araF","eco02010:ABC transporters",4.50093408640516e-05,2.15902147464151,1,4.34669734700823,0.0444821553727822,153,4.34669734700823,4,4,1,"ABC transporters
+ padj:0.04448 N( -1/ +4/ 153)","ABC transporters","protein","Sta","carbonSource","glucosegluconate","kegg"
+"8","araG","eco02010:ABC transporters",0.000169430679873991,2.72277824619879,1,3.77100794646359,0.0444821553727822,153,3.77100794646359,3,4,1,"ABC transporters
+ padj:0.04448 N( -1/ +4/ 153)","ABC transporters","protein","Sta","carbonSource","glucosegluconate","kegg"
+"9","mglB","eco02010:ABC transporters",0.000439447519192876,2.15682817744436,1,3.3570929829016,0.0444821553727822,153,3.3570929829016,2,4,1,"ABC transporters
+ padj:0.04448 N( -1/ +4/ 153)","ABC transporters","protein","Sta","carbonSource","glucosegluconate","kegg"
+"10","mppA","eco02010:ABC transporters",0.0362246618844878,1.46117138019216,1,1.44099565947684,0.0444821553727822,153,1.44099565947684,1,4,1,"ABC transporters
+ padj:0.04448 N( -1/ +4/ 153)","ABC transporters","protein","Sta","carbonSource","glucosegluconate","kegg"

@@ -1,0 +1,111 @@
+"","ID","KEGG_Path","padj_gene","log2","signChange","score_gene","FDR_KEGG_Path","numGenesInCat","abs_score","rank","numSigP","numSigN","KEGG_Path_long","KEGG_Path_short","pick_data","growthPhase","test_for","vs","df_category"
+"1","fumB","eco00020:Citrate cycle (TCA cycle)",0.000586974887602623,1.66451448351892,1,3.23138047866534,0.000134216949482346,26,3.23138047866534,6,6,1,"Citrate cycle (TCA cycle)
+ padj:0.00013 N( -1/ +6/ 26)","Citrate cycle (TCA cycle)","protein","Sta","carbonSource","glucoselactate","kegg"
+"2","sucC","eco00020:Citrate cycle (TCA cycle)",0.00363749023186284,1.40708873969264,1,2.43919816426137,0.000134216949482346,26,2.43919816426137,5,6,1,"Citrate cycle (TCA cycle)
+ padj:0.00013 N( -1/ +6/ 26)","Citrate cycle (TCA cycle)","protein","Sta","carbonSource","glucoselactate","kegg"
+"3","sucB","eco00020:Citrate cycle (TCA cycle)",0.0052143691583738,1.51390145573302,1,2.28279822560931,0.000134216949482346,26,2.28279822560931,4,6,1,"Citrate cycle (TCA cycle)
+ padj:0.00013 N( -1/ +6/ 26)","Citrate cycle (TCA cycle)","protein","Sta","carbonSource","glucoselactate","kegg"
+"4","sdhA","eco00020:Citrate cycle (TCA cycle)",0.00776215779395196,1.56510020225298,1,2.11001753289901,0.000134216949482346,26,2.11001753289901,3,6,1,"Citrate cycle (TCA cycle)
+ padj:0.00013 N( -1/ +6/ 26)","Citrate cycle (TCA cycle)","protein","Sta","carbonSource","glucoselactate","kegg"
+"5","sdhB","eco00020:Citrate cycle (TCA cycle)",0.0225058213869391,1.44143267909474,1,1.64770513214539,0.000134216949482346,26,1.64770513214539,2,6,1,"Citrate cycle (TCA cycle)
+ padj:0.00013 N( -1/ +6/ 26)","Citrate cycle (TCA cycle)","protein","Sta","carbonSource","glucoselactate","kegg"
+"6","frdA","eco00020:Citrate cycle (TCA cycle)",0.0251940964398442,1.75186859787547,1,1.59870121255038,0.000134216949482346,26,1.59870121255038,1,6,1,"Citrate cycle (TCA cycle)
+ padj:0.00013 N( -1/ +6/ 26)","Citrate cycle (TCA cycle)","protein","Sta","carbonSource","glucoselactate","kegg"
+"7","sdhA","eco00190:Oxidative phosphorylation",0.00776215779395196,1.56510020225298,1,2.11001753289901,0.000771529685162808,41,2.11001753289901,5,5,1,"Oxidative phosphorylation
+ padj:0.00077 N( -1/ +5/ 41)","Oxidative phosphorylation","protein","Sta","carbonSource","glucoselactate","kegg"
+"8","nuoB","eco00190:Oxidative phosphorylation",0.0180967914658061,1.16896663568831,1,1.74239841807094,0.000771529685162808,41,1.74239841807094,4,5,1,"Oxidative phosphorylation
+ padj:0.00077 N( -1/ +5/ 41)","Oxidative phosphorylation","protein","Sta","carbonSource","glucoselactate","kegg"
+"9","sdhB","eco00190:Oxidative phosphorylation",0.0225058213869391,1.44143267909474,1,1.64770513214539,0.000771529685162808,41,1.64770513214539,3,5,1,"Oxidative phosphorylation
+ padj:0.00077 N( -1/ +5/ 41)","Oxidative phosphorylation","protein","Sta","carbonSource","glucoselactate","kegg"
+"10","frdA","eco00190:Oxidative phosphorylation",0.0251940964398442,1.75186859787547,1,1.59870121255038,0.000771529685162808,41,1.59870121255038,2,5,1,"Oxidative phosphorylation
+ padj:0.00077 N( -1/ +5/ 41)","Oxidative phosphorylation","protein","Sta","carbonSource","glucoselactate","kegg"
+"11","nuoI","eco00190:Oxidative phosphorylation",0.0310706280181999,1.44893221684078,1,1.50764996843533,0.000771529685162808,41,1.50764996843533,1,5,1,"Oxidative phosphorylation
+ padj:0.00077 N( -1/ +5/ 41)","Oxidative phosphorylation","protein","Sta","carbonSource","glucoselactate","kegg"
+"12","ndh","eco00190:Oxidative phosphorylation",0.0203359884455387,-1.80770806137821,-1,-1.69173471354657,0.000771529685162808,41,1.69173471354657,-1,5,1,"Oxidative phosphorylation
+ padj:0.00077 N( -1/ +5/ 41)","Oxidative phosphorylation","protein","Sta","carbonSource","glucoselactate","kegg"
+"13","glpQ","eco00564:Glycerophospholipid metabolism",1.33925039256515e-10,3.32067299737137,1,9.87313821765336,0.0327365410620668,26,9.87313821765336,4,4,1,"Glycerophospholipid metabolism
+ padj:0.03274 N( -1/ +4/ 26)","Glycerophospholipid metabolism","protein","Sta","carbonSource","glucoselactate","kegg"
+"14","glpB","eco00564:Glycerophospholipid metabolism",4.73544577853219e-05,4.08254311258679,1,4.32463913175173,0.0327365410620668,26,4.32463913175173,3,4,1,"Glycerophospholipid metabolism
+ padj:0.03274 N( -1/ +4/ 26)","Glycerophospholipid metabolism","protein","Sta","carbonSource","glucoselactate","kegg"
+"15","glpA","eco00564:Glycerophospholipid metabolism",0.0039792272083927,2.59091786530592,1,2.4002012625289,0.0327365410620668,26,2.4002012625289,2,4,1,"Glycerophospholipid metabolism
+ padj:0.03274 N( -1/ +4/ 26)","Glycerophospholipid metabolism","protein","Sta","carbonSource","glucoselactate","kegg"
+"16","glpD","eco00564:Glycerophospholipid metabolism",0.00768577496049857,1.98676486557812,1,2.11431233582854,0.0327365410620668,26,2.11431233582854,1,4,1,"Glycerophospholipid metabolism
+ padj:0.03274 N( -1/ +4/ 26)","Glycerophospholipid metabolism","protein","Sta","carbonSource","glucoselactate","kegg"
+"17","aldB","eco00620:Pyruvate metabolism",5.02595995048637e-05,2.08316919361626,1,4.29878097641835,0.00109224586123247,40,4.29878097641835,6,6,1,"Pyruvate metabolism
+ padj:0.00109 N( -1/ +6/ 40)","Pyruvate metabolism","protein","Sta","carbonSource","glucoselactate","kegg"
+"18","pflD","eco00620:Pyruvate metabolism",7.50803510076436e-05,3.78304656576403,1,4.12447370567874,0.00109224586123247,40,4.12447370567874,5,6,1,"Pyruvate metabolism
+ padj:0.00109 N( -1/ +6/ 40)","Pyruvate metabolism","protein","Sta","carbonSource","glucoselactate","kegg"
+"19","maeB","eco00620:Pyruvate metabolism",0.00011324469882967,1.86448325948312,1,3.94598211887723,0.00109224586123247,40,3.94598211887723,3,6,1,"Pyruvate metabolism
+ padj:0.00109 N( -1/ +6/ 40)","Pyruvate metabolism","protein","Sta","carbonSource","glucoselactate","kegg"
+"20","ppsA","eco00620:Pyruvate metabolism",0.00011324469882967,1.83274075974177,1,3.94598211887723,0.00109224586123247,40,3.94598211887723,4,6,1,"Pyruvate metabolism
+ padj:0.00109 N( -1/ +6/ 40)","Pyruvate metabolism","protein","Sta","carbonSource","glucoselactate","kegg"
+"21","lldD","eco00620:Pyruvate metabolism",0.00296447502947889,3.97413077037634,1,2.5280522034756,0.00109224586123247,40,2.5280522034756,2,6,1,"Pyruvate metabolism
+ padj:0.00109 N( -1/ +6/ 40)","Pyruvate metabolism","protein","Sta","carbonSource","glucoselactate","kegg"
+"22","dld","eco00620:Pyruvate metabolism",0.014091617914003,1.29670698731739,1,1.85103914097261,0.00109224586123247,40,1.85103914097261,1,6,1,"Pyruvate metabolism
+ padj:0.00109 N( -1/ +6/ 40)","Pyruvate metabolism","protein","Sta","carbonSource","glucoselactate","kegg"
+"23","sdhA","eco00632:Benzoate degradation via CoA ligation",0.00776215779395196,1.56510020225298,1,2.11001753289901,0.0129488230181505,16,2.11001753289901,4,4,1,"Benzoate degradation via CoA ligation
+ padj:0.01295 N( -1/ +4/ 16)","Benzoate degradation via CoA ligation","protein","Sta","carbonSource","glucoselactate","kegg"
+"24","sdhB","eco00632:Benzoate degradation via CoA ligation",0.0225058213869391,1.44143267909474,1,1.64770513214539,0.0129488230181505,16,1.64770513214539,3,4,1,"Benzoate degradation via CoA ligation
+ padj:0.01295 N( -1/ +4/ 16)","Benzoate degradation via CoA ligation","protein","Sta","carbonSource","glucoselactate","kegg"
+"25","frdA","eco00632:Benzoate degradation via CoA ligation",0.0251940964398442,1.75186859787547,1,1.59870121255038,0.0129488230181505,16,1.59870121255038,2,4,1,"Benzoate degradation via CoA ligation
+ padj:0.01295 N( -1/ +4/ 16)","Benzoate degradation via CoA ligation","protein","Sta","carbonSource","glucoselactate","kegg"
+"26","fadB","eco00632:Benzoate degradation via CoA ligation",0.0421414774736488,1.21885041187068,1,1.37529024216398,0.0129488230181505,16,1.37529024216398,1,4,1,"Benzoate degradation via CoA ligation
+ padj:0.01295 N( -1/ +4/ 16)","Benzoate degradation via CoA ligation","protein","Sta","carbonSource","glucoselactate","kegg"
+"27","prpC","eco00640:Propanoate metabolism",3.7012705607722e-06,3.91654017335259,1,5.43164916706496,0.000159814352288956,25,5.43164916706496,6,6,1,"Propanoate metabolism
+ padj:0.00016 N( -1/ +6/ 25)","Propanoate metabolism","protein","Sta","carbonSource","glucoselactate","kegg"
+"28","prpD","eco00640:Propanoate metabolism",4.98344953655837e-05,3.15031449876031,1,4.3024699351366,0.000159814352288956,25,4.3024699351366,5,6,1,"Propanoate metabolism
+ padj:0.00016 N( -1/ +6/ 25)","Propanoate metabolism","protein","Sta","carbonSource","glucoselactate","kegg"
+"29","pflD","eco00640:Propanoate metabolism",7.50803510076436e-05,3.78304656576403,1,4.12447370567874,0.000159814352288956,25,4.12447370567874,4,6,1,"Propanoate metabolism
+ padj:0.00016 N( -1/ +6/ 25)","Propanoate metabolism","protein","Sta","carbonSource","glucoselactate","kegg"
+"30","sucC","eco00640:Propanoate metabolism",0.00363749023186284,1.40708873969264,1,2.43919816426137,0.000159814352288956,25,2.43919816426137,3,6,1,"Propanoate metabolism
+ padj:0.00016 N( -1/ +6/ 25)","Propanoate metabolism","protein","Sta","carbonSource","glucoselactate","kegg"
+"31","prpB","eco00640:Propanoate metabolism",0.00398544151458994,3.29857716845066,1,2.39952355965592,0.000159814352288956,25,2.39952355965592,2,6,1,"Propanoate metabolism
+ padj:0.00016 N( -1/ +6/ 25)","Propanoate metabolism","protein","Sta","carbonSource","glucoselactate","kegg"
+"32","fadB","eco00640:Propanoate metabolism",0.0421414774736488,1.21885041187068,1,1.37529024216398,0.000159814352288956,25,1.37529024216398,1,6,1,"Propanoate metabolism
+ padj:0.00016 N( -1/ +6/ 25)","Propanoate metabolism","protein","Sta","carbonSource","glucoselactate","kegg"
+"33","pflD","eco00650:Butanoate metabolism",7.50803510076436e-05,3.78304656576403,1,4.12447370567874,0.000350189342202656,31,4.12447370567874,6,6,1,"Butanoate metabolism
+ padj:0.00035 N( -1/ +6/ 31)","Butanoate metabolism","protein","Sta","carbonSource","glucoselactate","kegg"
+"34","sdhA","eco00650:Butanoate metabolism",0.00776215779395196,1.56510020225298,1,2.11001753289901,0.000350189342202656,31,2.11001753289901,5,6,1,"Butanoate metabolism
+ padj:0.00035 N( -1/ +6/ 31)","Butanoate metabolism","protein","Sta","carbonSource","glucoselactate","kegg"
+"35","sdhB","eco00650:Butanoate metabolism",0.0225058213869391,1.44143267909474,1,1.64770513214539,0.000350189342202656,31,1.64770513214539,4,6,1,"Butanoate metabolism
+ padj:0.00035 N( -1/ +6/ 31)","Butanoate metabolism","protein","Sta","carbonSource","glucoselactate","kegg"
+"36","frdA","eco00650:Butanoate metabolism",0.0251940964398442,1.75186859787547,1,1.59870121255038,0.000350189342202656,31,1.59870121255038,3,6,1,"Butanoate metabolism
+ padj:0.00035 N( -1/ +6/ 31)","Butanoate metabolism","protein","Sta","carbonSource","glucoselactate","kegg"
+"37","ilvN","eco00650:Butanoate metabolism",0.0284156085541225,1.69068610594223,1,1.54644303858574,0.000350189342202656,31,1.54644303858574,2,6,1,"Butanoate metabolism
+ padj:0.00035 N( -1/ +6/ 31)","Butanoate metabolism","protein","Sta","carbonSource","glucoselactate","kegg"
+"38","fadB","eco00650:Butanoate metabolism",0.0421414774736488,1.21885041187068,1,1.37529024216398,0.000350189342202656,31,1.37529024216398,1,6,1,"Butanoate metabolism
+ padj:0.00035 N( -1/ +6/ 31)","Butanoate metabolism","protein","Sta","carbonSource","glucoselactate","kegg"
+"39","mglB","eco02010:ABC transporters",7.38134029031712e-09,3.23570695528215,1,8.1318647726161,0.000169751616027614,153,8.1318647726161,11,11,1,"ABC transporters
+ padj:0.00017 N( -1/ +11/ 153)","ABC transporters","protein","Sta","carbonSource","glucoselactate","kegg"
+"40","mglA","eco02010:ABC transporters",5.02595995048637e-05,2.71182399375847,1,4.29878097641835,0.000169751616027614,153,4.29878097641835,10,11,1,"ABC transporters
+ padj:0.00017 N( -1/ +11/ 153)","ABC transporters","protein","Sta","carbonSource","glucoselactate","kegg"
+"41","mppA","eco02010:ABC transporters",0.00011324469882967,2.07060145145701,1,3.94598211887723,0.000169751616027614,153,3.94598211887723,9,11,1,"ABC transporters
+ padj:0.00017 N( -1/ +11/ 153)","ABC transporters","protein","Sta","carbonSource","glucoselactate","kegg"
+"42","ygiS","eco02010:ABC transporters",0.000183458434498362,3.3049227463432,1,3.73646231676772,0.000169751616027614,153,3.73646231676772,8,11,1,"ABC transporters
+ padj:0.00017 N( -1/ +11/ 153)","ABC transporters","protein","Sta","carbonSource","glucoselactate","kegg"
+"43","xylF","eco02010:ABC transporters",0.000958310551246815,2.70881489504593,1,3.01849373013095,0.000169751616027614,153,3.01849373013095,7,11,1,"ABC transporters
+ padj:0.00017 N( -1/ +11/ 153)","ABC transporters","protein","Sta","carbonSource","glucoselactate","kegg"
+"44","rbsA","eco02010:ABC transporters",0.00392830618132024,1.62555148013252,1,2.40579466964385,0.000169751616027614,153,2.40579466964385,6,11,1,"ABC transporters
+ padj:0.00017 N( -1/ +11/ 153)","ABC transporters","protein","Sta","carbonSource","glucoselactate","kegg"
+"45","argT","eco02010:ABC transporters",0.00945856047984677,1.61477579758952,1,2.02417495484876,0.000169751616027614,153,2.02417495484876,5,11,1,"ABC transporters
+ padj:0.00017 N( -1/ +11/ 153)","ABC transporters","protein","Sta","carbonSource","glucoselactate","kegg"
+"46","sbp","eco02010:ABC transporters",0.024364003422834,2.18878202181128,1,1.61325134815774,0.000169751616027614,153,1.61325134815774,4,11,1,"ABC transporters
+ padj:0.00017 N( -1/ +11/ 153)","ABC transporters","protein","Sta","carbonSource","glucoselactate","kegg"
+"47","alsB","eco02010:ABC transporters",0.0382468377819188,2.54557873372296,1,1.41740446614787,0.000169751616027614,153,1.41740446614787,3,11,1,"ABC transporters
+ padj:0.00017 N( -1/ +11/ 153)","ABC transporters","protein","Sta","carbonSource","glucoselactate","kegg"
+"48","araF","eco02010:ABC transporters",0.0394373989479753,1.31997056174794,1,1.40409173622049,0.000169751616027614,153,1.40409173622049,2,11,1,"ABC transporters
+ padj:0.00017 N( -1/ +11/ 153)","ABC transporters","protein","Sta","carbonSource","glucoselactate","kegg"
+"49","dppD","eco02010:ABC transporters",0.0474712120391396,1.47258551168155,1,1.32356967969537,0.000169751616027614,153,1.32356967969537,1,11,1,"ABC transporters
+ padj:0.00017 N( -1/ +11/ 153)","ABC transporters","protein","Sta","carbonSource","glucoselactate","kegg"
+"50","rplT","eco03010:Ribosome",0.00126965304593318,2.03563740439587,1,2.89631494110922,0.0171670702789364,54,2.89631494110922,6,6,1,"Ribosome
+ padj:0.01717 N( -1/ +6/ 54)","Ribosome","protein","Sta","carbonSource","glucoselactate","kegg"
+"51","rplM","eco03010:Ribosome",0.00136538404028317,1.57402108609815,1,2.86474517784106,0.0171670702789364,54,2.86474517784106,5,6,1,"Ribosome
+ padj:0.01717 N( -1/ +6/ 54)","Ribosome","protein","Sta","carbonSource","glucoselactate","kegg"
+"52","rplC","eco03010:Ribosome",0.00600189294655057,1.53459710318549,1,2.22171175518524,0.0171670702789364,54,2.22171175518524,4,6,1,"Ribosome
+ padj:0.01717 N( -1/ +6/ 54)","Ribosome","protein","Sta","carbonSource","glucoselactate","kegg"
+"53","rplX","eco03010:Ribosome",0.0200332353534309,1.95481457877413,1,1.69824890678855,0.0171670702789364,54,1.69824890678855,3,6,1,"Ribosome
+ padj:0.01717 N( -1/ +6/ 54)","Ribosome","protein","Sta","carbonSource","glucoselactate","kegg"
+"54","rplU","eco03010:Ribosome",0.020307921404644,1.63080471647429,1,1.69233452606295,0.0171670702789364,54,1.69233452606295,2,6,1,"Ribosome
+ padj:0.01717 N( -1/ +6/ 54)","Ribosome","protein","Sta","carbonSource","glucoselactate","kegg"
+"55","rplR","eco03010:Ribosome",0.0325772837207917,1.18740992811823,1,1.48708512979577,0.0171670702789364,54,1.48708512979577,1,6,1,"Ribosome
+ padj:0.01717 N( -1/ +6/ 54)","Ribosome","protein","Sta","carbonSource","glucoselactate","kegg"

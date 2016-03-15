@@ -1,0 +1,57 @@
+"","ID","MF_Name","padj_gene","log2","signChange","score_gene","FDR_GoMF","numGenesInCat","abs_score","rank","numSigP","numSigN","MF_Name_long","MF_Name_short","pick_data","growthPhase","test_for","vs","df_category"
+"1","flgK","GO:0003774~motor activity",0.000215831831615131,-2.31916113562909,-1,-3.66588450369702,7.99470759593746e-08,9,3.66588450369702,-1,0,8,"motor activity
+ padj:0.00000 N( -8/ +0/ 9)","motor activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"
+"2","flgJ","GO:0003774~motor activity",5.96351011497208e-05,-2.55765226764343,-1,-4.22449803978355,7.99470759593746e-08,9,4.22449803978355,-2,0,8,"motor activity
+ padj:0.00000 N( -8/ +0/ 9)","motor activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"
+"3","flgH","GO:0003774~motor activity",6.71551954554245e-06,-2.55771547538183,-1,-5.17292038254347,7.99470759593746e-08,9,5.17292038254347,-3,0,8,"motor activity
+ padj:0.00000 N( -8/ +0/ 9)","motor activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"
+"4","flgB","GO:0003774~motor activity",1.63358940292476e-06,-2.32110314495053,-1,-5.78685709251122,7.99470759593746e-08,9,5.78685709251122,-4,0,8,"motor activity
+ padj:0.00000 N( -8/ +0/ 9)","motor activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"
+"5","flgF","GO:0003774~motor activity",1.20807921561092e-07,-2.63185826044143,-1,-6.91790458742453,7.99470759593746e-08,9,6.91790458742453,-5,0,8,"motor activity
+ padj:0.00000 N( -8/ +0/ 9)","motor activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"
+"6","flgG","GO:0003774~motor activity",1.11281534217922e-07,-2.63903227916709,-1,-6.95357689543707,7.99470759593746e-08,9,6.95357689543707,-6,0,8,"motor activity
+ padj:0.00000 N( -8/ +0/ 9)","motor activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"
+"7","flgE","GO:0003774~motor activity",1.94952976710934e-08,-2.63083794180657,-1,-7.710070129241,7.99470759593746e-08,9,7.710070129241,-7,0,8,"motor activity
+ padj:0.00000 N( -8/ +0/ 9)","motor activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"
+"8","flgC","GO:0003774~motor activity",1.18350725914074e-10,-2.59015599339145,-1,-9.92682907394521,7.99470759593746e-08,9,9.92682907394521,-8,0,8,"motor activity
+ padj:0.00000 N( -8/ +0/ 9)","motor activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"
+"9","rpsV","GO:0005198~structural molecule activity",0.0439158578263361,1.66533051830147,1,1.35737862957801,8.85253537904473e-05,70,1.35737862957801,1,1,8,"structural molecule activity
+ padj:0.00009 N( -8/ +1/ 70)","structural molecule activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"
+"10","flgI","GO:0005198~structural molecule activity",0.00417909707707473,-2.07954945572684,-1,-2.37891754042656,8.85253537904473e-05,70,2.37891754042656,-1,1,8,"structural molecule activity
+ padj:0.00009 N( -8/ +1/ 70)","structural molecule activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"
+"11","flgL","GO:0005198~structural molecule activity",0.00148339632298115,-2.28478313216155,-1,-2.82874280184504,8.85253537904473e-05,70,2.82874280184504,-2,1,8,"structural molecule activity
+ padj:0.00009 N( -8/ +1/ 70)","structural molecule activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"
+"12","flgK","GO:0005198~structural molecule activity",0.000215831831615131,-2.31916113562909,-1,-3.66588450369702,8.85253537904473e-05,70,3.66588450369702,-3,1,8,"structural molecule activity
+ padj:0.00009 N( -8/ +1/ 70)","structural molecule activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"
+"13","flgB","GO:0005198~structural molecule activity",1.63358940292476e-06,-2.32110314495053,-1,-5.78685709251122,8.85253537904473e-05,70,5.78685709251122,-4,1,8,"structural molecule activity
+ padj:0.00009 N( -8/ +1/ 70)","structural molecule activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"
+"14","flgF","GO:0005198~structural molecule activity",1.20807921561092e-07,-2.63185826044143,-1,-6.91790458742453,8.85253537904473e-05,70,6.91790458742453,-5,1,8,"structural molecule activity
+ padj:0.00009 N( -8/ +1/ 70)","structural molecule activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"
+"15","flgG","GO:0005198~structural molecule activity",1.11281534217922e-07,-2.63903227916709,-1,-6.95357689543707,8.85253537904473e-05,70,6.95357689543707,-6,1,8,"structural molecule activity
+ padj:0.00009 N( -8/ +1/ 70)","structural molecule activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"
+"16","flgE","GO:0005198~structural molecule activity",1.94952976710934e-08,-2.63083794180657,-1,-7.710070129241,8.85253537904473e-05,70,7.710070129241,-7,1,8,"structural molecule activity
+ padj:0.00009 N( -8/ +1/ 70)","structural molecule activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"
+"17","flgC","GO:0005198~structural molecule activity",1.18350725914074e-10,-2.59015599339145,-1,-9.92682907394521,8.85253537904473e-05,70,9.92682907394521,-8,1,8,"structural molecule activity
+ padj:0.00009 N( -8/ +1/ 70)","structural molecule activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"
+"18","proX","GO:0015596~glycine betaine/proline porter activity",4.60555903817821e-21,5.75634305431624,1,20.336717646149,0.00170693484818518,3,20.336717646149,3,3,1,"glycine betaine/proline porter activity
+ padj:0.00171 N( -1/ +3/ 3)","glycine betaine/proline porter activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"
+"19","proW","GO:0015596~glycine betaine/proline porter activity",3.79719678395471e-14,5.29357811106523,1,13.4205368956252,0.00170693484818518,3,13.4205368956252,2,3,1,"glycine betaine/proline porter activity
+ padj:0.00171 N( -1/ +3/ 3)","glycine betaine/proline porter activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"
+"20","proV","GO:0015596~glycine betaine/proline porter activity",1.30139699015878e-12,5.20528536050051,1,11.8855902020274,0.00170693484818518,3,11.8855902020274,1,3,1,"glycine betaine/proline porter activity
+ padj:0.00171 N( -1/ +3/ 3)","glycine betaine/proline porter activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"
+"21","kdpC","GO:0022890~inorganic cation transmembrane transporter activity",0.0043776530995575,2.18803477868076,1,2.35875865640835,0.0285963522185763,51,2.35875865640835,2,2,6,"inorganic cation transmembrane transporter activity
+ padj:0.02860 N( -6/ +2/ 51)","inorganic cation transmembrane transporter activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"
+"22","kdpB","GO:0022890~inorganic cation transmembrane transporter activity",0.0257153161942627,1.74984255888844,1,1.58980813124648,0.0285963522185763,51,1.58980813124648,1,2,6,"inorganic cation transmembrane transporter activity
+ padj:0.02860 N( -6/ +2/ 51)","inorganic cation transmembrane transporter activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"
+"23","copA","GO:0022890~inorganic cation transmembrane transporter activity",0.0388079165408513,-1.96453384555283,-1,-1.41107967236176,0.0285963522185763,51,1.41107967236176,-1,2,6,"inorganic cation transmembrane transporter activity
+ padj:0.02860 N( -6/ +2/ 51)","inorganic cation transmembrane transporter activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"
+"24","cyoC","GO:0022890~inorganic cation transmembrane transporter activity",0.0367849987190849,-1.16277847900768,-1,-1.43432925474434,0.0285963522185763,51,1.43432925474434,-2,2,6,"inorganic cation transmembrane transporter activity
+ padj:0.02860 N( -6/ +2/ 51)","inorganic cation transmembrane transporter activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"
+"25","pntB","GO:0022890~inorganic cation transmembrane transporter activity",0.0136563957053857,-1.32839230498821,-1,-1.86466390766839,0.0285963522185763,51,1.86466390766839,-3,2,6,"inorganic cation transmembrane transporter activity
+ padj:0.02860 N( -6/ +2/ 51)","inorganic cation transmembrane transporter activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"
+"26","fecA","GO:0022890~inorganic cation transmembrane transporter activity",0.0120265722971999,-1.92796479028953,-1,-1.91985813363519,0.0285963522185763,51,1.91985813363519,-4,2,6,"inorganic cation transmembrane transporter activity
+ padj:0.02860 N( -6/ +2/ 51)","inorganic cation transmembrane transporter activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"
+"27","fecB","GO:0022890~inorganic cation transmembrane transporter activity",0.00895744341299924,-2.04120676275803,-1,-2.04781592672867,0.0285963522185763,51,2.04781592672867,-5,2,6,"inorganic cation transmembrane transporter activity
+ padj:0.02860 N( -6/ +2/ 51)","inorganic cation transmembrane transporter activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"
+"28","amtB","GO:0022890~inorganic cation transmembrane transporter activity",0.000835498473456716,-2.43976099327048,-1,-3.0780543392714,0.0285963522185763,51,3.0780543392714,-6,2,6,"inorganic cation transmembrane transporter activity
+ padj:0.02860 N( -6/ +2/ 51)","inorganic cation transmembrane transporter activity","mrna","Exp","Na_mM_Levels","baseNahighNa","MF"

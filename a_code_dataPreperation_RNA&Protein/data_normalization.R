@@ -160,7 +160,7 @@ if(objectName$normalizationMethodChoice=="noNorm")
   # SAVE FILES
   if(saveFiles){
     # save genes0.05
-    objectName$initial="genes0.05"
+    objectName$initial="genes_P0.05Fold2"
     fileName=paste(objectName,collapse = "_")
     write.table(x = genes_0.05, 
                 file = paste0("../a_results/",fileName,".csv"),
@@ -173,7 +173,7 @@ if(objectName$normalizationMethodChoice=="noNorm")
     fileName=paste(objectName,collapse = "_")
     write.csv(x = res_df, 
               file = paste0("../a_results/",fileName,".csv"),
-              row.names = FALSE,
+              row.names = TRUE,
               quote = FALSE)
     
     # save metaData
@@ -201,7 +201,7 @@ if(objectName$normalizationMethodChoice!="noNorm")
     fileName=paste(objectName,collapse = "_")
     write.csv(x = res_df, 
               file = paste0("../a_results/",fileName,".csv"),
-              row.names = FALSE,
+              row.names = TRUE,
               quote = FALSE)
     
     # save metaData

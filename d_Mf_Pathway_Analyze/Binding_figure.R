@@ -85,10 +85,13 @@ mainLoadedFile_kegg %>%
 mainLoadedFile_mf$vs=as.character(mainLoadedFile_mf$vs)
 mainLoadedFile_mf %>%
   dplyr::filter(grepl("*.*binding*.*",MF_Name_short)) %>%
-  dplyr::mutate(pick_data=ifelse(pick_data=="mrna","mrna","protein"))%>%
+  dplyr::mutate(pick_data=ifelse(pick_data=="mrna","mRNA","Protein"))%>%
   dplyr::mutate(vs=ifelse(vs=="baseNahighNa","highNa",vs),
                 vs=ifelse(vs=="baseMghighMg","highMg",vs),
-                vs=ifelse(vs=="baseMglowMg","lowMg",vs))%>%
+                vs=ifelse(vs=="baseMglowMg","lowMg",vs),
+                vs=ifelse(vs=="glucoseglycerol","Glycerol",vs),
+                vs=ifelse(vs=="glucoselactate","Lactate",vs),
+                vs=ifelse(vs=="glucosegluconate","Gluconate",vs))%>%
   dplyr::group_by(MF_Name, padj_gene, pick_data,growthPhase,vs) %>%
   dplyr::mutate(grouping=paste(pick_data,
                                growthPhase,
@@ -107,8 +110,7 @@ mf_binding_df %>%
                                      "manganese ion binding",
                                      "cobalt ion binding",
                                      "calcium ion binding"))%>%
-  dplyr::filter(test_for !="carbonSource",
-                pick_data=="mrna")%>%
+  #dplyr::filter(test_for !="carbonSource")%>%
   dplyr::group_by(MF_Name, padj_gene, pick_data,growthPhase,vs) %>%
   dplyr::mutate(grouping=paste(vs,
                                sep = "-"))->mf_binding_ions_df
@@ -117,14 +119,15 @@ mf_binding_ions_df$MF_Name_short=factor((mf_binding_ions_df$MF_Name_short))
 
 mf_binding_ions_df %>%
   dplyr::group_by(MF_Name_short, pick_data, growthPhase, vs, grouping, signChange) %>%
-  dplyr::summarize(lengthObj=length(score_gene))%>%
+  dplyr::summarize(lengthObj=length(score_gene),unique(MF_Name_long))%>%
   dplyr::group_by() %>%
-  tidyr::complete(grouping,signChange,MF_Name_short,pick_data)->mf_binding_ions_summary
+  tidyr::complete(grouping,signChange,MF_Name_short,pick_data,growthPhase,vs)->mf_binding_ions_summary
 
 mf_binding_ions_summary$MF_Name_short=factor((mf_binding_ions_summary$MF_Name_short))
 
 mf_binding_ions_summary$grouping <- factor(mf_binding_ions_summary$grouping, 
-                                           levels = rev(c("lowMg", "highMg", "highNa")))
+                                           levels = (c("lowMg", "highMg", "highNa",
+                                                       "Glycerol","Lactate","Gluconate")))
 
 
 ###*****************************
@@ -147,20 +150,37 @@ fig01=ggplot(mf_binding_summary, aes(x=grouping,
 
 print(fig01)
 
-fig02=ggplot(mf_binding_ions_summary, aes(x=MF_Name_short,
+fig02=ggplot(mf_binding_ions_summary, aes(x=MF_Name_long,
                                           y=lengthObj,
                                           fill=as.factor(signChange))) +
-  #facet_grid( ~ MF_Name_short)+
+  facet_grid(grouping ~ growthPhase + pick_data)+
   geom_bar(position="dodge", stat="identity",width=.5)+
+  scale_y_continuous(expand = c(0, 0),limits = c(0,80))+
   scale_fill_manual(values = c("blue","red"),
                     name="Regulation",
                     breaks=c("-1", "1"),
                     labels=c("Down Regulated", "Up Regulated"))+
   xlab("conditions")+
-  ylab("number of differentially expressed")+
-  theme_bw()
+  ylab("number of differentially expressed genes")+
+  theme_bw()+
+  theme(panel.grid.minor.y = element_blank(),
+        legend.position=c(0.9,0.9),
+        strip.text.x = element_text(size = 16),
+        strip.text.y = element_text(size = 16),
+        axis.text.x=element_text(size=10),
+        axis.text.y=element_text(size=12),
+        axis.title.x=element_text(size=16),
+        axis.title.y=element_text(size=16),
+        legend.title=element_text(size=14),
+        legend.text=element_text(size=14),
+        panel.grid.minor.x=element_blank(),
+        panel.grid.major.x=element_blank(),
+        panel.margin.x=unit(1,"lines"),
+        legend.background = element_rect(fill=alpha(colour = "white",
+                                                    alpha = .4)))+
+  coord_flip()
 
 print(fig02)
 
 cowplot::save_plot(filename = paste0("../d_figures/binding_mf.pdf"),
-                   plot = fig02,ncol = 2.5,limitsize = FALSE)
+                   plot = fig02,ncol = 2.5,nrow=2,limitsize = FALSE)

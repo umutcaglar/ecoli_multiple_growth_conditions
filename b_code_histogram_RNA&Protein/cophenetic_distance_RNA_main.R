@@ -2,13 +2,17 @@
 
 ###*****************************
 # INITIAL COMMANDS TO RESET THE SYSTEM
-
 rm(list = ls())
 if (is.integer(dev.list())){dev.off()}
 cat("\014")
+###*****************************
 
+###*****************************
 # Set Working Directory
-setwd('/Users/umut/GitHub/ecoli_multiple_growth_conditions/b_code_histogram_RNA&Protein/') # mac computer
+# One needs to arrange the correct pathway if this is not umut's computer ;)
+if(as.vector(Sys.info()["effective_user"]=="umut"))
+{setwd(paste0("/Users/umut/GitHub/ecoli_multiple_growth_conditions/",
+              "b_code_histogram_RNA&Protein/"))} # mac computer
 ###*****************************
 
 
@@ -20,63 +24,61 @@ library("tidyr")
 
 
 ###*****************************
-# PARAMETERS FOR DATA
-conditionNumberChoice="uniqueCondition"
-dataTypeChoice="mrna" # can be "rna", "mrna","protein","protein_wo_NA","protein_wo_NAx6"
-badDataFilterSetChoice="set02" # "set00", "set01", "set02"
-dataTimeChoice="wholeSet" # exponential / stationary / late_stationary / wholeSet
-MgLevelChoice="allMg" # allMg highMg midMg lowMg
-NaLevelChoice="allNa" # allNa lowNa highNa
-carbonTypeChoice="SYAN" # a letter combination from the list "SYAN"  
-#S (glucose), Y (glycerol), A (lactate), N (gluconate)
-filterTypeChoice="noFilter" # mean/sd/ max/ noFilter
-deSeqNormChoice="p1"
-normalizationMethodChoice="vst" # "vst" , "log2" 
-experimentChoice=c("allEx") # can be "allEx", 
-# or a combination of below
-# "Stc" for "glucose_time_course", 
-# "Ytc" for "glycerol_time_course", 
-# "Nas" for "NaCl_stress", 
-# "Agr" for "lactate_growth", 
-# "Ngr" for "gluconate_growth", 
-# "Mgh" for "MgSO4_stress_low", 
-# "Mgl" for "MgSO4_stress_high"
+#Load Functions
+source("../a_code_dataPreperation_RNA&Protein/data_naming_functions.R")
+source("cophenetic_distance_functions.R")
+###*****************************
+
+###*****************************
+# Find the csv files that need to be imported
+dataName=name_data(initialValue=c("treeData"), # can be c("genes0.05","genes_P0.05Fold2","resDf")
+                   dataType = "mrna", # can be "rna", "mrna", "protein", "protein_wo_NA"
+                   badDataSet = "set02", # can be "set00",set01","set02", "set03"
+                   # referenceParameters can be a vector like
+                   # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
+                   referenceParameters=c("growthPhase",
+                                         "Mg_mM_Levels", 
+                                         "Na_mM_Levels", 
+                                         "carbonSource", 
+                                         "experiment"),
+                   # referenceLevels can be a vector like
+                   # c("exponential", "baseMg", "baseNa", "glucose", "glucose_time_course")
+                   referenceLevels=c("exponential",
+                                     "baseMg", 
+                                     "baseNa", 
+                                     "glucose", 
+                                     "glucose_time_course"),
+                   experimentVector = c("allEx"), # can be "Stc","Ytc","Nas","Agr","Ngr","Mgl","Mgh" // "allEx"
+                   carbonSourceVector = "SYAN", # can be any sub combination of "SYAN"
+                   MgLevelVector = c("allMg"), # can be "lowMg","baseMg","highMg" // "allMg"
+                   NaLevelVector = c("allNa"), # can be "baseNa","highNa" // "allNa"
+                   growthPhaseVector = c("allPhase"), # can be "exponential","stationary","late_stationary" // "allPhase"
+                   filterGenes = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
+                   threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
+                   roundData=TRUE,
+                   sumTechnicalReplicates=TRUE,
+                   deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf"
+                   normalizationMethodChoice= "vst", # can be "vst", "rlog", "log10", "noNorm"
+                   test_for = "noTest")  # works only if normalizationMethodChoice == noNorm
+# c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource", "noTest")
+
+dataName=as.data.frame(dataName[1])
+
+clusteringDataName=dataName
+clusteringDataName$objectName.initial="clustering"
+
+dataName=paste(dataName,collapse = "_")
+clusteringDataName=paste(clusteringDataName,collapse = "_")
+
+load(file = paste0("../b_results/",dataName,".RData"))
 ###*****************************
 
 
 ###*****************************
-# Order Experiment List
-experimentListOrder=c("allEx","Stc","Ytc","Nas","Agr","Ngr","Mgl","Mgh")
-currentOrder=experimentChoice
-experimentChoice=currentOrder[order(match(currentOrder,experimentListOrder))]
-#*******************************
-
-
-###*****************************
-# FILE NAME GENERATE
-
-experimentList=paste(experimentChoice, collapse = '')
-longNameList=paste0(dataTypeChoice,"_",dataTimeChoice,
-                    "_",MgLevelChoice,"_",NaLevelChoice,
-                    "_",carbonTypeChoice,"_",badDataFilterSetChoice,
-                    "_",experimentList)
-step03=paste0("normalized_",normalizationMethodChoice,"_",deSeqNormChoice,"_",
-              filterTypeChoice,"_",longNameList) 
-###*****************************
-
-
-###*****************************
-# Load data
-load(file = paste0("../b_results/treeFile_",step03,".RData"))
+# Make condition summary tidy
 tidyr::gather(conditionSummary, category, condition, growthPhase:batchNumber)->conditionSummary_tidy
 ###*****************************
-
-
-###*****************************
-# Install Functions
-source("cophenetic_distance_RNA_functions.R")
-###*****************************
-
+browser()
 
 ###*****************************
 # Number of Runs
@@ -268,19 +270,19 @@ all_results %>%
 
 
 #******************************
-new_name_all_results=paste0("all_results_",step03)
+new_name_all_results=paste0("all_results_",dataName)
 assign(x=new_name_all_results,all_results)
 
-new_name_all_results_Summary=paste0("all_results_Summary_",step03)
+new_name_all_results_Summary=paste0("all_results_Summary_",dataName)
 assign(x=new_name_all_results_Summary,all_results_Summary)
 #******************************
 
 
 #******************************
 save(list = c(new_name_all_results,new_name_all_results_Summary),
-     file = paste0("../b_results/clustering_",step03,".RData"))
+     file = paste0("../b_results/",clusteringDataName,".RData"))
 
 write.csv(x = all_results_Summary, 
-          file = paste0("../b_results/clustering_",step03,".csv"),
+          file = paste0("../b_results/",clusteringDataName,".csv"),
           row.names = F)
 #******************************

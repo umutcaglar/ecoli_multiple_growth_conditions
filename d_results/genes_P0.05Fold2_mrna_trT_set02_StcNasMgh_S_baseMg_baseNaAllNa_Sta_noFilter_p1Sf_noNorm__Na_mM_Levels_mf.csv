@@ -1,0 +1,683 @@
+"","ID","MF_Name","padj_gene","log2","signChange","score_gene","FDR_GoMF","numGenesInCat","abs_score","rank","numSigP","numSigN","MF_Name_long","MF_Name_short","pick_data","growthPhase","test_for","vs","df_category"
+"1","aphA","GO:0000287~magnesium ion binding",0.0203716646962699,2.40732810841199,1,1.6909734806285,0.00957541923799454,147,1.6909734806285,1,1,17,"magnesium ion binding
+ padj:0.00958 N( -17/ +1/ 147)","magnesium ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"2","xylA","GO:0000287~magnesium ion binding",0.0486800442400293,-1.50167088224229,-1,-1.31264903575849,0.00957541923799454,147,1.31264903575849,-1,1,17,"magnesium ion binding
+ padj:0.00958 N( -17/ +1/ 147)","magnesium ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"3","copA","GO:0000287~magnesium ion binding",0.0407000834706362,-1.41705239247461,-1,-1.39040470009174,0.00957541923799454,147,1.39040470009174,-2,1,17,"magnesium ion binding
+ padj:0.00958 N( -17/ +1/ 147)","magnesium ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"4","ppsA","GO:0000287~magnesium ion binding",0.0332224535587494,-1.43649490237619,-1,-1.47856829699969,0.00957541923799454,147,1.47856829699969,-3,1,17,"magnesium ion binding
+ padj:0.00958 N( -17/ +1/ 147)","magnesium ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"5","glpF","GO:0000287~magnesium ion binding",0.0304888212985013,-1.65625165436202,-1,-1.51585936518699,0.00957541923799454,147,1.51585936518699,-4,1,17,"magnesium ion binding
+ padj:0.00958 N( -17/ +1/ 147)","magnesium ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"6","glcB","GO:0000287~magnesium ion binding",0.0289316023359727,-2.13784788331115,-1,-1.53862751289884,0.00957541923799454,147,1.53862751289884,-5,1,17,"magnesium ion binding
+ padj:0.00958 N( -17/ +1/ 147)","magnesium ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"7","poxB","GO:0000287~magnesium ion binding",0.0271567659225975,-1.80551041127253,-1,-1.56612195109255,0.00957541923799454,147,1.56612195109255,-6,1,17,"magnesium ion binding
+ padj:0.00958 N( -17/ +1/ 147)","magnesium ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"8","ptsI","GO:0000287~magnesium ion binding",0.024528390134127,-1.87795591925112,-1,-1.61033095480252,0.00957541923799454,147,1.61033095480252,-7,1,17,"magnesium ion binding
+ padj:0.00958 N( -17/ +1/ 147)","magnesium ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"9","ppx","GO:0000287~magnesium ion binding",0.0196728259583454,-2.28281746498115,-1,-1.70613325014869,0.00957541923799454,147,1.70613325014869,-8,1,17,"magnesium ion binding
+ padj:0.00958 N( -17/ +1/ 147)","magnesium ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"10","gshB","GO:0000287~magnesium ion binding",0.0186758800765124,-2.74007764024168,-1,-1.7287189234688,0.00957541923799454,147,1.7287189234688,-9,1,17,"magnesium ion binding
+ padj:0.00958 N( -17/ +1/ 147)","magnesium ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"11","ubiA","GO:0000287~magnesium ion binding",0.0158395847580378,-1.89902973344423,-1,-1.80025620782586,0.00957541923799454,147,1.80025620782586,-10,1,17,"magnesium ion binding
+ padj:0.00958 N( -17/ +1/ 147)","magnesium ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"12","ppa","GO:0000287~magnesium ion binding",0.0129927210941353,-2.11452740986565,-1,-1.88629988415329,0.00957541923799454,147,1.88629988415329,-11,1,17,"magnesium ion binding
+ padj:0.00958 N( -17/ +1/ 147)","magnesium ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"13","galU","GO:0000287~magnesium ion binding",0.00724522437257802,-2.28960746888701,-1,-2.139948160605,0.00957541923799454,147,2.139948160605,-12,1,17,"magnesium ion binding
+ padj:0.00958 N( -17/ +1/ 147)","magnesium ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"14","eno","GO:0000287~magnesium ion binding",0.00672637183819703,-1.9250134598096,-1,-2.17221912827718,0.00957541923799454,147,2.17221912827718,-13,1,17,"magnesium ion binding
+ padj:0.00958 N( -17/ +1/ 147)","magnesium ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"15","cysQ","GO:0000287~magnesium ion binding",0.00637613107223392,-1.88920364687353,-1,-2.19544276385742,0.00957541923799454,147,2.19544276385742,-14,1,17,"magnesium ion binding
+ padj:0.00958 N( -17/ +1/ 147)","magnesium ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"16","pykF","GO:0000287~magnesium ion binding",0.003730994631775,-2.1693272164058,-1,-2.42817537582976,0.00957541923799454,147,2.42817537582976,-15,1,17,"magnesium ion binding
+ padj:0.00958 N( -17/ +1/ 147)","magnesium ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"17","pykA","GO:0000287~magnesium ion binding",0.00328972154114482,-1.93178563942747,-1,-2.48284086140027,0.00957541923799454,147,2.48284086140027,-16,1,17,"magnesium ion binding
+ padj:0.00958 N( -17/ +1/ 147)","magnesium ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"18","ribB","GO:0000287~magnesium ion binding",0.000936704270497131,-2.49218533577439,-1,-3.02839749978797,0.00957541923799454,147,3.02839749978797,-17,1,17,"magnesium ion binding
+ padj:0.00958 N( -17/ +1/ 147)","magnesium ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"19","glpB","GO:0004368~glycerol-3-phosphate dehydrogenase activity",0.00572518397321481,-2.56254877665719,-1,-2.24221055313336,0.0014659768308104,4,2.24221055313336,-1,0,4,"glycerol-3-phosphate dehydrogenase activity
+ padj:0.00147 N( -4/ +0/ 4)","glycerol-3-phosphate dehydrogenase activity","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"20","glpC","GO:0004368~glycerol-3-phosphate dehydrogenase activity",0.00229084773626057,-4.28321173960195,-1,-2.64000377571649,0.0014659768308104,4,2.64000377571649,-2,0,4,"glycerol-3-phosphate dehydrogenase activity
+ padj:0.00147 N( -4/ +0/ 4)","glycerol-3-phosphate dehydrogenase activity","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"21","glpD","GO:0004368~glycerol-3-phosphate dehydrogenase activity",0.00055366681247738,-3.06215471427151,-1,-3.25675150789479,0.0014659768308104,4,3.25675150789479,-3,0,4,"glycerol-3-phosphate dehydrogenase activity
+ padj:0.00147 N( -4/ +0/ 4)","glycerol-3-phosphate dehydrogenase activity","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"22","glpA","GO:0004368~glycerol-3-phosphate dehydrogenase activity",0.000373685158282158,-3.05443932591877,-1,-3.42749415075663,0.0014659768308104,4,3.42749415075663,-4,0,4,"glycerol-3-phosphate dehydrogenase activity
+ padj:0.00147 N( -4/ +0/ 4)","glycerol-3-phosphate dehydrogenase activity","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"23","glcF","GO:0005506~iron ion binding",0.0460192476075917,-2.89467771893986,-1,-1.33706048611375,0.00218739469790519,226,1.33706048611375,-1,0,26,"iron ion binding
+ padj:0.00219 N( -26/ +0/ 226)","iron ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"24","cydB","GO:0005506~iron ion binding",0.0407220968316396,-1.67145671862183,-1,-1.39016986773011,0.00218739469790519,226,1.39016986773011,-2,0,26,"iron ion binding
+ padj:0.00219 N( -26/ +0/ 226)","iron ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"25","iscA","GO:0005506~iron ion binding",0.0404895820722792,-1.75302023053459,-1,-1.39265670593447,0.00218739469790519,226,1.39265670593447,-3,0,26,"iron ion binding
+ padj:0.00219 N( -26/ +0/ 226)","iron ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"26","fes","GO:0005506~iron ion binding",0.0404424616738739,-2.98151319640553,-1,-1.39316241740245,0.00218739469790519,226,1.39316241740245,-4,0,26,"iron ion binding
+ padj:0.00219 N( -26/ +0/ 226)","iron ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"27","galT","GO:0005506~iron ion binding",0.0395313952831258,-3.19610927267269,-1,-1.40305785671526,0.00218739469790519,226,1.40305785671526,-5,0,26,"iron ion binding
+ padj:0.00219 N( -26/ +0/ 226)","iron ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"28","yleA","GO:0005506~iron ion binding",0.0349473162035987,-1.91911480765913,-1,-1.45658617049688,0.00218739469790519,226,1.45658617049688,-6,0,26,"iron ion binding
+ padj:0.00219 N( -26/ +0/ 226)","iron ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"29","ygiD","GO:0005506~iron ion binding",0.0310496647487068,-2.364493941118,-1,-1.50794308465238,0.00218739469790519,226,1.50794308465238,-7,0,26,"iron ion binding
+ padj:0.00219 N( -26/ +0/ 226)","iron ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"30","fecA","GO:0005506~iron ion binding",0.0289732318151214,-2.2511195947949,-1,-1.53800305877653,0.00218739469790519,226,1.53800305877653,-8,0,26,"iron ion binding
+ padj:0.00219 N( -26/ +0/ 226)","iron ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"31","entC","GO:0005506~iron ion binding",0.0244751171031961,-2.92876141100071,-1,-1.61127522160245,0.00218739469790519,226,1.61127522160245,-9,0,26,"iron ion binding
+ padj:0.00219 N( -26/ +0/ 226)","iron ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"32","fepA","GO:0005506~iron ion binding",0.0213168890975133,-2.51837319167186,-1,-1.67127617424032,0.00218739469790519,226,1.67127617424032,-10,0,26,"iron ion binding
+ padj:0.00219 N( -26/ +0/ 226)","iron ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"33","ispG","GO:0005506~iron ion binding",0.0211110421243216,-2.00790816286801,-1,-1.67549032767428,0.00218739469790519,226,1.67549032767428,-11,0,26,"iron ion binding
+ padj:0.00219 N( -26/ +0/ 226)","iron ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"34","dps","GO:0005506~iron ion binding",0.0203591989130737,-1.67220459958899,-1,-1.69123931447262,0.00218739469790519,226,1.69123931447262,-12,0,26,"iron ion binding
+ padj:0.00219 N( -26/ +0/ 226)","iron ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"35","hmpA","GO:0005506~iron ion binding",0.0193957980843617,-2.0140965617244,-1,-1.71229234565901,0.00218739469790519,226,1.71229234565901,-13,0,26,"iron ion binding
+ padj:0.00219 N( -26/ +0/ 226)","iron ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"36","narH","GO:0005506~iron ion binding",0.0172560974753157,-3.55448703141631,-1,-1.76305741467926,0.00218739469790519,226,1.76305741467926,-14,0,26,"iron ion binding
+ padj:0.00219 N( -26/ +0/ 226)","iron ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"37","def","GO:0005506~iron ion binding",0.0158298893812501,-1.55394002896501,-1,-1.80052211996269,0.00218739469790519,226,1.80052211996269,-15,0,26,"iron ion binding
+ padj:0.00219 N( -26/ +0/ 226)","iron ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"38","fdoG","GO:0005506~iron ion binding",0.0156791716682543,-1.82060391344053,-1,-1.80467688485367,0.00218739469790519,226,1.80467688485367,-16,0,26,"iron ion binding
+ padj:0.00219 N( -26/ +0/ 226)","iron ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"39","fhuA","GO:0005506~iron ion binding",0.0117814500819051,-2.15316842475407,-1,-1.92880125251904,0.00218739469790519,226,1.92880125251904,-17,0,26,"iron ion binding
+ padj:0.00219 N( -26/ +0/ 226)","iron ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"40","ygaG","GO:0005506~iron ion binding",0.0112856522671004,-2.3346780574539,-1,-1.94747333531762,0.00218739469790519,226,1.94747333531762,-18,0,26,"iron ion binding
+ padj:0.00219 N( -26/ +0/ 226)","iron ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"41","fumA","GO:0005506~iron ion binding",0.00617242170461572,-1.66274250455249,-1,-2.209544410261,0.00218739469790519,226,2.209544410261,-19,0,26,"iron ion binding
+ padj:0.00219 N( -26/ +0/ 226)","iron ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"42","dadA","GO:0005506~iron ion binding",0.00549598315287606,-2.1238008730552,-1,-2.259954607212,0.00218739469790519,226,2.259954607212,-20,0,26,"iron ion binding
+ padj:0.00219 N( -26/ +0/ 226)","iron ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"43","bfr","GO:0005506~iron ion binding",0.00301330221848022,-2.21191789514533,-1,-2.5209573086731,0.00218739469790519,226,2.5209573086731,-21,0,26,"iron ion binding
+ padj:0.00219 N( -26/ +0/ 226)","iron ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"44","glpC","GO:0005506~iron ion binding",0.00229084773626057,-4.28321173960195,-1,-2.64000377571649,0.00218739469790519,226,2.64000377571649,-22,0,26,"iron ion binding
+ padj:0.00219 N( -26/ +0/ 226)","iron ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"45","pflA","GO:0005506~iron ion binding",0.000439142707384724,-2.51733389089194,-1,-3.35739432495528,0.00218739469790519,226,3.35739432495528,-23,0,26,"iron ion binding
+ padj:0.00219 N( -26/ +0/ 226)","iron ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"46","sdaA","GO:0005506~iron ion binding",0.000386123848291311,-2.15840908325918,-1,-3.41327337407793,0.00218739469790519,226,3.41327337407793,-24,0,26,"iron ion binding
+ padj:0.00219 N( -26/ +0/ 226)","iron ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"47","adhE","GO:0005506~iron ion binding",2.64516958660121e-05,-2.7086437484591,-1,-4.57754647933234,0.00218739469790519,226,4.57754647933234,-25,0,26,"iron ion binding
+ padj:0.00219 N( -26/ +0/ 226)","iron ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"48","ydbK","GO:0005506~iron ion binding",6.81431394931065e-06,-3.18260641004872,-1,-5.16657786147664,0.00218739469790519,226,5.16657786147664,-26,0,26,"iron ion binding
+ padj:0.00219 N( -26/ +0/ 226)","iron ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"49","pepT","GO:0008270~zinc ion binding",0.0409878649790402,-2.33598847921728,-1,-1.38734470310263,0.00036499301639481,152,1.38734470310263,-1,0,21,"zinc ion binding
+ padj:0.00036 N( -21/ +0/ 152)","zinc ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"50","fbaA","GO:0008270~zinc ion binding",0.0407000834706362,-1.56806996795617,-1,-1.39040470009174,0.00036499301639481,152,1.39040470009174,-2,0,21,"zinc ion binding
+ padj:0.00036 N( -21/ +0/ 152)","zinc ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"51","ygiE","GO:0008270~zinc ion binding",0.0404424616738739,-1.772468246936,-1,-1.39316241740245,0.00036499301639481,152,1.39316241740245,-3,0,21,"zinc ion binding
+ padj:0.00036 N( -21/ +0/ 152)","zinc ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"52","hflB","GO:0008270~zinc ion binding",0.0397004193876676,-1.4773653228032,-1,-1.40120490540848,0.00036499301639481,152,1.40120490540848,-4,0,21,"zinc ion binding
+ padj:0.00036 N( -21/ +0/ 152)","zinc ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"53","galT","GO:0008270~zinc ion binding",0.0395313952831258,-3.19610927267269,-1,-1.40305785671526,0.00036499301639481,152,1.40305785671526,-5,0,21,"zinc ion binding
+ padj:0.00036 N( -21/ +0/ 152)","zinc ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"54","cdd","GO:0008270~zinc ion binding",0.0386564921470682,-1.71974260243684,-1,-1.41277755823016,0.00036499301639481,152,1.41277755823016,-6,0,21,"zinc ion binding
+ padj:0.00036 N( -21/ +0/ 152)","zinc ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"55","ygiD","GO:0008270~zinc ion binding",0.0310496647487068,-2.364493941118,-1,-1.50794308465238,0.00036499301639481,152,1.50794308465238,-7,0,21,"zinc ion binding
+ padj:0.00036 N( -21/ +0/ 152)","zinc ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"56","yeiH","GO:0008270~zinc ion binding",0.0282662765465794,-2.57959172636738,-1,-1.54873139638407,0.00036499301639481,152,1.54873139638407,-8,0,21,"zinc ion binding
+ padj:0.00036 N( -21/ +0/ 152)","zinc ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"57","yggG","GO:0008270~zinc ion binding",0.0282662765465794,-1.78299189305035,-1,-1.54873139638407,0.00036499301639481,152,1.54873139638407,-9,0,21,"zinc ion binding
+ padj:0.00036 N( -21/ +0/ 152)","zinc ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"58","ybiI","GO:0008270~zinc ion binding",0.0269028718036276,-2.19917169882034,-1,-1.57020135784524,0.00036499301639481,152,1.57020135784524,-10,0,21,"zinc ion binding
+ padj:0.00036 N( -21/ +0/ 152)","zinc ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"59","dapE","GO:0008270~zinc ion binding",0.0156791716682543,-2.22063378730986,-1,-1.80467688485367,0.00036499301639481,152,1.80467688485367,-11,0,21,"zinc ion binding
+ padj:0.00036 N( -21/ +0/ 152)","zinc ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"60","pepN","GO:0008270~zinc ion binding",0.01290949135452,-1.80864407119656,-1,-1.88909086898664,0.00036499301639481,152,1.88909086898664,-12,0,21,"zinc ion binding
+ padj:0.00036 N( -21/ +0/ 152)","zinc ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"61","pepD","GO:0008270~zinc ion binding",0.0127109232200393,-1.458039412856,-1,-1.89582290461457,0.00036499301639481,152,1.89582290461457,-13,0,21,"zinc ion binding
+ padj:0.00036 N( -21/ +0/ 152)","zinc ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"62","yhdH","GO:0008270~zinc ion binding",0.00501584406836696,-2.39089024412088,-1,-2.29965597323404,0.00036499301639481,152,2.29965597323404,-14,0,21,"zinc ion binding
+ padj:0.00036 N( -21/ +0/ 152)","zinc ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"63","clpX","GO:0008270~zinc ion binding",0.00280560183010585,-2.22570359457357,-1,-2.55197396383435,0.00036499301639481,152,2.55197396383435,-15,0,21,"zinc ion binding
+ padj:0.00036 N( -21/ +0/ 152)","zinc ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"64","yqhD","GO:0008270~zinc ion binding",0.00189379936139343,-2.77596631068908,-1,-2.72266603423209,0.00036499301639481,152,2.72266603423209,-16,0,21,"zinc ion binding
+ padj:0.00036 N( -21/ +0/ 152)","zinc ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"65","glpK","GO:0008270~zinc ion binding",0.00185761912480747,-2.36249125356464,-1,-2.73104332637618,0.00036499301639481,152,2.73104332637618,-17,0,21,"zinc ion binding
+ padj:0.00036 N( -21/ +0/ 152)","zinc ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"66","rpmE","GO:0008270~zinc ion binding",0.00169453243222661,-2.6959884545638,-1,-2.77095011463878,0.00036499301639481,152,2.77095011463878,-18,0,21,"zinc ion binding
+ padj:0.00036 N( -21/ +0/ 152)","zinc ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"67","slyD","GO:0008270~zinc ion binding",0.000913839488328113,-2.49104713145392,-1,-3.03913007938114,0.00036499301639481,152,3.03913007938114,-19,0,21,"zinc ion binding
+ padj:0.00036 N( -21/ +0/ 152)","zinc ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"68","dksA","GO:0008270~zinc ion binding",0.000373685158282158,-2.74216590116641,-1,-3.42749415075663,0.00036499301639481,152,3.42749415075663,-20,0,21,"zinc ion binding
+ padj:0.00036 N( -21/ +0/ 152)","zinc ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"69","crr","GO:0008270~zinc ion binding",0.000361911709938486,-2.96708419365268,-1,-3.44139736472437,0.00036499301639481,152,3.44139736472437,-21,0,21,"zinc ion binding
+ padj:0.00036 N( -21/ +0/ 152)","zinc ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"70","aphA","GO:0043167~ion binding",0.0203716646962699,2.40732810841199,1,1.6909734806285,6.30932417422514e-10,641,1.6909734806285,1,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"71","xylA","GO:0043167~ion binding",0.0486800442400293,-1.50167088224229,-1,-1.31264903575849,6.30932417422514e-10,641,1.31264903575849,-1,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"72","glcF","GO:0043167~ion binding",0.0460192476075917,-2.89467771893986,-1,-1.33706048611375,6.30932417422514e-10,641,1.33706048611375,-2,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"73","pepT","GO:0043167~ion binding",0.0409878649790402,-2.33598847921728,-1,-1.38734470310263,6.30932417422514e-10,641,1.38734470310263,-3,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"74","cydB","GO:0043167~ion binding",0.0407220968316396,-1.67145671862183,-1,-1.39016986773011,6.30932417422514e-10,641,1.39016986773011,-4,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"75","copA","GO:0043167~ion binding",0.0407000834706362,-1.41705239247461,-1,-1.39040470009174,6.30932417422514e-10,641,1.39040470009174,-5,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"76","fbaA","GO:0043167~ion binding",0.0407000834706362,-1.56806996795617,-1,-1.39040470009174,6.30932417422514e-10,641,1.39040470009174,-6,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"77","iscA","GO:0043167~ion binding",0.0404895820722792,-1.75302023053459,-1,-1.39265670593447,6.30932417422514e-10,641,1.39265670593447,-7,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"78","fes","GO:0043167~ion binding",0.0404424616738739,-2.98151319640553,-1,-1.39316241740245,6.30932417422514e-10,641,1.39316241740245,-8,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"79","ygiE","GO:0043167~ion binding",0.0404424616738739,-1.772468246936,-1,-1.39316241740245,6.30932417422514e-10,641,1.39316241740245,-9,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"80","hflB","GO:0043167~ion binding",0.0397004193876676,-1.4773653228032,-1,-1.40120490540848,6.30932417422514e-10,641,1.40120490540848,-10,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"81","galT","GO:0043167~ion binding",0.0395313952831258,-3.19610927267269,-1,-1.40305785671526,6.30932417422514e-10,641,1.40305785671526,-11,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"82","cdd","GO:0043167~ion binding",0.0386564921470682,-1.71974260243684,-1,-1.41277755823016,6.30932417422514e-10,641,1.41277755823016,-12,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"83","glpQ","GO:0043167~ion binding",0.0378141568011724,-1.82273065386589,-1,-1.42234557927371,6.30932417422514e-10,641,1.42234557927371,-13,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"84","ade","GO:0043167~ion binding",0.0350126202628554,-2.80861016791599,-1,-1.45577538643243,6.30932417422514e-10,641,1.45577538643243,-14,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"85","yleA","GO:0043167~ion binding",0.0349473162035987,-1.91911480765913,-1,-1.45658617049688,6.30932417422514e-10,641,1.45658617049688,-15,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"86","ppsA","GO:0043167~ion binding",0.0332224535587494,-1.43649490237619,-1,-1.47856829699969,6.30932417422514e-10,641,1.47856829699969,-16,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"87","ygiD","GO:0043167~ion binding",0.0310496647487068,-2.364493941118,-1,-1.50794308465238,6.30932417422514e-10,641,1.50794308465238,-17,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"88","glpF","GO:0043167~ion binding",0.0304888212985013,-1.65625165436202,-1,-1.51585936518699,6.30932417422514e-10,641,1.51585936518699,-18,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"89","glgX","GO:0043167~ion binding",0.0295619032562484,-1.73372727426714,-1,-1.52926760860341,6.30932417422514e-10,641,1.52926760860341,-19,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"90","fecA","GO:0043167~ion binding",0.0289732318151214,-2.2511195947949,-1,-1.53800305877653,6.30932417422514e-10,641,1.53800305877653,-20,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"91","glcB","GO:0043167~ion binding",0.0289316023359727,-2.13784788331115,-1,-1.53862751289884,6.30932417422514e-10,641,1.53862751289884,-21,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"92","yeiH","GO:0043167~ion binding",0.0282662765465794,-2.57959172636738,-1,-1.54873139638407,6.30932417422514e-10,641,1.54873139638407,-22,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"93","yggG","GO:0043167~ion binding",0.0282662765465794,-1.78299189305035,-1,-1.54873139638407,6.30932417422514e-10,641,1.54873139638407,-23,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"94","poxB","GO:0043167~ion binding",0.0271567659225975,-1.80551041127253,-1,-1.56612195109255,6.30932417422514e-10,641,1.56612195109255,-24,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"95","yiiM","GO:0043167~ion binding",0.0271567659225975,-2.22192130550654,-1,-1.56612195109255,6.30932417422514e-10,641,1.56612195109255,-25,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"96","ybiI","GO:0043167~ion binding",0.0269028718036276,-2.19917169882034,-1,-1.57020135784524,6.30932417422514e-10,641,1.57020135784524,-26,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"97","ptsI","GO:0043167~ion binding",0.024528390134127,-1.87795591925112,-1,-1.61033095480252,6.30932417422514e-10,641,1.61033095480252,-27,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"98","entC","GO:0043167~ion binding",0.0244751171031961,-2.92876141100071,-1,-1.61127522160245,6.30932417422514e-10,641,1.61127522160245,-28,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"99","fepA","GO:0043167~ion binding",0.0213168890975133,-2.51837319167186,-1,-1.67127617424032,6.30932417422514e-10,641,1.67127617424032,-29,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"100","ispG","GO:0043167~ion binding",0.0211110421243216,-2.00790816286801,-1,-1.67549032767428,6.30932417422514e-10,641,1.67549032767428,-30,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"101","dps","GO:0043167~ion binding",0.0203591989130737,-1.67220459958899,-1,-1.69123931447262,6.30932417422514e-10,641,1.69123931447262,-31,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"102","ppx","GO:0043167~ion binding",0.0196728259583454,-2.28281746498115,-1,-1.70613325014869,6.30932417422514e-10,641,1.70613325014869,-32,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"103","hmpA","GO:0043167~ion binding",0.0193957980843617,-2.0140965617244,-1,-1.71229234565901,6.30932417422514e-10,641,1.71229234565901,-33,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"104","gshB","GO:0043167~ion binding",0.0186758800765124,-2.74007764024168,-1,-1.7287189234688,6.30932417422514e-10,641,1.7287189234688,-34,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"105","narH","GO:0043167~ion binding",0.0172560974753157,-3.55448703141631,-1,-1.76305741467926,6.30932417422514e-10,641,1.76305741467926,-35,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"106","otsA","GO:0043167~ion binding",0.0166894537896447,-1.89958227868455,-1,-1.77755787662363,6.30932417422514e-10,641,1.77755787662363,-36,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"107","ubiA","GO:0043167~ion binding",0.0158395847580378,-1.89902973344423,-1,-1.80025620782586,6.30932417422514e-10,641,1.80025620782586,-37,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"108","def","GO:0043167~ion binding",0.0158298893812501,-1.55394002896501,-1,-1.80052211996269,6.30932417422514e-10,641,1.80052211996269,-38,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"109","dapE","GO:0043167~ion binding",0.0156791716682543,-2.22063378730986,-1,-1.80467688485367,6.30932417422514e-10,641,1.80467688485367,-39,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"110","fdoG","GO:0043167~ion binding",0.0156791716682543,-1.82060391344053,-1,-1.80467688485367,6.30932417422514e-10,641,1.80467688485367,-40,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"111","ppa","GO:0043167~ion binding",0.0129927210941353,-2.11452740986565,-1,-1.88629988415329,6.30932417422514e-10,641,1.88629988415329,-41,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"112","pepN","GO:0043167~ion binding",0.01290949135452,-1.80864407119656,-1,-1.88909086898664,6.30932417422514e-10,641,1.88909086898664,-42,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"113","fucI","GO:0043167~ion binding",0.0127109232200393,-2.61053564553888,-1,-1.89582290461457,6.30932417422514e-10,641,1.89582290461457,-43,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"114","pepD","GO:0043167~ion binding",0.0127109232200393,-1.458039412856,-1,-1.89582290461457,6.30932417422514e-10,641,1.89582290461457,-44,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"115","fhuA","GO:0043167~ion binding",0.0117814500819051,-2.15316842475407,-1,-1.92880125251904,6.30932417422514e-10,641,1.92880125251904,-45,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"116","ygaG","GO:0043167~ion binding",0.0112856522671004,-2.3346780574539,-1,-1.94747333531762,6.30932417422514e-10,641,1.94747333531762,-46,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"117","galU","GO:0043167~ion binding",0.00724522437257802,-2.28960746888701,-1,-2.139948160605,6.30932417422514e-10,641,2.139948160605,-47,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"118","eno","GO:0043167~ion binding",0.00672637183819703,-1.9250134598096,-1,-2.17221912827718,6.30932417422514e-10,641,2.17221912827718,-48,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"119","cysQ","GO:0043167~ion binding",0.00637613107223392,-1.88920364687353,-1,-2.19544276385742,6.30932417422514e-10,641,2.19544276385742,-49,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"120","fumA","GO:0043167~ion binding",0.00617242170461572,-1.66274250455249,-1,-2.209544410261,6.30932417422514e-10,641,2.209544410261,-50,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"121","dadA","GO:0043167~ion binding",0.00549598315287606,-2.1238008730552,-1,-2.259954607212,6.30932417422514e-10,641,2.259954607212,-51,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"122","yhdH","GO:0043167~ion binding",0.00501584406836696,-2.39089024412088,-1,-2.29965597323404,6.30932417422514e-10,641,2.29965597323404,-52,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"123","hycI","GO:0043167~ion binding",0.00424171138126417,-3.53531686318854,-1,-2.37245888551033,6.30932417422514e-10,641,2.37245888551033,-53,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"124","map","GO:0043167~ion binding",0.00395822002462635,-2.23402545287433,-1,-2.40250006843552,6.30932417422514e-10,641,2.40250006843552,-54,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"125","pykF","GO:0043167~ion binding",0.003730994631775,-2.1693272164058,-1,-2.42817537582976,6.30932417422514e-10,641,2.42817537582976,-55,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"126","pykA","GO:0043167~ion binding",0.00328972154114482,-1.93178563942747,-1,-2.48284086140027,6.30932417422514e-10,641,2.48284086140027,-56,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"127","bfr","GO:0043167~ion binding",0.00301330221848022,-2.21191789514533,-1,-2.5209573086731,6.30932417422514e-10,641,2.5209573086731,-57,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"128","clpX","GO:0043167~ion binding",0.00280560183010585,-2.22570359457357,-1,-2.55197396383435,6.30932417422514e-10,641,2.55197396383435,-58,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"129","glpC","GO:0043167~ion binding",0.00229084773626057,-4.28321173960195,-1,-2.64000377571649,6.30932417422514e-10,641,2.64000377571649,-59,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"130","yqhD","GO:0043167~ion binding",0.00189379936139343,-2.77596631068908,-1,-2.72266603423209,6.30932417422514e-10,641,2.72266603423209,-60,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"131","glpK","GO:0043167~ion binding",0.00185761912480747,-2.36249125356464,-1,-2.73104332637618,6.30932417422514e-10,641,2.73104332637618,-61,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"132","rpmE","GO:0043167~ion binding",0.00169453243222661,-2.6959884545638,-1,-2.77095011463878,6.30932417422514e-10,641,2.77095011463878,-62,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"133","ribB","GO:0043167~ion binding",0.000936704270497131,-2.49218533577439,-1,-3.02839749978797,6.30932417422514e-10,641,3.02839749978797,-63,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"134","slyD","GO:0043167~ion binding",0.000913839488328113,-2.49104713145392,-1,-3.03913007938114,6.30932417422514e-10,641,3.03913007938114,-64,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"135","gltS","GO:0043167~ion binding",0.000612383869699552,-2.21195226522863,-1,-3.2129762572173,6.30932417422514e-10,641,3.2129762572173,-65,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"136","pflA","GO:0043167~ion binding",0.000439142707384724,-2.51733389089194,-1,-3.35739432495528,6.30932417422514e-10,641,3.35739432495528,-66,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"137","sdaA","GO:0043167~ion binding",0.000386123848291311,-2.15840908325918,-1,-3.41327337407793,6.30932417422514e-10,641,3.41327337407793,-67,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"138","dksA","GO:0043167~ion binding",0.000373685158282158,-2.74216590116641,-1,-3.42749415075663,6.30932417422514e-10,641,3.42749415075663,-68,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"139","crr","GO:0043167~ion binding",0.000361911709938486,-2.96708419365268,-1,-3.44139736472437,6.30932417422514e-10,641,3.44139736472437,-69,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"140","adhE","GO:0043167~ion binding",2.64516958660121e-05,-2.7086437484591,-1,-4.57754647933234,6.30932417422514e-10,641,4.57754647933234,-70,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"141","mntH","GO:0043167~ion binding",8.10355376053039e-06,-2.77056985868391,-1,-5.09132448234116,6.30932417422514e-10,641,5.09132448234116,-71,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"142","ydbK","GO:0043167~ion binding",6.81431394931065e-06,-3.18260641004872,-1,-5.16657786147664,6.30932417422514e-10,641,5.16657786147664,-72,1,72,"ion binding
+ padj:0.00000 N( -72/ +1/ 641)","ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"143","aphA","GO:0043169~cation binding",0.0203716646962699,2.40732810841199,1,1.6909734806285,4.88728280068074e-10,639,1.6909734806285,1,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"144","xylA","GO:0043169~cation binding",0.0486800442400293,-1.50167088224229,-1,-1.31264903575849,4.88728280068074e-10,639,1.31264903575849,-1,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"145","glcF","GO:0043169~cation binding",0.0460192476075917,-2.89467771893986,-1,-1.33706048611375,4.88728280068074e-10,639,1.33706048611375,-2,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"146","pepT","GO:0043169~cation binding",0.0409878649790402,-2.33598847921728,-1,-1.38734470310263,4.88728280068074e-10,639,1.38734470310263,-3,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"147","cydB","GO:0043169~cation binding",0.0407220968316396,-1.67145671862183,-1,-1.39016986773011,4.88728280068074e-10,639,1.39016986773011,-4,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"148","copA","GO:0043169~cation binding",0.0407000834706362,-1.41705239247461,-1,-1.39040470009174,4.88728280068074e-10,639,1.39040470009174,-5,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"149","fbaA","GO:0043169~cation binding",0.0407000834706362,-1.56806996795617,-1,-1.39040470009174,4.88728280068074e-10,639,1.39040470009174,-6,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"150","iscA","GO:0043169~cation binding",0.0404895820722792,-1.75302023053459,-1,-1.39265670593447,4.88728280068074e-10,639,1.39265670593447,-7,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"151","fes","GO:0043169~cation binding",0.0404424616738739,-2.98151319640553,-1,-1.39316241740245,4.88728280068074e-10,639,1.39316241740245,-8,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"152","ygiE","GO:0043169~cation binding",0.0404424616738739,-1.772468246936,-1,-1.39316241740245,4.88728280068074e-10,639,1.39316241740245,-9,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"153","hflB","GO:0043169~cation binding",0.0397004193876676,-1.4773653228032,-1,-1.40120490540848,4.88728280068074e-10,639,1.40120490540848,-10,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"154","galT","GO:0043169~cation binding",0.0395313952831258,-3.19610927267269,-1,-1.40305785671526,4.88728280068074e-10,639,1.40305785671526,-11,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"155","cdd","GO:0043169~cation binding",0.0386564921470682,-1.71974260243684,-1,-1.41277755823016,4.88728280068074e-10,639,1.41277755823016,-12,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"156","glpQ","GO:0043169~cation binding",0.0378141568011724,-1.82273065386589,-1,-1.42234557927371,4.88728280068074e-10,639,1.42234557927371,-13,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"157","ade","GO:0043169~cation binding",0.0350126202628554,-2.80861016791599,-1,-1.45577538643243,4.88728280068074e-10,639,1.45577538643243,-14,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"158","yleA","GO:0043169~cation binding",0.0349473162035987,-1.91911480765913,-1,-1.45658617049688,4.88728280068074e-10,639,1.45658617049688,-15,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"159","ppsA","GO:0043169~cation binding",0.0332224535587494,-1.43649490237619,-1,-1.47856829699969,4.88728280068074e-10,639,1.47856829699969,-16,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"160","ygiD","GO:0043169~cation binding",0.0310496647487068,-2.364493941118,-1,-1.50794308465238,4.88728280068074e-10,639,1.50794308465238,-17,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"161","glpF","GO:0043169~cation binding",0.0304888212985013,-1.65625165436202,-1,-1.51585936518699,4.88728280068074e-10,639,1.51585936518699,-18,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"162","glgX","GO:0043169~cation binding",0.0295619032562484,-1.73372727426714,-1,-1.52926760860341,4.88728280068074e-10,639,1.52926760860341,-19,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"163","fecA","GO:0043169~cation binding",0.0289732318151214,-2.2511195947949,-1,-1.53800305877653,4.88728280068074e-10,639,1.53800305877653,-20,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"164","glcB","GO:0043169~cation binding",0.0289316023359727,-2.13784788331115,-1,-1.53862751289884,4.88728280068074e-10,639,1.53862751289884,-21,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"165","yeiH","GO:0043169~cation binding",0.0282662765465794,-2.57959172636738,-1,-1.54873139638407,4.88728280068074e-10,639,1.54873139638407,-22,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"166","yggG","GO:0043169~cation binding",0.0282662765465794,-1.78299189305035,-1,-1.54873139638407,4.88728280068074e-10,639,1.54873139638407,-23,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"167","poxB","GO:0043169~cation binding",0.0271567659225975,-1.80551041127253,-1,-1.56612195109255,4.88728280068074e-10,639,1.56612195109255,-24,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"168","yiiM","GO:0043169~cation binding",0.0271567659225975,-2.22192130550654,-1,-1.56612195109255,4.88728280068074e-10,639,1.56612195109255,-25,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"169","ybiI","GO:0043169~cation binding",0.0269028718036276,-2.19917169882034,-1,-1.57020135784524,4.88728280068074e-10,639,1.57020135784524,-26,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"170","ptsI","GO:0043169~cation binding",0.024528390134127,-1.87795591925112,-1,-1.61033095480252,4.88728280068074e-10,639,1.61033095480252,-27,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"171","entC","GO:0043169~cation binding",0.0244751171031961,-2.92876141100071,-1,-1.61127522160245,4.88728280068074e-10,639,1.61127522160245,-28,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"172","fepA","GO:0043169~cation binding",0.0213168890975133,-2.51837319167186,-1,-1.67127617424032,4.88728280068074e-10,639,1.67127617424032,-29,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"173","ispG","GO:0043169~cation binding",0.0211110421243216,-2.00790816286801,-1,-1.67549032767428,4.88728280068074e-10,639,1.67549032767428,-30,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"174","dps","GO:0043169~cation binding",0.0203591989130737,-1.67220459958899,-1,-1.69123931447262,4.88728280068074e-10,639,1.69123931447262,-31,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"175","ppx","GO:0043169~cation binding",0.0196728259583454,-2.28281746498115,-1,-1.70613325014869,4.88728280068074e-10,639,1.70613325014869,-32,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"176","hmpA","GO:0043169~cation binding",0.0193957980843617,-2.0140965617244,-1,-1.71229234565901,4.88728280068074e-10,639,1.71229234565901,-33,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"177","gshB","GO:0043169~cation binding",0.0186758800765124,-2.74007764024168,-1,-1.7287189234688,4.88728280068074e-10,639,1.7287189234688,-34,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"178","narH","GO:0043169~cation binding",0.0172560974753157,-3.55448703141631,-1,-1.76305741467926,4.88728280068074e-10,639,1.76305741467926,-35,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"179","otsA","GO:0043169~cation binding",0.0166894537896447,-1.89958227868455,-1,-1.77755787662363,4.88728280068074e-10,639,1.77755787662363,-36,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"180","ubiA","GO:0043169~cation binding",0.0158395847580378,-1.89902973344423,-1,-1.80025620782586,4.88728280068074e-10,639,1.80025620782586,-37,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"181","def","GO:0043169~cation binding",0.0158298893812501,-1.55394002896501,-1,-1.80052211996269,4.88728280068074e-10,639,1.80052211996269,-38,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"182","dapE","GO:0043169~cation binding",0.0156791716682543,-2.22063378730986,-1,-1.80467688485367,4.88728280068074e-10,639,1.80467688485367,-39,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"183","fdoG","GO:0043169~cation binding",0.0156791716682543,-1.82060391344053,-1,-1.80467688485367,4.88728280068074e-10,639,1.80467688485367,-40,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"184","ppa","GO:0043169~cation binding",0.0129927210941353,-2.11452740986565,-1,-1.88629988415329,4.88728280068074e-10,639,1.88629988415329,-41,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"185","pepN","GO:0043169~cation binding",0.01290949135452,-1.80864407119656,-1,-1.88909086898664,4.88728280068074e-10,639,1.88909086898664,-42,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"186","fucI","GO:0043169~cation binding",0.0127109232200393,-2.61053564553888,-1,-1.89582290461457,4.88728280068074e-10,639,1.89582290461457,-43,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"187","pepD","GO:0043169~cation binding",0.0127109232200393,-1.458039412856,-1,-1.89582290461457,4.88728280068074e-10,639,1.89582290461457,-44,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"188","fhuA","GO:0043169~cation binding",0.0117814500819051,-2.15316842475407,-1,-1.92880125251904,4.88728280068074e-10,639,1.92880125251904,-45,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"189","ygaG","GO:0043169~cation binding",0.0112856522671004,-2.3346780574539,-1,-1.94747333531762,4.88728280068074e-10,639,1.94747333531762,-46,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"190","galU","GO:0043169~cation binding",0.00724522437257802,-2.28960746888701,-1,-2.139948160605,4.88728280068074e-10,639,2.139948160605,-47,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"191","eno","GO:0043169~cation binding",0.00672637183819703,-1.9250134598096,-1,-2.17221912827718,4.88728280068074e-10,639,2.17221912827718,-48,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"192","cysQ","GO:0043169~cation binding",0.00637613107223392,-1.88920364687353,-1,-2.19544276385742,4.88728280068074e-10,639,2.19544276385742,-49,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"193","fumA","GO:0043169~cation binding",0.00617242170461572,-1.66274250455249,-1,-2.209544410261,4.88728280068074e-10,639,2.209544410261,-50,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"194","dadA","GO:0043169~cation binding",0.00549598315287606,-2.1238008730552,-1,-2.259954607212,4.88728280068074e-10,639,2.259954607212,-51,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"195","yhdH","GO:0043169~cation binding",0.00501584406836696,-2.39089024412088,-1,-2.29965597323404,4.88728280068074e-10,639,2.29965597323404,-52,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"196","hycI","GO:0043169~cation binding",0.00424171138126417,-3.53531686318854,-1,-2.37245888551033,4.88728280068074e-10,639,2.37245888551033,-53,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"197","map","GO:0043169~cation binding",0.00395822002462635,-2.23402545287433,-1,-2.40250006843552,4.88728280068074e-10,639,2.40250006843552,-54,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"198","pykF","GO:0043169~cation binding",0.003730994631775,-2.1693272164058,-1,-2.42817537582976,4.88728280068074e-10,639,2.42817537582976,-55,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"199","pykA","GO:0043169~cation binding",0.00328972154114482,-1.93178563942747,-1,-2.48284086140027,4.88728280068074e-10,639,2.48284086140027,-56,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"200","bfr","GO:0043169~cation binding",0.00301330221848022,-2.21191789514533,-1,-2.5209573086731,4.88728280068074e-10,639,2.5209573086731,-57,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"201","clpX","GO:0043169~cation binding",0.00280560183010585,-2.22570359457357,-1,-2.55197396383435,4.88728280068074e-10,639,2.55197396383435,-58,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"202","glpC","GO:0043169~cation binding",0.00229084773626057,-4.28321173960195,-1,-2.64000377571649,4.88728280068074e-10,639,2.64000377571649,-59,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"203","yqhD","GO:0043169~cation binding",0.00189379936139343,-2.77596631068908,-1,-2.72266603423209,4.88728280068074e-10,639,2.72266603423209,-60,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"204","glpK","GO:0043169~cation binding",0.00185761912480747,-2.36249125356464,-1,-2.73104332637618,4.88728280068074e-10,639,2.73104332637618,-61,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"205","rpmE","GO:0043169~cation binding",0.00169453243222661,-2.6959884545638,-1,-2.77095011463878,4.88728280068074e-10,639,2.77095011463878,-62,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"206","ribB","GO:0043169~cation binding",0.000936704270497131,-2.49218533577439,-1,-3.02839749978797,4.88728280068074e-10,639,3.02839749978797,-63,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"207","slyD","GO:0043169~cation binding",0.000913839488328113,-2.49104713145392,-1,-3.03913007938114,4.88728280068074e-10,639,3.03913007938114,-64,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"208","gltS","GO:0043169~cation binding",0.000612383869699552,-2.21195226522863,-1,-3.2129762572173,4.88728280068074e-10,639,3.2129762572173,-65,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"209","pflA","GO:0043169~cation binding",0.000439142707384724,-2.51733389089194,-1,-3.35739432495528,4.88728280068074e-10,639,3.35739432495528,-66,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"210","sdaA","GO:0043169~cation binding",0.000386123848291311,-2.15840908325918,-1,-3.41327337407793,4.88728280068074e-10,639,3.41327337407793,-67,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"211","dksA","GO:0043169~cation binding",0.000373685158282158,-2.74216590116641,-1,-3.42749415075663,4.88728280068074e-10,639,3.42749415075663,-68,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"212","crr","GO:0043169~cation binding",0.000361911709938486,-2.96708419365268,-1,-3.44139736472437,4.88728280068074e-10,639,3.44139736472437,-69,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"213","adhE","GO:0043169~cation binding",2.64516958660121e-05,-2.7086437484591,-1,-4.57754647933234,4.88728280068074e-10,639,4.57754647933234,-70,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"214","mntH","GO:0043169~cation binding",8.10355376053039e-06,-2.77056985868391,-1,-5.09132448234116,4.88728280068074e-10,639,5.09132448234116,-71,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"215","ydbK","GO:0043169~cation binding",6.81431394931065e-06,-3.18260641004872,-1,-5.16657786147664,4.88728280068074e-10,639,5.16657786147664,-72,1,72,"cation binding
+ padj:0.00000 N( -72/ +1/ 639)","cation binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"216","aphA","GO:0046872~metal ion binding",0.0203716646962699,2.40732810841199,1,1.6909734806285,3.23505777721778e-10,625,1.6909734806285,1,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"217","xylA","GO:0046872~metal ion binding",0.0486800442400293,-1.50167088224229,-1,-1.31264903575849,3.23505777721778e-10,625,1.31264903575849,-1,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"218","glcF","GO:0046872~metal ion binding",0.0460192476075917,-2.89467771893986,-1,-1.33706048611375,3.23505777721778e-10,625,1.33706048611375,-2,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"219","pepT","GO:0046872~metal ion binding",0.0409878649790402,-2.33598847921728,-1,-1.38734470310263,3.23505777721778e-10,625,1.38734470310263,-3,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"220","cydB","GO:0046872~metal ion binding",0.0407220968316396,-1.67145671862183,-1,-1.39016986773011,3.23505777721778e-10,625,1.39016986773011,-4,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"221","copA","GO:0046872~metal ion binding",0.0407000834706362,-1.41705239247461,-1,-1.39040470009174,3.23505777721778e-10,625,1.39040470009174,-5,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"222","fbaA","GO:0046872~metal ion binding",0.0407000834706362,-1.56806996795617,-1,-1.39040470009174,3.23505777721778e-10,625,1.39040470009174,-6,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"223","iscA","GO:0046872~metal ion binding",0.0404895820722792,-1.75302023053459,-1,-1.39265670593447,3.23505777721778e-10,625,1.39265670593447,-7,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"224","fes","GO:0046872~metal ion binding",0.0404424616738739,-2.98151319640553,-1,-1.39316241740245,3.23505777721778e-10,625,1.39316241740245,-8,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"225","ygiE","GO:0046872~metal ion binding",0.0404424616738739,-1.772468246936,-1,-1.39316241740245,3.23505777721778e-10,625,1.39316241740245,-9,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"226","hflB","GO:0046872~metal ion binding",0.0397004193876676,-1.4773653228032,-1,-1.40120490540848,3.23505777721778e-10,625,1.40120490540848,-10,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"227","galT","GO:0046872~metal ion binding",0.0395313952831258,-3.19610927267269,-1,-1.40305785671526,3.23505777721778e-10,625,1.40305785671526,-11,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"228","cdd","GO:0046872~metal ion binding",0.0386564921470682,-1.71974260243684,-1,-1.41277755823016,3.23505777721778e-10,625,1.41277755823016,-12,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"229","glpQ","GO:0046872~metal ion binding",0.0378141568011724,-1.82273065386589,-1,-1.42234557927371,3.23505777721778e-10,625,1.42234557927371,-13,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"230","ade","GO:0046872~metal ion binding",0.0350126202628554,-2.80861016791599,-1,-1.45577538643243,3.23505777721778e-10,625,1.45577538643243,-14,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"231","yleA","GO:0046872~metal ion binding",0.0349473162035987,-1.91911480765913,-1,-1.45658617049688,3.23505777721778e-10,625,1.45658617049688,-15,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"232","ppsA","GO:0046872~metal ion binding",0.0332224535587494,-1.43649490237619,-1,-1.47856829699969,3.23505777721778e-10,625,1.47856829699969,-16,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"233","ygiD","GO:0046872~metal ion binding",0.0310496647487068,-2.364493941118,-1,-1.50794308465238,3.23505777721778e-10,625,1.50794308465238,-17,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"234","glpF","GO:0046872~metal ion binding",0.0304888212985013,-1.65625165436202,-1,-1.51585936518699,3.23505777721778e-10,625,1.51585936518699,-18,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"235","fecA","GO:0046872~metal ion binding",0.0289732318151214,-2.2511195947949,-1,-1.53800305877653,3.23505777721778e-10,625,1.53800305877653,-19,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"236","glcB","GO:0046872~metal ion binding",0.0289316023359727,-2.13784788331115,-1,-1.53862751289884,3.23505777721778e-10,625,1.53862751289884,-20,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"237","yeiH","GO:0046872~metal ion binding",0.0282662765465794,-2.57959172636738,-1,-1.54873139638407,3.23505777721778e-10,625,1.54873139638407,-21,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"238","yggG","GO:0046872~metal ion binding",0.0282662765465794,-1.78299189305035,-1,-1.54873139638407,3.23505777721778e-10,625,1.54873139638407,-22,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"239","poxB","GO:0046872~metal ion binding",0.0271567659225975,-1.80551041127253,-1,-1.56612195109255,3.23505777721778e-10,625,1.56612195109255,-23,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"240","yiiM","GO:0046872~metal ion binding",0.0271567659225975,-2.22192130550654,-1,-1.56612195109255,3.23505777721778e-10,625,1.56612195109255,-24,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"241","ybiI","GO:0046872~metal ion binding",0.0269028718036276,-2.19917169882034,-1,-1.57020135784524,3.23505777721778e-10,625,1.57020135784524,-25,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"242","ptsI","GO:0046872~metal ion binding",0.024528390134127,-1.87795591925112,-1,-1.61033095480252,3.23505777721778e-10,625,1.61033095480252,-26,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"243","entC","GO:0046872~metal ion binding",0.0244751171031961,-2.92876141100071,-1,-1.61127522160245,3.23505777721778e-10,625,1.61127522160245,-27,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"244","fepA","GO:0046872~metal ion binding",0.0213168890975133,-2.51837319167186,-1,-1.67127617424032,3.23505777721778e-10,625,1.67127617424032,-28,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"245","ispG","GO:0046872~metal ion binding",0.0211110421243216,-2.00790816286801,-1,-1.67549032767428,3.23505777721778e-10,625,1.67549032767428,-29,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"246","dps","GO:0046872~metal ion binding",0.0203591989130737,-1.67220459958899,-1,-1.69123931447262,3.23505777721778e-10,625,1.69123931447262,-30,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"247","ppx","GO:0046872~metal ion binding",0.0196728259583454,-2.28281746498115,-1,-1.70613325014869,3.23505777721778e-10,625,1.70613325014869,-31,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"248","hmpA","GO:0046872~metal ion binding",0.0193957980843617,-2.0140965617244,-1,-1.71229234565901,3.23505777721778e-10,625,1.71229234565901,-32,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"249","gshB","GO:0046872~metal ion binding",0.0186758800765124,-2.74007764024168,-1,-1.7287189234688,3.23505777721778e-10,625,1.7287189234688,-33,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"250","narH","GO:0046872~metal ion binding",0.0172560974753157,-3.55448703141631,-1,-1.76305741467926,3.23505777721778e-10,625,1.76305741467926,-34,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"251","otsA","GO:0046872~metal ion binding",0.0166894537896447,-1.89958227868455,-1,-1.77755787662363,3.23505777721778e-10,625,1.77755787662363,-35,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"252","ubiA","GO:0046872~metal ion binding",0.0158395847580378,-1.89902973344423,-1,-1.80025620782586,3.23505777721778e-10,625,1.80025620782586,-36,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"253","def","GO:0046872~metal ion binding",0.0158298893812501,-1.55394002896501,-1,-1.80052211996269,3.23505777721778e-10,625,1.80052211996269,-37,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"254","dapE","GO:0046872~metal ion binding",0.0156791716682543,-2.22063378730986,-1,-1.80467688485367,3.23505777721778e-10,625,1.80467688485367,-38,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"255","fdoG","GO:0046872~metal ion binding",0.0156791716682543,-1.82060391344053,-1,-1.80467688485367,3.23505777721778e-10,625,1.80467688485367,-39,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"256","ppa","GO:0046872~metal ion binding",0.0129927210941353,-2.11452740986565,-1,-1.88629988415329,3.23505777721778e-10,625,1.88629988415329,-40,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"257","pepN","GO:0046872~metal ion binding",0.01290949135452,-1.80864407119656,-1,-1.88909086898664,3.23505777721778e-10,625,1.88909086898664,-41,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"258","fucI","GO:0046872~metal ion binding",0.0127109232200393,-2.61053564553888,-1,-1.89582290461457,3.23505777721778e-10,625,1.89582290461457,-42,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"259","pepD","GO:0046872~metal ion binding",0.0127109232200393,-1.458039412856,-1,-1.89582290461457,3.23505777721778e-10,625,1.89582290461457,-43,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"260","fhuA","GO:0046872~metal ion binding",0.0117814500819051,-2.15316842475407,-1,-1.92880125251904,3.23505777721778e-10,625,1.92880125251904,-44,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"261","ygaG","GO:0046872~metal ion binding",0.0112856522671004,-2.3346780574539,-1,-1.94747333531762,3.23505777721778e-10,625,1.94747333531762,-45,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"262","galU","GO:0046872~metal ion binding",0.00724522437257802,-2.28960746888701,-1,-2.139948160605,3.23505777721778e-10,625,2.139948160605,-46,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"263","eno","GO:0046872~metal ion binding",0.00672637183819703,-1.9250134598096,-1,-2.17221912827718,3.23505777721778e-10,625,2.17221912827718,-47,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"264","cysQ","GO:0046872~metal ion binding",0.00637613107223392,-1.88920364687353,-1,-2.19544276385742,3.23505777721778e-10,625,2.19544276385742,-48,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"265","fumA","GO:0046872~metal ion binding",0.00617242170461572,-1.66274250455249,-1,-2.209544410261,3.23505777721778e-10,625,2.209544410261,-49,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"266","dadA","GO:0046872~metal ion binding",0.00549598315287606,-2.1238008730552,-1,-2.259954607212,3.23505777721778e-10,625,2.259954607212,-50,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"267","yhdH","GO:0046872~metal ion binding",0.00501584406836696,-2.39089024412088,-1,-2.29965597323404,3.23505777721778e-10,625,2.29965597323404,-51,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"268","hycI","GO:0046872~metal ion binding",0.00424171138126417,-3.53531686318854,-1,-2.37245888551033,3.23505777721778e-10,625,2.37245888551033,-52,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"269","map","GO:0046872~metal ion binding",0.00395822002462635,-2.23402545287433,-1,-2.40250006843552,3.23505777721778e-10,625,2.40250006843552,-53,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"270","pykF","GO:0046872~metal ion binding",0.003730994631775,-2.1693272164058,-1,-2.42817537582976,3.23505777721778e-10,625,2.42817537582976,-54,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"271","pykA","GO:0046872~metal ion binding",0.00328972154114482,-1.93178563942747,-1,-2.48284086140027,3.23505777721778e-10,625,2.48284086140027,-55,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"272","bfr","GO:0046872~metal ion binding",0.00301330221848022,-2.21191789514533,-1,-2.5209573086731,3.23505777721778e-10,625,2.5209573086731,-56,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"273","clpX","GO:0046872~metal ion binding",0.00280560183010585,-2.22570359457357,-1,-2.55197396383435,3.23505777721778e-10,625,2.55197396383435,-57,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"274","glpC","GO:0046872~metal ion binding",0.00229084773626057,-4.28321173960195,-1,-2.64000377571649,3.23505777721778e-10,625,2.64000377571649,-58,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"275","yqhD","GO:0046872~metal ion binding",0.00189379936139343,-2.77596631068908,-1,-2.72266603423209,3.23505777721778e-10,625,2.72266603423209,-59,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"276","glpK","GO:0046872~metal ion binding",0.00185761912480747,-2.36249125356464,-1,-2.73104332637618,3.23505777721778e-10,625,2.73104332637618,-60,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"277","rpmE","GO:0046872~metal ion binding",0.00169453243222661,-2.6959884545638,-1,-2.77095011463878,3.23505777721778e-10,625,2.77095011463878,-61,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"278","ribB","GO:0046872~metal ion binding",0.000936704270497131,-2.49218533577439,-1,-3.02839749978797,3.23505777721778e-10,625,3.02839749978797,-62,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"279","slyD","GO:0046872~metal ion binding",0.000913839488328113,-2.49104713145392,-1,-3.03913007938114,3.23505777721778e-10,625,3.03913007938114,-63,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"280","gltS","GO:0046872~metal ion binding",0.000612383869699552,-2.21195226522863,-1,-3.2129762572173,3.23505777721778e-10,625,3.2129762572173,-64,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"281","pflA","GO:0046872~metal ion binding",0.000439142707384724,-2.51733389089194,-1,-3.35739432495528,3.23505777721778e-10,625,3.35739432495528,-65,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"282","sdaA","GO:0046872~metal ion binding",0.000386123848291311,-2.15840908325918,-1,-3.41327337407793,3.23505777721778e-10,625,3.41327337407793,-66,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"283","dksA","GO:0046872~metal ion binding",0.000373685158282158,-2.74216590116641,-1,-3.42749415075663,3.23505777721778e-10,625,3.42749415075663,-67,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"284","crr","GO:0046872~metal ion binding",0.000361911709938486,-2.96708419365268,-1,-3.44139736472437,3.23505777721778e-10,625,3.44139736472437,-68,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"285","adhE","GO:0046872~metal ion binding",2.64516958660121e-05,-2.7086437484591,-1,-4.57754647933234,3.23505777721778e-10,625,4.57754647933234,-69,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"286","mntH","GO:0046872~metal ion binding",8.10355376053039e-06,-2.77056985868391,-1,-5.09132448234116,3.23505777721778e-10,625,5.09132448234116,-70,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"287","ydbK","GO:0046872~metal ion binding",6.81431394931065e-06,-3.18260641004872,-1,-5.16657786147664,3.23505777721778e-10,625,5.16657786147664,-71,1,71,"metal ion binding
+ padj:0.00000 N( -71/ +1/ 625)","metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"288","glcF","GO:0046914~transition metal ion binding",0.0460192476075917,-2.89467771893986,-1,-1.33706048611375,8.84384501187441e-08,473,1.33706048611375,-1,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"289","pepT","GO:0046914~transition metal ion binding",0.0409878649790402,-2.33598847921728,-1,-1.38734470310263,8.84384501187441e-08,473,1.38734470310263,-2,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"290","cydB","GO:0046914~transition metal ion binding",0.0407220968316396,-1.67145671862183,-1,-1.39016986773011,8.84384501187441e-08,473,1.39016986773011,-3,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"291","copA","GO:0046914~transition metal ion binding",0.0407000834706362,-1.41705239247461,-1,-1.39040470009174,8.84384501187441e-08,473,1.39040470009174,-4,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"292","fbaA","GO:0046914~transition metal ion binding",0.0407000834706362,-1.56806996795617,-1,-1.39040470009174,8.84384501187441e-08,473,1.39040470009174,-5,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"293","iscA","GO:0046914~transition metal ion binding",0.0404895820722792,-1.75302023053459,-1,-1.39265670593447,8.84384501187441e-08,473,1.39265670593447,-6,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"294","fes","GO:0046914~transition metal ion binding",0.0404424616738739,-2.98151319640553,-1,-1.39316241740245,8.84384501187441e-08,473,1.39316241740245,-7,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"295","ygiE","GO:0046914~transition metal ion binding",0.0404424616738739,-1.772468246936,-1,-1.39316241740245,8.84384501187441e-08,473,1.39316241740245,-8,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"296","hflB","GO:0046914~transition metal ion binding",0.0397004193876676,-1.4773653228032,-1,-1.40120490540848,8.84384501187441e-08,473,1.40120490540848,-9,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"297","galT","GO:0046914~transition metal ion binding",0.0395313952831258,-3.19610927267269,-1,-1.40305785671526,8.84384501187441e-08,473,1.40305785671526,-10,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"298","cdd","GO:0046914~transition metal ion binding",0.0386564921470682,-1.71974260243684,-1,-1.41277755823016,8.84384501187441e-08,473,1.41277755823016,-11,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"299","ade","GO:0046914~transition metal ion binding",0.0350126202628554,-2.80861016791599,-1,-1.45577538643243,8.84384501187441e-08,473,1.45577538643243,-12,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"300","yleA","GO:0046914~transition metal ion binding",0.0349473162035987,-1.91911480765913,-1,-1.45658617049688,8.84384501187441e-08,473,1.45658617049688,-13,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"301","ygiD","GO:0046914~transition metal ion binding",0.0310496647487068,-2.364493941118,-1,-1.50794308465238,8.84384501187441e-08,473,1.50794308465238,-14,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"302","fecA","GO:0046914~transition metal ion binding",0.0289732318151214,-2.2511195947949,-1,-1.53800305877653,8.84384501187441e-08,473,1.53800305877653,-15,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"303","yeiH","GO:0046914~transition metal ion binding",0.0282662765465794,-2.57959172636738,-1,-1.54873139638407,8.84384501187441e-08,473,1.54873139638407,-16,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"304","yggG","GO:0046914~transition metal ion binding",0.0282662765465794,-1.78299189305035,-1,-1.54873139638407,8.84384501187441e-08,473,1.54873139638407,-17,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"305","yiiM","GO:0046914~transition metal ion binding",0.0271567659225975,-2.22192130550654,-1,-1.56612195109255,8.84384501187441e-08,473,1.56612195109255,-18,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"306","ybiI","GO:0046914~transition metal ion binding",0.0269028718036276,-2.19917169882034,-1,-1.57020135784524,8.84384501187441e-08,473,1.57020135784524,-19,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"307","entC","GO:0046914~transition metal ion binding",0.0244751171031961,-2.92876141100071,-1,-1.61127522160245,8.84384501187441e-08,473,1.61127522160245,-20,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"308","fepA","GO:0046914~transition metal ion binding",0.0213168890975133,-2.51837319167186,-1,-1.67127617424032,8.84384501187441e-08,473,1.67127617424032,-21,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"309","ispG","GO:0046914~transition metal ion binding",0.0211110421243216,-2.00790816286801,-1,-1.67549032767428,8.84384501187441e-08,473,1.67549032767428,-22,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"310","dps","GO:0046914~transition metal ion binding",0.0203591989130737,-1.67220459958899,-1,-1.69123931447262,8.84384501187441e-08,473,1.69123931447262,-23,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"311","hmpA","GO:0046914~transition metal ion binding",0.0193957980843617,-2.0140965617244,-1,-1.71229234565901,8.84384501187441e-08,473,1.71229234565901,-24,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"312","gshB","GO:0046914~transition metal ion binding",0.0186758800765124,-2.74007764024168,-1,-1.7287189234688,8.84384501187441e-08,473,1.7287189234688,-25,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"313","narH","GO:0046914~transition metal ion binding",0.0172560974753157,-3.55448703141631,-1,-1.76305741467926,8.84384501187441e-08,473,1.76305741467926,-26,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"314","def","GO:0046914~transition metal ion binding",0.0158298893812501,-1.55394002896501,-1,-1.80052211996269,8.84384501187441e-08,473,1.80052211996269,-27,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"315","dapE","GO:0046914~transition metal ion binding",0.0156791716682543,-2.22063378730986,-1,-1.80467688485367,8.84384501187441e-08,473,1.80467688485367,-28,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"316","fdoG","GO:0046914~transition metal ion binding",0.0156791716682543,-1.82060391344053,-1,-1.80467688485367,8.84384501187441e-08,473,1.80467688485367,-29,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"317","pepN","GO:0046914~transition metal ion binding",0.01290949135452,-1.80864407119656,-1,-1.88909086898664,8.84384501187441e-08,473,1.88909086898664,-30,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"318","fucI","GO:0046914~transition metal ion binding",0.0127109232200393,-2.61053564553888,-1,-1.89582290461457,8.84384501187441e-08,473,1.89582290461457,-31,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"319","pepD","GO:0046914~transition metal ion binding",0.0127109232200393,-1.458039412856,-1,-1.89582290461457,8.84384501187441e-08,473,1.89582290461457,-32,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"320","fhuA","GO:0046914~transition metal ion binding",0.0117814500819051,-2.15316842475407,-1,-1.92880125251904,8.84384501187441e-08,473,1.92880125251904,-33,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"321","ygaG","GO:0046914~transition metal ion binding",0.0112856522671004,-2.3346780574539,-1,-1.94747333531762,8.84384501187441e-08,473,1.94747333531762,-34,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"322","fumA","GO:0046914~transition metal ion binding",0.00617242170461572,-1.66274250455249,-1,-2.209544410261,8.84384501187441e-08,473,2.209544410261,-35,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"323","dadA","GO:0046914~transition metal ion binding",0.00549598315287606,-2.1238008730552,-1,-2.259954607212,8.84384501187441e-08,473,2.259954607212,-36,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"324","yhdH","GO:0046914~transition metal ion binding",0.00501584406836696,-2.39089024412088,-1,-2.29965597323404,8.84384501187441e-08,473,2.29965597323404,-37,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"325","hycI","GO:0046914~transition metal ion binding",0.00424171138126417,-3.53531686318854,-1,-2.37245888551033,8.84384501187441e-08,473,2.37245888551033,-38,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"326","map","GO:0046914~transition metal ion binding",0.00395822002462635,-2.23402545287433,-1,-2.40250006843552,8.84384501187441e-08,473,2.40250006843552,-39,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"327","bfr","GO:0046914~transition metal ion binding",0.00301330221848022,-2.21191789514533,-1,-2.5209573086731,8.84384501187441e-08,473,2.5209573086731,-40,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"328","clpX","GO:0046914~transition metal ion binding",0.00280560183010585,-2.22570359457357,-1,-2.55197396383435,8.84384501187441e-08,473,2.55197396383435,-41,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"329","glpC","GO:0046914~transition metal ion binding",0.00229084773626057,-4.28321173960195,-1,-2.64000377571649,8.84384501187441e-08,473,2.64000377571649,-42,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"330","yqhD","GO:0046914~transition metal ion binding",0.00189379936139343,-2.77596631068908,-1,-2.72266603423209,8.84384501187441e-08,473,2.72266603423209,-43,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"331","glpK","GO:0046914~transition metal ion binding",0.00185761912480747,-2.36249125356464,-1,-2.73104332637618,8.84384501187441e-08,473,2.73104332637618,-44,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"332","rpmE","GO:0046914~transition metal ion binding",0.00169453243222661,-2.6959884545638,-1,-2.77095011463878,8.84384501187441e-08,473,2.77095011463878,-45,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"333","ribB","GO:0046914~transition metal ion binding",0.000936704270497131,-2.49218533577439,-1,-3.02839749978797,8.84384501187441e-08,473,3.02839749978797,-46,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"334","slyD","GO:0046914~transition metal ion binding",0.000913839488328113,-2.49104713145392,-1,-3.03913007938114,8.84384501187441e-08,473,3.03913007938114,-47,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"335","pflA","GO:0046914~transition metal ion binding",0.000439142707384724,-2.51733389089194,-1,-3.35739432495528,8.84384501187441e-08,473,3.35739432495528,-48,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"336","sdaA","GO:0046914~transition metal ion binding",0.000386123848291311,-2.15840908325918,-1,-3.41327337407793,8.84384501187441e-08,473,3.41327337407793,-49,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"337","dksA","GO:0046914~transition metal ion binding",0.000373685158282158,-2.74216590116641,-1,-3.42749415075663,8.84384501187441e-08,473,3.42749415075663,-50,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"338","crr","GO:0046914~transition metal ion binding",0.000361911709938486,-2.96708419365268,-1,-3.44139736472437,8.84384501187441e-08,473,3.44139736472437,-51,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"339","adhE","GO:0046914~transition metal ion binding",2.64516958660121e-05,-2.7086437484591,-1,-4.57754647933234,8.84384501187441e-08,473,4.57754647933234,-52,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"340","mntH","GO:0046914~transition metal ion binding",8.10355376053039e-06,-2.77056985868391,-1,-5.09132448234116,8.84384501187441e-08,473,5.09132448234116,-53,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"
+"341","ydbK","GO:0046914~transition metal ion binding",6.81431394931065e-06,-3.18260641004872,-1,-5.16657786147664,8.84384501187441e-08,473,5.16657786147664,-54,0,54,"transition metal ion binding
+ padj:0.00000 N( -54/ +0/ 473)","transition metal ion binding","mrna","Sta","Na_mM_Levels","baseNahighNa","MF"

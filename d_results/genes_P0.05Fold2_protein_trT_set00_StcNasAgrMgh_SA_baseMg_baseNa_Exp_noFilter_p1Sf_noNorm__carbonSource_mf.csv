@@ -1,0 +1,357 @@
+"","ID","MF_Name","padj_gene","log2","signChange","score_gene","FDR_GoMF","numGenesInCat","abs_score","rank","numSigP","numSigN","MF_Name_long","MF_Name_short","pick_data","growthPhase","test_for","vs","df_category"
+"1","sdhB","GO:0000104~succinate dehydrogenase activity",0.000486752852542609,1.29294454036742,1,3.31269149468233,0.00524192449731242,7,3.31269149468233,4,4,1,"succinate dehydrogenase activity
+ padj:0.00524 N( -1/ +4/ 7)","succinate dehydrogenase activity","protein","Exp","carbonSource","glucoselactate","MF"
+"2","frdA","GO:0000104~succinate dehydrogenase activity",0.00179907339653407,2.06619497737848,1,2.7449511184446,0.00524192449731242,7,2.7449511184446,3,4,1,"succinate dehydrogenase activity
+ padj:0.00524 N( -1/ +4/ 7)","succinate dehydrogenase activity","protein","Exp","carbonSource","glucoselactate","MF"
+"3","sdhA","GO:0000104~succinate dehydrogenase activity",0.00255224145311125,1.19762500059475,1,2.59307824186564,0.00524192449731242,7,2.59307824186564,2,4,1,"succinate dehydrogenase activity
+ padj:0.00524 N( -1/ +4/ 7)","succinate dehydrogenase activity","protein","Exp","carbonSource","glucoselactate","MF"
+"4","frdB","GO:0000104~succinate dehydrogenase activity",0.044610366769901,1.99619244736467,1,1.35056420613544,0.00524192449731242,7,1.35056420613544,1,4,1,"succinate dehydrogenase activity
+ padj:0.00524 N( -1/ +4/ 7)","succinate dehydrogenase activity","protein","Exp","carbonSource","glucoselactate","MF"
+"5","glpK","GO:0000166~nucleotide binding",4.24074679099172e-17,3.10460939785218,1,16.372557657877,0.0237081800899743,586,16.372557657877,43,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"6","mglA","GO:0000166~nucleotide binding",1.33127009040043e-12,4.9906273241014,1,11.8757338251633,0.0237081800899743,586,11.8757338251633,42,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"7","lldD","GO:0000166~nucleotide binding",7.55002256289021e-12,4.80681166343588,1,11.1220517505001,0.0237081800899743,586,11.1220517505001,41,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"8","rbsA","GO:0000166~nucleotide binding",3.15946517665152e-08,2.07282969923809,1,7.50038642702936,0.0237081800899743,586,7.50038642702936,40,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"9","ppsA","GO:0000166~nucleotide binding",3.02640159053307e-07,1.98753101687157,1,6.51907344347068,0.0237081800899743,586,6.51907344347068,39,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"10","acs","GO:0000166~nucleotide binding",9.79649357998779e-07,2.32470363360111,1,6.00892934179304,0.0237081800899743,586,6.00892934179304,37,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"11","ydiA","GO:0000166~nucleotide binding",9.79649357998779e-07,2.23460558682501,1,6.00892934179304,0.0237081800899743,586,6.00892934179304,38,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"12","oppD","GO:0000166~nucleotide binding",1.39866515257207e-06,1.4711207359572,1,5.85428624533395,0.0237081800899743,586,5.85428624533395,36,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"13","crp","GO:0000166~nucleotide binding",1.85655054121169e-06,1.82369520442964,1,5.73129322339954,0.0237081800899743,586,5.73129322339954,35,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"14","maeB","GO:0000166~nucleotide binding",4.13869108884666e-06,1.6902181033279,1,5.38313698805103,0.0237081800899743,586,5.38313698805103,34,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"15","pckA","GO:0000166~nucleotide binding",2.09998310486379e-05,1.94110938531266,1,4.67778419931082,0.0237081800899743,586,4.67778419931082,33,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"16","glgC","GO:0000166~nucleotide binding",6.01721709169117e-05,1.3646372268499,1,4.22060431956655,0.0237081800899743,586,4.22060431956655,32,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"17","prkB","GO:0000166~nucleotide binding",0.000147461115991253,1.85138493385806,1,3.83132248366357,0.0237081800899743,586,3.83132248366357,31,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"18","moaB","GO:0000166~nucleotide binding",0.000157859451518587,1.59610086921595,1,3.80172941048077,0.0237081800899743,586,3.80172941048077,30,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"19","parE","GO:0000166~nucleotide binding",0.000169444642878187,1.39314127656456,1,3.77097215716133,0.0237081800899743,586,3.77097215716133,29,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"20","malK","GO:0000166~nucleotide binding",0.000231920493780191,1.28393728651188,1,3.63466087299894,0.0237081800899743,586,3.63466087299894,28,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"21","frdA","GO:0000166~nucleotide binding",0.00179907339653407,2.06619497737848,1,2.7449511184446,0.0237081800899743,586,2.7449511184446,26,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"22","hsdR","GO:0000166~nucleotide binding",0.00179907339653407,2.32366579525922,1,2.7449511184446,0.0237081800899743,586,2.7449511184446,27,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"23","lplA","GO:0000166~nucleotide binding",0.00252582969634898,1.84361709671601,1,2.59759593502743,0.0237081800899743,586,2.59759593502743,25,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"24","sdhA","GO:0000166~nucleotide binding",0.00255224145311125,1.19762500059475,1,2.59307824186564,0.0237081800899743,586,2.59307824186564,24,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"25","folA","GO:0000166~nucleotide binding",0.00307523337114564,1.82502955838349,1,2.512121921204,0.0237081800899743,586,2.512121921204,23,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"26","sucC","GO:0000166~nucleotide binding",0.00319812745531106,1.19292074097617,1,2.49510423226106,0.0237081800899743,586,2.49510423226106,22,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"27","pstB","GO:0000166~nucleotide binding",0.00588338726392081,1.6003054250048,1,2.23037256397896,0.0237081800899743,586,2.23037256397896,21,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"28","prfC","GO:0000166~nucleotide binding",0.00753690884111718,1.00786776552577,1,2.1228067374865,0.0237081800899743,586,2.1228067374865,20,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"29","tyrR","GO:0000166~nucleotide binding",0.00859615906447438,1.18364521512808,1,2.0656955568632,0.0237081800899743,586,2.0656955568632,19,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"30","yadG","GO:0000166~nucleotide binding",0.00948542055134563,1.22235010355369,1,2.02294340920549,0.0237081800899743,586,2.02294340920549,18,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"31","malT","GO:0000166~nucleotide binding",0.0103367335776127,2.10139499439463,1,1.98561667723171,0.0237081800899743,586,1.98561667723171,17,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"32","sfcA","GO:0000166~nucleotide binding",0.0168580152978672,1.20075968447428,1,1.77319355639699,0.0237081800899743,586,1.77319355639699,16,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"33","cmk","GO:0000166~nucleotide binding",0.0180748861428248,1.08838722427326,1,1.74292442972907,0.0237081800899743,586,1.74292442972907,15,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"34","udhA","GO:0000166~nucleotide binding",0.0182658663871483,1.25185571546052,1,1.738359723494,0.0237081800899743,586,1.738359723494,14,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"35","glnQ","GO:0000166~nucleotide binding",0.019455568923154,1.2261863271893,1,1.71095606495925,0.0237081800899743,586,1.71095606495925,13,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"36","yliA","GO:0000166~nucleotide binding",0.0199323926394476,1.41516262233255,1,1.70044056644048,0.0237081800899743,586,1.70044056644048,12,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"37","galK","GO:0000166~nucleotide binding",0.0212928877904009,1.42169326736607,1,1.67176543455103,0.0237081800899743,586,1.67176543455103,11,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"38","uvrD","GO:0000166~nucleotide binding",0.0215242065747371,1.29044343213044,1,1.66707284854164,0.0237081800899743,586,1.66707284854164,10,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"39","hrpA","GO:0000166~nucleotide binding",0.0236673961388985,1.37625208478456,1,1.6258495200478,0.0237081800899743,586,1.6258495200478,9,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"40","yfiQ","GO:0000166~nucleotide binding",0.0247197566909071,2.60841051580091,1,1.60695580819149,0.0237081800899743,586,1.60695580819149,8,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"41","adk","GO:0000166~nucleotide binding",0.0253551371010372,1.09896242927845,1,1.59593403677996,0.0237081800899743,586,1.59593403677996,7,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"42","yjiA","GO:0000166~nucleotide binding",0.0277512979421272,1.06543344023141,1,1.55671669989549,0.0237081800899743,586,1.55671669989549,6,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"43","rbsK","GO:0000166~nucleotide binding",0.0300680023849139,1.37469269759259,1,1.52189542397886,0.0237081800899743,586,1.52189542397886,5,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"44","visC","GO:0000166~nucleotide binding",0.0316628411322065,1.21428071795741,1,1.49945011813194,0.0237081800899743,586,1.49945011813194,4,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"45","trmE","GO:0000166~nucleotide binding",0.0356128519292436,1.13770685699396,1,1.44839324599611,0.0237081800899743,586,1.44839324599611,3,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"46","hemA","GO:0000166~nucleotide binding",0.0424584230743058,1.4064135995741,1,1.3720361397707,0.0237081800899743,586,1.3720361397707,2,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"47","rplW","GO:0000166~nucleotide binding",0.0427815815647902,1.20696465307468,1,1.36874316431417,0.0237081800899743,586,1.36874316431417,1,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"48","narX","GO:0000166~nucleotide binding",0.031864948736643,-2.6519423418896,-1,-1.49668677586326,0.0237081800899743,586,1.49668677586326,-1,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"49","entF","GO:0000166~nucleotide binding",0.0260500616684746,-2.68550897510736,-1,-1.58419124425519,0.0237081800899743,586,1.58419124425519,-2,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"50","folK","GO:0000166~nucleotide binding",0.0237713579270272,-2.53684580666664,-1,-1.6239460087064,0.0237081800899743,586,1.6239460087064,-3,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"51","cyaA","GO:0000166~nucleotide binding",0.0183709353067834,-1.59894748038556,-1,-1.73586873219531,0.0237081800899743,586,1.73586873219531,-4,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"52","fruK","GO:0000166~nucleotide binding",0.0138903711545852,-2.92199743767741,-1,-1.85728614963785,0.0237081800899743,586,1.85728614963785,-5,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"53","fldB","GO:0000166~nucleotide binding",0.0126847339015009,-2.25965057506145,-1,-1.89671863891304,0.0237081800899743,586,1.89671863891304,-6,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"54","apbA","GO:0000166~nucleotide binding",0.0065041652279085,-3.12229095098164,-1,-2.18680843471758,0.0237081800899743,586,2.18680843471758,-7,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"55","betA","GO:0000166~nucleotide binding",0.00130841968825988,-3.49770004328151,-1,-2.8832529295132,0.0237081800899743,586,2.8832529295132,-8,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"56","ndh","GO:0000166~nucleotide binding",6.97867533402829e-05,-1.93914254925559,-1,-4.15622700570329,0.0237081800899743,586,4.15622700570329,-9,43,9,"nucleotide binding
+ padj:0.02371 N( -9/ +43/ 586)","nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"57","rplC","GO:0003735~structural constituent of ribosome",9.9067681401802e-05,1.70414900657827,1,4.00406800119627,5.05629302094412e-07,57,4.00406800119627,11,11,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +11/ 57)","structural constituent of ribosome","protein","Exp","carbonSource","glucoselactate","MF"
+"58","rplM","GO:0003735~structural constituent of ribosome",0.000681844100466994,2.15190378420615,1,3.16631491280194,5.05629302094412e-07,57,3.16631491280194,10,11,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +11/ 57)","structural constituent of ribosome","protein","Exp","carbonSource","glucoselactate","MF"
+"59","rplV","GO:0003735~structural constituent of ribosome",0.00274582754233929,1.25550116383664,1,2.56132674305061,5.05629302094412e-07,57,2.56132674305061,9,11,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +11/ 57)","structural constituent of ribosome","protein","Exp","carbonSource","glucoselactate","MF"
+"60","rpmB","GO:0003735~structural constituent of ribosome",0.00322301965426842,1.34053136203172,1,2.49173704611215,5.05629302094412e-07,57,2.49173704611215,8,11,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +11/ 57)","structural constituent of ribosome","protein","Exp","carbonSource","glucoselactate","MF"
+"61","rplX","GO:0003735~structural constituent of ribosome",0.00629603653635692,1.54224487822851,1,2.20093276039928,5.05629302094412e-07,57,2.20093276039928,7,11,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +11/ 57)","structural constituent of ribosome","protein","Exp","carbonSource","glucoselactate","MF"
+"62","rplS","GO:0003735~structural constituent of ribosome",0.011877840448322,1.43207210503365,1,1.925262512775,5.05629302094412e-07,57,1.925262512775,6,11,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +11/ 57)","structural constituent of ribosome","protein","Exp","carbonSource","glucoselactate","MF"
+"63","rplU","GO:0003735~structural constituent of ribosome",0.0133184333313072,2.06130882474301,1,1.87554685891832,5.05629302094412e-07,57,1.87554685891832,5,11,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +11/ 57)","structural constituent of ribosome","protein","Exp","carbonSource","glucoselactate","MF"
+"64","rplQ","GO:0003735~structural constituent of ribosome",0.0134698500997925,1.65640280953688,1,1.87063723732788,5.05629302094412e-07,57,1.87063723732788,4,11,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +11/ 57)","structural constituent of ribosome","protein","Exp","carbonSource","glucoselactate","MF"
+"65","rpsK","GO:0003735~structural constituent of ribosome",0.0201396714388633,1.0232871033727,1,1.69594761885949,5.05629302094412e-07,57,1.69594761885949,3,11,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +11/ 57)","structural constituent of ribosome","protein","Exp","carbonSource","glucoselactate","MF"
+"66","rplT","GO:0003735~structural constituent of ribosome",0.0356128519292436,2.07080019418421,1,1.44839324599611,5.05629302094412e-07,57,1.44839324599611,2,11,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +11/ 57)","structural constituent of ribosome","protein","Exp","carbonSource","glucoselactate","MF"
+"67","rplW","GO:0003735~structural constituent of ribosome",0.0427815815647902,1.20696465307468,1,1.36874316431417,5.05629302094412e-07,57,1.36874316431417,1,11,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +11/ 57)","structural constituent of ribosome","protein","Exp","carbonSource","glucoselactate","MF"
+"68","rplC","GO:0005198~structural molecule activity",9.9067681401802e-05,1.70414900657827,1,4.00406800119627,4.73226472497146e-06,70,4.00406800119627,12,12,1,"structural molecule activity
+ padj:0.00000 N( -1/ +12/ 70)","structural molecule activity","protein","Exp","carbonSource","glucoselactate","MF"
+"69","rplM","GO:0005198~structural molecule activity",0.000681844100466994,2.15190378420615,1,3.16631491280194,4.73226472497146e-06,70,3.16631491280194,11,12,1,"structural molecule activity
+ padj:0.00000 N( -1/ +12/ 70)","structural molecule activity","protein","Exp","carbonSource","glucoselactate","MF"
+"70","rplV","GO:0005198~structural molecule activity",0.00274582754233929,1.25550116383664,1,2.56132674305061,4.73226472497146e-06,70,2.56132674305061,10,12,1,"structural molecule activity
+ padj:0.00000 N( -1/ +12/ 70)","structural molecule activity","protein","Exp","carbonSource","glucoselactate","MF"
+"71","rpmB","GO:0005198~structural molecule activity",0.00322301965426842,1.34053136203172,1,2.49173704611215,4.73226472497146e-06,70,2.49173704611215,9,12,1,"structural molecule activity
+ padj:0.00000 N( -1/ +12/ 70)","structural molecule activity","protein","Exp","carbonSource","glucoselactate","MF"
+"72","rplX","GO:0005198~structural molecule activity",0.00629603653635692,1.54224487822851,1,2.20093276039928,4.73226472497146e-06,70,2.20093276039928,8,12,1,"structural molecule activity
+ padj:0.00000 N( -1/ +12/ 70)","structural molecule activity","protein","Exp","carbonSource","glucoselactate","MF"
+"73","rplS","GO:0005198~structural molecule activity",0.011877840448322,1.43207210503365,1,1.925262512775,4.73226472497146e-06,70,1.925262512775,7,12,1,"structural molecule activity
+ padj:0.00000 N( -1/ +12/ 70)","structural molecule activity","protein","Exp","carbonSource","glucoselactate","MF"
+"74","rplU","GO:0005198~structural molecule activity",0.0133184333313072,2.06130882474301,1,1.87554685891832,4.73226472497146e-06,70,1.87554685891832,6,12,1,"structural molecule activity
+ padj:0.00000 N( -1/ +12/ 70)","structural molecule activity","protein","Exp","carbonSource","glucoselactate","MF"
+"75","rplQ","GO:0005198~structural molecule activity",0.0134698500997925,1.65640280953688,1,1.87063723732788,4.73226472497146e-06,70,1.87063723732788,5,12,1,"structural molecule activity
+ padj:0.00000 N( -1/ +12/ 70)","structural molecule activity","protein","Exp","carbonSource","glucoselactate","MF"
+"76","yadR","GO:0005198~structural molecule activity",0.0190985036518264,1.61389402265334,1,1.71900065794661,4.73226472497146e-06,70,1.71900065794661,4,12,1,"structural molecule activity
+ padj:0.00000 N( -1/ +12/ 70)","structural molecule activity","protein","Exp","carbonSource","glucoselactate","MF"
+"77","rpsK","GO:0005198~structural molecule activity",0.0201396714388633,1.0232871033727,1,1.69594761885949,4.73226472497146e-06,70,1.69594761885949,3,12,1,"structural molecule activity
+ padj:0.00000 N( -1/ +12/ 70)","structural molecule activity","protein","Exp","carbonSource","glucoselactate","MF"
+"78","rplT","GO:0005198~structural molecule activity",0.0356128519292436,2.07080019418421,1,1.44839324599611,4.73226472497146e-06,70,1.44839324599611,2,12,1,"structural molecule activity
+ padj:0.00000 N( -1/ +12/ 70)","structural molecule activity","protein","Exp","carbonSource","glucoselactate","MF"
+"79","rplW","GO:0005198~structural molecule activity",0.0427815815647902,1.20696465307468,1,1.36874316431417,4.73226472497146e-06,70,1.36874316431417,1,12,1,"structural molecule activity
+ padj:0.00000 N( -1/ +12/ 70)","structural molecule activity","protein","Exp","carbonSource","glucoselactate","MF"
+"80","sufA","GO:0005198~structural molecule activity",0.00144375615807748,-3.22614418589299,-1,-2.84050615035625,4.73226472497146e-06,70,2.84050615035625,-1,12,1,"structural molecule activity
+ padj:0.00000 N( -1/ +12/ 70)","structural molecule activity","protein","Exp","carbonSource","glucoselactate","MF"
+"81","pstB","GO:0005315~inorganic phosphate transmembrane transporter activity",0.00588338726392081,1.6003054250048,1,2.23037256397896,0.00232736989083204,10,2.23037256397896,1,1,1,"inorganic phosphate transmembrane transporter activity
+ padj:0.00233 N( -1/ +1/ 10)","inorganic phosphate transmembrane transporter activity","protein","Exp","carbonSource","glucoselactate","MF"
+"82","pstB","GO:0008509~anion transmembrane transporter activity",0.00588338726392081,1.6003054250048,1,2.23037256397896,0.0234405112366007,36,2.23037256397896,4,4,1,"anion transmembrane transporter activity
+ padj:0.02344 N( -1/ +4/ 36)","anion transmembrane transporter activity","protein","Exp","carbonSource","glucoselactate","MF"
+"83","dctA","GO:0008509~anion transmembrane transporter activity",0.00885191724844998,2.23230431853895,1,2.05296265469841,0.0234405112366007,36,2.05296265469841,3,4,1,"anion transmembrane transporter activity
+ padj:0.02344 N( -1/ +4/ 36)","anion transmembrane transporter activity","protein","Exp","carbonSource","glucoselactate","MF"
+"84","sbp","GO:0008509~anion transmembrane transporter activity",0.0256426675880316,1.58566102761048,1,1.59103679746445,0.0234405112366007,36,1.59103679746445,2,4,1,"anion transmembrane transporter activity
+ padj:0.02344 N( -1/ +4/ 36)","anion transmembrane transporter activity","protein","Exp","carbonSource","glucoselactate","MF"
+"85","ychM","GO:0008509~anion transmembrane transporter activity",0.0467125926751965,2.56171146611175,1,1.33056602752525,0.0234405112366007,36,1.33056602752525,1,4,1,"anion transmembrane transporter activity
+ padj:0.02344 N( -1/ +4/ 36)","anion transmembrane transporter activity","protein","Exp","carbonSource","glucoselactate","MF"
+"86","gltP","GO:0008509~anion transmembrane transporter activity",0.0062047247003552,-3.13331681782768,-1,-2.20727748310465,0.0234405112366007,36,2.20727748310465,-1,4,1,"anion transmembrane transporter activity
+ padj:0.02344 N( -1/ +4/ 36)","anion transmembrane transporter activity","protein","Exp","carbonSource","glucoselactate","MF"
+"87","pstB","GO:0015103~inorganic anion transmembrane transporter activity",0.00588338726392081,1.6003054250048,1,2.23037256397896,0.0169465885476126,25,2.23037256397896,3,3,1,"inorganic anion transmembrane transporter activity
+ padj:0.01695 N( -1/ +3/ 25)","inorganic anion transmembrane transporter activity","protein","Exp","carbonSource","glucoselactate","MF"
+"88","sbp","GO:0015103~inorganic anion transmembrane transporter activity",0.0256426675880316,1.58566102761048,1,1.59103679746445,0.0169465885476126,25,1.59103679746445,2,3,1,"inorganic anion transmembrane transporter activity
+ padj:0.01695 N( -1/ +3/ 25)","inorganic anion transmembrane transporter activity","protein","Exp","carbonSource","glucoselactate","MF"
+"89","ychM","GO:0015103~inorganic anion transmembrane transporter activity",0.0467125926751965,2.56171146611175,1,1.33056602752525,0.0169465885476126,25,1.33056602752525,1,3,1,"inorganic anion transmembrane transporter activity
+ padj:0.01695 N( -1/ +3/ 25)","inorganic anion transmembrane transporter activity","protein","Exp","carbonSource","glucoselactate","MF"
+"90","pstB","GO:0015114~phosphate transmembrane transporter activity",0.00588338726392081,1.6003054250048,1,2.23037256397896,0.00588027435906657,11,2.23037256397896,1,1,1,"phosphate transmembrane transporter activity
+ padj:0.00588 N( -1/ +1/ 11)","phosphate transmembrane transporter activity","protein","Exp","carbonSource","glucoselactate","MF"
+"91","mglA","GO:0015407~monosaccharide-transporting ATPase activity",1.33127009040043e-12,4.9906273241014,1,11.8757338251633,0.0221600282316919,9,11.8757338251633,5,5,1,"monosaccharide-transporting ATPase activity
+ padj:0.02216 N( -1/ +5/ 9)","monosaccharide-transporting ATPase activity","protein","Exp","carbonSource","glucoselactate","MF"
+"92","rbsA","GO:0015407~monosaccharide-transporting ATPase activity",3.15946517665152e-08,2.07282969923809,1,7.50038642702936,0.0221600282316919,9,7.50038642702936,4,5,1,"monosaccharide-transporting ATPase activity
+ padj:0.02216 N( -1/ +5/ 9)","monosaccharide-transporting ATPase activity","protein","Exp","carbonSource","glucoselactate","MF"
+"93","mglC","GO:0015407~monosaccharide-transporting ATPase activity",1.73939813421824e-07,4.217186643044,1,6.75960100011117,0.0221600282316919,9,6.75960100011117,3,5,1,"monosaccharide-transporting ATPase activity
+ padj:0.02216 N( -1/ +5/ 9)","monosaccharide-transporting ATPase activity","protein","Exp","carbonSource","glucoselactate","MF"
+"94","araF","GO:0015407~monosaccharide-transporting ATPase activity",0.00396425245046038,3.08829809211038,1,2.4018386966815,0.0221600282316919,9,2.4018386966815,2,5,1,"monosaccharide-transporting ATPase activity
+ padj:0.02216 N( -1/ +5/ 9)","monosaccharide-transporting ATPase activity","protein","Exp","carbonSource","glucoselactate","MF"
+"95","xylF","GO:0015407~monosaccharide-transporting ATPase activity",0.0126670313005241,2.95394133048341,1,1.89732515629815,0.0221600282316919,9,1.89732515629815,1,5,1,"monosaccharide-transporting ATPase activity
+ padj:0.02216 N( -1/ +5/ 9)","monosaccharide-transporting ATPase activity","protein","Exp","carbonSource","glucoselactate","MF"
+"96","pstB","GO:0015415~phosphate transmembrane-transporting ATPase activity",0.00588338726392081,1.6003054250048,1,2.23037256397896,1.56743686463567e-06,5,2.23037256397896,1,1,1,"phosphate transmembrane-transporting ATPase activity
+ padj:0.00000 N( -1/ +1/ 5)","phosphate transmembrane-transporting ATPase activity","protein","Exp","carbonSource","glucoselactate","MF"
+"97","mglA","GO:0015608~carbohydrate-importing ATPase activity",1.33127009040043e-12,4.9906273241014,1,11.8757338251633,0.00281516560957173,10,11.8757338251633,6,6,1,"carbohydrate-importing ATPase activity
+ padj:0.00282 N( -1/ +6/ 10)","carbohydrate-importing ATPase activity","protein","Exp","carbonSource","glucoselactate","MF"
+"98","rbsA","GO:0015608~carbohydrate-importing ATPase activity",3.15946517665152e-08,2.07282969923809,1,7.50038642702936,0.00281516560957173,10,7.50038642702936,5,6,1,"carbohydrate-importing ATPase activity
+ padj:0.00282 N( -1/ +6/ 10)","carbohydrate-importing ATPase activity","protein","Exp","carbonSource","glucoselactate","MF"
+"99","mglC","GO:0015608~carbohydrate-importing ATPase activity",1.73939813421824e-07,4.217186643044,1,6.75960100011117,0.00281516560957173,10,6.75960100011117,4,6,1,"carbohydrate-importing ATPase activity
+ padj:0.00282 N( -1/ +6/ 10)","carbohydrate-importing ATPase activity","protein","Exp","carbonSource","glucoselactate","MF"
+"100","malK","GO:0015608~carbohydrate-importing ATPase activity",0.000231920493780191,1.28393728651188,1,3.63466087299894,0.00281516560957173,10,3.63466087299894,3,6,1,"carbohydrate-importing ATPase activity
+ padj:0.00282 N( -1/ +6/ 10)","carbohydrate-importing ATPase activity","protein","Exp","carbonSource","glucoselactate","MF"
+"101","araF","GO:0015608~carbohydrate-importing ATPase activity",0.00396425245046038,3.08829809211038,1,2.4018386966815,0.00281516560957173,10,2.4018386966815,2,6,1,"carbohydrate-importing ATPase activity
+ padj:0.00282 N( -1/ +6/ 10)","carbohydrate-importing ATPase activity","protein","Exp","carbonSource","glucoselactate","MF"
+"102","xylF","GO:0015608~carbohydrate-importing ATPase activity",0.0126670313005241,2.95394133048341,1,1.89732515629815,0.00281516560957173,10,1.89732515629815,1,6,1,"carbohydrate-importing ATPase activity
+ padj:0.00282 N( -1/ +6/ 10)","carbohydrate-importing ATPase activity","protein","Exp","carbonSource","glucoselactate","MF"
+"103","glpK","GO:0017076~purine nucleotide binding",4.24074679099172e-17,3.10460939785218,1,16.372557657877,0.0364657838333511,504,16.372557657877,37,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"104","mglA","GO:0017076~purine nucleotide binding",1.33127009040043e-12,4.9906273241014,1,11.8757338251633,0.0364657838333511,504,11.8757338251633,36,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"105","rbsA","GO:0017076~purine nucleotide binding",3.15946517665152e-08,2.07282969923809,1,7.50038642702936,0.0364657838333511,504,7.50038642702936,35,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"106","ppsA","GO:0017076~purine nucleotide binding",3.02640159053307e-07,1.98753101687157,1,6.51907344347068,0.0364657838333511,504,6.51907344347068,34,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"107","acs","GO:0017076~purine nucleotide binding",9.79649357998779e-07,2.32470363360111,1,6.00892934179304,0.0364657838333511,504,6.00892934179304,32,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"108","ydiA","GO:0017076~purine nucleotide binding",9.79649357998779e-07,2.23460558682501,1,6.00892934179304,0.0364657838333511,504,6.00892934179304,33,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"109","oppD","GO:0017076~purine nucleotide binding",1.39866515257207e-06,1.4711207359572,1,5.85428624533395,0.0364657838333511,504,5.85428624533395,31,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"110","crp","GO:0017076~purine nucleotide binding",1.85655054121169e-06,1.82369520442964,1,5.73129322339954,0.0364657838333511,504,5.73129322339954,30,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"111","pckA","GO:0017076~purine nucleotide binding",2.09998310486379e-05,1.94110938531266,1,4.67778419931082,0.0364657838333511,504,4.67778419931082,29,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"112","glgC","GO:0017076~purine nucleotide binding",6.01721709169117e-05,1.3646372268499,1,4.22060431956655,0.0364657838333511,504,4.22060431956655,28,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"113","prkB","GO:0017076~purine nucleotide binding",0.000147461115991253,1.85138493385806,1,3.83132248366357,0.0364657838333511,504,3.83132248366357,27,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"114","moaB","GO:0017076~purine nucleotide binding",0.000157859451518587,1.59610086921595,1,3.80172941048077,0.0364657838333511,504,3.80172941048077,26,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"115","parE","GO:0017076~purine nucleotide binding",0.000169444642878187,1.39314127656456,1,3.77097215716133,0.0364657838333511,504,3.77097215716133,25,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"116","malK","GO:0017076~purine nucleotide binding",0.000231920493780191,1.28393728651188,1,3.63466087299894,0.0364657838333511,504,3.63466087299894,24,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"117","frdA","GO:0017076~purine nucleotide binding",0.00179907339653407,2.06619497737848,1,2.7449511184446,0.0364657838333511,504,2.7449511184446,22,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"118","hsdR","GO:0017076~purine nucleotide binding",0.00179907339653407,2.32366579525922,1,2.7449511184446,0.0364657838333511,504,2.7449511184446,23,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"119","lplA","GO:0017076~purine nucleotide binding",0.00252582969634898,1.84361709671601,1,2.59759593502743,0.0364657838333511,504,2.59759593502743,21,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"120","sdhA","GO:0017076~purine nucleotide binding",0.00255224145311125,1.19762500059475,1,2.59307824186564,0.0364657838333511,504,2.59307824186564,20,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"121","sucC","GO:0017076~purine nucleotide binding",0.00319812745531106,1.19292074097617,1,2.49510423226106,0.0364657838333511,504,2.49510423226106,19,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"122","pstB","GO:0017076~purine nucleotide binding",0.00588338726392081,1.6003054250048,1,2.23037256397896,0.0364657838333511,504,2.23037256397896,18,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"123","prfC","GO:0017076~purine nucleotide binding",0.00753690884111718,1.00786776552577,1,2.1228067374865,0.0364657838333511,504,2.1228067374865,17,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"124","tyrR","GO:0017076~purine nucleotide binding",0.00859615906447438,1.18364521512808,1,2.0656955568632,0.0364657838333511,504,2.0656955568632,16,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"125","yadG","GO:0017076~purine nucleotide binding",0.00948542055134563,1.22235010355369,1,2.02294340920549,0.0364657838333511,504,2.02294340920549,15,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"126","malT","GO:0017076~purine nucleotide binding",0.0103367335776127,2.10139499439463,1,1.98561667723171,0.0364657838333511,504,1.98561667723171,14,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"127","cmk","GO:0017076~purine nucleotide binding",0.0180748861428248,1.08838722427326,1,1.74292442972907,0.0364657838333511,504,1.74292442972907,13,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"128","udhA","GO:0017076~purine nucleotide binding",0.0182658663871483,1.25185571546052,1,1.738359723494,0.0364657838333511,504,1.738359723494,12,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"129","glnQ","GO:0017076~purine nucleotide binding",0.019455568923154,1.2261863271893,1,1.71095606495925,0.0364657838333511,504,1.71095606495925,11,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"130","yliA","GO:0017076~purine nucleotide binding",0.0199323926394476,1.41516262233255,1,1.70044056644048,0.0364657838333511,504,1.70044056644048,10,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"131","galK","GO:0017076~purine nucleotide binding",0.0212928877904009,1.42169326736607,1,1.67176543455103,0.0364657838333511,504,1.67176543455103,9,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"132","uvrD","GO:0017076~purine nucleotide binding",0.0215242065747371,1.29044343213044,1,1.66707284854164,0.0364657838333511,504,1.66707284854164,8,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"133","hrpA","GO:0017076~purine nucleotide binding",0.0236673961388985,1.37625208478456,1,1.6258495200478,0.0364657838333511,504,1.6258495200478,7,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"134","yfiQ","GO:0017076~purine nucleotide binding",0.0247197566909071,2.60841051580091,1,1.60695580819149,0.0364657838333511,504,1.60695580819149,6,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"135","adk","GO:0017076~purine nucleotide binding",0.0253551371010372,1.09896242927845,1,1.59593403677996,0.0364657838333511,504,1.59593403677996,5,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"136","yjiA","GO:0017076~purine nucleotide binding",0.0277512979421272,1.06543344023141,1,1.55671669989549,0.0364657838333511,504,1.55671669989549,4,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"137","rbsK","GO:0017076~purine nucleotide binding",0.0300680023849139,1.37469269759259,1,1.52189542397886,0.0364657838333511,504,1.52189542397886,3,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"138","visC","GO:0017076~purine nucleotide binding",0.0316628411322065,1.21428071795741,1,1.49945011813194,0.0364657838333511,504,1.49945011813194,2,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"139","trmE","GO:0017076~purine nucleotide binding",0.0356128519292436,1.13770685699396,1,1.44839324599611,0.0364657838333511,504,1.44839324599611,1,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"140","narX","GO:0017076~purine nucleotide binding",0.031864948736643,-2.6519423418896,-1,-1.49668677586326,0.0364657838333511,504,1.49668677586326,-1,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"141","entF","GO:0017076~purine nucleotide binding",0.0260500616684746,-2.68550897510736,-1,-1.58419124425519,0.0364657838333511,504,1.58419124425519,-2,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"142","folK","GO:0017076~purine nucleotide binding",0.0237713579270272,-2.53684580666664,-1,-1.6239460087064,0.0364657838333511,504,1.6239460087064,-3,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"143","cyaA","GO:0017076~purine nucleotide binding",0.0183709353067834,-1.59894748038556,-1,-1.73586873219531,0.0364657838333511,504,1.73586873219531,-4,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"144","fruK","GO:0017076~purine nucleotide binding",0.0138903711545852,-2.92199743767741,-1,-1.85728614963785,0.0364657838333511,504,1.85728614963785,-5,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"145","betA","GO:0017076~purine nucleotide binding",0.00130841968825988,-3.49770004328151,-1,-2.8832529295132,0.0364657838333511,504,2.8832529295132,-6,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"146","ndh","GO:0017076~purine nucleotide binding",6.97867533402829e-05,-1.93914254925559,-1,-4.15622700570329,0.0364657838333511,504,4.15622700570329,-7,37,7,"purine nucleotide binding
+ padj:0.03647 N( -7/ +37/ 504)","purine nucleotide binding","protein","Exp","carbonSource","glucoselactate","MF"
+"147","rplC","GO:0019843~rRNA binding",9.9067681401802e-05,1.70414900657827,1,4.00406800119627,4.08065540017377e-05,38,4.00406800119627,8,8,1,"rRNA binding
+ padj:0.00004 N( -1/ +8/ 38)","rRNA binding","protein","Exp","carbonSource","glucoselactate","MF"
+"148","rplV","GO:0019843~rRNA binding",0.00274582754233929,1.25550116383664,1,2.56132674305061,4.08065540017377e-05,38,2.56132674305061,7,8,1,"rRNA binding
+ padj:0.00004 N( -1/ +8/ 38)","rRNA binding","protein","Exp","carbonSource","glucoselactate","MF"
+"149","rplX","GO:0019843~rRNA binding",0.00629603653635692,1.54224487822851,1,2.20093276039928,4.08065540017377e-05,38,2.20093276039928,6,8,1,"rRNA binding
+ padj:0.00004 N( -1/ +8/ 38)","rRNA binding","protein","Exp","carbonSource","glucoselactate","MF"
+"150","rplS","GO:0019843~rRNA binding",0.011877840448322,1.43207210503365,1,1.925262512775,4.08065540017377e-05,38,1.925262512775,5,8,1,"rRNA binding
+ padj:0.00004 N( -1/ +8/ 38)","rRNA binding","protein","Exp","carbonSource","glucoselactate","MF"
+"151","rplU","GO:0019843~rRNA binding",0.0133184333313072,2.06130882474301,1,1.87554685891832,4.08065540017377e-05,38,1.87554685891832,4,8,1,"rRNA binding
+ padj:0.00004 N( -1/ +8/ 38)","rRNA binding","protein","Exp","carbonSource","glucoselactate","MF"
+"152","rpsK","GO:0019843~rRNA binding",0.0201396714388633,1.0232871033727,1,1.69594761885949,4.08065540017377e-05,38,1.69594761885949,3,8,1,"rRNA binding
+ padj:0.00004 N( -1/ +8/ 38)","rRNA binding","protein","Exp","carbonSource","glucoselactate","MF"
+"153","rplT","GO:0019843~rRNA binding",0.0356128519292436,2.07080019418421,1,1.44839324599611,4.08065540017377e-05,38,1.44839324599611,2,8,1,"rRNA binding
+ padj:0.00004 N( -1/ +8/ 38)","rRNA binding","protein","Exp","carbonSource","glucoselactate","MF"
+"154","rplW","GO:0019843~rRNA binding",0.0427815815647902,1.20696465307468,1,1.36874316431417,4.08065540017377e-05,38,1.36874316431417,1,8,1,"rRNA binding
+ padj:0.00004 N( -1/ +8/ 38)","rRNA binding","protein","Exp","carbonSource","glucoselactate","MF"
+"155","mglA","GO:0042626~ATPase activity, coupled to transmembrane movement of substances",1.33127009040043e-12,4.9906273241014,1,11.8757338251633,0.0451689511706064,70,11.8757338251633,8,8,1,"ATPase activity, coupled to transmembrane movement of substances
+ padj:0.04517 N( -1/ +8/ 70)","ATPase activity, coupled to transmembrane movement of substances","protein","Exp","carbonSource","glucoselactate","MF"
+"156","rbsA","GO:0042626~ATPase activity, coupled to transmembrane movement of substances",3.15946517665152e-08,2.07282969923809,1,7.50038642702936,0.0451689511706064,70,7.50038642702936,7,8,1,"ATPase activity, coupled to transmembrane movement of substances
+ padj:0.04517 N( -1/ +8/ 70)","ATPase activity, coupled to transmembrane movement of substances","protein","Exp","carbonSource","glucoselactate","MF"
+"157","mglC","GO:0042626~ATPase activity, coupled to transmembrane movement of substances",1.73939813421824e-07,4.217186643044,1,6.75960100011117,0.0451689511706064,70,6.75960100011117,6,8,1,"ATPase activity, coupled to transmembrane movement of substances
+ padj:0.04517 N( -1/ +8/ 70)","ATPase activity, coupled to transmembrane movement of substances","protein","Exp","carbonSource","glucoselactate","MF"
+"158","malK","GO:0042626~ATPase activity, coupled to transmembrane movement of substances",0.000231920493780191,1.28393728651188,1,3.63466087299894,0.0451689511706064,70,3.63466087299894,5,8,1,"ATPase activity, coupled to transmembrane movement of substances
+ padj:0.04517 N( -1/ +8/ 70)","ATPase activity, coupled to transmembrane movement of substances","protein","Exp","carbonSource","glucoselactate","MF"
+"159","araF","GO:0042626~ATPase activity, coupled to transmembrane movement of substances",0.00396425245046038,3.08829809211038,1,2.4018386966815,0.0451689511706064,70,2.4018386966815,4,8,1,"ATPase activity, coupled to transmembrane movement of substances
+ padj:0.04517 N( -1/ +8/ 70)","ATPase activity, coupled to transmembrane movement of substances","protein","Exp","carbonSource","glucoselactate","MF"
+"160","pstB","GO:0042626~ATPase activity, coupled to transmembrane movement of substances",0.00588338726392081,1.6003054250048,1,2.23037256397896,0.0451689511706064,70,2.23037256397896,3,8,1,"ATPase activity, coupled to transmembrane movement of substances
+ padj:0.04517 N( -1/ +8/ 70)","ATPase activity, coupled to transmembrane movement of substances","protein","Exp","carbonSource","glucoselactate","MF"
+"161","xylF","GO:0042626~ATPase activity, coupled to transmembrane movement of substances",0.0126670313005241,2.95394133048341,1,1.89732515629815,0.0451689511706064,70,1.89732515629815,2,8,1,"ATPase activity, coupled to transmembrane movement of substances
+ padj:0.04517 N( -1/ +8/ 70)","ATPase activity, coupled to transmembrane movement of substances","protein","Exp","carbonSource","glucoselactate","MF"
+"162","sbp","GO:0042626~ATPase activity, coupled to transmembrane movement of substances",0.0256426675880316,1.58566102761048,1,1.59103679746445,0.0451689511706064,70,1.59103679746445,1,8,1,"ATPase activity, coupled to transmembrane movement of substances
+ padj:0.04517 N( -1/ +8/ 70)","ATPase activity, coupled to transmembrane movement of substances","protein","Exp","carbonSource","glucoselactate","MF"
+"163","mglA","GO:0043211~carbohydrate-transporting ATPase activity",1.33127009040043e-12,4.9906273241014,1,11.8757338251633,0.00426136574405511,10,11.8757338251633,6,6,1,"carbohydrate-transporting ATPase activity
+ padj:0.00426 N( -1/ +6/ 10)","carbohydrate-transporting ATPase activity","protein","Exp","carbonSource","glucoselactate","MF"
+"164","rbsA","GO:0043211~carbohydrate-transporting ATPase activity",3.15946517665152e-08,2.07282969923809,1,7.50038642702936,0.00426136574405511,10,7.50038642702936,5,6,1,"carbohydrate-transporting ATPase activity
+ padj:0.00426 N( -1/ +6/ 10)","carbohydrate-transporting ATPase activity","protein","Exp","carbonSource","glucoselactate","MF"
+"165","mglC","GO:0043211~carbohydrate-transporting ATPase activity",1.73939813421824e-07,4.217186643044,1,6.75960100011117,0.00426136574405511,10,6.75960100011117,4,6,1,"carbohydrate-transporting ATPase activity
+ padj:0.00426 N( -1/ +6/ 10)","carbohydrate-transporting ATPase activity","protein","Exp","carbonSource","glucoselactate","MF"
+"166","malK","GO:0043211~carbohydrate-transporting ATPase activity",0.000231920493780191,1.28393728651188,1,3.63466087299894,0.00426136574405511,10,3.63466087299894,3,6,1,"carbohydrate-transporting ATPase activity
+ padj:0.00426 N( -1/ +6/ 10)","carbohydrate-transporting ATPase activity","protein","Exp","carbonSource","glucoselactate","MF"
+"167","araF","GO:0043211~carbohydrate-transporting ATPase activity",0.00396425245046038,3.08829809211038,1,2.4018386966815,0.00426136574405511,10,2.4018386966815,2,6,1,"carbohydrate-transporting ATPase activity
+ padj:0.00426 N( -1/ +6/ 10)","carbohydrate-transporting ATPase activity","protein","Exp","carbonSource","glucoselactate","MF"
+"168","xylF","GO:0043211~carbohydrate-transporting ATPase activity",0.0126670313005241,2.95394133048341,1,1.89732515629815,0.00426136574405511,10,1.89732515629815,1,6,1,"carbohydrate-transporting ATPase activity
+ padj:0.00426 N( -1/ +6/ 10)","carbohydrate-transporting ATPase activity","protein","Exp","carbonSource","glucoselactate","MF"
+"169","pstB","GO:0043225~anion transmembrane-transporting ATPase activity",0.00588338726392081,1.6003054250048,1,2.23037256397896,0.00516616772186917,13,2.23037256397896,2,2,1,"anion transmembrane-transporting ATPase activity
+ padj:0.00517 N( -1/ +2/ 13)","anion transmembrane-transporting ATPase activity","protein","Exp","carbonSource","glucoselactate","MF"
+"170","sbp","GO:0043225~anion transmembrane-transporting ATPase activity",0.0256426675880316,1.58566102761048,1,1.59103679746445,0.00516616772186917,13,1.59103679746445,1,2,1,"anion transmembrane-transporting ATPase activity
+ padj:0.00517 N( -1/ +2/ 13)","anion transmembrane-transporting ATPase activity","protein","Exp","carbonSource","glucoselactate","MF"
+"171","mglA","GO:0043492~ATPase activity, coupled to movement of substances",1.33127009040043e-12,4.9906273241014,1,11.8757338251633,0.0451689511706064,70,11.8757338251633,8,8,1,"ATPase activity, coupled to movement of substances
+ padj:0.04517 N( -1/ +8/ 70)","ATPase activity, coupled to movement of substances","protein","Exp","carbonSource","glucoselactate","MF"
+"172","rbsA","GO:0043492~ATPase activity, coupled to movement of substances",3.15946517665152e-08,2.07282969923809,1,7.50038642702936,0.0451689511706064,70,7.50038642702936,7,8,1,"ATPase activity, coupled to movement of substances
+ padj:0.04517 N( -1/ +8/ 70)","ATPase activity, coupled to movement of substances","protein","Exp","carbonSource","glucoselactate","MF"
+"173","mglC","GO:0043492~ATPase activity, coupled to movement of substances",1.73939813421824e-07,4.217186643044,1,6.75960100011117,0.0451689511706064,70,6.75960100011117,6,8,1,"ATPase activity, coupled to movement of substances
+ padj:0.04517 N( -1/ +8/ 70)","ATPase activity, coupled to movement of substances","protein","Exp","carbonSource","glucoselactate","MF"
+"174","malK","GO:0043492~ATPase activity, coupled to movement of substances",0.000231920493780191,1.28393728651188,1,3.63466087299894,0.0451689511706064,70,3.63466087299894,5,8,1,"ATPase activity, coupled to movement of substances
+ padj:0.04517 N( -1/ +8/ 70)","ATPase activity, coupled to movement of substances","protein","Exp","carbonSource","glucoselactate","MF"
+"175","araF","GO:0043492~ATPase activity, coupled to movement of substances",0.00396425245046038,3.08829809211038,1,2.4018386966815,0.0451689511706064,70,2.4018386966815,4,8,1,"ATPase activity, coupled to movement of substances
+ padj:0.04517 N( -1/ +8/ 70)","ATPase activity, coupled to movement of substances","protein","Exp","carbonSource","glucoselactate","MF"
+"176","pstB","GO:0043492~ATPase activity, coupled to movement of substances",0.00588338726392081,1.6003054250048,1,2.23037256397896,0.0451689511706064,70,2.23037256397896,3,8,1,"ATPase activity, coupled to movement of substances
+ padj:0.04517 N( -1/ +8/ 70)","ATPase activity, coupled to movement of substances","protein","Exp","carbonSource","glucoselactate","MF"
+"177","xylF","GO:0043492~ATPase activity, coupled to movement of substances",0.0126670313005241,2.95394133048341,1,1.89732515629815,0.0451689511706064,70,1.89732515629815,2,8,1,"ATPase activity, coupled to movement of substances
+ padj:0.04517 N( -1/ +8/ 70)","ATPase activity, coupled to movement of substances","protein","Exp","carbonSource","glucoselactate","MF"
+"178","sbp","GO:0043492~ATPase activity, coupled to movement of substances",0.0256426675880316,1.58566102761048,1,1.59103679746445,0.0451689511706064,70,1.59103679746445,1,8,1,"ATPase activity, coupled to movement of substances
+ padj:0.04517 N( -1/ +8/ 70)","ATPase activity, coupled to movement of substances","protein","Exp","carbonSource","glucoselactate","MF"

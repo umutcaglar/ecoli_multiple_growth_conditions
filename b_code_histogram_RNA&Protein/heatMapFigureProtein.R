@@ -1,31 +1,35 @@
-# Calculate significant changes
+# Draw heat map by hand for proteins
 
 ###*****************************
 # INITIAL COMMANDS TO RESET THE SYSTEM
-
 rm(list = ls())
 if (is.integer(dev.list())){dev.off()}
 cat("\014")
+###*****************************
 
+###*****************************
 # Set Working Directory
-setwd('/Users/umut/GitHub/ecoli_multiple_growth_conditions/b_code_histogram_RNA&Protein/') # mac computer
+# One needs to arrange the correct pathway if this is not umut's computer ;)
+if(as.vector(Sys.info()["effective_user"]=="umut"))
+{setwd(paste0("/Users/umut/GitHub/ecoli_multiple_growth_conditions/",
+              "b_code_histogram_RNA&Protein/"))} # mac computer
 ###*****************************
 
 
 ###*****************************
 # INSTALL LIBRARIES
-library("dplyr")
-library("tidyr")
+require("dplyr")
+require("tidyr")
 require("reshape2")
-library("lazyeval")
+require("lazyeval")
 require("flashClust")
 
 # For Plotting
-library("ggplot2")
-library("RColorBrewer")
-library("grid")
-library("gridExtra")
-library("cowplot")
+require("ggplot2")
+require("RColorBrewer")
+require("grid")
+require("gridExtra")
+require("cowplot")
 require("ggdendro")
 require("scales")
 require("gtable")
@@ -33,91 +37,62 @@ require("gtable")
 
 
 ###*****************************
-# PARAMETERS FOR DATA
-conditionNumberChoice="uniqueCondition"
-dataTypeChoice="protein_wo_NA" # can be "rna", "mrna","protein","protein_wo_NA","protein_wo_NAx6"
-badDataFilterSetChoice="set00" # "set00", "set01", "set02"
-dataTimeChoice="wholeSet" # exponential / stationary / late_stationary / wholeSet
-MgLevelChoice="allMg" # allMg highMg midMg lowMg
-NaLevelChoice="allNa" # allNa lowNa highNa
-carbonTypeChoice="SY" # a letter combination from the list "SYAN"  
-#S (glucose), Y (glycerol), A (lactate), N (gluconate)
-filterTypeChoice="noFilter" # mean/sd/ max/ noFilter
-deSeqNormChoice="p1"
-normalizationMethodChoice="vst" # "vst" , "log2" 
-experimentChoice=c("allEx") # can be "allEx", 
-# or a combination of below
-# "Stc" for "glucose_time_course", 
-# "Ytc" for "glycerol_time_course", 
-# "Nas" for "NaCl_stress", 
-# "Agr" for "lactate_growth", 
-# "Ngr" for "gluconate_growth", 
-# "Mgh" for "MgSO4_stress_low", 
-# "Mgl" for "MgSO4_stress_high"
+#Load Functions
+source("../a_code_dataPreperation_RNA&Protein/data_naming_functions.R")
+###*****************************
+
+###*****************************
+# Find the csv files that need to be imported
+dataName=name_data(initialValue=c("resDf"), # can be c("genes0.05","genes_P0.05Fold2","resDf")
+                   dataType = "protein_wo_NA", # can be "rna", "mrna", "protein", "protein_wo_NA"
+                   badDataSet = "set00", # can be "set00",set01","set02", "set03"
+                   # referenceParameters can be a vector like
+                   # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
+                   referenceParameters=c("growthPhase",
+                                         "Mg_mM_Levels", 
+                                         "Na_mM_Levels", 
+                                         "carbonSource", 
+                                         "experiment"),
+                   # referenceLevels can be a vector like
+                   # c("exponential", "baseMg", "baseNa", "glucose", "glucose_time_course")
+                   referenceLevels=c("exponential",
+                                     "baseMg", 
+                                     "baseNa", 
+                                     "glucose", 
+                                     "glucose_time_course"),
+                   experimentVector = c("allEx"), # can be "Stc","Ytc","Nas","Agr","Ngr","Mgl","Mgh" // "allEx"
+                   carbonSourceVector = "SYAN", # can be any sub combination of "SYAN"
+                   MgLevelVector = c("allMg"), # can be "lowMg","baseMg","highMg" // "allMg"
+                   NaLevelVector = c("allNa"), # can be "baseNa","highNa" // "allNa"
+                   growthPhaseVector = c("allPhase"), # can be "exponential","stationary","late_stationary" // "allPhase"
+                   filterGenes = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
+                   threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
+                   roundData=TRUE,
+                   sumTechnicalReplicates=TRUE,
+                   deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf"
+                   normalizationMethodChoice= "vst", # can be "vst", "rlog", "log10", "noNorm"
+                   test_for = "noTest")  # works only if normalizationMethodChoice == noNorm
+# c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource", "noTest")
+
+dataName=as.data.frame(dataName[1])
+
+metaDataName=dataName
+metaDataName$objectName.initial="metaData"
+treeDataName=dataName
+treeDataName$objectName.initial="treeData"
+heatMapName=dataName
+heatMapName$objectName.initial="heatMap"
+
+dataName=paste(dataName,collapse = "_")
+metaDataName=paste(metaDataName,collapse = "_")
+treeDataName=paste(treeDataName,collapse = "_")
+heatMapName=paste(heatMapName,collapse = "_")
+
+mainDataFrame=read.csv(file = paste0("../a_results/",dataName,".csv"),header = TRUE,row.names = 1)
+condition=read.csv(file = paste0("../a_results/",metaDataName,".csv"),header = TRUE)
 ###*****************************
 
 
-###*****************************
-# Order Experiment List
-experimentListOrder=c("allEx","Stc","Ytc","Nas","Agr","Ngr","Mgl","Mgh")
-currentOrder=experimentChoice
-experimentChoice=currentOrder[order(match(currentOrder,experimentListOrder))]
-#*******************************
-
-
-###*****************************
-# FILE NAME GENERATE
-
-experimentList=paste(experimentChoice, collapse = '')
-longNameList=paste0(dataTypeChoice,"_",dataTimeChoice,
-                    "_",MgLevelChoice,"_",NaLevelChoice,
-                    "_",carbonTypeChoice,"_",badDataFilterSetChoice,
-                    "_",experimentList)
-step02=paste0("unnormalized_",filterTypeChoice,"_",longNameList)
-step03=paste0("normalized_",normalizationMethodChoice,"_",deSeqNormChoice,"_",
-              filterTypeChoice,"_",longNameList) 
-conditionName=paste0("condition_",normalizationMethodChoice,"_",deSeqNormChoice,"_",
-                     filterTypeChoice,"_",longNameList) 
-###*****************************
-
-
-###*****************************
-# Load data
-load(file = paste0("../a_results/",step03,".RData")) #Used for parameters data
-assign(x = "mainDataFrame",value = get(step03))
-###*****************************
-browser()
-
-###*****************************
-# Calculate the average of repeated conditions
-mainDataFrame<-as.data.frame(mainDataFrame)
-mainDataFrame %>% mutate(gene_id=row.names(mainDataFrame))->mainDataFrameTidy
-endVal=ncol(mainDataFrame)
-mainDataFrameTidy %>%
-  tidyr::gather(condition,read,1:endVal)%>%
-  dplyr::mutate(conditionShort=gsub("_[[:digit:]]$","",condition))->mainDataFrameTidy
-mainDataFrameTidy %>% 
-  group_by(gene_id,conditionShort)%>%
-  dplyr::summarise(read=mean(read))->mainDataFrameSummary
-
-mainDataFrameSummary %>%
-  dplyr::group_by()%>%  
-  tidyr::spread(key = conditionShort, value = read)->mainDataFrameSummary
-
-row.names(mainDataFrameSummary)<-mainDataFrameSummary$gene_id
-mainDataFrameSummary %>%
-  dplyr::select(-gene_id)->mainDataFrameSummary
-mainDataFrame=as.matrix(mainDataFrameSummary)
-###*****************************
-
-
-###*****************************
-#Reduce number of rows in condition and get rid of repeats
-condition<-get(conditionName)
-condition=condition[which(substr(as.vector(condition$dataSet),10,10) %in% c(0)),]
-condition$dataSet<-gsub("_[[:digit:]]$","",as.vector(condition$dataSet))
-condition$sampleNum<-gsub("_[[:digit:]]$","",as.vector(condition$sampleNum))
-###*****************************
 
 
 ###*****************************
@@ -229,7 +204,7 @@ conditionSummary<-orderFunction(conditionSummary,
                                 column="Na_mM_Levels",
                                 target=Na_mM_LevelsTarget)
 
-carbonSourceTarget <- c("glucose", "glycerol") #, "lactate", "gluconate")
+carbonSourceTarget <- c("glucose", "glycerol", "lactate", "gluconate")
 conditionSummary<-orderFunction(conditionSummary,
                                 column="carbonSource",
                                 target=carbonSourceTarget)
@@ -255,7 +230,7 @@ METree_x_d = as.dendrogram(METree_x)
 #Reordering
 METree.reorder_x_d=rev(reorder(METree_x_d, desiredOrderNo.x))
 save(list = c("METree_x","METree.reorder_x_d","dist_x","conditionSummary"),
-     file = paste0("../b_results/treeFile_",step03,".RData"))
+     file = paste0("../b_results/",treeDataName,".RData"))
 
 
 ddata <- dendro_data(METree.reorder_x_d, type = "rectangle")
@@ -294,19 +269,19 @@ conditionSummary %>%
   tidyr::gather(columnName,condition,growthPhase:Na_mM_Levels)->conditionSummaryTidy
 
 conditionSummaryTidy$condition <- factor(conditionSummaryTidy$condition, levels = 
-                                           c("glucose","glycerol",
+                                           c("glucose","glycerol","lactate","gluconate",
                                              "baseNa","highNa",
                                              "exponential","stationary","late_stationary",
                                              "lowMg","baseMg","highMg"))
 conditionSummaryTidy$columnName <- factor(conditionSummaryTidy$columnName, levels = 
                                             rev(c("carbonSource", "Na_mM_Levels", "growthPhase","Mg_mM_Levels")))
 
-listColors=c("#bcbddc","#9e9ac8",
+listColors=c("#bcbddc","#9e9ac8","#807dba","#6a51a3",
              "#fdbe85","#fd8d3c",
              "#bae4b3","#74c476","#238b45",
              "#bdd7e7","#6baed6","#2171b5")
 
-browser()
+
 fig02a<-ggplot(conditionSummaryTidy, aes( y=columnName,x=factor(orderNoCurrent)))+
   geom_tile(aes(fill=condition), color="black")+
   #geom_text(aes(label=orderNo,angle = 90))+
@@ -503,7 +478,7 @@ g.main <- gtable_add_rows(g.main, unit.c(unit(0.3, "in")), index$b-3)
 
 figComb=ggdraw(g.main)
 
-figureName=paste0("../b_figures/","heatmap_",step03,".png")
+figureName=paste0("../b_figures/",heatMapName,".png")
 cowplot::save_plot(plot = figComb, filename = figureName,ncol = 4,nrow = 3, dpi=300)
 
 g.main$layout

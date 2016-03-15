@@ -1,0 +1,17 @@
+"","ID","MF_Name","padj_gene","log2","signChange","score_gene","FDR_GoMF","numGenesInCat","abs_score","rank","numSigP","numSigN","MF_Name_long","MF_Name_short","pick_data","growthPhase","test_for","vs","df_category"
+"1","yibO","GO:0004619~phosphoglycerate mutase activity",0.00274345355774978,-1.94358666426211,-1,-2.56170238731179,1.8844797503581e-05,7,2.56170238731179,-1,0,2,"phosphoglycerate mutase activity
+ padj:0.00002 N( -2/ +0/ 7)","phosphoglycerate mutase activity","mrna","Exp","carbonSource","glucoselactate","MF"
+"2","gpmA","GO:0004619~phosphoglycerate mutase activity",0.000550715867879953,-1.3370410913453,-1,-3.25907240992979,1.8844797503581e-05,7,3.25907240992979,-2,0,2,"phosphoglycerate mutase activity
+ padj:0.00002 N( -2/ +0/ 7)","phosphoglycerate mutase activity","mrna","Exp","carbonSource","glucoselactate","MF"
+"3","deoB","GO:0016866~intramolecular transferase activity",0.044629094309418,-1.38195777026314,-1,-1.35038192652297,0.0441742678654262,34,1.35038192652297,-1,0,3,"intramolecular transferase activity
+ padj:0.04417 N( -3/ +0/ 34)","intramolecular transferase activity","mrna","Exp","carbonSource","glucoselactate","MF"
+"4","yibO","GO:0016866~intramolecular transferase activity",0.00274345355774978,-1.94358666426211,-1,-2.56170238731179,0.0441742678654262,34,2.56170238731179,-2,0,3,"intramolecular transferase activity
+ padj:0.04417 N( -3/ +0/ 34)","intramolecular transferase activity","mrna","Exp","carbonSource","glucoselactate","MF"
+"5","gpmA","GO:0016866~intramolecular transferase activity",0.000550715867879953,-1.3370410913453,-1,-3.25907240992979,0.0441742678654262,34,3.25907240992979,-3,0,3,"intramolecular transferase activity
+ padj:0.04417 N( -3/ +0/ 34)","intramolecular transferase activity","mrna","Exp","carbonSource","glucoselactate","MF"
+"6","deoB","GO:0016868~intramolecular transferase activity, phosphotransferases",0.044629094309418,-1.38195777026314,-1,-1.35038192652297,0.000264072588334718,16,1.35038192652297,-1,0,3,"intramolecular transferase activity, phosphotransferases
+ padj:0.00026 N( -3/ +0/ 16)","intramolecular transferase activity, phosphotransferases","mrna","Exp","carbonSource","glucoselactate","MF"
+"7","yibO","GO:0016868~intramolecular transferase activity, phosphotransferases",0.00274345355774978,-1.94358666426211,-1,-2.56170238731179,0.000264072588334718,16,2.56170238731179,-2,0,3,"intramolecular transferase activity, phosphotransferases
+ padj:0.00026 N( -3/ +0/ 16)","intramolecular transferase activity, phosphotransferases","mrna","Exp","carbonSource","glucoselactate","MF"
+"8","gpmA","GO:0016868~intramolecular transferase activity, phosphotransferases",0.000550715867879953,-1.3370410913453,-1,-3.25907240992979,0.000264072588334718,16,3.25907240992979,-3,0,3,"intramolecular transferase activity, phosphotransferases
+ padj:0.00026 N( -3/ +0/ 16)","intramolecular transferase activity, phosphotransferases","mrna","Exp","carbonSource","glucoselactate","MF"

@@ -1,0 +1,15 @@
+sampleNum,dataSet,experiment,growthTime_hr,harvestDate,cellTotal,cellsPerTube,batchNumber,carbonSource,Mg_mM,Na_mM,growthPhase,Mg_mM_Levels,Na_mM_Levels,uniqueCondition,uniqueCondition02,doublingTimeMinutes,doublingTimeMinutes.95m,doublingTimeMinutes_95p,rSquared,sizeFactor
+21,MURI_021,glucose_time_course,24,2/14/13,7.76e+08,1.55e+08,8,glucose,0.8,5,stationary,baseMg,baseNa,unique_condition_25,unique_condition_11,53.67995457,49.10029844,59.20179166,0.98493046,0.95169515301062
+22,MURI_022,glucose_time_course,48,2/15/13,7.04e+08,1.41e+08,8,glucose,0.8,5,stationary,baseMg,baseNa,unique_condition_25,unique_condition_11,53.67995457,49.10029844,59.20179166,0.98493046,0.95169515301062
+30,MURI_030,glucose_time_course,24,2/21/13,7.8e+08,1.56e+08,9,glucose,0.8,5,stationary,baseMg,baseNa,unique_condition_25,unique_condition_11,53.67995457,49.10029844,59.20179166,0.98493046,0.942419073435226
+31,MURI_031,glucose_time_course,48,2/22/13,6.96e+08,1.39e+08,9,glucose,0.8,5,stationary,baseMg,baseNa,unique_condition_25,unique_condition_11,53.67995457,49.10029844,59.20179166,0.98493046,0.95169515301062
+73,MURI_073,NaCl_stress,29,2013-11-22,4.3e+10,4.3e+09,14,glucose,0.8,5,stationary,baseMg,baseNa,unique_condition_25,unique_condition_11,62.59630672,52.6876373,77.09516308,0.9256599,1.45361095547616
+81,MURI_081,NaCl_stress,29,2013-11-15,4.1e+10,4.1e+09,15,glucose,0.8,5,stationary,baseMg,baseNa,unique_condition_25,unique_condition_11,62.59630672,52.6876373,77.09516308,0.9256599,3.43175681138985
+102,MURI_102,glucose_time_course,24,2013-11-06,3.8e+10,3.8e+09,7,glucose,0.8,5,stationary,baseMg,baseNa,unique_condition_25,unique_condition_11,53.67995457,49.10029844,59.20179166,0.98493046,0.879868495832536
+103,MURI_103,glucose_time_course,48,2013-11-07,3.4e+10,3.4e+09,7,glucose,0.8,5,stationary,baseMg,baseNa,unique_condition_25,unique_condition_11,53.67995457,49.10029844,59.20179166,0.98493046,0.804682598451805
+112,MURI_112,MgSO4_stress_high,28,2013-12-12,3.9e+10,3.9e+09,22,glucose,0.08,5,stationary,lowMg,baseNa,unique_condition_24,unique_condition_14,62.16562822,56.5029441,69.08975323,0.970338997,0.891401932184271
+113,MURI_113,MgSO4_stress_high,28,2013-12-12,4.1e+10,4.1e+09,22,glucose,0.8,5,stationary,baseMg,baseNa,unique_condition_25,unique_condition_11,63.60809667,56.92589362,72.06771046,0.959752519,0.879868495832536
+124,MURI_124,MgSO4_stress_high,28,2014-01-16,3.4e+10,3.4e+09,23,glucose,0.08,5,stationary,lowMg,baseNa,unique_condition_24,unique_condition_14,62.16562822,56.5029441,69.08975323,0.970338997,0.775727924555964
+125,MURI_125,MgSO4_stress_high,28,2014-01-16,3.8e+10,3.8e+09,23,glucose,0.8,5,stationary,baseMg,baseNa,unique_condition_25,unique_condition_11,63.60809667,56.92589362,72.06771046,0.959752519,0.854751399907152
+136,MURI_136,MgSO4_stress_high,28,2014-01-31,3.7e+10,3.7e+09,24,glucose,0.08,5,stationary,lowMg,baseNa,unique_condition_24,unique_condition_14,62.16562822,56.5029441,69.08975323,0.970338997,0.678353911697371
+137,MURI_137,MgSO4_stress_high,28,2014-01-31,4e+10,4e+09,24,glucose,0.8,5,stationary,baseMg,baseNa,unique_condition_25,unique_condition_11,63.60809667,56.92589362,72.06771046,0.959752519,0.707902640870192
