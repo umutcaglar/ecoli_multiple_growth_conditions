@@ -161,7 +161,15 @@ fig01b=ggplot(kegg_flagellar_assembly_df, aes( x=log2,y=grouping)) +
         legend.position="bottom",
         axis.title.y = element_blank(),
         panel.grid.minor=element_blank(),
-        panel.grid.major.x=element_blank())
+        panel.grid.major.x=element_blank(),
+        strip.text.x = element_text(size = 16),
+        strip.text.y = element_text(size = 16),
+        axis.text.x=element_text(size=10),
+        axis.text.y=element_text(size=12),
+        axis.title.x=element_text(size=16),
+        axis.title.y=element_text(size=16),
+        legend.title=element_text(size=14),
+        legend.text=element_text(size=14))
 
 print(fig01b)
 ###*****************************
@@ -222,7 +230,15 @@ fig02b=ggplot(mf_flagellar_assembly_df, aes( x=log2,y=grouping)) +
         legend.position="bottom",
         axis.title.y = element_blank(),
         panel.grid.minor=element_blank(),
-        panel.grid.major.x=element_blank())
+        panel.grid.major.x=element_blank(),
+        strip.text.x = element_text(size = 16),
+        strip.text.y = element_text(size = 16),
+        axis.text.x=element_text(size=10),
+        axis.text.y=element_text(size=12),
+        axis.title.x=element_text(size=16),
+        axis.title.y=element_text(size=16),
+        legend.title=element_text(size=14),
+        legend.text=element_text(size=14))
 
 print(fig02b)
 ###*****************************
@@ -249,7 +265,8 @@ rowWidth=ifelse(length(unique(kegg_flagellar_assembly_df$grouping))*1<3,
 cowplot::save_plot(filename = paste0("../d_figures/kegg_flagellar_assembly.pdf"),
                    plot = fig01b,
                    base_height = rowWidth*1.3,
-                   ncol=2,
+                   ncol=1.2,
+                   nrow=1.2,
                    limitsize = FALSE)
 
 
@@ -273,6 +290,7 @@ rowWidth=ifelse(length(unique(mf_flagellar_assembly_df$grouping))*1<3,
 cowplot::save_plot(filename = paste0("../d_figures/mf_flagellar_assembly.pdf"),
                    plot = fig02b,
                    base_height = rowWidth*1.3,
-                   ncol=2,
+                   ncol=1.2,
+                   nrow=1.2,
                    limitsize = FALSE)
 ###*****************************

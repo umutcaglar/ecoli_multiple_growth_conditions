@@ -78,7 +78,7 @@ load(file = paste0("../b_results/",dataName,".RData"))
 # Make condition summary tidy
 tidyr::gather(conditionSummary, category, condition, growthPhase:batchNumber)->conditionSummary_tidy
 ###*****************************
-browser()
+
 
 ###*****************************
 # Number of Runs
@@ -265,7 +265,7 @@ main_batch%>%
 all_results=rbind_all(list(main_growthPhase,main_carbonSource,main_Mg,main_Na,main_batch))
 
 all_results %>%
-  dplyr::select(category,condition,z_score, overall_z_score)->all_results_Summary
+  dplyr::select(category,condition,z_score, overall_z_score, numVar)->all_results_Summary
 #******************************
 
 

@@ -32,7 +32,7 @@ source("cophenetic_distance_functions.R")
 ###*****************************
 # Find the csv files that need to be imported
 dataName=name_data(initialValue=c("treeData"), # can be c("genes0.05","genes_P0.05Fold2","resDf")
-                   dataType = "protein_wo_NA", # can be "rna", "mrna", "protein", "protein_wo_NA"
+                   dataType = "protein", # can be "rna", "mrna", "protein", "protein_wo_NA"
                    badDataSet = "set00", # can be "set00",set01","set02", "set03"
                    # referenceParameters can be a vector like
                    # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
@@ -265,7 +265,7 @@ main_batch%>%
 all_results=rbind_all(list(main_growthPhase,main_carbonSource,main_Mg,main_Na,main_batch))
 
 all_results %>%
-  dplyr::select(category,condition,z_score, overall_z_score)->all_results_Summary
+  dplyr::select(category,condition,z_score, overall_z_score, numVar)->all_results_Summary
 #******************************
 
 
