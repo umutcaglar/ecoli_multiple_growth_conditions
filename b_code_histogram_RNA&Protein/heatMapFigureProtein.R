@@ -44,7 +44,7 @@ source("../a_code_dataPreperation_RNA&Protein/data_naming_functions.R")
 ###*****************************
 # Find the csv files that need to be imported
 dataName=name_data(initialValue=c("resDf"), # can be c("genes0.05","genes_P0.05Fold2","resDf")
-                   dataType = "protein_wo_NA", # can be "rna", "mrna", "protein", "protein_wo_NA"
+                   dataType = "protein", # can be "rna", "mrna", "protein", "protein_wo_NA"
                    badDataSet = "set00", # can be "set00",set01","set02", "set03"
                    # referenceParameters can be a vector like
                    # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
