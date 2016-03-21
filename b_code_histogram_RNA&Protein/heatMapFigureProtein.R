@@ -193,6 +193,11 @@ conditionSummary<-orderFunction(conditionSummary,
                                 column="Mg_mM_Levels",
                                 target=Mg_mM_LevelsTarget)
 
+carbonSourceTarget <- c("glucose", "glycerol", "lactate", "gluconate")
+conditionSummary<-orderFunction(conditionSummary,
+                                column="carbonSource",
+                                target=carbonSourceTarget)
+
 
 growthPhaseTarget <- c("exponential", "stationary", "late_stationary")
 conditionSummary<-orderFunction(conditionSummary,
@@ -203,11 +208,6 @@ Na_mM_LevelsTarget <- c("baseNa", "highNa")
 conditionSummary<-orderFunction(conditionSummary,
                                 column="Na_mM_Levels",
                                 target=Na_mM_LevelsTarget)
-
-carbonSourceTarget <- c("glucose", "glycerol", "lactate", "gluconate")
-conditionSummary<-orderFunction(conditionSummary,
-                                column="carbonSource",
-                                target=carbonSourceTarget)
 
 
 
@@ -269,16 +269,16 @@ conditionSummary %>%
   tidyr::gather(columnName,condition,growthPhase:Na_mM_Levels)->conditionSummaryTidy
 
 conditionSummaryTidy$condition <- factor(conditionSummaryTidy$condition, levels = 
-                                           c("glucose","glycerol","lactate","gluconate",
-                                             "baseNa","highNa",
+                                           c("baseNa","highNa",
                                              "exponential","stationary","late_stationary",
+                                             "glucose","glycerol","lactate","gluconate",
                                              "lowMg","baseMg","highMg"))
 conditionSummaryTidy$columnName <- factor(conditionSummaryTidy$columnName, levels = 
-                                            rev(c("carbonSource", "Na_mM_Levels", "growthPhase","Mg_mM_Levels")))
+                                            rev(c("Na_mM_Levels", "growthPhase", "carbonSource", "Mg_mM_Levels")))
 
-listColors=c("#bcbddc","#9e9ac8","#807dba","#6a51a3",
-             "#fdbe85","#fd8d3c",
+listColors=c("#fdbe85","#fd8d3c",
              "#bae4b3","#74c476","#238b45",
+             "#bcbddc","#9e9ac8","#807dba","#6a51a3",
              "#bdd7e7","#6baed6","#2171b5")
 
 
@@ -287,7 +287,7 @@ fig02a<-ggplot(conditionSummaryTidy, aes( y=columnName,x=factor(orderNoCurrent))
   #geom_text(aes(label=orderNo,angle = 90))+
   scale_fill_manual(values = listColors)+
   scale_y_discrete(expand = c(0,0), 
-                   labels = rev(c("Carbon source","Na levels","Growth Phase","Mg levels"))) +
+                   labels = rev(c("Na levels","Growth Phase","Carbon source","Mg levels"))) +
   scale_x_discrete(labels=as.vector(conditionSummary$dataSet),expand = c(0,0))+
   guides(fill = guide_legend(override.aes = list(colour = NULL),
                              nrow=2,byrow = TRUE))+

@@ -267,15 +267,15 @@ conditionSummary %>%
 
 conditionSummaryTidy$condition <- factor(conditionSummaryTidy$condition, levels = 
                                            c("exponential","stationary","late_stationary",
-                                             "lowMg","baseMg","highMg",
                                              "baseNa","highNa",
+                                             "lowMg","baseMg","highMg",
                                              "glucose","glycerol","lactate","gluconate"))
 conditionSummaryTidy$columnName <- factor(conditionSummaryTidy$columnName, levels = 
-                                            rev(c("growthPhase","Mg_mM_Levels","Na_mM_Levels","carbonSource")))
+                                            rev(c("growthPhase","Na_mM_Levels","Mg_mM_Levels","carbonSource")))
 
 listColors=c("#bae4b3","#74c476","#238b45",
-             "#bdd7e7","#6baed6","#2171b5",
              "#fdbe85","#fd8d3c",
+             "#bdd7e7","#6baed6","#2171b5",
              "#bcbddc","#9e9ac8","#807dba","#6a51a3")
 
 fig02a<-ggplot(conditionSummaryTidy, aes( y=columnName,x= factor(orderNoCurrent)))+
@@ -283,7 +283,7 @@ fig02a<-ggplot(conditionSummaryTidy, aes( y=columnName,x= factor(orderNoCurrent)
   #geom_text(aes(label=orderNo,angle = 90))+
   scale_fill_manual(values = listColors)+
   scale_y_discrete(expand = c(0,0), 
-                   labels = rev(c("Growth Phase","Mg levels","Na levels","Carbon source"))) +
+                   labels = rev(c("Growth Phase","Na levels","Mg levels","Carbon source"))) +
   scale_x_discrete(labels=as.vector(conditionSummary$dataSet),expand = c(0,0))+
   guides(fill = guide_legend(override.aes = list(colour = NULL),
                              nrow=2,byrow = TRUE))+
