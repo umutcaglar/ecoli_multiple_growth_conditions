@@ -29,6 +29,12 @@ require("cowplot")
 
 
 ###*****************************
+#Load Functions
+source("../b_code_histogram_RNA&Protein/replace_fun.R")
+###*****************************
+
+
+###*****************************
 # Load files
 fileList=dir("../d_results/",pattern = "*.kegg")
 for(counter01 in 1 : length(fileList))
@@ -107,7 +113,17 @@ kegg_vector=c("Pyruvate metabolism",
               "Lipopolysaccharide biosynthesis",
               "Sulfur metabolism",
               "structural constituent of ribosome")
+###*****************************
 
+
+###*****************************
+# write metabolism related kegg pathways
+keggIntersection<-intersect(mainLoadedFile_kegg$KEGG_Path_short , kegg_vector)
+write.csv(x = keggIntersection, file = "../d_results/kegg_metabolism_related_pathways.csv")
+###*****************************
+
+
+###*****************************
 # Generate flegellar data frame kegg
 mainLoadedFile_kegg$vs=as.character(mainLoadedFile_kegg$vs)
 mainLoadedFile_kegg %>%
@@ -129,7 +145,7 @@ kegg_metabolism_df %>%
 
 kegg_metabolism_summary$grouping <- factor(kegg_metabolism_summary$grouping, 
                                            levels = (c("Exp-lowMg", "Exp-highMg", "Exp-highNa",
-                                                          "Sta-lowMg", "Sta-highMg", "Sta-highNa")))
+                                                       "Sta-lowMg", "Sta-highMg", "Sta-highNa")))
 ###*****************************
 
 
@@ -196,6 +212,16 @@ mf_metabolism_summary$grouping <- factor(mf_metabolism_summary$grouping,
 
 
 ###*****************************
+# rename x-axis
+oldLevels=levels(kegg_metabolism_summary$grouping)
+newLevels=replace_fun(input_vector = oldLevels, initialVal = oldLevels,
+                      finalVal = c("Low Mg \n Exponential","High Mg \n Exponential",
+                                   "High Na \n Exponential","Low Mg \n Stationary",
+                                   "High Mg \n Stationary","High Na \n Stationary"))
+###*****************************
+
+
+###*****************************
 # Generate metabolism figure kegg
 fig01=ggplot(kegg_metabolism_summary, aes(x=grouping,
                                           y=lengthObj,
@@ -203,14 +229,16 @@ fig01=ggplot(kegg_metabolism_summary, aes(x=grouping,
   facet_grid(pick_data~.)+
   geom_bar(position="dodge", stat="identity",width=.75)+
   scale_y_continuous(expand = c(0, 0),limits = c(0,600))+
-  scale_fill_manual(values = c("blue","red"),
-                    name="Regulation",
-                    breaks=c("-1", "1"),
-                    labels=c("Down Regulated", "Up Regulated"))+
-  xlab("conditions")+
-  ylab("number of differentially expressed")+
+  scale_x_discrete(labels=newLevels)+
+scale_fill_manual(values = c("blue","red"),
+                  name="Regulation",
+                  breaks=c("-1", "1"),
+                  labels=c("Down Regulated", "Up Regulated"))+
+  xlab("Conditions")+
+  ylab("Number of differentially expressed genes")+
   theme_bw()+
-  theme(panel.grid.minor.x = element_blank(),
+  theme(panel.margin.y = unit(2, "lines"),
+        panel.grid.minor.x = element_blank(),
         legend.position=c(0.8,0.9),
         strip.text.x = element_text(size = 16),
         strip.text.y = element_text(size = 16),
@@ -235,9 +263,9 @@ fig02=ggplot(mf_metabolism_summary, aes(x=grouping,
   scale_fill_manual(values = c("blue","red"),
                     name="Regulation",
                     breaks=c("-1", "1"),
-                    labels=c("Down Regulated", "Up Regulated"))+
+                    labels=c("Down-regulated", "Up-regulated"))+
   xlab("conditions")+
-  ylab("number of differentially expressed")+
+  ylab("Number of differentially expressed genes")+
   theme_bw()
 
 print(fig02)

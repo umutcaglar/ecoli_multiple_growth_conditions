@@ -229,14 +229,17 @@ figBarGraph01=ggplot(df_summary, aes(x=investigated_conditions,
                                    y=P0.05Fold2,
                                    fill=as.factor(signChange))) +
   facet_grid(growthPhase ~ data_type_abv)+
+  scale_y_continuous(expand = c(0, 0),limits = c(0,1600))+
   geom_bar(position="dodge",stat="identity",width=.75)+
   scale_fill_manual(values = c("blue","red"),
                     name="Regulation",
                     breaks=c("-1", "1"),
                     labels=c("Down Regulated", "Up Regulated"))+
   theme_bw()+
-  xlab("Test Condition") + ylab("Count") +
-  theme(panel.grid.minor.x = element_blank(),
+  xlab("Test Condition") + 
+  ylab("Number of differentially expressed genes") +
+  theme(panel.margin.y = unit(2, "lines"),
+        panel.grid.minor.x = element_blank(),
         legend.position=c(0.88,0.9),
         strip.text.x = element_text(size = 16),
         strip.text.y = element_text(size = 16),

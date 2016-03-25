@@ -270,17 +270,17 @@ conditionSummary %>%
   tidyr::gather(columnName,condition,growthPhase:Na_mM_Levels)->conditionSummaryTidy
 
 conditionSummaryTidy$condition <- factor(conditionSummaryTidy$condition, levels = 
-                                           c("baseNa","highNa",
-                                             "exponential","stationary","late_stationary",
-                                             "glucose","glycerol","lactate","gluconate",
-                                             "lowMg","baseMg","highMg"))
+                                           c("exponential","stationary","late_stationary",
+                                             "baseNa","highNa",
+                                             "lowMg","baseMg","highMg",
+                                             "glucose","glycerol","lactate","gluconate"))
 conditionSummaryTidy$columnName <- factor(conditionSummaryTidy$columnName, levels = 
-                                            rev(c("Na_mM_Levels", "growthPhase", "carbonSource", "Mg_mM_Levels")))
+                                            rev(c("growthPhase", "Na_mM_Levels", "Mg_mM_Levels","carbonSource")))
 
-listColors=c("#fdbe85","#fd8d3c",
-             "#bae4b3","#74c476","#238b45",
-             "#bcbddc","#9e9ac8","#807dba","#6a51a3",
-             "#bdd7e7","#6baed6","#2171b5")
+listColors=c("#bae4b3","#74c476","#238b45",
+             "#fdbe85","#fd8d3c",
+             "#bdd7e7","#6baed6","#2171b5",
+             "#bcbddc","#9e9ac8","#807dba","#6a51a3")
 
 
 # Renaming condition levels for figure
@@ -302,7 +302,7 @@ fig02a<-ggplot(conditionSummaryTidy, aes( y=columnName,x=factor(orderNoCurrent))
   #geom_text(aes(label=orderNo,angle = 90))+
   scale_fill_manual(values = listColors, breaks=oldLevels, labels=newLevels)+
   scale_y_discrete(expand = c(0,0), 
-                   labels = rev(c("Na levels","Growth Phase","Carbon source","Mg levels"))) +
+                   labels = rev(c("Growth Phase","Na levels","Mg levels","Carbon source"))) +
   scale_x_discrete(labels=as.vector(conditionSummary$dataSet),expand = c(0,0))+
   guides(fill = guide_legend(override.aes = list(colour = NULL),
                              nrow=2,byrow = TRUE))+
