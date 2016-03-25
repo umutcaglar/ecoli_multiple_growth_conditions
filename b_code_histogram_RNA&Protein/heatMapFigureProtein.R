@@ -39,6 +39,7 @@ require("gtable")
 ###*****************************
 #Load Functions
 source("../a_code_dataPreperation_RNA&Protein/data_naming_functions.R")
+source("replace_fun.R")
 ###*****************************
 
 ###*****************************
@@ -245,7 +246,7 @@ fig01a<-ggplot(segment(ddata),aes(x = x, y = y, xend = xend, yend = yend)) +
   ylab("Height")+
   ggtitle("Clustering of Data Sets")+
   theme( axis.text.x=element_text(size=10,angle = 90, hjust = 1,vjust=0.5),
-#         axis.text.y=element_blank(),
+         #         axis.text.y=element_blank(),
          axis.title.x=element_text(size=16),
          axis.title.y=element_text(size=16),
          legend.title=element_text(size=14),
@@ -282,10 +283,24 @@ listColors=c("#fdbe85","#fd8d3c",
              "#bdd7e7","#6baed6","#2171b5")
 
 
+# Renaming condition levels for figure
+oldLevels<-as.vector(levels(conditionSummaryTidy$condition))
+newLevels=replace_fun(input_vector = oldLevels, 
+                      initialVal = c("exponential","stationary","late_stationary",
+                                     "baseNa","highNa",
+                                     "lowMg", "baseMg", "highMg",
+                                     "glucose", "glycerol", "lactate", "gluconate"), 
+                      finalVal=c("Exponential","Stationary","Late-Stationary",
+                                 "Base Na", "High Na", 
+                                 "Low Mg", "Base Mg", "High Mg",
+                                 "Glucose", "Glycerol", "Lactate", "Gluconate"))
+
+
+# The table figure
 fig02a<-ggplot(conditionSummaryTidy, aes( y=columnName,x=factor(orderNoCurrent)))+
   geom_tile(aes(fill=condition), color="black")+
   #geom_text(aes(label=orderNo,angle = 90))+
-  scale_fill_manual(values = listColors)+
+  scale_fill_manual(values = listColors, breaks=oldLevels, labels=newLevels)+
   scale_y_discrete(expand = c(0,0), 
                    labels = rev(c("Na levels","Growth Phase","Carbon source","Mg levels"))) +
   scale_x_discrete(labels=as.vector(conditionSummary$dataSet),expand = c(0,0))+
@@ -302,6 +317,7 @@ fig02a<-ggplot(conditionSummaryTidy, aes( y=columnName,x=factor(orderNoCurrent))
         legend.key.size= unit(.6,"cm"))
 
 print(fig02a)
+browser
 ###*****************************
 
 

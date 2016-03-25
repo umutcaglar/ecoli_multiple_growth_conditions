@@ -156,7 +156,7 @@ condition %>%
 
 # ordering Function
 orderFunction<-function(df,column,target){
-
+  
   temp=df[[column]]
   temp2<-factor(temp, levels = target)
   df[column]<-temp2
@@ -278,14 +278,28 @@ listColors=c("#bae4b3","#74c476","#238b45",
              "#bdd7e7","#6baed6","#2171b5",
              "#bcbddc","#9e9ac8","#807dba","#6a51a3")
 
+
+# Renaming condition levels for figure
+oldLevels<-levels(conditionSummaryTidy$condition)
+newLevels=replace_fun(input_vector = oldLevels, 
+                      initialVal = c("exponential","stationary","late_stationary",
+                                     "baseNa","highNa",
+                                     "lowMg", "baseMg", "highMg",
+                                     "glucose", "glycerol", "lactate", "gluconate"), 
+                      finalVal=c("Exponential","Stationary","Late-Stationary",
+                                 "Base Na", "High Na", 
+                                 "Low Mg", "Base Mg", "High Mg",
+                                 "Glucose", "Glycerol", "Lactate", "Gluconate"))
+
+# The table figure
 fig02a<-ggplot(conditionSummaryTidy, aes( y=columnName,x= factor(orderNoCurrent)))+
   geom_tile(aes(fill=condition), color="black")+
   #geom_text(aes(label=orderNo,angle = 90))+
-  scale_fill_manual(values = listColors)+
+  scale_fill_manual(values = listColors, breaks=oldLevels, labels=newLevels)+
   scale_y_discrete(expand = c(0,0), 
-                   labels = rev(c("Growth Phase","Na levels","Mg levels","Carbon source"))) +
+                   labels = rev(c("Growth phase","Na levels","Mg levels","Carbon source"))) +
   scale_x_discrete(labels=as.vector(conditionSummary$dataSet),expand = c(0,0))+
-  guides(fill = guide_legend(override.aes = list(colour = NULL),
+  guides(fill = guide_legend(title="Condition",override.aes = list(colour = NULL),
                              nrow=2,byrow = TRUE))+
   theme(axis.text.x = element_text(angle = 90, hjust = -1, size = 6),
         axis.text.y = element_text(size=14, face = "bold"),
@@ -297,7 +311,8 @@ fig02a<-ggplot(conditionSummaryTidy, aes( y=columnName,x= factor(orderNoCurrent)
         legend.position="bottom",
         legend.key.size= unit(.6,"cm"))
 
-fig02a
+print(fig02a)
+browser()
 ###*****************************
 
 
