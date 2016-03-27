@@ -31,6 +31,12 @@ require("ggrepel")
 
 
 ###*****************************
+#Load Functions
+source("../b_code_histogram_RNA&Protein/replace_fun.R")
+###*****************************
+
+
+###*****************************
 # Load files
 fileList=dir("../d_results/",pattern = "*.kegg")
 
@@ -88,6 +94,18 @@ kegg_flagellar_assembly_df$grouping <- factor(kegg_flagellar_assembly_df$groupin
 
 
 ###*****************************
+# Change Y axis labels
+oldYAxis=levels(kegg_flagellar_assembly_df$grouping)
+newYaxis=replace_fun(input_vector = oldYAxis,
+                     initialVal = oldYAxis,
+                     finalVal = c("Protein \n Stationary \n High Mg",
+                                  "Protein \n Exponential \n High Na",
+                                  "mRNA \n Exponential \n High Na",
+                                  "mRNA \n Exponential \n High Mg"))
+###*****************************
+
+
+###*****************************
 # Generate flegellar data frame mf
 mainLoadedFile_mf$vs=as.character(mainLoadedFile_mf$vs)
 mainLoadedFile_mf %>%
@@ -133,11 +151,6 @@ print(fig01)
 
 ###*****************************
 # b) simple figure with geom_point
-scaleHigh_score_gene=max((kegg_flagellar_assembly_df$score_gene))
-if(scaleHigh_score_gene<0.1){scaleHigh_score_gene=0.1}
-scaleMid_score_gene=0
-scaleLow_score_gene=min((kegg_flagellar_assembly_df$score_gene))
-if(scaleLow_score_gene>-0.1){scaleLow_score_gene=-0.1}
 
 minimumFold=min(kegg_flagellar_assembly_df$log2)
 if(minimumFold>-1){minimumFold=-1}
@@ -145,16 +158,17 @@ maximumFold=max(kegg_flagellar_assembly_df$log2)
 if(maximumFold<1){maximumFold=1}
 
 fig01b=ggplot(kegg_flagellar_assembly_df, aes( x=log2,y=grouping)) +
-  geom_point(aes(colour = score_gene),size=2.5)+
+  geom_point(aes(colour = log10(padj_gene)),size=2.5)+
   geom_vline(xintercept = c(log2(1/2),log2(2)), colour="orange", linetype = "longdash")+
   geom_vline(xintercept = c(log2(1)), colour="black", linetype = "longdash")+
   geom_text_repel(aes(label=ID),size=5, colour="Black", fontface="bold")+
-  scale_colour_gradientn(colours=c("Blue","Grey50","Red"),
-                         values=rescale(c(scaleLow_score_gene,scaleMid_score_gene,scaleHigh_score_gene)),
-                         limits=c(scaleLow_score_gene,scaleHigh_score_gene),
-                         guide = guide_colorbar(title = "Gene Score",barwidth = 12))+
+  scale_colour_gradient(low = "blue",high = "yellow",
+                        guide = guide_colorbar(title = "Log10(P.adj)",
+                                               barwidth = 12, title.vjust = .9))+
   theme_bw()+
   scale_x_continuous(breaks=seq(floor(minimumFold),ceiling(maximumFold)))+
+  scale_y_discrete(breaks=oldYAxis,
+                   labels = newYaxis)+
   xlab("Log2 Fold Change")+
   ggtitle("Flagellar assembly")+
   theme(axis.line.y = element_blank(),
@@ -266,7 +280,7 @@ cowplot::save_plot(filename = paste0("../d_figures/kegg_flagellar_assembly.pdf")
                    plot = fig01b,
                    base_height = rowWidth*1.3,
                    ncol=1.2,
-                   nrow=1.2,
+                   nrow=1.7,
                    limitsize = FALSE)
 
 
@@ -290,7 +304,7 @@ rowWidth=ifelse(length(unique(mf_flagellar_assembly_df$grouping))*1<3,
 cowplot::save_plot(filename = paste0("../d_figures/mf_flagellar_assembly.pdf"),
                    plot = fig02b,
                    base_height = rowWidth*1.3,
-                   ncol=1.2,
+                   ncol=2,
                    nrow=1.2,
                    limitsize = FALSE)
 ###*****************************
