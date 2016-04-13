@@ -1,0 +1,411 @@
+"","ID","MF_Name","padj_gene","log2","signChange","score_gene","FDR_GoMF","numGenesInCat","abs_score","rank","numSigP","numSigN","MF_Name_long","MF_Name_short","pick_data","growthPhase","test_for","vs","df_category"
+"1","dppF","GO:0000166~nucleotide binding",5.4890649705326e-05,4.81445252449925,1,4.26050162872343,0.0239229864496044,578,4.26050162872343,25,25,1,"nucleotide binding
+ padj:0.02392 N( -1/ +25/ 578)","nucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"2","deaD","GO:0000166~nucleotide binding",0.000912965433983497,3.0972184780682,1,3.03954566508827,0.0239229864496044,578,3.03954566508827,23,25,1,"nucleotide binding
+ padj:0.02392 N( -1/ +25/ 578)","nucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"3","dppD","GO:0000166~nucleotide binding",0.000912965433983497,3.45484316366192,1,3.03954566508827,0.0239229864496044,578,3.03954566508827,24,25,1,"nucleotide binding
+ padj:0.02392 N( -1/ +25/ 578)","nucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"4","atpA","GO:0000166~nucleotide binding",0.00101191251950116,4.17336308089341,1,2.99485703091529,0.0239229864496044,578,2.99485703091529,22,25,1,"nucleotide binding
+ padj:0.02392 N( -1/ +25/ 578)","nucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"5","atpG","GO:0000166~nucleotide binding",0.00192412317994164,4.03402371831257,1,2.71576712842268,0.0239229864496044,578,2.71576712842268,20,25,1,"nucleotide binding
+ padj:0.02392 N( -1/ +25/ 578)","nucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"6","hisS","GO:0000166~nucleotide binding",0.00192412317994164,2.76618708446682,1,2.71576712842268,0.0239229864496044,578,2.71576712842268,21,25,1,"nucleotide binding
+ padj:0.02392 N( -1/ +25/ 578)","nucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"7","glnA","GO:0000166~nucleotide binding",0.00220886122089077,3.55992888652674,1,2.6558315692778,0.0239229864496044,578,2.6558315692778,19,25,1,"nucleotide binding
+ padj:0.02392 N( -1/ +25/ 578)","nucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"8","rbsK","GO:0000166~nucleotide binding",0.00722629753961957,2.86548842501716,1,2.14108416051577,0.0239229864496044,578,2.14108416051577,18,25,1,"nucleotide binding
+ padj:0.02392 N( -1/ +25/ 578)","nucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"9","ileS","GO:0000166~nucleotide binding",0.0106475939996523,2.46981180009057,1,1.97274851717578,0.0239229864496044,578,1.97274851717578,17,25,1,"nucleotide binding
+ padj:0.02392 N( -1/ +25/ 578)","nucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"10","infB","GO:0000166~nucleotide binding",0.0116647376801801,2.48844965221465,1,1.93312502329382,0.0239229864496044,578,1.93312502329382,16,25,1,"nucleotide binding
+ padj:0.02392 N( -1/ +25/ 578)","nucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"11","atpD","GO:0000166~nucleotide binding",0.0138043954327376,3.15546253851044,1,1.8599826086535,0.0239229864496044,578,1.8599826086535,14,25,1,"nucleotide binding
+ padj:0.02392 N( -1/ +25/ 578)","nucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"12","mglA","GO:0000166~nucleotide binding",0.0138043954327376,3.11131638535071,1,1.8599826086535,0.0239229864496044,578,1.8599826086535,15,25,1,"nucleotide binding
+ padj:0.02392 N( -1/ +25/ 578)","nucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"13","mukB","GO:0000166~nucleotide binding",0.0162919125653645,2.60157102914224,1,1.78802792933006,0.0239229864496044,578,1.78802792933006,13,25,1,"nucleotide binding
+ padj:0.02392 N( -1/ +25/ 578)","nucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"14","pheS","GO:0000166~nucleotide binding",0.0183377707749061,3.45155359889182,1,1.73665346032361,0.0239229864496044,578,1.73665346032361,12,25,1,"nucleotide binding
+ padj:0.02392 N( -1/ +25/ 578)","nucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"15","sfcA","GO:0000166~nucleotide binding",0.0187738037431895,2.78904126540634,1,1.72644772645607,0.0239229864496044,578,1.72644772645607,11,25,1,"nucleotide binding
+ padj:0.02392 N( -1/ +25/ 578)","nucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"16","thrB","GO:0000166~nucleotide binding",0.020260857849134,2.37355969069431,1,1.6933421704635,0.0239229864496044,578,1.6933421704635,10,25,1,"nucleotide binding
+ padj:0.02392 N( -1/ +25/ 578)","nucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"17","sucC","GO:0000166~nucleotide binding",0.0227799066715156,2.81450780721961,1,1.64244805954264,0.0239229864496044,578,1.64244805954264,9,25,1,"nucleotide binding
+ padj:0.02392 N( -1/ +25/ 578)","nucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"18","groEL","GO:0000166~nucleotide binding",0.0265461491851865,2.16158472507924,1,1.57599846926868,0.0239229864496044,578,1.57599846926868,8,25,1,"nucleotide binding
+ padj:0.02392 N( -1/ +25/ 578)","nucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"19","wecC","GO:0000166~nucleotide binding",0.0347761540821618,3.62128457919355,1,1.45871844859119,0.0239229864496044,578,1.45871844859119,7,25,1,"nucleotide binding
+ padj:0.02392 N( -1/ +25/ 578)","nucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"20","gapA","GO:0000166~nucleotide binding",0.0360524371134288,1.92143112503424,1,1.44306537202253,0.0239229864496044,578,1.44306537202253,6,25,1,"nucleotide binding
+ padj:0.02392 N( -1/ +25/ 578)","nucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"21","btuR","GO:0000166~nucleotide binding",0.0460256998885872,2.57212989182386,1,1.33699959868619,0.0239229864496044,578,1.33699959868619,5,25,1,"nucleotide binding
+ padj:0.02392 N( -1/ +25/ 578)","nucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"22","oppD","GO:0000166~nucleotide binding",0.0466039690113883,3.3921981635136,1,1.33157709519106,0.0239229864496044,578,1.33157709519106,4,25,1,"nucleotide binding
+ padj:0.02392 N( -1/ +25/ 578)","nucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"23","rhlB","GO:0000166~nucleotide binding",0.0485441856653543,1.89293851392267,1,1.31386277985833,0.0239229864496044,578,1.31386277985833,3,25,1,"nucleotide binding
+ padj:0.02392 N( -1/ +25/ 578)","nucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"24","bax","GO:0000166~nucleotide binding",0.0498027251248262,2.48546510463273,1,1.30274689269622,0.0239229864496044,578,1.30274689269622,1,25,1,"nucleotide binding
+ padj:0.02392 N( -1/ +25/ 578)","nucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"25","dnaX","GO:0000166~nucleotide binding",0.0498027251248262,2.28292477724682,1,1.30274689269622,0.0239229864496044,578,1.30274689269622,2,25,1,"nucleotide binding
+ padj:0.02392 N( -1/ +25/ 578)","nucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"26","asd","GO:0000166~nucleotide binding",0.00192412317994164,-3.28948147908859,-1,-2.71576712842268,0.0239229864496044,578,2.71576712842268,-1,25,1,"nucleotide binding
+ padj:0.02392 N( -1/ +25/ 578)","nucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"27","deaD","GO:0003723~RNA binding",0.000912965433983497,3.0972184780682,1,3.03954566508827,0.0118003479204903,109,3.03954566508827,8,9,1,"RNA binding
+ padj:0.01180 N( -1/ +9/ 109)","RNA binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"28","rpsD","GO:0003723~RNA binding",0.000912965433983497,3.82770636332139,1,3.03954566508827,0.0118003479204903,109,3.03954566508827,9,9,1,"RNA binding
+ padj:0.01180 N( -1/ +9/ 109)","RNA binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"29","rpsL","GO:0003723~RNA binding",0.00615582127255538,4.04634646370286,1,2.21071399791622,0.0118003479204903,109,2.21071399791622,7,9,1,"RNA binding
+ padj:0.01180 N( -1/ +9/ 109)","RNA binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"30","rplT","GO:0003723~RNA binding",0.00779363513937396,2.52634200432892,1,2.10825992965259,0.0118003479204903,109,2.10825992965259,6,9,1,"RNA binding
+ padj:0.01180 N( -1/ +9/ 109)","RNA binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"31","rplO","GO:0003723~RNA binding",0.0091872506022353,2.96589076358743,1,2.03681443713693,0.0118003479204903,109,2.03681443713693,5,9,1,"RNA binding
+ padj:0.01180 N( -1/ +9/ 109)","RNA binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"32","rpsI","GO:0003723~RNA binding",0.0123886473647831,2.83777973666337,1,1.90697610880384,0.0118003479204903,109,1.90697610880384,4,9,1,"RNA binding
+ padj:0.01180 N( -1/ +9/ 109)","RNA binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"33","rne","GO:0003723~RNA binding",0.0382541728683376,2.2547776687973,1,1.41732118391307,0.0118003479204903,109,1.41732118391307,3,9,1,"RNA binding
+ padj:0.01180 N( -1/ +9/ 109)","RNA binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"34","rpsQ","GO:0003723~RNA binding",0.0399933581552626,2.23229878006806,1,1.39801212757271,0.0118003479204903,109,1.39801212757271,2,9,1,"RNA binding
+ padj:0.01180 N( -1/ +9/ 109)","RNA binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"35","rhlB","GO:0003723~RNA binding",0.0485441856653543,1.89293851392267,1,1.31386277985833,0.0118003479204903,109,1.31386277985833,1,9,1,"RNA binding
+ padj:0.01180 N( -1/ +9/ 109)","RNA binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"36","rpsD","GO:0003735~structural constituent of ribosome",0.000912965433983497,3.82770636332139,1,3.03954566508827,4.73157426572612e-08,57,3.03954566508827,9,9,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +9/ 57)","structural constituent of ribosome","mrna","Sta","carbonSource","glucoselactate","MF"
+"37","rplM","GO:0003735~structural constituent of ribosome",0.000986871595843554,3.82048416736331,1,3.00573935071872,4.73157426572612e-08,57,3.00573935071872,8,9,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +9/ 57)","structural constituent of ribosome","mrna","Sta","carbonSource","glucoselactate","MF"
+"38","rpsL","GO:0003735~structural constituent of ribosome",0.00615582127255538,4.04634646370286,1,2.21071399791622,4.73157426572612e-08,57,2.21071399791622,7,9,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +9/ 57)","structural constituent of ribosome","mrna","Sta","carbonSource","glucoselactate","MF"
+"39","rplT","GO:0003735~structural constituent of ribosome",0.00779363513937396,2.52634200432892,1,2.10825992965259,4.73157426572612e-08,57,2.10825992965259,6,9,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +9/ 57)","structural constituent of ribosome","mrna","Sta","carbonSource","glucoselactate","MF"
+"40","rplO","GO:0003735~structural constituent of ribosome",0.0091872506022353,2.96589076358743,1,2.03681443713693,4.73157426572612e-08,57,2.03681443713693,5,9,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +9/ 57)","structural constituent of ribosome","mrna","Sta","carbonSource","glucoselactate","MF"
+"41","rpsI","GO:0003735~structural constituent of ribosome",0.0123886473647831,2.83777973666337,1,1.90697610880384,4.73157426572612e-08,57,1.90697610880384,4,9,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +9/ 57)","structural constituent of ribosome","mrna","Sta","carbonSource","glucoselactate","MF"
+"42","rplQ","GO:0003735~structural constituent of ribosome",0.0138043954327376,2.95444353215592,1,1.8599826086535,4.73157426572612e-08,57,1.8599826086535,3,9,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +9/ 57)","structural constituent of ribosome","mrna","Sta","carbonSource","glucoselactate","MF"
+"43","rpsQ","GO:0003735~structural constituent of ribosome",0.0399933581552626,2.23229878006806,1,1.39801212757271,4.73157426572612e-08,57,1.39801212757271,2,9,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +9/ 57)","structural constituent of ribosome","mrna","Sta","carbonSource","glucoselactate","MF"
+"44","rpmJ","GO:0003735~structural constituent of ribosome",0.041209356125357,2.48236142384744,1,1.38500417104661,4.73157426572612e-08,57,1.38500417104661,1,9,1,"structural constituent of ribosome
+ padj:0.00000 N( -1/ +9/ 57)","structural constituent of ribosome","mrna","Sta","carbonSource","glucoselactate","MF"
+"45","nuoH","GO:0003954~NADH dehydrogenase activity",0.00192412317994164,3.53535534098748,1,2.71576712842268,0.0406098414205982,25,2.71576712842268,5,5,1,"NADH dehydrogenase activity
+ padj:0.04061 N( -1/ +5/ 25)","NADH dehydrogenase activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"46","nuoG","GO:0003954~NADH dehydrogenase activity",0.0104470456482928,2.70950580965043,1,1.98100650764355,0.0406098414205982,25,1.98100650764355,4,5,1,"NADH dehydrogenase activity
+ padj:0.04061 N( -1/ +5/ 25)","NADH dehydrogenase activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"47","nuoL","GO:0003954~NADH dehydrogenase activity",0.0134588167113557,2.75981907090322,1,1.87099312126499,0.0406098414205982,25,1.87099312126499,3,5,1,"NADH dehydrogenase activity
+ padj:0.04061 N( -1/ +5/ 25)","NADH dehydrogenase activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"48","nuoM","GO:0003954~NADH dehydrogenase activity",0.0183377707749061,2.90274096986068,1,1.73665346032361,0.0406098414205982,25,1.73665346032361,2,5,1,"NADH dehydrogenase activity
+ padj:0.04061 N( -1/ +5/ 25)","NADH dehydrogenase activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"49","nuoI","GO:0003954~NADH dehydrogenase activity",0.0498027251248262,2.75087768244641,1,1.30274689269622,0.0406098414205982,25,1.30274689269622,1,5,1,"NADH dehydrogenase activity
+ padj:0.04061 N( -1/ +5/ 25)","NADH dehydrogenase activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"50","hisS","GO:0004812~aminoacyl-tRNA ligase activity",0.00192412317994164,2.76618708446682,1,2.71576712842268,0.0113585479725222,32,2.71576712842268,3,3,1,"aminoacyl-tRNA ligase activity
+ padj:0.01136 N( -1/ +3/ 32)","aminoacyl-tRNA ligase activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"51","ileS","GO:0004812~aminoacyl-tRNA ligase activity",0.0106475939996523,2.46981180009057,1,1.97274851717578,0.0113585479725222,32,1.97274851717578,2,3,1,"aminoacyl-tRNA ligase activity
+ padj:0.01136 N( -1/ +3/ 32)","aminoacyl-tRNA ligase activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"52","pheS","GO:0004812~aminoacyl-tRNA ligase activity",0.0183377707749061,3.45155359889182,1,1.73665346032361,0.0113585479725222,32,1.73665346032361,1,3,1,"aminoacyl-tRNA ligase activity
+ padj:0.01136 N( -1/ +3/ 32)","aminoacyl-tRNA ligase activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"53","pheS","GO:0004826~phenylalanine-tRNA ligase activity",0.0183377707749061,3.45155359889182,1,1.73665346032361,0.00176623782935448,4,1.73665346032361,1,1,1,"phenylalanine-tRNA ligase activity
+ padj:0.00177 N( -1/ +1/ 4)","phenylalanine-tRNA ligase activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"54","rpsD","GO:0005198~structural molecule activity",0.000912965433983497,3.82770636332139,1,3.03954566508827,8.41627856473792e-06,70,3.03954566508827,9,9,1,"structural molecule activity
+ padj:0.00001 N( -1/ +9/ 70)","structural molecule activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"55","rplM","GO:0005198~structural molecule activity",0.000986871595843554,3.82048416736331,1,3.00573935071872,8.41627856473792e-06,70,3.00573935071872,8,9,1,"structural molecule activity
+ padj:0.00001 N( -1/ +9/ 70)","structural molecule activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"56","rpsL","GO:0005198~structural molecule activity",0.00615582127255538,4.04634646370286,1,2.21071399791622,8.41627856473792e-06,70,2.21071399791622,7,9,1,"structural molecule activity
+ padj:0.00001 N( -1/ +9/ 70)","structural molecule activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"57","rplT","GO:0005198~structural molecule activity",0.00779363513937396,2.52634200432892,1,2.10825992965259,8.41627856473792e-06,70,2.10825992965259,6,9,1,"structural molecule activity
+ padj:0.00001 N( -1/ +9/ 70)","structural molecule activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"58","rplO","GO:0005198~structural molecule activity",0.0091872506022353,2.96589076358743,1,2.03681443713693,8.41627856473792e-06,70,2.03681443713693,5,9,1,"structural molecule activity
+ padj:0.00001 N( -1/ +9/ 70)","structural molecule activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"59","rpsI","GO:0005198~structural molecule activity",0.0123886473647831,2.83777973666337,1,1.90697610880384,8.41627856473792e-06,70,1.90697610880384,4,9,1,"structural molecule activity
+ padj:0.00001 N( -1/ +9/ 70)","structural molecule activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"60","rplQ","GO:0005198~structural molecule activity",0.0138043954327376,2.95444353215592,1,1.8599826086535,8.41627856473792e-06,70,1.8599826086535,3,9,1,"structural molecule activity
+ padj:0.00001 N( -1/ +9/ 70)","structural molecule activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"61","rpsQ","GO:0005198~structural molecule activity",0.0399933581552626,2.23229878006806,1,1.39801212757271,8.41627856473792e-06,70,1.39801212757271,2,9,1,"structural molecule activity
+ padj:0.00001 N( -1/ +9/ 70)","structural molecule activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"62","rpmJ","GO:0005198~structural molecule activity",0.041209356125357,2.48236142384744,1,1.38500417104661,8.41627856473792e-06,70,1.38500417104661,1,9,1,"structural molecule activity
+ padj:0.00001 N( -1/ +9/ 70)","structural molecule activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"63","dppF","GO:0005524~ATP binding",5.4890649705326e-05,4.81445252449925,1,4.26050162872343,0.0105109386804773,419,4.26050162872343,21,21,1,"ATP binding
+ padj:0.01051 N( -1/ +21/ 419)","ATP binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"64","deaD","GO:0005524~ATP binding",0.000912965433983497,3.0972184780682,1,3.03954566508827,0.0105109386804773,419,3.03954566508827,19,21,1,"ATP binding
+ padj:0.01051 N( -1/ +21/ 419)","ATP binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"65","dppD","GO:0005524~ATP binding",0.000912965433983497,3.45484316366192,1,3.03954566508827,0.0105109386804773,419,3.03954566508827,20,21,1,"ATP binding
+ padj:0.01051 N( -1/ +21/ 419)","ATP binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"66","atpA","GO:0005524~ATP binding",0.00101191251950116,4.17336308089341,1,2.99485703091529,0.0105109386804773,419,2.99485703091529,18,21,1,"ATP binding
+ padj:0.01051 N( -1/ +21/ 419)","ATP binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"67","atpG","GO:0005524~ATP binding",0.00192412317994164,4.03402371831257,1,2.71576712842268,0.0105109386804773,419,2.71576712842268,16,21,1,"ATP binding
+ padj:0.01051 N( -1/ +21/ 419)","ATP binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"68","hisS","GO:0005524~ATP binding",0.00192412317994164,2.76618708446682,1,2.71576712842268,0.0105109386804773,419,2.71576712842268,17,21,1,"ATP binding
+ padj:0.01051 N( -1/ +21/ 419)","ATP binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"69","glnA","GO:0005524~ATP binding",0.00220886122089077,3.55992888652674,1,2.6558315692778,0.0105109386804773,419,2.6558315692778,15,21,1,"ATP binding
+ padj:0.01051 N( -1/ +21/ 419)","ATP binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"70","rbsK","GO:0005524~ATP binding",0.00722629753961957,2.86548842501716,1,2.14108416051577,0.0105109386804773,419,2.14108416051577,14,21,1,"ATP binding
+ padj:0.01051 N( -1/ +21/ 419)","ATP binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"71","ileS","GO:0005524~ATP binding",0.0106475939996523,2.46981180009057,1,1.97274851717578,0.0105109386804773,419,1.97274851717578,13,21,1,"ATP binding
+ padj:0.01051 N( -1/ +21/ 419)","ATP binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"72","atpD","GO:0005524~ATP binding",0.0138043954327376,3.15546253851044,1,1.8599826086535,0.0105109386804773,419,1.8599826086535,11,21,1,"ATP binding
+ padj:0.01051 N( -1/ +21/ 419)","ATP binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"73","mglA","GO:0005524~ATP binding",0.0138043954327376,3.11131638535071,1,1.8599826086535,0.0105109386804773,419,1.8599826086535,12,21,1,"ATP binding
+ padj:0.01051 N( -1/ +21/ 419)","ATP binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"74","mukB","GO:0005524~ATP binding",0.0162919125653645,2.60157102914224,1,1.78802792933006,0.0105109386804773,419,1.78802792933006,10,21,1,"ATP binding
+ padj:0.01051 N( -1/ +21/ 419)","ATP binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"75","pheS","GO:0005524~ATP binding",0.0183377707749061,3.45155359889182,1,1.73665346032361,0.0105109386804773,419,1.73665346032361,9,21,1,"ATP binding
+ padj:0.01051 N( -1/ +21/ 419)","ATP binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"76","thrB","GO:0005524~ATP binding",0.020260857849134,2.37355969069431,1,1.6933421704635,0.0105109386804773,419,1.6933421704635,8,21,1,"ATP binding
+ padj:0.01051 N( -1/ +21/ 419)","ATP binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"77","sucC","GO:0005524~ATP binding",0.0227799066715156,2.81450780721961,1,1.64244805954264,0.0105109386804773,419,1.64244805954264,7,21,1,"ATP binding
+ padj:0.01051 N( -1/ +21/ 419)","ATP binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"78","groEL","GO:0005524~ATP binding",0.0265461491851865,2.16158472507924,1,1.57599846926868,0.0105109386804773,419,1.57599846926868,6,21,1,"ATP binding
+ padj:0.01051 N( -1/ +21/ 419)","ATP binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"79","btuR","GO:0005524~ATP binding",0.0460256998885872,2.57212989182386,1,1.33699959868619,0.0105109386804773,419,1.33699959868619,5,21,1,"ATP binding
+ padj:0.01051 N( -1/ +21/ 419)","ATP binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"80","oppD","GO:0005524~ATP binding",0.0466039690113883,3.3921981635136,1,1.33157709519106,0.0105109386804773,419,1.33157709519106,4,21,1,"ATP binding
+ padj:0.01051 N( -1/ +21/ 419)","ATP binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"81","rhlB","GO:0005524~ATP binding",0.0485441856653543,1.89293851392267,1,1.31386277985833,0.0105109386804773,419,1.31386277985833,3,21,1,"ATP binding
+ padj:0.01051 N( -1/ +21/ 419)","ATP binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"82","bax","GO:0005524~ATP binding",0.0498027251248262,2.48546510463273,1,1.30274689269622,0.0105109386804773,419,1.30274689269622,1,21,1,"ATP binding
+ padj:0.01051 N( -1/ +21/ 419)","ATP binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"83","dnaX","GO:0005524~ATP binding",0.0498027251248262,2.28292477724682,1,1.30274689269622,0.0105109386804773,419,1.30274689269622,2,21,1,"ATP binding
+ padj:0.01051 N( -1/ +21/ 419)","ATP binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"84","atpA","GO:0015077~monovalent inorganic cation transmembrane transporter activity",0.00101191251950116,4.17336308089341,1,2.99485703091529,0.0266023610886995,27,2.99485703091529,5,5,1,"monovalent inorganic cation transmembrane transporter activity
+ padj:0.02660 N( -1/ +5/ 27)","monovalent inorganic cation transmembrane transporter activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"85","atpG","GO:0015077~monovalent inorganic cation transmembrane transporter activity",0.00192412317994164,4.03402371831257,1,2.71576712842268,0.0266023610886995,27,2.71576712842268,4,5,1,"monovalent inorganic cation transmembrane transporter activity
+ padj:0.02660 N( -1/ +5/ 27)","monovalent inorganic cation transmembrane transporter activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"86","atpB","GO:0015077~monovalent inorganic cation transmembrane transporter activity",0.00316368827113877,3.72308550768994,1,2.49980631556434,0.0266023610886995,27,2.49980631556434,3,5,1,"monovalent inorganic cation transmembrane transporter activity
+ padj:0.02660 N( -1/ +5/ 27)","monovalent inorganic cation transmembrane transporter activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"87","atpF","GO:0015077~monovalent inorganic cation transmembrane transporter activity",0.0066834611475862,4.10401513076217,1,2.17499857225314,0.0266023610886995,27,2.17499857225314,2,5,1,"monovalent inorganic cation transmembrane transporter activity
+ padj:0.02660 N( -1/ +5/ 27)","monovalent inorganic cation transmembrane transporter activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"88","atpD","GO:0015077~monovalent inorganic cation transmembrane transporter activity",0.0138043954327376,3.15546253851044,1,1.8599826086535,0.0266023610886995,27,1.8599826086535,1,5,1,"monovalent inorganic cation transmembrane transporter activity
+ padj:0.02660 N( -1/ +5/ 27)","monovalent inorganic cation transmembrane transporter activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"89","atpA","GO:0015078~hydrogen ion transmembrane transporter activity",0.00101191251950116,4.17336308089341,1,2.99485703091529,0.00954690814582815,20,2.99485703091529,5,5,1,"hydrogen ion transmembrane transporter activity
+ padj:0.00955 N( -1/ +5/ 20)","hydrogen ion transmembrane transporter activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"90","atpG","GO:0015078~hydrogen ion transmembrane transporter activity",0.00192412317994164,4.03402371831257,1,2.71576712842268,0.00954690814582815,20,2.71576712842268,4,5,1,"hydrogen ion transmembrane transporter activity
+ padj:0.00955 N( -1/ +5/ 20)","hydrogen ion transmembrane transporter activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"91","atpB","GO:0015078~hydrogen ion transmembrane transporter activity",0.00316368827113877,3.72308550768994,1,2.49980631556434,0.00954690814582815,20,2.49980631556434,3,5,1,"hydrogen ion transmembrane transporter activity
+ padj:0.00955 N( -1/ +5/ 20)","hydrogen ion transmembrane transporter activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"92","atpF","GO:0015078~hydrogen ion transmembrane transporter activity",0.0066834611475862,4.10401513076217,1,2.17499857225314,0.00954690814582815,20,2.17499857225314,2,5,1,"hydrogen ion transmembrane transporter activity
+ padj:0.00955 N( -1/ +5/ 20)","hydrogen ion transmembrane transporter activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"93","atpD","GO:0015078~hydrogen ion transmembrane transporter activity",0.0138043954327376,3.15546253851044,1,1.8599826086535,0.00954690814582815,20,1.8599826086535,1,5,1,"hydrogen ion transmembrane transporter activity
+ padj:0.00955 N( -1/ +5/ 20)","hydrogen ion transmembrane transporter activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"94","nuoH","GO:0016655~oxidoreductase activity, acting on NADH or NADPH, quinone or similar compound as acceptor",0.00192412317994164,3.53535534098748,1,2.71576712842268,0.0465946763757428,26,2.71576712842268,5,5,1,"oxidoreductase activity, acting on NADH or NADPH, quinone or similar compound as acceptor
+ padj:0.04659 N( -1/ +5/ 26)","oxidoreductase activity, acting on NADH or NADPH, quinone or similar compound as acceptor","mrna","Sta","carbonSource","glucoselactate","MF"
+"95","nuoG","GO:0016655~oxidoreductase activity, acting on NADH or NADPH, quinone or similar compound as acceptor",0.0104470456482928,2.70950580965043,1,1.98100650764355,0.0465946763757428,26,1.98100650764355,4,5,1,"oxidoreductase activity, acting on NADH or NADPH, quinone or similar compound as acceptor
+ padj:0.04659 N( -1/ +5/ 26)","oxidoreductase activity, acting on NADH or NADPH, quinone or similar compound as acceptor","mrna","Sta","carbonSource","glucoselactate","MF"
+"96","nuoL","GO:0016655~oxidoreductase activity, acting on NADH or NADPH, quinone or similar compound as acceptor",0.0134588167113557,2.75981907090322,1,1.87099312126499,0.0465946763757428,26,1.87099312126499,3,5,1,"oxidoreductase activity, acting on NADH or NADPH, quinone or similar compound as acceptor
+ padj:0.04659 N( -1/ +5/ 26)","oxidoreductase activity, acting on NADH or NADPH, quinone or similar compound as acceptor","mrna","Sta","carbonSource","glucoselactate","MF"
+"97","nuoM","GO:0016655~oxidoreductase activity, acting on NADH or NADPH, quinone or similar compound as acceptor",0.0183377707749061,2.90274096986068,1,1.73665346032361,0.0465946763757428,26,1.73665346032361,2,5,1,"oxidoreductase activity, acting on NADH or NADPH, quinone or similar compound as acceptor
+ padj:0.04659 N( -1/ +5/ 26)","oxidoreductase activity, acting on NADH or NADPH, quinone or similar compound as acceptor","mrna","Sta","carbonSource","glucoselactate","MF"
+"98","nuoI","GO:0016655~oxidoreductase activity, acting on NADH or NADPH, quinone or similar compound as acceptor",0.0498027251248262,2.75087768244641,1,1.30274689269622,0.0465946763757428,26,1.30274689269622,1,5,1,"oxidoreductase activity, acting on NADH or NADPH, quinone or similar compound as acceptor
+ padj:0.04659 N( -1/ +5/ 26)","oxidoreductase activity, acting on NADH or NADPH, quinone or similar compound as acceptor","mrna","Sta","carbonSource","glucoselactate","MF"
+"99","hisS","GO:0016875~ligase activity, forming carbon-oxygen bonds",0.00192412317994164,2.76618708446682,1,2.71576712842268,0.0118464033391666,32,2.71576712842268,3,3,1,"ligase activity, forming carbon-oxygen bonds
+ padj:0.01185 N( -1/ +3/ 32)","ligase activity, forming carbon-oxygen bonds","mrna","Sta","carbonSource","glucoselactate","MF"
+"100","ileS","GO:0016875~ligase activity, forming carbon-oxygen bonds",0.0106475939996523,2.46981180009057,1,1.97274851717578,0.0118464033391666,32,1.97274851717578,2,3,1,"ligase activity, forming carbon-oxygen bonds
+ padj:0.01185 N( -1/ +3/ 32)","ligase activity, forming carbon-oxygen bonds","mrna","Sta","carbonSource","glucoselactate","MF"
+"101","pheS","GO:0016875~ligase activity, forming carbon-oxygen bonds",0.0183377707749061,3.45155359889182,1,1.73665346032361,0.0118464033391666,32,1.73665346032361,1,3,1,"ligase activity, forming carbon-oxygen bonds
+ padj:0.01185 N( -1/ +3/ 32)","ligase activity, forming carbon-oxygen bonds","mrna","Sta","carbonSource","glucoselactate","MF"
+"102","hisS","GO:0016876~ligase activity, forming aminoacyl-tRNA and related compounds",0.00192412317994164,2.76618708446682,1,2.71576712842268,0.0118464033391666,32,2.71576712842268,3,3,1,"ligase activity, forming aminoacyl-tRNA and related compounds
+ padj:0.01185 N( -1/ +3/ 32)","ligase activity, forming aminoacyl-tRNA and related compounds","mrna","Sta","carbonSource","glucoselactate","MF"
+"103","ileS","GO:0016876~ligase activity, forming aminoacyl-tRNA and related compounds",0.0106475939996523,2.46981180009057,1,1.97274851717578,0.0118464033391666,32,1.97274851717578,2,3,1,"ligase activity, forming aminoacyl-tRNA and related compounds
+ padj:0.01185 N( -1/ +3/ 32)","ligase activity, forming aminoacyl-tRNA and related compounds","mrna","Sta","carbonSource","glucoselactate","MF"
+"104","pheS","GO:0016876~ligase activity, forming aminoacyl-tRNA and related compounds",0.0183377707749061,3.45155359889182,1,1.73665346032361,0.0118464033391666,32,1.73665346032361,1,3,1,"ligase activity, forming aminoacyl-tRNA and related compounds
+ padj:0.01185 N( -1/ +3/ 32)","ligase activity, forming aminoacyl-tRNA and related compounds","mrna","Sta","carbonSource","glucoselactate","MF"
+"105","rpsD","GO:0019843~rRNA binding",0.000912965433983497,3.82770636332139,1,3.03954566508827,0.00140297763893138,37,3.03954566508827,5,5,1,"rRNA binding
+ padj:0.00140 N( -1/ +5/ 37)","rRNA binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"106","rpsL","GO:0019843~rRNA binding",0.00615582127255538,4.04634646370286,1,2.21071399791622,0.00140297763893138,37,2.21071399791622,4,5,1,"rRNA binding
+ padj:0.00140 N( -1/ +5/ 37)","rRNA binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"107","rplT","GO:0019843~rRNA binding",0.00779363513937396,2.52634200432892,1,2.10825992965259,0.00140297763893138,37,2.10825992965259,3,5,1,"rRNA binding
+ padj:0.00140 N( -1/ +5/ 37)","rRNA binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"108","rplO","GO:0019843~rRNA binding",0.0091872506022353,2.96589076358743,1,2.03681443713693,0.00140297763893138,37,2.03681443713693,2,5,1,"rRNA binding
+ padj:0.00140 N( -1/ +5/ 37)","rRNA binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"109","rpsQ","GO:0019843~rRNA binding",0.0399933581552626,2.23229878006806,1,1.39801212757271,0.00140297763893138,37,1.39801212757271,1,5,1,"rRNA binding
+ padj:0.00140 N( -1/ +5/ 37)","rRNA binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"110","dppF","GO:0032553~ribonucleotide binding",5.4890649705326e-05,4.81445252449925,1,4.26050162872343,0.0109825785705572,450,4.26050162872343,22,22,1,"ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"111","deaD","GO:0032553~ribonucleotide binding",0.000912965433983497,3.0972184780682,1,3.03954566508827,0.0109825785705572,450,3.03954566508827,20,22,1,"ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"112","dppD","GO:0032553~ribonucleotide binding",0.000912965433983497,3.45484316366192,1,3.03954566508827,0.0109825785705572,450,3.03954566508827,21,22,1,"ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"113","atpA","GO:0032553~ribonucleotide binding",0.00101191251950116,4.17336308089341,1,2.99485703091529,0.0109825785705572,450,2.99485703091529,19,22,1,"ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"114","atpG","GO:0032553~ribonucleotide binding",0.00192412317994164,4.03402371831257,1,2.71576712842268,0.0109825785705572,450,2.71576712842268,17,22,1,"ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"115","hisS","GO:0032553~ribonucleotide binding",0.00192412317994164,2.76618708446682,1,2.71576712842268,0.0109825785705572,450,2.71576712842268,18,22,1,"ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"116","glnA","GO:0032553~ribonucleotide binding",0.00220886122089077,3.55992888652674,1,2.6558315692778,0.0109825785705572,450,2.6558315692778,16,22,1,"ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"117","rbsK","GO:0032553~ribonucleotide binding",0.00722629753961957,2.86548842501716,1,2.14108416051577,0.0109825785705572,450,2.14108416051577,15,22,1,"ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"118","ileS","GO:0032553~ribonucleotide binding",0.0106475939996523,2.46981180009057,1,1.97274851717578,0.0109825785705572,450,1.97274851717578,14,22,1,"ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"119","infB","GO:0032553~ribonucleotide binding",0.0116647376801801,2.48844965221465,1,1.93312502329382,0.0109825785705572,450,1.93312502329382,13,22,1,"ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"120","atpD","GO:0032553~ribonucleotide binding",0.0138043954327376,3.15546253851044,1,1.8599826086535,0.0109825785705572,450,1.8599826086535,11,22,1,"ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"121","mglA","GO:0032553~ribonucleotide binding",0.0138043954327376,3.11131638535071,1,1.8599826086535,0.0109825785705572,450,1.8599826086535,12,22,1,"ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"122","mukB","GO:0032553~ribonucleotide binding",0.0162919125653645,2.60157102914224,1,1.78802792933006,0.0109825785705572,450,1.78802792933006,10,22,1,"ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"123","pheS","GO:0032553~ribonucleotide binding",0.0183377707749061,3.45155359889182,1,1.73665346032361,0.0109825785705572,450,1.73665346032361,9,22,1,"ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"124","thrB","GO:0032553~ribonucleotide binding",0.020260857849134,2.37355969069431,1,1.6933421704635,0.0109825785705572,450,1.6933421704635,8,22,1,"ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"125","sucC","GO:0032553~ribonucleotide binding",0.0227799066715156,2.81450780721961,1,1.64244805954264,0.0109825785705572,450,1.64244805954264,7,22,1,"ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"126","groEL","GO:0032553~ribonucleotide binding",0.0265461491851865,2.16158472507924,1,1.57599846926868,0.0109825785705572,450,1.57599846926868,6,22,1,"ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"127","btuR","GO:0032553~ribonucleotide binding",0.0460256998885872,2.57212989182386,1,1.33699959868619,0.0109825785705572,450,1.33699959868619,5,22,1,"ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"128","oppD","GO:0032553~ribonucleotide binding",0.0466039690113883,3.3921981635136,1,1.33157709519106,0.0109825785705572,450,1.33157709519106,4,22,1,"ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"129","rhlB","GO:0032553~ribonucleotide binding",0.0485441856653543,1.89293851392267,1,1.31386277985833,0.0109825785705572,450,1.31386277985833,3,22,1,"ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"130","bax","GO:0032553~ribonucleotide binding",0.0498027251248262,2.48546510463273,1,1.30274689269622,0.0109825785705572,450,1.30274689269622,1,22,1,"ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"131","dnaX","GO:0032553~ribonucleotide binding",0.0498027251248262,2.28292477724682,1,1.30274689269622,0.0109825785705572,450,1.30274689269622,2,22,1,"ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"132","dppF","GO:0032555~purine ribonucleotide binding",5.4890649705326e-05,4.81445252449925,1,4.26050162872343,0.0109825785705572,450,4.26050162872343,22,22,1,"purine ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","purine ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"133","deaD","GO:0032555~purine ribonucleotide binding",0.000912965433983497,3.0972184780682,1,3.03954566508827,0.0109825785705572,450,3.03954566508827,20,22,1,"purine ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","purine ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"134","dppD","GO:0032555~purine ribonucleotide binding",0.000912965433983497,3.45484316366192,1,3.03954566508827,0.0109825785705572,450,3.03954566508827,21,22,1,"purine ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","purine ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"135","atpA","GO:0032555~purine ribonucleotide binding",0.00101191251950116,4.17336308089341,1,2.99485703091529,0.0109825785705572,450,2.99485703091529,19,22,1,"purine ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","purine ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"136","atpG","GO:0032555~purine ribonucleotide binding",0.00192412317994164,4.03402371831257,1,2.71576712842268,0.0109825785705572,450,2.71576712842268,17,22,1,"purine ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","purine ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"137","hisS","GO:0032555~purine ribonucleotide binding",0.00192412317994164,2.76618708446682,1,2.71576712842268,0.0109825785705572,450,2.71576712842268,18,22,1,"purine ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","purine ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"138","glnA","GO:0032555~purine ribonucleotide binding",0.00220886122089077,3.55992888652674,1,2.6558315692778,0.0109825785705572,450,2.6558315692778,16,22,1,"purine ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","purine ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"139","rbsK","GO:0032555~purine ribonucleotide binding",0.00722629753961957,2.86548842501716,1,2.14108416051577,0.0109825785705572,450,2.14108416051577,15,22,1,"purine ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","purine ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"140","ileS","GO:0032555~purine ribonucleotide binding",0.0106475939996523,2.46981180009057,1,1.97274851717578,0.0109825785705572,450,1.97274851717578,14,22,1,"purine ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","purine ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"141","infB","GO:0032555~purine ribonucleotide binding",0.0116647376801801,2.48844965221465,1,1.93312502329382,0.0109825785705572,450,1.93312502329382,13,22,1,"purine ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","purine ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"142","atpD","GO:0032555~purine ribonucleotide binding",0.0138043954327376,3.15546253851044,1,1.8599826086535,0.0109825785705572,450,1.8599826086535,11,22,1,"purine ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","purine ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"143","mglA","GO:0032555~purine ribonucleotide binding",0.0138043954327376,3.11131638535071,1,1.8599826086535,0.0109825785705572,450,1.8599826086535,12,22,1,"purine ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","purine ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"144","mukB","GO:0032555~purine ribonucleotide binding",0.0162919125653645,2.60157102914224,1,1.78802792933006,0.0109825785705572,450,1.78802792933006,10,22,1,"purine ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","purine ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"145","pheS","GO:0032555~purine ribonucleotide binding",0.0183377707749061,3.45155359889182,1,1.73665346032361,0.0109825785705572,450,1.73665346032361,9,22,1,"purine ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","purine ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"146","thrB","GO:0032555~purine ribonucleotide binding",0.020260857849134,2.37355969069431,1,1.6933421704635,0.0109825785705572,450,1.6933421704635,8,22,1,"purine ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","purine ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"147","sucC","GO:0032555~purine ribonucleotide binding",0.0227799066715156,2.81450780721961,1,1.64244805954264,0.0109825785705572,450,1.64244805954264,7,22,1,"purine ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","purine ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"148","groEL","GO:0032555~purine ribonucleotide binding",0.0265461491851865,2.16158472507924,1,1.57599846926868,0.0109825785705572,450,1.57599846926868,6,22,1,"purine ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","purine ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"149","btuR","GO:0032555~purine ribonucleotide binding",0.0460256998885872,2.57212989182386,1,1.33699959868619,0.0109825785705572,450,1.33699959868619,5,22,1,"purine ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","purine ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"150","oppD","GO:0032555~purine ribonucleotide binding",0.0466039690113883,3.3921981635136,1,1.33157709519106,0.0109825785705572,450,1.33157709519106,4,22,1,"purine ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","purine ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"151","rhlB","GO:0032555~purine ribonucleotide binding",0.0485441856653543,1.89293851392267,1,1.31386277985833,0.0109825785705572,450,1.31386277985833,3,22,1,"purine ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","purine ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"152","bax","GO:0032555~purine ribonucleotide binding",0.0498027251248262,2.48546510463273,1,1.30274689269622,0.0109825785705572,450,1.30274689269622,1,22,1,"purine ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","purine ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"153","dnaX","GO:0032555~purine ribonucleotide binding",0.0498027251248262,2.28292477724682,1,1.30274689269622,0.0109825785705572,450,1.30274689269622,2,22,1,"purine ribonucleotide binding
+ padj:0.01098 N( -1/ +22/ 450)","purine ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"154","dppF","GO:0032559~adenyl ribonucleotide binding",5.4890649705326e-05,4.81445252449925,1,4.26050162872343,0.0108974309814316,420,4.26050162872343,21,21,1,"adenyl ribonucleotide binding
+ padj:0.01090 N( -1/ +21/ 420)","adenyl ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"155","deaD","GO:0032559~adenyl ribonucleotide binding",0.000912965433983497,3.0972184780682,1,3.03954566508827,0.0108974309814316,420,3.03954566508827,19,21,1,"adenyl ribonucleotide binding
+ padj:0.01090 N( -1/ +21/ 420)","adenyl ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"156","dppD","GO:0032559~adenyl ribonucleotide binding",0.000912965433983497,3.45484316366192,1,3.03954566508827,0.0108974309814316,420,3.03954566508827,20,21,1,"adenyl ribonucleotide binding
+ padj:0.01090 N( -1/ +21/ 420)","adenyl ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"157","atpA","GO:0032559~adenyl ribonucleotide binding",0.00101191251950116,4.17336308089341,1,2.99485703091529,0.0108974309814316,420,2.99485703091529,18,21,1,"adenyl ribonucleotide binding
+ padj:0.01090 N( -1/ +21/ 420)","adenyl ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"158","atpG","GO:0032559~adenyl ribonucleotide binding",0.00192412317994164,4.03402371831257,1,2.71576712842268,0.0108974309814316,420,2.71576712842268,16,21,1,"adenyl ribonucleotide binding
+ padj:0.01090 N( -1/ +21/ 420)","adenyl ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"159","hisS","GO:0032559~adenyl ribonucleotide binding",0.00192412317994164,2.76618708446682,1,2.71576712842268,0.0108974309814316,420,2.71576712842268,17,21,1,"adenyl ribonucleotide binding
+ padj:0.01090 N( -1/ +21/ 420)","adenyl ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"160","glnA","GO:0032559~adenyl ribonucleotide binding",0.00220886122089077,3.55992888652674,1,2.6558315692778,0.0108974309814316,420,2.6558315692778,15,21,1,"adenyl ribonucleotide binding
+ padj:0.01090 N( -1/ +21/ 420)","adenyl ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"161","rbsK","GO:0032559~adenyl ribonucleotide binding",0.00722629753961957,2.86548842501716,1,2.14108416051577,0.0108974309814316,420,2.14108416051577,14,21,1,"adenyl ribonucleotide binding
+ padj:0.01090 N( -1/ +21/ 420)","adenyl ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"162","ileS","GO:0032559~adenyl ribonucleotide binding",0.0106475939996523,2.46981180009057,1,1.97274851717578,0.0108974309814316,420,1.97274851717578,13,21,1,"adenyl ribonucleotide binding
+ padj:0.01090 N( -1/ +21/ 420)","adenyl ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"163","atpD","GO:0032559~adenyl ribonucleotide binding",0.0138043954327376,3.15546253851044,1,1.8599826086535,0.0108974309814316,420,1.8599826086535,11,21,1,"adenyl ribonucleotide binding
+ padj:0.01090 N( -1/ +21/ 420)","adenyl ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"164","mglA","GO:0032559~adenyl ribonucleotide binding",0.0138043954327376,3.11131638535071,1,1.8599826086535,0.0108974309814316,420,1.8599826086535,12,21,1,"adenyl ribonucleotide binding
+ padj:0.01090 N( -1/ +21/ 420)","adenyl ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"165","mukB","GO:0032559~adenyl ribonucleotide binding",0.0162919125653645,2.60157102914224,1,1.78802792933006,0.0108974309814316,420,1.78802792933006,10,21,1,"adenyl ribonucleotide binding
+ padj:0.01090 N( -1/ +21/ 420)","adenyl ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"166","pheS","GO:0032559~adenyl ribonucleotide binding",0.0183377707749061,3.45155359889182,1,1.73665346032361,0.0108974309814316,420,1.73665346032361,9,21,1,"adenyl ribonucleotide binding
+ padj:0.01090 N( -1/ +21/ 420)","adenyl ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"167","thrB","GO:0032559~adenyl ribonucleotide binding",0.020260857849134,2.37355969069431,1,1.6933421704635,0.0108974309814316,420,1.6933421704635,8,21,1,"adenyl ribonucleotide binding
+ padj:0.01090 N( -1/ +21/ 420)","adenyl ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"168","sucC","GO:0032559~adenyl ribonucleotide binding",0.0227799066715156,2.81450780721961,1,1.64244805954264,0.0108974309814316,420,1.64244805954264,7,21,1,"adenyl ribonucleotide binding
+ padj:0.01090 N( -1/ +21/ 420)","adenyl ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"169","groEL","GO:0032559~adenyl ribonucleotide binding",0.0265461491851865,2.16158472507924,1,1.57599846926868,0.0108974309814316,420,1.57599846926868,6,21,1,"adenyl ribonucleotide binding
+ padj:0.01090 N( -1/ +21/ 420)","adenyl ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"170","btuR","GO:0032559~adenyl ribonucleotide binding",0.0460256998885872,2.57212989182386,1,1.33699959868619,0.0108974309814316,420,1.33699959868619,5,21,1,"adenyl ribonucleotide binding
+ padj:0.01090 N( -1/ +21/ 420)","adenyl ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"171","oppD","GO:0032559~adenyl ribonucleotide binding",0.0466039690113883,3.3921981635136,1,1.33157709519106,0.0108974309814316,420,1.33157709519106,4,21,1,"adenyl ribonucleotide binding
+ padj:0.01090 N( -1/ +21/ 420)","adenyl ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"172","rhlB","GO:0032559~adenyl ribonucleotide binding",0.0485441856653543,1.89293851392267,1,1.31386277985833,0.0108974309814316,420,1.31386277985833,3,21,1,"adenyl ribonucleotide binding
+ padj:0.01090 N( -1/ +21/ 420)","adenyl ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"173","bax","GO:0032559~adenyl ribonucleotide binding",0.0498027251248262,2.48546510463273,1,1.30274689269622,0.0108974309814316,420,1.30274689269622,1,21,1,"adenyl ribonucleotide binding
+ padj:0.01090 N( -1/ +21/ 420)","adenyl ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"174","dnaX","GO:0032559~adenyl ribonucleotide binding",0.0498027251248262,2.28292477724682,1,1.30274689269622,0.0108974309814316,420,1.30274689269622,2,21,1,"adenyl ribonucleotide binding
+ padj:0.01090 N( -1/ +21/ 420)","adenyl ribonucleotide binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"175","atpA","GO:0046933~hydrogen ion transporting ATP synthase activity, rotational mechanism",0.00101191251950116,4.17336308089341,1,2.99485703091529,0.000534745698369643,8,2.99485703091529,5,5,1,"hydrogen ion transporting ATP synthase activity, rotational mechanism
+ padj:0.00053 N( -1/ +5/ 8)","hydrogen ion transporting ATP synthase activity, rotational mechanism","mrna","Sta","carbonSource","glucoselactate","MF"
+"176","atpG","GO:0046933~hydrogen ion transporting ATP synthase activity, rotational mechanism",0.00192412317994164,4.03402371831257,1,2.71576712842268,0.000534745698369643,8,2.71576712842268,4,5,1,"hydrogen ion transporting ATP synthase activity, rotational mechanism
+ padj:0.00053 N( -1/ +5/ 8)","hydrogen ion transporting ATP synthase activity, rotational mechanism","mrna","Sta","carbonSource","glucoselactate","MF"
+"177","atpB","GO:0046933~hydrogen ion transporting ATP synthase activity, rotational mechanism",0.00316368827113877,3.72308550768994,1,2.49980631556434,0.000534745698369643,8,2.49980631556434,3,5,1,"hydrogen ion transporting ATP synthase activity, rotational mechanism
+ padj:0.00053 N( -1/ +5/ 8)","hydrogen ion transporting ATP synthase activity, rotational mechanism","mrna","Sta","carbonSource","glucoselactate","MF"
+"178","atpF","GO:0046933~hydrogen ion transporting ATP synthase activity, rotational mechanism",0.0066834611475862,4.10401513076217,1,2.17499857225314,0.000534745698369643,8,2.17499857225314,2,5,1,"hydrogen ion transporting ATP synthase activity, rotational mechanism
+ padj:0.00053 N( -1/ +5/ 8)","hydrogen ion transporting ATP synthase activity, rotational mechanism","mrna","Sta","carbonSource","glucoselactate","MF"
+"179","atpD","GO:0046933~hydrogen ion transporting ATP synthase activity, rotational mechanism",0.0138043954327376,3.15546253851044,1,1.8599826086535,0.000534745698369643,8,1.8599826086535,1,5,1,"hydrogen ion transporting ATP synthase activity, rotational mechanism
+ padj:0.00053 N( -1/ +5/ 8)","hydrogen ion transporting ATP synthase activity, rotational mechanism","mrna","Sta","carbonSource","glucoselactate","MF"
+"180","nuoH","GO:0048037~cofactor binding",0.00192412317994164,3.53535534098748,1,2.71576712842268,0.0491011710437068,219,2.71576712842268,14,14,2,"cofactor binding
+ padj:0.04910 N( -2/ +14/ 219)","cofactor binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"181","nuoG","GO:0048037~cofactor binding",0.0104470456482928,2.70950580965043,1,1.98100650764355,0.0491011710437068,219,1.98100650764355,13,14,2,"cofactor binding
+ padj:0.04910 N( -2/ +14/ 219)","cofactor binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"182","nuoL","GO:0048037~cofactor binding",0.0134588167113557,2.75981907090322,1,1.87099312126499,0.0491011710437068,219,1.87099312126499,12,14,2,"cofactor binding
+ padj:0.04910 N( -2/ +14/ 219)","cofactor binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"183","nuoM","GO:0048037~cofactor binding",0.0183377707749061,2.90274096986068,1,1.73665346032361,0.0491011710437068,219,1.73665346032361,11,14,2,"cofactor binding
+ padj:0.04910 N( -2/ +14/ 219)","cofactor binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"184","sfcA","GO:0048037~cofactor binding",0.0187738037431895,2.78904126540634,1,1.72644772645607,0.0491011710437068,219,1.72644772645607,10,14,2,"cofactor binding
+ padj:0.04910 N( -2/ +14/ 219)","cofactor binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"185","vioA","GO:0048037~cofactor binding",0.0232535730151161,3.1198269331575,1,1.63351030636428,0.0491011710437068,219,1.63351030636428,9,14,2,"cofactor binding
+ padj:0.04910 N( -2/ +14/ 219)","cofactor binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"186","glyA","GO:0048037~cofactor binding",0.0235557724213413,2.60152281235448,1,1.627902650168,0.0491011710437068,219,1.627902650168,8,14,2,"cofactor binding
+ padj:0.04910 N( -2/ +14/ 219)","cofactor binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"187","serC","GO:0048037~cofactor binding",0.0265461491851865,2.14684224294989,1,1.57599846926868,0.0491011710437068,219,1.57599846926868,7,14,2,"cofactor binding
+ padj:0.04910 N( -2/ +14/ 219)","cofactor binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"188","ilvA","GO:0048037~cofactor binding",0.0291537770588913,2.82418524180312,1,1.53530517162296,0.0491011710437068,219,1.53530517162296,6,14,2,"cofactor binding
+ padj:0.04910 N( -2/ +14/ 219)","cofactor binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"189","wecC","GO:0048037~cofactor binding",0.0347761540821618,3.62128457919355,1,1.45871844859119,0.0491011710437068,219,1.45871844859119,5,14,2,"cofactor binding
+ padj:0.04910 N( -2/ +14/ 219)","cofactor binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"190","gapA","GO:0048037~cofactor binding",0.0360524371134288,1.92143112503424,1,1.44306537202253,0.0491011710437068,219,1.44306537202253,4,14,2,"cofactor binding
+ padj:0.04910 N( -2/ +14/ 219)","cofactor binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"191","uxuB","GO:0048037~cofactor binding",0.042093935406264,2.25881246183809,1,1.37578046970629,0.0491011710437068,219,1.37578046970629,3,14,2,"cofactor binding
+ padj:0.04910 N( -2/ +14/ 219)","cofactor binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"192","aceF","GO:0048037~cofactor binding",0.0460256998885872,2.28955685204878,1,1.33699959868619,0.0491011710437068,219,1.33699959868619,2,14,2,"cofactor binding
+ padj:0.04910 N( -2/ +14/ 219)","cofactor binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"193","nuoI","GO:0048037~cofactor binding",0.0498027251248262,2.75087768244641,1,1.30274689269622,0.0491011710437068,219,1.30274689269622,1,14,2,"cofactor binding
+ padj:0.04910 N( -2/ +14/ 219)","cofactor binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"194","ygbJ","GO:0048037~cofactor binding",0.0138043954327376,-3.41877068719337,-1,-1.8599826086535,0.0491011710437068,219,1.8599826086535,-1,14,2,"cofactor binding
+ padj:0.04910 N( -2/ +14/ 219)","cofactor binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"195","asd","GO:0048037~cofactor binding",0.00192412317994164,-3.28948147908859,-1,-2.71576712842268,0.0491011710437068,219,2.71576712842268,-2,14,2,"cofactor binding
+ padj:0.04910 N( -2/ +14/ 219)","cofactor binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"196","nuoH","GO:0048038~quinone binding",0.00192412317994164,3.53535534098748,1,2.71576712842268,0.0145063128822757,23,2.71576712842268,5,5,1,"quinone binding
+ padj:0.01451 N( -1/ +5/ 23)","quinone binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"197","nuoG","GO:0048038~quinone binding",0.0104470456482928,2.70950580965043,1,1.98100650764355,0.0145063128822757,23,1.98100650764355,4,5,1,"quinone binding
+ padj:0.01451 N( -1/ +5/ 23)","quinone binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"198","nuoL","GO:0048038~quinone binding",0.0134588167113557,2.75981907090322,1,1.87099312126499,0.0145063128822757,23,1.87099312126499,3,5,1,"quinone binding
+ padj:0.01451 N( -1/ +5/ 23)","quinone binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"199","nuoM","GO:0048038~quinone binding",0.0183377707749061,2.90274096986068,1,1.73665346032361,0.0145063128822757,23,1.73665346032361,2,5,1,"quinone binding
+ padj:0.01451 N( -1/ +5/ 23)","quinone binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"200","nuoI","GO:0048038~quinone binding",0.0498027251248262,2.75087768244641,1,1.30274689269622,0.0145063128822757,23,1.30274689269622,1,5,1,"quinone binding
+ padj:0.01451 N( -1/ +5/ 23)","quinone binding","mrna","Sta","carbonSource","glucoselactate","MF"
+"201","nuoH","GO:0050136~NADH dehydrogenase (quinone) activity",0.00192412317994164,3.53535534098748,1,2.71576712842268,0.0383648258360845,24,2.71576712842268,5,5,1,"NADH dehydrogenase (quinone) activity
+ padj:0.03836 N( -1/ +5/ 24)","NADH dehydrogenase (quinone) activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"202","nuoG","GO:0050136~NADH dehydrogenase (quinone) activity",0.0104470456482928,2.70950580965043,1,1.98100650764355,0.0383648258360845,24,1.98100650764355,4,5,1,"NADH dehydrogenase (quinone) activity
+ padj:0.03836 N( -1/ +5/ 24)","NADH dehydrogenase (quinone) activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"203","nuoL","GO:0050136~NADH dehydrogenase (quinone) activity",0.0134588167113557,2.75981907090322,1,1.87099312126499,0.0383648258360845,24,1.87099312126499,3,5,1,"NADH dehydrogenase (quinone) activity
+ padj:0.03836 N( -1/ +5/ 24)","NADH dehydrogenase (quinone) activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"204","nuoM","GO:0050136~NADH dehydrogenase (quinone) activity",0.0183377707749061,2.90274096986068,1,1.73665346032361,0.0383648258360845,24,1.73665346032361,2,5,1,"NADH dehydrogenase (quinone) activity
+ padj:0.03836 N( -1/ +5/ 24)","NADH dehydrogenase (quinone) activity","mrna","Sta","carbonSource","glucoselactate","MF"
+"205","nuoI","GO:0050136~NADH dehydrogenase (quinone) activity",0.0498027251248262,2.75087768244641,1,1.30274689269622,0.0383648258360845,24,1.30274689269622,1,5,1,"NADH dehydrogenase (quinone) activity
+ padj:0.03836 N( -1/ +5/ 24)","NADH dehydrogenase (quinone) activity","mrna","Sta","carbonSource","glucoselactate","MF"

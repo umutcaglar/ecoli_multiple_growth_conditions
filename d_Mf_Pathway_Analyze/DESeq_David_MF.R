@@ -201,8 +201,8 @@ selectedDf$MF_Name_long <- factor(selectedDf$MF_Name_long,
 ###*****************************
 # Generate simple Data Frame
 # Additional Parameters
-maxPathway=5
-maxGene=10
+maxPathway=10
+maxGene=15
 
 if(length(unique(as.vector(selectedDf$FDR_GoMF)))<maxPathway)
 {maxPathway=length(unique(as.vector(selectedDf$FDR_GoMF)))}
@@ -256,49 +256,24 @@ fig01=ggplot( selectedDf, aes( x=rank,y=MF_Name_long)) +
 
 print(fig01)
 
-# # b) Simple Figure
-# scaleHigh_simp=max(abs(selectedDf_simp$score_gene))
-# scaleMid_simp=0
-# scaleLow_simp=-max(abs(selectedDf_simp$score_gene))
-# 
-# fig02=ggplot( selectedDf_simp, aes( x=rank,y=MF_Name_short)) +
-#   geom_tile(aes(fill=score_gene))+
-#   scale_fill_gradientn(colours=c("Blue","Grey50","Red"),
-#                        values=rescale(c(scaleLow_simp,scaleMid_simp,scaleHigh_simp)),
-#                        limits=c(scaleLow_simp,scaleHigh_simp),
-#                        guide = guide_colorbar(title = "-sign(cor)*P_log10",barwidth = 12))+
-#   geom_text(aes(label=ID),size=3, colour="White", fontface="bold")+
-#   theme_bw()+
-#   scale_x_continuous(breaks=min(selectedDf_simp$rank):max(selectedDf_simp$rank))+
-#   theme(axis.line.y = element_blank(),
-#         legend.position="bottom",
-#         axis.title.y = element_blank(),
-#         panel.grid.minor=element_blank(),
-#         panel.grid.major.x=element_blank())
-# 
-# print(fig02)
 
-# c) simple figure with geom_point
-scaleHigh_score_gene=max((selectedDf_simp$score_gene))
-if(scaleHigh_score_gene<0.1){scaleHigh_score_gene=0.1}
-scaleMid_score_gene=0
-scaleLow_score_gene=min((selectedDf_simp$score_gene))
-if(scaleLow_score_gene>-0.1){scaleLow_score_gene=-0.1}
 
+
+# b) simple figure with geom point
 minimumFold=min(selectedDf_simp$log2)
 if(minimumFold>-1){minimumFold=-1}
 maximumFold=max(selectedDf_simp$log2)
 if(maximumFold<1){maximumFold=1}
 
-fig03=ggplot(selectedDf_simp, aes( x=log2,y=MF_Name_short)) +
-  geom_point(aes(colour = score_gene),size=2.5)+
+
+fig03=ggplot(selectedDf_simp, aes( x=log2,y=MF_Name_long)) +
+  geom_point(aes(colour = log10(padj_gene)),size=2.5)+
   geom_vline(xintercept = c(log2(1/2),log2(2)), colour="orange", linetype = "longdash")+
   geom_vline(xintercept = c(log2(1)), colour="black", linetype = "longdash")+
-  geom_text_repel(aes(label=ID),size=5, colour="Black", fontface="bold")+
-  scale_colour_gradientn(colours=c("Blue","Grey50","Red"),
-                         values=rescale(c(scaleLow_score_gene,scaleMid_score_gene,scaleHigh_score_gene)),
-                         limits=c(scaleLow_score_gene,scaleHigh_score_gene),
-                         guide = guide_colorbar(title = "Gene Score",barwidth = 12))+
+  geom_text_repel(aes(label=ID),size=3, colour="Black", fontface="plain")+
+  scale_colour_gradient(low = "blue",high = "yellow",
+                        guide = guide_colorbar(title = "Log10(P.adj)",
+                                               barwidth = 12, title.vjust = .9))+
   theme_bw()+
   scale_x_continuous(breaks=seq(floor(minimumFold),ceiling(maximumFold)))+
   xlab("Log2 Fold Change")+
@@ -306,17 +281,17 @@ fig03=ggplot(selectedDf_simp, aes( x=log2,y=MF_Name_short)) +
         legend.position="bottom",
         axis.title.y = element_blank(),
         panel.grid.minor=element_blank(),
-        panel.grid.major.x=element_blank())
+        panel.grid.major.x=element_blank(),
+        strip.text.x = element_text(size = 16),
+        strip.text.y = element_text(size = 16),
+        axis.text.x=element_text(size=10),
+        axis.text.y=element_text(size=12),
+        axis.title.x=element_text(size=16),
+        axis.title.y=element_text(size=16),
+        legend.title=element_text(size=14),
+        legend.text=element_text(size=14))
 
-print(fig03)
 
-GoMF_input_df %>%
-  dplyr::mutate(score_gene=-signChange*log10(padj))->GoMF_input_df
-
-fig04=ggplot2::ggplot(GoMF_input_df, aes( x=log2FoldChange,y=score_gene))+
-  geom_point()
-
-print(fig04)
 ###*****************************
 
 
@@ -349,7 +324,8 @@ rowWidth=ifelse(nrow(summary_df_simp)*1<3,3,nrow(summary_df_simp)*1)
 cowplot::save_plot(filename = paste0("../d_figures/simple",objectName,"_mf.pdf"),
                    plot = fig03,
                    base_height = rowWidth,
-                   ncol=2,
+                   ncol=1.4,
+                   nrow=1.2,
                    limitsize = FALSE)
 
 

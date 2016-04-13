@@ -17,589 +17,587 @@
  padj:0.00465 N( -7/ +2/ 32)","Glycolysis / Gluconeogenesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
 "9","ptsG","eco00010:Glycolysis / Gluconeogenesis",1.17243581402479e-19,-2.55765590807414,-1,-18.9309109237752,0.004654935776369,32,18.9309109237752,-7,2,7,"Glycolysis / Gluconeogenesis
  padj:0.00465 N( -7/ +2/ 32)","Glycolysis / Gluconeogenesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"10","glpX","eco00030:Pentose phosphate pathway",0.000377862124962745,1.98758468984728,1,3.42266663744005,0.000771210375491771,28,3.42266663744005,1,1,9,"Pentose phosphate pathway
- padj:0.00077 N( -9/ +1/ 28)","Pentose phosphate pathway","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"11","talA","eco00030:Pentose phosphate pathway",0.000836286802928057,-1.29807978193907,-1,-3.07764475657016,0.000771210375491771,28,3.07764475657016,-1,1,9,"Pentose phosphate pathway
- padj:0.00077 N( -9/ +1/ 28)","Pentose phosphate pathway","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"12","talA","eco00030:Pentose phosphate pathway",0.000836286802928057,-1.29807978193907,-1,-3.07764475657016,0.000771210375491771,28,3.07764475657016,-2,1,9,"Pentose phosphate pathway
- padj:0.00077 N( -9/ +1/ 28)","Pentose phosphate pathway","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"13","deoC","eco00030:Pentose phosphate pathway",0.000650985446570863,-1.22658266194816,-1,-3.18642872040971,0.000771210375491771,28,3.18642872040971,-3,1,9,"Pentose phosphate pathway
- padj:0.00077 N( -9/ +1/ 28)","Pentose phosphate pathway","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"14","pfkB","eco00030:Pentose phosphate pathway",0.000468719856801219,-1.24282201806026,-1,-3.32908664768199,0.000771210375491771,28,3.32908664768199,-4,1,9,"Pentose phosphate pathway
- padj:0.00077 N( -9/ +1/ 28)","Pentose phosphate pathway","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"15","zwf","eco00030:Pentose phosphate pathway",6.92274885050464e-05,-1.05657935083999,-1,-4.15972142381518,0.000771210375491771,28,4.15972142381518,-5,1,9,"Pentose phosphate pathway
- padj:0.00077 N( -9/ +1/ 28)","Pentose phosphate pathway","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"16","gnd","eco00030:Pentose phosphate pathway",4.51403580593076e-05,-1.0245555004736,-1,-4.34543500036316,0.000771210375491771,28,4.34543500036316,-6,1,9,"Pentose phosphate pathway
- padj:0.00077 N( -9/ +1/ 28)","Pentose phosphate pathway","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"17","pfkA","eco00030:Pentose phosphate pathway",3.4521103898917e-05,-1.07946834005165,-1,-4.46191532507899,0.000771210375491771,28,4.46191532507899,-7,1,9,"Pentose phosphate pathway
- padj:0.00077 N( -9/ +1/ 28)","Pentose phosphate pathway","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"18","edd","eco00030:Pentose phosphate pathway",2.85209825710581e-08,-2.82671732402155,-1,-7.54483551676414,0.000771210375491771,28,7.54483551676414,-8,1,9,"Pentose phosphate pathway
- padj:0.00077 N( -9/ +1/ 28)","Pentose phosphate pathway","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"19","gcd","eco00030:Pentose phosphate pathway",7.10197636774064e-19,-2.99520800196174,-1,-18.1486207771734,0.000771210375491771,28,18.1486207771734,-9,1,9,"Pentose phosphate pathway
- padj:0.00077 N( -9/ +1/ 28)","Pentose phosphate pathway","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"20","glpX","eco00051:Fructose and mannose metabolism",0.000377862124962745,1.98758468984728,1,3.42266663744005,0.004654935776369,34,3.42266663744005,2,2,7,"Fructose and mannose metabolism
+"10","glpX","eco00030:Pentose phosphate pathway",0.000377862124962745,1.98758468984728,1,3.42266663744005,0.000771210375491771,28,3.42266663744005,1,1,8,"Pentose phosphate pathway
+ padj:0.00077 N( -8/ +1/ 28)","Pentose phosphate pathway","protein","Exp","carbonSource","glucoseglycerol","kegg"
+"11","talA","eco00030:Pentose phosphate pathway",0.000836286802928057,-1.29807978193907,-1,-3.07764475657016,0.000771210375491771,28,3.07764475657016,-1,1,8,"Pentose phosphate pathway
+ padj:0.00077 N( -8/ +1/ 28)","Pentose phosphate pathway","protein","Exp","carbonSource","glucoseglycerol","kegg"
+"12","deoC","eco00030:Pentose phosphate pathway",0.000650985446570863,-1.22658266194816,-1,-3.18642872040971,0.000771210375491771,28,3.18642872040971,-2,1,8,"Pentose phosphate pathway
+ padj:0.00077 N( -8/ +1/ 28)","Pentose phosphate pathway","protein","Exp","carbonSource","glucoseglycerol","kegg"
+"13","pfkB","eco00030:Pentose phosphate pathway",0.000468719856801219,-1.24282201806026,-1,-3.32908664768199,0.000771210375491771,28,3.32908664768199,-3,1,8,"Pentose phosphate pathway
+ padj:0.00077 N( -8/ +1/ 28)","Pentose phosphate pathway","protein","Exp","carbonSource","glucoseglycerol","kegg"
+"14","zwf","eco00030:Pentose phosphate pathway",6.92274885050464e-05,-1.05657935083999,-1,-4.15972142381518,0.000771210375491771,28,4.15972142381518,-4,1,8,"Pentose phosphate pathway
+ padj:0.00077 N( -8/ +1/ 28)","Pentose phosphate pathway","protein","Exp","carbonSource","glucoseglycerol","kegg"
+"15","gnd","eco00030:Pentose phosphate pathway",4.51403580593076e-05,-1.0245555004736,-1,-4.34543500036316,0.000771210375491771,28,4.34543500036316,-5,1,8,"Pentose phosphate pathway
+ padj:0.00077 N( -8/ +1/ 28)","Pentose phosphate pathway","protein","Exp","carbonSource","glucoseglycerol","kegg"
+"16","pfkA","eco00030:Pentose phosphate pathway",3.4521103898917e-05,-1.07946834005165,-1,-4.46191532507899,0.000771210375491771,28,4.46191532507899,-6,1,8,"Pentose phosphate pathway
+ padj:0.00077 N( -8/ +1/ 28)","Pentose phosphate pathway","protein","Exp","carbonSource","glucoseglycerol","kegg"
+"17","edd","eco00030:Pentose phosphate pathway",2.85209825710581e-08,-2.82671732402155,-1,-7.54483551676414,0.000771210375491771,28,7.54483551676414,-7,1,8,"Pentose phosphate pathway
+ padj:0.00077 N( -8/ +1/ 28)","Pentose phosphate pathway","protein","Exp","carbonSource","glucoseglycerol","kegg"
+"18","gcd","eco00030:Pentose phosphate pathway",7.10197636774064e-19,-2.99520800196174,-1,-18.1486207771734,0.000771210375491771,28,18.1486207771734,-8,1,8,"Pentose phosphate pathway
+ padj:0.00077 N( -8/ +1/ 28)","Pentose phosphate pathway","protein","Exp","carbonSource","glucoseglycerol","kegg"
+"19","glpX","eco00051:Fructose and mannose metabolism",0.000377862124962745,1.98758468984728,1,3.42266663744005,0.004654935776369,34,3.42266663744005,2,2,7,"Fructose and mannose metabolism
  padj:0.00465 N( -7/ +2/ 34)","Fructose and mannose metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"21","fucI","eco00051:Fructose and mannose metabolism",0.00189811089313724,1.20228832177886,1,2.72167841842573,0.004654935776369,34,2.72167841842573,1,2,7,"Fructose and mannose metabolism
+"20","fucI","eco00051:Fructose and mannose metabolism",0.00189811089313724,1.20228832177886,1,2.72167841842573,0.004654935776369,34,2.72167841842573,1,2,7,"Fructose and mannose metabolism
  padj:0.00465 N( -7/ +2/ 34)","Fructose and mannose metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"22","cmtA","eco00051:Fructose and mannose metabolism",0.0440545970667806,-1.86632045001403,-1,-1.35600876655803,0.004654935776369,34,1.35600876655803,-1,2,7,"Fructose and mannose metabolism
+"21","cmtA","eco00051:Fructose and mannose metabolism",0.0440545970667806,-1.86632045001403,-1,-1.35600876655803,0.004654935776369,34,1.35600876655803,-1,2,7,"Fructose and mannose metabolism
  padj:0.00465 N( -7/ +2/ 34)","Fructose and mannose metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"23","manX","eco00051:Fructose and mannose metabolism",0.000470981026148166,-1.26223550713213,-1,-3.3269965884234,0.004654935776369,34,3.3269965884234,-2,2,7,"Fructose and mannose metabolism
+"22","manX","eco00051:Fructose and mannose metabolism",0.000470981026148166,-1.26223550713213,-1,-3.3269965884234,0.004654935776369,34,3.3269965884234,-2,2,7,"Fructose and mannose metabolism
  padj:0.00465 N( -7/ +2/ 34)","Fructose and mannose metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"24","pfkB","eco00051:Fructose and mannose metabolism",0.000468719856801219,-1.24282201806026,-1,-3.32908664768199,0.004654935776369,34,3.32908664768199,-3,2,7,"Fructose and mannose metabolism
+"23","pfkB","eco00051:Fructose and mannose metabolism",0.000468719856801219,-1.24282201806026,-1,-3.32908664768199,0.004654935776369,34,3.32908664768199,-3,2,7,"Fructose and mannose metabolism
  padj:0.00465 N( -7/ +2/ 34)","Fructose and mannose metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"25","cpsG","eco00051:Fructose and mannose metabolism",0.000231836269981041,-2.06099727485805,-1,-3.63481861919037,0.004654935776369,34,3.63481861919037,-4,2,7,"Fructose and mannose metabolism
+"24","cpsG","eco00051:Fructose and mannose metabolism",0.000231836269981041,-2.06099727485805,-1,-3.63481861919037,0.004654935776369,34,3.63481861919037,-4,2,7,"Fructose and mannose metabolism
  padj:0.00465 N( -7/ +2/ 34)","Fructose and mannose metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"26","manY","eco00051:Fructose and mannose metabolism",0.000229556957773941,-1.77643527629568,-1,-3.63910953941709,0.004654935776369,34,3.63910953941709,-5,2,7,"Fructose and mannose metabolism
+"25","manY","eco00051:Fructose and mannose metabolism",0.000229556957773941,-1.77643527629568,-1,-3.63910953941709,0.004654935776369,34,3.63910953941709,-5,2,7,"Fructose and mannose metabolism
  padj:0.00465 N( -7/ +2/ 34)","Fructose and mannose metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"27","tpiA","eco00051:Fructose and mannose metabolism",0.000228956849937749,-1.53252802329672,-1,-3.64024635870687,0.004654935776369,34,3.64024635870687,-6,2,7,"Fructose and mannose metabolism
+"26","tpiA","eco00051:Fructose and mannose metabolism",0.000228956849937749,-1.53252802329672,-1,-3.64024635870687,0.004654935776369,34,3.64024635870687,-6,2,7,"Fructose and mannose metabolism
  padj:0.00465 N( -7/ +2/ 34)","Fructose and mannose metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"28","pfkA","eco00051:Fructose and mannose metabolism",3.4521103898917e-05,-1.07946834005165,-1,-4.46191532507899,0.004654935776369,34,4.46191532507899,-7,2,7,"Fructose and mannose metabolism
+"27","pfkA","eco00051:Fructose and mannose metabolism",3.4521103898917e-05,-1.07946834005165,-1,-4.46191532507899,0.004654935776369,34,4.46191532507899,-7,2,7,"Fructose and mannose metabolism
  padj:0.00465 N( -7/ +2/ 34)","Fructose and mannose metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"29","fabG","eco00061:Fatty acid biosynthesis",0.000941212841014734,-1.08415201639553,-1,-3.02631215635386,0.0275821275169315,12,3.02631215635386,-1,0,5,"Fatty acid biosynthesis
+"28","fabG","eco00061:Fatty acid biosynthesis",0.000941212841014734,-1.08415201639553,-1,-3.02631215635386,0.0275821275169315,12,3.02631215635386,-1,0,5,"Fatty acid biosynthesis
  padj:0.02758 N( -5/ +0/ 12)","Fatty acid biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"30","fabH","eco00061:Fatty acid biosynthesis",2.93175134211904e-05,-1.37212274127754,-1,-4.53287286736143,0.0275821275169315,12,4.53287286736143,-2,0,5,"Fatty acid biosynthesis
+"29","fabH","eco00061:Fatty acid biosynthesis",2.93175134211904e-05,-1.37212274127754,-1,-4.53287286736143,0.0275821275169315,12,4.53287286736143,-2,0,5,"Fatty acid biosynthesis
  padj:0.02758 N( -5/ +0/ 12)","Fatty acid biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"31","fabF","eco00061:Fatty acid biosynthesis",2.83446754066751e-05,-1.6581140942636,-1,-4.54752851203329,0.0275821275169315,12,4.54752851203329,-3,0,5,"Fatty acid biosynthesis
+"30","fabF","eco00061:Fatty acid biosynthesis",2.83446754066751e-05,-1.6581140942636,-1,-4.54752851203329,0.0275821275169315,12,4.54752851203329,-3,0,5,"Fatty acid biosynthesis
  padj:0.02758 N( -5/ +0/ 12)","Fatty acid biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"32","fabB","eco00061:Fatty acid biosynthesis",1.27646923240531e-05,-1.24328485236818,-1,-4.89398964882497,0.0275821275169315,12,4.89398964882497,-4,0,5,"Fatty acid biosynthesis
+"31","fabB","eco00061:Fatty acid biosynthesis",1.27646923240531e-05,-1.24328485236818,-1,-4.89398964882497,0.0275821275169315,12,4.89398964882497,-4,0,5,"Fatty acid biosynthesis
  padj:0.02758 N( -5/ +0/ 12)","Fatty acid biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"33","fabD","eco00061:Fatty acid biosynthesis",1.14958494451315e-05,-1.51379250212697,-1,-4.93945893255448,0.0275821275169315,12,4.93945893255448,-5,0,5,"Fatty acid biosynthesis
+"32","fabD","eco00061:Fatty acid biosynthesis",1.14958494451315e-05,-1.51379250212697,-1,-4.93945893255448,0.0275821275169315,12,4.93945893255448,-5,0,5,"Fatty acid biosynthesis
  padj:0.02758 N( -5/ +0/ 12)","Fatty acid biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"34","nrdD","eco00230:Purine metabolism",0.000106775674215857,1.99590747761678,1,3.97152767761781,1.05895457958027e-08,78,3.97152767761781,2,2,19,"Purine metabolism
+"33","nrdD","eco00230:Purine metabolism",0.000106775674215857,1.99590747761678,1,3.97152767761781,1.05895457958027e-08,78,3.97152767761781,2,2,19,"Purine metabolism
  padj:0.00000 N( -19/ +2/ 78)","Purine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"35","ade","eco00230:Purine metabolism",0.0336197094619412,1.14810427638993,1,1.47340604400841,1.05895457958027e-08,78,1.47340604400841,1,2,19,"Purine metabolism
+"34","ade","eco00230:Purine metabolism",0.0336197094619412,1.14810427638993,1,1.47340604400841,1.05895457958027e-08,78,1.47340604400841,1,2,19,"Purine metabolism
  padj:0.00000 N( -19/ +2/ 78)","Purine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"36","holB","eco00230:Purine metabolism",0.016835035686673,-1.06127640998528,-1,-1.77378595866355,1.05895457958027e-08,78,1.77378595866355,-1,2,19,"Purine metabolism
+"35","holB","eco00230:Purine metabolism",0.016835035686673,-1.06127640998528,-1,-1.77378595866355,1.05895457958027e-08,78,1.77378595866355,-1,2,19,"Purine metabolism
  padj:0.00000 N( -19/ +2/ 78)","Purine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"37","amn","eco00230:Purine metabolism",0.00456021234651959,-1.21558173279131,-1,-2.3410149339201,1.05895457958027e-08,78,2.3410149339201,-2,2,19,"Purine metabolism
+"36","amn","eco00230:Purine metabolism",0.00456021234651959,-1.21558173279131,-1,-2.3410149339201,1.05895457958027e-08,78,2.3410149339201,-2,2,19,"Purine metabolism
  padj:0.00000 N( -19/ +2/ 78)","Purine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"38","yjjG","eco00230:Purine metabolism",0.00189811089313724,-1.45904782188147,-1,-2.72167841842573,1.05895457958027e-08,78,2.72167841842573,-3,2,19,"Purine metabolism
+"37","yjjG","eco00230:Purine metabolism",0.00189811089313724,-1.45904782188147,-1,-2.72167841842573,1.05895457958027e-08,78,2.72167841842573,-3,2,19,"Purine metabolism
  padj:0.00000 N( -19/ +2/ 78)","Purine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"39","purT","eco00230:Purine metabolism",0.00143899677182668,-1.20070178198513,-1,-2.8419401803368,1.05895457958027e-08,78,2.8419401803368,-4,2,19,"Purine metabolism
+"38","purT","eco00230:Purine metabolism",0.00143899677182668,-1.20070178198513,-1,-2.8419401803368,1.05895457958027e-08,78,2.8419401803368,-4,2,19,"Purine metabolism
  padj:0.00000 N( -19/ +2/ 78)","Purine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"40","cysC","eco00230:Purine metabolism",0.000226284497925267,-1.45643705282041,-1,-3.64534519724333,1.05895457958027e-08,78,3.64534519724333,-5,2,19,"Purine metabolism
+"39","cysC","eco00230:Purine metabolism",0.000226284497925267,-1.45643705282041,-1,-3.64534519724333,1.05895457958027e-08,78,3.64534519724333,-5,2,19,"Purine metabolism
  padj:0.00000 N( -19/ +2/ 78)","Purine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"41","purL","eco00230:Purine metabolism",0.000215400907438121,-1.15483273340346,-1,-3.66675247144408,1.05895457958027e-08,78,3.66675247144408,-6,2,19,"Purine metabolism
+"40","purL","eco00230:Purine metabolism",0.000215400907438121,-1.15483273340346,-1,-3.66675247144408,1.05895457958027e-08,78,3.66675247144408,-6,2,19,"Purine metabolism
  padj:0.00000 N( -19/ +2/ 78)","Purine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"42","nrdB","eco00230:Purine metabolism",0.000103145605765624,-1.28176548123644,-1,-3.98654926921669,1.05895457958027e-08,78,3.98654926921669,-7,2,19,"Purine metabolism
+"41","nrdB","eco00230:Purine metabolism",0.000103145605765624,-1.28176548123644,-1,-3.98654926921669,1.05895457958027e-08,78,3.98654926921669,-7,2,19,"Purine metabolism
  padj:0.00000 N( -19/ +2/ 78)","Purine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"43","nrdA","eco00230:Purine metabolism",6.68859726623506e-05,-1.08014034684623,-1,-4.17466495299599,1.05895457958027e-08,78,4.17466495299599,-8,2,19,"Purine metabolism
+"42","nrdA","eco00230:Purine metabolism",6.68859726623506e-05,-1.08014034684623,-1,-4.17466495299599,1.05895457958027e-08,78,4.17466495299599,-8,2,19,"Purine metabolism
  padj:0.00000 N( -19/ +2/ 78)","Purine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"44","gsk","eco00230:Purine metabolism",6.12496035605543e-05,-1.76180527937285,-1,-4.2128967179352,1.05895457958027e-08,78,4.2128967179352,-9,2,19,"Purine metabolism
+"43","gsk","eco00230:Purine metabolism",6.12496035605543e-05,-1.76180527937285,-1,-4.2128967179352,1.05895457958027e-08,78,4.2128967179352,-9,2,19,"Purine metabolism
  padj:0.00000 N( -19/ +2/ 78)","Purine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"45","rpoC","eco00230:Purine metabolism",5.58055157018092e-05,-1.14525839667371,-1,-4.25332287417218,1.05895457958027e-08,78,4.25332287417218,-10,2,19,"Purine metabolism
+"44","rpoC","eco00230:Purine metabolism",5.58055157018092e-05,-1.14525839667371,-1,-4.25332287417218,1.05895457958027e-08,78,4.25332287417218,-10,2,19,"Purine metabolism
  padj:0.00000 N( -19/ +2/ 78)","Purine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"46","yfbR","eco00230:Purine metabolism",1.80570970915312e-05,-1.94565300034243,-1,-4.74335206678343,1.05895457958027e-08,78,4.74335206678343,-11,2,19,"Purine metabolism
+"45","yfbR","eco00230:Purine metabolism",1.80570970915312e-05,-1.94565300034243,-1,-4.74335206678343,1.05895457958027e-08,78,4.74335206678343,-11,2,19,"Purine metabolism
  padj:0.00000 N( -19/ +2/ 78)","Purine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"47","purF","eco00230:Purine metabolism",1.14958494451315e-05,-1.32516666525953,-1,-4.93945893255448,1.05895457958027e-08,78,4.93945893255448,-12,2,19,"Purine metabolism
+"46","purF","eco00230:Purine metabolism",1.14958494451315e-05,-1.32516666525953,-1,-4.93945893255448,1.05895457958027e-08,78,4.93945893255448,-12,2,19,"Purine metabolism
  padj:0.00000 N( -19/ +2/ 78)","Purine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"48","purK","eco00230:Purine metabolism",5.4130735807754e-06,-1.29308359453983,-1,-5.26655606943443,1.05895457958027e-08,78,5.26655606943443,-13,2,19,"Purine metabolism
+"47","purK","eco00230:Purine metabolism",5.4130735807754e-06,-1.29308359453983,-1,-5.26655606943443,1.05895457958027e-08,78,5.26655606943443,-13,2,19,"Purine metabolism
  padj:0.00000 N( -19/ +2/ 78)","Purine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"49","purM","eco00230:Purine metabolism",2.63570230500616e-06,-1.3906519837548,-1,-5.57910364362057,1.05895457958027e-08,78,5.57910364362057,-14,2,19,"Purine metabolism
+"48","purM","eco00230:Purine metabolism",2.63570230500616e-06,-1.3906519837548,-1,-5.57910364362057,1.05895457958027e-08,78,5.57910364362057,-14,2,19,"Purine metabolism
  padj:0.00000 N( -19/ +2/ 78)","Purine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"50","cysD","eco00230:Purine metabolism",2.25441747981769e-06,-1.69653685505181,-1,-5.64696565688246,1.05895457958027e-08,78,5.64696565688246,-15,2,19,"Purine metabolism
+"49","cysD","eco00230:Purine metabolism",2.25441747981769e-06,-1.69653685505181,-1,-5.64696565688246,1.05895457958027e-08,78,5.64696565688246,-15,2,19,"Purine metabolism
  padj:0.00000 N( -19/ +2/ 78)","Purine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"51","cysN","eco00230:Purine metabolism",1.25427318966516e-06,-1.49474741731629,-1,-5.90160786076023,1.05895457958027e-08,78,5.90160786076023,-16,2,19,"Purine metabolism
+"50","cysN","eco00230:Purine metabolism",1.25427318966516e-06,-1.49474741731629,-1,-5.90160786076023,1.05895457958027e-08,78,5.90160786076023,-16,2,19,"Purine metabolism
  padj:0.00000 N( -19/ +2/ 78)","Purine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"52","guaB","eco00230:Purine metabolism",8.12481934081651e-07,-1.69519114291062,-1,-6.09018628698401,1.05895457958027e-08,78,6.09018628698401,-17,2,19,"Purine metabolism
+"51","guaB","eco00230:Purine metabolism",8.12481934081651e-07,-1.69519114291062,-1,-6.09018628698401,1.05895457958027e-08,78,6.09018628698401,-17,2,19,"Purine metabolism
  padj:0.00000 N( -19/ +2/ 78)","Purine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"53","guaA","eco00230:Purine metabolism",6.13676832401637e-08,-1.50344012769595,-1,-7.21206027194183,1.05895457958027e-08,78,7.21206027194183,-18,2,19,"Purine metabolism
+"52","guaA","eco00230:Purine metabolism",6.13676832401637e-08,-1.50344012769595,-1,-7.21206027194183,1.05895457958027e-08,78,7.21206027194183,-18,2,19,"Purine metabolism
  padj:0.00000 N( -19/ +2/ 78)","Purine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"54","cyaA","eco00230:Purine metabolism",3.69997230194972e-09,-2.58051339837896,-1,-8.43180152705609,1.05895457958027e-08,78,8.43180152705609,-19,2,19,"Purine metabolism
+"53","cyaA","eco00230:Purine metabolism",3.69997230194972e-09,-2.58051339837896,-1,-8.43180152705609,1.05895457958027e-08,78,8.43180152705609,-19,2,19,"Purine metabolism
  padj:0.00000 N( -19/ +2/ 78)","Purine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"55","nrdD","eco00240:Pyrimidine metabolism",0.000106775674215857,1.99590747761678,1,3.97152767761781,1.4342638188225e-10,52,3.97152767761781,1,1,18,"Pyrimidine metabolism
+"54","nrdD","eco00240:Pyrimidine metabolism",0.000106775674215857,1.99590747761678,1,3.97152767761781,1.4342638188225e-10,52,3.97152767761781,1,1,18,"Pyrimidine metabolism
  padj:0.00000 N( -18/ +1/ 52)","Pyrimidine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"56","holB","eco00240:Pyrimidine metabolism",0.016835035686673,-1.06127640998528,-1,-1.77378595866355,1.4342638188225e-10,52,1.77378595866355,-1,1,18,"Pyrimidine metabolism
+"55","holB","eco00240:Pyrimidine metabolism",0.016835035686673,-1.06127640998528,-1,-1.77378595866355,1.4342638188225e-10,52,1.77378595866355,-1,1,18,"Pyrimidine metabolism
  padj:0.00000 N( -18/ +1/ 52)","Pyrimidine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"57","dut","eco00240:Pyrimidine metabolism",0.00839035217644631,-1.19165205813832,-1,-2.07621980972227,1.4342638188225e-10,52,2.07621980972227,-2,1,18,"Pyrimidine metabolism
+"56","dut","eco00240:Pyrimidine metabolism",0.00839035217644631,-1.19165205813832,-1,-2.07621980972227,1.4342638188225e-10,52,2.07621980972227,-2,1,18,"Pyrimidine metabolism
  padj:0.00000 N( -18/ +1/ 52)","Pyrimidine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"58","pyrI","eco00240:Pyrimidine metabolism",0.00220955032062621,-1.00128946601179,-1,-2.65569610330222,1.4342638188225e-10,52,2.65569610330222,-3,1,18,"Pyrimidine metabolism
+"57","pyrI","eco00240:Pyrimidine metabolism",0.00220955032062621,-1.00128946601179,-1,-2.65569610330222,1.4342638188225e-10,52,2.65569610330222,-3,1,18,"Pyrimidine metabolism
  padj:0.00000 N( -18/ +1/ 52)","Pyrimidine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"59","yjjG","eco00240:Pyrimidine metabolism",0.00189811089313724,-1.45904782188147,-1,-2.72167841842573,1.4342638188225e-10,52,2.72167841842573,-4,1,18,"Pyrimidine metabolism
+"58","yjjG","eco00240:Pyrimidine metabolism",0.00189811089313724,-1.45904782188147,-1,-2.72167841842573,1.4342638188225e-10,52,2.72167841842573,-4,1,18,"Pyrimidine metabolism
  padj:0.00000 N( -18/ +1/ 52)","Pyrimidine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"60","udk","eco00240:Pyrimidine metabolism",0.00153298173681349,-1.15110990179547,-1,-2.81446301908455,1.4342638188225e-10,52,2.81446301908455,-5,1,18,"Pyrimidine metabolism
+"59","udk","eco00240:Pyrimidine metabolism",0.00153298173681349,-1.15110990179547,-1,-2.81446301908455,1.4342638188225e-10,52,2.81446301908455,-5,1,18,"Pyrimidine metabolism
  padj:0.00000 N( -18/ +1/ 52)","Pyrimidine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"61","cdd","eco00240:Pyrimidine metabolism",0.00148905315286429,-1.17838534653634,-1,-2.82708979950528,1.4342638188225e-10,52,2.82708979950528,-6,1,18,"Pyrimidine metabolism
+"60","cdd","eco00240:Pyrimidine metabolism",0.00148905315286429,-1.17838534653634,-1,-2.82708979950528,1.4342638188225e-10,52,2.82708979950528,-6,1,18,"Pyrimidine metabolism
  padj:0.00000 N( -18/ +1/ 52)","Pyrimidine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"62","pyrC","eco00240:Pyrimidine metabolism",0.00111296331905252,-1.224207277329,-1,-2.95351914886888,1.4342638188225e-10,52,2.95351914886888,-7,1,18,"Pyrimidine metabolism
+"61","pyrC","eco00240:Pyrimidine metabolism",0.00111296331905252,-1.224207277329,-1,-2.95351914886888,1.4342638188225e-10,52,2.95351914886888,-7,1,18,"Pyrimidine metabolism
  padj:0.00000 N( -18/ +1/ 52)","Pyrimidine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"63","codA","eco00240:Pyrimidine metabolism",0.00102511851678807,-1.23845960076562,-1,-2.98922592171887,1.4342638188225e-10,52,2.98922592171887,-8,1,18,"Pyrimidine metabolism
+"62","codA","eco00240:Pyrimidine metabolism",0.00102511851678807,-1.23845960076562,-1,-2.98922592171887,1.4342638188225e-10,52,2.98922592171887,-8,1,18,"Pyrimidine metabolism
  padj:0.00000 N( -18/ +1/ 52)","Pyrimidine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"64","thyA","eco00240:Pyrimidine metabolism",0.000485058458705106,-1.17900525678583,-1,-3.31420591755629,1.4342638188225e-10,52,3.31420591755629,-9,1,18,"Pyrimidine metabolism
+"63","thyA","eco00240:Pyrimidine metabolism",0.000485058458705106,-1.17900525678583,-1,-3.31420591755629,1.4342638188225e-10,52,3.31420591755629,-9,1,18,"Pyrimidine metabolism
  padj:0.00000 N( -18/ +1/ 52)","Pyrimidine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"65","pyrH","eco00240:Pyrimidine metabolism",0.000293076158444285,-1.19749974707612,-1,-3.53301950969951,1.4342638188225e-10,52,3.53301950969951,-10,1,18,"Pyrimidine metabolism
+"64","pyrH","eco00240:Pyrimidine metabolism",0.000293076158444285,-1.19749974707612,-1,-3.53301950969951,1.4342638188225e-10,52,3.53301950969951,-10,1,18,"Pyrimidine metabolism
  padj:0.00000 N( -18/ +1/ 52)","Pyrimidine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"66","pyrB","eco00240:Pyrimidine metabolism",0.000161831090162219,-1.23154620361207,-1,-3.79093804027124,1.4342638188225e-10,52,3.79093804027124,-11,1,18,"Pyrimidine metabolism
+"65","pyrB","eco00240:Pyrimidine metabolism",0.000161831090162219,-1.23154620361207,-1,-3.79093804027124,1.4342638188225e-10,52,3.79093804027124,-11,1,18,"Pyrimidine metabolism
  padj:0.00000 N( -18/ +1/ 52)","Pyrimidine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"67","trxB","eco00240:Pyrimidine metabolism",0.000125522941930138,-1.22464171912794,-1,-3.90127689057271,1.4342638188225e-10,52,3.90127689057271,-12,1,18,"Pyrimidine metabolism
+"66","trxB","eco00240:Pyrimidine metabolism",0.000125522941930138,-1.22464171912794,-1,-3.90127689057271,1.4342638188225e-10,52,3.90127689057271,-12,1,18,"Pyrimidine metabolism
  padj:0.00000 N( -18/ +1/ 52)","Pyrimidine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"68","nrdB","eco00240:Pyrimidine metabolism",0.000103145605765624,-1.28176548123644,-1,-3.98654926921669,1.4342638188225e-10,52,3.98654926921669,-13,1,18,"Pyrimidine metabolism
+"67","nrdB","eco00240:Pyrimidine metabolism",0.000103145605765624,-1.28176548123644,-1,-3.98654926921669,1.4342638188225e-10,52,3.98654926921669,-13,1,18,"Pyrimidine metabolism
  padj:0.00000 N( -18/ +1/ 52)","Pyrimidine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"69","pyrD","eco00240:Pyrimidine metabolism",8.71237181899678e-05,-1.1160840078593,-1,-4.0598635984161,1.4342638188225e-10,52,4.0598635984161,-14,1,18,"Pyrimidine metabolism
+"68","pyrD","eco00240:Pyrimidine metabolism",8.71237181899678e-05,-1.1160840078593,-1,-4.0598635984161,1.4342638188225e-10,52,4.0598635984161,-14,1,18,"Pyrimidine metabolism
  padj:0.00000 N( -18/ +1/ 52)","Pyrimidine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"70","nrdA","eco00240:Pyrimidine metabolism",6.68859726623506e-05,-1.08014034684623,-1,-4.17466495299599,1.4342638188225e-10,52,4.17466495299599,-15,1,18,"Pyrimidine metabolism
+"69","nrdA","eco00240:Pyrimidine metabolism",6.68859726623506e-05,-1.08014034684623,-1,-4.17466495299599,1.4342638188225e-10,52,4.17466495299599,-15,1,18,"Pyrimidine metabolism
  padj:0.00000 N( -18/ +1/ 52)","Pyrimidine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"71","rpoC","eco00240:Pyrimidine metabolism",5.58055157018092e-05,-1.14525839667371,-1,-4.25332287417218,1.4342638188225e-10,52,4.25332287417218,-16,1,18,"Pyrimidine metabolism
+"70","rpoC","eco00240:Pyrimidine metabolism",5.58055157018092e-05,-1.14525839667371,-1,-4.25332287417218,1.4342638188225e-10,52,4.25332287417218,-16,1,18,"Pyrimidine metabolism
  padj:0.00000 N( -18/ +1/ 52)","Pyrimidine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"72","carA","eco00240:Pyrimidine metabolism",2.03641917743276e-05,-1.46515122953336,-1,-4.69113282176335,1.4342638188225e-10,52,4.69113282176335,-17,1,18,"Pyrimidine metabolism
+"71","carA","eco00240:Pyrimidine metabolism",2.03641917743276e-05,-1.46515122953336,-1,-4.69113282176335,1.4342638188225e-10,52,4.69113282176335,-17,1,18,"Pyrimidine metabolism
  padj:0.00000 N( -18/ +1/ 52)","Pyrimidine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"73","yfbR","eco00240:Pyrimidine metabolism",1.80570970915312e-05,-1.94565300034243,-1,-4.74335206678343,1.4342638188225e-10,52,4.74335206678343,-18,1,18,"Pyrimidine metabolism
+"72","yfbR","eco00240:Pyrimidine metabolism",1.80570970915312e-05,-1.94565300034243,-1,-4.74335206678343,1.4342638188225e-10,52,4.74335206678343,-18,1,18,"Pyrimidine metabolism
  padj:0.00000 N( -18/ +1/ 52)","Pyrimidine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"74","aspA","eco00250:Alanine, aspartate and glutamate metabolism",2.38101292597279e-06,1.55258412951924,1,5.62323824690364,4.78138246440274e-07,28,5.62323824690364,1,1,11,"Alanine, aspartate and glutamate metabolism
+"73","aspA","eco00250:Alanine, aspartate and glutamate metabolism",2.38101292597279e-06,1.55258412951924,1,5.62323824690364,4.78138246440274e-07,28,5.62323824690364,1,1,11,"Alanine, aspartate and glutamate metabolism
  padj:0.00000 N( -11/ +1/ 28)","Alanine, aspartate and glutamate metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"75","pyrI","eco00250:Alanine, aspartate and glutamate metabolism",0.00220955032062621,-1.00128946601179,-1,-2.65569610330222,4.78138246440274e-07,28,2.65569610330222,-1,1,11,"Alanine, aspartate and glutamate metabolism
+"74","pyrI","eco00250:Alanine, aspartate and glutamate metabolism",0.00220955032062621,-1.00128946601179,-1,-2.65569610330222,4.78138246440274e-07,28,2.65569610330222,-1,1,11,"Alanine, aspartate and glutamate metabolism
  padj:0.00000 N( -11/ +1/ 28)","Alanine, aspartate and glutamate metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"76","argG","eco00250:Alanine, aspartate and glutamate metabolism",0.00062325170537039,-1.15117143231047,-1,-3.20533652448574,4.78138246440274e-07,28,3.20533652448574,-2,1,11,"Alanine, aspartate and glutamate metabolism
+"75","argG","eco00250:Alanine, aspartate and glutamate metabolism",0.00062325170537039,-1.15117143231047,-1,-3.20533652448574,4.78138246440274e-07,28,3.20533652448574,-2,1,11,"Alanine, aspartate and glutamate metabolism
  padj:0.00000 N( -11/ +1/ 28)","Alanine, aspartate and glutamate metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"77","glmS","eco00250:Alanine, aspartate and glutamate metabolism",0.000227272460536054,-1.30547256425856,-1,-3.64345318619245,4.78138246440274e-07,28,3.64345318619245,-3,1,11,"Alanine, aspartate and glutamate metabolism
+"76","glmS","eco00250:Alanine, aspartate and glutamate metabolism",0.000227272460536054,-1.30547256425856,-1,-3.64345318619245,4.78138246440274e-07,28,3.64345318619245,-3,1,11,"Alanine, aspartate and glutamate metabolism
  padj:0.00000 N( -11/ +1/ 28)","Alanine, aspartate and glutamate metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"78","yneH","eco00250:Alanine, aspartate and glutamate metabolism",0.000181906391733115,-1.51881305933032,-1,-3.74015204065256,4.78138246440274e-07,28,3.74015204065256,-4,1,11,"Alanine, aspartate and glutamate metabolism
+"77","yneH","eco00250:Alanine, aspartate and glutamate metabolism",0.000181906391733115,-1.51881305933032,-1,-3.74015204065256,4.78138246440274e-07,28,3.74015204065256,-4,1,11,"Alanine, aspartate and glutamate metabolism
  padj:0.00000 N( -11/ +1/ 28)","Alanine, aspartate and glutamate metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"79","pyrB","eco00250:Alanine, aspartate and glutamate metabolism",0.000161831090162219,-1.23154620361207,-1,-3.79093804027124,4.78138246440274e-07,28,3.79093804027124,-5,1,11,"Alanine, aspartate and glutamate metabolism
+"78","pyrB","eco00250:Alanine, aspartate and glutamate metabolism",0.000161831090162219,-1.23154620361207,-1,-3.79093804027124,4.78138246440274e-07,28,3.79093804027124,-5,1,11,"Alanine, aspartate and glutamate metabolism
  padj:0.00000 N( -11/ +1/ 28)","Alanine, aspartate and glutamate metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"80","asnA","eco00250:Alanine, aspartate and glutamate metabolism",5.16094719448793e-05,-1.33513289598857,-1,-4.28727058449909,4.78138246440274e-07,28,4.28727058449909,-6,1,11,"Alanine, aspartate and glutamate metabolism
+"79","asnA","eco00250:Alanine, aspartate and glutamate metabolism",5.16094719448793e-05,-1.33513289598857,-1,-4.28727058449909,4.78138246440274e-07,28,4.28727058449909,-6,1,11,"Alanine, aspartate and glutamate metabolism
  padj:0.00000 N( -11/ +1/ 28)","Alanine, aspartate and glutamate metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"81","carA","eco00250:Alanine, aspartate and glutamate metabolism",2.03641917743276e-05,-1.46515122953336,-1,-4.69113282176335,4.78138246440274e-07,28,4.69113282176335,-7,1,11,"Alanine, aspartate and glutamate metabolism
+"80","carA","eco00250:Alanine, aspartate and glutamate metabolism",2.03641917743276e-05,-1.46515122953336,-1,-4.69113282176335,4.78138246440274e-07,28,4.69113282176335,-7,1,11,"Alanine, aspartate and glutamate metabolism
  padj:0.00000 N( -11/ +1/ 28)","Alanine, aspartate and glutamate metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"82","purF","eco00250:Alanine, aspartate and glutamate metabolism",1.14958494451315e-05,-1.32516666525953,-1,-4.93945893255448,4.78138246440274e-07,28,4.93945893255448,-8,1,11,"Alanine, aspartate and glutamate metabolism
+"81","purF","eco00250:Alanine, aspartate and glutamate metabolism",1.14958494451315e-05,-1.32516666525953,-1,-4.93945893255448,4.78138246440274e-07,28,4.93945893255448,-8,1,11,"Alanine, aspartate and glutamate metabolism
  padj:0.00000 N( -11/ +1/ 28)","Alanine, aspartate and glutamate metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"83","gltD","eco00250:Alanine, aspartate and glutamate metabolism",5.59838128559088e-06,-1.23064958698635,-1,-5.25193752662921,4.78138246440274e-07,28,5.25193752662921,-9,1,11,"Alanine, aspartate and glutamate metabolism
+"82","gltD","eco00250:Alanine, aspartate and glutamate metabolism",5.59838128559088e-06,-1.23064958698635,-1,-5.25193752662921,4.78138246440274e-07,28,5.25193752662921,-9,1,11,"Alanine, aspartate and glutamate metabolism
  padj:0.00000 N( -11/ +1/ 28)","Alanine, aspartate and glutamate metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"84","asnB","eco00250:Alanine, aspartate and glutamate metabolism",2.63570230500616e-06,-1.59842446767651,-1,-5.57910364362057,4.78138246440274e-07,28,5.57910364362057,-10,1,11,"Alanine, aspartate and glutamate metabolism
+"83","asnB","eco00250:Alanine, aspartate and glutamate metabolism",2.63570230500616e-06,-1.59842446767651,-1,-5.57910364362057,4.78138246440274e-07,28,5.57910364362057,-10,1,11,"Alanine, aspartate and glutamate metabolism
  padj:0.00000 N( -11/ +1/ 28)","Alanine, aspartate and glutamate metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"85","gltB","eco00250:Alanine, aspartate and glutamate metabolism",1.16579271609197e-06,-1.25048734153086,-1,-5.93337866249311,4.78138246440274e-07,28,5.93337866249311,-11,1,11,"Alanine, aspartate and glutamate metabolism
+"84","gltB","eco00250:Alanine, aspartate and glutamate metabolism",1.16579271609197e-06,-1.25048734153086,-1,-5.93337866249311,4.78138246440274e-07,28,5.93337866249311,-11,1,11,"Alanine, aspartate and glutamate metabolism
  padj:0.00000 N( -11/ +1/ 28)","Alanine, aspartate and glutamate metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"86","usg","eco00260:Glycine, serine and threonine metabolism",0.00581519661184515,-1.21562850429859,-1,-2.23543559718731,1.27775485414539e-07,30,2.23543559718731,-1,0,13,"Glycine, serine and threonine metabolism
+"85","usg","eco00260:Glycine, serine and threonine metabolism",0.00581519661184515,-1.21562850429859,-1,-2.23543559718731,1.27775485414539e-07,30,2.23543559718731,-1,0,13,"Glycine, serine and threonine metabolism
  padj:0.00000 N( -13/ +0/ 30)","Glycine, serine and threonine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"87","glyA","eco00260:Glycine, serine and threonine metabolism",0.00270945734822805,-1.27820309726754,-1,-2.56711768118047,1.27775485414539e-07,30,2.56711768118047,-2,0,13,"Glycine, serine and threonine metabolism
+"86","glyA","eco00260:Glycine, serine and threonine metabolism",0.00270945734822805,-1.27820309726754,-1,-2.56711768118047,1.27775485414539e-07,30,2.56711768118047,-2,0,13,"Glycine, serine and threonine metabolism
  padj:0.00000 N( -13/ +0/ 30)","Glycine, serine and threonine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"88","betA","eco00260:Glycine, serine and threonine metabolism",0.00174400737026116,-1.67111416578475,-1,-2.75845168404967,1.27775485414539e-07,30,2.75845168404967,-3,0,13,"Glycine, serine and threonine metabolism
+"87","betA","eco00260:Glycine, serine and threonine metabolism",0.00174400737026116,-1.67111416578475,-1,-2.75845168404967,1.27775485414539e-07,30,2.75845168404967,-3,0,13,"Glycine, serine and threonine metabolism
  padj:0.00000 N( -13/ +0/ 30)","Glycine, serine and threonine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"89","betB","eco00260:Glycine, serine and threonine metabolism",0.000548483251572979,-1.5935263722253,-1,-3.26083662945753,1.27775485414539e-07,30,3.26083662945753,-4,0,13,"Glycine, serine and threonine metabolism
+"88","betB","eco00260:Glycine, serine and threonine metabolism",0.000548483251572979,-1.5935263722253,-1,-3.26083662945753,1.27775485414539e-07,30,3.26083662945753,-4,0,13,"Glycine, serine and threonine metabolism
  padj:0.00000 N( -13/ +0/ 30)","Glycine, serine and threonine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"90","asd","eco00260:Glycine, serine and threonine metabolism",0.00048372306889391,-1.22673947686071,-1,-3.31540320048744,1.27775485414539e-07,30,3.31540320048744,-5,0,13,"Glycine, serine and threonine metabolism
+"89","asd","eco00260:Glycine, serine and threonine metabolism",0.00048372306889391,-1.22673947686071,-1,-3.31540320048744,1.27775485414539e-07,30,3.31540320048744,-5,0,13,"Glycine, serine and threonine metabolism
  padj:0.00000 N( -13/ +0/ 30)","Glycine, serine and threonine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"91","serB","eco00260:Glycine, serine and threonine metabolism",0.000229556957773941,-1.24298662648977,-1,-3.63910953941709,1.27775485414539e-07,30,3.63910953941709,-6,0,13,"Glycine, serine and threonine metabolism
+"90","serB","eco00260:Glycine, serine and threonine metabolism",0.000229556957773941,-1.24298662648977,-1,-3.63910953941709,1.27775485414539e-07,30,3.63910953941709,-6,0,13,"Glycine, serine and threonine metabolism
  padj:0.00000 N( -13/ +0/ 30)","Glycine, serine and threonine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"92","thrA","eco00260:Glycine, serine and threonine metabolism",3.24350234962182e-05,-1.08693463687332,-1,-4.48898578312687,1.27775485414539e-07,30,4.48898578312687,-7,0,13,"Glycine, serine and threonine metabolism
+"91","thrA","eco00260:Glycine, serine and threonine metabolism",3.24350234962182e-05,-1.08693463687332,-1,-4.48898578312687,1.27775485414539e-07,30,4.48898578312687,-7,0,13,"Glycine, serine and threonine metabolism
  padj:0.00000 N( -13/ +0/ 30)","Glycine, serine and threonine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"93","trpB","eco00260:Glycine, serine and threonine metabolism",2.92574497842272e-05,-1.37966316760323,-1,-4.53376353169348,1.27775485414539e-07,30,4.53376353169348,-8,0,13,"Glycine, serine and threonine metabolism
+"92","trpB","eco00260:Glycine, serine and threonine metabolism",2.92574497842272e-05,-1.37966316760323,-1,-4.53376353169348,1.27775485414539e-07,30,4.53376353169348,-8,0,13,"Glycine, serine and threonine metabolism
  padj:0.00000 N( -13/ +0/ 30)","Glycine, serine and threonine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"94","thrB","eco00260:Glycine, serine and threonine metabolism",1.43516251650225e-05,-1.48263749882338,-1,-4.84309891703188,1.27775485414539e-07,30,4.84309891703188,-9,0,13,"Glycine, serine and threonine metabolism
+"93","thrB","eco00260:Glycine, serine and threonine metabolism",1.43516251650225e-05,-1.48263749882338,-1,-4.84309891703188,1.27775485414539e-07,30,4.84309891703188,-9,0,13,"Glycine, serine and threonine metabolism
  padj:0.00000 N( -13/ +0/ 30)","Glycine, serine and threonine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"95","thrC","eco00260:Glycine, serine and threonine metabolism",7.49253842728704e-06,-1.51173762773352,-1,-5.12537102099281,1.27775485414539e-07,30,5.12537102099281,-10,0,13,"Glycine, serine and threonine metabolism
+"94","thrC","eco00260:Glycine, serine and threonine metabolism",7.49253842728704e-06,-1.51173762773352,-1,-5.12537102099281,1.27775485414539e-07,30,5.12537102099281,-10,0,13,"Glycine, serine and threonine metabolism
  padj:0.00000 N( -13/ +0/ 30)","Glycine, serine and threonine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"96","gcvP","eco00260:Glycine, serine and threonine metabolism",2.38101292597279e-06,-1.34944811041079,-1,-5.62323824690364,1.27775485414539e-07,30,5.62323824690364,-11,0,13,"Glycine, serine and threonine metabolism
+"95","gcvP","eco00260:Glycine, serine and threonine metabolism",2.38101292597279e-06,-1.34944811041079,-1,-5.62323824690364,1.27775485414539e-07,30,5.62323824690364,-11,0,13,"Glycine, serine and threonine metabolism
  padj:0.00000 N( -13/ +0/ 30)","Glycine, serine and threonine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"97","metL","eco00260:Glycine, serine and threonine metabolism",1.68179256987595e-06,-1.37692465555594,-1,-5.77422757055568,1.27775485414539e-07,30,5.77422757055568,-12,0,13,"Glycine, serine and threonine metabolism
+"96","metL","eco00260:Glycine, serine and threonine metabolism",1.68179256987595e-06,-1.37692465555594,-1,-5.77422757055568,1.27775485414539e-07,30,5.77422757055568,-12,0,13,"Glycine, serine and threonine metabolism
  padj:0.00000 N( -13/ +0/ 30)","Glycine, serine and threonine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"98","ilvA","eco00260:Glycine, serine and threonine metabolism",5.60022923686724e-07,-1.27831467423581,-1,-6.25179419544579,1.27775485414539e-07,30,6.25179419544579,-13,0,13,"Glycine, serine and threonine metabolism
+"97","ilvA","eco00260:Glycine, serine and threonine metabolism",5.60022923686724e-07,-1.27831467423581,-1,-6.25179419544579,1.27775485414539e-07,30,6.25179419544579,-13,0,13,"Glycine, serine and threonine metabolism
  padj:0.00000 N( -13/ +0/ 30)","Glycine, serine and threonine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"99","usg","eco00270:Cysteine and methionine metabolism",0.00581519661184515,-1.21562850429859,-1,-2.23543559718731,2.03550157840127e-08,23,2.23543559718731,-1,0,13,"Cysteine and methionine metabolism
+"98","usg","eco00270:Cysteine and methionine metabolism",0.00581519661184515,-1.21562850429859,-1,-2.23543559718731,2.03550157840127e-08,23,2.23543559718731,-1,0,13,"Cysteine and methionine metabolism
  padj:0.00000 N( -13/ +0/ 23)","Cysteine and methionine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"100","cysE","eco00270:Cysteine and methionine metabolism",0.00521585177655186,-1.01397439316741,-1,-2.2826747588291,2.03550157840127e-08,23,2.2826747588291,-2,0,13,"Cysteine and methionine metabolism
+"99","cysE","eco00270:Cysteine and methionine metabolism",0.00521585177655186,-1.01397439316741,-1,-2.2826747588291,2.03550157840127e-08,23,2.2826747588291,-2,0,13,"Cysteine and methionine metabolism
  padj:0.00000 N( -13/ +0/ 23)","Cysteine and methionine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"101","cysK","eco00270:Cysteine and methionine metabolism",0.00476580596357682,-1.02158064523356,-1,-2.32186364362266,2.03550157840127e-08,23,2.32186364362266,-3,0,13,"Cysteine and methionine metabolism
+"100","cysK","eco00270:Cysteine and methionine metabolism",0.00476580596357682,-1.02158064523356,-1,-2.32186364362266,2.03550157840127e-08,23,2.32186364362266,-3,0,13,"Cysteine and methionine metabolism
  padj:0.00000 N( -13/ +0/ 23)","Cysteine and methionine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"102","speE","eco00270:Cysteine and methionine metabolism",0.00114635951259987,-1.38498329431811,-1,-2.9406791608565,2.03550157840127e-08,23,2.9406791608565,-4,0,13,"Cysteine and methionine metabolism
+"101","speE","eco00270:Cysteine and methionine metabolism",0.00114635951259987,-1.38498329431811,-1,-2.9406791608565,2.03550157840127e-08,23,2.9406791608565,-4,0,13,"Cysteine and methionine metabolism
  padj:0.00000 N( -13/ +0/ 23)","Cysteine and methionine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"103","asd","eco00270:Cysteine and methionine metabolism",0.00048372306889391,-1.22673947686071,-1,-3.31540320048744,2.03550157840127e-08,23,3.31540320048744,-5,0,13,"Cysteine and methionine metabolism
+"102","asd","eco00270:Cysteine and methionine metabolism",0.00048372306889391,-1.22673947686071,-1,-3.31540320048744,2.03550157840127e-08,23,3.31540320048744,-5,0,13,"Cysteine and methionine metabolism
  padj:0.00000 N( -13/ +0/ 23)","Cysteine and methionine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"104","metC","eco00270:Cysteine and methionine metabolism",0.000404620869094118,-1.12511616794071,-1,-3.39295172142017,2.03550157840127e-08,23,3.39295172142017,-6,0,13,"Cysteine and methionine metabolism
+"103","metC","eco00270:Cysteine and methionine metabolism",0.000404620869094118,-1.12511616794071,-1,-3.39295172142017,2.03550157840127e-08,23,3.39295172142017,-6,0,13,"Cysteine and methionine metabolism
  padj:0.00000 N( -13/ +0/ 23)","Cysteine and methionine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"105","cysM","eco00270:Cysteine and methionine metabolism",0.00039401032838839,-1.29868479145716,-1,-3.4044923936483,2.03550157840127e-08,23,3.4044923936483,-7,0,13,"Cysteine and methionine metabolism
+"104","cysM","eco00270:Cysteine and methionine metabolism",0.00039401032838839,-1.29868479145716,-1,-3.4044923936483,2.03550157840127e-08,23,3.4044923936483,-7,0,13,"Cysteine and methionine metabolism
  padj:0.00000 N( -13/ +0/ 23)","Cysteine and methionine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"106","thrA","eco00270:Cysteine and methionine metabolism",3.24350234962182e-05,-1.08693463687332,-1,-4.48898578312687,2.03550157840127e-08,23,4.48898578312687,-8,0,13,"Cysteine and methionine metabolism
+"105","thrA","eco00270:Cysteine and methionine metabolism",3.24350234962182e-05,-1.08693463687332,-1,-4.48898578312687,2.03550157840127e-08,23,4.48898578312687,-8,0,13,"Cysteine and methionine metabolism
  padj:0.00000 N( -13/ +0/ 23)","Cysteine and methionine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"107","tyrB","eco00270:Cysteine and methionine metabolism",1.76807479144183e-05,-1.21739773474897,-1,-4.75249936781646,2.03550157840127e-08,23,4.75249936781646,-9,0,13,"Cysteine and methionine metabolism
+"106","tyrB","eco00270:Cysteine and methionine metabolism",1.76807479144183e-05,-1.21739773474897,-1,-4.75249936781646,2.03550157840127e-08,23,4.75249936781646,-9,0,13,"Cysteine and methionine metabolism
  padj:0.00000 N( -13/ +0/ 23)","Cysteine and methionine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"108","metE","eco00270:Cysteine and methionine metabolism",1.01868326278744e-05,-1.33213743066068,-1,-4.99196082934648,2.03550157840127e-08,23,4.99196082934648,-10,0,13,"Cysteine and methionine metabolism
+"107","metE","eco00270:Cysteine and methionine metabolism",1.01868326278744e-05,-1.33213743066068,-1,-4.99196082934648,2.03550157840127e-08,23,4.99196082934648,-10,0,13,"Cysteine and methionine metabolism
  padj:0.00000 N( -13/ +0/ 23)","Cysteine and methionine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"109","metL","eco00270:Cysteine and methionine metabolism",1.68179256987595e-06,-1.37692465555594,-1,-5.77422757055568,2.03550157840127e-08,23,5.77422757055568,-11,0,13,"Cysteine and methionine metabolism
+"108","metL","eco00270:Cysteine and methionine metabolism",1.68179256987595e-06,-1.37692465555594,-1,-5.77422757055568,2.03550157840127e-08,23,5.77422757055568,-11,0,13,"Cysteine and methionine metabolism
  padj:0.00000 N( -13/ +0/ 23)","Cysteine and methionine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"110","metK","eco00270:Cysteine and methionine metabolism",2.94053863371827e-10,-2.00789496809087,-1,-9.53157311032743,2.03550157840127e-08,23,9.53157311032743,-12,0,13,"Cysteine and methionine metabolism
+"109","metK","eco00270:Cysteine and methionine metabolism",2.94053863371827e-10,-2.00789496809087,-1,-9.53157311032743,2.03550157840127e-08,23,9.53157311032743,-12,0,13,"Cysteine and methionine metabolism
  padj:0.00000 N( -13/ +0/ 23)","Cysteine and methionine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"111","speD","eco00270:Cysteine and methionine metabolism",1.17366834330107e-11,-2.42074059932902,-1,-10.9304546092412,2.03550157840127e-08,23,10.9304546092412,-13,0,13,"Cysteine and methionine metabolism
+"110","speD","eco00270:Cysteine and methionine metabolism",1.17366834330107e-11,-2.42074059932902,-1,-10.9304546092412,2.03550157840127e-08,23,10.9304546092412,-13,0,13,"Cysteine and methionine metabolism
  padj:0.00000 N( -13/ +0/ 23)","Cysteine and methionine metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"112","leuC","eco00290:Valine, leucine and isoleucine biosynthesis",0.00122325632045402,-1.03060024049262,-1,-2.91248253160219,2.60792001227639e-06,19,2.91248253160219,-1,0,10,"Valine, leucine and isoleucine biosynthesis
+"111","leuC","eco00290:Valine, leucine and isoleucine biosynthesis",0.00122325632045402,-1.03060024049262,-1,-2.91248253160219,2.60792001227639e-06,19,2.91248253160219,-1,0,10,"Valine, leucine and isoleucine biosynthesis
  padj:0.00000 N( -10/ +0/ 19)","Valine, leucine and isoleucine biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"113","leuB","eco00290:Valine, leucine and isoleucine biosynthesis",0.00097012657957453,-1.09069942477039,-1,-3.01317159643043,2.60792001227639e-06,19,3.01317159643043,-2,0,10,"Valine, leucine and isoleucine biosynthesis
+"112","leuB","eco00290:Valine, leucine and isoleucine biosynthesis",0.00097012657957453,-1.09069942477039,-1,-3.01317159643043,2.60792001227639e-06,19,3.01317159643043,-2,0,10,"Valine, leucine and isoleucine biosynthesis
  padj:0.00000 N( -10/ +0/ 19)","Valine, leucine and isoleucine biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"114","ilvE","eco00290:Valine, leucine and isoleucine biosynthesis",0.000320585329419393,-1.59378846323778,-1,-3.49405635564995,2.60792001227639e-06,19,3.49405635564995,-3,0,10,"Valine, leucine and isoleucine biosynthesis
+"113","ilvE","eco00290:Valine, leucine and isoleucine biosynthesis",0.000320585329419393,-1.59378846323778,-1,-3.49405635564995,2.60792001227639e-06,19,3.49405635564995,-3,0,10,"Valine, leucine and isoleucine biosynthesis
  padj:0.00000 N( -10/ +0/ 19)","Valine, leucine and isoleucine biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"115","avtA","eco00290:Valine, leucine and isoleucine biosynthesis",0.000226850843145873,-1.18795971797639,-1,-3.64425960223477,2.60792001227639e-06,19,3.64425960223477,-4,0,10,"Valine, leucine and isoleucine biosynthesis
+"114","avtA","eco00290:Valine, leucine and isoleucine biosynthesis",0.000226850843145873,-1.18795971797639,-1,-3.64425960223477,2.60792001227639e-06,19,3.64425960223477,-4,0,10,"Valine, leucine and isoleucine biosynthesis
  padj:0.00000 N( -10/ +0/ 19)","Valine, leucine and isoleucine biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"116","leuS","eco00290:Valine, leucine and isoleucine biosynthesis",0.00010519506547894,-1.05625175674792,-1,-3.97800463171773,2.60792001227639e-06,19,3.97800463171773,-5,0,10,"Valine, leucine and isoleucine biosynthesis
+"115","leuS","eco00290:Valine, leucine and isoleucine biosynthesis",0.00010519506547894,-1.05625175674792,-1,-3.97800463171773,2.60792001227639e-06,19,3.97800463171773,-5,0,10,"Valine, leucine and isoleucine biosynthesis
  padj:0.00000 N( -10/ +0/ 19)","Valine, leucine and isoleucine biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"117","aceE","eco00290:Valine, leucine and isoleucine biosynthesis",5.60014731207798e-05,-1.08471779802741,-1,-4.25180054871146,2.60792001227639e-06,19,4.25180054871146,-6,0,10,"Valine, leucine and isoleucine biosynthesis
+"116","aceE","eco00290:Valine, leucine and isoleucine biosynthesis",5.60014731207798e-05,-1.08471779802741,-1,-4.25180054871146,2.60792001227639e-06,19,4.25180054871146,-6,0,10,"Valine, leucine and isoleucine biosynthesis
  padj:0.00000 N( -10/ +0/ 19)","Valine, leucine and isoleucine biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"118","leuA","eco00290:Valine, leucine and isoleucine biosynthesis",4.38067005624898e-05,-1.27101458803997,-1,-4.35845945582583,2.60792001227639e-06,19,4.35845945582583,-7,0,10,"Valine, leucine and isoleucine biosynthesis
+"117","leuA","eco00290:Valine, leucine and isoleucine biosynthesis",4.38067005624898e-05,-1.27101458803997,-1,-4.35845945582583,2.60792001227639e-06,19,4.35845945582583,-7,0,10,"Valine, leucine and isoleucine biosynthesis
  padj:0.00000 N( -10/ +0/ 19)","Valine, leucine and isoleucine biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"119","ilvI","eco00290:Valine, leucine and isoleucine biosynthesis",5.48868903489971e-06,-1.53475623592464,-1,-5.26053137374612,2.60792001227639e-06,19,5.26053137374612,-8,0,10,"Valine, leucine and isoleucine biosynthesis
+"118","ilvI","eco00290:Valine, leucine and isoleucine biosynthesis",5.48868903489971e-06,-1.53475623592464,-1,-5.26053137374612,2.60792001227639e-06,19,5.26053137374612,-8,0,10,"Valine, leucine and isoleucine biosynthesis
  padj:0.00000 N( -10/ +0/ 19)","Valine, leucine and isoleucine biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"120","ileS","eco00290:Valine, leucine and isoleucine biosynthesis",1.44943203211012e-06,-1.33345304346076,-1,-5.83880214510485,2.60792001227639e-06,19,5.83880214510485,-9,0,10,"Valine, leucine and isoleucine biosynthesis
+"119","ileS","eco00290:Valine, leucine and isoleucine biosynthesis",1.44943203211012e-06,-1.33345304346076,-1,-5.83880214510485,2.60792001227639e-06,19,5.83880214510485,-9,0,10,"Valine, leucine and isoleucine biosynthesis
  padj:0.00000 N( -10/ +0/ 19)","Valine, leucine and isoleucine biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"121","ilvA","eco00290:Valine, leucine and isoleucine biosynthesis",5.60022923686724e-07,-1.27831467423581,-1,-6.25179419544579,2.60792001227639e-06,19,6.25179419544579,-10,0,10,"Valine, leucine and isoleucine biosynthesis
+"120","ilvA","eco00290:Valine, leucine and isoleucine biosynthesis",5.60022923686724e-07,-1.27831467423581,-1,-6.25179419544579,2.60792001227639e-06,19,6.25179419544579,-10,0,10,"Valine, leucine and isoleucine biosynthesis
  padj:0.00000 N( -10/ +0/ 19)","Valine, leucine and isoleucine biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"122","usg","eco00300:Lysine biosynthesis",0.00581519661184515,-1.21562850429859,-1,-2.23543559718731,2.99646433443712e-06,14,2.23543559718731,-1,0,9,"Lysine biosynthesis
+"121","usg","eco00300:Lysine biosynthesis",0.00581519661184515,-1.21562850429859,-1,-2.23543559718731,2.99646433443712e-06,14,2.23543559718731,-1,0,9,"Lysine biosynthesis
  padj:0.00000 N( -9/ +0/ 14)","Lysine biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"123","asd","eco00300:Lysine biosynthesis",0.00048372306889391,-1.22673947686071,-1,-3.31540320048744,2.99646433443712e-06,14,3.31540320048744,-2,0,9,"Lysine biosynthesis
+"122","asd","eco00300:Lysine biosynthesis",0.00048372306889391,-1.22673947686071,-1,-3.31540320048744,2.99646433443712e-06,14,3.31540320048744,-2,0,9,"Lysine biosynthesis
  padj:0.00000 N( -9/ +0/ 14)","Lysine biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"124","murF","eco00300:Lysine biosynthesis",0.000215400907438121,-1.37409858259807,-1,-3.66675247144408,2.99646433443712e-06,14,3.66675247144408,-3,0,9,"Lysine biosynthesis
+"123","murF","eco00300:Lysine biosynthesis",0.000215400907438121,-1.37409858259807,-1,-3.66675247144408,2.99646433443712e-06,14,3.66675247144408,-3,0,9,"Lysine biosynthesis
  padj:0.00000 N( -9/ +0/ 14)","Lysine biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"125","lysA","eco00300:Lysine biosynthesis",6.58648484319538e-05,-1.65038535126434,-1,-4.1813463032363,2.99646433443712e-06,14,4.1813463032363,-4,0,9,"Lysine biosynthesis
+"124","lysA","eco00300:Lysine biosynthesis",6.58648484319538e-05,-1.65038535126434,-1,-4.1813463032363,2.99646433443712e-06,14,4.1813463032363,-4,0,9,"Lysine biosynthesis
  padj:0.00000 N( -9/ +0/ 14)","Lysine biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"126","argD","eco00300:Lysine biosynthesis",5.99717667823418e-05,-1.51627200450219,-1,-4.22205315655626,2.99646433443712e-06,14,4.22205315655626,-5,0,9,"Lysine biosynthesis
+"125","argD","eco00300:Lysine biosynthesis",5.99717667823418e-05,-1.51627200450219,-1,-4.22205315655626,2.99646433443712e-06,14,4.22205315655626,-5,0,9,"Lysine biosynthesis
  padj:0.00000 N( -9/ +0/ 14)","Lysine biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"127","thrA","eco00300:Lysine biosynthesis",3.24350234962182e-05,-1.08693463687332,-1,-4.48898578312687,2.99646433443712e-06,14,4.48898578312687,-6,0,9,"Lysine biosynthesis
+"126","thrA","eco00300:Lysine biosynthesis",3.24350234962182e-05,-1.08693463687332,-1,-4.48898578312687,2.99646433443712e-06,14,4.48898578312687,-6,0,9,"Lysine biosynthesis
  padj:0.00000 N( -9/ +0/ 14)","Lysine biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"128","dapE","eco00300:Lysine biosynthesis",7.54575847894617e-06,-1.60059356148912,-1,-5.12229709960409,2.99646433443712e-06,14,5.12229709960409,-7,0,9,"Lysine biosynthesis
+"127","dapE","eco00300:Lysine biosynthesis",7.54575847894617e-06,-1.60059356148912,-1,-5.12229709960409,2.99646433443712e-06,14,5.12229709960409,-7,0,9,"Lysine biosynthesis
  padj:0.00000 N( -9/ +0/ 14)","Lysine biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"129","metL","eco00300:Lysine biosynthesis",1.68179256987595e-06,-1.37692465555594,-1,-5.77422757055568,2.99646433443712e-06,14,5.77422757055568,-8,0,9,"Lysine biosynthesis
+"128","metL","eco00300:Lysine biosynthesis",1.68179256987595e-06,-1.37692465555594,-1,-5.77422757055568,2.99646433443712e-06,14,5.77422757055568,-8,0,9,"Lysine biosynthesis
  padj:0.00000 N( -9/ +0/ 14)","Lysine biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"130","dapB","eco00300:Lysine biosynthesis",1.67500434841585e-06,-1.25255667842424,-1,-5.77598406117009,2.99646433443712e-06,14,5.77598406117009,-9,0,9,"Lysine biosynthesis
+"129","dapB","eco00300:Lysine biosynthesis",1.67500434841585e-06,-1.25255667842424,-1,-5.77598406117009,2.99646433443712e-06,14,5.77598406117009,-9,0,9,"Lysine biosynthesis
  padj:0.00000 N( -9/ +0/ 14)","Lysine biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"131","puuD","eco00330:Arginine and proline metabolism",0.0148697225396417,-2.09269062611524,-1,-1.82769713508442,0.000319570398095825,36,1.82769713508442,-1,0,11,"Arginine and proline metabolism
+"130","puuD","eco00330:Arginine and proline metabolism",0.0148697225396417,-2.09269062611524,-1,-1.82769713508442,0.000319570398095825,36,1.82769713508442,-1,0,11,"Arginine and proline metabolism
  padj:0.00032 N( -11/ +0/ 36)","Arginine and proline metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"132","speB","eco00330:Arginine and proline metabolism",0.00300268015050293,-1.05322536319739,-1,-2.5224909269651,0.000319570398095825,36,2.5224909269651,-2,0,11,"Arginine and proline metabolism
+"131","speB","eco00330:Arginine and proline metabolism",0.00300268015050293,-1.05322536319739,-1,-2.5224909269651,0.000319570398095825,36,2.5224909269651,-2,0,11,"Arginine and proline metabolism
  padj:0.00032 N( -11/ +0/ 36)","Arginine and proline metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"133","speE","eco00330:Arginine and proline metabolism",0.00114635951259987,-1.38498329431811,-1,-2.9406791608565,0.000319570398095825,36,2.9406791608565,-3,0,11,"Arginine and proline metabolism
+"132","speE","eco00330:Arginine and proline metabolism",0.00114635951259987,-1.38498329431811,-1,-2.9406791608565,0.000319570398095825,36,2.9406791608565,-3,0,11,"Arginine and proline metabolism
  padj:0.00032 N( -11/ +0/ 36)","Arginine and proline metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"134","codA","eco00330:Arginine and proline metabolism",0.00102511851678807,-1.23845960076562,-1,-2.98922592171887,0.000319570398095825,36,2.98922592171887,-4,0,11,"Arginine and proline metabolism
+"133","codA","eco00330:Arginine and proline metabolism",0.00102511851678807,-1.23845960076562,-1,-2.98922592171887,0.000319570398095825,36,2.98922592171887,-4,0,11,"Arginine and proline metabolism
  padj:0.00032 N( -11/ +0/ 36)","Arginine and proline metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"135","argG","eco00330:Arginine and proline metabolism",0.00062325170537039,-1.15117143231047,-1,-3.20533652448574,0.000319570398095825,36,3.20533652448574,-5,0,11,"Arginine and proline metabolism
+"134","argG","eco00330:Arginine and proline metabolism",0.00062325170537039,-1.15117143231047,-1,-3.20533652448574,0.000319570398095825,36,3.20533652448574,-5,0,11,"Arginine and proline metabolism
  padj:0.00032 N( -11/ +0/ 36)","Arginine and proline metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"136","argE","eco00330:Arginine and proline metabolism",0.00043608925468388,-1.35430811283469,-1,-3.36042461428734,0.000319570398095825,36,3.36042461428734,-6,0,11,"Arginine and proline metabolism
+"135","argE","eco00330:Arginine and proline metabolism",0.00043608925468388,-1.35430811283469,-1,-3.36042461428734,0.000319570398095825,36,3.36042461428734,-6,0,11,"Arginine and proline metabolism
  padj:0.00032 N( -11/ +0/ 36)","Arginine and proline metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"137","proB","eco00330:Arginine and proline metabolism",0.000228646508919886,-1.2252235623984,-1,-3.64083542524068,0.000319570398095825,36,3.64083542524068,-7,0,11,"Arginine and proline metabolism
+"136","proB","eco00330:Arginine and proline metabolism",0.000228646508919886,-1.2252235623984,-1,-3.64083542524068,0.000319570398095825,36,3.64083542524068,-7,0,11,"Arginine and proline metabolism
  padj:0.00032 N( -11/ +0/ 36)","Arginine and proline metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"138","yneH","eco00330:Arginine and proline metabolism",0.000181906391733115,-1.51881305933032,-1,-3.74015204065256,0.000319570398095825,36,3.74015204065256,-8,0,11,"Arginine and proline metabolism
+"137","yneH","eco00330:Arginine and proline metabolism",0.000181906391733115,-1.51881305933032,-1,-3.74015204065256,0.000319570398095825,36,3.74015204065256,-8,0,11,"Arginine and proline metabolism
  padj:0.00032 N( -11/ +0/ 36)","Arginine and proline metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"139","argD","eco00330:Arginine and proline metabolism",5.99717667823418e-05,-1.51627200450219,-1,-4.22205315655626,0.000319570398095825,36,4.22205315655626,-9,0,11,"Arginine and proline metabolism
+"138","argD","eco00330:Arginine and proline metabolism",5.99717667823418e-05,-1.51627200450219,-1,-4.22205315655626,0.000319570398095825,36,4.22205315655626,-9,0,11,"Arginine and proline metabolism
  padj:0.00032 N( -11/ +0/ 36)","Arginine and proline metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"140","proC","eco00330:Arginine and proline metabolism",1.01278786326051e-05,-1.44779991559437,-1,-4.9944815116618,0.000319570398095825,36,4.9944815116618,-10,0,11,"Arginine and proline metabolism
+"139","proC","eco00330:Arginine and proline metabolism",1.01278786326051e-05,-1.44779991559437,-1,-4.9944815116618,0.000319570398095825,36,4.9944815116618,-10,0,11,"Arginine and proline metabolism
  padj:0.00032 N( -11/ +0/ 36)","Arginine and proline metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"141","speD","eco00330:Arginine and proline metabolism",1.17366834330107e-11,-2.42074059932902,-1,-10.9304546092412,0.000319570398095825,36,10.9304546092412,-11,0,11,"Arginine and proline metabolism
+"140","speD","eco00330:Arginine and proline metabolism",1.17366834330107e-11,-2.42074059932902,-1,-10.9304546092412,0.000319570398095825,36,10.9304546092412,-11,0,11,"Arginine and proline metabolism
  padj:0.00032 N( -11/ +0/ 36)","Arginine and proline metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"142","tnaA","eco00380:Tryptophan metabolism",1.17366834330107e-11,3.49049390497258,1,10.9304546092412,0.0191542196090623,9,10.9304546092412,4,4,1,"Tryptophan metabolism
+"141","tnaA","eco00380:Tryptophan metabolism",1.17366834330107e-11,3.49049390497258,1,10.9304546092412,0.0191542196090623,9,10.9304546092412,4,4,1,"Tryptophan metabolism
  padj:0.01915 N( -1/ +4/ 9)","Tryptophan metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"143","fadB","eco00380:Tryptophan metabolism",5.1503599232764e-05,1.68256918029319,1,4.28816242004019,0.0191542196090623,9,4.28816242004019,3,4,1,"Tryptophan metabolism
+"142","fadB","eco00380:Tryptophan metabolism",5.1503599232764e-05,1.68256918029319,1,4.28816242004019,0.0191542196090623,9,4.28816242004019,3,4,1,"Tryptophan metabolism
  padj:0.01915 N( -1/ +4/ 9)","Tryptophan metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"144","katE","eco00380:Tryptophan metabolism",0.00856528085279835,1.43116804079159,1,2.06725839208892,0.0191542196090623,9,2.06725839208892,2,4,1,"Tryptophan metabolism
+"143","katE","eco00380:Tryptophan metabolism",0.00856528085279835,1.43116804079159,1,2.06725839208892,0.0191542196090623,9,2.06725839208892,2,4,1,"Tryptophan metabolism
  padj:0.01915 N( -1/ +4/ 9)","Tryptophan metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"145","fadJ","eco00380:Tryptophan metabolism",0.0190064369109028,1.43068876847108,1,1.72109929160225,0.0191542196090623,9,1.72109929160225,1,4,1,"Tryptophan metabolism
+"144","fadJ","eco00380:Tryptophan metabolism",0.0190064369109028,1.43068876847108,1,1.72109929160225,0.0191542196090623,9,1.72109929160225,1,4,1,"Tryptophan metabolism
  padj:0.01915 N( -1/ +4/ 9)","Tryptophan metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"146","trpS","eco00380:Tryptophan metabolism",0.000503071777669027,-1.16062190851372,-1,-3.29837004591497,0.0191542196090623,9,3.29837004591497,-1,4,1,"Tryptophan metabolism
+"145","trpS","eco00380:Tryptophan metabolism",0.000503071777669027,-1.16062190851372,-1,-3.29837004591497,0.0191542196090623,9,3.29837004591497,-1,4,1,"Tryptophan metabolism
  padj:0.01915 N( -1/ +4/ 9)","Tryptophan metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"147","tyrA","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",0.00483337402734596,-1.02728832792197,-1,-2.31574959597902,6.80526168750362e-09,21,2.31574959597902,-1,0,12,"Phenylalanine, tyrosine and tryptophan biosynthesis
+"146","tyrA","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",0.00483337402734596,-1.02728832792197,-1,-2.31574959597902,6.80526168750362e-09,21,2.31574959597902,-1,0,12,"Phenylalanine, tyrosine and tryptophan biosynthesis
  padj:0.00000 N( -12/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"148","aroK","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",0.00147980555359016,-1.06925555219722,-1,-2.82979534713933,6.80526168750362e-09,21,2.82979534713933,-2,0,12,"Phenylalanine, tyrosine and tryptophan biosynthesis
+"147","aroK","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",0.00147980555359016,-1.06925555219722,-1,-2.82979534713933,6.80526168750362e-09,21,2.82979534713933,-2,0,12,"Phenylalanine, tyrosine and tryptophan biosynthesis
  padj:0.00000 N( -12/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"149","hisC","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",0.000569968708070688,-1.01713040165315,-1,-3.24414898693325,6.80526168750362e-09,21,3.24414898693325,-3,0,12,"Phenylalanine, tyrosine and tryptophan biosynthesis
+"148","hisC","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",0.000569968708070688,-1.01713040165315,-1,-3.24414898693325,6.80526168750362e-09,21,3.24414898693325,-3,0,12,"Phenylalanine, tyrosine and tryptophan biosynthesis
  padj:0.00000 N( -12/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"150","aroE","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",0.000474021209280742,-1.26670506257248,-1,-3.32420222611595,6.80526168750362e-09,21,3.32420222611595,-4,0,12,"Phenylalanine, tyrosine and tryptophan biosynthesis
+"149","aroE","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",0.000474021209280742,-1.26670506257248,-1,-3.32420222611595,6.80526168750362e-09,21,3.32420222611595,-4,0,12,"Phenylalanine, tyrosine and tryptophan biosynthesis
  padj:0.00000 N( -12/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"151","aroB","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",0.000331518799311897,-1.40624457039669,-1,-3.47949183918703,6.80526168750362e-09,21,3.47949183918703,-5,0,12,"Phenylalanine, tyrosine and tryptophan biosynthesis
+"150","aroB","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",0.000331518799311897,-1.40624457039669,-1,-3.47949183918703,6.80526168750362e-09,21,3.47949183918703,-5,0,12,"Phenylalanine, tyrosine and tryptophan biosynthesis
  padj:0.00000 N( -12/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"152","aroL","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",0.000153394144379226,-1.3671449997481,-1,-3.81419121869427,6.80526168750362e-09,21,3.81419121869427,-6,0,12,"Phenylalanine, tyrosine and tryptophan biosynthesis
+"151","aroL","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",0.000153394144379226,-1.3671449997481,-1,-3.81419121869427,6.80526168750362e-09,21,3.81419121869427,-6,0,12,"Phenylalanine, tyrosine and tryptophan biosynthesis
  padj:0.00000 N( -12/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"153","aroA","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",5.05155615716602e-05,-1.36575008346416,-1,-4.29657481468074,6.80526168750362e-09,21,4.29657481468074,-7,0,12,"Phenylalanine, tyrosine and tryptophan biosynthesis
+"152","aroA","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",5.05155615716602e-05,-1.36575008346416,-1,-4.29657481468074,6.80526168750362e-09,21,4.29657481468074,-7,0,12,"Phenylalanine, tyrosine and tryptophan biosynthesis
  padj:0.00000 N( -12/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"154","trpB","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",2.92574497842272e-05,-1.37966316760323,-1,-4.53376353169348,6.80526168750362e-09,21,4.53376353169348,-8,0,12,"Phenylalanine, tyrosine and tryptophan biosynthesis
+"153","trpB","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",2.92574497842272e-05,-1.37966316760323,-1,-4.53376353169348,6.80526168750362e-09,21,4.53376353169348,-8,0,12,"Phenylalanine, tyrosine and tryptophan biosynthesis
  padj:0.00000 N( -12/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"155","tyrB","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",1.76807479144183e-05,-1.21739773474897,-1,-4.75249936781646,6.80526168750362e-09,21,4.75249936781646,-9,0,12,"Phenylalanine, tyrosine and tryptophan biosynthesis
+"154","tyrB","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",1.76807479144183e-05,-1.21739773474897,-1,-4.75249936781646,6.80526168750362e-09,21,4.75249936781646,-9,0,12,"Phenylalanine, tyrosine and tryptophan biosynthesis
  padj:0.00000 N( -12/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"156","aroG","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",6.38695263460857e-06,-1.30082508785183,-1,-5.194706304541,6.80526168750362e-09,21,5.194706304541,-10,0,12,"Phenylalanine, tyrosine and tryptophan biosynthesis
+"155","aroG","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",6.38695263460857e-06,-1.30082508785183,-1,-5.194706304541,6.80526168750362e-09,21,5.194706304541,-10,0,12,"Phenylalanine, tyrosine and tryptophan biosynthesis
  padj:0.00000 N( -12/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"157","trpE","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",1.04621005331251e-06,-1.26106791014064,-1,-5.98038111103658,6.80526168750362e-09,21,5.98038111103658,-11,0,12,"Phenylalanine, tyrosine and tryptophan biosynthesis
+"156","trpE","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",1.04621005331251e-06,-1.26106791014064,-1,-5.98038111103658,6.80526168750362e-09,21,5.98038111103658,-11,0,12,"Phenylalanine, tyrosine and tryptophan biosynthesis
  padj:0.00000 N( -12/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"158","trpD","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",1.82270646167785e-07,-1.55083282571697,-1,-6.73928326680206,6.80526168750362e-09,21,6.73928326680206,-12,0,12,"Phenylalanine, tyrosine and tryptophan biosynthesis
+"157","trpD","eco00400:Phenylalanine, tyrosine and tryptophan biosynthesis",1.82270646167785e-07,-1.55083282571697,-1,-6.73928326680206,6.80526168750362e-09,21,6.73928326680206,-12,0,12,"Phenylalanine, tyrosine and tryptophan biosynthesis
  padj:0.00000 N( -12/ +0/ 21)","Phenylalanine, tyrosine and tryptophan biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"159","selA","eco00450:Selenoamino acid metabolism",0.00891856238645333,-1.07284608783506,-1,-2.04970514539384,7.58594885463815e-07,14,2.04970514539384,-1,0,9,"Selenoamino acid metabolism
+"158","selA","eco00450:Selenoamino acid metabolism",0.00891856238645333,-1.07284608783506,-1,-2.04970514539384,7.58594885463815e-07,14,2.04970514539384,-1,0,9,"Selenoamino acid metabolism
  padj:0.00000 N( -9/ +0/ 14)","Selenoamino acid metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"160","cysK","eco00450:Selenoamino acid metabolism",0.00476580596357682,-1.02158064523356,-1,-2.32186364362266,7.58594885463815e-07,14,2.32186364362266,-2,0,9,"Selenoamino acid metabolism
+"159","cysK","eco00450:Selenoamino acid metabolism",0.00476580596357682,-1.02158064523356,-1,-2.32186364362266,7.58594885463815e-07,14,2.32186364362266,-2,0,9,"Selenoamino acid metabolism
  padj:0.00000 N( -9/ +0/ 14)","Selenoamino acid metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"161","metC","eco00450:Selenoamino acid metabolism",0.000404620869094118,-1.12511616794071,-1,-3.39295172142017,7.58594885463815e-07,14,3.39295172142017,-3,0,9,"Selenoamino acid metabolism
+"160","metC","eco00450:Selenoamino acid metabolism",0.000404620869094118,-1.12511616794071,-1,-3.39295172142017,7.58594885463815e-07,14,3.39295172142017,-3,0,9,"Selenoamino acid metabolism
  padj:0.00000 N( -9/ +0/ 14)","Selenoamino acid metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"162","cysM","eco00450:Selenoamino acid metabolism",0.00039401032838839,-1.29868479145716,-1,-3.4044923936483,7.58594885463815e-07,14,3.4044923936483,-4,0,9,"Selenoamino acid metabolism
+"161","cysM","eco00450:Selenoamino acid metabolism",0.00039401032838839,-1.29868479145716,-1,-3.4044923936483,7.58594885463815e-07,14,3.4044923936483,-4,0,9,"Selenoamino acid metabolism
  padj:0.00000 N( -9/ +0/ 14)","Selenoamino acid metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"163","cysC","eco00450:Selenoamino acid metabolism",0.000226284497925267,-1.45643705282041,-1,-3.64534519724333,7.58594885463815e-07,14,3.64534519724333,-5,0,9,"Selenoamino acid metabolism
+"162","cysC","eco00450:Selenoamino acid metabolism",0.000226284497925267,-1.45643705282041,-1,-3.64534519724333,7.58594885463815e-07,14,3.64534519724333,-5,0,9,"Selenoamino acid metabolism
  padj:0.00000 N( -9/ +0/ 14)","Selenoamino acid metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"164","metG","eco00450:Selenoamino acid metabolism",1.6367485557184e-05,-1.22255979729461,-1,-4.78601803363114,7.58594885463815e-07,14,4.78601803363114,-6,0,9,"Selenoamino acid metabolism
+"163","metG","eco00450:Selenoamino acid metabolism",1.6367485557184e-05,-1.22255979729461,-1,-4.78601803363114,7.58594885463815e-07,14,4.78601803363114,-6,0,9,"Selenoamino acid metabolism
  padj:0.00000 N( -9/ +0/ 14)","Selenoamino acid metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"165","cysD","eco00450:Selenoamino acid metabolism",2.25441747981769e-06,-1.69653685505181,-1,-5.64696565688246,7.58594885463815e-07,14,5.64696565688246,-7,0,9,"Selenoamino acid metabolism
+"164","cysD","eco00450:Selenoamino acid metabolism",2.25441747981769e-06,-1.69653685505181,-1,-5.64696565688246,7.58594885463815e-07,14,5.64696565688246,-7,0,9,"Selenoamino acid metabolism
  padj:0.00000 N( -9/ +0/ 14)","Selenoamino acid metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"166","cysN","eco00450:Selenoamino acid metabolism",1.25427318966516e-06,-1.49474741731629,-1,-5.90160786076023,7.58594885463815e-07,14,5.90160786076023,-8,0,9,"Selenoamino acid metabolism
+"165","cysN","eco00450:Selenoamino acid metabolism",1.25427318966516e-06,-1.49474741731629,-1,-5.90160786076023,7.58594885463815e-07,14,5.90160786076023,-8,0,9,"Selenoamino acid metabolism
  padj:0.00000 N( -9/ +0/ 14)","Selenoamino acid metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"167","metK","eco00450:Selenoamino acid metabolism",2.94053863371827e-10,-2.00789496809087,-1,-9.53157311032743,7.58594885463815e-07,14,9.53157311032743,-9,0,9,"Selenoamino acid metabolism
+"166","metK","eco00450:Selenoamino acid metabolism",2.94053863371827e-10,-2.00789496809087,-1,-9.53157311032743,7.58594885463815e-07,14,9.53157311032743,-9,0,9,"Selenoamino acid metabolism
  padj:0.00000 N( -9/ +0/ 14)","Selenoamino acid metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"168","speE","eco00480:Glutathione metabolism",0.00114635951259987,-1.38498329431811,-1,-2.9406791608565,0.0134246638220201,16,2.9406791608565,-1,0,6,"Glutathione metabolism
+"167","speE","eco00480:Glutathione metabolism",0.00114635951259987,-1.38498329431811,-1,-2.9406791608565,0.0134246638220201,16,2.9406791608565,-1,0,6,"Glutathione metabolism
  padj:0.01342 N( -6/ +0/ 16)","Glutathione metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"169","gss","eco00480:Glutathione metabolism",0.000110416285369763,-1.65504517835256,-1,-3.95696686750697,0.0134246638220201,16,3.95696686750697,-2,0,6,"Glutathione metabolism
+"168","gss","eco00480:Glutathione metabolism",0.000110416285369763,-1.65504517835256,-1,-3.95696686750697,0.0134246638220201,16,3.95696686750697,-2,0,6,"Glutathione metabolism
  padj:0.01342 N( -6/ +0/ 16)","Glutathione metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"170","zwf","eco00480:Glutathione metabolism",6.92274885050464e-05,-1.05657935083999,-1,-4.15972142381518,0.0134246638220201,16,4.15972142381518,-3,0,6,"Glutathione metabolism
+"169","zwf","eco00480:Glutathione metabolism",6.92274885050464e-05,-1.05657935083999,-1,-4.15972142381518,0.0134246638220201,16,4.15972142381518,-3,0,6,"Glutathione metabolism
  padj:0.01342 N( -6/ +0/ 16)","Glutathione metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"171","gnd","eco00480:Glutathione metabolism",4.51403580593076e-05,-1.0245555004736,-1,-4.34543500036316,0.0134246638220201,16,4.34543500036316,-4,0,6,"Glutathione metabolism
+"170","gnd","eco00480:Glutathione metabolism",4.51403580593076e-05,-1.0245555004736,-1,-4.34543500036316,0.0134246638220201,16,4.34543500036316,-4,0,6,"Glutathione metabolism
  padj:0.01342 N( -6/ +0/ 16)","Glutathione metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"172","pepA","eco00480:Glutathione metabolism",3.74808402249728e-05,-1.29592109193161,-1,-4.42619068189901,0.0134246638220201,16,4.42619068189901,-5,0,6,"Glutathione metabolism
+"171","pepA","eco00480:Glutathione metabolism",3.74808402249728e-05,-1.29592109193161,-1,-4.42619068189901,0.0134246638220201,16,4.42619068189901,-5,0,6,"Glutathione metabolism
  padj:0.01342 N( -6/ +0/ 16)","Glutathione metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"173","gshB","eco00480:Glutathione metabolism",2.51729364771703e-05,-1.39387155221517,-1,-4.59906612011133,0.0134246638220201,16,4.59906612011133,-6,0,6,"Glutathione metabolism
+"172","gshB","eco00480:Glutathione metabolism",2.51729364771703e-05,-1.39387155221517,-1,-4.59906612011133,0.0134246638220201,16,4.59906612011133,-6,0,6,"Glutathione metabolism
  padj:0.01342 N( -6/ +0/ 16)","Glutathione metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"174","nanA","eco00520:Amino sugar and nucleotide sugar metabolism",2.58307340327015e-07,3.09899814806546,1,6.58786325229272,5.67829018880417e-05,35,6.58786325229272,3,3,9,"Amino sugar and nucleotide sugar metabolism
+"173","nanA","eco00520:Amino sugar and nucleotide sugar metabolism",2.58307340327015e-07,3.09899814806546,1,6.58786325229272,5.67829018880417e-05,35,6.58786325229272,3,3,9,"Amino sugar and nucleotide sugar metabolism
  padj:0.00006 N( -9/ +3/ 35)","Amino sugar and nucleotide sugar metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"175","nanK","eco00520:Amino sugar and nucleotide sugar metabolism",0.0110876913006339,2.23208378046549,1,1.95515887402895,5.67829018880417e-05,35,1.95515887402895,2,3,9,"Amino sugar and nucleotide sugar metabolism
+"174","nanK","eco00520:Amino sugar and nucleotide sugar metabolism",0.0110876913006339,2.23208378046549,1,1.95515887402895,5.67829018880417e-05,35,1.95515887402895,2,3,9,"Amino sugar and nucleotide sugar metabolism
  padj:0.00006 N( -9/ +3/ 35)","Amino sugar and nucleotide sugar metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"176","nanE","eco00520:Amino sugar and nucleotide sugar metabolism",0.0402852802673569,1.808026840051,1,1.39485361059401,5.67829018880417e-05,35,1.39485361059401,1,3,9,"Amino sugar and nucleotide sugar metabolism
+"175","nanE","eco00520:Amino sugar and nucleotide sugar metabolism",0.0402852802673569,1.808026840051,1,1.39485361059401,5.67829018880417e-05,35,1.39485361059401,1,3,9,"Amino sugar and nucleotide sugar metabolism
  padj:0.00006 N( -9/ +3/ 35)","Amino sugar and nucleotide sugar metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"177","galF","eco00520:Amino sugar and nucleotide sugar metabolism",0.00169803119697906,-1.1450413938445,-1,-2.77005433496875,5.67829018880417e-05,35,2.77005433496875,-1,3,9,"Amino sugar and nucleotide sugar metabolism
+"176","galF","eco00520:Amino sugar and nucleotide sugar metabolism",0.00169803119697906,-1.1450413938445,-1,-2.77005433496875,5.67829018880417e-05,35,2.77005433496875,-1,3,9,"Amino sugar and nucleotide sugar metabolism
  padj:0.00006 N( -9/ +3/ 35)","Amino sugar and nucleotide sugar metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"178","manX","eco00520:Amino sugar and nucleotide sugar metabolism",0.000470981026148166,-1.26223550713213,-1,-3.3269965884234,5.67829018880417e-05,35,3.3269965884234,-2,3,9,"Amino sugar and nucleotide sugar metabolism
+"177","manX","eco00520:Amino sugar and nucleotide sugar metabolism",0.000470981026148166,-1.26223550713213,-1,-3.3269965884234,5.67829018880417e-05,35,3.3269965884234,-2,3,9,"Amino sugar and nucleotide sugar metabolism
  padj:0.00006 N( -9/ +3/ 35)","Amino sugar and nucleotide sugar metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"179","cpsG","eco00520:Amino sugar and nucleotide sugar metabolism",0.000231836269981041,-2.06099727485805,-1,-3.63481861919037,5.67829018880417e-05,35,3.63481861919037,-3,3,9,"Amino sugar and nucleotide sugar metabolism
+"178","cpsG","eco00520:Amino sugar and nucleotide sugar metabolism",0.000231836269981041,-2.06099727485805,-1,-3.63481861919037,5.67829018880417e-05,35,3.63481861919037,-3,3,9,"Amino sugar and nucleotide sugar metabolism
  padj:0.00006 N( -9/ +3/ 35)","Amino sugar and nucleotide sugar metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"180","manY","eco00520:Amino sugar and nucleotide sugar metabolism",0.000229556957773941,-1.77643527629568,-1,-3.63910953941709,5.67829018880417e-05,35,3.63910953941709,-4,3,9,"Amino sugar and nucleotide sugar metabolism
+"179","manY","eco00520:Amino sugar and nucleotide sugar metabolism",0.000229556957773941,-1.77643527629568,-1,-3.63910953941709,5.67829018880417e-05,35,3.63910953941709,-4,3,9,"Amino sugar and nucleotide sugar metabolism
  padj:0.00006 N( -9/ +3/ 35)","Amino sugar and nucleotide sugar metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"181","glmS","eco00520:Amino sugar and nucleotide sugar metabolism",0.000227272460536054,-1.30547256425856,-1,-3.64345318619245,5.67829018880417e-05,35,3.64345318619245,-5,3,9,"Amino sugar and nucleotide sugar metabolism
+"180","glmS","eco00520:Amino sugar and nucleotide sugar metabolism",0.000227272460536054,-1.30547256425856,-1,-3.64345318619245,5.67829018880417e-05,35,3.64345318619245,-5,3,9,"Amino sugar and nucleotide sugar metabolism
  padj:0.00006 N( -9/ +3/ 35)","Amino sugar and nucleotide sugar metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"182","murB","eco00520:Amino sugar and nucleotide sugar metabolism",0.000179388427852257,-1.45777123550716,-1,-3.7462055762418,5.67829018880417e-05,35,3.7462055762418,-6,3,9,"Amino sugar and nucleotide sugar metabolism
+"181","murB","eco00520:Amino sugar and nucleotide sugar metabolism",0.000179388427852257,-1.45777123550716,-1,-3.7462055762418,5.67829018880417e-05,35,3.7462055762418,-6,3,9,"Amino sugar and nucleotide sugar metabolism
  padj:0.00006 N( -9/ +3/ 35)","Amino sugar and nucleotide sugar metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"183","murA","eco00520:Amino sugar and nucleotide sugar metabolism",5.47753715552799e-05,-1.22286563930163,-1,-4.26141466782731,5.67829018880417e-05,35,4.26141466782731,-7,3,9,"Amino sugar and nucleotide sugar metabolism
+"182","murA","eco00520:Amino sugar and nucleotide sugar metabolism",5.47753715552799e-05,-1.22286563930163,-1,-4.26141466782731,5.67829018880417e-05,35,4.26141466782731,-7,3,9,"Amino sugar and nucleotide sugar metabolism
  padj:0.00006 N( -9/ +3/ 35)","Amino sugar and nucleotide sugar metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"184","glmU","eco00520:Amino sugar and nucleotide sugar metabolism",5.08804501473693e-06,-1.42044007424894,-1,-5.29344905507085,5.67829018880417e-05,35,5.29344905507085,-8,3,9,"Amino sugar and nucleotide sugar metabolism
+"183","glmU","eco00520:Amino sugar and nucleotide sugar metabolism",5.08804501473693e-06,-1.42044007424894,-1,-5.29344905507085,5.67829018880417e-05,35,5.29344905507085,-8,3,9,"Amino sugar and nucleotide sugar metabolism
  padj:0.00006 N( -9/ +3/ 35)","Amino sugar and nucleotide sugar metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"185","ptsG","eco00520:Amino sugar and nucleotide sugar metabolism",1.17243581402479e-19,-2.55765590807414,-1,-18.9309109237752,5.67829018880417e-05,35,18.9309109237752,-9,3,9,"Amino sugar and nucleotide sugar metabolism
+"184","ptsG","eco00520:Amino sugar and nucleotide sugar metabolism",1.17243581402479e-19,-2.55765590807414,-1,-18.9309109237752,5.67829018880417e-05,35,18.9309109237752,-9,3,9,"Amino sugar and nucleotide sugar metabolism
  padj:0.00006 N( -9/ +3/ 35)","Amino sugar and nucleotide sugar metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"186","dacD","eco00550:Peptidoglycan biosynthesis",0.0363387904406247,1.71753299096699,1,1.43962953255095,8.58520499251725e-05,19,1.43962953255095,1,1,8,"Peptidoglycan biosynthesis
+"185","dacD","eco00550:Peptidoglycan biosynthesis",0.0363387904406247,1.71753299096699,1,1.43962953255095,8.58520499251725e-05,19,1.43962953255095,1,1,8,"Peptidoglycan biosynthesis
  padj:0.00009 N( -8/ +1/ 19)","Peptidoglycan biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"187","ftsI","eco00550:Peptidoglycan biosynthesis",0.0455957097208086,-1.02895399625468,-1,-1.3410760198846,8.58520499251725e-05,19,1.3410760198846,-1,1,8,"Peptidoglycan biosynthesis
+"186","ftsI","eco00550:Peptidoglycan biosynthesis",0.0455957097208086,-1.02895399625468,-1,-1.3410760198846,8.58520499251725e-05,19,1.3410760198846,-1,1,8,"Peptidoglycan biosynthesis
  padj:0.00009 N( -8/ +1/ 19)","Peptidoglycan biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"188","mrdA","eco00550:Peptidoglycan biosynthesis",0.0101521069943561,-1.3230009015776,-1,-1.99344381380405,8.58520499251725e-05,19,1.99344381380405,-2,1,8,"Peptidoglycan biosynthesis
+"187","mrdA","eco00550:Peptidoglycan biosynthesis",0.0101521069943561,-1.3230009015776,-1,-1.99344381380405,8.58520499251725e-05,19,1.99344381380405,-2,1,8,"Peptidoglycan biosynthesis
  padj:0.00009 N( -8/ +1/ 19)","Peptidoglycan biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"189","dacB","eco00550:Peptidoglycan biosynthesis",0.000524554513124667,-1.18552326468427,-1,-3.28020937206714,8.58520499251725e-05,19,3.28020937206714,-3,1,8,"Peptidoglycan biosynthesis
+"188","dacB","eco00550:Peptidoglycan biosynthesis",0.000524554513124667,-1.18552326468427,-1,-3.28020937206714,8.58520499251725e-05,19,3.28020937206714,-3,1,8,"Peptidoglycan biosynthesis
  padj:0.00009 N( -8/ +1/ 19)","Peptidoglycan biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"190","mrcA","eco00550:Peptidoglycan biosynthesis",0.000453597795762435,-1.33918777127935,-1,-3.34332906454402,8.58520499251725e-05,19,3.34332906454402,-4,1,8,"Peptidoglycan biosynthesis
+"189","mrcA","eco00550:Peptidoglycan biosynthesis",0.000453597795762435,-1.33918777127935,-1,-3.34332906454402,8.58520499251725e-05,19,3.34332906454402,-4,1,8,"Peptidoglycan biosynthesis
  padj:0.00009 N( -8/ +1/ 19)","Peptidoglycan biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"191","murF","eco00550:Peptidoglycan biosynthesis",0.000215400907438121,-1.37409858259807,-1,-3.66675247144408,8.58520499251725e-05,19,3.66675247144408,-5,1,8,"Peptidoglycan biosynthesis
+"190","murF","eco00550:Peptidoglycan biosynthesis",0.000215400907438121,-1.37409858259807,-1,-3.66675247144408,8.58520499251725e-05,19,3.66675247144408,-5,1,8,"Peptidoglycan biosynthesis
  padj:0.00009 N( -8/ +1/ 19)","Peptidoglycan biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"192","murB","eco00550:Peptidoglycan biosynthesis",0.000179388427852257,-1.45777123550716,-1,-3.7462055762418,8.58520499251725e-05,19,3.7462055762418,-6,1,8,"Peptidoglycan biosynthesis
+"191","murB","eco00550:Peptidoglycan biosynthesis",0.000179388427852257,-1.45777123550716,-1,-3.7462055762418,8.58520499251725e-05,19,3.7462055762418,-6,1,8,"Peptidoglycan biosynthesis
  padj:0.00009 N( -8/ +1/ 19)","Peptidoglycan biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"193","murC","eco00550:Peptidoglycan biosynthesis",5.80103582382895e-05,-1.5361116484227,-1,-4.23649445257357,8.58520499251725e-05,19,4.23649445257357,-7,1,8,"Peptidoglycan biosynthesis
+"192","murC","eco00550:Peptidoglycan biosynthesis",5.80103582382895e-05,-1.5361116484227,-1,-4.23649445257357,8.58520499251725e-05,19,4.23649445257357,-7,1,8,"Peptidoglycan biosynthesis
  padj:0.00009 N( -8/ +1/ 19)","Peptidoglycan biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"194","murA","eco00550:Peptidoglycan biosynthesis",5.47753715552799e-05,-1.22286563930163,-1,-4.26141466782731,8.58520499251725e-05,19,4.26141466782731,-8,1,8,"Peptidoglycan biosynthesis
+"193","murA","eco00550:Peptidoglycan biosynthesis",5.47753715552799e-05,-1.22286563930163,-1,-4.26141466782731,8.58520499251725e-05,19,4.26141466782731,-8,1,8,"Peptidoglycan biosynthesis
  padj:0.00009 N( -8/ +1/ 19)","Peptidoglycan biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"195","acs","eco00620:Pyruvate metabolism",2.33013404745694e-10,1.88267552270737,1,9.63261909425453,0.0131955649077751,40,9.63261909425453,3,3,6,"Pyruvate metabolism
+"194","acs","eco00620:Pyruvate metabolism",2.33013404745694e-10,1.88267552270737,1,9.63261909425453,0.0131955649077751,40,9.63261909425453,3,3,6,"Pyruvate metabolism
  padj:0.01320 N( -6/ +3/ 40)","Pyruvate metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"196","aldA","eco00620:Pyruvate metabolism",5.78590971603241e-10,1.60512972166407,1,9.23762834741373,0.0131955649077751,40,9.23762834741373,2,3,6,"Pyruvate metabolism
+"195","aldA","eco00620:Pyruvate metabolism",5.78590971603241e-10,1.60512972166407,1,9.23762834741373,0.0131955649077751,40,9.23762834741373,2,3,6,"Pyruvate metabolism
  padj:0.01320 N( -6/ +3/ 40)","Pyruvate metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"197","pflD","eco00620:Pyruvate metabolism",0.00365171902473527,1.97215288609136,1,2.43750264589717,0.0131955649077751,40,2.43750264589717,1,3,6,"Pyruvate metabolism
+"196","pflD","eco00620:Pyruvate metabolism",0.00365171902473527,1.97215288609136,1,2.43750264589717,0.0131955649077751,40,2.43750264589717,1,3,6,"Pyruvate metabolism
  padj:0.01320 N( -6/ +3/ 40)","Pyruvate metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"198","ybiC","eco00620:Pyruvate metabolism",0.00467959656447075,-1.17307766471446,-1,-2.32979158653624,0.0131955649077751,40,2.32979158653624,-1,3,6,"Pyruvate metabolism
+"197","ybiC","eco00620:Pyruvate metabolism",0.00467959656447075,-1.17307766471446,-1,-2.32979158653624,0.0131955649077751,40,2.32979158653624,-1,3,6,"Pyruvate metabolism
  padj:0.01320 N( -6/ +3/ 40)","Pyruvate metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"199","ackA","eco00620:Pyruvate metabolism",9.289370972973e-05,-1.49858335975122,-1,-4.032013693134,0.0131955649077751,40,4.032013693134,-2,3,6,"Pyruvate metabolism
+"198","ackA","eco00620:Pyruvate metabolism",9.289370972973e-05,-1.49858335975122,-1,-4.032013693134,0.0131955649077751,40,4.032013693134,-2,3,6,"Pyruvate metabolism
  padj:0.01320 N( -6/ +3/ 40)","Pyruvate metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"200","aceE","eco00620:Pyruvate metabolism",5.60014731207798e-05,-1.08471779802741,-1,-4.25180054871146,0.0131955649077751,40,4.25180054871146,-3,3,6,"Pyruvate metabolism
+"199","aceE","eco00620:Pyruvate metabolism",5.60014731207798e-05,-1.08471779802741,-1,-4.25180054871146,0.0131955649077751,40,4.25180054871146,-3,3,6,"Pyruvate metabolism
  padj:0.01320 N( -6/ +3/ 40)","Pyruvate metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"201","leuA","eco00620:Pyruvate metabolism",4.38067005624898e-05,-1.27101458803997,-1,-4.35845945582583,0.0131955649077751,40,4.35845945582583,-4,3,6,"Pyruvate metabolism
+"200","leuA","eco00620:Pyruvate metabolism",4.38067005624898e-05,-1.27101458803997,-1,-4.35845945582583,0.0131955649077751,40,4.35845945582583,-4,3,6,"Pyruvate metabolism
  padj:0.01320 N( -6/ +3/ 40)","Pyruvate metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"202","ppc","eco00620:Pyruvate metabolism",1.42999312937854e-05,-1.27093989318918,-1,-4.84466604916442,0.0131955649077751,40,4.84466604916442,-5,3,6,"Pyruvate metabolism
+"201","ppc","eco00620:Pyruvate metabolism",1.42999312937854e-05,-1.27093989318918,-1,-4.84466604916442,0.0131955649077751,40,4.84466604916442,-5,3,6,"Pyruvate metabolism
  padj:0.01320 N( -6/ +3/ 40)","Pyruvate metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"203","mqo","eco00620:Pyruvate metabolism",4.04883632065044e-14,-3.61137797577644,-1,-13.3926697797826,0.0131955649077751,40,13.3926697797826,-6,3,6,"Pyruvate metabolism
+"202","mqo","eco00620:Pyruvate metabolism",4.04883632065044e-14,-3.61137797577644,-1,-13.3926697797826,0.0131955649077751,40,13.3926697797826,-6,3,6,"Pyruvate metabolism
  padj:0.01320 N( -6/ +3/ 40)","Pyruvate metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"204","glyA","eco00670:One carbon pool by folate",0.00270945734822805,-1.27820309726754,-1,-2.56711768118047,0.0382076497558933,12,2.56711768118047,-1,0,5,"One carbon pool by folate
+"203","glyA","eco00670:One carbon pool by folate",0.00270945734822805,-1.27820309726754,-1,-2.56711768118047,0.0382076497558933,12,2.56711768118047,-1,0,5,"One carbon pool by folate
  padj:0.03821 N( -5/ +0/ 12)","One carbon pool by folate","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"205","purT","eco00670:One carbon pool by folate",0.00143899677182668,-1.20070178198513,-1,-2.8419401803368,0.0382076497558933,12,2.8419401803368,-2,0,5,"One carbon pool by folate
+"204","purT","eco00670:One carbon pool by folate",0.00143899677182668,-1.20070178198513,-1,-2.8419401803368,0.0382076497558933,12,2.8419401803368,-2,0,5,"One carbon pool by folate
  padj:0.03821 N( -5/ +0/ 12)","One carbon pool by folate","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"206","thyA","eco00670:One carbon pool by folate",0.000485058458705106,-1.17900525678583,-1,-3.31420591755629,0.0382076497558933,12,3.31420591755629,-3,0,5,"One carbon pool by folate
+"205","thyA","eco00670:One carbon pool by folate",0.000485058458705106,-1.17900525678583,-1,-3.31420591755629,0.0382076497558933,12,3.31420591755629,-3,0,5,"One carbon pool by folate
  padj:0.03821 N( -5/ +0/ 12)","One carbon pool by folate","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"207","fmt","eco00670:One carbon pool by folate",0.000432487312903958,-1.17916765695518,-1,-3.36402662812199,0.0382076497558933,12,3.36402662812199,-4,0,5,"One carbon pool by folate
+"206","fmt","eco00670:One carbon pool by folate",0.000432487312903958,-1.17916765695518,-1,-3.36402662812199,0.0382076497558933,12,3.36402662812199,-4,0,5,"One carbon pool by folate
  padj:0.03821 N( -5/ +0/ 12)","One carbon pool by folate","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"208","purU","eco00670:One carbon pool by folate",5.08208756743584e-09,-1.7514114791538,-1,-8.29395785606516,0.0382076497558933,12,8.29395785606516,-5,0,5,"One carbon pool by folate
+"207","purU","eco00670:One carbon pool by folate",5.08208756743584e-09,-1.7514114791538,-1,-8.29395785606516,0.0382076497558933,12,8.29395785606516,-5,0,5,"One carbon pool by folate
  padj:0.03821 N( -5/ +0/ 12)","One carbon pool by folate","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"209","nadD","eco00760:Nicotinate and nicotinamide metabolism",0.0022376834770872,-2.24018756044603,-1,-2.65020134491946,0.0018183570967828,16,2.65020134491946,-1,0,7,"Nicotinate and nicotinamide metabolism
+"208","nadD","eco00760:Nicotinate and nicotinamide metabolism",0.0022376834770872,-2.24018756044603,-1,-2.65020134491946,0.0018183570967828,16,2.65020134491946,-1,0,7,"Nicotinate and nicotinamide metabolism
  padj:0.00182 N( -7/ +0/ 16)","Nicotinate and nicotinamide metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"210","yjjG","eco00760:Nicotinate and nicotinamide metabolism",0.00189811089313724,-1.45904782188147,-1,-2.72167841842573,0.0018183570967828,16,2.72167841842573,-2,0,7,"Nicotinate and nicotinamide metabolism
+"209","yjjG","eco00760:Nicotinate and nicotinamide metabolism",0.00189811089313724,-1.45904782188147,-1,-2.72167841842573,0.0018183570967828,16,2.72167841842573,-2,0,7,"Nicotinate and nicotinamide metabolism
  padj:0.00182 N( -7/ +0/ 16)","Nicotinate and nicotinamide metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"211","pntA","eco00760:Nicotinate and nicotinamide metabolism",0.000357548818594713,-1.35591486347745,-1,-3.44666465260743,0.0018183570967828,16,3.44666465260743,-3,0,7,"Nicotinate and nicotinamide metabolism
+"210","pntA","eco00760:Nicotinate and nicotinamide metabolism",0.000357548818594713,-1.35591486347745,-1,-3.44666465260743,0.0018183570967828,16,3.44666465260743,-3,0,7,"Nicotinate and nicotinamide metabolism
  padj:0.00182 N( -7/ +0/ 16)","Nicotinate and nicotinamide metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"212","pncB","eco00760:Nicotinate and nicotinamide metabolism",5.72911655598828e-05,-1.16002176324576,-1,-4.2419123421582,0.0018183570967828,16,4.2419123421582,-4,0,7,"Nicotinate and nicotinamide metabolism
+"211","pncB","eco00760:Nicotinate and nicotinamide metabolism",5.72911655598828e-05,-1.16002176324576,-1,-4.2419123421582,0.0018183570967828,16,4.2419123421582,-4,0,7,"Nicotinate and nicotinamide metabolism
  padj:0.00182 N( -7/ +0/ 16)","Nicotinate and nicotinamide metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"213","yfbR","eco00760:Nicotinate and nicotinamide metabolism",1.80570970915312e-05,-1.94565300034243,-1,-4.74335206678343,0.0018183570967828,16,4.74335206678343,-5,0,7,"Nicotinate and nicotinamide metabolism
+"212","yfbR","eco00760:Nicotinate and nicotinamide metabolism",1.80570970915312e-05,-1.94565300034243,-1,-4.74335206678343,0.0018183570967828,16,4.74335206678343,-5,0,7,"Nicotinate and nicotinamide metabolism
  padj:0.00182 N( -7/ +0/ 16)","Nicotinate and nicotinamide metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"214","nadA","eco00760:Nicotinate and nicotinamide metabolism",5.35946536205929e-06,-2.20756596855042,-1,-5.27087853155504,0.0018183570967828,16,5.27087853155504,-6,0,7,"Nicotinate and nicotinamide metabolism
+"213","nadA","eco00760:Nicotinate and nicotinamide metabolism",5.35946536205929e-06,-2.20756596855042,-1,-5.27087853155504,0.0018183570967828,16,5.27087853155504,-6,0,7,"Nicotinate and nicotinamide metabolism
  padj:0.00182 N( -7/ +0/ 16)","Nicotinate and nicotinamide metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"215","nadE","eco00760:Nicotinate and nicotinamide metabolism",2.03453978595949e-06,-1.3510529722746,-1,-5.69153381298508,0.0018183570967828,16,5.69153381298508,-7,0,7,"Nicotinate and nicotinamide metabolism
+"214","nadE","eco00760:Nicotinate and nicotinamide metabolism",2.03453978595949e-06,-1.3510529722746,-1,-5.69153381298508,0.0018183570967828,16,5.69153381298508,-7,0,7,"Nicotinate and nicotinamide metabolism
  padj:0.00182 N( -7/ +0/ 16)","Nicotinate and nicotinamide metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"216","birA","eco00780:Biotin metabolism",0.0109387015827044,-1.44989814828233,-1,-1.96103422543699,0.049334051684328,6,1.96103422543699,-1,0,4,"Biotin metabolism
+"215","birA","eco00780:Biotin metabolism",0.0109387015827044,-1.44989814828233,-1,-1.96103422543699,0.049334051684328,6,1.96103422543699,-1,0,4,"Biotin metabolism
  padj:0.04933 N( -4/ +0/ 6)","Biotin metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"217","bioD","eco00780:Biotin metabolism",0.00105527173238042,-1.24273535800098,-1,-2.97663569517383,0.049334051684328,6,2.97663569517383,-2,0,4,"Biotin metabolism
+"216","bioD","eco00780:Biotin metabolism",0.00105527173238042,-1.24273535800098,-1,-2.97663569517383,0.049334051684328,6,2.97663569517383,-2,0,4,"Biotin metabolism
  padj:0.04933 N( -4/ +0/ 6)","Biotin metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"218","bioF","eco00780:Biotin metabolism",6.63944427976875e-05,-2.39249003698591,-1,-4.17786826947685,0.049334051684328,6,4.17786826947685,-3,0,4,"Biotin metabolism
+"217","bioF","eco00780:Biotin metabolism",6.63944427976875e-05,-2.39249003698591,-1,-4.17786826947685,0.049334051684328,6,4.17786826947685,-3,0,4,"Biotin metabolism
  padj:0.04933 N( -4/ +0/ 6)","Biotin metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"219","bioB","eco00780:Biotin metabolism",2.92574497842272e-05,-1.59262808834686,-1,-4.53376353169348,0.049334051684328,6,4.53376353169348,-4,0,4,"Biotin metabolism
+"218","bioB","eco00780:Biotin metabolism",2.92574497842272e-05,-1.59262808834686,-1,-4.53376353169348,0.049334051684328,6,4.53376353169348,-4,0,4,"Biotin metabolism
  padj:0.04933 N( -4/ +0/ 6)","Biotin metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"220","tnaA","eco00910:Nitrogen metabolism",1.17366834330107e-11,3.49049390497258,1,10.9304546092412,0.0025312314392596,33,10.9304546092412,2,2,7,"Nitrogen metabolism
+"219","tnaA","eco00910:Nitrogen metabolism",1.17366834330107e-11,3.49049390497258,1,10.9304546092412,0.0025312314392596,33,10.9304546092412,2,2,7,"Nitrogen metabolism
  padj:0.00253 N( -7/ +2/ 33)","Nitrogen metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"221","aspA","eco00910:Nitrogen metabolism",2.38101292597279e-06,1.55258412951924,1,5.62323824690364,0.0025312314392596,33,5.62323824690364,1,2,7,"Nitrogen metabolism
+"220","aspA","eco00910:Nitrogen metabolism",2.38101292597279e-06,1.55258412951924,1,5.62323824690364,0.0025312314392596,33,5.62323824690364,1,2,7,"Nitrogen metabolism
  padj:0.00253 N( -7/ +2/ 33)","Nitrogen metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"222","metC","eco00910:Nitrogen metabolism",0.000404620869094118,-1.12511616794071,-1,-3.39295172142017,0.0025312314392596,33,3.39295172142017,-1,2,7,"Nitrogen metabolism
+"221","metC","eco00910:Nitrogen metabolism",0.000404620869094118,-1.12511616794071,-1,-3.39295172142017,0.0025312314392596,33,3.39295172142017,-1,2,7,"Nitrogen metabolism
  padj:0.00253 N( -7/ +2/ 33)","Nitrogen metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"223","yneH","eco00910:Nitrogen metabolism",0.000181906391733115,-1.51881305933032,-1,-3.74015204065256,0.0025312314392596,33,3.74015204065256,-2,2,7,"Nitrogen metabolism
+"222","yneH","eco00910:Nitrogen metabolism",0.000181906391733115,-1.51881305933032,-1,-3.74015204065256,0.0025312314392596,33,3.74015204065256,-2,2,7,"Nitrogen metabolism
  padj:0.00253 N( -7/ +2/ 33)","Nitrogen metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"224","asnA","eco00910:Nitrogen metabolism",5.16094719448793e-05,-1.33513289598857,-1,-4.28727058449909,0.0025312314392596,33,4.28727058449909,-3,2,7,"Nitrogen metabolism
+"223","asnA","eco00910:Nitrogen metabolism",5.16094719448793e-05,-1.33513289598857,-1,-4.28727058449909,0.0025312314392596,33,4.28727058449909,-3,2,7,"Nitrogen metabolism
  padj:0.00253 N( -7/ +2/ 33)","Nitrogen metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"225","gltD","eco00910:Nitrogen metabolism",5.59838128559088e-06,-1.23064958698635,-1,-5.25193752662921,0.0025312314392596,33,5.25193752662921,-4,2,7,"Nitrogen metabolism
+"224","gltD","eco00910:Nitrogen metabolism",5.59838128559088e-06,-1.23064958698635,-1,-5.25193752662921,0.0025312314392596,33,5.25193752662921,-4,2,7,"Nitrogen metabolism
  padj:0.00253 N( -7/ +2/ 33)","Nitrogen metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"226","asnB","eco00910:Nitrogen metabolism",2.63570230500616e-06,-1.59842446767651,-1,-5.57910364362057,0.0025312314392596,33,5.57910364362057,-5,2,7,"Nitrogen metabolism
+"225","asnB","eco00910:Nitrogen metabolism",2.63570230500616e-06,-1.59842446767651,-1,-5.57910364362057,0.0025312314392596,33,5.57910364362057,-5,2,7,"Nitrogen metabolism
  padj:0.00253 N( -7/ +2/ 33)","Nitrogen metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"227","nadE","eco00910:Nitrogen metabolism",2.03453978595949e-06,-1.3510529722746,-1,-5.69153381298508,0.0025312314392596,33,5.69153381298508,-6,2,7,"Nitrogen metabolism
+"226","nadE","eco00910:Nitrogen metabolism",2.03453978595949e-06,-1.3510529722746,-1,-5.69153381298508,0.0025312314392596,33,5.69153381298508,-6,2,7,"Nitrogen metabolism
  padj:0.00253 N( -7/ +2/ 33)","Nitrogen metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"228","gltB","eco00910:Nitrogen metabolism",1.16579271609197e-06,-1.25048734153086,-1,-5.93337866249311,0.0025312314392596,33,5.93337866249311,-7,2,7,"Nitrogen metabolism
+"227","gltB","eco00910:Nitrogen metabolism",1.16579271609197e-06,-1.25048734153086,-1,-5.93337866249311,0.0025312314392596,33,5.93337866249311,-7,2,7,"Nitrogen metabolism
  padj:0.00253 N( -7/ +2/ 33)","Nitrogen metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"229","cysE","eco00920:Sulfur metabolism",0.00521585177655186,-1.01397439316741,-1,-2.2826747588291,0.00020480839889736,13,2.2826747588291,-1,0,7,"Sulfur metabolism
+"228","cysE","eco00920:Sulfur metabolism",0.00521585177655186,-1.01397439316741,-1,-2.2826747588291,0.00020480839889736,13,2.2826747588291,-1,0,7,"Sulfur metabolism
  padj:0.00020 N( -7/ +0/ 13)","Sulfur metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"230","cysK","eco00920:Sulfur metabolism",0.00476580596357682,-1.02158064523356,-1,-2.32186364362266,0.00020480839889736,13,2.32186364362266,-2,0,7,"Sulfur metabolism
+"229","cysK","eco00920:Sulfur metabolism",0.00476580596357682,-1.02158064523356,-1,-2.32186364362266,0.00020480839889736,13,2.32186364362266,-2,0,7,"Sulfur metabolism
  padj:0.00020 N( -7/ +0/ 13)","Sulfur metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"231","metC","eco00920:Sulfur metabolism",0.000404620869094118,-1.12511616794071,-1,-3.39295172142017,0.00020480839889736,13,3.39295172142017,-3,0,7,"Sulfur metabolism
+"230","metC","eco00920:Sulfur metabolism",0.000404620869094118,-1.12511616794071,-1,-3.39295172142017,0.00020480839889736,13,3.39295172142017,-3,0,7,"Sulfur metabolism
  padj:0.00020 N( -7/ +0/ 13)","Sulfur metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"232","cysM","eco00920:Sulfur metabolism",0.00039401032838839,-1.29868479145716,-1,-3.4044923936483,0.00020480839889736,13,3.4044923936483,-4,0,7,"Sulfur metabolism
+"231","cysM","eco00920:Sulfur metabolism",0.00039401032838839,-1.29868479145716,-1,-3.4044923936483,0.00020480839889736,13,3.4044923936483,-4,0,7,"Sulfur metabolism
  padj:0.00020 N( -7/ +0/ 13)","Sulfur metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"233","cysC","eco00920:Sulfur metabolism",0.000226284497925267,-1.45643705282041,-1,-3.64534519724333,0.00020480839889736,13,3.64534519724333,-5,0,7,"Sulfur metabolism
+"232","cysC","eco00920:Sulfur metabolism",0.000226284497925267,-1.45643705282041,-1,-3.64534519724333,0.00020480839889736,13,3.64534519724333,-5,0,7,"Sulfur metabolism
  padj:0.00020 N( -7/ +0/ 13)","Sulfur metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"234","cysD","eco00920:Sulfur metabolism",2.25441747981769e-06,-1.69653685505181,-1,-5.64696565688246,0.00020480839889736,13,5.64696565688246,-6,0,7,"Sulfur metabolism
+"233","cysD","eco00920:Sulfur metabolism",2.25441747981769e-06,-1.69653685505181,-1,-5.64696565688246,0.00020480839889736,13,5.64696565688246,-6,0,7,"Sulfur metabolism
  padj:0.00020 N( -7/ +0/ 13)","Sulfur metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"235","cysN","eco00920:Sulfur metabolism",1.25427318966516e-06,-1.49474741731629,-1,-5.90160786076023,0.00020480839889736,13,5.90160786076023,-7,0,7,"Sulfur metabolism
+"234","cysN","eco00920:Sulfur metabolism",1.25427318966516e-06,-1.49474741731629,-1,-5.90160786076023,0.00020480839889736,13,5.90160786076023,-7,0,7,"Sulfur metabolism
  padj:0.00020 N( -7/ +0/ 13)","Sulfur metabolism","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"236","selA","eco00970:Aminoacyl-tRNA biosynthesis",0.00891856238645333,-1.07284608783506,-1,-2.04970514539384,1.50689460909348e-11,24,2.04970514539384,-1,0,15,"Aminoacyl-tRNA biosynthesis
+"235","selA","eco00970:Aminoacyl-tRNA biosynthesis",0.00891856238645333,-1.07284608783506,-1,-2.04970514539384,1.50689460909348e-11,24,2.04970514539384,-1,0,15,"Aminoacyl-tRNA biosynthesis
  padj:0.00000 N( -15/ +0/ 24)","Aminoacyl-tRNA biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"237","lysU","eco00970:Aminoacyl-tRNA biosynthesis",0.00226392555788753,-1.04960868875339,-1,-2.64513785766495,1.50689460909348e-11,24,2.64513785766495,-2,0,15,"Aminoacyl-tRNA biosynthesis
+"236","lysU","eco00970:Aminoacyl-tRNA biosynthesis",0.00226392555788753,-1.04960868875339,-1,-2.64513785766495,1.50689460909348e-11,24,2.64513785766495,-2,0,15,"Aminoacyl-tRNA biosynthesis
  padj:0.00000 N( -15/ +0/ 24)","Aminoacyl-tRNA biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"238","gltX","eco00970:Aminoacyl-tRNA biosynthesis",0.000785832949656151,-1.00234409498785,-1,-3.10466976535134,1.50689460909348e-11,24,3.10466976535134,-3,0,15,"Aminoacyl-tRNA biosynthesis
+"237","gltX","eco00970:Aminoacyl-tRNA biosynthesis",0.000785832949656151,-1.00234409498785,-1,-3.10466976535134,1.50689460909348e-11,24,3.10466976535134,-3,0,15,"Aminoacyl-tRNA biosynthesis
  padj:0.00000 N( -15/ +0/ 24)","Aminoacyl-tRNA biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"239","glyQ","eco00970:Aminoacyl-tRNA biosynthesis",0.000555312378306017,-1.06347826733058,-1,-3.2554626456881,1.50689460909348e-11,24,3.2554626456881,-4,0,15,"Aminoacyl-tRNA biosynthesis
+"238","glyQ","eco00970:Aminoacyl-tRNA biosynthesis",0.000555312378306017,-1.06347826733058,-1,-3.2554626456881,1.50689460909348e-11,24,3.2554626456881,-4,0,15,"Aminoacyl-tRNA biosynthesis
  padj:0.00000 N( -15/ +0/ 24)","Aminoacyl-tRNA biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"240","trpS","eco00970:Aminoacyl-tRNA biosynthesis",0.000503071777669027,-1.16062190851372,-1,-3.29837004591497,1.50689460909348e-11,24,3.29837004591497,-5,0,15,"Aminoacyl-tRNA biosynthesis
+"239","trpS","eco00970:Aminoacyl-tRNA biosynthesis",0.000503071777669027,-1.16062190851372,-1,-3.29837004591497,1.50689460909348e-11,24,3.29837004591497,-5,0,15,"Aminoacyl-tRNA biosynthesis
  padj:0.00000 N( -15/ +0/ 24)","Aminoacyl-tRNA biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"241","fmt","eco00970:Aminoacyl-tRNA biosynthesis",0.000432487312903958,-1.17916765695518,-1,-3.36402662812199,1.50689460909348e-11,24,3.36402662812199,-6,0,15,"Aminoacyl-tRNA biosynthesis
+"240","fmt","eco00970:Aminoacyl-tRNA biosynthesis",0.000432487312903958,-1.17916765695518,-1,-3.36402662812199,1.50689460909348e-11,24,3.36402662812199,-6,0,15,"Aminoacyl-tRNA biosynthesis
  padj:0.00000 N( -15/ +0/ 24)","Aminoacyl-tRNA biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"242","argS","eco00970:Aminoacyl-tRNA biosynthesis",0.000379190725973338,-1.01581509219885,-1,-3.42114229292642,1.50689460909348e-11,24,3.42114229292642,-7,0,15,"Aminoacyl-tRNA biosynthesis
+"241","argS","eco00970:Aminoacyl-tRNA biosynthesis",0.000379190725973338,-1.01581509219885,-1,-3.42114229292642,1.50689460909348e-11,24,3.42114229292642,-7,0,15,"Aminoacyl-tRNA biosynthesis
  padj:0.00000 N( -15/ +0/ 24)","Aminoacyl-tRNA biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"243","proS","eco00970:Aminoacyl-tRNA biosynthesis",0.000260970195122363,-1.04074281885147,-1,-3.58340908972311,1.50689460909348e-11,24,3.58340908972311,-8,0,15,"Aminoacyl-tRNA biosynthesis
+"242","proS","eco00970:Aminoacyl-tRNA biosynthesis",0.000260970195122363,-1.04074281885147,-1,-3.58340908972311,1.50689460909348e-11,24,3.58340908972311,-8,0,15,"Aminoacyl-tRNA biosynthesis
  padj:0.00000 N( -15/ +0/ 24)","Aminoacyl-tRNA biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"244","leuS","eco00970:Aminoacyl-tRNA biosynthesis",0.00010519506547894,-1.05625175674792,-1,-3.97800463171773,1.50689460909348e-11,24,3.97800463171773,-9,0,15,"Aminoacyl-tRNA biosynthesis
+"243","leuS","eco00970:Aminoacyl-tRNA biosynthesis",0.00010519506547894,-1.05625175674792,-1,-3.97800463171773,1.50689460909348e-11,24,3.97800463171773,-9,0,15,"Aminoacyl-tRNA biosynthesis
  padj:0.00000 N( -15/ +0/ 24)","Aminoacyl-tRNA biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"245","glnS","eco00970:Aminoacyl-tRNA biosynthesis",4.79365863779619e-05,-1.12575783556431,-1,-4.31933289583426,1.50689460909348e-11,24,4.31933289583426,-10,0,15,"Aminoacyl-tRNA biosynthesis
+"244","glnS","eco00970:Aminoacyl-tRNA biosynthesis",4.79365863779619e-05,-1.12575783556431,-1,-4.31933289583426,1.50689460909348e-11,24,4.31933289583426,-10,0,15,"Aminoacyl-tRNA biosynthesis
  padj:0.00000 N( -15/ +0/ 24)","Aminoacyl-tRNA biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"246","metG","eco00970:Aminoacyl-tRNA biosynthesis",1.6367485557184e-05,-1.22255979729461,-1,-4.78601803363114,1.50689460909348e-11,24,4.78601803363114,-11,0,15,"Aminoacyl-tRNA biosynthesis
+"245","metG","eco00970:Aminoacyl-tRNA biosynthesis",1.6367485557184e-05,-1.22255979729461,-1,-4.78601803363114,1.50689460909348e-11,24,4.78601803363114,-11,0,15,"Aminoacyl-tRNA biosynthesis
  padj:0.00000 N( -15/ +0/ 24)","Aminoacyl-tRNA biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"247","tyrS","eco00970:Aminoacyl-tRNA biosynthesis",1.31320178726848e-05,-1.24330088530141,-1,-4.88166853486723,1.50689460909348e-11,24,4.88166853486723,-12,0,15,"Aminoacyl-tRNA biosynthesis
+"246","tyrS","eco00970:Aminoacyl-tRNA biosynthesis",1.31320178726848e-05,-1.24330088530141,-1,-4.88166853486723,1.50689460909348e-11,24,4.88166853486723,-12,0,15,"Aminoacyl-tRNA biosynthesis
  padj:0.00000 N( -15/ +0/ 24)","Aminoacyl-tRNA biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"248","alaS","eco00970:Aminoacyl-tRNA biosynthesis",4.65528859897152e-06,-1.28488949840384,-1,-5.33205339028829,1.50689460909348e-11,24,5.33205339028829,-13,0,15,"Aminoacyl-tRNA biosynthesis
+"247","alaS","eco00970:Aminoacyl-tRNA biosynthesis",4.65528859897152e-06,-1.28488949840384,-1,-5.33205339028829,1.50689460909348e-11,24,5.33205339028829,-13,0,15,"Aminoacyl-tRNA biosynthesis
  padj:0.00000 N( -15/ +0/ 24)","Aminoacyl-tRNA biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"249","ileS","eco00970:Aminoacyl-tRNA biosynthesis",1.44943203211012e-06,-1.33345304346076,-1,-5.83880214510485,1.50689460909348e-11,24,5.83880214510485,-14,0,15,"Aminoacyl-tRNA biosynthesis
+"248","ileS","eco00970:Aminoacyl-tRNA biosynthesis",1.44943203211012e-06,-1.33345304346076,-1,-5.83880214510485,1.50689460909348e-11,24,5.83880214510485,-14,0,15,"Aminoacyl-tRNA biosynthesis
  padj:0.00000 N( -15/ +0/ 24)","Aminoacyl-tRNA biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"250","pheT","eco00970:Aminoacyl-tRNA biosynthesis",3.4233449091003e-07,-1.25561986614545,-1,-6.46554934258785,1.50689460909348e-11,24,6.46554934258785,-15,0,15,"Aminoacyl-tRNA biosynthesis
+"249","pheT","eco00970:Aminoacyl-tRNA biosynthesis",3.4233449091003e-07,-1.25561986614545,-1,-6.46554934258785,1.50689460909348e-11,24,6.46554934258785,-15,0,15,"Aminoacyl-tRNA biosynthesis
  padj:0.00000 N( -15/ +0/ 24)","Aminoacyl-tRNA biosynthesis","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"251","entE","eco01053:Biosynthesis of siderophore group nonribosomal peptides",1.76807479144183e-05,-3.10013470052508,-1,-4.75249936781646,0.0294688574347874,6,4.75249936781646,-1,0,4,"Biosynthesis of siderophore group nonribosomal peptides
+"250","entE","eco01053:Biosynthesis of siderophore group nonribosomal peptides",1.76807479144183e-05,-3.10013470052508,-1,-4.75249936781646,0.0294688574347874,6,4.75249936781646,-1,0,4,"Biosynthesis of siderophore group nonribosomal peptides
  padj:0.02947 N( -4/ +0/ 6)","Biosynthesis of siderophore group nonribosomal peptides","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"252","entF","eco01053:Biosynthesis of siderophore group nonribosomal peptides",2.60911645069829e-06,-3.31870743279131,-1,-5.58350653693387,0.0294688574347874,6,5.58350653693387,-2,0,4,"Biosynthesis of siderophore group nonribosomal peptides
+"251","entF","eco01053:Biosynthesis of siderophore group nonribosomal peptides",2.60911645069829e-06,-3.31870743279131,-1,-5.58350653693387,0.0294688574347874,6,5.58350653693387,-2,0,4,"Biosynthesis of siderophore group nonribosomal peptides
  padj:0.02947 N( -4/ +0/ 6)","Biosynthesis of siderophore group nonribosomal peptides","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"253","entC","eco01053:Biosynthesis of siderophore group nonribosomal peptides",1.25427318966516e-06,-3.73656053109665,-1,-5.90160786076023,0.0294688574347874,6,5.90160786076023,-3,0,4,"Biosynthesis of siderophore group nonribosomal peptides
+"252","entC","eco01053:Biosynthesis of siderophore group nonribosomal peptides",1.25427318966516e-06,-3.73656053109665,-1,-5.90160786076023,0.0294688574347874,6,5.90160786076023,-3,0,4,"Biosynthesis of siderophore group nonribosomal peptides
  padj:0.02947 N( -4/ +0/ 6)","Biosynthesis of siderophore group nonribosomal peptides","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"254","entB","eco01053:Biosynthesis of siderophore group nonribosomal peptides",5.74497048121288e-10,-3.69812272523127,-1,-9.24071219846034,0.0294688574347874,6,9.24071219846034,-4,0,4,"Biosynthesis of siderophore group nonribosomal peptides
+"253","entB","eco01053:Biosynthesis of siderophore group nonribosomal peptides",5.74497048121288e-10,-3.69812272523127,-1,-9.24071219846034,0.0294688574347874,6,9.24071219846034,-4,0,4,"Biosynthesis of siderophore group nonribosomal peptides
  padj:0.02947 N( -4/ +0/ 6)","Biosynthesis of siderophore group nonribosomal peptides","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"255","mglA","eco02010:ABC transporters",7.22651069133043e-21,3.71391741539032,1,20.1410713504639,4.90122706864327e-08,153,20.1410713504639,10,10,20,"ABC transporters
+"254","mglA","eco02010:ABC transporters",7.22651069133043e-21,3.71391741539032,1,20.1410713504639,4.90122706864327e-08,153,20.1410713504639,10,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"256","mglB","eco02010:ABC transporters",1.17243581402479e-19,2.43553521991309,1,18.9309109237752,4.90122706864327e-08,153,18.9309109237752,9,10,20,"ABC transporters
+"255","mglB","eco02010:ABC transporters",1.17243581402479e-19,2.43553521991309,1,18.9309109237752,4.90122706864327e-08,153,18.9309109237752,9,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"257","mglC","eco02010:ABC transporters",3.23207179233413e-06,2.76360086093286,1,5.49051900103227,4.90122706864327e-08,153,5.49051900103227,8,10,20,"ABC transporters
+"256","mglC","eco02010:ABC transporters",3.23207179233413e-06,2.76360086093286,1,5.49051900103227,4.90122706864327e-08,153,5.49051900103227,8,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"258","malF","eco02010:ABC transporters",1.79980937109555e-05,1.75329948991738,1,4.74477349126641,4.90122706864327e-08,153,4.74477349126641,7,10,20,"ABC transporters
+"257","malF","eco02010:ABC transporters",1.79980937109555e-05,1.75329948991738,1,4.74477349126641,4.90122706864327e-08,153,4.74477349126641,7,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"259","rbsB","eco02010:ABC transporters",5.60014731207798e-05,1.43522784950043,1,4.25180054871146,4.90122706864327e-08,153,4.25180054871146,6,10,20,"ABC transporters
+"258","rbsB","eco02010:ABC transporters",5.60014731207798e-05,1.43522784950043,1,4.25180054871146,4.90122706864327e-08,153,4.25180054871146,6,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"260","alsB","eco02010:ABC transporters",0.002115187611527,1.79600112451067,1,2.67465110581265,4.90122706864327e-08,153,2.67465110581265,5,10,20,"ABC transporters
+"259","alsB","eco02010:ABC transporters",0.002115187611527,1.79600112451067,1,2.67465110581265,4.90122706864327e-08,153,2.67465110581265,5,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"261","modC","eco02010:ABC transporters",0.00244510571901714,1.94602151146242,1,2.61170235854724,4.90122706864327e-08,153,2.61170235854724,4,10,20,"ABC transporters
+"260","modC","eco02010:ABC transporters",0.00244510571901714,1.94602151146242,1,2.61170235854724,4.90122706864327e-08,153,2.61170235854724,4,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"262","yhdW","eco02010:ABC transporters",0.00868350823980618,1.26734034888426,1,2.06130477927403,4.90122706864327e-08,153,2.06130477927403,3,10,20,"ABC transporters
+"261","yhdW","eco02010:ABC transporters",0.00868350823980618,1.26734034888426,1,2.06130477927403,4.90122706864327e-08,153,2.06130477927403,3,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"263","xylF","eco02010:ABC transporters",0.00880655923657682,1.89184843389347,1,2.05519373931168,4.90122706864327e-08,153,2.05519373931168,2,10,20,"ABC transporters
+"262","xylF","eco02010:ABC transporters",0.00880655923657682,1.89184843389347,1,2.05519373931168,4.90122706864327e-08,153,2.05519373931168,2,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"264","araF","eco02010:ABC transporters",0.015325326438586,1.62076433156863,1,1.81459026597975,4.90122706864327e-08,153,1.81459026597975,1,10,20,"ABC transporters
+"263","araF","eco02010:ABC transporters",0.015325326438586,1.62076433156863,1,1.81459026597975,4.90122706864327e-08,153,1.81459026597975,1,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"265","fhuD","eco02010:ABC transporters",0.049514864895509,-1.83889976208019,-1,-1.3052644016128,4.90122706864327e-08,153,1.3052644016128,-1,10,20,"ABC transporters
+"264","fhuD","eco02010:ABC transporters",0.049514864895509,-1.83889976208019,-1,-1.3052644016128,4.90122706864327e-08,153,1.3052644016128,-1,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"266","metI","eco02010:ABC transporters",0.0401210044559197,-1.07804466519772,-1,-1.39662820266551,4.90122706864327e-08,153,1.39662820266551,-2,10,20,"ABC transporters
+"265","metI","eco02010:ABC transporters",0.0401210044559197,-1.07804466519772,-1,-1.39662820266551,4.90122706864327e-08,153,1.39662820266551,-2,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"267","fecC","eco02010:ABC transporters",0.0383738667458318,-1.91100186917037,-1,-1.4159644368776,4.90122706864327e-08,153,1.4159644368776,-3,10,20,"ABC transporters
+"266","fecC","eco02010:ABC transporters",0.0383738667458318,-1.91100186917037,-1,-1.4159644368776,4.90122706864327e-08,153,1.4159644368776,-3,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"268","artI","eco02010:ABC transporters",0.00615509207118123,-1.04229026861431,-1,-2.21076544627338,4.90122706864327e-08,153,2.21076544627338,-4,10,20,"ABC transporters
+"267","artI","eco02010:ABC transporters",0.00615509207118123,-1.04229026861431,-1,-2.21076544627338,4.90122706864327e-08,153,2.21076544627338,-4,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"269","fepC","eco02010:ABC transporters",0.00581736530643526,-1.46562051514976,-1,-2.23527366345148,4.90122706864327e-08,153,2.23527366345148,-5,10,20,"ABC transporters
+"268","fepC","eco02010:ABC transporters",0.00581736530643526,-1.46562051514976,-1,-2.23527366345148,4.90122706864327e-08,153,2.23527366345148,-5,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"270","cydD","eco02010:ABC transporters",0.00498637193274693,-1.00853840837332,-1,-2.30221533066271,4.90122706864327e-08,153,2.30221533066271,-6,10,20,"ABC transporters
+"269","cydD","eco02010:ABC transporters",0.00498637193274693,-1.00853840837332,-1,-2.30221533066271,4.90122706864327e-08,153,2.30221533066271,-6,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"271","sapD","eco02010:ABC transporters",0.00448869042734697,-1.76793456005475,-1,-2.3478803456634,4.90122706864327e-08,153,2.3478803456634,-7,10,20,"ABC transporters
+"270","sapD","eco02010:ABC transporters",0.00448869042734697,-1.76793456005475,-1,-2.3478803456634,4.90122706864327e-08,153,2.3478803456634,-7,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"272","potD","eco02010:ABC transporters",0.00215645197296474,-1.22672416719068,-1,-2.66626020972237,4.90122706864327e-08,153,2.66626020972237,-8,10,20,"ABC transporters
+"271","potD","eco02010:ABC transporters",0.00215645197296474,-1.22672416719068,-1,-2.66626020972237,4.90122706864327e-08,153,2.66626020972237,-8,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"273","msbA","eco02010:ABC transporters",0.00206558629365813,-1.05265340410089,-1,-2.68495665685941,4.90122706864327e-08,153,2.68495665685941,-9,10,20,"ABC transporters
+"272","msbA","eco02010:ABC transporters",0.00206558629365813,-1.05265340410089,-1,-2.68495665685941,4.90122706864327e-08,153,2.68495665685941,-9,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"274","hisP","eco02010:ABC transporters",0.00118320675534083,-1.51849289165972,-1,-2.92693935946513,4.90122706864327e-08,153,2.92693935946513,-10,10,20,"ABC transporters
+"273","hisP","eco02010:ABC transporters",0.00118320675534083,-1.51849289165972,-1,-2.92693935946513,4.90122706864327e-08,153,2.92693935946513,-10,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"275","metN","eco02010:ABC transporters",0.000202340050126977,-1.48785369779645,-1,-3.6939181467515,4.90122706864327e-08,153,3.6939181467515,-11,10,20,"ABC transporters
+"274","metN","eco02010:ABC transporters",0.000202340050126977,-1.48785369779645,-1,-3.6939181467515,4.90122706864327e-08,153,3.6939181467515,-11,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"276","cysA","eco02010:ABC transporters",0.000198356950146716,-1.53817239810885,-1,-3.70255257785942,4.90122706864327e-08,153,3.70255257785942,-12,10,20,"ABC transporters
+"275","cysA","eco02010:ABC transporters",0.000198356950146716,-1.53817239810885,-1,-3.70255257785942,4.90122706864327e-08,153,3.70255257785942,-12,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"277","artQ","eco02010:ABC transporters",0.000140249534341626,-2.95652973957512,-1,-3.85309857201974,4.90122706864327e-08,153,3.85309857201974,-13,10,20,"ABC transporters
+"276","artQ","eco02010:ABC transporters",0.000140249534341626,-2.95652973957512,-1,-3.85309857201974,4.90122706864327e-08,153,3.85309857201974,-13,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"278","fhuC","eco02010:ABC transporters",3.77719300874982e-05,-2.245678148353,-1,-4.42283082282581,4.90122706864327e-08,153,4.42283082282581,-14,10,20,"ABC transporters
+"277","fhuC","eco02010:ABC transporters",3.77719300874982e-05,-2.245678148353,-1,-4.42283082282581,4.90122706864327e-08,153,4.42283082282581,-14,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"279","tauA","eco02010:ABC transporters",3.65653137377721e-05,-1.91369417959371,-1,-4.43693069588944,4.90122706864327e-08,153,4.43693069588944,-15,10,20,"ABC transporters
+"278","tauA","eco02010:ABC transporters",3.65653137377721e-05,-1.91369417959371,-1,-4.43693069588944,4.90122706864327e-08,153,4.43693069588944,-15,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"280","artJ","eco02010:ABC transporters",1.19986209682381e-05,-1.55546885879469,-1,-4.92086866564405,4.90122706864327e-08,153,4.92086866564405,-16,10,20,"ABC transporters
+"279","artJ","eco02010:ABC transporters",1.19986209682381e-05,-1.55546885879469,-1,-4.92086866564405,4.90122706864327e-08,153,4.92086866564405,-16,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"281","artP","eco02010:ABC transporters",6.94107772511991e-06,-1.8158688498488,-1,-5.15857309240766,4.90122706864327e-08,153,5.15857309240766,-17,10,20,"ABC transporters
+"280","artP","eco02010:ABC transporters",6.94107772511991e-06,-1.8158688498488,-1,-5.15857309240766,4.90122706864327e-08,153,5.15857309240766,-17,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"282","fecB","eco02010:ABC transporters",3.35758853276586e-07,-2.29520549925397,-1,-6.473972527048,4.90122706864327e-08,153,6.473972527048,-18,10,20,"ABC transporters
+"281","fecB","eco02010:ABC transporters",3.35758853276586e-07,-2.29520549925397,-1,-6.473972527048,4.90122706864327e-08,153,6.473972527048,-18,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"283","fecE","eco02010:ABC transporters",3.04927491382675e-07,-2.48886467616102,-1,-6.51580341913226,4.90122706864327e-08,153,6.51580341913226,-19,10,20,"ABC transporters
+"282","fecE","eco02010:ABC transporters",3.04927491382675e-07,-2.48886467616102,-1,-6.51580341913226,4.90122706864327e-08,153,6.51580341913226,-19,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"284","potA","eco02010:ABC transporters",1.60965753547891e-07,-1.77608293328986,-1,-6.79326651295715,4.90122706864327e-08,153,6.79326651295715,-20,10,20,"ABC transporters
+"283","potA","eco02010:ABC transporters",1.60965753547891e-07,-1.77608293328986,-1,-6.79326651295715,4.90122706864327e-08,153,6.79326651295715,-20,10,20,"ABC transporters
  padj:0.00000 N( -20/ +10/ 153)","ABC transporters","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"285","rpsF","eco03010:Ribosome",0.0285312353245828,-1.30279198788338,-1,-1.54467942417064,0.0156292124594714,54,1.54467942417064,-1,0,12,"Ribosome
+"284","rpsF","eco03010:Ribosome",0.0285312353245828,-1.30279198788338,-1,-1.54467942417064,0.0156292124594714,54,1.54467942417064,-1,0,12,"Ribosome
  padj:0.01563 N( -12/ +0/ 54)","Ribosome","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"286","rpmG","eco03010:Ribosome",0.0170093559926334,-1.11549875948195,-1,-1.76931212931161,0.0156292124594714,54,1.76931212931161,-2,0,12,"Ribosome
+"285","rpmG","eco03010:Ribosome",0.0170093559926334,-1.11549875948195,-1,-1.76931212931161,0.0156292124594714,54,1.76931212931161,-2,0,12,"Ribosome
  padj:0.01563 N( -12/ +0/ 54)","Ribosome","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"287","rpmE","eco03010:Ribosome",0.0108863004755129,-1.08611851280986,-1,-1.96311968278247,0.0156292124594714,54,1.96311968278247,-3,0,12,"Ribosome
+"286","rpmE","eco03010:Ribosome",0.0108863004755129,-1.08611851280986,-1,-1.96311968278247,0.0156292124594714,54,1.96311968278247,-3,0,12,"Ribosome
  padj:0.01563 N( -12/ +0/ 54)","Ribosome","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"288","rpsQ","eco03010:Ribosome",0.00441363583993764,-1.14566231242034,-1,-2.35520350244529,0.0156292124594714,54,2.35520350244529,-4,0,12,"Ribosome
+"287","rpsQ","eco03010:Ribosome",0.00441363583993764,-1.14566231242034,-1,-2.35520350244529,0.0156292124594714,54,2.35520350244529,-4,0,12,"Ribosome
  padj:0.01563 N( -12/ +0/ 54)","Ribosome","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"289","rpsL","eco03010:Ribosome",0.000461213270604129,-1.68206486662603,-1,-3.33609820513443,0.0156292124594714,54,3.33609820513443,-5,0,12,"Ribosome
+"288","rpsL","eco03010:Ribosome",0.000461213270604129,-1.68206486662603,-1,-3.33609820513443,0.0156292124594714,54,3.33609820513443,-5,0,12,"Ribosome
  padj:0.01563 N( -12/ +0/ 54)","Ribosome","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"290","rpsA","eco03010:Ribosome",0.000420995094510534,-1.06685582071276,-1,-3.3757229645905,0.0156292124594714,54,3.3757229645905,-6,0,12,"Ribosome
+"289","rpsA","eco03010:Ribosome",0.000420995094510534,-1.06685582071276,-1,-3.3757229645905,0.0156292124594714,54,3.3757229645905,-6,0,12,"Ribosome
  padj:0.01563 N( -12/ +0/ 54)","Ribosome","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"291","rpsD","eco03010:Ribosome",5.92199879050378e-05,-1.39083494388559,-1,-4.22753168564608,0.0156292124594714,54,4.22753168564608,-7,0,12,"Ribosome
+"290","rpsD","eco03010:Ribosome",5.92199879050378e-05,-1.39083494388559,-1,-4.22753168564608,0.0156292124594714,54,4.22753168564608,-7,0,12,"Ribosome
  padj:0.01563 N( -12/ +0/ 54)","Ribosome","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"292","rplN","eco03010:Ribosome",2.49030204407229e-05,-1.32712944966164,-1,-4.60374797494502,0.0156292124594714,54,4.60374797494502,-8,0,12,"Ribosome
+"291","rplN","eco03010:Ribosome",2.49030204407229e-05,-1.32712944966164,-1,-4.60374797494502,0.0156292124594714,54,4.60374797494502,-8,0,12,"Ribosome
  padj:0.01563 N( -12/ +0/ 54)","Ribosome","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"293","rplA","eco03010:Ribosome",5.26523458741151e-06,-1.36981983040428,-1,-5.27858227447874,0.0156292124594714,54,5.27858227447874,-9,0,12,"Ribosome
+"292","rplA","eco03010:Ribosome",5.26523458741151e-06,-1.36981983040428,-1,-5.27858227447874,0.0156292124594714,54,5.27858227447874,-9,0,12,"Ribosome
  padj:0.01563 N( -12/ +0/ 54)","Ribosome","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"294","rpmA","eco03010:Ribosome",4.02457362849001e-07,-1.66968026019164,-1,-6.39528012289919,0.0156292124594714,54,6.39528012289919,-10,0,12,"Ribosome
+"293","rpmA","eco03010:Ribosome",4.02457362849001e-07,-1.66968026019164,-1,-6.39528012289919,0.0156292124594714,54,6.39528012289919,-10,0,12,"Ribosome
  padj:0.01563 N( -12/ +0/ 54)","Ribosome","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"295","rpsE","eco03010:Ribosome",8.26230703343924e-08,-1.90069058308984,-1,-7.08289867035546,0.0156292124594714,54,7.08289867035546,-11,0,12,"Ribosome
+"294","rpsE","eco03010:Ribosome",8.26230703343924e-08,-1.90069058308984,-1,-7.08289867035546,0.0156292124594714,54,7.08289867035546,-11,0,12,"Ribosome
  padj:0.01563 N( -12/ +0/ 54)","Ribosome","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"296","rplL","eco03010:Ribosome",4.6271466137814e-10,-1.4874740200585,-1,-9.33468673941356,0.0156292124594714,54,9.33468673941356,-12,0,12,"Ribosome
+"295","rplL","eco03010:Ribosome",4.6271466137814e-10,-1.4874740200585,-1,-9.33468673941356,0.0156292124594714,54,9.33468673941356,-12,0,12,"Ribosome
  padj:0.01563 N( -12/ +0/ 54)","Ribosome","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"297","eno","eco03018:RNA degradation",0.000584571900740638,-1.19141754062479,-1,-3.23316206418655,0.00705348340901391,13,3.23316206418655,-1,0,6,"RNA degradation
+"296","eno","eco03018:RNA degradation",0.000584571900740638,-1.19141754062479,-1,-3.23316206418655,0.00705348340901391,13,3.23316206418655,-1,0,6,"RNA degradation
  padj:0.00705 N( -6/ +0/ 13)","RNA degradation","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"298","rnr","eco03018:RNA degradation",0.000259476859095661,-1.24684621635325,-1,-3.58590136773918,0.00705348340901391,13,3.58590136773918,-2,0,6,"RNA degradation
+"297","rnr","eco03018:RNA degradation",0.000259476859095661,-1.24684621635325,-1,-3.58590136773918,0.00705348340901391,13,3.58590136773918,-2,0,6,"RNA degradation
  padj:0.00705 N( -6/ +0/ 13)","RNA degradation","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"299","pcnB","eco03018:RNA degradation",0.000124721050965236,-1.16867897188207,-1,-3.90406023820985,0.00705348340901391,13,3.90406023820985,-3,0,6,"RNA degradation
+"298","pcnB","eco03018:RNA degradation",0.000124721050965236,-1.16867897188207,-1,-3.90406023820985,0.00705348340901391,13,3.90406023820985,-3,0,6,"RNA degradation
  padj:0.00705 N( -6/ +0/ 13)","RNA degradation","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"300","rhlB","eco03018:RNA degradation",2.99384841213689e-05,-1.2716749856224,-1,-4.52377019311759,0.00705348340901391,13,4.52377019311759,-4,0,6,"RNA degradation
+"299","rhlB","eco03018:RNA degradation",2.99384841213689e-05,-1.2716749856224,-1,-4.52377019311759,0.00705348340901391,13,4.52377019311759,-4,0,6,"RNA degradation
  padj:0.00705 N( -6/ +0/ 13)","RNA degradation","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"301","deaD","eco03018:RNA degradation",4.58730425191068e-11,-1.99554457981781,-1,-10.3384424544301,0.00705348340901391,13,10.3384424544301,-5,0,6,"RNA degradation
+"300","deaD","eco03018:RNA degradation",4.58730425191068e-11,-1.99554457981781,-1,-10.3384424544301,0.00705348340901391,13,10.3384424544301,-5,0,6,"RNA degradation
  padj:0.00705 N( -6/ +0/ 13)","RNA degradation","protein","Exp","carbonSource","glucoseglycerol","kegg"
-"302","rhlE","eco03018:RNA degradation",3.93933047789317e-21,-3.48784631307742,-1,-20.4045775838761,0.00705348340901391,13,20.4045775838761,-6,0,6,"RNA degradation
+"301","rhlE","eco03018:RNA degradation",3.93933047789317e-21,-3.48784631307742,-1,-20.4045775838761,0.00705348340901391,13,20.4045775838761,-6,0,6,"RNA degradation
  padj:0.00705 N( -6/ +0/ 13)","RNA degradation","protein","Exp","carbonSource","glucoseglycerol","kegg"

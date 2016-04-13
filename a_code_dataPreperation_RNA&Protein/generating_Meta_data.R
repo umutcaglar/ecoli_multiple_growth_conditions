@@ -279,6 +279,11 @@ meta_protein %>%
   dplyr::arrange(dataSet)%>%
   dplyr::filter(Protein_Data_Freq!=0) %>%
   dplyr::select(-RNA_Data_Freq,-Protein_Data_Freq)->meta_protein
+
+
+meta_data$sampleNum<-gsub("_.*","",meta_data$sampleNum)
+meta_data$dataSet<-gsub("_.$","",meta_data$dataSet)
+
 #********************************
 
 

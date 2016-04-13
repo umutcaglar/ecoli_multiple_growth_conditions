@@ -43,8 +43,8 @@ source("../a_code_dataPreperation_RNA&Protein/data_naming_functions.R")
 ###*****************************
 # Download the DAVID input and output
 dataName=name_data(initialValue="genes_P0.05Fold2", # can be "genes0.05", "genes_P0.05Fold2"
-                   dataType = "protein", # can be "rna", "mrna", "protein", "protein_wo_NA"
-                   badDataSet = "set00", # can be "set00",set01","set02", "set03"
+                   dataType = "mrna", # can be "rna", "mrna", "protein", "protein_wo_NA"
+                   badDataSet = "set02", # can be "set00",set01","set02", "set03"
                    # referenceParameters can be a vector like
                    # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
                    referenceParameters=c("growthPhase",
@@ -54,16 +54,16 @@ dataName=name_data(initialValue="genes_P0.05Fold2", # can be "genes0.05", "genes
                                          "experiment"),
                    # referenceLevels can be a vector like
                    # c("exponential", "baseMg", "baseNa", "glucose", "glucose_time_course")
-                   referenceLevels=c("stationary",
+                   referenceLevels=c("exponential",
                                      "baseMg", 
                                      "baseNa", 
                                      "glucose", 
                                      "glucose_time_course"),
                    experimentVector = c("allEx"), # can be "Stc","Ytc","Nas","Agr","Ngr","Mgl","Mgh" // "allEx"
                    carbonSourceVector = "S", # can be any sub combination of "SYAN"
-                   MgLevelVector = c("baseMg","lowMg"), # can be "lowMg","baseMg","highMg" // "allMg"
+                   MgLevelVector = c("baseMg","highMg"), # can be "lowMg","baseMg","highMg" // "allMg"
                    NaLevelVector = c("baseNa"), # can be "baseNa","highNa" // "allNa"
-                   growthPhaseVector = c("stationary"), # can be "exponential","stationary","late_stationary" // "allPhase"
+                   growthPhaseVector = c("exponential"), # can be "exponential","stationary","late_stationary" // "allPhase"
                    filterGenes = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
                    threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
                    roundData=TRUE,
@@ -198,8 +198,8 @@ selectedDf$KEGG_Path_long <- factor(selectedDf$KEGG_Path_long,
 ###*****************************
 # Generate simple Data Frame
 # Additional Parameters
-maxPathway=7
-maxGene=7
+maxPathway=10
+maxGene=15
 
 if(length(unique(as.vector(selectedDf$FDR_KEGG_Path)))<maxPathway)
 {maxPathway=length(unique(as.vector(selectedDf$FDR_KEGG_Path)))}
@@ -255,35 +255,8 @@ fig01=ggplot( selectedDf, aes( x=rank,y=KEGG_Path_long)) +
 print(fig01)
 
 
-# # b) Simple Figure
-# scaleHigh_simp=max(abs(selectedDf_simp$score_gene))
-# scaleMid_simp=0
-# scaleLow_simp=-max(abs(selectedDf_simp$score_gene))
-# 
-# 
-# fig02=ggplot( selectedDf_simp, aes( x=rank,y=KEGG_Path_short)) +
-#   geom_tile(aes(fill=score_gene))+
-#   scale_fill_gradientn(colours=c("Blue","Grey50","Red"),
-#                        values=rescale(c(scaleLow_simp,scaleMid_simp,scaleHigh_simp)),
-#                        limits=c(scaleLow_simp,scaleHigh_simp),
-#                        guide = guide_colorbar(title = "-sign(cor)*P_log10"))+
-#   geom_text(aes(label=ID),size=3, colour="White", fontface="bold")+
-#   theme_bw()+
-#   scale_x_continuous(breaks=min(selectedDf_simp$rank):max(selectedDf_simp$rank))+
-#   theme(axis.line.y = element_blank(),
-#         legend.position="bottom",
-#         axis.title.y = element_blank(),
-#         panel.grid.minor=element_blank(),
-#         panel.grid.major.x=element_blank())
-# 
-# print(fig02)
 
-# c) simple figure with geom_point
-scaleHigh_score_gene=max((selectedDf_simp$score_gene))
-if(scaleHigh_score_gene<0.1){scaleHigh_score_gene=0.1}
-scaleMid_score_gene=0
-scaleLow_score_gene=min((selectedDf_simp$score_gene))
-if(scaleLow_score_gene>-0.1){scaleLow_score_gene=-0.1}
+# b) simple figure with geom point
 
 minimumFold=min(selectedDf_simp$log2)
 if(minimumFold>-1){minimumFold=-1}
@@ -291,14 +264,10 @@ maximumFold=max(selectedDf_simp$log2)
 if(maximumFold<1){maximumFold=1}
 
 fig03=ggplot(selectedDf_simp, aes( x=log2,y=KEGG_Path_short)) +
-  geom_point(aes(colour = score_gene),size=2.5)+
+  geom_point(colour="blue", size=2.5)+
   geom_vline(xintercept = c(log2(1/2),log2(2)), colour="orange", linetype = "longdash")+
   geom_vline(xintercept = c(log2(1)), colour="black", linetype = "longdash")+
-  geom_text_repel(aes(label=ID),size=5, colour="Black", fontface="bold")+
-  scale_colour_gradientn(colours=c("Blue","Grey50","Red"),
-                         values=rescale(c(scaleLow_score_gene,scaleMid_score_gene,scaleHigh_score_gene)),
-                         limits=c(scaleLow_score_gene,scaleHigh_score_gene),
-                         guide = guide_colorbar(title = "Gene Score",barwidth = 12))+
+  geom_text_repel(aes(label=ID),size=3, colour="Black", fontface="plain")+
   theme_bw()+
   scale_x_continuous(breaks=seq(floor(minimumFold),ceiling(maximumFold)))+
   xlab("Log2 Fold Change")+
@@ -306,10 +275,18 @@ fig03=ggplot(selectedDf_simp, aes( x=log2,y=KEGG_Path_short)) +
         legend.position="bottom",
         axis.title.y = element_blank(),
         panel.grid.minor=element_blank(),
-        panel.grid.major.x=element_blank())
+        panel.grid.major.x=element_blank(),
+        strip.text.x = element_text(size = 16),
+        strip.text.y = element_text(size = 16),
+        axis.text.x=element_text(size=10),
+        axis.text.y=element_text(size=12),
+        axis.title.x=element_text(size=16),
+        axis.title.y=element_text(size=16),
+        legend.title=element_text(size=14),
+        legend.text=element_text(size=14))
 
-print(fig03)
-# ###*****************************
+
+###*****************************
 
 
 ###*****************************
@@ -330,6 +307,8 @@ colWidth=ifelse(max(selectedDf$rank)-min(selectedDf$rank)+1<16,
 rowWidth=ifelse(nrow(summary_df)*1<3,3,nrow(summary_df)*1)
 cowplot::save_plot(filename = paste0("../d_figures/",objectName,"_kegg.pdf"),
                    plot = fig01,
+                   nrow=1.5,
+                   ncol=2,
                    base_height = rowWidth,
                    base_width = colWidth,
                    limitsize = FALSE)
@@ -340,7 +319,8 @@ rowWidth=ifelse(nrow(summary_df_simp)*1<3,3,nrow(summary_df_simp)*1)
 cowplot::save_plot(filename = paste0("../d_figures/simple",objectName,"_kegg.pdf"),
                    plot = fig03,
                    base_height = rowWidth,
-                   ncol=2,
+                   ncol=3,
+                   nrow=1.2,
                    limitsize = FALSE)
 
 

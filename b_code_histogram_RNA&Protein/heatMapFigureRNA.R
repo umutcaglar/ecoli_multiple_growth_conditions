@@ -39,6 +39,7 @@ require("gtable")
 ###*****************************
 #Load Functions
 source("../a_code_dataPreperation_RNA&Protein/data_naming_functions.R")
+source("../b_code_histogram_RNA&Protein/replace_fun.R")
 ###*****************************
 
 
@@ -312,7 +313,6 @@ fig02a<-ggplot(conditionSummaryTidy, aes( y=columnName,x= factor(orderNoCurrent)
         legend.key.size= unit(.6,"cm"))
 
 print(fig02a)
-browser()
 ###*****************************
 
 
