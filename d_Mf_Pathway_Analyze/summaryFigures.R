@@ -169,25 +169,104 @@ mf_metabolism_summary$vs <- factor(mf_metabolism_summary$vs,
 
 
 ###*****************************
+# Divide data frame into two pieces
+kegg_metabolism_summary%>%
+  dplyr::filter(growthPhase=="Exp")->kegg_metabolism_summary_exp
+
+kegg_metabolism_summary%>%
+  dplyr::filter(growthPhase=="Sta")->kegg_metabolism_summary_sta
+
+mf_metabolism_summary%>%
+  dplyr::filter(growthPhase=="Exp")->mf_metabolism_summary_exp
+
+mf_metabolism_summary%>%
+  dplyr::filter(growthPhase=="Sta")->mf_metabolism_summary_sta
+###*****************************
+
+
+###*****************************
 # Generate Tables
 fig01<-ggplot(kegg_metabolism_summary, aes( y=rank,x="condition"))+
-  scale_y_reverse()+
-  geom_tile(fill="white",colour="black")+
-  geom_text(aes(label=KEGG_Path_short),size=3)+
-  facet_grid(growthPhase+vs~pick_data)+
-  theme_bw()
+  ylim(5.5,0.5)+
+  scale_x_continuous(limits=c(0,1), expand=c(0,0)) +
+  geom_text(aes(label=paste(rank, KEGG_Path_short, sep=". "), x=0.02),size=3, hjust=0)+
+  facet_grid(growthPhase+vs~pick_data) +
+  panel_border() +
+  theme(  axis.line = element_blank(), 
+          axis.text.x = element_blank(), 
+          axis.text.y = element_blank(),
+          axis.ticks = element_blank(), 
+          axis.title.x = element_blank(), 
+          axis.title.y = element_blank())
 
 print(fig01)
 
 fig02<-ggplot(mf_metabolism_summary, aes( y=rank,x="condition"))+
-  scale_y_reverse()+
-  geom_tile(fill="white",colour="black")+
-  geom_text(aes(label=MF_Name_short),size=3)+
+  ylim(5.5,0.5)+
+  scale_x_continuous(limits=c(0,1), expand=c(0,0)) +
+  geom_text(aes(label=paste(rank, MF_Name_short, sep=". "), x=0.02),size=3, hjust=0)+
   facet_grid(growthPhase+vs~pick_data)+
-  theme_bw()
+  panel_border() +
+  theme(  axis.line = element_blank(), 
+          axis.text.x = element_blank(), 
+          axis.text.y = element_blank(),
+          axis.ticks = element_blank(), 
+          axis.title.x = element_blank(), 
+          axis.title.y = element_blank())
 
 print(fig02)
 
+fig01a<-ggplot(kegg_metabolism_summary_exp, aes( y=rank,x="condition"))+
+  ylim(5.5,0.5)+
+  scale_x_continuous(limits=c(0,1), expand=c(0,0)) +
+  geom_text(aes(label=paste(rank, KEGG_Path_short, sep=". "), x=0.02),size=3, hjust=0)+
+  facet_grid(vs~pick_data) +
+  panel_border() +
+  theme(  axis.line = element_blank(), 
+          axis.text.x = element_blank(), 
+          axis.text.y = element_blank(),
+          axis.ticks = element_blank(), 
+          axis.title.x = element_blank(), 
+          axis.title.y = element_blank())
+
+fig01b<-ggplot(kegg_metabolism_summary_sta, aes( y=rank,x="condition"))+
+  ylim(5.5,0.5)+
+  scale_x_continuous(limits=c(0,1), expand=c(0,0)) +
+  geom_text(aes(label=paste(rank, KEGG_Path_short, sep=". "), x=0.02),size=3, hjust=0)+
+  facet_grid(vs~pick_data) +
+  panel_border() +
+  theme(  axis.line = element_blank(), 
+          axis.text.x = element_blank(), 
+          axis.text.y = element_blank(),
+          axis.ticks = element_blank(), 
+          axis.title.x = element_blank(), 
+          axis.title.y = element_blank())
+
+fig02a<-ggplot(mf_metabolism_summary_exp, aes( y=rank,x="condition"))+
+  ylim(5.5,0.5)+
+  scale_x_continuous(limits=c(0,1), expand=c(0,0)) +
+  geom_text(aes(label=paste(rank, MF_Name_short, sep=". "), x=0.02),size=3, hjust=0)+
+  facet_grid(vs~pick_data) +
+  panel_border() +
+  theme(  axis.line = element_blank(), 
+          axis.text.x = element_blank(), 
+          axis.text.y = element_blank(),
+          axis.ticks = element_blank(), 
+          axis.title.x = element_blank(), 
+          axis.title.y = element_blank())
+
+fig02b<-ggplot(mf_metabolism_summary_sta, aes( y=rank,x="condition"))+
+  ylim(5.5,0.5)+
+  scale_x_continuous(limits=c(0,1), expand=c(0,0)) +
+  geom_text(aes(label=paste(rank, MF_Name_short, sep=". "), x=0.02),size=3, hjust=0)+
+  facet_grid(vs~pick_data) +
+  panel_border() +
+  theme(  axis.line = element_blank(), 
+          axis.text.x = element_blank(), 
+          axis.text.y = element_blank(),
+          axis.ticks = element_blank(), 
+          axis.title.x = element_blank(), 
+          axis.title.y = element_blank())
 ###*****************************
 
 
@@ -198,3 +277,12 @@ cowplot::save_plot(filename = paste0("../d_figures/resultTable_kegg.pdf"),
 
 cowplot::save_plot(filename = paste0("../d_figures/resultTable_mf.pdf"),
                    plot = fig02,ncol = 2,nrow=4,limitsize = FALSE)
+
+cowplot::save_plot(filename = paste0("../d_figures/resultTable_kegg_exp.pdf"),
+                   plot = fig01a,ncol = 2,nrow=1.7,limitsize = FALSE)
+cowplot::save_plot(filename = paste0("../d_figures/resultTable_kegg_sta.pdf"),
+                   plot = fig01b,ncol = 2,nrow= 1.7,limitsize = FALSE)
+cowplot::save_plot(filename = paste0("../d_figures/resultTable_mf_exp.pdf"),
+                   plot = fig02a,ncol = 2,nrow=1.7,limitsize = FALSE)
+cowplot::save_plot(filename = paste0("../d_figures/resultTable_mf_sta.pdf"),
+                   plot = fig02b,ncol = 2.05,nrow=1.7,limitsize = FALSE)

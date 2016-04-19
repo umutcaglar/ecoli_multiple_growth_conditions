@@ -645,7 +645,7 @@ for(counter02 in 1:24)
       }
       else if(nrow(summary_df_simp)<10)
       {
-        rowWidth=4
+        rowWidth=7
       }
       else
       {
@@ -654,9 +654,9 @@ for(counter02 in 1:24)
       
       cowplot::save_plot(filename = paste0("../d_figures/simple",objectName,"_kegg.pdf"),
                          plot = fig03,
-                         base_height = rowWidth,
                          ncol=1.4,
                          nrow=1.2,
+                         base_height = rowWidth,
                          limitsize = FALSE)
       
     }

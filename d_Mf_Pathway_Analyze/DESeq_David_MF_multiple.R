@@ -345,7 +345,7 @@ inputList<-rbind(inputList1,inputList2,inputList3,inputList4,inputList5,inputLis
 
 ###*****************************
 # Beginning of the loop
-for(counter02 in c(1:5,7,9:24))
+for(counter02 in c(1:5,6,7,8,9:24))
 {
   ###*****************************
   # Download the DAVID input and output
@@ -483,7 +483,6 @@ for(counter02 in c(1:5,7,9:24))
     selectedDf %>%
       dplyr::filter(padj_gene<0.05,FDR_GoMF<0.05, abs(log2)>1) ->selectedDf
     
-    if(counter02==8){browser()}
     if(nrow(selectedDf)!=0)
     {
       selectedDf %>%
@@ -550,7 +549,8 @@ for(counter02 in c(1:5,7,9:24))
       selectedDf_simp$MF_Name_short <- factor(selectedDf_simp$MF_Name_short, 
                                               levels = rev(as.vector(summary_df_simp$MF_Name_short)))
       ###*****************************
-      
+      # if(all(dataName$objectName$pick_data=="mrna",
+      #        dataName$objectName$growthPhase_names=="Sta")){browser()}
       
       ###*****************************
       # Generate Figures 
@@ -594,7 +594,6 @@ for(counter02 in c(1:5,7,9:24))
                                           "Biosynthesis of siderophore group\n nonribosomal peptides",
                                           "di−, tri−valent inorganic cation\n transmembrane transporter activity"))
       
-      if(any(grepl("hydrolase activity",newLabels))){browser()}
       
       minimumFold=min(selectedDf_simp$log2)
       if(minimumFold>-1){minimumFold=-1}
@@ -657,17 +656,18 @@ for(counter02 in c(1:5,7,9:24))
       # Save simple figure
       if(nrow(summary_df_simp)<5)
       {
-        rowWidth=4
+        rowWidth=7
       }
       else if(nrow(summary_df_simp)<10)
       {
-        rowWidth=4
+        rowWidth=9
       }
       else
       {
-        rowWidth=nrow(summary_df_simp)*.5 
+        rowWidth=nrow(summary_df_simp)*.9 
       }
       
+      if(objectName=="genes_P0.05Fold2_mrna_trT_set02_StcNasMglMgh_S_baseMglowMg_baseNa_Sta_noFilter_p1Sf_noNorm__Mg_mM_Levels_mf"){browser()}
       cowplot::save_plot(filename = paste0("../d_figures/simple",objectName,"_mf.pdf"),
                          plot = fig03,
                          base_height = rowWidth,
