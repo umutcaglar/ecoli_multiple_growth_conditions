@@ -506,7 +506,7 @@ for(counter02 in 1:24)
       ###*****************************
       # Generate simple Data Frame
       # Additional Parameters
-      maxPathway=7
+      maxPathway=20
       maxGene=15
       
       if(length(unique(as.vector(selectedDf$FDR_KEGG_Path)))<maxPathway)
@@ -616,10 +616,10 @@ for(counter02 in 1:24)
       
       ###*****************************
       # Save Files
-      #selectedDf<-cbind(selectedDf, 
-      #                  unique(kegg_input_df[,c("pick_data","growthPhase","test_for","vs")]),
-      #                  df_category="kegg")
-      #write.csv(x = selectedDf, file = paste0("../d_results/",objectName,"_kegg.csv"))
+      selectedDf<-cbind(selectedDf,
+                       unique(kegg_input_df[,c("pick_data","growthPhase","test_for","vs")]),
+                       df_category="kegg")
+      write.csv(x = selectedDf, file = paste0("../d_results/",objectName,"_kegg.csv"))
       ###*****************************
       
       ###*****************************
@@ -652,7 +652,7 @@ for(counter02 in 1:24)
         rowWidth=nrow(summary_df_simp)*.5 
       }
       
-      cowplot::save_plot(filename = paste0("../d_figures/narrow",objectName,"_kegg.pdf"),
+      cowplot::save_plot(filename = paste0("../d_figures/simple",objectName,"_kegg.pdf"),
                          plot = fig03,
                          ncol=1.4,
                          nrow=1.2,

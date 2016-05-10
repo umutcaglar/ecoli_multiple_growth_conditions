@@ -506,7 +506,7 @@ for(counter02 in 1:24)
       ###*****************************
       # Generate simple Data Frame
       # Additional Parameters
-      maxPathway=7
+      maxPathway=4
       maxGene=15
       
       if(length(unique(as.vector(selectedDf$FDR_KEGG_Path)))<maxPathway)
@@ -641,7 +641,7 @@ for(counter02 in 1:24)
       # Save simple figure
       if(nrow(summary_df_simp)<5)
       {
-        rowWidth=4
+        rowWidth=7
       }
       else if(nrow(summary_df_simp)<10)
       {
@@ -654,8 +654,8 @@ for(counter02 in 1:24)
       
       cowplot::save_plot(filename = paste0("../d_figures/narrow",objectName,"_kegg.pdf"),
                          plot = fig03,
-                         ncol=1.4,
-                         nrow=0.48,
+                         ncol=1.8,
+                         nrow=0.4,
                          base_height = rowWidth,
                          limitsize = FALSE)
       
