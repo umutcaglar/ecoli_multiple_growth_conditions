@@ -616,9 +616,9 @@ for(counter02 in 1:24)
       
       ###*****************************
       # Save Files
-      selectedDf<-cbind(selectedDf, 
-                        unique(kegg_input_df[,c("pick_data","growthPhase","test_for","vs")]),
-                        df_category="kegg")
+      selectedDf<-cbind(selectedDf,
+                       unique(kegg_input_df[,c("pick_data","growthPhase","test_for","vs")]),
+                       df_category="kegg")
       write.csv(x = selectedDf, file = paste0("../d_results/",objectName,"_kegg.csv"))
       ###*****************************
       
