@@ -434,8 +434,12 @@ g.main <- gtable_add_rows(g.main, unit.c(unit(0.1, "in")), index$b) #***********
 # add a row, one as spacer and one to take the images
 g.main <- gtable_add_rows(g.main, unit.c(unit(0.15, "null")), index$b-2)
 # add the grob that holds the images
-g.main <- gtable_add_grob(g.main, dendogram.x, t = index$b-1, l = index$l, 
-                          b = index$b-1, r = index$r, name="dendogram-x")
+g.main <- gtable_add_grob(g.main, dendogram.x, 
+                          t = index$b-1, 
+                          l = index$l, 
+                          b = index$b-1, 
+                          r = index$r, 
+                          name="dendogram-x")
 
 # add dendogram.y
 # add a row, one as spacer and one to take the images
