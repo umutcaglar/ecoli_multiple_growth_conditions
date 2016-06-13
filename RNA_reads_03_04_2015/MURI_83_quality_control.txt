@@ -1,2 +1,0 @@
-sample	time	raw_read_count	raw_base_count	mean_raw_read_length	trimmed_read_count	percent_reads_remaining	trimmed_base_count	percent_base_remaining	mean_trimmed_read_length	mapped_both_read_count	percent_trimmed_both_reads_mapped	mapped_read_1_count	percent_read_1_mapped	mapped_read_2_count	percent_read_2_mapped	count_read_1_mapping_mRNA	percent_read_1_mapping_mRNA	percent_read_1_mapping_tRNA	percent_read_1_mapping_to_rRNA	percent_read_1_mapping_to_ncRNA
-MURI_83_	time	2907792	366381792	126	120533	4.145	6059584	1.654	50	2507	2.08	6038	5.01	2446	2.03	609	10.08	71.77	1.374	10.1
