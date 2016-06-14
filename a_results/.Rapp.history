@@ -1,4 +1,0 @@
-load("/Users/umut/GitHub/AG3C_Analyze/initialPaper01r/normalized_log2_p1_mean_mrna_wholeSet_allMg_allNa_SYAN_set02_allEx.RData")
-load("/Users/umut/GitHub/AG3C_Analyze/initialPaper01r/metaRawData.Rda")
-load("/Users/umut/GitHub/AG3C_Analyze/initialPaper01r/normalized_none_p1_mean_protein_wo_NA_wholeSet_allMg_allNa_SYAN_set00_allEx.RData")
-load("/Users/umut/GitHub/AG3C_Analyze/initialPaper01r/normalized_none_p1_mean_protein_wo_NA_wholeSet_allMg_allNa_SYAN_set00_allEx.RData")

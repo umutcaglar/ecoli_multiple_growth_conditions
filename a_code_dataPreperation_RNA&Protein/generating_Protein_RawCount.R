@@ -233,6 +233,7 @@ remove(temp)
 proteinMatrix<-proteinMatrix[sort(colnames(proteinMatrix))]
 
 # remove the MURI_082_0 from protein data
+# in protein data MURI_82 is all NA so need to be fixed
 proteinMatrix %>% dplyr::select(-MURI_082_0)->proteinMatrix
 
 # put the proteins in to order and remove contaminants

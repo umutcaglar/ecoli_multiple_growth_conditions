@@ -38,12 +38,13 @@ source("fun_order.R")
 #***************************************
 # load and combine AG3C_RNA_data to produce RNA matrix
 #locationOfRNADataSets="../RNA_reads_02_02_2015/"
-locationOfRNADataSets="../RNA_reads_03_04_2015/"
+locationOfRNADataSets="../RNA_reads_06_13_2016/"
 RNA_FileList=dir(path=locationOfRNADataSets)
 
-###---REMOVE 83---###
-RNA_FileList<-RNA_FileList[grepl("MURI_83",RNA_FileList)==FALSE]
-#***
+# Not necessary any more
+####---REMOVE 83---###
+#RNA_FileList<-RNA_FileList[grepl("MURI_83",RNA_FileList)==FALSE]
+##***
 
 RawRNA_FileList=grep("raw_rna_count", RNA_FileList, value = TRUE)
 RawRNA_FileList<-RawRNA_FileList[-grep("ND", RawRNA_FileList)] #get rid of not depleted 

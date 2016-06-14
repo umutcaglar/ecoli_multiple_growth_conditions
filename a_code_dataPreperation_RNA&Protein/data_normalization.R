@@ -39,12 +39,12 @@ require("tidyr")
 source("../a_code_dataPreperation_RNA&Protein/data_filter_normalization_functions.R")
 ###*****************************
 
-
+browser()
 ###*****************************
 saveFiles=TRUE
 # The data filtering function that controls sub functions.
-mainData=filter_data(dataType = "protein_wo_NA", # can be "rna", "mrna", "protein", "protein_wo_NA"
-                     badDataSet = "set00", # can be "set00",set01","set02", "set03"
+mainData=filter_data(dataType = "mrna", # can be "rna", "mrna", "protein", "protein_wo_NA"
+                     badDataSet = "set02", # can be "set00",set01","set02", "set03"
                      # referenceParameters can be a vector like
                      # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
                      referenceParameters=c("growthPhase",
@@ -70,7 +70,7 @@ mainData=filter_data(dataType = "protein_wo_NA", # can be "rna", "mrna", "protei
                      roundData=TRUE,
                      sumTechnicalReplicates=TRUE,
                      deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf"
-                     normalizationMethodChoice= "vst") # can be "vst", "rlog", "log10", "noNorm"
+                     normalizationMethodChoice= "noNorm") # can be "vst", "rlog", "log10", "noNorm"
 ###*****************************
 
 
@@ -86,7 +86,7 @@ objectName=mainData[[2]]
 # Change level boundries for MgLevel, NaLevel, growthPhase
 ###*****************************
 
-
+browser()
 ###*****************************
 # Run DESeq2 test For
 if(objectName$normalizationMethodChoice=="noNorm")
@@ -95,7 +95,7 @@ if(objectName$normalizationMethodChoice=="noNorm")
   # Do the DeSeq2 test
   # c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
   test_for="carbonSource"
-  DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ",test_for))
+  DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ",test_for,"+batch"))
   differentialGeneAnalResults<-DESeq2::DESeq(deseq_DataObj)
   (res <- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod ="fdr"))
   mcols(res, use.names=TRUE)  

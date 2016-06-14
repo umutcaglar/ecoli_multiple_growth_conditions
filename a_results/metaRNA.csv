@@ -41,7 +41,9 @@
 56,"MURI_056","glycerol_time_course",14,"2013-08-14",4.44e+08,44400000,"012","glycerol",0.8,5,"exponential","baseMg","baseNa","unique_condition_15","unique_condition_06",84.09256028,74.28728971,96.87985071,0.978655127
 57,"MURI_057","glycerol_time_course",24,"2013-08-15",3.9e+08,3.9e+07,"012","glycerol",0.8,5,"stationary","baseMg","baseNa","unique_condition_33","unique_condition_15",84.09256028,74.28728971,96.87985071,0.978655127
 58,"MURI_058","glycerol_time_course",48,"2013-08-16",3.68e+08,36800000,"012","glycerol",0.8,5,"stationary","baseMg","baseNa","unique_condition_33","unique_condition_15",84.09256028,74.28728971,96.87985071,0.978655127
+59,"MURI_059","glycerol_time_course",168,"2013-08-21",2.88e+08,28800000,"012","glycerol",0.8,5,"late_stationary","baseMg","baseNa","unique_condition_18","unique_condition_09",84.09256028,74.28728971,96.87985071,0.978655127
 61,"MURI_061","NaCl_stress",5.5,"2013-09-17",1.1e+10,1.1e+09,"013","glucose",0.8,5,"exponential","baseMg","baseNa","unique_condition_07","unique_condition_02",62.59630672,52.6876373,77.09516308,0.9256599
+63,"MURI_063","NaCl_stress",6,"2013-09-17",9.3e+09,9.3e+08,"013","glucose",0.8,200,"exponential","baseMg","highNa","unique_condition_09","unique_condition_03",71.7909528,60.80324561,87.62573034,0.875937904
 64,"MURI_064","NaCl_stress",8,"2013-09-17",2.1e+10,2.1e+09,"013","glucose",0.8,300,"exponential","baseMg","highNa","unique_condition_10","unique_condition_03",94.55206746,80.49309685,114.5614333,0.859135365
 65,"MURI_065","NaCl_stress",28,"2013-09-18",6.9e+09,6.9e+08,"013","glucose",0.8,5,"stationary","baseMg","baseNa","unique_condition_25","unique_condition_11",62.59630672,52.6876373,77.09516308,0.9256599
 66,"MURI_066","NaCl_stress",28,"2013-09-18",2.1e+10,2.1e+09,"013","glucose",0.8,100,"stationary","baseMg","highNa","unique_condition_26","unique_condition_12",66.03566192,57.17392907,78.14834651,0.926509335
@@ -60,6 +62,7 @@
 80,"MURI_080","NaCl_stress",10,"2013-11-14",4.5e+10,4.5e+09,"015","glucose",0.8,300,"exponential","baseMg","highNa","unique_condition_10","unique_condition_03",94.55206746,80.49309685,114.5614333,0.859135365
 81,"MURI_081","NaCl_stress",29,"2013-11-15",4.1e+10,4.1e+09,"015","glucose",0.8,5,"stationary","baseMg","baseNa","unique_condition_25","unique_condition_11",62.59630672,52.6876373,77.09516308,0.9256599
 82,"MURI_082","NaCl_stress",29,"2013-11-15",4e+10,4e+09,"015","glucose",0.8,100,"stationary","baseMg","highNa","unique_condition_26","unique_condition_12",66.03566192,57.17392907,78.14834651,0.926509335
+83,"MURI_083","NaCl_stress",29,"2013-11-15",3.5e+10,3.5e+09,"015","glucose",0.8,200,"stationary","baseMg","highNa","unique_condition_27","unique_condition_12",71.7909528,60.80324561,87.62573034,0.875937904
 84,"MURI_084","NaCl_stress",29,"2013-11-15",3.3e+10,3.3e+09,"015","glucose",0.8,300,"stationary","baseMg","highNa","unique_condition_28","unique_condition_12",94.55206746,80.49309685,114.5614333,0.859135365
 85,"MURI_085","lactate_growth",9,"2013-10-10",6.4e+09,6.4e+08,"016","lactate",0.8,5,"exponential","baseMg","baseNa","unique_condition_16","unique_condition_07",100.4307315,92.47869035,109.8789863,0.96177919
 86,"MURI_086","lactate_growth",29,"2013-10-11",1.2e+10,1.2e+09,"016","lactate",0.8,5,"stationary","baseMg","baseNa","unique_condition_34","unique_condition_16",100.4307315,92.47869035,109.8789863,0.96177919
