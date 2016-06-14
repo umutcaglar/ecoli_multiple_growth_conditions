@@ -39,7 +39,7 @@ require("tidyr")
 source("../a_code_dataPreperation_RNA&Protein/data_filter_normalization_functions.R")
 ###*****************************
 
-browser()
+
 ###*****************************
 saveFiles=TRUE
 # The data filtering function that controls sub functions.
@@ -95,7 +95,7 @@ if(objectName$normalizationMethodChoice=="noNorm")
   # Do the DeSeq2 test
   # c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
   test_for="carbonSource"
-  DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ",test_for,"+batch"))
+  DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ",test_for," + batchNumber"))
   differentialGeneAnalResults<-DESeq2::DESeq(deseq_DataObj)
   (res <- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod ="fdr"))
   mcols(res, use.names=TRUE)  

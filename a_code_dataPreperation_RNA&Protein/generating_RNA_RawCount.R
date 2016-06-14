@@ -131,8 +131,8 @@ write.csv(rnaMatrix_RNA, file = savedFilename, row.names = FALSE)
 
 ## Drawing Distribution Graph
 rnaMatrix_RNA %>%
-  group_by() %>%
-  select(-gene_ID, -gene_Type) ->p
+  dplyr::group_by() %>%
+  dplyr::select(-gene_ID, -gene_Type) ->p
 as.data.frame(colSums(p))->p2
 as.data.frame(log2(colSums(p)))->p
 colnames(p)<-"log2amount"

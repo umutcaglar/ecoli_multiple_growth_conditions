@@ -1,3 +1,4 @@
+gene_ID	count
 ECB_00001	0
 ECB_00002	5
 ECB_00003	6
