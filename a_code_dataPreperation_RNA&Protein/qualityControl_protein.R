@@ -163,18 +163,90 @@ ratioDfL_summary %>%
                    stdMax=max(std), # associated with variety of condition
                    sd_sd=sd(std))->ratioDfL_sumsummary # associated with sample problems
 
+orderDifferencesFunction<-function(x)
+{
+  x%>%
+    dplyr::mutate(sample_C=sample_A,
+                  sample_A=sample_B,
+                  sample_B=sample_C)%>%
+    dplyr::select(-sample_C)->x2
+  
+  dplyr:::rbind_list(x, x2)->x_comb
+  remove(x2)
+  
+  x_comb %>%
+    dplyr::group_by(sample_A) %>%
+    dplyr::summarise(stdMean=mean(std)) %>%
+    dplyr::arrange(desc(stdMean))->x_summary
+  
+  x_comb %>% 
+    dplyr::filter(sample_A==x_summary$sample_A[1])->x_upperDf
+  
+  x %>% 
+    dplyr::filter(sample_A!=x_summary$sample_A[1] & sample_B!=x_summary$sample_A[1])->x_lowerDf
+  
+  x_upper=x_upperDf$std
+  x_lower=x_lowerDf$std
+  
+  x_upper_mean=mean(x_upper)
+  x_lower_mean=mean(x_lower)
+  
+  ratioValue=x_upper_mean/x_lower_mean
+  oddOne=paste0("MURI_",x_summary$sample_A[1])
+  return(list(ratioValue=ratioValue, oddOne=oddOne))
+}
+
+ratioDfL_summary %>% 
+  dplyr::group_by(uniqueCondition) %>%
+  dplyr::do(data.frame(returnObj=orderDifferencesFunction(.)))->ratioDfL_ratioValue
+
+colnames(ratioDfL_ratioValue)<-gsub("returnObj.","",colnames(ratioDfL_ratioValue))
+
+
 ratioDfL_sumsummary <- left_join(ratioDfL_sumsummary,condition_summary)
+ratioDfL_sumsummary <- left_join(ratioDfL_sumsummary,ratioDfL_ratioValue)
+remove(ratioDfL_ratioValue)
+
+ratioDfL_sumsummary %>%
+  dplyr::arrange(desc(ratioValue))->ratioDfL_sumsummary
+
+ratioDfL$uniqueCondition <- factor(ratioDfL$uniqueCondition,
+                                   levels = as.vector(ratioDfL_sumsummary$uniqueCondition))
+
+ratioDfL_summary$uniqueCondition <- factor(ratioDfL_summary$uniqueCondition,
+                                           levels = as.vector(ratioDfL_sumsummary$uniqueCondition))
 ###*****************************
 
 
 ###*****************************
 # Draw histograms associated with quality control data
-fig01<-ggplot2::ggplot(ratioDfL,aes(x=ratio, group=vs_name))+
-  geom_line(aes(y=..density..), stat="density") +
-  facet_wrap(~ uniqueCondition, ncol = 4)+
+
+# arrange colors
+ratioDfL_summary %>%
+  dplyr::group_by(uniqueCondition)%>%
+  dplyr::mutate(colorVariation=paste0("color",sprintf("%02.f",seq(1:n()))))->ratioDfL_summaryC
+
+ratioDfL<-left_join(ratioDfL,ratioDfL_summaryC)
+
+manuelColors=c("#9d007f",
+               "#64c007",
+               "#3695ff",
+               "#ff5839",
+               "#28bdbc",
+               "#ff2562",
+               "#01734b",
+               "#e09e3f",
+               "#642b0e",
+               "#5f7400")
+#remove(ratioDfL_summaryC)
+
+# draw figure
+fig01<-ggplot2::ggplot(ratioDfL,aes(x=ratio, group=vs_name, color=colorVariation))+
+  geom_line(aes(y=..density..), stat="density",adjust=5,size=2) +
+  scale_colour_manual(values = manuelColors)+
+  facet_wrap(~ uniqueCondition, ncol = 5,scales = "free")+
   theme_bw()+ #can be theme_bw or theme_classic
   scale_x_continuous(limits = c(-10,10))+
-  scale_y_continuous(limits = c(0,10))+
   geom_vline(xintercept = 0, colour="red", linetype = "longdash")+
   theme( axis.text.x=element_text(size=16),
          axis.text.y=element_text(size=16),
@@ -183,7 +255,7 @@ fig01<-ggplot2::ggplot(ratioDfL,aes(x=ratio, group=vs_name))+
          legend.title=element_text(size=14),
          legend.text=element_text(size=14) )
 
-cowplot::save_plot(filename = "../a_figures/qualityControl_protein.pdf",plot = fig01,ncol = 4,nrow = 12)
+cowplot::save_plot(filename = "../a_figures/qualityControl_protein.pdf",plot = fig01,ncol = 5,nrow = 7)
 
 ratioDfL_summary%>%
   dplyr::mutate(sample_C=sample_A,
@@ -196,7 +268,7 @@ dplyr:::rbind_list(ratioDfL_summary, ratioDfL_summary_B)->ratioDfL_summary_J
 fig02<-ggplot2::ggplot(ratioDfL_summary_J,aes(x=sample_A, y=sample_B))+
   geom_tile(aes(fill=std), color="grey")+
   geom_text(aes(label=sprintf("%1.2f", std)))+
-  facet_wrap(~ uniqueCondition, ncol = 4, scales = "free")+
+  facet_wrap(~ uniqueCondition, ncol = 5, scales = "free")+
   scale_fill_gradient(low = "White", high = "Black",limits=c(0,5),name = "Std")+
   theme_classic()+ #can be theme_bw or theme_classic
   theme( axis.text.x=element_text(size=16),
@@ -208,5 +280,5 @@ fig02<-ggplot2::ggplot(ratioDfL_summary_J,aes(x=sample_A, y=sample_B))+
 
 print(fig02)
 
-cowplot::save_plot(filename = "../a_figures/qualityControl_protein_heatMap.pdf",plot = fig02,ncol = 4,nrow = 12)
+cowplot::save_plot(filename = "../a_figures/qualityControl_protein_heatMap.pdf",plot = fig02,ncol = 5,nrow = 7)
 ###*****************************
