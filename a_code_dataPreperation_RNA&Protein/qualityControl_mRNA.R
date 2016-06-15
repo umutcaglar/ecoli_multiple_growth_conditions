@@ -265,3 +265,9 @@ print(fig02)
 
 cowplot::save_plot(filename = "../a_figures/qualityControl_mRNA_heatMap.pdf",plot = fig02,ncol = 6,nrow = 8)
 ###*****************************
+
+
+###*****************************
+# save the data frame that shows the odd samples and how odd they are
+write.csv(x = ratioDfL_sumsummary,file = "../a_results/odd_mrna_samples.csv")
+###*****************************

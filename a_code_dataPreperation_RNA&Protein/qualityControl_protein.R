@@ -163,6 +163,12 @@ ratioDfL_summary %>%
                    stdMax=max(std), # associated with variety of condition
                    sd_sd=sd(std))->ratioDfL_sumsummary # associated with sample problems
 
+# the function finds the farest sample from all the other samples un a given unique condition
+# then calculate the average distance of this point to other points in the space (say A)
+# after that it calculates the average distance between remainin points (say B)
+# Finally it calculates ratioValue=A/B
+# It returns both ratioValue and the name of the farest point.
+
 orderDifferencesFunction<-function(x)
 {
   x%>%
@@ -265,6 +271,7 @@ ratioDfL_summary%>%
 
 dplyr:::rbind_list(ratioDfL_summary, ratioDfL_summary_B)->ratioDfL_summary_J
 
+# Draw the figure that shows the distribution of standart devaiation between divisions of samples
 fig02<-ggplot2::ggplot(ratioDfL_summary_J,aes(x=sample_A, y=sample_B))+
   geom_tile(aes(fill=std), color="grey")+
   geom_text(aes(label=sprintf("%1.2f", std)))+
@@ -281,4 +288,10 @@ fig02<-ggplot2::ggplot(ratioDfL_summary_J,aes(x=sample_A, y=sample_B))+
 print(fig02)
 
 cowplot::save_plot(filename = "../a_figures/qualityControl_protein_heatMap.pdf",plot = fig02,ncol = 5,nrow = 7)
+###*****************************
+
+
+###*****************************
+# save the data frame that shows the odd samples and how odd they are
+write.csv(x = ratioDfL_sumsummary,file = "../a_results/odd_protein_samples.csv")
 ###*****************************
