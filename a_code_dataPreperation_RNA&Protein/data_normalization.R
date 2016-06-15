@@ -20,8 +20,7 @@ cat("\014")
 # Set Working Directory
 # One needs to arrange the correct pathway if this is not umut's computer ;)
 if(as.vector(Sys.info()["effective_user"]=="umut"))
-{setwd(paste0("/Users/umut/GitHub/ecoli_multiple_growth_conditions/",
-              "c_code_change_wrt_variables_RNA&Protein/"))} # mac computer
+{setwd(paste0("/Users/umut/GitHub/ecoli_multiple_growth_conditions/a_code_dataPreperation_RNA&Protein/"))} # mac computer
 ###*****************************
 
 
@@ -42,9 +41,10 @@ source("../a_code_dataPreperation_RNA&Protein/data_filter_normalization_function
 
 ###*****************************
 saveFiles=TRUE
+runDeSeqForDifExp=FALSE
 # The data filtering function that controls sub functions.
-mainData=filter_data(dataType = "mrna", # can be "rna", "mrna", "protein", "protein_wo_NA"
-                     badDataSet = "set02", # can be "set00",set01","set02", "set03"
+mainData=filter_data(dataType = "protein", # can be "rna", "mrna", "protein", "protein_wo_NA"
+                     badDataSet = "set00", # can be "set00",set01","set02", "set03"
                      # referenceParameters can be a vector like
                      # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
                      referenceParameters=c("growthPhase",
@@ -78,18 +78,12 @@ mainData=filter_data(dataType = "mrna", # can be "rna", "mrna", "protein", "prot
 #Decompose the container
 deseq_DataObj=mainData[[1]]
 objectName=mainData[[2]]
-
 ###*****************************
 
-###*****************************
-# To do
-# Change level boundries for MgLevel, NaLevel, growthPhase
-###*****************************
 
-browser()
 ###*****************************
 # Run DESeq2 test For
-if(objectName$normalizationMethodChoice=="noNorm")
+if(objectName$normalizationMethodChoice=="noNorm" & runDeSeqForDifExp)
 {
   ###*****************************
   # Do the DeSeq2 test
@@ -187,9 +181,15 @@ if(objectName$normalizationMethodChoice=="noNorm")
   ###*****************************
 }
 
-if(objectName$normalizationMethodChoice!="noNorm")
+if(objectName$normalizationMethodChoice!="noNorm" & runDeSeqForDifExp)
 {
-  res_df<-as.data.frame(assay(deseq_DataObj))
+  stop("TO RUN DeSeq2 one needs to use RAW data; please chose \n \"normalizationMethodChoice==\"noNorm\" if runDeSeqForDifExp==TRUE")
+}
+
+if(runDeSeqForDifExp==FALSE)
+{
+  #res_df<-as.data.frame(assay(deseq_DataObj))
+  res_df<-counts(deseq_DataObj, normalized=TRUE)
   metaData<-as.data.frame(colData(deseq_DataObj))
   
   ###*****************************

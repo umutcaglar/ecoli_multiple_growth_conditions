@@ -65,5 +65,21 @@ dataName=name_data(initialValue="resDf", # can be c("genes0.05","genes_P0.05Fold
 # c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource", "noTest")
 ###*****************************
 
-dataName=as.data.frame(dataName)
-print(paste(dataName,collapse = "_"))
+dataNameDF=as.data.frame(dataName[1])
+
+metaDataName=dataNameDF
+metaDataName$objectName.initial="metaData"
+treeDataName=dataNameDF
+treeDataName$objectName.initial="treeData"
+heatMapName=dataNameDF
+heatMapName$objectName.initial="heatMap"
+
+dataName=paste(dataNameDF,collapse = "_")
+metaDataName=paste(metaDataName,collapse = "_")
+treeDataName=paste(treeDataName,collapse = "_")
+heatMapName=paste(heatMapName,collapse = "_")
+
+mainDataFrame=read.csv(file = paste0("../a_results/",dataName,".csv"),header = TRUE,row.names = 1)
+condition=read.csv(file = paste0("../a_results/",metaDataName,".csv"),header = TRUE)
+
+

@@ -33,35 +33,63 @@ require("cowplot")
 #***************************************
 
 
-
-### DO FOR Protein DATA ###
 ###*****************************
 # Load Functions
-source(file = "data_filter_normalization_functions.R")
-###*****************************
-
-
-###*****************************
-# Load Data
-condition<-read.csv(file = "../a_results/metaProtein.csv")
-mainDataFrame<-read.csv(file = "../a_results/proteinMatrix.csv")
+source(file = "data_naming_functions.R")
 ###*****************************
 
 
 #***************************************
-# sum technical replicates
-dataInput_=list()
-dataInput_$objectName=NA
-dataInput_$rawData=mainDataFrame
-dataInput_$metaData=condition
+# We will use
+# * protein data
+# * we use all samples
+# * we sum technical replicates we round the raw data
+# * we do a +1 normalization for size factors
+# * No filtering
 
-techSummedData<-prepeare_data(dataInput=dataInput_,
-                              roundData=TRUE,
-                              sumTechnicalReplicates=TRUE)
+# The main data naming function that controls sub functions.
+dataName=name_data(initialValue="resDf", # can be c("genes0.05","genes_P0.05Fold2","resDf")
+                   dataType = "protein", # can be "rna", "mrna", "protein", "protein_wo_NA"
+                   badDataSet = "set00", # can be "set00",set01","set02", "set03"
+                   # referenceParameters can be a vector like
+                   # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
+                   referenceParameters=c("growthPhase",
+                                         "Mg_mM_Levels",
+                                         "Na_mM_Levels",
+                                         "carbonSource",
+                                         "experiment"),
+                   # referenceLevels can be a vector like
+                   # c("exponential", "baseMg", "baseNa", "glucose", "glucose_time_course")
+                   referenceLevels=c("exponential",
+                                     "baseMg",
+                                     "baseNa",
+                                     "glucose",
+                                     "glucose_time_course"),
+                   experimentVector = c("allEx"), # can be "Stc","Ytc","Nas","Agr","Ngr","Mgl","Mgh" // "allEx"
+                   carbonSourceVector = "SYAN", # can be any sub combination of "SYAN"
+                   MgLevelVector = c("allMg"), # can be "lowMg","baseMg","highMg" // "allMg"
+                   NaLevelVector = c("allNa"), # can be "baseNa","highNa" // "allNa"
+                   growthPhaseVector = c("allPhase"), # can be "exponential","stationary","late_stationary" // "allPhase"
+                   filterGenes = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter"
+                   threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
+                   roundData=TRUE,
+                   sumTechnicalReplicates=TRUE,
+                   deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf"
+                   normalizationMethodChoice= "noNorm", # can be "vst", "rlog", "log10", "noNorm"
+                   test_for = "noTest")  # works only if normalizationMethodChoice == noNorm
+# c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource", "noTest")
 
-condition<-techSummedData$metaData
-mainDataFrame<-techSummedData$rawData
-#***************************************
+dataNameDF=as.data.frame(dataName[1])
+
+metaDataName=dataNameDF
+metaDataName$objectName.initial="metaData"
+
+dataName=paste(dataNameDF,collapse = "_")
+metaDataName=paste(metaDataName,collapse = "_")
+
+mainDataFrame=read.csv(file = paste0("../a_results/",dataName,".csv"),header = TRUE,row.names = 1)
+condition=read.csv(file = paste0("../a_results/",metaDataName,".csv"),header = TRUE)
+###*****************************
 
 
 ###*****************************

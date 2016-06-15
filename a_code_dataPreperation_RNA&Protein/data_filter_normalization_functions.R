@@ -843,6 +843,7 @@ sizefactors_deseq<-function(dataInput=mainData_internal, deSeqSfChoice)
                                             colData = metaData, 
                                             design = ~ 1) 
     
+    browser()
     # Import size factors from P1 object
     sizeFactors(deseq_DataObj) <- sizeFactors_p1
     
