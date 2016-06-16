@@ -33,21 +33,68 @@ require("cowplot")
 #***************************************
 
 
-### DO FOR mRNA DATA ###
 ###*****************************
-# Load Data
-condition<-read.csv(file = "../a_results/metaRNA.csv")
-mainDataFrame<-read.csv(file = "../a_results/rnaMatrix_mRNA.csv")
+# Load Functions
+source(file = "data_naming_functions.R")
+###*****************************
+
+
+#***************************************
+# We will use
+# * mRNA data
+# * we use all samples
+# * we sum technical replicates we round the raw data
+# * we do a +1 normalization for size factors
+# * No filtering
+
+# The main data naming function that controls sub functions.
+dataName=name_data(initialValue="resDf", # can be c("genes0.05","genes_P0.05Fold2","resDf")
+                   dataType = "mrna", # can be "rna", "mrna", "protein", "protein_wo_NA"
+                   badDataSet = "set00", # can be "set00",set01","set02", "set03"
+                   # referenceParameters can be a vector like
+                   # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
+                   referenceParameters=c("growthPhase",
+                                         "Mg_mM_Levels",
+                                         "Na_mM_Levels",
+                                         "carbonSource",
+                                         "experiment"),
+                   # referenceLevels can be a vector like
+                   # c("exponential", "baseMg", "baseNa", "glucose", "glucose_time_course")
+                   referenceLevels=c("exponential",
+                                     "baseMg",
+                                     "baseNa",
+                                     "glucose",
+                                     "glucose_time_course"),
+                   experimentVector = c("allEx"), # can be "Stc","Ytc","Nas","Agr","Ngr","Mgl","Mgh" // "allEx"
+                   carbonSourceVector = "SYAN", # can be any sub combination of "SYAN"
+                   MgLevelVector = c("allMg"), # can be "lowMg","baseMg","highMg" // "allMg"
+                   NaLevelVector = c("allNa"), # can be "baseNa","highNa" // "allNa"
+                   growthPhaseVector = c("allPhase"), # can be "exponential","stationary","late_stationary" // "allPhase"
+                   filterGenes = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter"
+                   threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
+                   roundData=TRUE,
+                   sumTechnicalReplicates=TRUE,
+                   deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf", "noSf"
+                   normalizationMethodChoice= "noNorm", # can be "vst", "rlog", "log10", "noNorm"
+                   test_for = "noTest")  # works only if normalizationMethodChoice == noNorm
+# c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource", "noTest")
+
+dataNameDF=as.data.frame(dataName[1])
+
+metaDataName=dataNameDF
+metaDataName$objectName.initial="metaData"
+
+dataName=paste(dataNameDF,collapse = "_")
+metaDataName=paste(metaDataName,collapse = "_")
+
+mainDataFrame=read.csv(file = paste0("../a_results/",dataName,".csv"),header = TRUE,row.names = 1)
+condition=read.csv(file = paste0("../a_results/",metaDataName,".csv"),header = TRUE)
 ###*****************************
 
 
 ###*****************************
 # Prepeare Data for grouping
 
-# A) mainDataFrame
-mainDataFrame %>% dplyr::select(-gene_Type)->mainDataFrame# remove the firts column named as "gene_Type"
-
-# B) condition
 # Divide the condition into two parts as time series and others
 # in time series data group with respect to sample hour
 # in other data group with respect to growth phase

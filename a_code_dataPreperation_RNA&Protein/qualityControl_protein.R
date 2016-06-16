@@ -49,7 +49,7 @@ source(file = "data_naming_functions.R")
 
 # The main data naming function that controls sub functions.
 dataName=name_data(initialValue="resDf", # can be c("genes0.05","genes_P0.05Fold2","resDf")
-                   dataType = "protein", # can be "rna", "mrna", "protein", "protein_wo_NA"
+                   dataType = "protein", # can be "rna", "mrna", "protein", "protein_wo_NA" # Use protein instead of "protein_wo_NA"
                    badDataSet = "set00", # can be "set00",set01","set02", "set03"
                    # referenceParameters can be a vector like
                    # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
@@ -74,7 +74,7 @@ dataName=name_data(initialValue="resDf", # can be c("genes0.05","genes_P0.05Fold
                    threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
                    roundData=TRUE,
                    sumTechnicalReplicates=TRUE,
-                   deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf"
+                   deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf", "noSf"
                    normalizationMethodChoice= "noNorm", # can be "vst", "rlog", "log10", "noNorm"
                    test_for = "noTest")  # works only if normalizationMethodChoice == noNorm
 # c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource", "noTest")
@@ -95,11 +95,6 @@ condition=read.csv(file = paste0("../a_results/",metaDataName,".csv"),header = T
 ###*****************************
 # Prepeare Data for grouping
 
-# A) mainDataFrame
-# Does not needed in proteins
-#mainDataFrame %>% dplyr::select(-gene_Type)->mainDataFrame# remove the firts column named as "gene_Type"
-
-# B) condition
 # Divide the condition into two parts as time series and others
 # in time series data group with respect to sample hour
 # in other data group with respect to growth phase

@@ -15,7 +15,7 @@ name_data<-function(initialValue, # can be "genes0.05", "genes_P0.05Fold2"
                     threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
                     roundData,
                     sumTechnicalReplicates,
-                    deSeqSfChoice, # can be "regSf", "p1Sf"
+                    deSeqSfChoice, # can be "regSf", "p1Sf", "noSf"
                     normalizationMethodChoice, # can be "vst", "rlog", "log10", "noNorm")
                     test_for)  # works only if normalizationMethodChoice == noNorm
                                # c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource","noTest")
@@ -62,7 +62,7 @@ name_data<-function(initialValue, # can be "genes0.05", "genes_P0.05Fold2"
 # @Description installs necessary rawData and metaData
 pick_data_n<-function(dataType,initialValue){
   if(! dataType %in% c("rna", "mrna", "protein", "protein_wo_NA"))
-  {stop("dataType should be one of those rna, mrna, protein, protein_wo")}
+  {stop("dataType should be one of those rna, mrna, protein, protein_wo_NA")}
   objectName=c(initial=initialValue, pick_data=dataType)
   
   
@@ -622,8 +622,8 @@ filter_rows_n<-function(dataInput, filterGenes, threshold=NA)
 # @Param deSeqSfChoice picks the method for DeSeqSf Calculation
 sizefactors_deseq_n<-function(dataInput=mainData_internal, deSeqSfChoice)
 {
-  if(!deSeqSfChoice %in% c("regSf", "p1Sf"))
-  {stop("deSeqSfChoice should be one of regSf p1Sf")}
+  if(!deSeqSfChoice %in% c("regSf", "p1Sf", "noSf"))
+  {stop("deSeqSfChoice should be one of regSf, p1Sf", "noSf")}
   
   # Seperate data input
   objectName=dataInput$objectName
@@ -642,6 +642,13 @@ sizefactors_deseq_n<-function(dataInput=mainData_internal, deSeqSfChoice)
     
     # modify object name
     objectName$deSeqSfChoice="p1Sf"
+  }
+  
+  if(deSeqSfChoice=="noSf")
+  {
+    
+    # modify object name
+    objectName$deSeqSfChoice="noSf"
   }
   
   deseq_Data_Container=list(objectName=objectName, metaData=metaData)

@@ -32,7 +32,7 @@ source("fun_order.R")
 
 #***************************
 # NaCl stress
-locationOfProteinDataSets="../Protein_reads_10_28_2015/"
+locationOfProteinDataSets="../Protein_reads_06_16_2016/"
 data<-read.csv(file=paste0(locationOfProteinDataSets,"Protein_Counts_NaCl.csv"),
                header=TRUE,  fill = TRUE)
 #data[is.na(data)]<-0
@@ -199,6 +199,50 @@ for(counter01 in 2:length(data)){
 #***************************
 
 
+#***************************
+# Missing data
+missingData1<-read.table(file=paste0(locationOfProteinDataSets,"MURI_52_1a.csv"),
+                         header=T,  fill = TRUE, sep = "\t",skip=0)
+missingData1 <- missingData1[-nrow(missingData1),c(1,4)]
+colnames(missingData1) <-c( "gene_id" , "count" )
+missingData1$count=as.numeric(missingData1$count)
+fileName=paste0("MURI_","052_0","_raw_protein_count.txt")
+write.table(missingData1,file=paste0(locationOfProteinDataSets,fileName),
+            sep="\t",row.names=FALSE,quote = F)
+
+
+missingData2<-read.table(file=paste0(locationOfProteinDataSets,"MURI_57_1a.csv"),
+                         header=T,  fill = TRUE, sep = "\t",skip=0)
+missingData2 <- missingData2[-nrow(missingData2),c(1,4)]
+colnames(missingData2) <-c( "gene_id" , "count" )
+missingData2$count=as.numeric(missingData2$count)
+fileName=paste0("MURI_","057_0","_raw_protein_count.txt")
+write.table(missingData2,file=paste0(locationOfProteinDataSets,fileName),
+            sep="\t",row.names=FALSE,quote = F)
+
+
+missingData3<-read.table(file=paste0(locationOfProteinDataSets,"MURI_106_1a.csv"),
+                         header=T,  fill = TRUE, sep = "\t",skip=0)
+missingData3 <- missingData3[-nrow(missingData3),c(1,4)]
+colnames(missingData3) <-c( "gene_id" , "count" )
+missingData3$count=as.numeric(missingData3$count)
+fileName=paste0("MURI_","106_0","_raw_protein_count.txt")
+write.table(missingData3,file=paste0(locationOfProteinDataSets,fileName),
+            sep="\t",row.names=FALSE,quote = F)
+
+
+missingData4<-read.table(file=paste0(locationOfProteinDataSets,"MURI_110_1b.csv"),
+                         header=T,  fill = TRUE, sep = "\t",skip=0)
+missingData4 <- missingData4[-nrow(missingData4),c(1,4)]
+colnames(missingData4) <-c( "gene_id" , "count" )
+missingData4$count=as.numeric(missingData4$count)
+fileName=paste0("MURI_","110_0","_raw_protein_count.txt")
+write.table(missingData4,file=paste0(locationOfProteinDataSets,fileName),
+            sep="\t",row.names=FALSE,quote = F)
+#***************************
+
+
+
 #*********************Q******************
 # load and combine AG3C_Protein_data to produce RNA matrix
 Protein_FileList=dir(path=locationOfProteinDataSets)
@@ -241,13 +285,18 @@ proteinMatrix %>%
   dplyr::arrange(gene_id)%>%
   dplyr::filter(!grepl('CON', gene_id))->proteinMatrix
 
+
 # generate a protein matrix without NA
+proteinMatrix_w_NA=proteinMatrix
 proteinMatrix_wo_NA <- proteinMatrix[rowSums(is.na(proteinMatrix)) == 0,]
 proteinMatrix[is.na(proteinMatrix)]<-0
 
 # Save as csv files
 savedFilename=paste0("../a_results/","proteinMatrix.csv")
 write.csv(proteinMatrix, file = savedFilename, row.names = FALSE)
+
+savedFilename=paste0("../a_results/","proteinMatrix_w_NA.csv")
+write.csv(proteinMatrix_w_NA, file = savedFilename, row.names = FALSE)
 
 savedFilename=paste0("../a_results/","proteinMatrix_wo_NA.csv")
 write.csv(proteinMatrix_wo_NA, file = savedFilename, row.names = FALSE)

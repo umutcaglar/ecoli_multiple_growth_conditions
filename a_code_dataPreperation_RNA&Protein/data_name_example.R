@@ -59,7 +59,7 @@ dataName=name_data(initialValue="resDf", # can be c("genes0.05","genes_P0.05Fold
                    threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
                    roundData=TRUE,
                    sumTechnicalReplicates=TRUE,
-                   deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf"
+                   deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf", "noSf"
                    normalizationMethodChoice= "noNorm", # can be "vst", "rlog", "log10", "noNorm"
                    test_for = "noTest")  # works only if normalizationMethodChoice == noNorm
 # c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource", "noTest")

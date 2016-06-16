@@ -14,7 +14,7 @@ filter_data<-function(dataType, # can be "rna", "mrna", "protein", "protein_wo_N
                       threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
                       roundData,
                       sumTechnicalReplicates,
-                      deSeqSfChoice, # can be "regSf", "p1Sf"
+                      deSeqSfChoice, # can be "regSf", "p1Sf", "noSf"
                       normalizationMethodChoice) # can be "vst", "rlog", "log10", "noNorm") 
 {
   mainData_internal=pick_data(dataType=dataType)
@@ -789,8 +789,8 @@ filter_rows<-function(dataInput, filterGenes, threshold=NA)
 # @Param deSeqSfChoice picks the method for DeSeqSf Calculation
 sizefactors_deseq<-function(dataInput=mainData_internal, deSeqSfChoice)
 {
-  if(!deSeqSfChoice %in% c("regSf", "p1Sf"))
-  {stop("deSeqSfChoice should be one of regSf p1Sf")}
+  if(!deSeqSfChoice %in% c("regSf", "p1Sf", "noSf"))
+  {stop("deSeqSfChoice should be one of regSf, p1Sf", "noSf")}
   
   # Seperate data input
   objectName=dataInput$objectName
@@ -843,12 +843,30 @@ sizefactors_deseq<-function(dataInput=mainData_internal, deSeqSfChoice)
                                             colData = metaData, 
                                             design = ~ 1) 
     
-    browser()
     # Import size factors from P1 object
     sizeFactors(deseq_DataObj) <- sizeFactors_p1
     
     # modify object name
     objectName$deSeqSfChoice="p1Sf"
+  }
+  
+  
+  if(deSeqSfChoice=="noSf")
+  {
+    # sF with all ones
+    sizeFactors<-rep(1,length(as.vector(metaData$dataSet)))
+    names(sizeFactors)<-as.vector(metaData$dataSet)
+    
+    # generate DeSeq2 object from data matrix with trivial design formula
+    deseq_DataObj <- DESeqDataSetFromMatrix(countData = rawData_matrix, 
+                                            colData = metaData, 
+                                            design = ~ 1) 
+    
+    # Import size factors from P1 object
+    sizeFactors(deseq_DataObj) <- sizeFactors
+    
+    # modify object name
+    objectName$deSeqSfChoice="noSf"
   }
   
   deseq_Data_Container=list(deseq_DataObj=deseq_DataObj,objectName=objectName)
