@@ -58,7 +58,7 @@ RawRNA_Repeats=as.data.frame(table(RawRNA_colNames))
 colnames(RawRNA_Repeats)<-c("Sample.","RNA_Data_Freq")
 
 # learn the list of Protein files we have
-locationOfProteinDataSets="../Protein_reads_10_28_2015/"
+locationOfProteinDataSets="../Protein_reads_06_16_2016//"
 Protein_FileList=dir(path=locationOfProteinDataSets)
 
 RawProtein_FileList=grep("raw_protein_count", Protein_FileList, value = TRUE)

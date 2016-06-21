@@ -891,6 +891,7 @@ normalizeData<-function(dataInput=mainData_internal, normalizationMethodChoice)
   if(!normalizationMethodChoice %in% c("vst", "rlog" , "log10", "noNorm"))
   {stop("normalizationMethodChoice should be one of vst, rlog, log10, noNorm")}
   
+
   if(normalizationMethodChoice == "vst")
   {
     objectName$normalizationMethodChoice="vst"
@@ -918,5 +919,6 @@ normalizeData<-function(dataInput=mainData_internal, normalizationMethodChoice)
   
   deseq_Data_Container=list(deseq_DataObj=deseq_DataObj,
                             objectName=objectName)
+  
   return(deseq_Data_Container)
 }

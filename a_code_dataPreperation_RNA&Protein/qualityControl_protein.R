@@ -90,7 +90,7 @@ metaDataName=paste(metaDataName,collapse = "_")
 mainDataFrame=read.csv(file = paste0("../a_results/",dataName,".csv"),header = TRUE,row.names = 1)
 condition=read.csv(file = paste0("../a_results/",metaDataName,".csv"),header = TRUE)
 ###*****************************
-
+browser()
 
 ###*****************************
 # Prepeare Data for grouping

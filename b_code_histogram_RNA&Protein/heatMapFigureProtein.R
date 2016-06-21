@@ -70,7 +70,7 @@ dataName=name_data(initialValue=c("resDf"), # can be c("genes0.05","genes_P0.05F
                    threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
                    roundData=TRUE,
                    sumTechnicalReplicates=TRUE,
-                   deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf"
+                   deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf", "noSf"
                    normalizationMethodChoice= "vst", # can be "vst", "rlog", "log10", "noNorm"
                    test_for = "noTest")  # works only if normalizationMethodChoice == noNorm
 # c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource", "noTest")
@@ -92,7 +92,6 @@ heatMapName=paste(heatMapName,collapse = "_")
 mainDataFrame=read.csv(file = paste0("../a_results/",dataName,".csv"),header = TRUE,row.names = 1)
 condition=read.csv(file = paste0("../a_results/",metaDataName,".csv"),header = TRUE)
 ###*****************************
-
 
 
 
@@ -225,6 +224,7 @@ dist_x=dist(t(mainDataFrame),
             upper = FALSE, 
             p = 2)
 
+browser()
 METree_x = flashClust(dist_x, method = "complete");
 METree_x_d = as.dendrogram(METree_x)
 
@@ -317,7 +317,6 @@ fig02a<-ggplot(conditionSummaryTidy, aes( y=columnName,x=factor(orderNoCurrent))
         legend.key.size= unit(.6,"cm"))
 
 print(fig02a)
-browser
 ###*****************************
 
 

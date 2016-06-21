@@ -43,7 +43,7 @@ source("../a_code_dataPreperation_RNA&Protein/data_filter_normalization_function
 saveFiles=TRUE
 runDeSeqForDifExp=FALSE
 # The data filtering function that controls sub functions.
-mainData=filter_data(dataType = "protein_wo_NA", # can be "rna", "mrna", "protein", "protein_wo_NA"
+mainData=filter_data(dataType = "mrna", # can be "rna", "mrna", "protein", "protein_wo_NA"
                      badDataSet = "set00", # can be "set00",set01","set02", "set03"
                      # referenceParameters can be a vector like
                      # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
@@ -70,7 +70,7 @@ mainData=filter_data(dataType = "protein_wo_NA", # can be "rna", "mrna", "protei
                      roundData=TRUE,
                      sumTechnicalReplicates=TRUE,
                      deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf", "noSf"
-                     normalizationMethodChoice= "noNorm") # can be "vst", "rlog", "log10", "noNorm"
+                     normalizationMethodChoice= "vst") # can be "vst", "rlog", "log10", "noNorm"
 ###*****************************
 
 
@@ -188,8 +188,15 @@ if(objectName$normalizationMethodChoice!="noNorm" & runDeSeqForDifExp)
 
 if(runDeSeqForDifExp==FALSE)
 {
-  #res_df<-as.data.frame(assay(deseq_DataObj))
-  res_df<-counts(deseq_DataObj, normalized=TRUE)
+  if(objectName$normalizationMethodChoice=="noNorm")
+  {
+    res_df<-counts(deseq_DataObj, normalized=TRUE)
+  }
+  if(objectName$normalizationMethodChoice!="noNorm")
+  {
+    res_df<-as.data.frame(assay(deseq_DataObj))
+  }
+  
   metaData<-as.data.frame(colData(deseq_DataObj))
   
   ###*****************************
