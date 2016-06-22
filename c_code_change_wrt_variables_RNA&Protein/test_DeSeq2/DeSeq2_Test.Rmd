@@ -1,0 +1,182 @@
+---
+title: "DeSeq2_Test"
+author: "Mehmet Umut Caglar"
+date: "June 21, 2016"
+output: html_document
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(width = 110)
+
+## DeSeq Normalization Cleaned 03
+
+# The aim of the code is to generate normalized data matrix.
+# The work flow compses of four parts
+# Pick up the samples
+# pick up the rows
+# calculate size factors
+# do the normalization
+
+
+###*****************************
+# INITIAL COMMANDS TO RESET THE SYSTEM
+rm(list = ls())
+if (is.integer(dev.list())){dev.off()}
+cat("\014")
+###*****************************
+
+
+###*****************************
+# Set Working Directory
+# One needs to arrange the correct pathway if this is not umut's computer ;)
+if(as.vector(Sys.info()["effective_user"]=="umut"))
+{setwd(paste0("/Users/umut/GitHub/ecoli_multiple_growth_conditions/c_code_change_wrt_variables_RNA&Protein/test_DeSeq2/"))} # mac computer
+###*****************************
+
+
+###*****************************
+# DOWNLOAD LIBRARIES
+require("Biobase") 
+require("DESeq2")
+require("dplyr")
+require("tidyr")
+###*****************************
+
+
+###*****************************
+#Load Functions
+source("data_filter_normalization_functions_fakeBatch.R")
+###*****************************
+
+
+###*****************************
+saveFiles=TRUE
+runDeSeqForDifExp=TRUE
+# The data filtering function that controls sub functions.
+mainData=filter_data(dataType = "mrna", # can be "rna", "mrna", "protein", "protein_wo_NA"
+                     badDataSet = "set00", # can be "set00",set01","set02", "set03"
+                     # referenceParameters can be a vector like
+                     # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
+                     referenceParameters=c("growthPhase",
+                                           "Mg_mM_Levels", 
+                                           "Na_mM_Levels", 
+                                           "carbonSource", 
+                                           "experiment"),
+                     # referenceLevels can be a vector like
+                     # c("exponential", "baseMg", "baseNa", "glucose", "glucose_time_course")
+                     referenceLevels=c("exponential",
+                                       "baseMg", 
+                                       "baseNa", 
+                                       "glucose", 
+                                       "glucose_time_course"),
+                     experimentVector = c("allEx"), 
+                     # can be "Stc","Ytc","Nas","Agr","Ngr","Mgl","Mgh" // "allEx"
+                     carbonSourceVector = "SYAN", # can be any sub combination of "SYAN"
+                     MgLevelVector = c("allMg"), # can be "lowMg","baseMg","highMg" // "allMg"
+                     NaLevelVector = c("allNa"), # can be "baseNa","highNa" // "allNa"
+                     # can be "exponential","stationary","late_stationary" // "allPhase"
+                     growthPhaseVector = c("allPhase"), 
+                     filterGenes = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
+                     threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
+                     roundData=TRUE,
+                     sumTechnicalReplicates=TRUE,
+                     deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf", "noSf"
+                     normalizationMethodChoice= "noNorm") # can be "vst", "rlog", "log10", "noNorm"
+###*****************************
+
+
+###*****************************
+#Decompose the container
+deseq_DataObj=mainData[[1]]
+objectName=mainData[[2]]
+###*****************************
+
+```
+
+## The Aim of the File
+
+This is a file to test the behaviour of DeSeq algorithm under multiple different conditions, the procedure helps to understand how DeSeq behaves.
+
+We will investigate mRNA data will all possible conditions for 3 different paramaters. 
+
+1. Na levels. Those tests compose of 2 distinct categories "baseNa" and "highNa"
+2. Mg Levels. Those tests compose of 3 distinct categories "lowMg", "baseMg" and "highMg"
+3. Carbon Sources. Those test composes of 4 distict categories "glucose", "glycerol", "gluconate", "lactate". In addition to that the there are no shared batches  
+
+
+
+\clearpage
+
+At first we investigate if batch has an effect. For this we can compare the results of Mg analyse with and without mentioning batch
+
+#### Try 1
+```{r Mg Test, Wout Batch, Wout Contrast}
+# Do the DeSeq2 test
+# c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
+test_for="Mg_mM_Levels"
+DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ",test_for))
+differentialGeneAnalResults<-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Mg <- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod ="fdr")
+res_Mg
+```
+
+
+#### Try 2
+```{r Mg Test, With Batch, Wout Contrast}
+# Do the DeSeq2 test
+# c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
+test_for="Mg_mM_Levels"
+DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ",test_for," + batchNumber"))
+differentialGeneAnalResults<-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Mg <- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod ="fdr")
+res_Mg
+```
+
+As can be seen, try 1 and try 2 have different outputs so we can say batch has an effect.
+
+
+One can also investigate if the order in the model change something. i.e. 
+will modesl "~ Mg_mM_Levels + batchNumber" and "~ batchNumber + Mg_mM_Levels" give same results
+
+
+#### Try 3
+```{r Mg Test, With Batch, Wout Contrast, model order change}
+# Do the DeSeq2 test
+# c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
+test_for="Mg_mM_Levels"
+DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ","batchNumber + ",test_for))
+differentialGeneAnalResults<-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Mg <- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod ="fdr")
+res_Mg
+```
+
+As can be seen, try 2 and try 3 have different outputs; and try 3 output mentiones the test is done on "lowMg vs baseMg", so if one do not explicitly mention the test conditions, the program automatically picks the conditions and make a decision by itself.
+
+So we can explicitly mention the conditions 
+
+#### Try 4
+```{r Mg Test, With Batch, With Contrast high vs base}
+# Do the DeSeq2 test
+# c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
+test_for="Mg_mM_Levels"
+DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ",test_for," + batchNumber"))
+differentialGeneAnalResults<-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Mg <- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod ="fdr",  contrast = c(test_for,"highMg","baseMg"))
+res_Mg
+```
+
+#### Try 5
+```{r Mg Test, With Batch, With Contrast low vs base}
+# Do the DeSeq2 test
+# c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
+test_for="Mg_mM_Levels"
+DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ",test_for," + batchNumber"))
+differentialGeneAnalResults<-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Mg <- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod ="fdr",  contrast = c(test_for,"lowMg","baseMg"))
+res_Mg
+```
+
+as one can see the outputs of try 3 and try 5 are same. i.e it is better to mention the contrast explicitly

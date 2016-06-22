@@ -23,12 +23,21 @@ q2%>%
 m<-c("rowNames","variableR",as.vector(q3[["rowNames"]]))
 q3[,m]->q4
 
+q2 %>% 
+  dplyr::filter(variableR=="baseNa")%>%
+  dplyr::filter(variableC=="baseNa")%>%
+  .$cophenetic_distanceNa %>%
+  mean(.,na.rm = TRUE)->meanBaseNa
 
+q2 %>% 
+  dplyr::filter(variableR=="highNa")%>%
+  dplyr::filter(variableC=="highNa")%>%
+  .$cophenetic_distanceNa %>%
+  mean(.,na.rm = TRUE)->meanHighNa
 
-
-
-
-
+q2 %>% 
+  .$cophenetic_distanceNa %>%
+  mean(.,na.rm = TRUE)->meanNa
 
 
 

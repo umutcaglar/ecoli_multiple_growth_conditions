@@ -11,6 +11,7 @@ calculateClusterMeans<-function(variableInput,metaInput,mainDataFrame)
                   ...=1:ncol(mainDataFrame)+1) ->mainDataFrame_tidy
   
 
+  #if(variableInput=="Na_mM_Levels"){browser()}
   mainDataFrame_tidy %>%
     mutate(cophenetic_distanceNa=ifelse(colNames==rowNames,NA,cophenetic_distance))%>%
     left_join(.,meta_variable, by=c("rowNames"="dataSet"))%>%
