@@ -132,7 +132,8 @@ $(document).ready(function () {
 <li>Mg Levels. Those tests compose of 3 distinct categories “lowMg”, “baseMg” and “highMg”</li>
 <li>Carbon Sources. Those test composes of 4 distict categories “glucose”, “glycerol”, “gluconate”, “lactate”. In addition to that the there are no shared batches</li>
 </ol>
-<p></p>
+<div id="mg-tests" class="section level3">
+<h3>Mg Tests</h3>
 <p>At first we investigate if batch has an effect. For this we can compare the results of Mg analyse with and without mentioning batch</p>
 <div id="try-1" class="section level4">
 <h4>Try 1</h4>
@@ -219,7 +220,7 @@ res_Mg</code></pre>
 ## ECB_04277 868.1807703    -0.27684824 0.3345179 -0.8276035  0.4078951 0.6946935
 ## ECB_04278   0.2128701    -0.12573139 0.4586389 -0.2741403  0.7839768        NA
 ## ECB_04279   2.5620707     0.06415203 0.3165667  0.2026494  0.8394091 0.9408753</code></pre>
-<p>As can be seen, try 2 and try 3 have different outputs; and try 3 output mentiones the test is done on “lowMg vs baseMg”, so if one do not explicitly mention the test conditions, the program automatically picks the conditions and make a decision by itself.</p>
+<p>As can be seen, try 2 and try 3 have different outputs; and try 3 output mentiones the test is done on “lowMg vs baseMg”, so if one do not explicitly mention the test conditions, the program automatically picks the conditions and make a decision by itself. It chse the first factor as base level and second factor is the one tp do the test</p>
 <p>So we can explicitly mention the conditions</p>
 </div>
 <div id="try-4" class="section level4">
@@ -280,6 +281,661 @@ res_Mg</code></pre>
 ## ECB_04278   0.2128701    -0.12573139 0.4586389 -0.2741403  0.7839768        NA
 ## ECB_04279   2.5620707     0.06415203 0.3165667  0.2026494  0.8394091 0.9408753</code></pre>
 <p>as one can see the outputs of try 3 and try 5 are same. i.e it is better to mention the contrast explicitly</p>
+</div>
+</div>
+<div id="na-tests" class="section level3">
+<h3>Na Tests</h3>
+<p>The Na tests have just have 2 different phases “baseNa” and “highNa”</p>
+<p>The first question is does contrast change something if there are just two different conditions</p>
+<div id="try-6" class="section level4">
+<h4>Try 6</h4>
+<pre class="r"><code># Do the DeSeq2 test
+# c(&quot;Mg_mM_Levels&quot;, &quot;Na_mM_Levels&quot;, &quot;growthPhase&quot;, &quot;carbonSource&quot;)
+test_for=&quot;Na_mM_Levels&quot;
+DESeq2::design(deseq_DataObj)&lt;- as.formula(paste0(&quot;~ &quot;,test_for))
+differentialGeneAnalResults&lt;-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Na &lt;- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod =&quot;fdr&quot;)
+res_Na</code></pre>
+<pre><code>## log2 fold change (MAP): Na_mM_Levels highNa vs baseNa 
+## Wald test p-value: Na_mM_Levels highNa vs baseNa 
+## DataFrame with 4279 rows and 6 columns
+##              baseMean log2FoldChange     lfcSE        stat      pvalue      padj
+##             &lt;numeric&gt;      &lt;numeric&gt; &lt;numeric&gt;   &lt;numeric&gt;   &lt;numeric&gt; &lt;numeric&gt;
+## ECB_00001   40.830894     -0.3644194 0.2975528   -1.224722 0.220680010 0.6145324
+## ECB_00002  154.981765     -0.7485389 0.3898382   -1.920127 0.054841852 0.3246567
+## ECB_00003   63.974640     -0.7581360 0.3894091   -1.946889 0.051548093 0.3137552
+## ECB_00004   70.799780     -0.8488960 0.4243610   -2.000410 0.045455981 0.2966685
+## ECB_00005    7.776502     -0.9817417 0.3760192   -2.610882 0.009030898 0.1142064
+## ...               ...            ...       ...         ...         ...       ...
+## ECB_04275   3.1587613    -0.20583153 0.2829044 -0.72756578   0.4668794 0.8236342
+## ECB_04276   2.0482919    -0.35569169 0.3172416 -1.12120124   0.2622022 0.6595076
+## ECB_04277 868.1807703    -0.34010603 0.2975533 -1.14300863   0.2530350 0.6532582
+## ECB_04278   0.2128701    -0.02711387 0.4986715 -0.05437221   0.9566386        NA
+## ECB_04279   2.5620707    -0.25340787 0.2676743 -0.94670217   0.3437906 0.7401196</code></pre>
+</div>
+<div id="try-7" class="section level4">
+<h4>Try 7</h4>
+<pre class="r"><code># Do the DeSeq2 test
+# c(&quot;Mg_mM_Levels&quot;, &quot;Na_mM_Levels&quot;, &quot;growthPhase&quot;, &quot;carbonSource&quot;)
+test_for=&quot;Na_mM_Levels&quot;
+DESeq2::design(deseq_DataObj)&lt;- as.formula(paste0(&quot;~ &quot;,test_for))
+differentialGeneAnalResults&lt;-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Na &lt;- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod =&quot;fdr&quot;, contrast = c(test_for,&quot;highNa&quot;,&quot;baseNa&quot;))
+res_Na</code></pre>
+<pre><code>## log2 fold change (MAP): Na_mM_Levels highNa vs baseNa 
+## Wald test p-value: Na_mM_Levels highNa vs baseNa 
+## DataFrame with 4279 rows and 6 columns
+##              baseMean log2FoldChange     lfcSE        stat      pvalue      padj
+##             &lt;numeric&gt;      &lt;numeric&gt; &lt;numeric&gt;   &lt;numeric&gt;   &lt;numeric&gt; &lt;numeric&gt;
+## ECB_00001   40.830894     -0.3644194 0.2975528   -1.224722 0.220680010 0.6145324
+## ECB_00002  154.981765     -0.7485389 0.3898382   -1.920127 0.054841852 0.3246567
+## ECB_00003   63.974640     -0.7581360 0.3894091   -1.946889 0.051548093 0.3137552
+## ECB_00004   70.799780     -0.8488960 0.4243610   -2.000410 0.045455981 0.2966685
+## ECB_00005    7.776502     -0.9817417 0.3760192   -2.610882 0.009030898 0.1142064
+## ...               ...            ...       ...         ...         ...       ...
+## ECB_04275   3.1587613    -0.20583153 0.2829044 -0.72756578   0.4668794 0.8236342
+## ECB_04276   2.0482919    -0.35569169 0.3172416 -1.12120124   0.2622022 0.6595076
+## ECB_04277 868.1807703    -0.34010603 0.2975533 -1.14300863   0.2530350 0.6532582
+## ECB_04278   0.2128701    -0.02711387 0.4986715 -0.05437221   0.9566386        NA
+## ECB_04279   2.5620707    -0.25340787 0.2676743 -0.94670217   0.3437906 0.7401196</code></pre>
+<p>This addition of contrast does not change anything because default chosen contrast is same with forced contrast.</p>
+<p>What happens we just add batch instead of contrast.</p>
+</div>
+<div id="try-8" class="section level4">
+<h4>Try 8</h4>
+<pre class="r"><code># Do the DeSeq2 test
+# c(&quot;Mg_mM_Levels&quot;, &quot;Na_mM_Levels&quot;, &quot;growthPhase&quot;, &quot;carbonSource&quot;)
+test_for=&quot;Na_mM_Levels&quot;
+DESeq2::design(deseq_DataObj)&lt;- as.formula(paste0(&quot;~ &quot;,test_for,&quot; + batchNumber&quot;))
+differentialGeneAnalResults&lt;-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Na &lt;- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod =&quot;fdr&quot;)
+res_Na</code></pre>
+<pre><code>## log2 fold change (MAP): batchNumber 
+## Wald test p-value: batchNumber 
+## DataFrame with 4279 rows and 6 columns
+##              baseMean log2FoldChange      lfcSE        stat       pvalue         padj
+##             &lt;numeric&gt;      &lt;numeric&gt;  &lt;numeric&gt;   &lt;numeric&gt;    &lt;numeric&gt;    &lt;numeric&gt;
+## ECB_00001   40.830894    -0.07522165 0.01224941   -6.140838 8.208703e-10 5.904563e-08
+## ECB_00002  154.981765    -0.07831387 0.01712500   -4.573072 4.806249e-06 6.445180e-05
+## ECB_00003   63.974640    -0.05909224 0.01729413   -3.416896 6.333936e-04 2.866302e-03
+## ECB_00004   70.799780    -0.05888253 0.01906686   -3.088214 2.013635e-03 7.175246e-03
+## ECB_00005    7.776502    -0.03903958 0.01585771   -2.461868 1.382156e-02 3.391431e-02
+## ...               ...            ...        ...         ...          ...          ...
+## ECB_04275   3.1587613   -0.023881643 0.01193483 -2.00100340  0.045392023  0.089691606
+## ECB_04276   2.0482919   -0.006264439 0.01323606 -0.47328593  0.636009199  0.723036726
+## ECB_04277 868.1807703   -0.041698240 0.01326181 -3.14423488  0.001665217  0.006140393
+## ECB_04278   0.2128701    0.001516727 0.02307414  0.06573275  0.947590595  0.962179950
+## ECB_04279   2.5620707   -0.025795226 0.01103555 -2.33746560  0.019414988  0.044979274</code></pre>
+<p>and what happens if we switch the order of batch What happens we just add batch instead of contrast.</p>
+</div>
+<div id="try-9" class="section level4">
+<h4>Try 9</h4>
+<pre class="r"><code># Do the DeSeq2 test
+# c(&quot;Mg_mM_Levels&quot;, &quot;Na_mM_Levels&quot;, &quot;growthPhase&quot;, &quot;carbonSource&quot;)
+test_for=&quot;Na_mM_Levels&quot;
+DESeq2::design(deseq_DataObj)&lt;- as.formula(paste0(&quot;~ &quot;,&quot;batchNumber + &quot;,test_for))
+differentialGeneAnalResults&lt;-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Na &lt;- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod =&quot;fdr&quot;)
+res_Na</code></pre>
+<pre><code>## log2 fold change (MAP): Na_mM_Levels highNa vs baseNa 
+## Wald test p-value: Na_mM_Levels highNa vs baseNa 
+## DataFrame with 4279 rows and 6 columns
+##              baseMean log2FoldChange     lfcSE        stat      pvalue      padj
+##             &lt;numeric&gt;      &lt;numeric&gt; &lt;numeric&gt;   &lt;numeric&gt;   &lt;numeric&gt; &lt;numeric&gt;
+## ECB_00001   40.830894     -0.5178955 0.2750467   -1.882937 0.059708948 0.3170529
+## ECB_00002  154.981765     -0.8576842 0.3770202   -2.274902 0.022911787 0.1861287
+## ECB_00003   63.974640     -0.8655849 0.3819732   -2.266088 0.023446005 0.1892977
+## ECB_00004   70.799780     -0.9461900 0.4182433   -2.262296 0.023679148 0.1903997
+## ECB_00005    7.776502     -1.0685647 0.3709132   -2.880902 0.003965388 0.0629985
+## ...               ...            ...       ...         ...         ...       ...
+## ECB_04275   3.1587613    -0.25202243 0.2803495 -0.89895816   0.3686749 0.7468274
+## ECB_04276   2.0482919    -0.36737153 0.3170366 -1.15876694   0.2465512 0.6305329
+## ECB_04277 868.1807703    -0.45019980 0.2938313 -1.53217082   0.1254803 0.4505875
+## ECB_04278   0.2128701    -0.02183223 0.4970547 -0.04392319   0.9649656        NA
+## ECB_04279   2.5620707    -0.28997125 0.2604310 -1.11342812   0.2655246 0.6542633</code></pre>
+<p>Try 8, Try 9 and Try 7 all have different results. Which means batch has an effect and the order of batches is important. If the last parameter in formula is batch (Try 8) the code does “log2 fold change (MAP): batchNumber”, if the last parameter in formula is Na_mM_Levels (Try 9) the code does “log2 fold change (MAP): Na_mM_Levels highNa vs baseNa”. Both of the results are different then Try 6 so even if we look at “log2 fold change (MAP): Na_mM_Levels highNa vs baseNa” for Try 7 and Try 9 batch changes results.</p>
+<p>Adding the contrast parameters explicitly will not change the result but make the process safer. Try 9 gives same results with Try 10</p>
+</div>
+<div id="try-10" class="section level4">
+<h4>Try 10</h4>
+<pre class="r"><code># Do the DeSeq2 test
+# c(&quot;Mg_mM_Levels&quot;, &quot;Na_mM_Levels&quot;, &quot;growthPhase&quot;, &quot;carbonSource&quot;)
+test_for=&quot;Na_mM_Levels&quot;
+DESeq2::design(deseq_DataObj)&lt;- as.formula(paste0(&quot;~ &quot;,&quot;batchNumber + &quot;,test_for))
+differentialGeneAnalResults&lt;-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Na &lt;- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod =&quot;fdr&quot;, contrast = c(test_for,&quot;highNa&quot;,&quot;baseNa&quot;))
+res_Na</code></pre>
+<pre><code>## log2 fold change (MAP): Na_mM_Levels highNa vs baseNa 
+## Wald test p-value: Na_mM_Levels highNa vs baseNa 
+## DataFrame with 4279 rows and 6 columns
+##              baseMean log2FoldChange     lfcSE        stat      pvalue      padj
+##             &lt;numeric&gt;      &lt;numeric&gt; &lt;numeric&gt;   &lt;numeric&gt;   &lt;numeric&gt; &lt;numeric&gt;
+## ECB_00001   40.830894     -0.5178955 0.2750467   -1.882937 0.059708948 0.3170529
+## ECB_00002  154.981765     -0.8576842 0.3770202   -2.274902 0.022911787 0.1861287
+## ECB_00003   63.974640     -0.8655849 0.3819732   -2.266088 0.023446005 0.1892977
+## ECB_00004   70.799780     -0.9461900 0.4182433   -2.262296 0.023679148 0.1903997
+## ECB_00005    7.776502     -1.0685647 0.3709132   -2.880902 0.003965388 0.0629985
+## ...               ...            ...       ...         ...         ...       ...
+## ECB_04275   3.1587613    -0.25202243 0.2803495 -0.89895816   0.3686749 0.7468274
+## ECB_04276   2.0482919    -0.36737153 0.3170366 -1.15876694   0.2465512 0.6305329
+## ECB_04277 868.1807703    -0.45019980 0.2938313 -1.53217082   0.1254803 0.4505875
+## ECB_04278   0.2128701    -0.02183223 0.4970547 -0.04392319   0.9649656        NA
+## ECB_04279   2.5620707    -0.28997125 0.2604310 -1.11342812   0.2655246 0.6542633</code></pre>
+<p>if we switch the contrast order from “highNa vs baseNa” to “baseNa vs highNa” we get the same results except the log changes and stats are multiplied with “-1” for all genes. See. Try 10 vs Try 11</p>
+</div>
+<div id="try-11" class="section level4">
+<h4>Try 11</h4>
+<pre class="r"><code># Do the DeSeq2 test
+# c(&quot;Mg_mM_Levels&quot;, &quot;Na_mM_Levels&quot;, &quot;growthPhase&quot;, &quot;carbonSource&quot;)
+test_for=&quot;Na_mM_Levels&quot;
+DESeq2::design(deseq_DataObj)&lt;- as.formula(paste0(&quot;~ &quot;,&quot;batchNumber + &quot;,test_for))
+differentialGeneAnalResults&lt;-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Na &lt;- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod =&quot;fdr&quot;, contrast = c(test_for,&quot;baseNa&quot;,&quot;highNa&quot;))
+res_Na</code></pre>
+<pre><code>## log2 fold change (MAP): Na_mM_Levels baseNa vs highNa 
+## Wald test p-value: Na_mM_Levels baseNa vs highNa 
+## DataFrame with 4279 rows and 6 columns
+##              baseMean log2FoldChange     lfcSE       stat      pvalue      padj
+##             &lt;numeric&gt;      &lt;numeric&gt; &lt;numeric&gt;  &lt;numeric&gt;   &lt;numeric&gt; &lt;numeric&gt;
+## ECB_00001   40.830894      0.5178955 0.2750467   1.882937 0.059708948 0.3170529
+## ECB_00002  154.981765      0.8576842 0.3770202   2.274902 0.022911787 0.1861287
+## ECB_00003   63.974640      0.8655849 0.3819732   2.266088 0.023446005 0.1892977
+## ECB_00004   70.799780      0.9461900 0.4182433   2.262296 0.023679148 0.1903997
+## ECB_00005    7.776502      1.0685647 0.3709132   2.880902 0.003965388 0.0629985
+## ...               ...            ...       ...        ...         ...       ...
+## ECB_04275   3.1587613     0.25202243 0.2803495 0.89895816   0.3686749 0.7468274
+## ECB_04276   2.0482919     0.36737153 0.3170366 1.15876694   0.2465512 0.6305329
+## ECB_04277 868.1807703     0.45019980 0.2938313 1.53217082   0.1254803 0.4505875
+## ECB_04278   0.2128701     0.02183223 0.4970547 0.04392319   0.9649656        NA
+## ECB_04279   2.5620707     0.28997125 0.2604310 1.11342812   0.2655246 0.6542633</code></pre>
+</div>
+</div>
+<div id="carbon-tests" class="section level3">
+<h3>Carbon Tests</h3>
+<p>Carbon is an interesting case because none of the different carbon sources shares batches</p>
+<p>So lets compare two codes (Try 12 and Try 13) one without batch in design formula and one with batch in design formula. Initial expectation is to give same results since there is no shared batch between glycerol and glucose data</p>
+<div id="try-12" class="section level4">
+<h4>Try 12</h4>
+<pre class="r"><code># Do the DeSeq2 test
+# c(&quot;Mg_mM_Levels&quot;, &quot;Na_mM_Levels&quot;, &quot;growthPhase&quot;, &quot;carbonSource&quot;)
+test_for=&quot;carbonSource&quot;
+DESeq2::design(deseq_DataObj)&lt;- as.formula(paste0(&quot;~ &quot;,test_for))
+differentialGeneAnalResults&lt;-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Carbon &lt;- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod =&quot;fdr&quot;, contrast = c(test_for,&quot;glycerol&quot;,&quot;glucose&quot;))
+res_Carbon</code></pre>
+<pre><code>## log2 fold change (MAP): carbonSource glycerol vs glucose 
+## Wald test p-value: carbonSource glycerol vs glucose 
+## DataFrame with 4279 rows and 6 columns
+##              baseMean log2FoldChange     lfcSE       stat     pvalue      padj
+##             &lt;numeric&gt;      &lt;numeric&gt; &lt;numeric&gt;  &lt;numeric&gt;  &lt;numeric&gt; &lt;numeric&gt;
+## ECB_00001   40.830894     0.14198634 0.2513614  0.5648692  0.5721627 0.8614650
+## ECB_00002  154.981765    -0.19825751 0.3491959 -0.5677544  0.5702018 0.8614650
+## ECB_00003   63.974640    -0.10743162 0.3478250 -0.3088668  0.7574228 0.9332701
+## ECB_00004   70.799780     0.06085039 0.3854094  0.1578851  0.8745474 0.9695697
+## ECB_00005    7.776502    -0.10635547 0.3151754 -0.3374485  0.7357788 0.9266018
+## ...               ...            ...       ...        ...        ...       ...
+## ECB_04275   3.1587613    -0.09036672 0.2272066 -0.3977294 0.69082969 0.9115125
+## ECB_04276   2.0482919    -0.15726514 0.2633581 -0.5971532 0.55040510 0.8547482
+## ECB_04277 868.1807703    -0.60503534 0.2553961 -2.3690081 0.01783587 0.1814438
+## ECB_04278   0.2128701     0.24262065 0.4920094  0.4931220 0.62192640        NA
+## ECB_04279   2.5620707    -0.04759046 0.2160409 -0.2202845 0.82564956 0.9524910</code></pre>
+</div>
+<div id="try-13" class="section level4">
+<h4>Try 13</h4>
+<pre class="r"><code># Do the DeSeq2 test
+# c(&quot;Mg_mM_Levels&quot;, &quot;Na_mM_Levels&quot;, &quot;growthPhase&quot;, &quot;carbonSource&quot;)
+test_for=&quot;carbonSource&quot;
+DESeq2::design(deseq_DataObj)&lt;- as.formula(paste0(&quot;~ &quot;,&quot;batchNumber + &quot;,test_for))
+differentialGeneAnalResults&lt;-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Carbon &lt;- DESeq2::results(object = differentialGeneAnalResults, 
+                              pAdjustMethod =&quot;fdr&quot;, 
+                              contrast = c(test_for,&quot;glycerol&quot;,&quot;glucose&quot;))
+res_Carbon</code></pre>
+<pre><code>## log2 fold change (MAP): carbonSource glycerol vs glucose 
+## Wald test p-value: carbonSource glycerol vs glucose 
+## DataFrame with 4279 rows and 6 columns
+##              baseMean log2FoldChange     lfcSE       stat       pvalue        padj
+##             &lt;numeric&gt;      &lt;numeric&gt; &lt;numeric&gt;  &lt;numeric&gt;    &lt;numeric&gt;   &lt;numeric&gt;
+## ECB_00001   40.830894     -0.3457165 0.2416872  -1.430430   0.15259378   0.3469875
+## ECB_00002  154.981765     -0.6375859 0.3569755  -1.786077   0.07408672   0.2312168
+## ECB_00003   63.974640     -0.4680526 0.3633090  -1.288304   0.19763999   0.4025257
+## ECB_00004   70.799780     -0.2751037 0.4045196  -0.680075   0.49645695   0.6902459
+## ECB_00005    7.776502     -0.3734928 0.3298029  -1.132473   0.25743576   0.4683126
+## ...               ...            ...       ...        ...          ...         ...
+## ECB_04275   3.1587613     -0.2700816 0.2345115 -1.1516774 0.2494536586 0.461441906
+## ECB_04276   2.0482919     -0.2036367 0.2779609 -0.7326090 0.4637969107 0.659455979
+## ECB_04277 868.1807703     -0.9541931 0.2668622 -3.5756024 0.0003494223 0.007837044
+## ECB_04278   0.2128701      0.2881232 0.5251894  0.5486082 0.5832743723          NA
+## ECB_04279   2.5620707     -0.1992492 0.2192410 -0.9088137 0.3634484720 0.574215633</code></pre>
+<p>But on the contrary to expectation batch effects the results. This is because There are some corrections within glucose and glycerol data. But if we design an experiment with “fake_batch” column which is one for all glucose, 2 for all glycerol. 3 for all gluconate and 4 for all lactate; adding batch will produce an error</p>
+</div>
+<div id="try-14" class="section level4">
+<h4>Try 14</h4>
+<pre class="r"><code># # Do the DeSeq2 test
+# # c(&quot;Mg_mM_Levels&quot;, &quot;Na_mM_Levels&quot;, &quot;growthPhase&quot;, &quot;carbonSource&quot;)
+# test_for=&quot;carbonSource&quot;
+# DESeq2::design(deseq_DataObj)&lt;- as.formula(paste0(&quot;~ &quot;,&quot;fake_batch + &quot;,test_for))
+# differentialGeneAnalResults&lt;-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+# res_Carbon &lt;- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod =&quot;fdr&quot;, contrast = c(test_for,&quot;glycerol&quot;,&quot;glucose&quot;))
+# res_Carbon</code></pre>
+<p>There is an additional problem about “fdr” adjusted p values. Let’s keep giing on carbonSource test with batch and test for glycerol vs glucose (Try 13). lets covert the result to a data frame and add a new column named “padj2” in which we add the “fdr” adjusted p values with p.adjust function and compare this colum with “padj” column generated by DeSeq</p>
+</div>
+<div id="try-14-1" class="section level4">
+<h4>Try 14 ++</h4>
+<pre class="r"><code># Control of fdr adjusted p_values
+res_Carbon_df&lt;-as.data.frame(res_Carbon)
+res_Carbon_df %&gt;%
+  dplyr::mutate(padj2=p.adjust(p = pvalue,method = &quot;fdr&quot;))%&gt;%
+  dplyr::select(padj,padj2)-&gt;pAdjCheck
+
+head(pAdjCheck)</code></pre>
+<pre><code>##        padj     padj2
+## 1 0.3469875 0.4010983
+## 2 0.2312168 0.2704005
+## 3 0.4025257 0.4623499
+## 4 0.6902459 0.7649679
+## 5 0.4683126 0.5335987
+## 6 0.4747719 0.5407221</code></pre>
+<p>As can be seen the padj values are not consistent. The reason of this is “cooksCutoff” and “independentFiltering” options of deseq2::results function. The default choices for those functions somehow cut some of the samples out. If we do not cut those samples out the results will be same.</p>
+</div>
+<div id="try-15" class="section level4">
+<h4>Try 15++</h4>
+<pre class="r"><code>test_for=&quot;carbonSource&quot;
+DESeq2::design(deseq_DataObj)&lt;- as.formula(paste0(&quot;~ &quot;,&quot;batchNumber + &quot;,test_for))
+differentialGeneAnalResults&lt;-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Carbon &lt;- DESeq2::results(object = differentialGeneAnalResults, 
+                              pAdjustMethod =&quot;fdr&quot;, 
+                              contrast = c(test_for,&quot;glycerol&quot;,&quot;glucose&quot;),
+                              independentFiltering = FALSE,
+                              cooksCutoff = FALSE)
+res_Carbon</code></pre>
+<pre><code>## log2 fold change (MAP): carbonSource glycerol vs glucose 
+## Wald test p-value: carbonSource glycerol vs glucose 
+## DataFrame with 4279 rows and 6 columns
+##              baseMean log2FoldChange     lfcSE       stat       pvalue        padj
+##             &lt;numeric&gt;      &lt;numeric&gt; &lt;numeric&gt;  &lt;numeric&gt;    &lt;numeric&gt;   &lt;numeric&gt;
+## ECB_00001   40.830894     -0.3457165 0.2416872  -1.430430   0.15259378   0.4010983
+## ECB_00002  154.981765     -0.6375859 0.3569755  -1.786077   0.07408672   0.2704005
+## ECB_00003   63.974640     -0.4680526 0.3633090  -1.288304   0.19763999   0.4623499
+## ECB_00004   70.799780     -0.2751037 0.4045196  -0.680075   0.49645695   0.7649679
+## ECB_00005    7.776502     -0.3734928 0.3298029  -1.132473   0.25743576   0.5335987
+## ...               ...            ...       ...        ...          ...         ...
+## ECB_04275   3.1587613     -0.2700816 0.2345115 -1.1516774 0.2494536586 0.525722355
+## ECB_04276   2.0482919     -0.2036367 0.2779609 -0.7326090 0.4637969107 0.734009992
+## ECB_04277 868.1807703     -0.9541931 0.2668622 -3.5756024 0.0003494223 0.009275969
+## ECB_04278   0.2128701      0.2881232 0.5251894  0.5486082 0.5832743723 0.823015737
+## ECB_04279   2.5620707     -0.1992492 0.2192410 -0.9088137 0.3634484720 0.645521619</code></pre>
+<pre class="r"><code>res_Carbon_df&lt;-as.data.frame(res_Carbon)
+res_Carbon_df %&gt;%
+  dplyr::mutate(padj2=p.adjust(p = pvalue,method = &quot;fdr&quot;))%&gt;%
+  dplyr::select(padj,padj2)-&gt;pAdjCheck
+
+head(pAdjCheck)</code></pre>
+<pre><code>##        padj     padj2
+## 1 0.4010983 0.4010983
+## 2 0.2704005 0.2704005
+## 3 0.4623499 0.4623499
+## 4 0.7649679 0.7649679
+## 5 0.5335987 0.5335987
+## 6 0.5407221 0.5407221</code></pre>
+<p>Now the padj and pad2 are same!</p>
+</div>
+</div>
+<div id="compare-initial-data-sets" class="section level3">
+<h3>Compare initial data sets</h3>
+<p>Then the final question is what will happen if I use a portion of the data. For this I am going to run Mg test with batch (batchNumber + test_for) with contrast (high vs base) twice</p>
+<ol style="list-style-type: decimal">
+<li>Once for all data (Try 15)</li>
+<li>Once for previously filtered high vs base mg data (Try 16)</li>
+</ol>
+<p>To see the consistancy of the results, I forced all size factors to be 1 for all samples in Try 15 and Try 16.</p>
+<div id="try-16" class="section level4">
+<h4>Try 16</h4>
+<pre class="r"><code>saveFiles=TRUE
+runDeSeqForDifExp=TRUE
+# The data filtering function that controls sub functions.
+mainData=filter_data(dataType = &quot;mrna&quot;, # can be &quot;rna&quot;, &quot;mrna&quot;, &quot;protein&quot;, &quot;protein_wo_NA&quot;
+                     badDataSet = &quot;set00&quot;, # can be &quot;set00&quot;,set01&quot;,&quot;set02&quot;, &quot;set03&quot;
+                     # referenceParameters can be a vector like
+                     # c(&quot;growthPhase&quot;, &quot;Mg_mM_Levels&quot;, &quot;Na_mM_Levels&quot;, &quot;carbonSource&quot;, &quot;experiment&quot;)
+                     referenceParameters=c(&quot;growthPhase&quot;,
+                                           &quot;Mg_mM_Levels&quot;,
+                                           &quot;Na_mM_Levels&quot;,
+                                           &quot;carbonSource&quot;,
+                                           &quot;experiment&quot;),
+                     # referenceLevels can be a vector like
+                     # c(&quot;exponential&quot;, &quot;baseMg&quot;, &quot;baseNa&quot;, &quot;glucose&quot;, &quot;glucose_time_course&quot;)
+                     referenceLevels=c(&quot;exponential&quot;,
+                                       &quot;baseMg&quot;,
+                                       &quot;baseNa&quot;,
+                                       &quot;glucose&quot;,
+                                       &quot;glucose_time_course&quot;),
+                     experimentVector = c(&quot;allEx&quot;),
+                     # can be &quot;Stc&quot;,&quot;Ytc&quot;,&quot;Nas&quot;,&quot;Agr&quot;,&quot;Ngr&quot;,&quot;Mgl&quot;,&quot;Mgh&quot; // &quot;allEx&quot;
+                     carbonSourceVector = &quot;SYAN&quot;, # can be any sub combination of &quot;SYAN&quot;
+                     MgLevelVector = c(&quot;allMg&quot;), # can be &quot;lowMg&quot;,&quot;baseMg&quot;,&quot;highMg&quot; // &quot;allMg&quot;
+                     NaLevelVector = c(&quot;allNa&quot;), # can be &quot;baseNa&quot;,&quot;highNa&quot; // &quot;allNa&quot;
+                     # can be &quot;exponential&quot;,&quot;stationary&quot;,&quot;late_stationary&quot; // &quot;allPhase&quot;
+                     growthPhaseVector = c(&quot;allPhase&quot;),
+                     filterGenes = &quot;noFilter&quot;, # can be &quot;noFilter&quot;, &quot;meanFilter&quot;, &quot;maxFilter&quot;, &quot;sdFilter&quot;
+                     threshold=NA, # the threshold value for &quot;meanFilter&quot;, &quot;maxFilter&quot;, &quot;sdFilter&quot;
+                     roundData=TRUE,
+                     sumTechnicalReplicates=TRUE,
+                     deSeqSfChoice= &quot;noSf&quot;, # can be &quot;regSf&quot;, &quot;p1Sf&quot;, &quot;noSf&quot;
+                     normalizationMethodChoice= &quot;noNorm&quot;) # can be &quot;vst&quot;, &quot;rlog&quot;, &quot;log10&quot;, &quot;noNorm&quot;</code></pre>
+<pre><code>## Warning in objectName$sumTechRep = &quot;trT&quot;: Coercing LHS to a list</code></pre>
+<pre><code>## Joining by: &quot;gene_Type&quot;
+## Joining by: &quot;gene_Type&quot;</code></pre>
+<pre><code>## converting counts to integer mode</code></pre>
+<pre class="r"><code>###*****************************
+
+
+###*****************************
+#Decompose the container
+deseq_DataObj=mainData[[1]]
+objectName=mainData[[2]]
+###*****************************
+
+
+###*****************************
+# Do the DeSeq2 test
+# c(&quot;Mg_mM_Levels&quot;, &quot;Na_mM_Levels&quot;, &quot;growthPhase&quot;, &quot;carbonSource&quot;)
+test_for=&quot;Mg_mM_Levels&quot;
+DESeq2::design(deseq_DataObj)&lt;- as.formula(paste0(&quot;~ &quot;,&quot;batchNumber + &quot;,test_for))
+differentialGeneAnalResults&lt;-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Mg &lt;- DESeq2::results(object = differentialGeneAnalResults, 
+                          pAdjustMethod =&quot;fdr&quot;,  
+                          contrast = c(test_for,&quot;highMg&quot;,&quot;baseMg&quot;))
+res_Mg</code></pre>
+<pre><code>## log2 fold change (MAP): Mg_mM_Levels highMg vs baseMg 
+## Wald test p-value: Mg_mM_Levels highMg vs baseMg 
+## DataFrame with 4279 rows and 6 columns
+##               baseMean log2FoldChange     lfcSE       stat     pvalue      padj
+##              &lt;numeric&gt;      &lt;numeric&gt; &lt;numeric&gt;  &lt;numeric&gt;  &lt;numeric&gt; &lt;numeric&gt;
+## ECB_00001     81.27632     -0.3749647 0.4770836 -0.7859519  0.4318957 0.8717044
+## ECB_00002    499.30921     -0.5395062 0.5736097 -0.9405458  0.3469376 0.8400511
+## ECB_00003    200.96711     -0.6143129 0.5793964 -1.0602637  0.2890246 0.8017594
+## ECB_00004    228.03947     -0.8432680 0.6032288 -1.3979238  0.1621359 0.6879389
+## ECB_00005     23.14474     -0.8306495 0.5803417 -1.4313112  0.1523411 0.6794285
+## ...                ...            ...       ...        ...        ...       ...
+## ECB_04275    7.7828947      0.2054514 0.5307525  0.3870946 0.69868619 0.9470520
+## ECB_04276    4.4276316      0.9883787 0.5362579  1.8431032 0.06531394 0.5132875
+## ECB_04277 1246.2171053      0.3251802 0.4265676  0.7623181 0.44587015 0.8782159
+## ECB_04278    0.4736842      0.1899814 0.6770279  0.2806109 0.77900888 0.9686270
+## ECB_04279    5.9736842      0.4376075 0.5235989  0.8357686 0.40328512 0.8605096</code></pre>
+<pre class="r"><code>###*****************************</code></pre>
+</div>
+<div id="try-17" class="section level4">
+<h4>Try 17</h4>
+<pre class="r"><code>###*****************************
+saveFiles=TRUE
+runDeSeqForDifExp=TRUE
+# The data filtering function that controls sub functions.
+mainData=filter_data(dataType = &quot;mrna&quot;, # can be &quot;rna&quot;, &quot;mrna&quot;, &quot;protein&quot;, &quot;protein_wo_NA&quot;
+                     badDataSet = &quot;set00&quot;, # can be &quot;set00&quot;,set01&quot;,&quot;set02&quot;, &quot;set03&quot;
+                     # referenceParameters can be a vector like
+                     # c(&quot;growthPhase&quot;, &quot;Mg_mM_Levels&quot;, &quot;Na_mM_Levels&quot;, &quot;carbonSource&quot;, &quot;experiment&quot;)
+                     referenceParameters=c(&quot;growthPhase&quot;,
+                                           &quot;Mg_mM_Levels&quot;,
+                                           &quot;Na_mM_Levels&quot;,
+                                           &quot;carbonSource&quot;,
+                                           &quot;experiment&quot;),
+                     # referenceLevels can be a vector like
+                     # c(&quot;exponential&quot;, &quot;baseMg&quot;, &quot;baseNa&quot;, &quot;glucose&quot;, &quot;glucose_time_course&quot;)
+                     referenceLevels=c(&quot;exponential&quot;,
+                                       &quot;baseMg&quot;,
+                                       &quot;baseNa&quot;,
+                                       &quot;glucose&quot;,
+                                       &quot;glucose_time_course&quot;),
+                     experimentVector = c(&quot;allEx&quot;),
+                     # can be &quot;Stc&quot;,&quot;Ytc&quot;,&quot;Nas&quot;,&quot;Agr&quot;,&quot;Ngr&quot;,&quot;Mgl&quot;,&quot;Mgh&quot; // &quot;allEx&quot;
+                     carbonSourceVector = &quot;SYAN&quot;, # can be any sub combination of &quot;SYAN&quot;
+                     MgLevelVector = c(&quot;baseMg&quot;, &quot;highMg&quot;), # can be &quot;lowMg&quot;,&quot;baseMg&quot;,&quot;highMg&quot; // &quot;allMg&quot;
+                     NaLevelVector = c(&quot;allNa&quot;), # can be &quot;baseNa&quot;,&quot;highNa&quot; // &quot;allNa&quot;
+                     # can be &quot;exponential&quot;,&quot;stationary&quot;,&quot;late_stationary&quot; // &quot;allPhase&quot;
+                     growthPhaseVector = c(&quot;allPhase&quot;),
+                     filterGenes = &quot;noFilter&quot;, # can be &quot;noFilter&quot;, &quot;meanFilter&quot;, &quot;maxFilter&quot;, &quot;sdFilter&quot;
+                     threshold=NA, # the threshold value for &quot;meanFilter&quot;, &quot;maxFilter&quot;, &quot;sdFilter&quot;
+                     roundData=TRUE,
+                     sumTechnicalReplicates=TRUE,
+                     deSeqSfChoice= &quot;noSf&quot;, # can be &quot;regSf&quot;, &quot;p1Sf&quot;, &quot;noSf&quot;
+                     normalizationMethodChoice= &quot;noNorm&quot;) # can be &quot;vst&quot;, &quot;rlog&quot;, &quot;log10&quot;, &quot;noNorm&quot;</code></pre>
+<pre><code>## Warning in objectName$sumTechRep = &quot;trT&quot;: Coercing LHS to a list</code></pre>
+<pre><code>## Warning in completeMgLevelVector == MgLevelVector: longer object length is not a multiple of shorter object
+## length
+
+## Warning in completeMgLevelVector == MgLevelVector: longer object length is not a multiple of shorter object
+## length</code></pre>
+<pre><code>## Joining by: &quot;gene_Type&quot;</code></pre>
+<pre><code>## Warning in pick_experiments(dataInput = mainData_internal, experimentVector = experimentVector): the following
+## required conditions does not exist in data MgSO4_stress_low</code></pre>
+<pre><code>## Warning in completeExperimentVector == experimentVector: longer object length is not a multiple of shorter
+## object length
+
+## Warning in completeExperimentVector == experimentVector: longer object length is not a multiple of shorter
+## object length</code></pre>
+<pre><code>## Warning in completeMgLevelVector == MgLevelVector: longer object length is not a multiple of shorter object
+## length
+
+## Warning in completeMgLevelVector == MgLevelVector: longer object length is not a multiple of shorter object
+## length</code></pre>
+<pre><code>## Joining by: &quot;gene_Type&quot;</code></pre>
+<pre><code>## converting counts to integer mode</code></pre>
+<pre class="r"><code>###*****************************
+
+
+###*****************************
+#Decompose the container
+deseq_DataObj=mainData[[1]]
+objectName=mainData[[2]]
+###*****************************
+
+
+###*****************************
+# Do the DeSeq2 test
+# c(&quot;Mg_mM_Levels&quot;, &quot;Na_mM_Levels&quot;, &quot;growthPhase&quot;, &quot;carbonSource&quot;)
+test_for=&quot;Mg_mM_Levels&quot;
+DESeq2::design(deseq_DataObj)&lt;- as.formula(paste0(&quot;~ &quot;,&quot;batchNumber + &quot;,test_for))
+differentialGeneAnalResults&lt;-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Mg &lt;- DESeq2::results(object = differentialGeneAnalResults, 
+                          pAdjustMethod =&quot;fdr&quot;,  
+                          contrast = c(test_for,&quot;highMg&quot;,&quot;baseMg&quot;))
+res_Mg</code></pre>
+<pre><code>## log2 fold change (MAP): Mg_mM_Levels highMg vs baseMg 
+## Wald test p-value: Mg_mM_Levels highMg vs baseMg 
+## DataFrame with 4279 rows and 6 columns
+##               baseMean log2FoldChange     lfcSE       stat     pvalue      padj
+##              &lt;numeric&gt;      &lt;numeric&gt; &lt;numeric&gt;  &lt;numeric&gt;  &lt;numeric&gt; &lt;numeric&gt;
+## ECB_00001    100.81897     -0.3184539 0.4925759 -0.6465072  0.5179509 0.9063843
+## ECB_00002    622.99138     -0.4046814 0.5739955 -0.7050253  0.4807945 0.8957287
+## ECB_00003    246.66379     -0.4568651 0.5742579 -0.7955748  0.4262792 0.8833359
+## ECB_00004    281.21552     -0.7170747 0.6009620 -1.1932114  0.2327866 0.7688317
+## ECB_00005     28.49138     -0.7569196 0.5902674 -1.2823334  0.1997257 0.7374894
+## ...                ...            ...       ...        ...        ...       ...
+## ECB_04275    9.5862069      0.1692372 0.5400868  0.3133518 0.75401340 0.9668187
+## ECB_04276    5.4310345      0.9970595 0.5346992  1.8647111 0.06222191 0.5321878
+## ECB_04277 1490.2844828      0.3856065 0.4447329  0.8670520 0.38591354 0.8695503
+## ECB_04278    0.5948276      0.2335123 0.6470220  0.3609032 0.71817180 0.9622308
+## ECB_04279    7.2327586      0.5773123 0.5211119  1.1078470 0.26792789 0.8000172</code></pre>
+<pre class="r"><code>###*****************************</code></pre>
+<p>It seems the results are different although the size factors are same. So non tested samples also have an effect on results.</p>
+<p>then the question is might “cooksCutoff” and “independentFiltering” be the reasons for the difference.</p>
+</div>
+<div id="try-18" class="section level4">
+<h4>Try 18</h4>
+<pre class="r"><code>saveFiles=TRUE
+runDeSeqForDifExp=TRUE
+# The data filtering function that controls sub functions.
+mainData=filter_data(dataType = &quot;mrna&quot;, # can be &quot;rna&quot;, &quot;mrna&quot;, &quot;protein&quot;, &quot;protein_wo_NA&quot;
+                     badDataSet = &quot;set00&quot;, # can be &quot;set00&quot;,set01&quot;,&quot;set02&quot;, &quot;set03&quot;
+                     # referenceParameters can be a vector like
+                     # c(&quot;growthPhase&quot;, &quot;Mg_mM_Levels&quot;, &quot;Na_mM_Levels&quot;, &quot;carbonSource&quot;, &quot;experiment&quot;)
+                     referenceParameters=c(&quot;growthPhase&quot;,
+                                           &quot;Mg_mM_Levels&quot;,
+                                           &quot;Na_mM_Levels&quot;,
+                                           &quot;carbonSource&quot;,
+                                           &quot;experiment&quot;),
+                     # referenceLevels can be a vector like
+                     # c(&quot;exponential&quot;, &quot;baseMg&quot;, &quot;baseNa&quot;, &quot;glucose&quot;, &quot;glucose_time_course&quot;)
+                     referenceLevels=c(&quot;exponential&quot;,
+                                       &quot;baseMg&quot;,
+                                       &quot;baseNa&quot;,
+                                       &quot;glucose&quot;,
+                                       &quot;glucose_time_course&quot;),
+                     experimentVector = c(&quot;allEx&quot;),
+                     # can be &quot;Stc&quot;,&quot;Ytc&quot;,&quot;Nas&quot;,&quot;Agr&quot;,&quot;Ngr&quot;,&quot;Mgl&quot;,&quot;Mgh&quot; // &quot;allEx&quot;
+                     carbonSourceVector = &quot;SYAN&quot;, # can be any sub combination of &quot;SYAN&quot;
+                     MgLevelVector = c(&quot;allMg&quot;), # can be &quot;lowMg&quot;,&quot;baseMg&quot;,&quot;highMg&quot; // &quot;allMg&quot;
+                     NaLevelVector = c(&quot;allNa&quot;), # can be &quot;baseNa&quot;,&quot;highNa&quot; // &quot;allNa&quot;
+                     # can be &quot;exponential&quot;,&quot;stationary&quot;,&quot;late_stationary&quot; // &quot;allPhase&quot;
+                     growthPhaseVector = c(&quot;allPhase&quot;),
+                     filterGenes = &quot;noFilter&quot;, # can be &quot;noFilter&quot;, &quot;meanFilter&quot;, &quot;maxFilter&quot;, &quot;sdFilter&quot;
+                     threshold=NA, # the threshold value for &quot;meanFilter&quot;, &quot;maxFilter&quot;, &quot;sdFilter&quot;
+                     roundData=TRUE,
+                     sumTechnicalReplicates=TRUE,
+                     deSeqSfChoice= &quot;noSf&quot;, # can be &quot;regSf&quot;, &quot;p1Sf&quot;, &quot;noSf&quot;
+                     normalizationMethodChoice= &quot;noNorm&quot;) # can be &quot;vst&quot;, &quot;rlog&quot;, &quot;log10&quot;, &quot;noNorm&quot;</code></pre>
+<pre><code>## Warning in objectName$sumTechRep = &quot;trT&quot;: Coercing LHS to a list</code></pre>
+<pre><code>## Joining by: &quot;gene_Type&quot;
+## Joining by: &quot;gene_Type&quot;</code></pre>
+<pre><code>## converting counts to integer mode</code></pre>
+<pre class="r"><code>###*****************************
+
+
+###*****************************
+#Decompose the container
+deseq_DataObj=mainData[[1]]
+objectName=mainData[[2]]
+###*****************************
+
+
+###*****************************
+# Do the DeSeq2 test
+# c(&quot;Mg_mM_Levels&quot;, &quot;Na_mM_Levels&quot;, &quot;growthPhase&quot;, &quot;carbonSource&quot;)
+test_for=&quot;Mg_mM_Levels&quot;
+DESeq2::design(deseq_DataObj)&lt;- as.formula(paste0(&quot;~ &quot;,&quot;batchNumber + &quot;,test_for))
+differentialGeneAnalResults&lt;-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Mg_a &lt;- DESeq2::results(object = differentialGeneAnalResults, 
+                            pAdjustMethod =&quot;fdr&quot;,  
+                            contrast = c(test_for,&quot;highMg&quot;,&quot;baseMg&quot;),
+                            independentFiltering = FALSE,
+                            cooksCutoff = FALSE)
+res_Mg_a</code></pre>
+<pre><code>## log2 fold change (MAP): Mg_mM_Levels highMg vs baseMg 
+## Wald test p-value: Mg_mM_Levels highMg vs baseMg 
+## DataFrame with 4279 rows and 6 columns
+##               baseMean log2FoldChange     lfcSE       stat     pvalue      padj
+##              &lt;numeric&gt;      &lt;numeric&gt; &lt;numeric&gt;  &lt;numeric&gt;  &lt;numeric&gt; &lt;numeric&gt;
+## ECB_00001     81.27632     -0.3749647 0.4770836 -0.7859519  0.4318957 0.9058190
+## ECB_00002    499.30921     -0.5395062 0.5736097 -0.9405458  0.3469376 0.8732694
+## ECB_00003    200.96711     -0.6143129 0.5793964 -1.0602637  0.2890246 0.8333931
+## ECB_00004    228.03947     -0.8432680 0.6032288 -1.3979238  0.1621359 0.7148320
+## ECB_00005     23.14474     -0.8306495 0.5803417 -1.4313112  0.1523411 0.7059466
+## ...                ...            ...       ...        ...        ...       ...
+## ECB_04275    7.7828947      0.2054514 0.5307525  0.3870946 0.69868619 0.9802433
+## ECB_04276    4.4276316      0.9883787 0.5362579  1.8431032 0.06531394 0.5338990
+## ECB_04277 1246.2171053      0.3251802 0.4265676  0.7623181 0.44587015 0.9126171
+## ECB_04278    0.4736842      0.1899814 0.6770279  0.2806109 0.77900888 0.9989249
+## ECB_04279    5.9736842      0.4376075 0.5235989  0.8357686 0.40328512 0.8941437</code></pre>
+<pre class="r"><code>###*****************************</code></pre>
+</div>
+<div id="try-19" class="section level4">
+<h4>Try 19</h4>
+<pre class="r"><code>###*****************************
+saveFiles=TRUE
+runDeSeqForDifExp=TRUE
+# The data filtering function that controls sub functions.
+mainData=filter_data(dataType = &quot;mrna&quot;, # can be &quot;rna&quot;, &quot;mrna&quot;, &quot;protein&quot;, &quot;protein_wo_NA&quot;
+                     badDataSet = &quot;set00&quot;, # can be &quot;set00&quot;,set01&quot;,&quot;set02&quot;, &quot;set03&quot;
+                     # referenceParameters can be a vector like
+                     # c(&quot;growthPhase&quot;, &quot;Mg_mM_Levels&quot;, &quot;Na_mM_Levels&quot;, &quot;carbonSource&quot;, &quot;experiment&quot;)
+                     referenceParameters=c(&quot;growthPhase&quot;,
+                                           &quot;Mg_mM_Levels&quot;,
+                                           &quot;Na_mM_Levels&quot;,
+                                           &quot;carbonSource&quot;,
+                                           &quot;experiment&quot;),
+                     # referenceLevels can be a vector like
+                     # c(&quot;exponential&quot;, &quot;baseMg&quot;, &quot;baseNa&quot;, &quot;glucose&quot;, &quot;glucose_time_course&quot;)
+                     referenceLevels=c(&quot;exponential&quot;,
+                                       &quot;baseMg&quot;,
+                                       &quot;baseNa&quot;,
+                                       &quot;glucose&quot;,
+                                       &quot;glucose_time_course&quot;),
+                     experimentVector = c(&quot;allEx&quot;),
+                     # can be &quot;Stc&quot;,&quot;Ytc&quot;,&quot;Nas&quot;,&quot;Agr&quot;,&quot;Ngr&quot;,&quot;Mgl&quot;,&quot;Mgh&quot; // &quot;allEx&quot;
+                     carbonSourceVector = &quot;SYAN&quot;, # can be any sub combination of &quot;SYAN&quot;
+                     MgLevelVector = c(&quot;baseMg&quot;, &quot;highMg&quot;), # can be &quot;lowMg&quot;,&quot;baseMg&quot;,&quot;highMg&quot; // &quot;allMg&quot;
+                     NaLevelVector = c(&quot;allNa&quot;), # can be &quot;baseNa&quot;,&quot;highNa&quot; // &quot;allNa&quot;
+                     # can be &quot;exponential&quot;,&quot;stationary&quot;,&quot;late_stationary&quot; // &quot;allPhase&quot;
+                     growthPhaseVector = c(&quot;allPhase&quot;),
+                     filterGenes = &quot;noFilter&quot;, # can be &quot;noFilter&quot;, &quot;meanFilter&quot;, &quot;maxFilter&quot;, &quot;sdFilter&quot;
+                     threshold=NA, # the threshold value for &quot;meanFilter&quot;, &quot;maxFilter&quot;, &quot;sdFilter&quot;
+                     roundData=TRUE,
+                     sumTechnicalReplicates=TRUE,
+                     deSeqSfChoice= &quot;noSf&quot;, # can be &quot;regSf&quot;, &quot;p1Sf&quot;, &quot;noSf&quot;
+                     normalizationMethodChoice= &quot;noNorm&quot;) # can be &quot;vst&quot;, &quot;rlog&quot;, &quot;log10&quot;, &quot;noNorm&quot;</code></pre>
+<pre><code>## Warning in objectName$sumTechRep = &quot;trT&quot;: Coercing LHS to a list</code></pre>
+<pre><code>## Warning in completeMgLevelVector == MgLevelVector: longer object length is not a multiple of shorter object
+## length
+
+## Warning in completeMgLevelVector == MgLevelVector: longer object length is not a multiple of shorter object
+## length</code></pre>
+<pre><code>## Joining by: &quot;gene_Type&quot;</code></pre>
+<pre><code>## Warning in pick_experiments(dataInput = mainData_internal, experimentVector = experimentVector): the following
+## required conditions does not exist in data MgSO4_stress_low</code></pre>
+<pre><code>## Warning in completeExperimentVector == experimentVector: longer object length is not a multiple of shorter
+## object length
+
+## Warning in completeExperimentVector == experimentVector: longer object length is not a multiple of shorter
+## object length</code></pre>
+<pre><code>## Warning in completeMgLevelVector == MgLevelVector: longer object length is not a multiple of shorter object
+## length
+
+## Warning in completeMgLevelVector == MgLevelVector: longer object length is not a multiple of shorter object
+## length</code></pre>
+<pre><code>## Joining by: &quot;gene_Type&quot;</code></pre>
+<pre><code>## converting counts to integer mode</code></pre>
+<pre class="r"><code>###*****************************
+
+
+###*****************************
+#Decompose the container
+deseq_DataObj=mainData[[1]]
+objectName=mainData[[2]]
+###*****************************
+
+
+###*****************************
+# Do the DeSeq2 test
+# c(&quot;Mg_mM_Levels&quot;, &quot;Na_mM_Levels&quot;, &quot;growthPhase&quot;, &quot;carbonSource&quot;)
+test_for=&quot;Mg_mM_Levels&quot;
+DESeq2::design(deseq_DataObj)&lt;- as.formula(paste0(&quot;~ &quot;,&quot;batchNumber + &quot;,test_for))
+differentialGeneAnalResults&lt;-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Mg_f &lt;- DESeq2::results(object = differentialGeneAnalResults, 
+                          pAdjustMethod =&quot;fdr&quot;,  
+                          contrast = c(test_for,&quot;highMg&quot;,&quot;baseMg&quot;),
+                          independentFiltering = FALSE,
+                          cooksCutoff = FALSE)
+res_Mg_f</code></pre>
+<pre><code>## log2 fold change (MAP): Mg_mM_Levels highMg vs baseMg 
+## Wald test p-value: Mg_mM_Levels highMg vs baseMg 
+## DataFrame with 4279 rows and 6 columns
+##               baseMean log2FoldChange     lfcSE       stat     pvalue      padj
+##              &lt;numeric&gt;      &lt;numeric&gt; &lt;numeric&gt;  &lt;numeric&gt;  &lt;numeric&gt; &lt;numeric&gt;
+## ECB_00001    100.81897     -0.3184539 0.4925759 -0.6465072  0.5179509 0.9243346
+## ECB_00002    622.99138     -0.4046814 0.5739955 -0.7050253  0.4807945 0.9134681
+## ECB_00003    246.66379     -0.4568651 0.5742579 -0.7955748  0.4262792 0.9008298
+## ECB_00004    281.21552     -0.7170747 0.6009620 -1.1932114  0.2327866 0.7840579
+## ECB_00005     28.49138     -0.7569196 0.5902674 -1.2823334  0.1997257 0.7520949
+## ...                ...            ...       ...        ...        ...       ...
+## ECB_04275    9.5862069      0.1692372 0.5400868  0.3133518 0.75401340 0.9853651
+## ECB_04276    5.4310345      0.9970595 0.5346992  1.8647111 0.06222191 0.5427274
+## ECB_04277 1490.2844828      0.3856065 0.4447329  0.8670520 0.38591354 0.8867712
+## ECB_04278    0.5948276      0.2335123 0.6470220  0.3609032 0.71817180 0.9806601
+## ECB_04279    7.2327586      0.5773123 0.5211119  1.1078470 0.26792789 0.8158610</code></pre>
+<pre class="r"><code>###*****************************</code></pre>
+<p>No the results of Try 18 and Try 19 are not same although size factors are same and we have the options independentFiltering = FALSE, cooksCutoff = FALSE.</p>
+</div>
 </div>
 </div>
 

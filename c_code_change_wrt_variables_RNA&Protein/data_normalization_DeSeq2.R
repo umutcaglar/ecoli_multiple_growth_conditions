@@ -71,6 +71,11 @@ mainData=filter_data(dataType = "mrna", # can be "rna", "mrna", "protein", "prot
                      sumTechnicalReplicates=TRUE,
                      deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf", "noSf"
                      normalizationMethodChoice= "noNorm") # can be "vst", "rlog", "log10", "noNorm"
+
+# DeSeq2 parameters
+test_for="carbonSource"
+test_base="glucose"
+test_contrast="glycerol"
 ###*****************************
 
 
@@ -85,18 +90,18 @@ objectName=mainData[[2]]
 # Run DESeq2 test For
 if(objectName$normalizationMethodChoice=="noNorm" & runDeSeqForDifExp)
 {
-  browser()
   ###*****************************
   # Do the DeSeq2 test
   # c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
-  test_for="carbonSource"
-  DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ",test_for," + batchNumber"))
+  DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ","batchNumber + ",test_for))
   differentialGeneAnalResults<-DESeq2::DESeq(deseq_DataObj)
-  (res <- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod ="fdr"))
+  res <- DESeq2::results(object = differentialGeneAnalResults, 
+                         pAdjustMethod ="fdr",
+                         contrast = c(test_for,test_contrast,test_base))
   mcols(res, use.names=TRUE)  
   DESeq2::summary.DESeqResults(object = res,alpha = 0.05)
   ###*****************************
-  browser()
+
   
   ###*****************************
   # Prepeare dictionaries
@@ -116,7 +121,8 @@ if(objectName$normalizationMethodChoice=="noNorm" & runDeSeqForDifExp)
   ###*****************************
   #Update objectName
   objectName$pick_data=as.character(objectName$pick_data)
-  objectName$test_for=paste0("_",test_for)
+  objectName$test_for=paste0("_batchNumber+",test_for)
+  objectName$contrast=paste0("_",test_contrast,"VS",test_base)
   ###*****************************
   
   ###*****************************
@@ -127,8 +133,6 @@ if(objectName$normalizationMethodChoice=="noNorm" & runDeSeqForDifExp)
   
   ###*****************************
   # Prepeare p value data frame
-  vs=paste(as.vector(unique(metaData[[test_for]])),collapse = "");
-  
   res_df<-as.data.frame(res)
   res_df<-cbind(id=rownames(res_df),res_df)
   res_df%>%
@@ -138,7 +142,8 @@ if(objectName$normalizationMethodChoice=="noNorm" & runDeSeqForDifExp)
   res_df %>%dplyr::mutate(pick_data=as.vector(objectName$pick_data),
                           growthPhase=as.vector(objectName$growthPhase_names),
                           test_for=test_for,
-                          vs=vs)->res_df
+                          contrast=test_contrast,
+                          base=test_base)->res_df
   
   res_df %>%
     dplyr::filter(padj<0.05, abs(log2FoldChange)>1)%>%
@@ -150,7 +155,7 @@ if(objectName$normalizationMethodChoice=="noNorm" & runDeSeqForDifExp)
   genes_0.05<-genes_0.05[listOfFilledCells]
   ###*****************************
   
-  
+
   ###*****************************
   # SAVE FILES
   if(saveFiles){

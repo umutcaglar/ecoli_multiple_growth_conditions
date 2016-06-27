@@ -108,7 +108,11 @@ We will investigate mRNA data will all possible conditions for 3 different param
 
 
 
-\clearpage
+
+
+
+
+### Mg Tests
 
 At first we investigate if batch has an effect. For this we can compare the results of Mg analyse with and without mentioning batch
 
@@ -153,7 +157,7 @@ res_Mg <- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod ="
 res_Mg
 ```
 
-As can be seen, try 2 and try 3 have different outputs; and try 3 output mentiones the test is done on "lowMg vs baseMg", so if one do not explicitly mention the test conditions, the program automatically picks the conditions and make a decision by itself.
+As can be seen, try 2 and try 3 have different outputs; and try 3 output mentiones the test is done on "lowMg vs baseMg", so if one do not explicitly mention the test conditions, the program automatically picks the conditions and make a decision by itself. It chse the first factor as base level and second factor is the one tp do the test
 
 So we can explicitly mention the conditions 
 
@@ -180,3 +184,447 @@ res_Mg
 ```
 
 as one can see the outputs of try 3 and try 5 are same. i.e it is better to mention the contrast explicitly
+
+
+
+
+
+
+
+
+
+
+
+### Na Tests
+
+The Na tests have just have 2 different phases "baseNa" and "highNa"
+
+The first question is does contrast change something if there are just two different conditions
+
+#### Try 6
+```{r Na Test, Wout Batch, Wout Contrast}
+# Do the DeSeq2 test
+# c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
+test_for="Na_mM_Levels"
+DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ",test_for))
+differentialGeneAnalResults<-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Na <- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod ="fdr")
+res_Na
+```
+
+#### Try 7
+```{r Na Test, Wout Batch, With Contrast high vs base}
+# Do the DeSeq2 test
+# c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
+test_for="Na_mM_Levels"
+DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ",test_for))
+differentialGeneAnalResults<-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Na <- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod ="fdr", contrast = c(test_for,"highNa","baseNa"))
+res_Na
+```
+
+This addition of contrast does not change anything because default chosen contrast is same with forced contrast.
+
+
+What happens we just add batch instead of contrast. 
+
+#### Try 8
+```{r Na Test, With Batch "test_for + BatchNum", Wout Contrast}
+# Do the DeSeq2 test
+# c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
+test_for="Na_mM_Levels"
+DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ",test_for," + batchNumber"))
+differentialGeneAnalResults<-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Na <- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod ="fdr")
+res_Na
+```
+
+and what happens if we switch the order of batch
+What happens we just add batch instead of contrast. 
+
+#### Try 9
+```{r Na Test, With Batch "BatchNum + test_for", Wout Contrast}
+# Do the DeSeq2 test
+# c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
+test_for="Na_mM_Levels"
+DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ","batchNumber + ",test_for))
+differentialGeneAnalResults<-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Na <- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod ="fdr")
+res_Na
+```
+
+Try 8, Try 9 and Try 7 all have different results. Which means batch has an effect and the order of batches is important. If the last parameter in formula is batch (Try 8) the code does "log2 fold change (MAP): batchNumber", if the last parameter in formula is Na_mM_Levels (Try 9) the code does "log2 fold change (MAP): Na_mM_Levels highNa vs baseNa". Both of the results are different then Try 6 so even if we look at "log2 fold change (MAP): Na_mM_Levels highNa vs baseNa" for Try 7 and Try 9 batch changes results.
+
+Adding the contrast parameters explicitly will not change the result but make the process safer. Try 9 gives same results with Try 10
+
+#### Try 10
+```{r Na Test, With Batch "BatchNum + test_for", With Contrast high vs base}
+# Do the DeSeq2 test
+# c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
+test_for="Na_mM_Levels"
+DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ","batchNumber + ",test_for))
+differentialGeneAnalResults<-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Na <- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod ="fdr", contrast = c(test_for,"highNa","baseNa"))
+res_Na
+```
+
+if we switch the contrast order from "highNa vs baseNa" to "baseNa vs highNa" we get the same results except the log changes and stats are multiplied with "-1" for all genes. See. Try 10 vs Try 11
+
+#### Try 11
+```{r Na Test, With Batch "BatchNum + test_for", With Contrast base vs high}
+# Do the DeSeq2 test
+# c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
+test_for="Na_mM_Levels"
+DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ","batchNumber + ",test_for))
+differentialGeneAnalResults<-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Na <- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod ="fdr", contrast = c(test_for,"baseNa","highNa"))
+res_Na
+```
+
+
+### Carbon Tests
+
+Carbon is an interesting case because none of the different carbon sources shares batches
+
+So lets compare two codes (Try 12 and Try 13) one without batch in design formula and one with batch in design formula. Initial expectation is to give same results since there is no shared batch between glycerol and glucose data
+
+#### Try 12
+```{r Carbon Test, Wout Batch, With Contrast glycerol vs glucose}
+# Do the DeSeq2 test
+# c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
+test_for="carbonSource"
+DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ",test_for))
+differentialGeneAnalResults<-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Carbon <- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod ="fdr", contrast = c(test_for,"glycerol","glucose"))
+res_Carbon
+```
+
+#### Try 13
+```{r Carbon Test, With Batch, With Contrast glycerol vs glucose}
+# Do the DeSeq2 test
+# c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
+test_for="carbonSource"
+DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ","batchNumber + ",test_for))
+differentialGeneAnalResults<-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Carbon <- DESeq2::results(object = differentialGeneAnalResults, 
+                              pAdjustMethod ="fdr", 
+                              contrast = c(test_for,"glycerol","glucose"))
+res_Carbon
+```
+
+But on the contrary to expectation batch effects the results. This is because There are some corrections within glucose and glycerol data. But if we design an experiment with "fake_batch" column which is one for all glucose, 2 for all glycerol. 3 for all gluconate and 4 for all lactate; adding batch will produce an error
+
+#### Try 14
+```{r Carbon Test, With FAKE batch, With Contrast glycerol vs glucose}
+
+# # Do the DeSeq2 test
+# # c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
+# test_for="carbonSource"
+# DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ","fake_batch + ",test_for))
+# differentialGeneAnalResults<-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+# res_Carbon <- DESeq2::results(object = differentialGeneAnalResults, pAdjustMethod ="fdr", contrast = c(test_for,"glycerol","glucose"))
+# res_Carbon
+
+```
+
+
+There is an additional problem about "fdr" adjusted p values. Let's keep giing on carbonSource test with batch and test for glycerol vs glucose (Try 13). lets covert the result to a data frame and add a new column named "padj2" in which we add the "fdr" adjusted p values with p.adjust function and compare this colum with "padj" column generated by DeSeq  
+
+#### Try 14 ++
+```{r PValue Control DIFFERENT, Carbon Test, With Batch, With Contrast glycerol vs glucose}
+# Control of fdr adjusted p_values
+res_Carbon_df<-as.data.frame(res_Carbon)
+res_Carbon_df %>%
+  dplyr::mutate(padj2=p.adjust(p = pvalue,method = "fdr"))%>%
+  dplyr::select(padj,padj2)->pAdjCheck
+
+head(pAdjCheck)
+```
+
+
+As can be seen the padj values are not consistent. The reason of this is "cooksCutoff" and "independentFiltering" options of deseq2::results function. The default choices for those functions somehow cut some of the samples out. If we do not cut those samples out the results will be same.
+
+#### Try 15++
+```{r PValue Control SAME, Carbon Test, With Batch, With Contrast glycerol vs glucose}
+test_for="carbonSource"
+DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ","batchNumber + ",test_for))
+differentialGeneAnalResults<-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Carbon <- DESeq2::results(object = differentialGeneAnalResults, 
+                              pAdjustMethod ="fdr", 
+                              contrast = c(test_for,"glycerol","glucose"),
+                              independentFiltering = FALSE,
+                              cooksCutoff = FALSE)
+res_Carbon
+
+res_Carbon_df<-as.data.frame(res_Carbon)
+res_Carbon_df %>%
+  dplyr::mutate(padj2=p.adjust(p = pvalue,method = "fdr"))%>%
+  dplyr::select(padj,padj2)->pAdjCheck
+
+head(pAdjCheck)
+```
+
+Now the padj and pad2 are same!
+
+
+
+
+
+
+
+
+### Compare initial data sets
+
+Then the final question is what will happen if I use a portion of the data.
+For this I am going to run Mg test with batch (batchNumber + test_for) with contrast (high vs base) twice
+
+1. Once for all data (Try 15)
+2. Once for previously filtered high vs base mg data (Try 16)
+
+To see the consistancy of the results, I forced all size factors to be 1 for all samples in Try 15 and Try 16.
+
+
+
+#### Try 16
+```{r ALL Data, Mg Test, With Batch "batch + test_for", With Contrast high vs base}
+saveFiles=TRUE
+runDeSeqForDifExp=TRUE
+# The data filtering function that controls sub functions.
+mainData=filter_data(dataType = "mrna", # can be "rna", "mrna", "protein", "protein_wo_NA"
+                     badDataSet = "set00", # can be "set00",set01","set02", "set03"
+                     # referenceParameters can be a vector like
+                     # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
+                     referenceParameters=c("growthPhase",
+                                           "Mg_mM_Levels",
+                                           "Na_mM_Levels",
+                                           "carbonSource",
+                                           "experiment"),
+                     # referenceLevels can be a vector like
+                     # c("exponential", "baseMg", "baseNa", "glucose", "glucose_time_course")
+                     referenceLevels=c("exponential",
+                                       "baseMg",
+                                       "baseNa",
+                                       "glucose",
+                                       "glucose_time_course"),
+                     experimentVector = c("allEx"),
+                     # can be "Stc","Ytc","Nas","Agr","Ngr","Mgl","Mgh" // "allEx"
+                     carbonSourceVector = "SYAN", # can be any sub combination of "SYAN"
+                     MgLevelVector = c("allMg"), # can be "lowMg","baseMg","highMg" // "allMg"
+                     NaLevelVector = c("allNa"), # can be "baseNa","highNa" // "allNa"
+                     # can be "exponential","stationary","late_stationary" // "allPhase"
+                     growthPhaseVector = c("allPhase"),
+                     filterGenes = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter"
+                     threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
+                     roundData=TRUE,
+                     sumTechnicalReplicates=TRUE,
+                     deSeqSfChoice= "noSf", # can be "regSf", "p1Sf", "noSf"
+                     normalizationMethodChoice= "noNorm") # can be "vst", "rlog", "log10", "noNorm"
+###*****************************
+
+
+###*****************************
+#Decompose the container
+deseq_DataObj=mainData[[1]]
+objectName=mainData[[2]]
+###*****************************
+
+
+###*****************************
+# Do the DeSeq2 test
+# c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
+test_for="Mg_mM_Levels"
+DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ","batchNumber + ",test_for))
+differentialGeneAnalResults<-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Mg <- DESeq2::results(object = differentialGeneAnalResults, 
+                          pAdjustMethod ="fdr",  
+                          contrast = c(test_for,"highMg","baseMg"))
+res_Mg
+###*****************************
+```
+
+
+#### Try 17
+```{r FILTERED Data with noSf, Mg Test, With Batch "batch + test_for", With Contrast high vs base}
+###*****************************
+saveFiles=TRUE
+runDeSeqForDifExp=TRUE
+# The data filtering function that controls sub functions.
+mainData=filter_data(dataType = "mrna", # can be "rna", "mrna", "protein", "protein_wo_NA"
+                     badDataSet = "set00", # can be "set00",set01","set02", "set03"
+                     # referenceParameters can be a vector like
+                     # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
+                     referenceParameters=c("growthPhase",
+                                           "Mg_mM_Levels",
+                                           "Na_mM_Levels",
+                                           "carbonSource",
+                                           "experiment"),
+                     # referenceLevels can be a vector like
+                     # c("exponential", "baseMg", "baseNa", "glucose", "glucose_time_course")
+                     referenceLevels=c("exponential",
+                                       "baseMg",
+                                       "baseNa",
+                                       "glucose",
+                                       "glucose_time_course"),
+                     experimentVector = c("allEx"),
+                     # can be "Stc","Ytc","Nas","Agr","Ngr","Mgl","Mgh" // "allEx"
+                     carbonSourceVector = "SYAN", # can be any sub combination of "SYAN"
+                     MgLevelVector = c("baseMg", "highMg"), # can be "lowMg","baseMg","highMg" // "allMg"
+                     NaLevelVector = c("allNa"), # can be "baseNa","highNa" // "allNa"
+                     # can be "exponential","stationary","late_stationary" // "allPhase"
+                     growthPhaseVector = c("allPhase"),
+                     filterGenes = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter"
+                     threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
+                     roundData=TRUE,
+                     sumTechnicalReplicates=TRUE,
+                     deSeqSfChoice= "noSf", # can be "regSf", "p1Sf", "noSf"
+                     normalizationMethodChoice= "noNorm") # can be "vst", "rlog", "log10", "noNorm"
+###*****************************
+
+
+###*****************************
+#Decompose the container
+deseq_DataObj=mainData[[1]]
+objectName=mainData[[2]]
+###*****************************
+
+
+###*****************************
+# Do the DeSeq2 test
+# c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
+test_for="Mg_mM_Levels"
+DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ","batchNumber + ",test_for))
+differentialGeneAnalResults<-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Mg <- DESeq2::results(object = differentialGeneAnalResults, 
+                          pAdjustMethod ="fdr",  
+                          contrast = c(test_for,"highMg","baseMg"))
+res_Mg
+###*****************************
+```
+
+It seems the results are different although the size factors are same. So non tested samples also have an effect on results.
+
+
+then the question is might "cooksCutoff" and "independentFiltering" be the reasons for the difference.
+
+
+#### Try 18
+```{r ALL Data Cook Cut Off and independent filtering , Mg Test, With Batch "batch + test_for", With Contrast high vs base}
+saveFiles=TRUE
+runDeSeqForDifExp=TRUE
+# The data filtering function that controls sub functions.
+mainData=filter_data(dataType = "mrna", # can be "rna", "mrna", "protein", "protein_wo_NA"
+                     badDataSet = "set00", # can be "set00",set01","set02", "set03"
+                     # referenceParameters can be a vector like
+                     # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
+                     referenceParameters=c("growthPhase",
+                                           "Mg_mM_Levels",
+                                           "Na_mM_Levels",
+                                           "carbonSource",
+                                           "experiment"),
+                     # referenceLevels can be a vector like
+                     # c("exponential", "baseMg", "baseNa", "glucose", "glucose_time_course")
+                     referenceLevels=c("exponential",
+                                       "baseMg",
+                                       "baseNa",
+                                       "glucose",
+                                       "glucose_time_course"),
+                     experimentVector = c("allEx"),
+                     # can be "Stc","Ytc","Nas","Agr","Ngr","Mgl","Mgh" // "allEx"
+                     carbonSourceVector = "SYAN", # can be any sub combination of "SYAN"
+                     MgLevelVector = c("allMg"), # can be "lowMg","baseMg","highMg" // "allMg"
+                     NaLevelVector = c("allNa"), # can be "baseNa","highNa" // "allNa"
+                     # can be "exponential","stationary","late_stationary" // "allPhase"
+                     growthPhaseVector = c("allPhase"),
+                     filterGenes = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter"
+                     threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
+                     roundData=TRUE,
+                     sumTechnicalReplicates=TRUE,
+                     deSeqSfChoice= "noSf", # can be "regSf", "p1Sf", "noSf"
+                     normalizationMethodChoice= "noNorm") # can be "vst", "rlog", "log10", "noNorm"
+###*****************************
+
+
+###*****************************
+#Decompose the container
+deseq_DataObj=mainData[[1]]
+objectName=mainData[[2]]
+###*****************************
+
+
+###*****************************
+# Do the DeSeq2 test
+# c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
+test_for="Mg_mM_Levels"
+DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ","batchNumber + ",test_for))
+differentialGeneAnalResults<-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Mg_a <- DESeq2::results(object = differentialGeneAnalResults, 
+                            pAdjustMethod ="fdr",  
+                            contrast = c(test_for,"highMg","baseMg"),
+                            independentFiltering = FALSE,
+                            cooksCutoff = FALSE)
+res_Mg_a
+###*****************************
+```
+
+
+#### Try 19
+```{r FILTERED Data Cook Cut Off and independent filtering, with noSf, Mg Test, With Batch "batch + test_for", With Contrast high vs base}
+###*****************************
+saveFiles=TRUE
+runDeSeqForDifExp=TRUE
+# The data filtering function that controls sub functions.
+mainData=filter_data(dataType = "mrna", # can be "rna", "mrna", "protein", "protein_wo_NA"
+                     badDataSet = "set00", # can be "set00",set01","set02", "set03"
+                     # referenceParameters can be a vector like
+                     # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
+                     referenceParameters=c("growthPhase",
+                                           "Mg_mM_Levels",
+                                           "Na_mM_Levels",
+                                           "carbonSource",
+                                           "experiment"),
+                     # referenceLevels can be a vector like
+                     # c("exponential", "baseMg", "baseNa", "glucose", "glucose_time_course")
+                     referenceLevels=c("exponential",
+                                       "baseMg",
+                                       "baseNa",
+                                       "glucose",
+                                       "glucose_time_course"),
+                     experimentVector = c("allEx"),
+                     # can be "Stc","Ytc","Nas","Agr","Ngr","Mgl","Mgh" // "allEx"
+                     carbonSourceVector = "SYAN", # can be any sub combination of "SYAN"
+                     MgLevelVector = c("baseMg", "highMg"), # can be "lowMg","baseMg","highMg" // "allMg"
+                     NaLevelVector = c("allNa"), # can be "baseNa","highNa" // "allNa"
+                     # can be "exponential","stationary","late_stationary" // "allPhase"
+                     growthPhaseVector = c("allPhase"),
+                     filterGenes = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter"
+                     threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
+                     roundData=TRUE,
+                     sumTechnicalReplicates=TRUE,
+                     deSeqSfChoice= "noSf", # can be "regSf", "p1Sf", "noSf"
+                     normalizationMethodChoice= "noNorm") # can be "vst", "rlog", "log10", "noNorm"
+###*****************************
+
+
+###*****************************
+#Decompose the container
+deseq_DataObj=mainData[[1]]
+objectName=mainData[[2]]
+###*****************************
+
+
+###*****************************
+# Do the DeSeq2 test
+# c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
+test_for="Mg_mM_Levels"
+DESeq2::design(deseq_DataObj)<- as.formula(paste0("~ ","batchNumber + ",test_for))
+differentialGeneAnalResults<-DESeq2::DESeq(deseq_DataObj, quiet = TRUE)
+res_Mg_f <- DESeq2::results(object = differentialGeneAnalResults, 
+                          pAdjustMethod ="fdr",  
+                          contrast = c(test_for,"highMg","baseMg"),
+                          independentFiltering = FALSE,
+                          cooksCutoff = FALSE)
+res_Mg_f
+###*****************************
+```
+
+No the results of Try 18 and Try 19 are not same although size factors are same and we have the options independentFiltering = FALSE, cooksCutoff = FALSE.
