@@ -40,32 +40,32 @@ source("../a_code_dataPreperation_RNA&Protein/data_filter_normalization_function
 
 
 RUN01=c(dataTypeChoice="mrna", phaseChoice="exponential", phaseBaseChoice="exponential", badDataSetChoice="set00", 
-        test_forChoice="carbonSource", test_contrastChoice="glucose",test_baseChoice="glycerol")
+        test_forChoice="carbonSource", test_contrastChoice="glycerol",test_baseChoice="glucose")
 RUN02=c(dataTypeChoice="mrna", phaseChoice="exponential", phaseBaseChoice="exponential", badDataSetChoice="set00", 
-        test_forChoice="carbonSource", test_contrastChoice="gluconate",test_baseChoice="glycerol")
+        test_forChoice="carbonSource", test_contrastChoice="gluconate",test_baseChoice="glucose")
 RUN03=c(dataTypeChoice="mrna", phaseChoice="exponential", phaseBaseChoice="exponential", badDataSetChoice="set00", 
-        test_forChoice="carbonSource", test_contrastChoice="lactate",test_baseChoice="glycerol")
+        test_forChoice="carbonSource", test_contrastChoice="lactate",test_baseChoice="glucose")
 
 RUN04=c(dataTypeChoice="protein", phaseChoice="exponential", phaseBaseChoice="exponential", badDataSetChoice="set00", 
-        test_forChoice="carbonSource", test_contrastChoice="glucose",test_baseChoice="glycerol")
+        test_forChoice="carbonSource", test_contrastChoice="glycerol",test_baseChoice="glucose")
 RUN05=c(dataTypeChoice="protein", phaseChoice="exponential", phaseBaseChoice="exponential", badDataSetChoice="set00", 
-        test_forChoice="carbonSource", test_contrastChoice="gluconate",test_baseChoice="glycerol")
+        test_forChoice="carbonSource", test_contrastChoice="gluconate",test_baseChoice="glucose")
 RUN06=c(dataTypeChoice="protein", phaseChoice="exponential", phaseBaseChoice="exponential", badDataSetChoice="set00", 
-        test_forChoice="carbonSource", test_contrastChoice="lactate",test_baseChoice="glycerol")
+        test_forChoice="carbonSource", test_contrastChoice="lactate",test_baseChoice="glucose")
 
 RUN07=c(dataTypeChoice="mrna", phaseChoice="stationary", phaseBaseChoice="stationary", badDataSetChoice="set00", 
-        test_forChoice="carbonSource", test_contrastChoice="glucose",test_baseChoice="glycerol")
+        test_forChoice="carbonSource", test_contrastChoice="glycerol",test_baseChoice="glucose")
 RUN08=c(dataTypeChoice="mrna", phaseChoice="stationary", phaseBaseChoice="stationary", badDataSetChoice="set00", 
-        test_forChoice="carbonSource", test_contrastChoice="gluconate",test_baseChoice="glycerol")
+        test_forChoice="carbonSource", test_contrastChoice="gluconate",test_baseChoice="glucose")
 RUN09=c(dataTypeChoice="mrna", phaseChoice="stationary", phaseBaseChoice="stationary", badDataSetChoice="set00", 
-        test_forChoice="carbonSource", test_contrastChoice="lactate",test_baseChoice="glycerol")
+        test_forChoice="carbonSource", test_contrastChoice="lactate",test_baseChoice="glucose")
 
 RUN10=c(dataTypeChoice="protein", phaseChoice="stationary", phaseBaseChoice="stationary", badDataSetChoice="set00", 
-        test_forChoice="carbonSource", test_contrastChoice="glucose",test_baseChoice="glycerol")
+        test_forChoice="carbonSource", test_contrastChoice="glycerol",test_baseChoice="glucose")
 RUN11=c(dataTypeChoice="protein", phaseChoice="stationary", phaseBaseChoice="stationary", badDataSetChoice="set00", 
-        test_forChoice="carbonSource", test_contrastChoice="gluconate",test_baseChoice="glycerol")
+        test_forChoice="carbonSource", test_contrastChoice="gluconate",test_baseChoice="glucose")
 RUN12=c(dataTypeChoice="protein", phaseChoice="stationary", phaseBaseChoice="stationary", badDataSetChoice="set00", 
-        test_forChoice="carbonSource", test_contrastChoice="lactate",test_baseChoice="glycerol")
+        test_forChoice="carbonSource", test_contrastChoice="lactate",test_baseChoice="glucose")
 
 
 RUN13=c(dataTypeChoice="mrna", phaseChoice="exponential", phaseBaseChoice="exponential", badDataSetChoice="set00", 

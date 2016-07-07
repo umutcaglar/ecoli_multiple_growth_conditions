@@ -55,22 +55,22 @@ for(counter01 in 1: length(resultList_Exp_mrna))
 
 df_combined %>%
   dplyr::filter(!is.na(padj))%>%
-  dplyr::group_by(vs,signChange) %>%
+  dplyr::group_by(contrast,base,signChange) %>%
   dplyr::filter(padj<0.05 & abs(log2FoldChange)>1)%>%
   dplyr::summarise(P0.05Fold2=length(padj),
                    growthPhase=unique(growthPhase),
                    data_type=unique(pick_data))->df_summary_exp_mrna
 
 df_combined %>%
-  dplyr::filter(vs %in% "baseNahighNa", 
+  dplyr::filter(base=="baseNa", 
                 padj<0.05, abs(log2FoldChange)>1)->temp
 exp_mrna_Na=unique(as.vector(temp$gene_name))
 df_combined %>%
-  dplyr::filter(vs %in% c("baseMghighMg" , "baseMglowMg"),
+  dplyr::filter(base == "baseMg",
                 padj<0.05, abs(log2FoldChange)>1)->temp
 exp_mrna_Mg=unique(as.vector(temp$gene_name))
 df_combined %>%
-  dplyr::filter(vs %in% c("glucoselactate","glucosegluconate","glucoseglycerol"), 
+  dplyr::filter(base == "glucose", 
                 padj<0.05, abs(log2FoldChange)>1)->temp
 exp_mrna_Carb=unique(as.vector(temp$gene_name))
 ###*****************************
@@ -89,22 +89,22 @@ for(counter01 in 1: length(resultList_Sta_mrna))
 
 df_combined %>%
   dplyr::filter(!is.na(padj))%>%
-  dplyr::group_by(vs,signChange) %>%
+  dplyr::group_by(contrast,base,signChange) %>%
   dplyr::filter(padj<0.05 & abs(log2FoldChange)>1)%>%
   dplyr::summarise(P0.05Fold2=length(padj),
                    growthPhase=unique(growthPhase),
                    data_type=unique(pick_data))->df_summary_sta_mrna
 
 df_combined %>%
-  dplyr::filter(vs %in% "baseNahighNa", 
+  dplyr::filter(base == "baseNa",
                 padj<0.05, abs(log2FoldChange)>1)->temp
 sta_mrna_Na=unique(as.vector(temp$gene_name))
 df_combined %>%
-  dplyr::filter(vs %in% c("baseMghighMg" , "baseMglowMg"),
+  dplyr::filter(base == "baseMg",
                 padj<0.05, abs(log2FoldChange)>1)->temp
 sta_mrna_Mg=unique(as.vector(temp$gene_name))
 df_combined %>%
-  dplyr::filter(vs %in% c("glucoselactate","glucosegluconate","glucoseglycerol"), 
+  dplyr::filter(base == "glucose", 
                 padj<0.05, abs(log2FoldChange)>1)->temp
 sta_mrna_Carb=unique(as.vector(temp$gene_name))
 ###*****************************
@@ -122,22 +122,22 @@ for(counter01 in 1: length(resultList_Exp_protein))
 
 df_combined %>%
   dplyr::filter(!is.na(padj))%>%
-  dplyr::group_by(vs,signChange) %>%
+  dplyr::group_by(contrast,base,signChange) %>%
   dplyr::filter(padj<0.05 & abs(log2FoldChange)>1)%>%
   dplyr::summarise(P0.05Fold2=length(padj),
                    growthPhase=unique(growthPhase),
                    data_type=unique(pick_data))->df_summary_exp_protein
 
 df_combined %>%
-  dplyr::filter(vs %in% "baseNahighNa", 
+  dplyr::filter(base == "baseNa", 
                 padj<0.05, abs(log2FoldChange)>1)->temp
 exp_protein_Na=unique(as.vector(temp$gene_name))
 df_combined %>%
-  dplyr::filter(vs %in% c("baseMghighMg" , "baseMglowMg"),
+  dplyr::filter(base == "baseMg",
                 padj<0.05, abs(log2FoldChange)>1)->temp
 exp_protein_Mg=unique(as.vector(temp$gene_name))
 df_combined %>%
-  dplyr::filter(vs %in% c("glucoselactate","glucosegluconate","glucoseglycerol"), 
+  dplyr::filter(base == "glucose", 
                 padj<0.05, abs(log2FoldChange)>1)->temp
 exp_protein_Carb=unique(as.vector(temp$gene_name))
 ###*****************************
@@ -155,22 +155,22 @@ for(counter01 in 1: length(resultList_Sta_protein))
 
 df_combined %>%
   dplyr::filter(!is.na(padj))%>%
-  dplyr::group_by(vs,signChange) %>%
+  dplyr::group_by(contrast,base,signChange) %>%
   dplyr::filter(padj<0.05 & abs(log2FoldChange)>1)%>%
   dplyr::summarise(P0.05Fold2=length(padj),
                    growthPhase=unique(growthPhase),
                    data_type=unique(pick_data))->df_summary_sta_protein
 
 df_combined %>%
-  dplyr::filter(vs %in% "baseNahighNa", 
+  dplyr::filter(base == "baseNa", 
                 padj<0.05, abs(log2FoldChange)>1)->temp
 sta_protein_Na=unique(as.vector(temp$gene_name))
 df_combined %>%
-  dplyr::filter(vs %in% c("baseMghighMg" , "baseMglowMg"),
+  dplyr::filter(base == "baseMg",
                 padj<0.05, abs(log2FoldChange)>1)->temp
 sta_protein_Mg=unique(as.vector(temp$gene_name))
 df_combined %>%
-  dplyr::filter(vs %in% c("glucoselactate","glucosegluconate","glucoseglycerol"), 
+  dplyr::filter(base == "glucose", 
                 padj<0.05, abs(log2FoldChange)>1)->temp
 sta_protein_Carb=unique(as.vector(temp$gene_name))
 ###*****************************
@@ -189,13 +189,14 @@ df_summary<-dplyr::rbind_list(df_summary_exp_mrna,
 ###*****************************
 # Change Column Names
 df_summary %>%
-  dplyr::mutate(investigated_conditions=ifelse(vs=="glucoselactate","Lac",NA),
-                investigated_conditions=ifelse(vs=="baseNahighNa","High Na",investigated_conditions),
-                investigated_conditions=ifelse(vs=="baseMghighMg","High Mg",investigated_conditions),
-                investigated_conditions=ifelse(vs=="baseMglowMg","Low Mg",investigated_conditions),
-                investigated_conditions=ifelse(vs=="glucosegluconate","Glu",investigated_conditions),
-                investigated_conditions=ifelse(vs=="glucoseglycerol" ,"Gly",investigated_conditions))->df_summary
+  dplyr::mutate(investigated_conditions=ifelse(contrast == "lactate","Lac",NA),
+                investigated_conditions=ifelse(contrast == "highNa","High Na",investigated_conditions),
+                investigated_conditions=ifelse(contrast == "highMg","High Mg",investigated_conditions),
+                investigated_conditions=ifelse(contrast == "lowMg","Low Mg",investigated_conditions),
+                investigated_conditions=ifelse(contrast == "gluconate","Glu",investigated_conditions),
+                investigated_conditions=ifelse(contrast == "glycerol" ,"Gly",investigated_conditions))->df_summary
 
+browser()
 df_summary$signChange <- factor(df_summary$signChange, levels = c("-1", "1"))
 df_summary$investigated_conditions <- factor(df_summary$investigated_conditions, levels = c("Low Mg", 
                                                                                             "High Mg",
