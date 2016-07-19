@@ -1,0 +1,38 @@
+INFO [2016-07-13 16:01:07] $x
+INFO [2016-07-13 16:01:07] sta_mrna_list
+INFO [2016-07-13 16:01:07] 
+INFO [2016-07-13 16:01:07] $filename
+INFO [2016-07-13 16:01:07] NULL
+INFO [2016-07-13 16:01:07] 
+INFO [2016-07-13 16:01:07] $euler.d
+INFO [2016-07-13 16:01:07] [1] FALSE
+INFO [2016-07-13 16:01:07] 
+INFO [2016-07-13 16:01:07] $print.mode
+INFO [2016-07-13 16:01:07] c("raw", "percent")
+INFO [2016-07-13 16:01:07] 
+INFO [2016-07-13 16:01:07] $force.unique
+INFO [2016-07-13 16:01:07] [1] TRUE
+INFO [2016-07-13 16:01:07] 
+INFO [2016-07-13 16:01:07] $fill
+INFO [2016-07-13 16:01:07] c("purple", "cyan", "orange")
+INFO [2016-07-13 16:01:07] 
+INFO [2016-07-13 16:01:07] $fontface
+INFO [2016-07-13 16:01:07] [1] "bold"
+INFO [2016-07-13 16:01:07] 
+INFO [2016-07-13 16:01:07] $cex
+INFO [2016-07-13 16:01:07] rep(1.3, 7)
+INFO [2016-07-13 16:01:07] 
+INFO [2016-07-13 16:01:07] $cat.fontface
+INFO [2016-07-13 16:01:07] [1] "bold"
+INFO [2016-07-13 16:01:07] 
+INFO [2016-07-13 16:01:07] $cat.cex
+INFO [2016-07-13 16:01:07] c(1.4, 1.4, 1.4)
+INFO [2016-07-13 16:01:07] 
+INFO [2016-07-13 16:01:07] $cat.dist
+INFO [2016-07-13 16:01:07] c(0.1, 0.08, 0.05)
+INFO [2016-07-13 16:01:07] 
+INFO [2016-07-13 16:01:07] $margin
+INFO [2016-07-13 16:01:07] [1] 0.04
+INFO [2016-07-13 16:01:07] 
+ERROR [2016-07-13 16:01:07] Uninterpretable parameter combination
+Please set both euler.d = FALSE and scaled = FALSE to force Venn diagrams.

@@ -188,11 +188,15 @@ for(counter01 in 1:length(differentCompartisonsList))
     {
       dictionary=read.csv(file = "../generateDictionary/nameDictionary_RNA_barrick.csv")
       colnames(dictionary)[1]<-"id"
+      dictionaryEz=read.csv(file="../generateDictionary/rna_tidy_eColi_ez.csv",row.names = 1)			
+      dictionaryEz%>%dplyr::rename("gene_name"=From, "ez_gene_id"=To)->dictionaryEz
     }
     if(objectName$pick_data %in% c("protein","protein_wo_NA"))
     {
       dictionary=read.csv(file = "../generateDictionary/nameDictionary_Protein.csv")
       colnames(dictionary)[1]<-"id"
+      dictionaryEz=read.csv(file="../generateDictionary/rna_tidy_eColi_ez.csv",row.names = 1)			
+      dictionaryEz%>%dplyr::rename("gene_name"=From, "ez_gene_id"=To)->dictionaryEz
     }
     ###*****************************
     
@@ -200,7 +204,7 @@ for(counter01 in 1:length(differentCompartisonsList))
     ###*****************************
     #Update objectName
     objectName$pick_data=as.character(objectName$pick_data)
-    objectName$test_for=paste0("_batchNumber+",test_for)
+    objectName$test_for=paste0("_batchNumberPLUS",test_for)
     objectName$contrast=paste0("_",test_contrast,"VS",test_base)
     ###*****************************
     
@@ -232,6 +236,12 @@ for(counter01 in 1:length(differentCompartisonsList))
     listOfEmptyCells<-grep(pattern = "^[[:blank:]]*$",x = noquote(genes_0.05))
     listOfFilledCells=setdiff(seq(1,length(genes_0.05)),listOfEmptyCells)
     genes_0.05<-genes_0.05[listOfFilledCells]
+    
+    dictionaryEz %>%			
+      dplyr::filter(gene_name %in% genes_0.05)%>%			
+      .[["ez_gene_id"]]%>%			
+      as.vector(.)%>%			
+      unique(.)->genes_0.05Ez
     ###*****************************
     
     
@@ -245,6 +255,15 @@ for(counter01 in 1:length(differentCompartisonsList))
                   file = paste0("../c_results/",fileName,".csv"),
                   row.names = FALSE,
                   col.names = "genes",
+                  quote = FALSE)
+      
+      # save genes0.05Ez
+      objectName$initial="ez_P0.05Fold2"
+      fileName=paste(objectName,collapse = "_")
+      write.table(x = genes_0.05Ez, 
+                  file = paste0("../c_results/",fileName,".csv"),
+                  row.names = FALSE,
+                  col.names = "Entrez",
                   quote = FALSE)
       
       # save resDF

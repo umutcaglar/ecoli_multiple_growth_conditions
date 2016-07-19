@@ -24,6 +24,9 @@ require("dplyr")
 require("tidyr")
 require("ggplot2")
 require("cowplot")
+require("VennDiagram")
+require("gtable")
+require("gridExtra")
 ###*****************************
 
 
@@ -196,7 +199,7 @@ df_summary %>%
                 investigated_conditions=ifelse(contrast == "gluconate","Glu",investigated_conditions),
                 investigated_conditions=ifelse(contrast == "glycerol" ,"Gly",investigated_conditions))->df_summary
 
-browser()
+
 df_summary$signChange <- factor(df_summary$signChange, levels = c("-1", "1"))
 df_summary$investigated_conditions <- factor(df_summary$investigated_conditions, levels = c("Low Mg", 
                                                                                             "High Mg",
@@ -336,87 +339,120 @@ cowplot::save_plot(filename = paste0("../c_figures/difExpressedGenes_protein",".
 ###*****************************
 
 
+###*****************************
+###*****************************
+# INDIVIDUAL VENN DIAGRAM
+
+exp_mrna_list = list("Carbon \nsource"=exp_mrna_Carb, "Mg stress"=exp_mrna_Mg, "Na stress"=exp_mrna_Na)
+venn.grid = venn.diagram(x=exp_mrna_list, filename="../c_figures/exp_mrna_venn.jpeg", 
+                         euler.d=FALSE,scaled=FALSE,
+                         print.mode=c("raw","percent"),force.unique=TRUE, 
+                         fill=c("purple","cyan","orange"), 
+                         fontface = "bold", cex=rep(1.3,7), cat.fontface="bold", 
+                         cat.cex=c(1.4,1.4,1.4),cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.04)
+
+exp_protein_list = list("Carbon \nsource"=exp_protein_Carb, "Mg stress"=exp_protein_Mg, "Na stress"=exp_protein_Na)
+venn.grid = venn.diagram(x=exp_protein_list, filename="../c_figures/exp_protein_venn.jpeg", 
+                         euler.d=FALSE,scaled=FALSE,
+                         print.mode=c("raw","percent"),force.unique=TRUE, 
+                         fill=c("purple","cyan","orange"), 
+                         fontface = "bold", cex=rep(1.3,7), cat.fontface="bold", 
+                         cat.cex=c(1.4,1.4,1.4),cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.04)
+
+sta_mrna_list = list("Carbon \nsource"=sta_mrna_Carb, "Mg stress"=sta_mrna_Mg, "Na stress"=sta_mrna_Na)
+venn.grid = venn.diagram(x=sta_mrna_list, filename="../c_figures/sta_mrna_venn.jpeg", 
+                         euler.d=FALSE,scaled=FALSE,
+                         print.mode=c("raw","percent"),force.unique=TRUE, 
+                         fill=c("purple","cyan","orange"), 
+                         fontface = "bold", cex=rep(1.3,7), cat.fontface="bold", 
+                         cat.cex=c(1.4,1.4,1.4),cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.04)
+
+sta_protein_list = list("Carbon \nsource"=sta_protein_Carb, "Mg stress"=sta_protein_Mg, "Na stress"=sta_protein_Na)
+venn.grid = venn.diagram(x=sta_protein_list, filename="../c_figures/sta_protein_venn.jpeg", 
+                         euler.d=FALSE,scaled=FALSE,
+                         print.mode=c("raw","percent"),force.unique=TRUE, 
+                         fill=c("purple","cyan","orange"), 
+                         fontface = "bold", cex=rep(1.3,7), cat.fontface="bold", 
+                         cat.cex=c(1.4,1.4,1.4),cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.04)
 
 
 ###*****************************
 ###*****************************
-# VENN DIAGRAM
+# MULTIPLE VENN DIAGRAM
 
-# Venn Diagram Count Function
+exp_mrna_list = list("Carbon \nsource"=exp_mrna_Carb, "Mg stress"=exp_mrna_Mg, "Na stress"=exp_mrna_Na)
+exp_mrna_fig = venn.diagram(x=exp_mrna_list, filename=NULL, 
+                         euler.d=FALSE,scaled=FALSE,
+                         print.mode=c("raw","percent"),force.unique=TRUE, 
+                         fill=c("purple","cyan","orange"), 
+                         fontface = "bold", cex=rep(1.3,7), cat.fontface="bold", 
+                         cat.cex=c(1.4,1.4,1.4),cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.07,
+                         main = "A", main.pos = c(0.05,1), main.fontface = "bold", main.cex = 2.5)
 
-VennDiagramCounter<-function(a,b,c)
-{
-  l_a=length(a)
-  l_b=length(b)
-  l_c=length(c)
-  l_ab=length(intersect(a,b))
-  l_ac=length(intersect(a,c))
-  l_bc=length(intersect(b,c))
-  l_abc=length(intersect(intersect(a,b),c))
-  
-  Pos_5=l_abc
-  Pos_2=l_ab-l_abc
-  Pos_4=l_ac-l_abc
-  Pos_6=l_bc-l_abc
-  Pos_1=l_a-l_ab-l_ac+l_abc
-  Pos_3=l_b-l_ab-l_bc+l_abc
-  Pos_7=l_c-l_ac-l_bc+l_abc
-  
-  Pos=c(Pos_1=Pos_1, 
-        Pos_2=Pos_2, 
-        Pos_3=Pos_3, 
-        Pos_4=Pos_4, 
-        Pos_5=Pos_5, 
-        Pos_6=Pos_6, 
-        Pos_7=Pos_7)
-  PosPercent=c(Pos_1=Pos_1, 
-               Pos_2=Pos_2, 
-               Pos_3=Pos_3, 
-               Pos_4=Pos_4, 
-               Pos_5=Pos_5, 
-               Pos_6=Pos_6, 
-               Pos_7=Pos_7)/sum(Pos)
-  PosPercent_a=c(Pos_1=Pos_1, 
-                 Pos_2=Pos_2, 
-                 Pos_4=Pos_4, 
-                 Pos_5=Pos_5)/sum(c(Pos_1, Pos_2, Pos_4, Pos_5))
-  PosPercent_b=c(Pos_2=Pos_2, 
-                 Pos_3=Pos_3, 
-                 Pos_5=Pos_5, 
-                 Pos_6=Pos_6)/sum(c(Pos_2, Pos_3, Pos_5, Pos_6))
-  PosPercent_c=c(Pos_4=Pos_4, 
-                 Pos_5=Pos_5, 
-                 Pos_6=Pos_6, 
-                 Pos_7=Pos_7)/sum(c(Pos_4, Pos_5, Pos_6, Pos_7))
-  output=list(Pos=Pos,
-              PosPercent=PosPercent, 
-              PosPercent_a = PosPercent_a, 
-              PosPercent_b = PosPercent_b, 
-              PosPercent_c = PosPercent_c)
-  return(output)
-}
-###*****************************
+exp_protein_list = list("Carbon \nsource"=exp_protein_Carb, "Mg stress"=exp_protein_Mg, "Na stress"=exp_protein_Na)
+exp_protein_fig = venn.diagram(x=exp_protein_list, filename=NULL, 
+                         euler.d=FALSE,scaled=FALSE,
+                         print.mode=c("raw","percent"),force.unique=TRUE, 
+                         fill=c("purple","cyan","orange"), 
+                         fontface = "bold", cex=rep(1.3,7), cat.fontface="bold", 
+                         cat.cex=c(1.4,1.4,1.4),cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.07,
+                         main = "B", main.pos = c(0.05,1), main.fontface = "bold", main.cex = 2.5)
+
+sta_mrna_list = list("Carbon \nsource"=sta_mrna_Carb, "Mg stress"=sta_mrna_Mg, "Na stress"=sta_mrna_Na)
+sta_mrna_fig = venn.diagram(x=sta_mrna_list, filename=NULL, 
+                         euler.d=FALSE,scaled=FALSE,
+                         print.mode=c("raw","percent"),force.unique=TRUE, 
+                         fill=c("purple","cyan","orange"), 
+                         fontface = "bold", cex=rep(1.3,7), cat.fontface="bold", 
+                         cat.cex=c(1.4,1.4,1.4),cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.07,
+                         main = "C", main.pos = c(0.05,1), main.fontface = "bold", main.cex = 2.5)
+
+sta_protein_list = list("Carbon \nsource"=sta_protein_Carb, "Mg stress"=sta_protein_Mg, "Na stress"=sta_protein_Na)
+sta_protein_fig = venn.diagram(x=sta_protein_list, filename=NULL,
+                         euler.d=FALSE,scaled=FALSE,
+                         print.mode=c("raw","percent"),force.unique=TRUE, 
+                         fill=c("purple","cyan","orange"), 
+                         fontface = "bold", cex=rep(1.3,7), cat.fontface="bold", 
+                         cat.cex=c(1.4,1.4,1.4),cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.07,
+                         main = "D", main.pos = c(0.05,1), main.fontface = "bold", main.cex = 2.5)
 
 
-###*****************************
-venn_exp_mrna=VennDiagramCounter(b=exp_mrna_Mg, c=exp_mrna_Na, a=exp_mrna_Carb)
-venn_sta_mrna=VennDiagramCounter(b=sta_mrna_Mg, c=sta_mrna_Na, a=sta_mrna_Carb)
+jpeg(filename = '../c_figures/venn.jpeg',width = 6600, height = 6600, units="px", res =500)
+pushViewport(viewport(layout=grid.layout(ncol=3,nrow = 3, 
+                                         widths = unit(c(5,5,1)/11, "npc"), 
+                                         heights = unit(c(1,5,5)/11, "npc")
+)))
+pushViewport(viewport(layout.pos.row = 2, layout.pos.col=1))
+grid.draw(exp_mrna_fig)
+popViewport()
 
-venn_exp_protein=VennDiagramCounter(b=exp_protein_Mg, c=exp_protein_Na, a=exp_protein_Carb)
-venn_sta_protein=VennDiagramCounter(b=sta_protein_Mg, c=sta_protein_Na, a=sta_protein_Carb)
-###*****************************
+pushViewport(viewport(layout.pos.row = 2, layout.pos.col=2))
+grid.draw(exp_protein_fig)
+popViewport()
 
+pushViewport(viewport(layout.pos.row = 3, layout.pos.col=1))
+grid.draw(sta_mrna_fig)
+popViewport()
 
+pushViewport(viewport(layout.pos.row = 3, layout.pos.col=2))
+grid.draw(sta_protein_fig)
+popViewport()
 
+pushViewport(viewport(layout.pos.row = 1, layout.pos.col=1))
+grid.draw(textGrob(label = "mRNA",gp=gpar(fontsize=35)))
+popViewport()
 
+pushViewport(viewport(layout.pos.row = 1, layout.pos.col=2))
+grid.draw(textGrob(label = "Protein",gp=gpar(fontsize=35)))
+popViewport()
 
+pushViewport(viewport(layout.pos.row = 2, layout.pos.col=3))
+grid.draw(textGrob(label = "Exponential",gp=gpar(fontsize=35),rot = -90))
+popViewport()
 
+pushViewport(viewport(layout.pos.row = 3, layout.pos.col=3))
+grid.draw(textGrob(label = "Stationary",gp=gpar(fontsize=35),rot = -90))
+popViewport()
 
-
-
-
-
-
-
-
-
+popViewport(0)
+dev.off()
