@@ -84,6 +84,7 @@ test_contrast="highMg"
 objectName_df$contrast=paste0("_",test_contrast,"VS",test_base)
 
 # The file is the list of significantly altered genes (without the information how much they are altered)
+objectName_df$initial="genes_P0.05Fold2"
 objectName=paste(objectName_df,collapse = "_")
 mf_input<-read.csv(file = paste0("../c_results/",objectName,".csv"),header = TRUE) 
 
@@ -261,7 +262,7 @@ write.csv(x = mf_tidy_organized, file = paste0("../d_results/",objectName,"_mf_o
 
 ###*****************************
 # Save figure
-rowWidth=ifelse(nrow(mf_tidy_organized_simp)*1<3,3,nrow(mf_tidy_organized_simp)*1)
+rowWidth=ifelse(nrow(mf_organized_summary)*1<3,3,nrow(mf_organized_summary)*1)
 
 cowplot::save_plot(filename = paste0("../d_figures/simple",objectName,"_mf_o.pdf"),
                    plot = fig02,

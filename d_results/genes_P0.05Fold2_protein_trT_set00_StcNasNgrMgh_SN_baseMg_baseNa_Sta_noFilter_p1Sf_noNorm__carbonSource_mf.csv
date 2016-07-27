@@ -1,9 +1,0 @@
-"","ID","MF_Name","padj_gene","log2","signChange","score_gene","FDR_GoMF","numGenesInCat","abs_score","rank","numSigP","numSigN","MF_Name_long","MF_Name_short","pick_data","growthPhase","test_for","vs","df_category"
-"1","gntK","GO:0004765~shikimate kinase activity",2.84911412540264e-14,4.74549224923791,1,13.5452901541161,0.0379956158352989,4,13.5452901541161,2,2,1,"shikimate kinase activity
- padj:0.03800 N( -1/ +2/ 4)","shikimate kinase activity","protein","Sta","carbonSource","glucosegluconate","MF"
-"2","idnK","GO:0004765~shikimate kinase activity",0.0120846206154597,3.10657991885272,1,1.91776697928187,0.0379956158352989,4,1.91776697928187,1,2,1,"shikimate kinase activity
- padj:0.03800 N( -1/ +2/ 4)","shikimate kinase activity","protein","Sta","carbonSource","glucosegluconate","MF"
-"3","gntK","GO:0046316~gluconokinase activity",2.84911412540264e-14,4.74549224923791,1,13.5452901541161,0.028633451443094,2,13.5452901541161,2,2,1,"gluconokinase activity
- padj:0.02863 N( -1/ +2/ 2)","gluconokinase activity","protein","Sta","carbonSource","glucosegluconate","MF"
-"4","idnK","GO:0046316~gluconokinase activity",0.0120846206154597,3.10657991885272,1,1.91776697928187,0.028633451443094,2,1.91776697928187,1,2,1,"gluconokinase activity
- padj:0.02863 N( -1/ +2/ 2)","gluconokinase activity","protein","Sta","carbonSource","glucosegluconate","MF"

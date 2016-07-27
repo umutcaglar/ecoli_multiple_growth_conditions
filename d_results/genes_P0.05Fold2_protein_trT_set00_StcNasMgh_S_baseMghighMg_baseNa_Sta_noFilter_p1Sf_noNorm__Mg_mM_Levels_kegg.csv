@@ -1,7 +1,0 @@
-"","ID","KEGG_Path","padj_gene","log2","signChange","score_gene","FDR_KEGG_Path","numGenesInCat","abs_score","rank","numSigP","numSigN","KEGG_Path_long","KEGG_Path_short","pick_data","growthPhase","test_for","vs","df_category"
-"1","flgM","eco02040:Flagellar assembly",0.0320736487241439,-2.12830164529247,-1,-1.49385163157064,0.0415422610127463,19,1.49385163157064,-1,0,3,"Flagellar assembly
- padj:0.04154 N( -3/ +0/ 19)","Flagellar assembly","protein","Sta","Mg_mM_Levels","baseMghighMg","kegg"
-"2","flgK","eco02040:Flagellar assembly",0.0138860049159468,-1.99962571840494,-1,-1.85742268532978,0.0415422610127463,19,1.85742268532978,-2,0,3,"Flagellar assembly
- padj:0.04154 N( -3/ +0/ 19)","Flagellar assembly","protein","Sta","Mg_mM_Levels","baseMghighMg","kegg"
-"3","flgL","eco02040:Flagellar assembly",0.00270377596429286,-2.75906671722934,-1,-2.5680292970138,0.0415422610127463,19,2.5680292970138,-3,0,3,"Flagellar assembly
- padj:0.04154 N( -3/ +0/ 19)","Flagellar assembly","protein","Sta","Mg_mM_Levels","baseMghighMg","kegg"

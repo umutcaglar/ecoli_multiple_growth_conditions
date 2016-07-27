@@ -84,6 +84,7 @@ test_contrast="highMg"
 objectName_df$contrast=paste0("_",test_contrast,"VS",test_base)
 
 # The file is the list of significantly altered genes (without the information how much they are altered)
+objectName_df$initial="genes_P0.05Fold2"
 objectName=paste(objectName_df,collapse = "_")
 kegg_input<-read.csv(file = paste0("../c_results/",objectName,".csv"),header = TRUE) 
 
