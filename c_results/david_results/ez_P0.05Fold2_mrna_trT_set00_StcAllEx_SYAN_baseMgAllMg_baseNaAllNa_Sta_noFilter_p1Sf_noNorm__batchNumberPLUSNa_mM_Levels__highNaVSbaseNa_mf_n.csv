@@ -1,0 +1,34 @@
+"","Category","Term","Count","X.","PValue","Genes","List.Total","Pop.Hits","Pop.Total","Fold.Enrichment","Bonferroni","Benjamini","FDR"
+"1","GOTERM_MF_ALL","GO:0008233~peptidase activity",2,0.460829493087558,0.268304629792887,"945082, 947515",5,8,108,5.4,0.999966665025086,0.999966665025086,93.4565755309641
+"2","GOTERM_MF_ALL","GO:0016787~hydrolase activity",2,0.460829493087558,0.455181331922646,"945082, 947515",5,15,108,2.88,0.999999998021594,0.999955520727788,99.5012630587463
+"3","GOTERM_MF_ALL","GO:0003824~catalytic activity",2,0.460829493087558,0.478614392915252,"945082, 947515",5,16,108,2.7,0.999999999536288,0.999225984922432,99.660203803158
+"4","GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",2,0.460829493087558,0.949483075034121,"947806, 948425",5,56,108,0.771428571428571,1,0.999999999979893,99.9999999995181
+"5","GOTERM_MF_ALL","GO:0005198~structural molecule activity",2,0.460829493087558,0.949483075034121,"947806, 948425",5,56,108,0.771428571428571,1,0.999999999979893,99.9999999995181
+"6","GOTERM_MF_ALL","GO:0015081~sodium ion transmembrane transporter activity",1,0.230414746543779,1,"945602",5,2,108,10.8,1,1,100
+"7","GOTERM_MF_ALL","GO:0015175~neutral amino acid transmembrane transporter activity",1,0.230414746543779,1,"945602",5,1,108,21.6,1,1,100
+"8","GOTERM_MF_ALL","GO:0046873~metal ion transmembrane transporter activity",1,0.230414746543779,1,"945602",5,5,108,4.32,1,1,100
+"9","GOTERM_MF_ALL","GO:0046943~carboxylic acid transmembrane transporter activity",1,0.230414746543779,1,"945602",5,3,108,7.2,1,1,100
+"10","GOTERM_MF_ALL","GO:0005283~sodium:amino acid symporter activity",1,0.230414746543779,1,"945602",5,1,108,21.6,1,1,100
+"11","GOTERM_MF_ALL","GO:0005343~organic acid:sodium symporter activity",1,0.230414746543779,1,"945602",5,1,108,21.6,1,1,100
+"12","GOTERM_MF_ALL","GO:0015193~L-proline transmembrane transporter activity",1,0.230414746543779,1,"945602",5,1,108,21.6,1,1,100
+"13","GOTERM_MF_ALL","GO:0022857~transmembrane transporter activity",1,0.230414746543779,1,"945602",5,16,108,1.35,1,1,100
+"14","GOTERM_MF_ALL","GO:0005416~cation:amino acid symporter activity",1,0.230414746543779,1,"945602",5,1,108,21.6,1,1,100
+"15","GOTERM_MF_ALL","GO:0005342~organic acid transmembrane transporter activity",1,0.230414746543779,1,"945602",5,3,108,7.2,1,1,100
+"16","GOTERM_MF_ALL","GO:0008509~anion transmembrane transporter activity",1,0.230414746543779,1,"945602",5,4,108,5.4,1,1,100
+"17","GOTERM_MF_ALL","GO:0022891~substrate-specific transmembrane transporter activity",1,0.230414746543779,1,"945602",5,16,108,1.35,1,1,100
+"18","GOTERM_MF_ALL","GO:0015171~amino acid transmembrane transporter activity",1,0.230414746543779,1,"945602",5,3,108,7.2,1,1,100
+"19","GOTERM_MF_ALL","GO:0015291~secondary active transmembrane transporter activity",1,0.230414746543779,1,"945602",5,6,108,3.6,1,1,100
+"20","GOTERM_MF_ALL","GO:0005298~proline:sodium symporter activity",1,0.230414746543779,1,"945602",5,1,108,21.6,1,1,100
+"21","GOTERM_MF_ALL","GO:0015077~monovalent inorganic cation transmembrane transporter activity",1,0.230414746543779,1,"945602",5,6,108,3.6,1,1,100
+"22","GOTERM_MF_ALL","GO:0022890~inorganic cation transmembrane transporter activity",1,0.230414746543779,1,"945602",5,7,108,3.08571428571429,1,1,100
+"23","GOTERM_MF_ALL","GO:0015294~solute:cation symporter activity",1,0.230414746543779,1,"945602",5,1,108,21.6,1,1,100
+"24","GOTERM_MF_ALL","GO:0015296~anion:cation symporter activity",1,0.230414746543779,1,"945602",5,1,108,21.6,1,1,100
+"25","GOTERM_MF_ALL","GO:0008324~cation transmembrane transporter activity",1,0.230414746543779,1,"945602",5,7,108,3.08571428571429,1,1,100
+"26","GOTERM_MF_ALL","GO:0005215~transporter activity",1,0.230414746543779,1,"945602",5,16,108,1.35,1,1,100
+"27","GOTERM_MF_ALL","GO:0022804~active transmembrane transporter activity",1,0.230414746543779,1,"945602",5,13,108,1.66153846153846,1,1,100
+"28","GOTERM_MF_ALL","GO:0015293~symporter activity",1,0.230414746543779,1,"945602",5,1,108,21.6,1,1,100
+"29","GOTERM_MF_ALL","GO:0015370~solute:sodium symporter activity",1,0.230414746543779,1,"945602",5,1,108,21.6,1,1,100
+"30","GOTERM_MF_ALL","GO:0008514~organic anion transmembrane transporter activity",1,0.230414746543779,1,"945602",5,3,108,7.2,1,1,100
+"31","GOTERM_MF_ALL","GO:0022892~substrate-specific transporter activity",1,0.230414746543779,1,"945602",5,16,108,1.35,1,1,100
+"32","GOTERM_MF_ALL","GO:0015075~ion transmembrane transporter activity",1,0.230414746543779,1,"945602",5,16,108,1.35,1,1,100
+"33","GOTERM_MF_ALL","GO:0015179~L-amino acid transmembrane transporter activity",1,0.230414746543779,1,"945602",5,3,108,7.2,1,1,100

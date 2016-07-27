@@ -1,0 +1,22 @@
+"","Category","Term","Count","X.","PValue","Genes","List.Total","Pop.Hits","Pop.Total","Fold.Enrichment","Bonferroni","Benjamini","FDR"
+"1","GOTERM_MF_ALL","GO:0043492~ATPase activity, coupled to movement of substances",1,5,1,"948778",1,7,108,15.4285714285714,1,1,100
+"2","GOTERM_MF_ALL","GO:0042626~ATPase activity, coupled to transmembrane movement of substances",1,5,1,"948778",1,7,108,15.4285714285714,1,1,100
+"3","GOTERM_MF_ALL","GO:0016787~hydrolase activity",1,5,1,"948778",1,15,108,7.2,1,1,100
+"4","GOTERM_MF_ALL","GO:0016887~ATPase activity",1,5,1,"948778",1,7,108,15.4285714285714,1,1,100
+"5","GOTERM_MF_ALL","GO:0015075~ion transmembrane transporter activity",1,5,1,"948778",1,16,108,6.75,1,1,100
+"6","GOTERM_MF_ALL","GO:0015662~ATPase activity, coupled to transmembrane movement of ions, phosphorylative mechanism",1,5,1,"948778",1,6,108,18,1,1,100
+"7","GOTERM_MF_ALL","GO:0022804~active transmembrane transporter activity",1,5,1,"948778",1,13,108,8.30769230769231,1,1,100
+"8","GOTERM_MF_ALL","GO:0022892~substrate-specific transporter activity",1,5,1,"948778",1,16,108,6.75,1,1,100
+"9","GOTERM_MF_ALL","GO:0022857~transmembrane transporter activity",1,5,1,"948778",1,16,108,6.75,1,1,100
+"10","GOTERM_MF_ALL","GO:0022891~substrate-specific transmembrane transporter activity",1,5,1,"948778",1,16,108,6.75,1,1,100
+"11","GOTERM_MF_ALL","GO:0016462~pyrophosphatase activity",1,5,1,"948778",1,7,108,15.4285714285714,1,1,100
+"12","GOTERM_MF_ALL","GO:0015399~primary active transmembrane transporter activity",1,5,1,"948778",1,7,108,15.4285714285714,1,1,100
+"13","GOTERM_MF_ALL","GO:0015405~P-P-bond-hydrolysis-driven transmembrane transporter activity",1,5,1,"948778",1,7,108,15.4285714285714,1,1,100
+"14","GOTERM_MF_ALL","GO:0042623~ATPase activity, coupled",1,5,1,"948778",1,7,108,15.4285714285714,1,1,100
+"15","GOTERM_MF_ALL","GO:0016818~hydrolase activity, acting on acid anhydrides, in phosphorus-containing anhydrides",1,5,1,"948778",1,7,108,15.4285714285714,1,1,100
+"16","GOTERM_MF_ALL","GO:0005215~transporter activity",1,5,1,"948778",1,16,108,6.75,1,1,100
+"17","GOTERM_MF_ALL","GO:0016820~hydrolase activity, acting on acid anhydrides, catalyzing transmembrane movement of substances",1,5,1,"948778",1,7,108,15.4285714285714,1,1,100
+"18","GOTERM_MF_ALL","GO:0003824~catalytic activity",1,5,1,"948778",1,16,108,6.75,1,1,100
+"19","GOTERM_MF_ALL","GO:0016817~hydrolase activity, acting on acid anhydrides",1,5,1,"948778",1,7,108,15.4285714285714,1,1,100
+"20","GOTERM_MF_ALL","GO:0042625~ATPase activity, coupled to transmembrane movement of ions",1,5,1,"948778",1,7,108,15.4285714285714,1,1,100
+"21","GOTERM_MF_ALL","GO:0017111~nucleoside-triphosphatase activity",1,5,1,"948778",1,7,108,15.4285714285714,1,1,100

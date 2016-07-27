@@ -196,17 +196,38 @@ for(counter01 in 1:length(differentCompartisonsList))
     
     
     ###*****************************
+    # Set species and backround
+    selectedSpecie="Escherichia coli str. K-12 substr. MG1655"
+    backgroundLocation=grep(selectedSpecie,RDAVIDWebService::getBackgroundListNames(david_d))
+    specieLocation=grep(selectedSpecie,RDAVIDWebService::getSpecieNames(david_d))
+    setCurrentSpecies(object=david_d, species=specieLocation);setCurrentBackgroundPosition(object=david_d,position=backgroundLocation)
+    ###*****************************
+    
+    
+    ###*****************************
     # KEGG TEST
     setAnnotationCategories(david_d, c("KEGG_PATHWAY"))
     objectName$analyzeType="kegg"
     fileName=paste(objectName,collapse = "_")
     
     keggObject<- as.data.frame(getFunctionalAnnotationChart(object=david_d,  threshold=1, count=0L))
-    write.csv(x =keggObject ,file = paste0("../c_results/",fileName,".csv"))
+    write.csv(x =keggObject ,file = paste0("../c_results/david_results/",fileName,".csv"))
     ###*****************************
     
     
     ###*****************************
+    # MF NEW TEST
+    setAnnotationCategories(david_d, c("GOTERM_MF_ALL"))
+    objectName$analyzeType="mf_n"
+    fileName=paste(objectName,collapse = "_")
+    
+    mfObject<- as.data.frame(getFunctionalAnnotationChart(object=david_d,  threshold=1, count=0L))
+    write.csv(x =mfObject ,file = paste0("../c_results/david_results/",fileName,".csv"))
+    ###*****************************
+    
+    
+    ###*****************************
+    # MF OLD
     # Connect to david for analyse
     david<-DAVIDWebService(email="umut.caglar@utexas.edu",
                              url="https://david.ncifcrf.gov/webservice/services/DAVIDWebService.DAVIDWebServiceHttpSoap12Endpoint/")
@@ -221,19 +242,27 @@ for(counter01 in 1:length(differentCompartisonsList))
     
     
     ###*****************************
-    # MF TEST
+    # Set species and backround
+    selectedSpecie="Escherichia coli"
+    backgroundLocation=grep(selectedSpecie,RDAVIDWebService::getBackgroundListNames(david))
+    specieLocation=grep(selectedSpecie,RDAVIDWebService::getSpecieNames(david))
+    setCurrentSpecies(object=david, species=specieLocation);setCurrentBackgroundPosition(object=david,position=backgroundLocation)
+    ###*****************************
+    
+    
+    ###*****************************
+    # MF OLD TEST
     setAnnotationCategories(david, c("GOTERM_MF_ALL"))
-    objectName$analyzeType="mf"
+    objectName$analyzeType="mf_o"
     fileName=paste(objectName,collapse = "_")
     
     mfObject<- as.data.frame(getFunctionalAnnotationChart(object=david,  threshold=1, count=0L))
-    write.csv(x =mfObject ,file = paste0("../c_results/",fileName,".csv"))
-    
+    write.csv(x =mfObject ,file = paste0("../c_results/david_results/",fileName,".csv"))
     ###*****************************
     
     
     ###*****************************
-    remove(david, david_d)
+    remove(david,david_d)
     ###*****************************
   }
   

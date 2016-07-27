@@ -98,31 +98,76 @@ davidInputData=as.vector(davidInputData[[1]])
 
 ###*****************************
 # Connect to david for analyse
-david<-DAVIDWebService(email="umut.caglar@utexas.edu",
+david_d<-DAVIDWebService(email="umut.caglar@utexas.edu",
                        url="https://david-d.ncifcrf.gov/webservice/services/DAVIDWebService.DAVIDWebServiceHttpSoap12Endpoint/")
+#result<-addList(david_d, davidInputData, idType="OFFICIAL_GENE_SYMBOL", listName="testList", listType="Gene")
+result<-addList(david_d, davidInputData, idType="ENTREZ_GENE_ID", listName="testList", listType="Gene")
+###*****************************
+
+
+###*****************************
+# Set species and backround
+selectedSpecie="Escherichia coli str. K-12 substr. MG1655"
+backgroundLocation=grep(selectedSpecie,RDAVIDWebService::getBackgroundListNames(david_d))
+specieLocation=grep(selectedSpecie,RDAVIDWebService::getSpecieNames(david_d))
+setCurrentSpecies(object=david_d, species=specieLocation);setCurrentBackgroundPosition(object=david_d,position=backgroundLocation)
+###*****************************
+
+
+###*****************************
+# KEGG TEST
+setAnnotationCategories(david_d, c("KEGG_PATHWAY"))
+objectName$analyzeType="kegg"
+fileName=paste(objectName,collapse = "_")
+
+keggObject<- as.data.frame(getFunctionalAnnotationChart(object=david_d,  threshold=1, count=0L))
+write.csv(x =keggObject ,file = paste0("../c_results/david_results/",fileName,".csv"))
+###*****************************
+
+
+###*****************************
+# MF NEW TEST
+setAnnotationCategories(david_d, c("GOTERM_MF_ALL"))
+objectName$analyzeType="mf_n"
+fileName=paste(objectName,collapse = "_")
+
+mfObject<- as.data.frame(getFunctionalAnnotationChart(object=david_d,  threshold=1, count=0L))
+write.csv(x =mfObject ,file = paste0("../c_results/david_results/",fileName,".csv"))
+###*****************************
+###*****************************
+
+
+###*****************************
+###*****************************
+# MF OLD
+# Connect to david for analyse
+david<-DAVIDWebService(email="umut.caglar@utexas.edu",
+                       url="https://david.ncifcrf.gov/webservice/services/DAVIDWebService.DAVIDWebServiceHttpSoap12Endpoint/")
+RDAVIDWebService::setTimeOut(david, 90000)
+###*****************************
+
+
+###*****************************
 #result<-addList(david, davidInputData, idType="OFFICIAL_GENE_SYMBOL", listName="testList", listType="Gene")
 result<-addList(david, davidInputData, idType="ENTREZ_GENE_ID", listName="testList", listType="Gene")
 ###*****************************
 
 
 ###*****************************
-# KEGG TEST
-setAnnotationCategories(david, c("KEGG_PATHWAY"))
-objectName$analyzeType="kegg"
-fileName=paste(objectName,collapse = "_")
-
-keggObject<- as.data.frame(getFunctionalAnnotationChart(object=david,  threshold=1, count=0L))
-write.csv(x =keggObject ,file = paste0("../c_results/",fileName,".csv"))
+# Set species and backround
+selectedSpecie="Escherichia coli"
+backgroundLocation=grep(selectedSpecie,RDAVIDWebService::getBackgroundListNames(david))
+specieLocation=grep(selectedSpecie,RDAVIDWebService::getSpecieNames(david))
+setCurrentSpecies(object=david, species=specieLocation);setCurrentBackgroundPosition(object=david,position=backgroundLocation)
 ###*****************************
 
 
 ###*****************************
-# MF TEST
+# MF OLD TEST
 setAnnotationCategories(david, c("GOTERM_MF_ALL"))
-objectName$analyzeType="mf"
+objectName$analyzeType="mf_o"
 fileName=paste(objectName,collapse = "_")
 
 mfObject<- as.data.frame(getFunctionalAnnotationChart(object=david,  threshold=1, count=0L))
-write.csv(x =mfObject ,file = paste0("../c_results/",fileName,".csv"))
-
+write.csv(x =mfObject ,file = paste0("../c_results/david_results/",fileName,".csv"))
 ###*****************************

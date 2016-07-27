@@ -44,7 +44,7 @@ source("../a_code_dataPreperation_RNA&Protein/data_naming_functions.R")
 # Download the DAVID input and output
 dataName=name_data(initialValue="genes_P0.05Fold2", # can be "genes0.05", "genes_P0.05Fold2"
                    dataType = "mrna", # can be "rna", "mrna", "protein", "protein_wo_NA"
-                   badDataSet = "set02", # can be "set00",set01","set02", "set03"
+                   badDataSet = "set00", # can be "set00",set01","set02", "set03"
                    # referenceParameters can be a vector like
                    # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
                    referenceParameters=c("growthPhase",
@@ -60,9 +60,9 @@ dataName=name_data(initialValue="genes_P0.05Fold2", # can be "genes0.05", "genes
                                      "glucose", 
                                      "glucose_time_course"),
                    experimentVector = c("allEx"), # can be "Stc","Ytc","Nas","Agr","Ngr","Mgl","Mgh" // "allEx"
-                   carbonSourceVector = "S", # can be any sub combination of "SYAN"
-                   MgLevelVector = c("baseMg","highMg"), # can be "lowMg","baseMg","highMg" // "allMg"
-                   NaLevelVector = c("baseNa"), # can be "baseNa","highNa" // "allNa"
+                   carbonSourceVector = "SYAN", # can be any sub combination of "SYAN"
+                   MgLevelVector = c("allMg"), # can be "lowMg","baseMg","highMg" // "allMg"
+                   NaLevelVector = c("allNa"), # can be "baseNa","highNa" // "allNa"
                    growthPhaseVector = c("exponential"), # can be "exponential","stationary","late_stationary" // "allPhase"
                    filterGenes = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
                    threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
@@ -73,19 +73,29 @@ dataName=name_data(initialValue="genes_P0.05Fold2", # can be "genes0.05", "genes
                    test_for = "Mg_mM_Levels")  # works only if normalizationMethodChoice == noNorm
 # c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
 
-objectName=paste(dataName$objectName,collapse = "_")
-
-kegg_input<-read.csv(file = paste0("../c_results/DeSeq2_diffGene_Results/",objectName,".csv"),
-                     header = TRUE)
+# DeSeq2 parameters
 objectName_df=dataName$objectName
+
+objectName_df$test_for=paste0("_batchNumberPLUS",gsub("^_","",objectName_df$test_for))
+test_base="baseMg"
+test_contrast="highMg"
+objectName_df$contrast=paste0("_",test_contrast,"VS",test_base)
+
+objectName=paste(objectName_df,collapse = "_")
+
+kegg_input<-read.csv(file = paste0("../c_results/",objectName,".csv"),
+                     header = TRUE)
+
 objectName_df$initial="resDf"
-objectName_df=paste(objectName_df,collapse = "_")
-kegg_input_df<-read.csv(file = paste0("../c_results/DeSeq2_diffGene_Results/",objectName_df,".csv"),
+objectName=paste(objectName_df,collapse = "_")
+kegg_input_df<-read.csv(file = paste0("../c_results/",objectName,".csv"),
                         header = TRUE)
 
-kegg_result<-read.table(file=paste0("../c_results/david_results/",objectName,"_kegg.txt"),
-                        sep = "\t",header = TRUE)
-kegg_result<-kegg_result[grep("eco",as.vector(kegg_result$Term)),]
+objectName_df$initial="ez_P0.05Fold2"
+objectName=paste(objectName_df,collapse = "_")
+kegg_result<-read.csv(file=paste0("../c_results/",objectName,"_kegg.csv"),header = TRUE)
+kegg_result<-kegg_result[grep("eum",as.vector(kegg_result$Term)),]
+browser()
 ###*****************************
 
 
@@ -109,7 +119,7 @@ if(dataType %in% c("protein_wo_NA", "protein"))
 }
 ###*****************************
 
-
+browser()
 ###*****************************
 # Find KEGG output pathways in ref 
 # do the consistency check if everything is in
