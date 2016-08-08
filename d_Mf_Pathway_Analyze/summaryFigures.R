@@ -51,7 +51,7 @@ for(counter01 in 1 : length(fileList))
 }
 
 
-fileList=dir("../d_results/",pattern = "*.mf")
+fileList=dir("../d_results/",pattern = "*.mf_n")
 
 for(counter01 in 1 : length(fileList))
 {
@@ -65,44 +65,31 @@ for(counter01 in 1 : length(fileList))
     mainLoadedFile_mf=rbind(mainLoadedFile_mf,temp)
   }
 }
-
-metaData=read.csv(paste0(file="../c_results/",
-                         "metaData_mrna_trT_set02_StcNasMgh_S_baseMghighMg_baseNa",
-                         "_Sta_noFilter_p1Sf_noNorm__Mg_mM_Levels.csv"))
-
-referanceMF=read.table(file = "ReferenceFiles/MF_david_mrna_ref_2009_tidy.txt",header = TRUE,sep="\t",quote = "")
 ###*****************************
 
 
 ###*****************************
 # Generate flegellar data frame kegg
-mainLoadedFile_kegg$vs=as.character(mainLoadedFile_kegg$vs)
 mainLoadedFile_kegg %>%
   dplyr::group_by()%>%
   dplyr::mutate(pick_data=ifelse(pick_data=="mrna","mRNA","Protein"))%>%
-  dplyr::mutate(vs=ifelse(vs=="baseNahighNa","highNa",vs),
-                vs=ifelse(vs=="baseMghighMg","highMg",vs),
-                vs=ifelse(vs=="baseMglowMg","lowMg",vs),
-                vs=ifelse(vs=="glucoselactate","lactate",vs),
-                vs=ifelse(vs=="glucoseglycerol","glycerol",vs),
-                vs=ifelse(vs=="glucosegluconate","gluconate",vs))%>%
-  dplyr::group_by(KEGG_Path, padj_gene, pick_data,growthPhase,vs) %>%
+  dplyr::group_by(KEGG_Path, padj_gene, pick_data,growthPhase,contrast) %>%
   dplyr::mutate(grouping=paste(growthPhase,
-                               vs,sep = "-"))->kegg_metabolism_df
+                               contrast,sep = "-"))->kegg_metabolism_df
 
 
 kegg_metabolism_df %>%
   dplyr::group_by(KEGG_Path,FDR_KEGG_Path, KEGG_Path_long, KEGG_Path_short) %>%
-  dplyr::summarize(numGenesInCat=unique(numGenesInCat),
+  dplyr::summarize(Pop.Hits=unique(Pop.Hits),
                    numSigP=unique(numSigP),
                    numSigN=unique(numSigN),
                    pick_data=unique(pick_data),
                    growthPhase=unique(growthPhase),
                    test_for=unique(test_for),
-                   vs=unique(vs),
+                   contrast=unique(contrast),
                    df_category=unique(df_category),
                    grouping=unique(grouping))%>%
-  dplyr::group_by(pick_data, growthPhase, vs)%>%
+  dplyr::group_by(pick_data, growthPhase, contrast)%>%
   dplyr::arrange(FDR_KEGG_Path)%>%
   dplyr::mutate(rank=seq(1:n()))%>%
   dplyr::filter(rank<6) %>%
@@ -115,7 +102,7 @@ kegg_metabolism_summary$grouping <- factor(kegg_metabolism_summary$grouping,
                                                        "Sta-lowMg", "Sta-highMg", "Sta-highNa",
                                                        "Sta-glycerol","Sta-gluconate","Sta-lactate")))
 
-kegg_metabolism_summary$vs <- factor(kegg_metabolism_summary$vs, 
+kegg_metabolism_summary$contrast <- factor(kegg_metabolism_summary$contrast, 
                                      levels = (c("lowMg", "highMg", "highNa",
                                                  "glycerol","gluconate","lactate")))
 ###*****************************
@@ -125,33 +112,26 @@ kegg_metabolism_summary$vs <- factor(kegg_metabolism_summary$vs,
 # MF Vector
 
 # Generate flegellar data frame mf
-mainLoadedFile_mf$vs=as.character(mainLoadedFile_mf$vs)
 mainLoadedFile_mf %>%
   dplyr::group_by()%>%
   dplyr::mutate(pick_data=ifelse(pick_data=="mrna","mRNA","Protein"))%>%
-  dplyr::mutate(vs=ifelse(vs=="baseNahighNa","highNa",vs),
-                vs=ifelse(vs=="baseMghighMg","highMg",vs),
-                vs=ifelse(vs=="baseMglowMg","lowMg",vs),
-                vs=ifelse(vs=="glucoselactate","lactate",vs),
-                vs=ifelse(vs=="glucoseglycerol","glycerol",vs),
-                vs=ifelse(vs=="glucosegluconate","gluconate",vs))%>%
-  dplyr::group_by(MF_Name, padj_gene, pick_data,growthPhase,vs) %>%
+  dplyr::group_by(MF, padj_gene, pick_data,growthPhase,contrast) %>%
   dplyr::mutate(grouping=paste(growthPhase,
-                               vs,sep = "-"))->mf_metabolism_df
+                               contrast,sep = "-"))->mf_metabolism_df
 
 mf_metabolism_df %>%
-  dplyr::group_by(MF_Name, FDR_GoMF, MF_Name_long, MF_Name_short) %>%
-  dplyr::summarize(numGenesInCat=unique(numGenesInCat),
+  dplyr::group_by(MF, FDR_MF, MF_Long, MF_Short) %>%
+  dplyr::summarize(Pop.Hits=unique(Pop.Hits),
                    numSigP=unique(numSigP),
                    numSigN=unique(numSigN),
                    pick_data=unique(pick_data),
                    growthPhase=unique(growthPhase),
                    test_for=unique(test_for),
-                   vs=unique(vs),
+                   contrast=unique(contrast),
                    df_category=unique(df_category),
                    grouping=unique(grouping))%>%
-  dplyr::group_by(pick_data, growthPhase, vs)%>%
-  dplyr::arrange(FDR_GoMF)%>%
+  dplyr::group_by(pick_data, growthPhase, contrast)%>%
+  dplyr::arrange(FDR_MF)%>%
   dplyr::mutate(rank=seq(1:n()))%>%
   dplyr::filter(rank<6) %>%
   tidyr::complete(rank)->mf_metabolism_summary
@@ -162,9 +142,12 @@ mf_metabolism_summary$grouping <- factor(mf_metabolism_summary$grouping,
                                                         "Sta-lowMg", "Sta-highMg", "Sta-highNa",
                                                         "Sta-glycerol","Sta-gluconate","Sta-lactate")))
 
-mf_metabolism_summary$vs <- factor(mf_metabolism_summary$vs, 
+mf_metabolism_summary$contrast <- factor(mf_metabolism_summary$contrast, 
                                    levels = (c("lowMg", "highMg", "highNa",
                                                "glycerol","gluconate","lactate")))
+
+mf_metabolism_summary$pick_data <- factor(mf_metabolism_summary$pick_data, 
+                                         levels = (c("mRNA","Protein")))
 ###*****************************
 
 
@@ -190,7 +173,7 @@ fig01<-ggplot(kegg_metabolism_summary, aes( y=rank,x="condition"))+
   ylim(5.5,0.5)+
   scale_x_continuous(limits=c(0,1), expand=c(0,0)) +
   geom_text(aes(label=paste(rank, KEGG_Path_short, sep=". "), x=0.02),size=3, hjust=0)+
-  facet_grid(growthPhase+vs~pick_data) +
+  facet_grid(growthPhase+contrast~pick_data,drop = FALSE) +
   panel_border() +
   theme(  axis.line = element_blank(), 
           axis.text.x = element_blank(), 
@@ -204,8 +187,8 @@ print(fig01)
 fig02<-ggplot(mf_metabolism_summary, aes( y=rank,x="condition"))+
   ylim(5.5,0.5)+
   scale_x_continuous(limits=c(0,1), expand=c(0,0)) +
-  geom_text(aes(label=paste(rank, MF_Name_short, sep=". "), x=0.02),size=3, hjust=0)+
-  facet_grid(growthPhase+vs~pick_data)+
+  geom_text(aes(label=paste(rank, MF_Short, sep=". "), x=0.02),size=3, hjust=0)+
+  facet_grid(growthPhase+contrast~pick_data,drop = FALSE)+
   panel_border() +
   theme(  axis.line = element_blank(), 
           axis.text.x = element_blank(), 
@@ -220,7 +203,7 @@ fig01a<-ggplot(kegg_metabolism_summary_exp, aes( y=rank,x="condition"))+
   ylim(5.5,0.5)+
   scale_x_continuous(limits=c(0,1), expand=c(0,0)) +
   geom_text(aes(label=paste(rank, KEGG_Path_short, sep=". "), x=0.02),size=3, hjust=0)+
-  facet_grid(vs~pick_data) +
+  facet_grid(contrast~pick_data,drop = FALSE) +
   panel_border() +
   theme(  axis.line = element_blank(), 
           axis.text.x = element_blank(), 
@@ -233,7 +216,7 @@ fig01b<-ggplot(kegg_metabolism_summary_sta, aes( y=rank,x="condition"))+
   ylim(5.5,0.5)+
   scale_x_continuous(limits=c(0,1), expand=c(0,0)) +
   geom_text(aes(label=paste(rank, KEGG_Path_short, sep=". "), x=0.02),size=3, hjust=0)+
-  facet_grid(vs~pick_data) +
+  facet_grid(contrast~pick_data,drop = FALSE) +
   panel_border() +
   theme(  axis.line = element_blank(), 
           axis.text.x = element_blank(), 
@@ -245,8 +228,8 @@ fig01b<-ggplot(kegg_metabolism_summary_sta, aes( y=rank,x="condition"))+
 fig02a<-ggplot(mf_metabolism_summary_exp, aes( y=rank,x="condition"))+
   ylim(5.5,0.5)+
   scale_x_continuous(limits=c(0,1), expand=c(0,0)) +
-  geom_text(aes(label=paste(rank, MF_Name_short, sep=". "), x=0.02),size=3, hjust=0)+
-  facet_grid(vs~pick_data) +
+  geom_text(aes(label=paste(rank, MF_Short, sep=". "), x=0.02),size=3, hjust=0)+
+  facet_grid(contrast~pick_data, drop = FALSE) +
   panel_border() +
   theme(  axis.line = element_blank(), 
           axis.text.x = element_blank(), 
@@ -255,11 +238,13 @@ fig02a<-ggplot(mf_metabolism_summary_exp, aes( y=rank,x="condition"))+
           axis.title.x = element_blank(), 
           axis.title.y = element_blank())
 
+
+
 fig02b<-ggplot(mf_metabolism_summary_sta, aes( y=rank,x="condition"))+
   ylim(5.5,0.5)+
   scale_x_continuous(limits=c(0,1), expand=c(0,0)) +
-  geom_text(aes(label=paste(rank, MF_Name_short, sep=". "), x=0.02),size=3, hjust=0)+
-  facet_grid(vs~pick_data) +
+  geom_text(aes(label=paste(rank, MF_Short, sep=". "), x=0.02),size=3, hjust=0)+
+  facet_grid(contrast~pick_data,drop = FALSE) +
   panel_border() +
   theme(  axis.line = element_blank(), 
           axis.text.x = element_blank(), 
@@ -267,6 +252,13 @@ fig02b<-ggplot(mf_metabolism_summary_sta, aes( y=rank,x="condition"))+
           axis.ticks = element_blank(), 
           axis.title.x = element_blank(), 
           axis.title.y = element_blank())
+###*****************************
+
+
+###*****************************
+# Combine Kegg figures together
+kegg_figure<-cowplot::plot_grid(fig01a,fig01b,labels = c("A","B"),ncol=1,scale = .95)
+mf_figure<-cowplot::plot_grid(fig02a,fig02b,labels = c("A","B"),ncol=1,scale = .95)
 ###*****************************
 
 
@@ -286,3 +278,10 @@ cowplot::save_plot(filename = paste0("../d_figures/resultTable_mf_exp.pdf"),
                    plot = fig02a,ncol = 2,nrow=1.7,limitsize = FALSE)
 cowplot::save_plot(filename = paste0("../d_figures/resultTable_mf_sta.pdf"),
                    plot = fig02b,ncol = 2.05,nrow=1.7,limitsize = FALSE)
+
+
+cowplot::save_plot(filename = paste0("../d_figures/resultTable_kegg.pdf"),
+                   plot = kegg_figure, ncol = 2,nrow=3.4,limitsize = FALSE)
+
+cowplot::save_plot(filename = paste0("../d_figures/resultTable_mf.pdf"),
+                   plot = mf_figure, ncol = 2,nrow=3.4,limitsize = FALSE)

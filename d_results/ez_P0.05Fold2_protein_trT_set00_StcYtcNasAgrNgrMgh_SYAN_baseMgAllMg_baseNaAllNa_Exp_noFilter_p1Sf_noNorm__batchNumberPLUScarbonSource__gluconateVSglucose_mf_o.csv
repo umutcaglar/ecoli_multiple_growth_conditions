@@ -1,349 +1,349 @@
-"","X","Category","MF","Count","X.","PValue","List.Total","Pop.Hits","Pop.Total","Fold.Enrichment","Bonferroni","Benjamini","FDR_MF","MF_Short","gene_number","gene_name_ez","gene_name","padj_gene","log2","signChange","score_gene","abs_score","rank","numSigP","numSigN","MF_long","MF_short","pick_data","growthPhase","test_for","base","contrast","df_category"
+"","X","Category","MF","Count","X.","PValue","List.Total","Pop.Hits","Pop.Total","Fold.Enrichment","Bonferroni","Benjamini","FDR_MF","MF_Short","gene_number","gene_name_ez","gene_name","padj_gene","log2","signChange","score_gene","abs_score","rank","numSigP","numSigN","MF_Long","pick_data","growthPhase","test_for","base","contrast","df_category"
 "1",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_25","947934","glpD",2.85728693891254e-07,3.25697369032485,1,6.54404614403134,6.54404614403134,34,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "2",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_50","944769","idnD",2.85728693891254e-07,4.9575878635549,1,6.54404614403134,6.54404614403134,23,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "3",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_50","944769","idnD",2.85728693891254e-07,4.9575878635549,1,6.54404614403134,6.54404614403134,23,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "4",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_50","944769","idnD",2.85728693891254e-07,4.9575878635549,1,6.54404614403134,6.54404614403134,23,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "5",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_64","944769","idnD",2.85728693891254e-07,4.9575878635549,1,6.54404614403134,6.54404614403134,35,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "6",6,"GOTERM_MF_ALL","GO:0046914~transition metal ion binding",26,15.3846153846154,0.00222899333740311,146,2075,21998,1.88792870110579,0.512535084589348,0.112863270163574,0.0296912545961984,"transition metal ion binding","gene_81","944769","idnD",2.85728693891254e-07,4.9575878635549,1,6.54404614403134,6.54404614403134,15,15,10,"transition metal ion binding
- padj:0.02969 N( -10/ +15/ 2075)","transition metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02969 N( -10/ +15/ 2075)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "7",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_36","949041","mglB",1.55748190351081e-05,2.19442863591346,1,4.80757699073689,4.80757699073689,22,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "8",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_36","949041","mglB",1.55748190351081e-05,2.19442863591346,1,4.80757699073689,4.80757699073689,22,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "9",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_36","949041","mglB",1.55748190351081e-05,2.19442863591346,1,4.80757699073689,4.80757699073689,22,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "10",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_51","948423","glpK",0.000142771244950612,1.92419349184518,1,3.84535925346173,3.84535925346173,20,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "11",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_51","948423","glpK",0.000142771244950612,1.92419349184518,1,3.84535925346173,3.84535925346173,20,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "12",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_51","948423","glpK",0.000142771244950612,1.92419349184518,1,3.84535925346173,3.84535925346173,20,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "13",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_58","946725","glpQ",0.000142771244950612,2.99741886243403,1,3.84535925346173,3.84535925346173,21,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "14",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_58","946725","glpQ",0.000142771244950612,2.99741886243403,1,3.84535925346173,3.84535925346173,21,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "15",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_58","946725","glpQ",0.000142771244950612,2.99741886243403,1,3.84535925346173,3.84535925346173,21,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "16",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_78","946725","glpQ",0.000142771244950612,2.99741886243403,1,3.84535925346173,3.84535925346173,33,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "17",6,"GOTERM_MF_ALL","GO:0046914~transition metal ion binding",26,15.3846153846154,0.00222899333740311,146,2075,21998,1.88792870110579,0.512535084589348,0.112863270163574,0.0296912545961984,"transition metal ion binding","gene_86","948423","glpK",0.000142771244950612,1.92419349184518,1,3.84535925346173,3.84535925346173,14,15,10,"transition metal ion binding
- padj:0.02969 N( -10/ +15/ 2075)","transition metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02969 N( -10/ +15/ 2075)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "18",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_103","945988","ycjY",0.000208730307065158,2.52805769997329,1,3.68041448799464,3.68041448799464,32,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "19",6,"GOTERM_MF_ALL","GO:0046914~transition metal ion binding",26,15.3846153846154,0.00222899333740311,146,2075,21998,1.88792870110579,0.512535084589348,0.112863270163574,0.0296912545961984,"transition metal ion binding","gene_09","947122","nth",0.000244519486657885,2.35674807948278,1,3.61168652463541,3.61168652463541,13,15,10,"transition metal ion binding
- padj:0.02969 N( -10/ +15/ 2075)","transition metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02969 N( -10/ +15/ 2075)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "20",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_57","947122","nth",0.000244519486657885,2.35674807948278,1,3.61168652463541,3.61168652463541,19,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "21",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_57","947122","nth",0.000244519486657885,2.35674807948278,1,3.61168652463541,3.61168652463541,19,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "22",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_57","947122","nth",0.000244519486657885,2.35674807948278,1,3.61168652463541,3.61168652463541,19,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "23",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_75","947122","nth",0.000244519486657885,2.35674807948278,1,3.61168652463541,3.61168652463541,31,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "24",5,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",5,2.9585798816568,0.00168807412524647,146,77,21998,9.7838462906956,0.419589211421523,0.103093657222037,0.022561931520455,"structural constituent of ribosome","gene_10","947819","rplW",0.000808847931960376,1.93707615437074,1,3.0921331205611,3.0921331205611,5,5,1,"structural constituent of ribosome
- padj:0.02256 N( -1/ +5/ 77)","structural constituent of ribosome","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02256 N( -1/ +5/ 77)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "25",7,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",6,3.55029585798817,0.00311044802902437,146,149,21998,6.06729796818976,0.633268446234159,0.133509032710243,0.041205756991409,"structural molecule activity","gene_12","947819","rplW",0.000808847931960376,1.93707615437074,1,3.0921331205611,3.0921331205611,5,5,1,"structural molecule activity
- padj:0.04121 N( -1/ +5/ 149)","structural molecule activity","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.04121 N( -1/ +5/ 149)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "26",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_39","947819","rplW",0.000808847931960376,1.93707615437074,1,3.0921331205611,3.0921331205611,30,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "27",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_45","945142","thiM",0.00110578739113605,2.13733571318068,1,2.95632836646027,2.95632836646027,18,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "28",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_45","945142","thiM",0.00110578739113605,2.13733571318068,1,2.95632836646027,2.95632836646027,18,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "29",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_45","945142","thiM",0.00110578739113605,2.13733571318068,1,2.95632836646027,2.95632836646027,18,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "30",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_58","946898","ucpA",0.00126608233224491,1.98035286091828,1,2.8975380516038,2.8975380516038,29,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "31",6,"GOTERM_MF_ALL","GO:0046914~transition metal ion binding",26,15.3846153846154,0.00222899333740311,146,2075,21998,1.88792870110579,0.512535084589348,0.112863270163574,0.0296912545961984,"transition metal ion binding","gene_80","945051","yajD",0.00149897649283269,1.83117622250477,1,2.82420517776753,2.82420517776753,12,15,10,"transition metal ion binding
- padj:0.02969 N( -10/ +15/ 2075)","transition metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02969 N( -10/ +15/ 2075)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "32",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_111","945051","yajD",0.00149897649283269,1.83117622250477,1,2.82420517776753,2.82420517776753,17,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "33",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_111","945051","yajD",0.00149897649283269,1.83117622250477,1,2.82420517776753,2.82420517776753,17,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "34",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_111","945051","yajD",0.00149897649283269,1.83117622250477,1,2.82420517776753,2.82420517776753,17,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "35",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_02","948690","miaA",0.00187679527153264,1.53717073460735,1,2.72658309940473,2.72658309940473,16,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "36",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_02","948690","miaA",0.00187679527153264,1.53717073460735,1,2.72658309940473,2.72658309940473,16,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "37",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_02","948690","miaA",0.00187679527153264,1.53717073460735,1,2.72658309940473,2.72658309940473,16,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "38",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_04","948520","pepE",0.00201366305437721,2.70780322598887,1,2.6960131980659,2.6960131980659,28,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "39",5,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",5,2.9585798816568,0.00168807412524647,146,77,21998,9.7838462906956,0.419589211421523,0.103093657222037,0.022561931520455,"structural constituent of ribosome","gene_13","945152","rplT",0.0021505332907798,2.18134500719127,1,2.66745383007336,2.66745383007336,4,5,1,"structural constituent of ribosome
- padj:0.02256 N( -1/ +5/ 77)","structural constituent of ribosome","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02256 N( -1/ +5/ 77)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "40",7,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",6,3.55029585798817,0.00311044802902437,146,149,21998,6.06729796818976,0.633268446234159,0.133509032710243,0.041205756991409,"structural molecule activity","gene_15","945152","rplT",0.0021505332907798,2.18134500719127,1,2.66745383007336,2.66745383007336,4,5,1,"structural molecule activity
- padj:0.04121 N( -1/ +5/ 149)","structural molecule activity","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.04121 N( -1/ +5/ 149)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "41",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_57","947278","gcvA",0.00289232052974134,1.84877711286698,1,2.53875357977851,2.53875357977851,27,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "42",6,"GOTERM_MF_ALL","GO:0046914~transition metal ion binding",26,15.3846153846154,0.00222899333740311,146,2075,21998,1.88792870110579,0.512535084589348,0.112863270163574,0.0296912545961984,"transition metal ion binding","gene_02","946201","lnt",0.00703322880675362,1.44117686872118,1,2.15284525378037,2.15284525378037,11,15,10,"transition metal ion binding
- padj:0.02969 N( -10/ +15/ 2075)","transition metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02969 N( -10/ +15/ 2075)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "43",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_03","946201","lnt",0.00703322880675362,1.44117686872118,1,2.15284525378037,2.15284525378037,15,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "44",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_03","946201","lnt",0.00703322880675362,1.44117686872118,1,2.15284525378037,2.15284525378037,15,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "45",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_03","946201","lnt",0.00703322880675362,1.44117686872118,1,2.15284525378037,2.15284525378037,15,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "46",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_47","948422","glpF",0.00711549984627191,2.61233940864474,1,2.14779458639448,2.14779458639448,14,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "47",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_47","948422","glpF",0.00711549984627191,2.61233940864474,1,2.14779458639448,2.14779458639448,14,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "48",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_47","948422","glpF",0.00711549984627191,2.61233940864474,1,2.14779458639448,2.14779458639448,14,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "49",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_31","945435","glnQ",0.00781247165942648,1.42540573843646,1,2.10721154509453,2.10721154509453,26,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "50",5,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",5,2.9585798816568,0.00168807412524647,146,77,21998,9.7838462906956,0.419589211421523,0.103093657222037,0.022561931520455,"structural constituent of ribosome","gene_08","947817","rplC",0.0083519771368889,1.4914716463229,1,2.07821070319916,2.07821070319916,3,5,1,"structural constituent of ribosome
- padj:0.02256 N( -1/ +5/ 77)","structural constituent of ribosome","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02256 N( -1/ +5/ 77)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "51",7,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",6,3.55029585798817,0.00311044802902437,146,149,21998,6.06729796818976,0.633268446234159,0.133509032710243,0.041205756991409,"structural molecule activity","gene_10","947817","rplC",0.0083519771368889,1.4914716463229,1,2.07821070319916,2.07821070319916,3,5,1,"structural molecule activity
- padj:0.04121 N( -1/ +5/ 149)","structural molecule activity","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.04121 N( -1/ +5/ 149)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "52",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_21","946869","zipA",0.0083519771368889,1.39758258507073,1,2.07821070319916,2.07821070319916,23,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "53",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_37","947817","rplC",0.0083519771368889,1.4914716463229,1,2.07821070319916,2.07821070319916,24,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "54",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_38","946757","nuoI",0.0083519771368889,1.49767680650925,1,2.07821070319916,2.07821070319916,12,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "55",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_38","946757","nuoI",0.0083519771368889,1.49767680650925,1,2.07821070319916,2.07821070319916,12,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "56",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_38","946757","nuoI",0.0083519771368889,1.49767680650925,1,2.07821070319916,2.07821070319916,12,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "57",6,"GOTERM_MF_ALL","GO:0046914~transition metal ion binding",26,15.3846153846154,0.00222899333740311,146,2075,21998,1.88792870110579,0.512535084589348,0.112863270163574,0.0296912545961984,"transition metal ion binding","gene_59","946195","fucI",0.0083519771368889,1.89342029238734,1,2.07821070319916,2.07821070319916,9,15,10,"transition metal ion binding
- padj:0.02969 N( -10/ +15/ 2075)","transition metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02969 N( -10/ +15/ 2075)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "58",6,"GOTERM_MF_ALL","GO:0046914~transition metal ion binding",26,15.3846153846154,0.00222899333740311,146,2075,21998,1.88792870110579,0.512535084589348,0.112863270163574,0.0296912545961984,"transition metal ion binding","gene_66","946757","nuoI",0.0083519771368889,1.49767680650925,1,2.07821070319916,2.07821070319916,10,15,10,"transition metal ion binding
- padj:0.02969 N( -10/ +15/ 2075)","transition metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02969 N( -10/ +15/ 2075)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "59",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_97","946195","fucI",0.0083519771368889,1.89342029238734,1,2.07821070319916,2.07821070319916,13,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "60",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_97","946195","fucI",0.0083519771368889,1.89342029238734,1,2.07821070319916,2.07821070319916,13,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "61",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_97","946195","fucI",0.0083519771368889,1.89342029238734,1,2.07821070319916,2.07821070319916,13,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "62",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_117","946195","fucI",0.0083519771368889,1.89342029238734,1,2.07821070319916,2.07821070319916,25,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "63",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_26","945620","ribD",0.00842033610245219,1.50989349165666,1,2.07467057304582,2.07467057304582,11,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "64",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_26","945620","ribD",0.00842033610245219,1.50989349165666,1,2.07467057304582,2.07467057304582,11,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "65",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_26","945620","ribD",0.00842033610245219,1.50989349165666,1,2.07467057304582,2.07467057304582,11,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "66",6,"GOTERM_MF_ALL","GO:0046914~transition metal ion binding",26,15.3846153846154,0.00222899333740311,146,2075,21998,1.88792870110579,0.512535084589348,0.112863270163574,0.0296912545961984,"transition metal ion binding","gene_45","945620","ribD",0.00842033610245219,1.50989349165666,1,2.07467057304582,2.07467057304582,8,15,10,"transition metal ion binding
- padj:0.02969 N( -10/ +15/ 2075)","transition metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02969 N( -10/ +15/ 2075)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "67",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_60","945747","dhaK",0.00938411237811482,1.5055088118393,1,2.02760680002904,2.02760680002904,22,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "68",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_74","948978","yjgR",0.00966812491026582,1.59460800015225,1,2.01465774722914,2.01465774722914,21,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "69",5,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",5,2.9585798816568,0.00168807412524647,146,77,21998,9.7838462906956,0.419589211421523,0.103093657222037,0.022561931520455,"structural constituent of ribosome","gene_17","947784","rplQ",0.0109692639134953,1.24589043865139,1,1.95982251454314,1.95982251454314,2,5,1,"structural constituent of ribosome
- padj:0.02256 N( -1/ +5/ 77)","structural constituent of ribosome","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02256 N( -1/ +5/ 77)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "70",7,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",6,3.55029585798817,0.00311044802902437,146,149,21998,6.06729796818976,0.633268446234159,0.133509032710243,0.041205756991409,"structural molecule activity","gene_20","947784","rplQ",0.0109692639134953,1.24589043865139,1,1.95982251454314,1.95982251454314,2,5,1,"structural molecule activity
- padj:0.04121 N( -1/ +5/ 149)","structural molecule activity","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.04121 N( -1/ +5/ 149)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "71",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_84","945402","sdhA",0.0120799029894203,1.32563243609695,1,1.91793655340765,1.91793655340765,20,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "72",6,"GOTERM_MF_ALL","GO:0046914~transition metal ion binding",26,15.3846153846154,0.00222899333740311,146,2075,21998,1.88792870110579,0.512535084589348,0.112863270163574,0.0296912545961984,"transition metal ion binding","gene_04","947839","bfr",0.0146531476358245,1.58941335423509,1,1.83406907469303,1.83406907469303,7,15,10,"transition metal ion binding
- padj:0.02969 N( -10/ +15/ 2075)","transition metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02969 N( -10/ +15/ 2075)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "73",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_55","947839","bfr",0.0146531476358245,1.58941335423509,1,1.83406907469303,1.83406907469303,10,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "74",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_55","947839","bfr",0.0146531476358245,1.58941335423509,1,1.83406907469303,1.83406907469303,10,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "75",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_55","947839","bfr",0.0146531476358245,1.58941335423509,1,1.83406907469303,1.83406907469303,10,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "76",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_93","948233","phoU",0.0148549330458062,1.57781217669452,1,1.82812930130915,1.82812930130915,19,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "77",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_68","948427","cytR",0.0161949465493443,1.55548617949078,1,1.79062048101985,1.79062048101985,18,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "78",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_112","948992","djlA",0.017094945416509,1.41024061120208,1,1.76713228155044,1.76713228155044,17,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "79",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_46","944777","ispH",0.0177905056615772,1.26248681101248,1,1.74981170773891,1.74981170773891,9,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "80",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_46","944777","ispH",0.0177905056615772,1.26248681101248,1,1.74981170773891,1.74981170773891,9,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "81",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_46","944777","ispH",0.0177905056615772,1.26248681101248,1,1.74981170773891,1.74981170773891,9,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "82",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_54","944777","ispH",0.0177905056615772,1.26248681101248,1,1.74981170773891,1.74981170773891,16,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "83",6,"GOTERM_MF_ALL","GO:0046914~transition metal ion binding",26,15.3846153846154,0.00222899333740311,146,2075,21998,1.88792870110579,0.512535084589348,0.112863270163574,0.0296912545961984,"transition metal ion binding","gene_77","944777","ispH",0.0177905056615772,1.26248681101248,1,1.74981170773891,1.74981170773891,6,15,10,"transition metal ion binding
- padj:0.02969 N( -10/ +15/ 2075)","transition metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02969 N( -10/ +15/ 2075)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "84",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_109","947955","ugpQ",0.0193920602766969,1.62004487368768,1,1.7123760475862,1.7123760475862,8,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "85",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_109","947955","ugpQ",0.0193920602766969,1.62004487368768,1,1.7123760475862,1.7123760475862,8,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "86",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_109","947955","ugpQ",0.0193920602766969,1.62004487368768,1,1.7123760475862,1.7123760475862,8,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "87",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_104","947082","uxuA",0.0202007854238933,1.25879226408131,1,1.69463174448251,1.69463174448251,15,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "88",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_15","948498","nudC",0.0242228107593976,1.66003065085909,1,1.61577546373342,1.61577546373342,7,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "89",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_15","948498","nudC",0.0242228107593976,1.66003065085909,1,1.61577546373342,1.61577546373342,7,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "90",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_15","948498","nudC",0.0242228107593976,1.66003065085909,1,1.61577546373342,1.61577546373342,7,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "91",6,"GOTERM_MF_ALL","GO:0046914~transition metal ion binding",26,15.3846153846154,0.00222899333740311,146,2075,21998,1.88792870110579,0.512535084589348,0.112863270163574,0.0296912545961984,"transition metal ion binding","gene_22","948498","nudC",0.0242228107593976,1.66003065085909,1,1.61577546373342,1.61577546373342,5,15,10,"transition metal ion binding
- padj:0.02969 N( -10/ +15/ 2075)","transition metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02969 N( -10/ +15/ 2075)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "92",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_05","948264","rbsA",0.0263013579443798,1.26728477585755,1,1.58002182822027,1.58002182822027,14,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "93",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_09","945742","abgA",0.0266193943069868,2.24675624994938,1,1.57480183060913,1.57480183060913,13,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "94",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_89","945307","sucB",0.0269690751117741,1.17410915877797,1,1.56913394716003,1.56913394716003,12,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "95",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_55","948658","aspA",0.0285283740152454,1.29372095524191,1,1.54472298040496,1.54472298040496,11,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "96",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_03","944885","hscA",0.0308592951810626,1.13006574554794,1,1.51061399734192,1.51061399734192,10,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "97",6,"GOTERM_MF_ALL","GO:0046914~transition metal ion binding",26,15.3846153846154,0.00222899333740311,146,2075,21998,1.88792870110579,0.512535084589348,0.112863270163574,0.0296912545961984,"transition metal ion binding","gene_16","948766","pepB",0.0338085978929972,1.07830910025063,1,1.47097283988081,1.47097283988081,4,15,10,"transition metal ion binding
- padj:0.02969 N( -10/ +15/ 2075)","transition metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02969 N( -10/ +15/ 2075)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "98",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_61","948766","pepB",0.0338085978929972,1.07830910025063,1,1.47097283988081,1.47097283988081,6,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "99",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_61","948766","pepB",0.0338085978929972,1.07830910025063,1,1.47097283988081,1.47097283988081,6,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "100",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_61","948766","pepB",0.0338085978929972,1.07830910025063,1,1.47097283988081,1.47097283988081,6,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "101",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_87","948766","pepB",0.0338085978929972,1.07830910025063,1,1.47097283988081,1.47097283988081,9,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "102",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_10","948260","rbsK",0.0338118065624414,1.50843300809633,1,1.47093162429075,1.47093162429075,8,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "103",6,"GOTERM_MF_ALL","GO:0046914~transition metal ion binding",26,15.3846153846154,0.00222899333740311,146,2075,21998,1.88792870110579,0.512535084589348,0.112863270163574,0.0296912545961984,"transition metal ion binding","gene_69","945100","recR",0.0350121369823888,1.13224154404919,1,1.45578138105628,1.45578138105628,3,15,10,"transition metal ion binding
- padj:0.02969 N( -10/ +15/ 2075)","transition metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02969 N( -10/ +15/ 2075)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "104",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_101","945100","recR",0.0350121369823888,1.13224154404919,1,1.45578138105628,1.45578138105628,4,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "105",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_101","945100","recR",0.0350121369823888,1.13224154404919,1,1.45578138105628,1.45578138105628,4,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "106",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_101","945100","recR",0.0350121369823888,1.13224154404919,1,1.45578138105628,1.45578138105628,4,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "107",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_112","948157","pyrE",0.0350121369823888,1.24034888322504,1,1.45578138105628,1.45578138105628,5,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "108",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_112","948157","pyrE",0.0350121369823888,1.24034888322504,1,1.45578138105628,1.45578138105628,5,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "109",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_112","948157","pyrE",0.0350121369823888,1.24034888322504,1,1.45578138105628,1.45578138105628,5,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "110",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_131","948157","pyrE",0.0350121369823888,1.24034888322504,1,1.45578138105628,1.45578138105628,7,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "111",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_128","946235","cedA",0.0355006292109631,1.67568888769737,1,1.44976394946807,1.44976394946807,6,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "112",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_22","946209","ppsA",0.0377260462535947,1.24468647246986,1,1.42335870712925,1.42335870712925,3,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "113",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_22","946209","ppsA",0.0377260462535947,1.24468647246986,1,1.42335870712925,1.42335870712925,3,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "114",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_22","946209","ppsA",0.0377260462535947,1.24468647246986,1,1.42335870712925,1.42335870712925,3,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "115",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_23","946209","ppsA",0.0377260462535947,1.24468647246986,1,1.42335870712925,1.42335870712925,5,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "116",6,"GOTERM_MF_ALL","GO:0046914~transition metal ion binding",26,15.3846153846154,0.00222899333740311,146,2075,21998,1.88792870110579,0.512535084589348,0.112863270163574,0.0296912545961984,"transition metal ion binding","gene_51","947553","cca",0.0419741642218276,1.44046112596189,1,1.37701794265774,1.37701794265774,2,15,10,"transition metal ion binding
- padj:0.02969 N( -10/ +15/ 2075)","transition metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02969 N( -10/ +15/ 2075)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "117",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_93","947553","cca",0.0419741642218276,1.44046112596189,1,1.37701794265774,1.37701794265774,2,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "118",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_93","947553","cca",0.0419741642218276,1.44046112596189,1,1.37701794265774,1.37701794265774,2,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "119",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_93","947553","cca",0.0419741642218276,1.44046112596189,1,1.37701794265774,1.37701794265774,2,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "120",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_115","947553","cca",0.0419741642218276,1.44046112596189,1,1.37701794265774,1.37701794265774,4,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "121",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_22","947206","mutS",0.0431876301084482,1.04204891715152,1,1.36464062691018,1.36464062691018,3,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "122",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_01","946762","nuoG",0.0452730348077583,1.09355877852286,1,1.3441603922711,1.3441603922711,1,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "123",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_01","946762","nuoG",0.0452730348077583,1.09355877852286,1,1.3441603922711,1.3441603922711,1,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "124",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_01","946762","nuoG",0.0452730348077583,1.09355877852286,1,1.3441603922711,1.3441603922711,1,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "125",6,"GOTERM_MF_ALL","GO:0046914~transition metal ion binding",26,15.3846153846154,0.00222899333740311,146,2075,21998,1.88792870110579,0.512535084589348,0.112863270163574,0.0296912545961984,"transition metal ion binding","gene_01","946762","nuoG",0.0452730348077583,1.09355877852286,1,1.3441603922711,1.3441603922711,1,15,10,"transition metal ion binding
- padj:0.02969 N( -10/ +15/ 2075)","transition metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02969 N( -10/ +15/ 2075)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "126",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_16","946215","ydcF",0.045609453050846,1.8102764556904,1,1.34094513579291,1.34094513579291,1,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "127",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_130","944989","pyrH",0.045609453050846,1.11972421053752,1,1.34094513579291,1.34094513579291,2,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "128",5,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",5,2.9585798816568,0.00168807412524647,146,77,21998,9.7838462906956,0.419589211421523,0.103093657222037,0.022561931520455,"structural constituent of ribosome","gene_05","947828","rplM",0.0486163684788103,1.47793534139386,1,1.31321748499323,1.31321748499323,1,5,1,"structural constituent of ribosome
- padj:0.02256 N( -1/ +5/ 77)","structural constituent of ribosome","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02256 N( -1/ +5/ 77)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "129",7,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",6,3.55029585798817,0.00311044802902437,146,149,21998,6.06729796818976,0.633268446234159,0.133509032710243,0.041205756991409,"structural molecule activity","gene_07","947828","rplM",0.0486163684788103,1.47793534139386,1,1.31321748499323,1.31321748499323,1,5,1,"structural molecule activity
- padj:0.04121 N( -1/ +5/ 149)","structural molecule activity","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.04121 N( -1/ +5/ 149)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "130",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_82","945398","moaD",0.0350121369823888,-2.28148688186609,-1,-1.45578138105628,1.45578138105628,-1,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "131",7,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",6,3.55029585798817,0.00311044802902437,146,149,21998,6.06729796818976,0.633268446234159,0.133509032710243,0.041205756991409,"structural molecule activity","gene_06","949014","sufA",0.0327641863001436,-2.05574177443553,-1,-1.48460061329447,1.48460061329447,-1,5,1,"structural molecule activity
- padj:0.04121 N( -1/ +5/ 149)","structural molecule activity","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.04121 N( -1/ +5/ 149)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "132",6,"GOTERM_MF_ALL","GO:0046914~transition metal ion binding",26,15.3846153846154,0.00222899333740311,146,2075,21998,1.88792870110579,0.512535084589348,0.112863270163574,0.0296912545961984,"transition metal ion binding","gene_44","946389","torZ",0.0206982614918746,-2.4887977469377,-1,-1.68406613068768,1.68406613068768,-1,15,10,"transition metal ion binding
- padj:0.02969 N( -10/ +15/ 2075)","transition metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02969 N( -10/ +15/ 2075)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "133",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_85","946389","torZ",0.0206982614918746,-2.4887977469377,-1,-1.68406613068768,1.68406613068768,-1,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "134",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_85","946389","torZ",0.0206982614918746,-2.4887977469377,-1,-1.68406613068768,1.68406613068768,-1,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "135",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_85","946389","torZ",0.0206982614918746,-2.4887977469377,-1,-1.68406613068768,1.68406613068768,-1,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "136",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_116","948800","ybaQ",0.0170988317945152,-2.53290164252383,-1,-1.76703355993103,1.76703355993103,-2,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "137",6,"GOTERM_MF_ALL","GO:0046914~transition metal ion binding",26,15.3846153846154,0.00222899333740311,146,2075,21998,1.88792870110579,0.512535084589348,0.112863270163574,0.0296912545961984,"transition metal ion binding","gene_78","945201","fepC",0.0107521244838945,-2.44389348357582,-1,-1.96850571616939,1.96850571616939,-2,15,10,"transition metal ion binding
- padj:0.02969 N( -10/ +15/ 2075)","transition metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02969 N( -10/ +15/ 2075)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "138",6,"GOTERM_MF_ALL","GO:0046914~transition metal ion binding",26,15.3846153846154,0.00222899333740311,146,2075,21998,1.88792870110579,0.512535084589348,0.112863270163574,0.0296912545961984,"transition metal ion binding","gene_83","945649","fhuE",0.0107521244838945,-2.69404287476156,-1,-1.96850571616939,1.96850571616939,-3,15,10,"transition metal ion binding
- padj:0.02969 N( -10/ +15/ 2075)","transition metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02969 N( -10/ +15/ 2075)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "139",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_106","945201","fepC",0.0107521244838945,-2.44389348357582,-1,-1.96850571616939,1.96850571616939,-2,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "140",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_106","945201","fepC",0.0107521244838945,-2.44389348357582,-1,-1.96850571616939,1.96850571616939,-2,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "141",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_106","945201","fepC",0.0107521244838945,-2.44389348357582,-1,-1.96850571616939,1.96850571616939,-2,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "142",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_113","945649","fhuE",0.0107521244838945,-2.69404287476156,-1,-1.96850571616939,1.96850571616939,-3,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "143",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_113","945649","fhuE",0.0107521244838945,-2.69404287476156,-1,-1.96850571616939,1.96850571616939,-3,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "144",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_113","945649","fhuE",0.0107521244838945,-2.69404287476156,-1,-1.96850571616939,1.96850571616939,-3,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "145",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_14","946178","entB",0.0083519771368889,-2.59277292818354,-1,-2.07821070319916,2.07821070319916,-4,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "146",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_14","946178","entB",0.0083519771368889,-2.59277292818354,-1,-2.07821070319916,2.07821070319916,-4,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "147",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_14","946178","entB",0.0083519771368889,-2.59277292818354,-1,-2.07821070319916,2.07821070319916,-4,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "148",6,"GOTERM_MF_ALL","GO:0046914~transition metal ion binding",26,15.3846153846154,0.00222899333740311,146,2075,21998,1.88792870110579,0.512535084589348,0.112863270163574,0.0296912545961984,"transition metal ion binding","gene_17","946178","entB",0.0083519771368889,-2.59277292818354,-1,-2.07821070319916,2.07821070319916,-4,15,10,"transition metal ion binding
- padj:0.02969 N( -10/ +15/ 2075)","transition metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02969 N( -10/ +15/ 2075)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "149",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_07","945181","fes",0.00672517540161124,-2.96758615063192,-1,-2.17229638419418,2.17229638419418,-5,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "150",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_07","945181","fes",0.00672517540161124,-2.96758615063192,-1,-2.17229638419418,2.17229638419418,-5,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "151",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_07","945181","fes",0.00672517540161124,-2.96758615063192,-1,-2.17229638419418,2.17229638419418,-5,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "152",6,"GOTERM_MF_ALL","GO:0046914~transition metal ion binding",26,15.3846153846154,0.00222899333740311,146,2075,21998,1.88792870110579,0.512535084589348,0.112863270163574,0.0296912545961984,"transition metal ion binding","gene_07","945181","fes",0.00672517540161124,-2.96758615063192,-1,-2.17229638419418,2.17229638419418,-5,15,10,"transition metal ion binding
- padj:0.02969 N( -10/ +15/ 2075)","transition metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02969 N( -10/ +15/ 2075)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "153",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_25","949042","cirA",0.00672517540161124,-2.79534844065702,-1,-2.17229638419418,2.17229638419418,-6,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "154",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_25","949042","cirA",0.00672517540161124,-2.79534844065702,-1,-2.17229638419418,2.17229638419418,-7,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "155",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_25","949042","cirA",0.00672517540161124,-2.79534844065702,-1,-2.17229638419418,2.17229638419418,-6,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "156",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_25","949042","cirA",0.00672517540161124,-2.79534844065702,-1,-2.17229638419418,2.17229638419418,-7,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "157",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_25","949042","cirA",0.00672517540161124,-2.79534844065702,-1,-2.17229638419418,2.17229638419418,-6,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "158",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_25","949042","cirA",0.00672517540161124,-2.79534844065702,-1,-2.17229638419418,2.17229638419418,-7,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "159",6,"GOTERM_MF_ALL","GO:0046914~transition metal ion binding",26,15.3846153846154,0.00222899333740311,146,2075,21998,1.88792870110579,0.512535084589348,0.112863270163574,0.0296912545961984,"transition metal ion binding","gene_42","949042","cirA",0.00672517540161124,-2.79534844065702,-1,-2.17229638419418,2.17229638419418,-6,15,10,"transition metal ion binding
- padj:0.02969 N( -10/ +15/ 2075)","transition metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02969 N( -10/ +15/ 2075)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "160",6,"GOTERM_MF_ALL","GO:0046914~transition metal ion binding",26,15.3846153846154,0.00222899333740311,146,2075,21998,1.88792870110579,0.512535084589348,0.112863270163574,0.0296912545961984,"transition metal ion binding","gene_42","949042","cirA",0.00672517540161124,-2.79534844065702,-1,-2.17229638419418,2.17229638419418,-7,15,10,"transition metal ion binding
- padj:0.02969 N( -10/ +15/ 2075)","transition metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02969 N( -10/ +15/ 2075)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "161",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_06","945184","entF",0.00289232052974134,-3.04121649181878,-1,-2.53875357977851,2.53875357977851,-8,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "162",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_06","945184","entF",0.00289232052974134,-3.04121649181878,-1,-2.53875357977851,2.53875357977851,-8,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "163",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_06","945184","entF",0.00289232052974134,-3.04121649181878,-1,-2.53875357977851,2.53875357977851,-8,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "164",6,"GOTERM_MF_ALL","GO:0046914~transition metal ion binding",26,15.3846153846154,0.00222899333740311,146,2075,21998,1.88792870110579,0.512535084589348,0.112863270163574,0.0296912545961984,"transition metal ion binding","gene_06","945184","entF",0.00289232052974134,-3.04121649181878,-1,-2.53875357977851,2.53875357977851,-8,15,10,"transition metal ion binding
- padj:0.02969 N( -10/ +15/ 2075)","transition metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02969 N( -10/ +15/ 2075)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "165",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_43","947426","entE",0.00289232052974134,-3.08357106416059,-1,-2.53875357977851,2.53875357977851,-9,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "166",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_43","947426","entE",0.00289232052974134,-3.08357106416059,-1,-2.53875357977851,2.53875357977851,-9,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "167",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_43","947426","entE",0.00289232052974134,-3.08357106416059,-1,-2.53875357977851,2.53875357977851,-9,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "168",6,"GOTERM_MF_ALL","GO:0046914~transition metal ion binding",26,15.3846153846154,0.00222899333740311,146,2075,21998,1.88792870110579,0.512535084589348,0.112863270163574,0.0296912545961984,"transition metal ion binding","gene_73","947426","entE",0.00289232052974134,-3.08357106416059,-1,-2.53875357977851,2.53875357977851,-9,15,10,"transition metal ion binding
- padj:0.02969 N( -10/ +15/ 2075)","transition metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02969 N( -10/ +15/ 2075)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "169",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_50","945493","ybjQ",0.00209339016847755,-3.02647529885608,-1,-2.67914981980996,2.67914981980996,-3,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "170",1,"GOTERM_MF_ALL","GO:0005515~protein binding",41,24.2603550295858,9.16915186989363e-16,146,1395,21998,4.4283301418962,2.8599345114344e-13,2.8599345114344e-13,1.19904086659517e-14,"protein binding","gene_53","945753","sufB",0.000808847931960376,-3.11066287227766,-1,-3.0921331205611,3.0921331205611,-4,35,4,"protein binding
- padj:0.00000 N( -4/ +35/ 1395)","protein binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00000 N( -4/ +35/ 1395)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "171",6,"GOTERM_MF_ALL","GO:0046914~transition metal ion binding",26,15.3846153846154,0.00222899333740311,146,2075,21998,1.88792870110579,0.512535084589348,0.112863270163574,0.0296912545961984,"transition metal ion binding","gene_84","945511","entC",0.000509741562450597,-3.59874664473681,-1,-3.2926499541942,3.2926499541942,-10,15,10,"transition metal ion binding
- padj:0.02969 N( -10/ +15/ 2075)","transition metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.02969 N( -10/ +15/ 2075)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "172",2,"GOTERM_MF_ALL","GO:0046872~metal ion binding",35,20.7100591715976,0.000254698426052587,146,2793,21998,1.8881106876781,0.0787495428401958,0.0401820708281158,0.00343477702044681,"metal ion binding","gene_114","945511","entC",0.000509741562450597,-3.59874664473681,-1,-3.2926499541942,3.2926499541942,-10,23,10,"metal ion binding
- padj:0.00343 N( -10/ +23/ 2793)","metal ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00343 N( -10/ +23/ 2793)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "173",3,"GOTERM_MF_ALL","GO:0043169~cation binding",35,20.7100591715976,0.000439796950217456,146,2876,21998,1.8336207060796,0.132071349809705,0.046117953325742,0.00592409535772642,"cation binding","gene_114","945511","entC",0.000509741562450597,-3.59874664473681,-1,-3.2926499541942,3.2926499541942,-10,23,10,"cation binding
- padj:0.00592 N( -10/ +23/ 2876)","cation binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00592 N( -10/ +23/ 2876)","protein","Exp","carbonSource","glucose","gluconate","kegg"
 "174",4,"GOTERM_MF_ALL","GO:0043167~ion binding",35,20.7100591715976,0.000483856668236475,146,2891,21998,1.82410693555342,0.144303526040131,0.0382107123875267,0.00651578843750245,"ion binding","gene_114","945511","entC",0.000509741562450597,-3.59874664473681,-1,-3.2926499541942,3.2926499541942,-10,23,10,"ion binding
- padj:0.00652 N( -10/ +23/ 2891)","ion binding","protein","Exp","carbonSource","glucose","gluconate","kegg"
+ padj:0.00652 N( -10/ +23/ 2891)","protein","Exp","carbonSource","glucose","gluconate","kegg"

@@ -214,6 +214,9 @@ data_plots %>% dplyr::mutate(Phase2=replace_fun(input_vector = Phase,
                                                 initialVal = c("EXP", "STA"),
                                                 finalVal = c("Exponential", "Stationary")))->data_plots
 
+
+write.csv(x = data_plots, file = "../e_results/flux_data.csv")
+
 # data_plots %>% dplyr::filter(Phase=="EXP")->data_plots_exp
 # data_plots %>% dplyr::filter(Phase=="STA")->data_plots_sta
 # 

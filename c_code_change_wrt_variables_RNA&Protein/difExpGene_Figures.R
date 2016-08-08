@@ -417,7 +417,7 @@ sta_protein_fig = venn.diagram(x=sta_protein_list, filename=NULL,
                          main = "D", main.pos = c(0.05,1), main.fontface = "bold", main.cex = 2.5)
 
 
-jpeg(filename = '../c_figures/venn.jpeg',width = 6600, height = 6600, units="px", res =500)
+png(filename = '../c_figures/venn.png',width = 6600, height = 6600, units="px", res =500)
 pushViewport(viewport(layout=grid.layout(ncol=3,nrow = 3, 
                                          widths = unit(c(5,5,1)/11, "npc"), 
                                          heights = unit(c(1,5,5)/11, "npc")

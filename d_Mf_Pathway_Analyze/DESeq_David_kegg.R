@@ -1,6 +1,7 @@
-# Analayze Kegg Pathways DESeq + DAVID
+# This file is for plotting supplementary figures for KEGG pathways 
+# that seems to be significantly changing under different experiments.
 
-# Aim of the code is to find the genes in kegg pathways and send files to generate figures
+# This file is for single pathway. Next file will do this atomatically in loop
 
 
 ###*****************************
@@ -22,10 +23,10 @@ if(as.vector(Sys.info()["effective_user"]=="umut"))
 
 ###*****************************
 # DOWNLOAD LIBRARIES
-require("Biobase") 
-require("DESeq2")
 require("dplyr")
 require("tidyr")
+require("stringr")
+
 require("ggplot2")
 require("RColorBrewer")
 require("scales")
@@ -41,7 +42,7 @@ source("../a_code_dataPreperation_RNA&Protein/data_naming_functions.R")
 
 
 ###*****************************
-# Download the DAVID input and output
+# Generate filename and load files
 dataName=name_data(initialValue="genes_P0.05Fold2", # can be "genes0.05", "genes_P0.05Fold2"
                    dataType = "mrna", # can be "rna", "mrna", "protein", "protein_wo_NA"
                    badDataSet = "set00", # can be "set00",set01","set02", "set03"
@@ -73,6 +74,7 @@ dataName=name_data(initialValue="genes_P0.05Fold2", # can be "genes0.05", "genes
                    test_for = "Mg_mM_Levels")  # works only if normalizationMethodChoice == noNorm
 # c("Mg_mM_Levels", "Na_mM_Levels", "growthPhase", "carbonSource")
 
+
 # DeSeq2 parameters
 objectName_df=dataName$objectName
 
@@ -81,99 +83,74 @@ test_base="baseMg"
 test_contrast="highMg"
 objectName_df$contrast=paste0("_",test_contrast,"VS",test_base)
 
+# The file is the list of significantly altered genes (without the information how much they are altered)
+objectName_df$initial="genes_P0.05Fold2"
 objectName=paste(objectName_df,collapse = "_")
+kegg_input<-read.csv(file = paste0("../c_results/",objectName,".csv"),header = TRUE) 
 
-kegg_input<-read.csv(file = paste0("../c_results/",objectName,".csv"),
-                     header = TRUE)
-
+# the file is the list of whole genes and includes information aout how much they are altered
 objectName_df$initial="resDf"
 objectName=paste(objectName_df,collapse = "_")
-kegg_input_df<-read.csv(file = paste0("../c_results/",objectName,".csv"),
-                        header = TRUE)
+kegg_input_df<-read.csv(file = paste0("../c_results/",objectName,".csv"),header = TRUE)
 
+# The file is the output of RDAVIDWebService for KEGG pathways with given input "kegg_input"
+# The only problem is it gives the ez ids for genes
 objectName_df$initial="ez_P0.05Fold2"
 objectName=paste(objectName_df,collapse = "_")
-kegg_result<-read.csv(file=paste0("../c_results/",objectName,"_kegg.csv"),header = TRUE)
-kegg_result<-kegg_result[grep("eum",as.vector(kegg_result$Term)),]
-browser()
-###*****************************
+kegg_result<-read.csv(file=paste0("../c_results/david_results/",objectName,"_kegg.csv"),header = TRUE)
 
-
-###*****************************
-# load reference libraries
-dataType=dataName$objectName$pick_data
-
-if(dataType %in% c("rna","mrna"))
+# the file makes the transition between official gene names and ez name
+if(objectName_df$pick_data=="mrna")
 {
-  kegg_pathway_david_ref_2009_tidy<-read.table(file = paste0("../d_Mf_Pathway_Analyze/ReferenceFiles/",
-                                                             "kegg_pathway_david_mrna_ref_2009_tidy.txt"),
-                                               sep = "\t",header = TRUE,fill = TRUE, quote = "")
+  officialGeneSymbol_entrezGeneId<-read.csv(file="../generateDictionary/rna_tidy_eColi_ez.csv")
+  officialGeneSymbol_entrezGeneId %>%
+    dplyr::filter(Species=="Escherichia coli str. K-12 substr. MG1655")->officialGeneSymbol_entrezGeneId
 }
 
-
-if(dataType %in% c("protein_wo_NA", "protein"))
+if(objectName_df$pick_data=="protein")
 {
-  kegg_pathway_david_ref_2009_tidy<-read.table(paste0("../d_Mf_Pathway_Analyze/ReferenceFiles/",
-                                                      "kegg_pathway_david_protein_ref_2009_tidy.txt"),
-                                               sep = "\t",header = TRUE,fill = TRUE, quote = "")
-}
-###*****************************
-
-browser()
-###*****************************
-# Find KEGG output pathways in ref 
-# do the consistency check if everything is in
-
-for(counter01 in 1:nrow(kegg_result))
-{
-  thePathway=as.vector(kegg_result[["Term"]][counter01])
-  kegg_pathway_david_ref_2009_tidy %>%
-    dplyr::filter(KEGG_PATH_Name==thePathway)->temp
-  
-  m2<-as.vector(temp$ID)
-  m1<-strsplit(x=as.vector(kegg_result$Genes[counter01]),split = ",")
-  m1<-sub(" ","",noquote(m1[[1]]))
-  m1<-paste0(tolower(substr(start = 1,stop = 3,x = m1)),substr(start = 4,stop = 4,x = m1))
-  print(all(m1 %in% m2))
+  officialGeneSymbol_entrezGeneId<-read.csv(file="../generateDictionary/protein_tidy_eColi_ez.csv")
+  officialGeneSymbol_entrezGeneId %>%
+    dplyr::filter(Species=="Escherichia coli str. K-12 substr. MG1655")->officialGeneSymbol_entrezGeneId
 }
 ###*****************************
 
 
 ###*****************************
-# Find pathways // 
-# select pathway related genes 
-# // find the gens in our data related with pathway//
+# Put the KEGG output into a more useful format
 
-kegg_result ->kegg_result_short
-pathway_list=as.vector(kegg_result_short$Term)
-inputGenes=unique(as.vector(kegg_input_df$gene_name))
+# 1. one needs to divide the column of genes into multiple columns and turn the data into tidy format
+additionalColumnNames<-sprintf("gene_%02d", 1:(max(str_count(kegg_result$Genes, ","))+1))
+
+
+kegg_result %>%
+  dplyr::rename(KEGG_Path=Term, FDR_KEGG_Path=FDR)%>%
+  dplyr::mutate(FDR_KEGG_Path=FDR_KEGG_Path/100)%>%
+  dplyr::mutate(KEGG_Path_Short=gsub("*.*:","",KEGG_Path))%>%
+  tidyr::separate(col = Genes, into = additionalColumnNames, sep = ",")->kegg_result_divided
+
+kegg_result_divided %>%
+  tidyr::gather(key = gene_number, value = gene_name_ez, 
+                dplyr::starts_with("gene_"), na.rm = TRUE)->kegg_result_tidy
+kegg_result_tidy$gene_name_ez=gsub(" ", "", kegg_result_tidy$gene_name_ez)
+
+# 2. combine the entrez gene ides in kegg result with official gene symbols
+officialGeneSymbol_entrezGeneId$To=as.character(officialGeneSymbol_entrezGeneId$To)
+officialGeneSymbol_entrezGeneId %>%
+  dplyr::select(gene_name_ez=To, gene_name=From)%>%
+  dplyr::left_join(kegg_result_tidy,.)->kegg_result_tidy
+
+
+# 3. Now add the information about individual genes (p.adj and log2 change) into tidy data
 kegg_input_df %>%
-  dplyr::select(ID=gene_name, padj_gene=padj, log2=log2FoldChange, signChange)%>%
-  dplyr::mutate(score_gene=-signChange*log10(padj_gene))->kegg_input_df_narrow
+  dplyr::select(gene_name, padj_gene=padj, log2=log2FoldChange, signChange)%>%
+  dplyr::mutate(score_gene=-signChange*log10(padj_gene))->kegg_input_df_narrow 
+# includes info abut how much each gene altered in terms of p.adj and log2 change
 
-kegg_result_short %>%
-  dplyr::select(KEGG_Path=Term, FDR_KEGG_Path=FDR)%>%
-  dplyr::mutate(FDR_KEGG_Path=FDR_KEGG_Path/100)->kegg_result_narrow
+dplyr::left_join(kegg_result_tidy,kegg_input_df_narrow)->kegg_result_tidy
 
-kegg_pathway_david_ref_2009_tidy %>%
-  dplyr::select(ID, KEGG_Path=KEGG_PATH_Name)%>%
-  dplyr::filter(KEGG_Path %in% pathway_list)%>%
-  dplyr::group_by(KEGG_Path)%>%
-  dplyr::summarise(numGenesInCat=length(KEGG_Path))->numGenesInCat_df
-
-kegg_pathway_david_ref_2009_tidy %>%
-  dplyr::select(ID, KEGG_Path=KEGG_PATH_Name)%>%
-  dplyr::filter(KEGG_Path %in% pathway_list,
-                ID %in% inputGenes) %>%
-  dplyr::left_join(.,kegg_input_df_narrow) %>%
-  dplyr::left_join(.,kegg_result_narrow) %>%
-  dplyr::left_join(.,numGenesInCat_df) %>%
-  dplyr::filter(!is.na(padj_gene))%>%
-  dplyr::group_by(KEGG_Path)%>%
-  dplyr::arrange(desc(score_gene))->selectedDf
-
-# add limitations for figures
-selectedDf %>%
+# 4. filter the tidy data padj_gene<0.05,FDR_KEGG_Path<0.05, abs(log2)>1 and add rank
+kegg_result_tidy%>%
   dplyr::filter(padj_gene<0.05,FDR_KEGG_Path<0.05, abs(log2)>1) %>%
   dplyr::mutate(abs_score=abs(score_gene))%>%
   dplyr::group_by(KEGG_Path,signChange)%>%
@@ -182,26 +159,24 @@ selectedDf %>%
   dplyr::group_by(KEGG_Path)%>%
   dplyr::mutate(numSigP=(max(rank)+abs(max(rank)))/2,
                 numSigN=abs(min(rank)))%>%
-  dplyr::group_by(ID,KEGG_Path)%>%
+  dplyr::group_by(gene_name,KEGG_Path)%>%
   dplyr::mutate(KEGG_Path_long=paste0(sub(".*:","",KEGG_Path),
                                       "\n padj:",
                                       sprintf("%.5f", FDR_KEGG_Path),
-                                      " N( -",numSigN,"/ +",numSigP,"/ ",numGenesInCat,")"))%>%
+                                      " N( -",numSigN,"/ +",numSigP,"/ ",Pop.Hits,")"))%>%
   dplyr::mutate(KEGG_Path_short=paste0(sub(".*:","",KEGG_Path)))%>%
   dplyr::group_by(KEGG_Path)%>%
-  dplyr::arrange(desc(score_gene))-> selectedDf
+  dplyr::arrange(desc(score_gene))->kegg_tidy_organized
 
-
-selectedDf %>%
+# 5. order the factors for KEGG_Path_long
+kegg_tidy_organized %>% 
   dplyr::group_by(KEGG_Path_long)%>%
   dplyr::summarise(FDR_KEGG_Path=unique(FDR_KEGG_Path))%>%
-  dplyr::arrange(FDR_KEGG_Path)->summary_df
-
-as.vector(summary_df$KEGG_Path_long)
+  dplyr::arrange(FDR_KEGG_Path)->kegg_summary
 
 
-selectedDf$KEGG_Path_long <- factor(selectedDf$KEGG_Path_long, 
-                                    levels = rev(as.vector(summary_df$KEGG_Path_long)))
+kegg_tidy_organized$KEGG_Path_long <- factor(kegg_tidy_organized$KEGG_Path_long, 
+                                             levels = rev(as.vector(kegg_summary$KEGG_Path_long)))
 ###*****************************
 
 
@@ -211,12 +186,12 @@ selectedDf$KEGG_Path_long <- factor(selectedDf$KEGG_Path_long,
 maxPathway=10
 maxGene=15
 
-if(length(unique(as.vector(selectedDf$FDR_KEGG_Path)))<maxPathway)
-{maxPathway=length(unique(as.vector(selectedDf$FDR_KEGG_Path)))}
+if(length(unique(as.vector(kegg_tidy_organized$FDR_KEGG_Path)))<maxPathway)
+{maxPathway=length(unique(as.vector(kegg_tidy_organized$FDR_KEGG_Path)))}
 
-FDR_KEGG_PathTopn=sort(unique(as.vector(selectedDf$FDR_KEGG_Path)))[maxPathway]
+FDR_KEGG_PathTopn=sort(unique(as.vector(kegg_tidy_organized$FDR_KEGG_Path)))[maxPathway]
 
-selectedDf %>%
+kegg_tidy_organized %>%
   dplyr::group_by()%>%
   dplyr::filter(FDR_KEGG_Path<=FDR_KEGG_PathTopn) %>%
   dplyr::group_by(KEGG_Path) %>%
@@ -224,60 +199,31 @@ selectedDf %>%
   dplyr::top_n(n=maxGene, wt = abs_score)%>%
   dplyr::group_by(KEGG_Path,signChange)%>%
   dplyr::arrange(abs_score)%>%
-  dplyr::mutate(rank=signChange*seq(1,n()))->selectedDf_simp
+  dplyr::mutate(rank=signChange*seq(1,n()))->kegg_tidy_organized_simp
 
-selectedDf_simp %>%
+kegg_tidy_organized_simp %>%
   dplyr::group_by(KEGG_Path_short)%>%
   dplyr::summarise(FDR_KEGG_Path=unique(FDR_KEGG_Path))%>%
-  dplyr::arrange(FDR_KEGG_Path)->summary_df_simp
+  dplyr::arrange(FDR_KEGG_Path)->kegg_organized_summary
 
-as.vector(summary_df_simp$KEGG_Path_short)
-
-
-selectedDf_simp$KEGG_Path_short <- factor(selectedDf_simp$KEGG_Path_short, 
-                                          levels = rev(as.vector(summary_df_simp$KEGG_Path_short)))
+kegg_tidy_organized_simp$KEGG_Path_short <- factor(kegg_tidy_organized_simp$KEGG_Path_short, 
+                                                   levels = rev(as.vector(kegg_organized_summary$KEGG_Path_short)))
 ###*****************************
 
 
 ###*****************************
-# Generate Figures 
-# a) Complex figure
-scaleHigh=max(abs(selectedDf$score_gene))
-scaleMid=0
-scaleLow=-max(abs(selectedDf$score_gene))
+# simple figure with geom point
 
-fig01=ggplot( selectedDf, aes( x=rank,y=KEGG_Path_long)) +
-  geom_tile(aes(fill=score_gene))+
-  scale_fill_gradientn(colours=c("Blue","Grey50","Red"),
-                       values=rescale(c(scaleLow,scaleMid,scaleHigh)),
-                       limits=c(scaleLow,scaleHigh),
-                       guide = guide_colorbar(title = "-sign(cor)*P_log10"))+
-  geom_text(aes(label=ID),size=3, colour="White", fontface="bold")+
-  theme_bw()+
-  scale_x_continuous(breaks=min(selectedDf$rank):max(selectedDf$rank))+
-  ggtitle(paste0(objectName,"_kegg"))+
-  theme(axis.line.y = element_blank(),
-        legend.position="bottom",
-        axis.title.y = element_blank(),
-        panel.grid.minor=element_blank(),
-        panel.grid.major.x=element_blank())
-
-print(fig01)
-
-
-
-# b) simple figure with geom point
-
-minimumFold=min(selectedDf_simp$log2)
+minimumFold=min(kegg_tidy_organized_simp$log2)
 if(minimumFold>-1){minimumFold=-1}
-maximumFold=max(selectedDf_simp$log2)
+maximumFold=max(kegg_tidy_organized_simp$log2)
 if(maximumFold<1){maximumFold=1}
 
-fig03=ggplot(selectedDf_simp, aes( x=log2,y=KEGG_Path_short)) +
+fig02=ggplot(kegg_tidy_organized_simp, aes( x=log2,y=KEGG_Path_short)) +
   geom_point(colour="blue", size=2.5)+
   geom_vline(xintercept = c(log2(1/2),log2(2)), colour="orange", linetype = "longdash")+
   geom_vline(xintercept = c(log2(1)), colour="black", linetype = "longdash")+
-  geom_text_repel(aes(label=ID),size=3, colour="Black", fontface="plain")+
+  geom_text_repel(aes(label=gene_name),size=3, colour="Black", fontface="plain")+
   theme_bw()+
   scale_x_continuous(breaks=seq(floor(minimumFold),ceiling(maximumFold)))+
   xlab("Log2 Fold Change")+
@@ -295,49 +241,33 @@ fig03=ggplot(selectedDf_simp, aes( x=log2,y=KEGG_Path_short)) +
         legend.title=element_text(size=14),
         legend.text=element_text(size=14))
 
-
+print(fig02)
 ###*****************************
 
 
 ###*****************************
 # Save Files
-selectedDf<-cbind(selectedDf, 
-                  unique(kegg_input_df[,c("pick_data","growthPhase","test_for","vs")]),
-                  df_category="kegg")
-write.csv(x = selectedDf, file = paste0("../d_results/",objectName,"_kegg.csv"))
+kegg_tidy_organized %>%
+  dplyr::mutate(pick_data=unique(kegg_input_df[,c("pick_data")]),
+                growthPhase=unique(kegg_input_df[,c("growthPhase")]),
+                test_for=unique(kegg_input_df[,c("test_for")]),
+                base=unique(kegg_input_df[,c("base")]),
+                contrast=unique(kegg_input_df[,c("contrast")]),
+                df_category="kegg")->kegg_tidy_organized
+
+
+write.csv(x = kegg_tidy_organized, file = paste0("../d_results/",objectName,"_kegg.csv"))
 ###*****************************
 
+
 ###*****************************
-# Save Figures
-
-# Detailed Figure
-colWidth=ifelse(max(selectedDf$rank)-min(selectedDf$rank)+1<16, 
-                16, 
-                max(selectedDf$rank)-min(selectedDf$rank))
-rowWidth=ifelse(nrow(summary_df)*1<3,3,nrow(summary_df)*1)
-cowplot::save_plot(filename = paste0("../d_figures/",objectName,"_kegg.pdf"),
-                   plot = fig01,
-                   nrow=1.5,
-                   ncol=2,
-                   base_height = rowWidth,
-                   base_width = colWidth,
-                   limitsize = FALSE)
-
-# Save simple figure
-rowWidth=ifelse(nrow(summary_df_simp)*1<3,3,nrow(summary_df_simp)*1)
+# Save figure
+rowWidth=ifelse(nrow(kegg_tidy_organized_simp)*1<3,3,nrow(kegg_tidy_organized_simp)*1)
 
 cowplot::save_plot(filename = paste0("../d_figures/simple",objectName,"_kegg.pdf"),
-                   plot = fig03,
+                   plot = fig02,
                    base_height = rowWidth,
                    ncol=3,
                    nrow=1.2,
                    limitsize = FALSE)
-
-
-
-
-
-
-
-
-
+###*****************************

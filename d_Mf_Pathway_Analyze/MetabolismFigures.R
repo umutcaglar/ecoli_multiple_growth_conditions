@@ -46,14 +46,14 @@ for(counter01 in 1 : length(fileList))
   if (counter01 !=1)
   {
     temp=read.csv(file = paste0("../d_results/",fileList[counter01]),header = TRUE)
-    #print(unique((temp[,c("pick_data","growthPhase","test_for","vs")])))
+    #print(unique((temp[,c("pick_data","growthPhase","test_for","contrast")])))
     #browser()
     mainLoadedFile_kegg=rbind(mainLoadedFile_kegg,temp)
   }
 }
 
 
-fileList=dir("../d_results/",pattern = "*.mf")
+fileList=dir("../d_results/",pattern = "*.mf_o")
 
 for(counter01 in 1 : length(fileList))
 {
@@ -67,16 +67,8 @@ for(counter01 in 1 : length(fileList))
     mainLoadedFile_mf=rbind(mainLoadedFile_mf,temp)
   }
 }
-
-metaData=read.csv(paste0(file="../c_results/",
-                         "metaData_mrna_trT_set02_StcNasMgh_S_baseMghighMg_baseNa",
-                         "_Sta_noFilter_p1Sf_noNorm__Mg_mM_Levels.csv"))
-
-referaneMF=read.table(file = "ReferenceFiles/MF_david_mrna_ref_2009_tidy.txt",header = TRUE,sep="\t",quote = "")
 ###*****************************
 
-
-left_join(referaneMF,mainLoadedFile_mf)->q
 
 ###*****************************
 # Kegg Vector
@@ -118,24 +110,20 @@ kegg_vector=c("Pyruvate metabolism",
 
 ###*****************************
 # write metabolism related kegg pathways
-keggIntersection<-intersect(mainLoadedFile_kegg$KEGG_Path_short , kegg_vector)
+keggIntersection<-intersect(mainLoadedFile_kegg$KEGG_Path_Short , kegg_vector)
 write.csv(x = keggIntersection, file = "../d_results/kegg_metabolism_related_pathways.csv")
 ###*****************************
 
 
 ###*****************************
 # Generate flegellar data frame kegg
-mainLoadedFile_kegg$vs=as.character(mainLoadedFile_kegg$vs)
 mainLoadedFile_kegg %>%
   dplyr::filter(test_for!="carbonSource")%>%
-  dplyr::filter(KEGG_Path_short %in% kegg_vector) %>%
+  dplyr::filter(KEGG_Path_Short %in% kegg_vector) %>%
   dplyr::mutate(pick_data=ifelse(pick_data=="mrna","mRNA","Protein"))%>%
-  dplyr::mutate(vs=ifelse(vs=="baseNahighNa","highNa",vs),
-                vs=ifelse(vs=="baseMghighMg","highMg",vs),
-                vs=ifelse(vs=="baseMglowMg","lowMg",vs))%>%
-  dplyr::group_by(KEGG_Path, padj_gene, pick_data,growthPhase,vs) %>%
+  dplyr::group_by(KEGG_Path, padj_gene, pick_data,growthPhase,contrast) %>%
   dplyr::mutate(grouping=paste(growthPhase,
-                               vs,sep = "-"))->kegg_metabolism_df
+                               contrast,sep = "-"))->kegg_metabolism_df
 
 kegg_metabolism_df %>%
   dplyr::group_by(grouping,signChange,pick_data) %>%
@@ -187,17 +175,13 @@ mf_vector=c("Pyruvate metabolism",
             "structural constituent of ribosome")
 
 # Generate flegellar data frame mf
-mainLoadedFile_mf$vs=as.character(mainLoadedFile_mf$vs)
 mainLoadedFile_mf %>%
-  dplyr::filter(MF_Name_short %in% mf_vector) %>%
+  dplyr::filter(MF_Short %in% mf_vector) %>%
   dplyr::filter(pick_data=="mrna",test_for!="carbonSource")%>%
   dplyr::mutate(pick_data=ifelse(pick_data=="mrna","mRNA","Protein"))%>%
-  dplyr::mutate(vs=ifelse(vs=="baseNahighNa","highNa",vs),
-                vs=ifelse(vs=="baseMghighMg","highMg",vs),
-                vs=ifelse(vs=="baseMglowMg","lowMg",vs))%>%
-  dplyr::group_by(MF_Name, padj_gene, pick_data,growthPhase,vs) %>%
+  dplyr::group_by(MF, padj_gene, pick_data,growthPhase,contrast) %>%
   dplyr::mutate(grouping=paste(growthPhase,
-                               vs,sep = "-"))->mf_metabolism_df
+                               contrast,sep = "-"))->mf_metabolism_df
 
 mf_metabolism_df %>%
   dplyr::group_by(grouping,signChange) %>%
@@ -228,7 +212,7 @@ fig01=ggplot(kegg_metabolism_summary, aes(x=grouping,
                                           fill=as.factor(signChange))) +
   facet_grid(pick_data~.)+
   geom_bar(position="dodge", stat="identity",width=.75)+
-  scale_y_continuous(expand = c(0, 0),limits = c(0,600))+
+  scale_y_continuous(expand = c(0, 0),limits = c(0,200))+
   scale_x_discrete(labels=newLevels)+
 scale_fill_manual(values = c("blue","red"),
                   name="Regulation",
@@ -269,17 +253,6 @@ fig02=ggplot(mf_metabolism_summary, aes(x=grouping,
   theme_bw()
 
 print(fig02)
-
-fig03<-ggplot(metaData,aes(x=Mg_mM_Levels, y=doublingTimeMinutes))+
-  geom_point()+
-  ylim(0,90)+
-  theme_bw()+
-  xlab("conditions")+
-  ylab("doubling time")+
-  theme(panel.grid.minor.y=element_blank(),
-        panel.grid.major.y=element_blank())
-
-print(fig03)
 ###*****************************
 
 
@@ -288,6 +261,3 @@ print(fig03)
 # Save Figures
 cowplot::save_plot(filename = paste0("../d_figures/metabolism_kegg.pdf"),
                    plot = fig01,ncol = 2,nrow=2,limitsize = FALSE)
-
-cowplot::save_plot(filename = paste0("../d_figures/metabolism_growthtime.pdf"),
-                   plot = fig03,ncol = 1,limitsize = FALSE)

@@ -1,125 +1,125 @@
-"","X","Category","MF","Count","X.","PValue","List.Total","Pop.Hits","Pop.Total","Fold.Enrichment","Bonferroni","Benjamini","FDR_MF","MF_Short","gene_number","gene_name_ez","gene_name","padj_gene","log2","signChange","score_gene","abs_score","rank","numSigP","numSigN","MF_long","MF_short","pick_data","growthPhase","test_for","base","contrast","df_category"
+"","X","Category","MF","Count","X.","PValue","List.Total","Pop.Hits","Pop.Total","Fold.Enrichment","Bonferroni","Benjamini","FDR_MF","MF_Short","gene_number","gene_name_ez","gene_name","padj_gene","log2","signChange","score_gene","abs_score","rank","numSigP","numSigN","MF_Long","pick_data","growthPhase","test_for","base","contrast","df_category"
 "1",4,"GOTERM_MF_ALL","GO:0008940~nitrate reductase activity",4,3.41880341880342,0.00152448687745363,97,52,21998,17.4448850118953,0.328468714389479,0.0947541080434501,0.0197561097595881,"nitrate reductase activity","gene_05","945808","narI",3.67151483534257e-16,4.02316485672828,1,15.4351547126163,15.4351547126163,4,4,1,"nitrate reductase activity
- padj:0.01976 N( -1/ +4/ 52)","nitrate reductase activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.01976 N( -1/ +4/ 52)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "2",5,"GOTERM_MF_ALL","GO:0016491~oxidoreductase activity",22,18.8034188034188,0.00243037045863405,97,2513,21998,1.98537091659453,0.470116848353505,0.119283724422134,0.0313242383578854,"oxidoreductase activity","gene_66","945808","narI",3.67151483534257e-16,4.02316485672828,1,15.4351547126163,15.4351547126163,9,9,13,"oxidoreductase activity
- padj:0.03132 N( -13/ +9/ 2513)","oxidoreductase activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.03132 N( -13/ +9/ 2513)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "3",5,"GOTERM_MF_ALL","GO:0016491~oxidoreductase activity",22,18.8034188034188,0.00243037045863405,97,2513,21998,1.98537091659453,0.470116848353505,0.119283724422134,0.0313242383578854,"oxidoreductase activity","gene_06","945780","narH",1.72497662043269e-14,3.65036136134811,1,13.7632167867854,13.7632167867854,8,9,13,"oxidoreductase activity
- padj:0.03132 N( -13/ +9/ 2513)","oxidoreductase activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.03132 N( -13/ +9/ 2513)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "4",4,"GOTERM_MF_ALL","GO:0008940~nitrate reductase activity",4,3.41880341880342,0.00152448687745363,97,52,21998,17.4448850118953,0.328468714389479,0.0947541080434501,0.0197561097595881,"nitrate reductase activity","gene_07","945780","narH",1.72497662043269e-14,3.65036136134811,1,13.7632167867854,13.7632167867854,3,4,1,"nitrate reductase activity
- padj:0.01976 N( -1/ +4/ 52)","nitrate reductase activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.01976 N( -1/ +4/ 52)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "5",1,"GOTERM_MF_ALL","GO:0005515~protein binding",26,22.2222222222222,8.72472451321027e-10,97,1395,21998,4.22678934338396,2.27715277745233e-07,2.27715277745233e-07,1.14110056959049e-08,"protein binding","gene_09","945780","narH",1.72497662043269e-14,3.65036136134811,1,13.7632167867854,13.7632167867854,15,15,9,"protein binding
- padj:0.00000 N( -9/ +15/ 1395)","protein binding","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00000 N( -9/ +15/ 1395)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "6",4,"GOTERM_MF_ALL","GO:0008940~nitrate reductase activity",4,3.41880341880342,0.00152448687745363,97,52,21998,17.4448850118953,0.328468714389479,0.0947541080434501,0.0197561097595881,"nitrate reductase activity","gene_01","945807","narJ",4.50739723584994e-14,3.95904732877558,1,13.3460741659726,13.3460741659726,2,4,1,"nitrate reductase activity
- padj:0.01976 N( -1/ +4/ 52)","nitrate reductase activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.01976 N( -1/ +4/ 52)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "7",5,"GOTERM_MF_ALL","GO:0016491~oxidoreductase activity",22,18.8034188034188,0.00243037045863405,97,2513,21998,1.98537091659453,0.470116848353505,0.119283724422134,0.0313242383578854,"oxidoreductase activity","gene_59","945807","narJ",4.50739723584994e-14,3.95904732877558,1,13.3460741659726,13.3460741659726,7,9,13,"oxidoreductase activity
- padj:0.03132 N( -13/ +9/ 2513)","oxidoreductase activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.03132 N( -13/ +9/ 2513)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "8",1,"GOTERM_MF_ALL","GO:0005515~protein binding",26,22.2222222222222,8.72472451321027e-10,97,1395,21998,4.22678934338396,2.27715277745233e-07,2.27715277745233e-07,1.14110056959049e-08,"protein binding","gene_70","945807","narJ",4.50739723584994e-14,3.95904732877558,1,13.3460741659726,13.3460741659726,14,15,9,"protein binding
- padj:0.00000 N( -9/ +15/ 1395)","protein binding","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00000 N( -9/ +15/ 1395)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "9",5,"GOTERM_MF_ALL","GO:0016491~oxidoreductase activity",22,18.8034188034188,0.00243037045863405,97,2513,21998,1.98537091659453,0.470116848353505,0.119283724422134,0.0313242383578854,"oxidoreductase activity","gene_07","945782","narG",1.29816107317585e-12,3.39048625154384,1,11.8866714178196,11.8866714178196,6,9,13,"oxidoreductase activity
- padj:0.03132 N( -13/ +9/ 2513)","oxidoreductase activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.03132 N( -13/ +9/ 2513)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "10",4,"GOTERM_MF_ALL","GO:0008940~nitrate reductase activity",4,3.41880341880342,0.00152448687745363,97,52,21998,17.4448850118953,0.328468714389479,0.0947541080434501,0.0197561097595881,"nitrate reductase activity","gene_09","945782","narG",1.29816107317585e-12,3.39048625154384,1,11.8866714178196,11.8866714178196,1,4,1,"nitrate reductase activity
- padj:0.01976 N( -1/ +4/ 52)","nitrate reductase activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.01976 N( -1/ +4/ 52)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "11",1,"GOTERM_MF_ALL","GO:0005515~protein binding",26,22.2222222222222,8.72472451321027e-10,97,1395,21998,4.22678934338396,2.27715277745233e-07,2.27715277745233e-07,1.14110056959049e-08,"protein binding","gene_13","945782","narG",1.29816107317585e-12,3.39048625154384,1,11.8866714178196,11.8866714178196,13,15,9,"protein binding
- padj:0.00000 N( -9/ +15/ 1395)","protein binding","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00000 N( -9/ +15/ 1395)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "12",5,"GOTERM_MF_ALL","GO:0016491~oxidoreductase activity",22,18.8034188034188,0.00243037045863405,97,2513,21998,1.98537091659453,0.470116848353505,0.119283724422134,0.0313242383578854,"oxidoreductase activity","gene_63","945557","ssuD",1.4436125237075e-07,2.87190649740376,1,6.84054935898059,6.84054935898059,5,9,13,"oxidoreductase activity
- padj:0.03132 N( -13/ +9/ 2513)","oxidoreductase activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.03132 N( -13/ +9/ 2513)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "13",5,"GOTERM_MF_ALL","GO:0016491~oxidoreductase activity",22,18.8034188034188,0.00243037045863405,97,2513,21998,1.98537091659453,0.470116848353505,0.119283724422134,0.0313242383578854,"oxidoreductase activity","gene_68","945947","ssuE",3.23919880772885e-05,2.73302192810397,1,4.48956239609296,4.48956239609296,4,9,13,"oxidoreductase activity
- padj:0.03132 N( -13/ +9/ 2513)","oxidoreductase activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.03132 N( -13/ +9/ 2513)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "14",5,"GOTERM_MF_ALL","GO:0016491~oxidoreductase activity",22,18.8034188034188,0.00243037045863405,97,2513,21998,1.98537091659453,0.470116848353505,0.119283724422134,0.0313242383578854,"oxidoreductase activity","gene_41","948432","metF",0.000276139335670597,1.80099489325471,1,3.55887172429924,3.55887172429924,3,9,13,"oxidoreductase activity
- padj:0.03132 N( -13/ +9/ 2513)","oxidoreductase activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.03132 N( -13/ +9/ 2513)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "15",1,"GOTERM_MF_ALL","GO:0005515~protein binding",26,22.2222222222222,8.72472451321027e-10,97,1395,21998,4.22678934338396,2.27715277745233e-07,2.27715277745233e-07,1.14110056959049e-08,"protein binding","gene_62","947139","degP",0.00042751391524497,1.44696011054781,1,3.36904974475861,3.36904974475861,12,15,9,"protein binding
- padj:0.00000 N( -9/ +15/ 1395)","protein binding","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00000 N( -9/ +15/ 1395)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "16",1,"GOTERM_MF_ALL","GO:0005515~protein binding",26,22.2222222222222,8.72472451321027e-10,97,1395,21998,4.22678934338396,2.27715277745233e-07,2.27715277745233e-07,1.14110056959049e-08,"protein binding","gene_53","947313","lysA",0.000437591622820313,2.13766410679685,1,3.35893100065483,3.35893100065483,11,15,9,"protein binding
- padj:0.00000 N( -9/ +15/ 1395)","protein binding","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00000 N( -9/ +15/ 1395)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "17",1,"GOTERM_MF_ALL","GO:0005515~protein binding",26,22.2222222222222,8.72472451321027e-10,97,1395,21998,4.22678934338396,2.27715277745233e-07,2.27715277745233e-07,1.14110056959049e-08,"protein binding","gene_39","945981","ydeM",0.00138119920807249,1.7772342863729,1,2.85974367933058,2.85974367933058,10,15,9,"protein binding
- padj:0.00000 N( -9/ +15/ 1395)","protein binding","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00000 N( -9/ +15/ 1395)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "18",1,"GOTERM_MF_ALL","GO:0005515~protein binding",26,22.2222222222222,8.72472451321027e-10,97,1395,21998,4.22678934338396,2.27715277745233e-07,2.27715277745233e-07,1.14110056959049e-08,"protein binding","gene_56","948434","metB",0.00157602620537495,1.32248004983872,1,2.80243656555514,2.80243656555514,9,15,9,"protein binding
- padj:0.00000 N( -9/ +15/ 1395)","protein binding","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00000 N( -9/ +15/ 1395)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "19",1,"GOTERM_MF_ALL","GO:0005515~protein binding",26,22.2222222222222,8.72472451321027e-10,97,1395,21998,4.22678934338396,2.27715277745233e-07,2.27715277745233e-07,1.14110056959049e-08,"protein binding","gene_30","947254","mazG",0.00435916264709802,1.08261858467662,1,2.36059692648143,2.36059692648143,8,15,9,"protein binding
- padj:0.00000 N( -9/ +15/ 1395)","protein binding","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00000 N( -9/ +15/ 1395)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "20",5,"GOTERM_MF_ALL","GO:0016491~oxidoreductase activity",22,18.8034188034188,0.00243037045863405,97,2513,21998,1.98537091659453,0.470116848353505,0.119283724422134,0.0313242383578854,"oxidoreductase activity","gene_02","947161","nrdH",0.0055407800208556,1.99012126219986,1,2.25642909178649,2.25642909178649,2,9,13,"oxidoreductase activity
- padj:0.03132 N( -13/ +9/ 2513)","oxidoreductase activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.03132 N( -13/ +9/ 2513)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "21",1,"GOTERM_MF_ALL","GO:0005515~protein binding",26,22.2222222222222,8.72472451321027e-10,97,1395,21998,4.22678934338396,2.27715277745233e-07,2.27715277745233e-07,1.14110056959049e-08,"protein binding","gene_23","946006","yncE",0.0158068863322071,1.5064465989166,1,1.80115366972094,1.80115366972094,7,15,9,"protein binding
- padj:0.00000 N( -9/ +15/ 1395)","protein binding","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00000 N( -9/ +15/ 1395)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "22",1,"GOTERM_MF_ALL","GO:0005515~protein binding",26,22.2222222222222,8.72472451321027e-10,97,1395,21998,4.22678934338396,2.27715277745233e-07,2.27715277745233e-07,1.14110056959049e-08,"protein binding","gene_41","948200","ibpA",0.0196692068861653,1.33944207569029,1,1.70621315161632,1.70621315161632,6,15,9,"protein binding
- padj:0.00000 N( -9/ +15/ 1395)","protein binding","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00000 N( -9/ +15/ 1395)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "23",1,"GOTERM_MF_ALL","GO:0005515~protein binding",26,22.2222222222222,8.72472451321027e-10,97,1395,21998,4.22678934338396,2.27715277745233e-07,2.27715277745233e-07,1.14110056959049e-08,"protein binding","gene_57","947763","yhdZ",0.0219490489429967,1.44490168071575,1,1.65858429308732,1.65858429308732,5,15,9,"protein binding
- padj:0.00000 N( -9/ +15/ 1395)","protein binding","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00000 N( -9/ +15/ 1395)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "24",1,"GOTERM_MF_ALL","GO:0005515~protein binding",26,22.2222222222222,8.72472451321027e-10,97,1395,21998,4.22678934338396,2.27715277745233e-07,2.27715277745233e-07,1.14110056959049e-08,"protein binding","gene_29","944896","metN",0.0300374520590252,1.20450386913814,1,1.52233690933885,1.52233690933885,4,15,9,"protein binding
- padj:0.00000 N( -9/ +15/ 1395)","protein binding","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00000 N( -9/ +15/ 1395)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "25",1,"GOTERM_MF_ALL","GO:0005515~protein binding",26,22.2222222222222,8.72472451321027e-10,97,1395,21998,4.22678934338396,2.27715277745233e-07,2.27715277745233e-07,1.14110056959049e-08,"protein binding","gene_14","947596","ygjK",0.0307417012805854,1.39777119018349,1,1.51227210182243,1.51227210182243,3,15,9,"protein binding
- padj:0.00000 N( -9/ +15/ 1395)","protein binding","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00000 N( -9/ +15/ 1395)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "26",1,"GOTERM_MF_ALL","GO:0005515~protein binding",26,22.2222222222222,8.72472451321027e-10,97,1395,21998,4.22678934338396,2.27715277745233e-07,2.27715277745233e-07,1.14110056959049e-08,"protein binding","gene_64","944817","gpt",0.0364673819040772,1.30258415237353,1,1.43809541478949,1.43809541478949,2,15,9,"protein binding
- padj:0.00000 N( -9/ +15/ 1395)","protein binding","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00000 N( -9/ +15/ 1395)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "27",1,"GOTERM_MF_ALL","GO:0005515~protein binding",26,22.2222222222222,8.72472451321027e-10,97,1395,21998,4.22678934338396,2.27715277745233e-07,2.27715277745233e-07,1.14110056959049e-08,"protein binding","gene_68","947471","holE",0.0405252960696809,1.18932704554187,1,1.39227380359952,1.39227380359952,1,15,9,"protein binding
- padj:0.00000 N( -9/ +15/ 1395)","protein binding","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00000 N( -9/ +15/ 1395)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "28",5,"GOTERM_MF_ALL","GO:0016491~oxidoreductase activity",22,18.8034188034188,0.00243037045863405,97,2513,21998,1.98537091659453,0.470116848353505,0.119283724422134,0.0313242383578854,"oxidoreductase activity","gene_12","945502","dmsC",0.0414317225474172,1.1453414444967,1,1.38266701028639,1.38266701028639,1,9,13,"oxidoreductase activity
- padj:0.03132 N( -13/ +9/ 2513)","oxidoreductase activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.03132 N( -13/ +9/ 2513)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "29",5,"GOTERM_MF_ALL","GO:0016491~oxidoreductase activity",22,18.8034188034188,0.00243037045863405,97,2513,21998,1.98537091659453,0.470116848353505,0.119283724422134,0.0313242383578854,"oxidoreductase activity","gene_03","948529","xylE",0.0493572754054576,-1.14973342632889,-1,-1.30664882201035,1.30664882201035,-1,9,13,"oxidoreductase activity
- padj:0.03132 N( -13/ +9/ 2513)","oxidoreductase activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.03132 N( -13/ +9/ 2513)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "30",5,"GOTERM_MF_ALL","GO:0016491~oxidoreductase activity",22,18.8034188034188,0.00243037045863405,97,2513,21998,1.98537091659453,0.470116848353505,0.119283724422134,0.0313242383578854,"oxidoreductase activity","gene_29","947631","garR",0.0410671112502395,-1.49360579840513,-1,-1.38650584528864,1.38650584528864,-2,9,13,"oxidoreductase activity
- padj:0.03132 N( -13/ +9/ 2513)","oxidoreductase activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.03132 N( -13/ +9/ 2513)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "31",5,"GOTERM_MF_ALL","GO:0016491~oxidoreductase activity",22,18.8034188034188,0.00243037045863405,97,2513,21998,1.98537091659453,0.470116848353505,0.119283724422134,0.0313242383578854,"oxidoreductase activity","gene_53","947231","cysI",0.040347703072935,-1.38630651148502,-1,-1.39418118389466,1.39418118389466,-3,9,13,"oxidoreductase activity
- padj:0.03132 N( -13/ +9/ 2513)","oxidoreductase activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.03132 N( -13/ +9/ 2513)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "32",1,"GOTERM_MF_ALL","GO:0005515~protein binding",26,22.2222222222222,8.72472451321027e-10,97,1395,21998,4.22678934338396,2.27715277745233e-07,2.27715277745233e-07,1.14110056959049e-08,"protein binding","gene_34","949058","idnR",0.0402952742945362,-1.34213572965251,-1,-1.39474588358961,1.39474588358961,-1,15,9,"protein binding
- padj:0.00000 N( -9/ +15/ 1395)","protein binding","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00000 N( -9/ +15/ 1395)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "33",5,"GOTERM_MF_ALL","GO:0016491~oxidoreductase activity",22,18.8034188034188,0.00243037045863405,97,2513,21998,1.98537091659453,0.470116848353505,0.119283724422134,0.0313242383578854,"oxidoreductase activity","gene_49","946756","nuoJ",0.0402952742945362,-1.23152718940499,-1,-1.39474588358961,1.39474588358961,-4,9,13,"oxidoreductase activity
- padj:0.03132 N( -13/ +9/ 2513)","oxidoreductase activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.03132 N( -13/ +9/ 2513)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "34",5,"GOTERM_MF_ALL","GO:0016491~oxidoreductase activity",22,18.8034188034188,0.00243037045863405,97,2513,21998,1.98537091659453,0.470116848353505,0.119283724422134,0.0313242383578854,"oxidoreductase activity","gene_10","945838","yciK",0.035970234705591,-1.02926096333744,-1,-1.44405672840305,1.44405672840305,-5,9,13,"oxidoreductase activity
- padj:0.03132 N( -13/ +9/ 2513)","oxidoreductase activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.03132 N( -13/ +9/ 2513)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "35",2,"GOTERM_MF_ALL","GO:0003774~motor activity",5,4.27350427350427,2.49155869197767e-05,97,39,21998,29.0748083531589,0.00648195013644315,0.00324624411866059,0.000325820185280601,"motor activity","gene_03","945647","flgG",0.0355404651592146,-1.3069446302282,-1,-1.44927689237883,1.44927689237883,-1,0,5,"motor activity
- padj:0.00033 N( -5/ +0/ 39)","motor activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00033 N( -5/ +0/ 39)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "36",3,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",7,5.98290598290598,4.90099686512003e-05,97,149,21998,10.654258631426,0.0127104464885056,0.00425489394158229,0.000640808250707114,"structural molecule activity","gene_04","945647","flgG",0.0355404651592146,-1.3069446302282,-1,-1.44927689237883,1.44927689237883,-1,0,7,"structural molecule activity
- padj:0.00064 N( -7/ +0/ 149)","structural molecule activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00064 N( -7/ +0/ 149)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "37",1,"GOTERM_MF_ALL","GO:0005515~protein binding",26,22.2222222222222,8.72472451321027e-10,97,1395,21998,4.22678934338396,2.27715277745233e-07,2.27715277745233e-07,1.14110056959049e-08,"protein binding","gene_01","949122","mcrB",0.0350332897081191,-1.12998613812111,-1,-1.45551907949641,1.45551907949641,-2,15,9,"protein binding
- padj:0.00000 N( -9/ +15/ 1395)","protein binding","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00000 N( -9/ +15/ 1395)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "38",1,"GOTERM_MF_ALL","GO:0005515~protein binding",26,22.2222222222222,8.72472451321027e-10,97,1395,21998,4.22678934338396,2.27715277745233e-07,2.27715277745233e-07,1.14110056959049e-08,"protein binding","gene_73","946390","flhA",0.0305315972991754,-1.35412482320002,-1,-1.51525047444121,1.51525047444121,-3,15,9,"protein binding
- padj:0.00000 N( -9/ +15/ 1395)","protein binding","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00000 N( -9/ +15/ 1395)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "39",3,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",7,5.98290598290598,4.90099686512003e-05,97,149,21998,10.654258631426,0.0127104464885056,0.00425489394158229,0.000640808250707114,"structural molecule activity","gene_03","945646","flgL",0.029048264526162,-1.44291027720291,-1,-1.53687980920225,1.53687980920225,-2,0,7,"structural molecule activity
- padj:0.00064 N( -7/ +0/ 149)","structural molecule activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00064 N( -7/ +0/ 149)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "40",1,"GOTERM_MF_ALL","GO:0005515~protein binding",26,22.2222222222222,8.72472451321027e-10,97,1395,21998,4.22678934338396,2.27715277745233e-07,2.27715277745233e-07,1.14110056959049e-08,"protein binding","gene_16","946725","glpQ",0.0278349867901495,-1.52044017690639,-1,-1.55540898046326,1.55540898046326,-4,15,9,"protein binding
- padj:0.00000 N( -9/ +15/ 1395)","protein binding","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00000 N( -9/ +15/ 1395)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "41",5,"GOTERM_MF_ALL","GO:0016491~oxidoreductase activity",22,18.8034188034188,0.00243037045863405,97,2513,21998,1.98537091659453,0.470116848353505,0.119283724422134,0.0313242383578854,"oxidoreductase activity","gene_20","947736","cueO",0.0252360375177434,-1.57273448329284,-1,-1.59797883561156,1.59797883561156,-6,9,13,"oxidoreductase activity
- padj:0.03132 N( -13/ +9/ 2513)","oxidoreductase activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.03132 N( -13/ +9/ 2513)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "42",5,"GOTERM_MF_ALL","GO:0016491~oxidoreductase activity",22,18.8034188034188,0.00243037045863405,97,2513,21998,1.98537091659453,0.470116848353505,0.119283724422134,0.0313242383578854,"oxidoreductase activity","gene_19","947731","nuoM",0.0250947115783599,-1.29141196023763,-1,-1.60041779144025,1.60041779144025,-7,9,13,"oxidoreductase activity
- padj:0.03132 N( -13/ +9/ 2513)","oxidoreductase activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.03132 N( -13/ +9/ 2513)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "43",1,"GOTERM_MF_ALL","GO:0005515~protein binding",26,22.2222222222222,8.72472451321027e-10,97,1395,21998,4.22678934338396,2.27715277745233e-07,2.27715277745233e-07,1.14110056959049e-08,"protein binding","gene_21","948260","rbsK",0.0212444600464152,-1.26583967164407,-1,-1.67275430255246,1.67275430255246,-5,15,9,"protein binding
- padj:0.00000 N( -9/ +15/ 1395)","protein binding","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00000 N( -9/ +15/ 1395)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "44",3,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",7,5.98290598290598,4.90099686512003e-05,97,149,21998,10.654258631426,0.0127104464885056,0.00425489394158229,0.000640808250707114,"structural molecule activity","gene_10","947819","rplW",0.0144902279453974,-1.76424136882837,-1,-1.83892478259994,1.83892478259994,-3,0,7,"structural molecule activity
- padj:0.00064 N( -7/ +0/ 149)","structural molecule activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00064 N( -7/ +0/ 149)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "45",1,"GOTERM_MF_ALL","GO:0005515~protein binding",26,22.2222222222222,8.72472451321027e-10,97,1395,21998,4.22678934338396,2.27715277745233e-07,2.27715277745233e-07,1.14110056959049e-08,"protein binding","gene_50","947819","rplW",0.0144902279453974,-1.76424136882837,-1,-1.83892478259994,1.83892478259994,-6,15,9,"protein binding
- padj:0.00000 N( -9/ +15/ 1395)","protein binding","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00000 N( -9/ +15/ 1395)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "46",3,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",7,5.98290598290598,4.90099686512003e-05,97,149,21998,10.654258631426,0.0127104464885056,0.00425489394158229,0.000640808250707114,"structural molecule activity","gene_22","946349","rpmI",0.0103160862513403,-1.76884162226652,-1,-1.98648503544409,1.98648503544409,-4,0,7,"structural molecule activity
- padj:0.00064 N( -7/ +0/ 149)","structural molecule activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00064 N( -7/ +0/ 149)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "47",5,"GOTERM_MF_ALL","GO:0016491~oxidoreductase activity",22,18.8034188034188,0.00243037045863405,97,2513,21998,1.98537091659453,0.470116848353505,0.119283724422134,0.0313242383578854,"oxidoreductase activity","gene_26","946733","glpB",0.0103160862513403,-1.84883260894685,-1,-1.98648503544409,1.98648503544409,-8,9,13,"oxidoreductase activity
- padj:0.03132 N( -13/ +9/ 2513)","oxidoreductase activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.03132 N( -13/ +9/ 2513)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "48",1,"GOTERM_MF_ALL","GO:0005515~protein binding",26,22.2222222222222,8.72472451321027e-10,97,1395,21998,4.22678934338396,2.27715277745233e-07,2.27715277745233e-07,1.14110056959049e-08,"protein binding","gene_60","945591","cspG",0.00817009308794702,-1.89731254324289,-1,-2.08777299519936,2.08777299519936,-7,15,9,"protein binding
- padj:0.00000 N( -9/ +15/ 1395)","protein binding","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00000 N( -9/ +15/ 1395)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "49",5,"GOTERM_MF_ALL","GO:0016491~oxidoreductase activity",22,18.8034188034188,0.00243037045863405,97,2513,21998,1.98537091659453,0.470116848353505,0.119283724422134,0.0313242383578854,"oxidoreductase activity","gene_35","945136","nuoN",0.0067139172940199,-1.44146374660894,-1,-2.17302401294979,2.17302401294979,-9,9,13,"oxidoreductase activity
- padj:0.03132 N( -13/ +9/ 2513)","oxidoreductase activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.03132 N( -13/ +9/ 2513)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "50",3,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",7,5.98290598290598,4.90099686512003e-05,97,149,21998,10.654258631426,0.0127104464885056,0.00425489394158229,0.000640808250707114,"structural molecule activity","gene_16","945639","flgF",0.00669603887715424,-1.56622094568462,-1,-2.17418203349679,2.17418203349679,-5,0,7,"structural molecule activity
- padj:0.00064 N( -7/ +0/ 149)","structural molecule activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00064 N( -7/ +0/ 149)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "51",2,"GOTERM_MF_ALL","GO:0003774~motor activity",5,4.27350427350427,2.49155869197767e-05,97,39,21998,29.0748083531589,0.00648195013644315,0.00324624411866059,0.000325820185280601,"motor activity","gene_21","945639","flgF",0.00669603887715424,-1.56622094568462,-1,-2.17418203349679,2.17418203349679,-2,0,5,"motor activity
- padj:0.00033 N( -5/ +0/ 39)","motor activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00033 N( -5/ +0/ 39)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "52",2,"GOTERM_MF_ALL","GO:0003774~motor activity",5,4.27350427350427,2.49155869197767e-05,97,39,21998,29.0748083531589,0.00648195013644315,0.00324624411866059,0.000325820185280601,"motor activity","gene_14","946996","flgH",0.00590446272177138,-1.57960704865408,-1,-2.22881961499981,2.22881961499981,-3,0,5,"motor activity
- padj:0.00033 N( -5/ +0/ 39)","motor activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00033 N( -5/ +0/ 39)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "53",5,"GOTERM_MF_ALL","GO:0016491~oxidoreductase activity",22,18.8034188034188,0.00243037045863405,97,2513,21998,1.98537091659453,0.470116848353505,0.119283724422134,0.0313242383578854,"oxidoreductase activity","gene_25","946735","glpC",0.0046804378406869,-2.09489239310611,-1,-2.3297135181011,2.3297135181011,-10,9,13,"oxidoreductase activity
- padj:0.03132 N( -13/ +9/ 2513)","oxidoreductase activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.03132 N( -13/ +9/ 2513)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "54",5,"GOTERM_MF_ALL","GO:0016491~oxidoreductase activity",22,18.8034188034188,0.00243037045863405,97,2513,21998,1.98537091659453,0.470116848353505,0.119283724422134,0.0313242383578854,"oxidoreductase activity","gene_61","946189","ydiJ",0.00435916264709802,-1.76441280835195,-1,-2.36059692648143,2.36059692648143,-11,9,13,"oxidoreductase activity
- padj:0.03132 N( -13/ +9/ 2513)","oxidoreductase activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.03132 N( -13/ +9/ 2513)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "55",2,"GOTERM_MF_ALL","GO:0003774~motor activity",5,4.27350427350427,2.49155869197767e-05,97,39,21998,29.0748083531589,0.00648195013644315,0.00324624411866059,0.000325820185280601,"motor activity","gene_17","945648","flgK",0.000798035706371329,-1.908735335123,-1,-3.09797767665288,3.09797767665288,-4,0,5,"motor activity
- padj:0.00033 N( -5/ +0/ 39)","motor activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00033 N( -5/ +0/ 39)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "56",3,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",7,5.98290598290598,4.90099686512003e-05,97,149,21998,10.654258631426,0.0127104464885056,0.00425489394158229,0.000640808250707114,"structural molecule activity","gene_29","945648","flgK",0.000798035706371329,-1.908735335123,-1,-3.09797767665288,3.09797767665288,-6,0,7,"structural molecule activity
- padj:0.00064 N( -7/ +0/ 149)","structural molecule activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00064 N( -7/ +0/ 149)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "57",1,"GOTERM_MF_ALL","GO:0005515~protein binding",26,22.2222222222222,8.72472451321027e-10,97,1395,21998,4.22678934338396,2.27715277745233e-07,2.27715277745233e-07,1.14110056959049e-08,"protein binding","gene_74","945648","flgK",0.000798035706371329,-1.908735335123,-1,-3.09797767665288,3.09797767665288,-8,15,9,"protein binding
- padj:0.00000 N( -9/ +15/ 1395)","protein binding","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00000 N( -9/ +15/ 1395)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "58",2,"GOTERM_MF_ALL","GO:0003774~motor activity",5,4.27350427350427,2.49155869197767e-05,97,39,21998,29.0748083531589,0.00648195013644315,0.00324624411866059,0.000325820185280601,"motor activity","gene_05","947456","flgJ",0.000590774784709412,-1.92764876696011,-1,-3.22857804940487,3.22857804940487,-5,0,5,"motor activity
- padj:0.00033 N( -5/ +0/ 39)","motor activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00033 N( -5/ +0/ 39)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "59",3,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",7,5.98290598290598,4.90099686512003e-05,97,149,21998,10.654258631426,0.0127104464885056,0.00425489394158229,0.000640808250707114,"structural molecule activity","gene_09","947534","flgI",0.000304779239386133,-2.01321952517948,-1,-3.51601461911431,3.51601461911431,-7,0,7,"structural molecule activity
- padj:0.00064 N( -7/ +0/ 149)","structural molecule activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00064 N( -7/ +0/ 149)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "60",5,"GOTERM_MF_ALL","GO:0016491~oxidoreductase activity",22,18.8034188034188,0.00243037045863405,97,2513,21998,1.98537091659453,0.470116848353505,0.119283724422134,0.0313242383578854,"oxidoreductase activity","gene_62","944769","idnD",1.31045964548217e-16,-4.76941058350962,-1,-15.8825763482498,15.8825763482498,-12,9,13,"oxidoreductase activity
- padj:0.03132 N( -13/ +9/ 2513)","oxidoreductase activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.03132 N( -13/ +9/ 2513)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "61",1,"GOTERM_MF_ALL","GO:0005515~protein binding",26,22.2222222222222,8.72472451321027e-10,97,1395,21998,4.22678934338396,2.27715277745233e-07,2.27715277745233e-07,1.14110056959049e-08,"protein binding","gene_72","944769","idnD",1.31045964548217e-16,-4.76941058350962,-1,-15.8825763482498,15.8825763482498,-9,15,9,"protein binding
- padj:0.00000 N( -9/ +15/ 1395)","protein binding","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.00000 N( -9/ +15/ 1395)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
 "62",5,"GOTERM_MF_ALL","GO:0016491~oxidoreductase activity",22,18.8034188034188,0.00243037045863405,97,2513,21998,1.98537091659453,0.470116848353505,0.119283724422134,0.0313242383578854,"oxidoreductase activity","gene_33","947109","idnO",1.08914261110681e-18,-5.01111013472053,-1,-17.9629152504906,17.9629152504906,-13,9,13,"oxidoreductase activity
- padj:0.03132 N( -13/ +9/ 2513)","oxidoreductase activity","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
+ padj:0.03132 N( -13/ +9/ 2513)","mrna","Exp","Mg_mM_Levels","baseMg","highMg","kegg"
