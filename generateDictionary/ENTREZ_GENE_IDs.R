@@ -48,10 +48,10 @@ dplyr::rbind_list(protein1_ez,protein2_ez)->protein_tidy_ez
 #****************************
 # filter Ecoli
 rna_tidy_ez%>%
-  dplyr::filter(grepl("Escherichia coli",Species))->rna_tidy_eColi_ez
+  dplyr::filter(grepl("Escherichia coli str. K-12 substr. MG1655",Species))->rna_tidy_eColi_ez
 
 protein_tidy_ez%>%
-  dplyr::filter(grepl("Escherichia coli",Species))->protein_tidy_eColi_ez
+  dplyr::filter(grepl("Escherichia coli str. K-12 substr. MG1655",Species))->protein_tidy_eColi_ez
 #****************************
 
 

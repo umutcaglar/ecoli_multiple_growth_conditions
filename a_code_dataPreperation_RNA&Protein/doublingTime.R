@@ -68,9 +68,9 @@ fig01<-ggplot(glucoseTimeCourseData,aes(x=experiment2,y=doublingTimeMinutes))+
   ylim(0,120)+
   theme_bw()+
   xlab("Carbon sources")+
+  ylab("Doubling time (min)")+
   theme(axis.line.y = element_blank(),
         legend.position="bottom",
-        axis.title.y = element_blank(),
         panel.grid.minor=element_blank(),
         panel.grid.major.x=element_blank(),
         strip.text.x = element_text(size = 16),
@@ -106,9 +106,9 @@ fig02<-ggplot(mgStressData,aes(x=Mg_mM,y=doublingTimeMinutes))+
   scale_x_log10(breaks=c(0.01,0.1,1,10,100))+
   theme_bw()+
   xlab("Mg Concentration mM")+
+  ylab("Doubling time (min)")+
   theme(axis.line.y = element_blank(),
         legend.position="bottom",
-        axis.title.y = element_blank(),
         panel.grid.minor=element_blank(),
         panel.grid.major.x=element_blank(),
         strip.text.x = element_text(size = 16),
@@ -141,9 +141,9 @@ fig03<-ggplot(naStressData,aes(x=Na_mM,y=doublingTimeMinutes))+
   ylim(0,120)+
   theme_bw()+
   xlab("Na Concentration mM")+
+  ylab("Doubling time (min)")+
   theme(axis.line.y = element_blank(),
         legend.position="bottom",
-        axis.title.y = element_blank(),
         panel.grid.minor=element_blank(),
         panel.grid.major.x=element_blank(),
         strip.text.x = element_text(size = 16),

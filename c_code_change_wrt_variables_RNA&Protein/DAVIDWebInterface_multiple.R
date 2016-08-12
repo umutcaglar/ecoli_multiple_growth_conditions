@@ -23,6 +23,7 @@ require("dplyr")
 require("tidyr")
 require("DESeq2")
 require("RDAVIDWebService")
+require("R.utils")
 require(org.Hs.eg.db)
 ###*****************************
 
@@ -167,7 +168,7 @@ for(counter01 in 1:length(differentCompartisonsList))
   # Generate Object name
   fileName=paste(objectName,collapse = "_")
   ###*****************************
-
+  
   
   print(fileName)
   ###*****************************
@@ -184,7 +185,7 @@ for(counter01 in 1:length(differentCompartisonsList))
     ###*****************************
     # Connect to david_d for analyse
     david_d<-DAVIDWebService(email="umut.caglar@utexas.edu",
-                           url="https://david-d.ncifcrf.gov/webservice/services/DAVIDWebService.DAVIDWebServiceHttpSoap12Endpoint/")
+                             url="https://david-d.ncifcrf.gov/webservice/services/DAVIDWebService.DAVIDWebServiceHttpSoap12Endpoint/")
     RDAVIDWebService::setTimeOut(david_d, 90000)
     ###*****************************
     
@@ -230,7 +231,7 @@ for(counter01 in 1:length(differentCompartisonsList))
     # MF OLD
     # Connect to david for analyse
     david<-DAVIDWebService(email="umut.caglar@utexas.edu",
-                             url="https://david.ncifcrf.gov/webservice/services/DAVIDWebService.DAVIDWebServiceHttpSoap12Endpoint/")
+                           url="https://david.ncifcrf.gov/webservice/services/DAVIDWebService.DAVIDWebServiceHttpSoap12Endpoint/")
     RDAVIDWebService::setTimeOut(david, 90000)
     ###*****************************
     
@@ -267,3 +268,22 @@ for(counter01 in 1:length(differentCompartisonsList))
   }
   
 }
+
+
+
+for(i in list.files(pattern="*.csv$", path = "../c_results/david_results/"))  # iterate i over .csv files
+{
+  if(R.utils::countLines(paste0("../c_results/david_results/",i))==0)
+  {
+    file.remove(paste0("../c_results/david_results/",i)) #delete the ones with 0 lines.
+  }
+  if(file.info(paste0("../c_results/david_results/",i))$size<=3)
+  {
+    file.remove(paste0("../c_results/david_results/",i)) #delete the ones with 3 bytes.
+  }
+} 
+
+
+
+
+
