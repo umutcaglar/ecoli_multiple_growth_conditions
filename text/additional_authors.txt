@@ -1,8 +1,0 @@
-Proteomics:
-Daniel R. Boutz
-
-Flux balance:
-Christopher J. Marx
-Sean M. Carroll
-
-
