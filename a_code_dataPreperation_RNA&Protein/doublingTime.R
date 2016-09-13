@@ -51,17 +51,20 @@ metaData %>%
   dplyr::summarize(doublingTimeMinutes=unique(doublingTimeMinutes), 
                    doublingTimeMinutes.95m=unique(doublingTimeMinutes.95m), 
                    doublingTimeMinutes_95p=unique(doublingTimeMinutes_95p)) %>%
-  dplyr::mutate(experiment2=replace_fun(input_vector = as.vector(experiment),
+  dplyr::mutate(carbonSource=replace_fun(input_vector = as.vector(experiment),
                                         initialVal = c("glucose_time_course","glycerol_time_course",
                                                        "lactate_growth","gluconate_growth"),
-                                        finalVal = c("glucose","glycerol","lactate","gluconate")))-> glucoseTimeCourseData
-glucoseTimeCourseData$experiment2<-factor(glucoseTimeCourseData$experiment2,
+                                        finalVal = c("glucose","glycerol","lactate","gluconate")))-> carbonSourceData
+carbonSourceData$carbonSource<-factor(carbonSourceData$carbonSource,
                                           levels=c("glucose","glycerol","lactate","gluconate"))
 
-fig01<-ggplot(glucoseTimeCourseData,aes(x=experiment2,y=doublingTimeMinutes))+
+carbonSourceData%>%dplyr::filter(carbonSource=="glucose")%>%.$doublingTimeMinutes->base_y_carbonSource
+fig01<-ggplot(carbonSourceData,aes(x=carbonSource,y=doublingTimeMinutes))+
   geom_point()+
   geom_errorbar(aes(ymax = doublingTimeMinutes_95p, ymin=doublingTimeMinutes.95m),width=0)+
   geom_vline(xintercept = 1, color="orange", linetype = "longdash")+
+  geom_hline(yintercept = base_y_carbonSource, 
+             color="orange", linetype = "longdash")+
   geom_point()+
   geom_errorbar(aes(ymax = doublingTimeMinutes_95p, ymin=doublingTimeMinutes.95m),width=0)+
   expand_limits(x = 0, y = 0)+
@@ -95,10 +98,12 @@ metaData %>%
                    doublingTimeMinutes.95m=unique(doublingTimeMinutes.95m), 
                    doublingTimeMinutes_95p=unique(doublingTimeMinutes_95p))->mgStressData
 
+mgStressData%>%dplyr::filter(Mg_mM==.8)%>%.$doublingTimeMinutes->base_y_mgStress
 fig02<-ggplot(mgStressData,aes(x=Mg_mM,y=doublingTimeMinutes))+
   geom_point()+
   geom_errorbar(aes(ymax = doublingTimeMinutes_95p, ymin=doublingTimeMinutes.95m),width=0)+
   geom_vline(xintercept = .8, color="orange", linetype = "longdash")+
+  geom_hline(yintercept = base_y_mgStress, color="orange", linetype = "longdash")+
   geom_point()+
   geom_errorbar(aes(ymax = doublingTimeMinutes_95p, ymin=doublingTimeMinutes.95m),width=0)+
   expand_limits(x = 0, y = 0)+
@@ -131,10 +136,12 @@ metaData %>%
                    doublingTimeMinutes.95m=unique(doublingTimeMinutes.95m), 
                    doublingTimeMinutes_95p=unique(doublingTimeMinutes_95p))->naStressData
 
+naStressData%>%dplyr::filter(Na_mM==5)%>%.$doublingTimeMinutes->base_y_naStress
 fig03<-ggplot(naStressData,aes(x=Na_mM,y=doublingTimeMinutes))+
   geom_point()+
   geom_errorbar(aes(ymax = doublingTimeMinutes_95p, ymin=doublingTimeMinutes.95m),width=0)+
   geom_vline(xintercept = 5, color="orange", linetype = "longdash")+
+  geom_hline(yintercept = base_y_naStress, color="orange", linetype = "longdash")+
   geom_point()+
   geom_errorbar(aes(ymax = doublingTimeMinutes_95p, ymin=doublingTimeMinutes.95m),width=0)+
   expand_limits(x = 0, y = 0)+

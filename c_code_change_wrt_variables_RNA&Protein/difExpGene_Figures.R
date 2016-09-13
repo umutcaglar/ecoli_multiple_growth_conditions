@@ -196,7 +196,7 @@ df_summary %>%
                 investigated_conditions=ifelse(contrast == "highNa","High Na",investigated_conditions),
                 investigated_conditions=ifelse(contrast == "highMg","High Mg",investigated_conditions),
                 investigated_conditions=ifelse(contrast == "lowMg","Low Mg",investigated_conditions),
-                investigated_conditions=ifelse(contrast == "gluconate","Glu",investigated_conditions),
+                investigated_conditions=ifelse(contrast == "gluconate","Glc",investigated_conditions),
                 investigated_conditions=ifelse(contrast == "glycerol" ,"Gly",investigated_conditions))->df_summary
 
 
@@ -205,7 +205,7 @@ df_summary$investigated_conditions <- factor(df_summary$investigated_conditions,
                                                                                             "High Mg",
                                                                                             "High Na",
                                                                                             "Gly",
-                                                                                            "Glu",
+                                                                                            "Glc",
                                                                                             "Lac"))
 
 df_summary %>% 
@@ -230,8 +230,8 @@ df_summary %>%
 ###*****************************
 # Figures
 figBarGraph01=ggplot(df_summary, aes(x=investigated_conditions, 
-                                   y=P0.05Fold2,
-                                   fill=as.factor(signChange))) +
+                                     y=P0.05Fold2,
+                                     fill=as.factor(signChange))) +
   facet_grid(growthPhase ~ data_type_abv)+
   scale_y_continuous(expand = c(0, 0),limits = c(0,1600))+
   geom_bar(position="dodge",stat="identity",width=.75)+
@@ -261,8 +261,8 @@ print(figBarGraph01)
 
 
 figBarGraph02a=ggplot(df_summary_mrna, aes(x=investigated_conditions, 
-                                     y=P0.05Fold2,
-                                     fill=as.factor(signChange))) +
+                                           y=P0.05Fold2,
+                                           fill=as.factor(signChange))) +
   facet_grid(. ~ growthPhase)+
   geom_bar(position="dodge",stat="identity",width=.75)+
   scale_fill_manual(values = c("blue","red"),
@@ -288,8 +288,8 @@ print(figBarGraph02a)
 
 
 figBarGraph02b=ggplot(df_summary_protein, aes(x=investigated_conditions, 
-                                           y=P0.05Fold2,
-                                           fill=as.factor(signChange))) +
+                                              y=P0.05Fold2,
+                                              fill=as.factor(signChange))) +
   facet_grid(. ~ growthPhase)+
   geom_bar(position="dodge",stat="identity",width=.75)+
   scale_fill_manual(values = c("blue","red"),
@@ -382,41 +382,42 @@ venn.grid = venn.diagram(x=sta_protein_list, filename="../c_figures/sta_protein_
 
 exp_mrna_list = list("Carbon \nsource"=exp_mrna_Carb, "Mg stress"=exp_mrna_Mg, "Na stress"=exp_mrna_Na)
 exp_mrna_fig = venn.diagram(x=exp_mrna_list, filename=NULL, 
-                         euler.d=FALSE,scaled=FALSE,
-                         print.mode=c("raw","percent"),force.unique=TRUE, 
-                         fill=c("purple","cyan","orange"), 
-                         fontface = "bold", cex=rep(1.3,7), cat.fontface="bold", 
-                         cat.cex=c(1.4,1.4,1.4),cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.07,
-                         main = "A", main.pos = c(0.05,1), main.fontface = "bold", main.cex = 2.5)
+                            euler.d=FALSE,scaled=FALSE,
+                            print.mode=c("raw","percent"),force.unique=TRUE, 
+                            fill=c("purple","cyan","orange"), 
+                            fontface = "bold", cex=rep(1.3,7), cat.fontface="bold", 
+                            cat.cex=c(1.4,1.4,1.4),cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.07,
+                            main = "A", main.pos = c(0.05,1), main.fontface = "bold", main.cex = 2.5)
 
 exp_protein_list = list("Carbon \nsource"=exp_protein_Carb, "Mg stress"=exp_protein_Mg, "Na stress"=exp_protein_Na)
 exp_protein_fig = venn.diagram(x=exp_protein_list, filename=NULL, 
-                         euler.d=FALSE,scaled=FALSE,
-                         print.mode=c("raw","percent"),force.unique=TRUE, 
-                         fill=c("purple","cyan","orange"), 
-                         fontface = "bold", cex=rep(1.3,7), cat.fontface="bold", 
-                         cat.cex=c(1.4,1.4,1.4),cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.07,
-                         main = "B", main.pos = c(0.05,1), main.fontface = "bold", main.cex = 2.5)
+                               euler.d=FALSE,scaled=FALSE,
+                               print.mode=c("raw","percent"),force.unique=TRUE, 
+                               fill=c("purple","cyan","orange"), 
+                               fontface = "bold", cex=rep(1.3,7), cat.fontface="bold", 
+                               cat.cex=c(1.4,1.4,1.4),cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.07,
+                               main = "B", main.pos = c(0.05,1), main.fontface = "bold", main.cex = 2.5)
 
 sta_mrna_list = list("Carbon \nsource"=sta_mrna_Carb, "Mg stress"=sta_mrna_Mg, "Na stress"=sta_mrna_Na)
 sta_mrna_fig = venn.diagram(x=sta_mrna_list, filename=NULL, 
-                         euler.d=FALSE,scaled=FALSE,
-                         print.mode=c("raw","percent"),force.unique=TRUE, 
-                         fill=c("purple","cyan","orange"), 
-                         fontface = "bold", cex=rep(1.3,7), cat.fontface="bold", 
-                         cat.cex=c(1.4,1.4,1.4),cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.07,
-                         main = "C", main.pos = c(0.05,1), main.fontface = "bold", main.cex = 2.5)
+                            euler.d=FALSE,scaled=FALSE,
+                            print.mode=c("raw","percent"),force.unique=TRUE, 
+                            fill=c("purple","cyan","orange"), 
+                            fontface = "bold", cex=rep(1.3,7), cat.fontface="bold", 
+                            cat.cex=c(1.4,1.4,1.4),cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.07,
+                            main = "C", main.pos = c(0.05,1), main.fontface = "bold", main.cex = 2.5)
 
 sta_protein_list = list("Carbon \nsource"=sta_protein_Carb, "Mg stress"=sta_protein_Mg, "Na stress"=sta_protein_Na)
 sta_protein_fig = venn.diagram(x=sta_protein_list, filename=NULL,
-                         euler.d=FALSE,scaled=FALSE,
-                         print.mode=c("raw","percent"),force.unique=TRUE, 
-                         fill=c("purple","cyan","orange"), 
-                         fontface = "bold", cex=rep(1.3,7), cat.fontface="bold", 
-                         cat.cex=c(1.4,1.4,1.4),cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.07,
-                         main = "D", main.pos = c(0.05,1), main.fontface = "bold", main.cex = 2.5)
+                               euler.d=FALSE,scaled=FALSE,
+                               print.mode=c("raw","percent"),force.unique=TRUE, 
+                               fill=c("purple","cyan","orange"), 
+                               fontface = "bold", cex=rep(1.3,7), cat.fontface="bold", 
+                               cat.cex=c(1.4,1.4,1.4),cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.07,
+                               main = "D", main.pos = c(0.05,1), main.fontface = "bold", main.cex = 2.5)
 
 
+#**************************************
 png(filename = '../c_figures/venn.png',width = 6600, height = 6600, units="px", res =500)
 pushViewport(viewport(layout=grid.layout(ncol=3,nrow = 3, 
                                          widths = unit(c(5,5,1)/11, "npc"), 
@@ -456,3 +457,56 @@ popViewport()
 
 popViewport(0)
 dev.off()
+#**************************************
+
+
+#**************************************
+pdf(file = '../c_figures/venn.pdf',width = 14, height = 14)
+pushViewport(viewport(layout=grid.layout(ncol=3,nrow = 3, 
+                                         widths = unit(c(5,5,1)/11, "npc"), 
+                                         heights = unit(c(1,5,5)/11, "npc")
+)))
+pushViewport(viewport(layout.pos.row = 2, layout.pos.col=1))
+grid.draw(exp_mrna_fig)
+popViewport()
+
+pushViewport(viewport(layout.pos.row = 2, layout.pos.col=2))
+grid.draw(exp_protein_fig)
+popViewport()
+
+pushViewport(viewport(layout.pos.row = 3, layout.pos.col=1))
+grid.draw(sta_mrna_fig)
+popViewport()
+
+pushViewport(viewport(layout.pos.row = 3, layout.pos.col=2))
+grid.draw(sta_protein_fig)
+popViewport()
+
+pushViewport(viewport(layout.pos.row = 1, layout.pos.col=1))
+grid.draw(textGrob(label = "mRNA",gp=gpar(fontsize=35)))
+popViewport()
+
+pushViewport(viewport(layout.pos.row = 1, layout.pos.col=2))
+grid.draw(textGrob(label = "Protein",gp=gpar(fontsize=35)))
+popViewport()
+
+pushViewport(viewport(layout.pos.row = 2, layout.pos.col=3))
+grid.draw(textGrob(label = "Exponential",gp=gpar(fontsize=35),rot = -90))
+popViewport()
+
+pushViewport(viewport(layout.pos.row = 3, layout.pos.col=3))
+grid.draw(textGrob(label = "Stationary",gp=gpar(fontsize=35),rot = -90))
+popViewport()
+
+popViewport(0)
+dev.off()
+#**************************************
+
+unlink(x=grep(pattern = "*.log",
+              x = dir(path = "."),
+              value = TRUE))
+
+unlink(x=paste0("../c_figures/",grep(pattern = "*.log",
+                                     x = dir(path = "../c_figures/"),
+                                     value = TRUE)))
+

@@ -496,4 +496,6 @@ figComb=ggdraw(g.main)
 figureName=paste0("../b_figures/",heatMapName,".png")
 cowplot::save_plot(plot = figComb, filename = figureName,ncol = 4,nrow = 3, dpi=300)
 
+cowplot::save_plot(plot = figComb, filename = "../b_figures/mRNAHeatmap.pdf",ncol = 4,nrow = 3, dpi=300)
+
 g.main$layout
