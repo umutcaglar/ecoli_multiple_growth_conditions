@@ -363,7 +363,7 @@ for(counter01 in 1:length(differentCompartisonsList))
       maximumFold=max(kegg_tidy_organized_simp$log2)
       if(maximumFold<1){maximumFold=1}
       
-      figAA=ggplot(kegg_tidy_organized_simp, aes( x=log2,y=KEGG_Path_Short_2Line)) +
+      fig_withTitle=ggplot(kegg_tidy_organized_simp, aes( x=log2,y=KEGG_Path_Short_2Line)) +
         geom_point(colour="blue", size=2.5)+
         geom_vline(xintercept = c(log2(1/2),log2(2)), colour="orange", linetype = "longdash")+
         geom_vline(xintercept = c(log2(1)), colour="black", linetype = "longdash")+
@@ -388,13 +388,40 @@ for(counter01 in 1:length(differentCompartisonsList))
               legend.title=element_text(size=14),
               legend.text=element_text(size=14))
       
+      
+      fig_woutTitle=ggplot(kegg_tidy_organized_simp, aes( x=log2,y=KEGG_Path_Short_2Line)) +
+        geom_point(colour="blue", size=2.5)+
+        geom_vline(xintercept = c(log2(1/2),log2(2)), colour="orange", linetype = "longdash")+
+        geom_vline(xintercept = c(log2(1)), colour="black", linetype = "longdash")+
+        geom_text_repel(aes(label=gene_name),size=3, colour="Black", fontface="plain")+
+        theme_bw()+
+        scale_x_continuous(breaks=seq(floor(minimumFold),ceiling(maximumFold)))+
+        xlab("Log2 Fold Change")+
+        theme(axis.line.y = element_blank(),
+              legend.position="bottom",
+              axis.title.y = element_blank(),
+              panel.grid.minor=element_blank(),
+              panel.grid.major.x=element_blank(),
+              strip.text.x = element_text(size = 16),
+              strip.text.y = element_text(size = 16),
+              axis.text.x=element_text(size=10),
+              axis.text.y=element_text(size=12),
+              axis.title.x=element_text(size=16),
+              axis.title.y=element_text(size=16),
+              legend.title=element_text(size=14),
+              legend.text=element_text(size=14))
+      
       ###*****************************
-      if(test_forChoice=="Na_mM_Levels"){browser()}
+      #if(test_forChoice=="Na_mM_Levels"){browser()}
       
       ###*****************************
       # Rename figure
-      figNum=sprintf("fig%02d", counter02)
-      assign(x = figNum, value = figAA)
+      figNum=sprintf("fig_withTitle%02d", counter02)
+      assign(x = figNum, value = fig_withTitle)
+      
+      figNum=sprintf("fig_woutTitle%02d", counter02)
+      assign(x = figNum, value = fig_woutTitle)
+      
       rowNumberVec[counter02]<-nrow(kegg_organized_summary)
       figureList[[counter02]]<-get(figNum)
       ###*****************************
@@ -416,11 +443,18 @@ for(counter01 in 1:length(differentCompartisonsList))
       
       
       ###*****************************
-      # Save figure
+      # Save figures
       rowWidth=ifelse(nrow(kegg_organized_summary)*1<3,3,nrow(kegg_organized_summary)*1)
       
-      cowplot::save_plot(filename = paste0("../d_figures/simple",objectName,"_kegg.pdf"),
-                         plot = figAA,
+      cowplot::save_plot(filename = paste0("../d_figures/simple_",objectName,"_kegg_withTitle.pdf"),
+                         plot = fig_withTitle,
+                         base_height = rowWidth,
+                         ncol=2.2,
+                         nrow=1.2,
+                         limitsize = FALSE)
+      
+      cowplot::save_plot(filename = paste0("../d_figures/simple_",objectName,"_kegg_woutTitle.pdf"),
+                         plot = fig_woutTitle,
                          base_height = rowWidth,
                          ncol=2.2,
                          nrow=1.2,

@@ -133,7 +133,7 @@ differentCompartisonsList=list(RUN01,RUN02,RUN03,RUN04,RUN05,RUN06,
 ###*****************************
 ```
 
-
+\newpage
 ## Figures related with KEGG Pathway
 ```{r Generate KEGG figures within for loop, echo=FALSE, warning=FALSE, message=FALSE, fig.width=22, fig.height=7}
 counter02=0
@@ -459,42 +459,105 @@ rowLengths[rowLengths<3]<-3
 cowplot::plot_grid(plotlist = figureList,ncol=1,rel_heights = rowLengths, align = "v",scale = .9)->q
 save_plot(filename = "../d_figures/keggtogether.pdf",plot = q,ncol = 2.5, nrow = 1.5*length(rowLengths), limitsize=FALSE)
 ```
+
+\begin{figure}[!htb]
 \includegraphics[width=1.0\textwidth]{../d_figures/kegg_01.pdf}
-\newpage
+\caption[kegg_01]{Sèries temporals velocitat de vent       direccions. filtratge de pics i glaçades de velocitat.}
+\end{figure}
+
+\clearpage
+\begin{figure}
 \includegraphics[width=1.0\textwidth]{../d_figures/kegg_02.pdf}
-\newpage
+\caption[kegg_02]{Sèries temporals velocitat de vent       direccions. filtratge de pics i glaçades de velocitat.}
+\end{figure}
+
+\clearpage
+\begin{figure}
 \includegraphics[width=1.0\textwidth]{../d_figures/kegg_03.pdf}
-\newpage
+\caption[kegg_03]{Sèries temporals velocitat de vent       direccions. filtratge de pics i glaçades de velocitat.}
+\end{figure}
+
+\clearpage
+\begin{figure}
 \includegraphics[width=1.0\textwidth]{../d_figures/kegg_04.pdf}
-\newpage
+\caption[kegg_04]{Sèries temporals velocitat de vent       direccions. filtratge de pics i glaçades de velocitat.}
+\end{figure}
+
+\clearpage
+\begin{figure}
 \includegraphics[width=1.0\textwidth]{../d_figures/kegg_05.pdf}
-\newpage
+\caption[kegg_05]{Sèries temporals velocitat de vent       direccions. filtratge de pics i glaçades de velocitat.}
+\end{figure}
+
+\clearpage
+\begin{figure}
 \includegraphics[width=1.0\textwidth]{../d_figures/kegg_06.pdf}
-\newpage
+\caption[kegg_06]{Sèries temporals velocitat de vent       direccions. filtratge de pics i glaçades de velocitat.}
+\end{figure}
+
+\clearpage
+\begin{figure}
 \includegraphics[width=1.0\textwidth]{../d_figures/kegg_07.pdf}
-\newpage
+\caption[kegg_07]{Sèries temporals velocitat de vent       direccions. filtratge de pics i glaçades de velocitat.}
+\end{figure}
+
+\clearpage
+\begin{figure}
 \includegraphics[width=1.0\textwidth]{../d_figures/kegg_08.pdf}
-\newpage
+\caption[kegg_08]{Sèries temporals velocitat de vent       direccions. filtratge de pics i glaçades de velocitat.}
+\end{figure}
+
+\clearpage
+\begin{figure}
 \includegraphics[width=1.0\textwidth]{../d_figures/kegg_09.pdf}
-\newpage
+\caption[kegg_09]{Sèries temporals velocitat de vent       direccions. filtratge de pics i glaçades de velocitat.}
+\end{figure}
+
+\clearpage
+\begin{figure}
 \includegraphics[width=1.0\textwidth]{../d_figures/kegg_10.pdf}
-\newpage
+\caption[kegg_10]{Sèries temporals velocitat de vent       direccions. filtratge de pics i glaçades de velocitat.}
+\end{figure}
+
+\clearpage
+\begin{figure}
 \includegraphics[width=1.0\textwidth]{../d_figures/kegg_11.pdf}
-\newpage
+\caption[kegg_11]{Sèries temporals velocitat de vent       direccions. filtratge de pics i glaçades de velocitat.}
+\end{figure}
+
+\clearpage
+\begin{figure}
 \includegraphics[width=1.0\textwidth]{../d_figures/kegg_12.pdf}
-\newpage
+\caption[kegg_12]{Sèries temporals velocitat de vent       direccions. filtratge de pics i glaçades de velocitat.}
+\end{figure}
+
+\clearpage
+\begin{figure}
 \includegraphics[width=1.0\textwidth]{../d_figures/kegg_13.pdf}
-\newpage
+\caption[kegg_13]{Sèries temporals velocitat de vent       direccions. filtratge de pics i glaçades de velocitat.}
+\end{figure}
+
+\clearpage
+\begin{figure}
 \includegraphics[width=1.0\textwidth]{../d_figures/kegg_14.pdf}
-\newpage
+\caption[kegg_14]{Sèries temporals velocitat de vent       direccions. filtratge de pics i glaçades de velocitat.}
+\end{figure}
+
+\clearpage
+\begin{figure}
 \includegraphics[width=1.0\textwidth]{../d_figures/kegg_15.pdf}
-\newpage
+\caption[kegg_15]{Sèries temporals velocitat de vent       direccions. filtratge de pics i glaçades de velocitat.}
+\end{figure}
+
+\clearpage
+\begin{figure}
 \includegraphics[width=1.0\textwidth]{../d_figures/kegg_16.pdf}
-\newpage
+\caption[kegg_16]{Sèries temporals velocitat de vent       direccions. filtratge de pics i glaçades de velocitat.}
+\end{figure}
+
+\clearpage
 
 
-
-## Figures related with GO Annotations associated with Molecular Function
 ```{r Generate MF figures within for loop, echo=FALSE, warning=FALSE, message=FALSE, fig.width=22, fig.height=11}
 ## Figures related with GO annotations related with molecular function
 
@@ -822,13 +885,32 @@ cowplot::plot_grid(plotlist = figureList,ncol=1,rel_heights = rowLengths, align 
 save_plot(filename = "../d_figures/mftogether.pdf",plot = q,ncol = 2.5, nrow = 1.5*length(rowLengths), limitsize=FALSE)
 ```
 
+\section{Figures related with GO Annotations associated with Molecular Function}
+\begin{figure}[!htb]
 \includegraphics[width=1.0\textwidth]{../d_figures/mf_n_01.pdf}
-\newpage
-\includegraphics[width=1.0\textwidth]{../d_figures/mf_n_02.pdf}
-\newpage
-\includegraphics[width=1.0\textwidth]{../d_figures/mf_n_03.pdf}
-\newpage
-\includegraphics[width=1.0\textwidth]{../d_figures/mf_n_04.pdf}
-\newpage
-\includegraphics[width=1.0\textwidth]{../d_figures/mf_n_05.pdf}
+\caption[mf_n_01]{Sèries temporals velocitat de vent       direccions. filtratge de pics i glaçades de velocitat.}
+\end{figure}
 
+\clearpage
+\begin{figure}
+\includegraphics[width=1.0\textwidth]{../d_figures/mf_n_02.pdf}
+\caption[mf_n_02]{Sèries temporals velocitat de vent       direccions. filtratge de pics i glaçades de velocitat.}
+\end{figure}
+
+\clearpage
+\begin{figure}
+\includegraphics[width=1.0\textwidth]{../d_figures/mf_n_03.pdf}
+\caption[mf_n_03]{Sèries temporals velocitat de vent       direccions. filtratge de pics i glaçades de velocitat.}
+\end{figure}
+
+\clearpage
+\begin{figure}
+\includegraphics[width=1.0\textwidth]{../d_figures/mf_n_04.pdf}
+\caption[mf_n_04]{Sèries temporals velocitat de vent       direccions. filtratge de pics i glaçades de velocitat.}
+\end{figure}
+
+\clearpage
+\begin{figure}
+\includegraphics[width=1.0\textwidth]{../d_figures/mf_n_05.pdf}
+\caption[mf_n_05]{Sèries temporals velocitat de vent       direccions. filtratge de pics i glaçades de velocitat.}
+\end{figure}
