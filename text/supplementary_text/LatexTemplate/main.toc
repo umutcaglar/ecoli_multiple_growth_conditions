@@ -1,0 +1,9 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {section}{\numberline {2}Some examples to get started}{3}
+\contentsline {subsection}{\numberline {2.1}How to include Figures}{3}
+\contentsline {subsection}{\numberline {2.2}How to add Comments}{3}
+\contentsline {subsection}{\numberline {2.3}How to add Tables}{3}
+\contentsline {subsection}{\numberline {2.4}How to write Mathematics}{4}
+\contentsline {subsection}{\numberline {2.5}How to create Sections and Subsections}{4}
+\contentsline {subsection}{\numberline {2.6}How to add Lists}{4}
