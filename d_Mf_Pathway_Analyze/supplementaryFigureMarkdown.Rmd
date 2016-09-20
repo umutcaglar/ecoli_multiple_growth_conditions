@@ -395,7 +395,7 @@ for(counter01 in 1:length(differentCompartisonsList))
         geom_vline(xintercept = c(log2(1/2),log2(2)), colour="orange", linetype = "longdash")+
         geom_vline(xintercept = c(log2(1)), colour="black", linetype = "longdash")+
         geom_text_repel(aes(label=gene_name),size=3, colour="Black", fontface="plain")+
-        ggtitle(paste0("Significatly altered KEGG pathways ", phaseChoice, " ",dataTypeChoice,"\nTest For: ", test_forChoice, " ", test_contrastChoice, "_VS_", test_baseChoice))+
+        #ggtitle(paste0("Significatly altered KEGG pathways ", phaseChoice, " ",dataTypeChoice,"\nTest For: ", test_forChoice, " ", test_contrastChoice, "_VS_", test_baseChoice))+
         theme_bw()+
         scale_x_continuous(breaks=seq(floor(minimumFold),ceiling(maximumFold)))+
         xlab("Log2 Fold Change")+
@@ -820,7 +820,7 @@ for(counter01 in 1:length(differentCompartisonsList))
         geom_vline(xintercept = c(log2(1/2),log2(2)), colour="orange", linetype = "longdash")+
         geom_vline(xintercept = c(log2(1)), colour="black", linetype = "longdash")+
         geom_text_repel(aes(label=gene_name),size=3, colour="Black", fontface="plain")+
-        ggtitle(paste0("Significatly altered GO annotations associated with MF ", phaseChoice, " ",dataTypeChoice,"\nTest For: ", test_forChoice, " ", test_contrastChoice, "_VS_", test_baseChoice))+
+        #ggtitle(paste0("Significatly altered GO annotations associated with MF ", phaseChoice, " ",dataTypeChoice,"\nTest For: ", test_forChoice, " ", test_contrastChoice, "_VS_", test_baseChoice))+
         theme_bw()+
         scale_x_continuous(breaks=seq(floor(minimumFold),ceiling(maximumFold)))+
         xlab("Log2 Fold Change")+
