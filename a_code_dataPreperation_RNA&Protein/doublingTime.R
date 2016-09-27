@@ -38,35 +38,91 @@ source("../e_Flux_Analyze/replaceFunction.R")
 
 ###*****************************
 # install data
-metaData<-read.csv(file = "../a_results/metaData.csv")
+doublingTimeData<-read.csv(file = "../DoublingTimeRawData/AG3C_doubling_times_raw.csv")
+###*****************************
+
+
+###*****************************
+# add a column defining base and several tests
+doublingTimeData %>% dplyr::mutate(experiment=ifelse(name %in% c("Gluconate.tab", "Glucose.tab", "Glycerol.tab", "Lactate.tab"),
+                                          "carbonSource", "undecided" ),
+                           experiment=ifelse(grepl(pattern = "MgSO4",x = name),
+                                          "Mg_concentration", experiment),
+                           experiment=ifelse(grepl(pattern = "NaCl",x = name),
+                                          "Na_concentration", experiment),
+                           experiment=ifelse(name %in% c("Glucose.tab", "MgSO4_000.800_mM.tab", "NaCl_005_mM.tab"),
+                                          "base" ,experiment))->doublingTimeData
+###*****************************
+
+
+###*****************************
+#Add relevant concentrations 
+doublingTimeData %>% dplyr::mutate(name=gsub(pattern = ".tab",replacement = "",x = name))->doublingTimeData
+doublingTimeData %>% dplyr::mutate(carbonSource=ifelse(experiment!="carbonSource","glucose","not known"),
+                           carbonSource=ifelse(name=="Gluconate","gluconate", carbonSource),
+                           carbonSource=ifelse(name=="Glycerol","glycerol", carbonSource),
+                           carbonSource=ifelse(name=="Lactate","lactate", carbonSource))->doublingTimeData
+
+doublingTimeData %>% dplyr::mutate(Mg_mM=ifelse(experiment!="Mg_concentration",0.8,NA),
+                           Mg_mM=ifelse(name=="MgSO4_000.080_mM" , .08, Mg_mM),
+                           Mg_mM=ifelse(name=="MgSO4_000.800_mM" , .8, Mg_mM),
+                           Mg_mM=ifelse(name=="MgSO4_008.000_mM" , 8, Mg_mM),
+                           Mg_mM=ifelse(name=="MgSO4_050.000_mM" , 50, Mg_mM),
+                           Mg_mM=ifelse(name=="MgSO4_200.000_mM" , 200, Mg_mM),
+                           Mg_mM=ifelse(name=="MgSO4_400.000_mM" , 400, Mg_mM),
+                           Mg_mM=ifelse(name=="MgSO4-2_000.005_mM" , .005, Mg_mM),
+                           Mg_mM=ifelse(name=="MgSO4-2_000.010_mM" , .01, Mg_mM),
+                           Mg_mM=ifelse(name=="MgSO4-2_000.020_mM" , .02, Mg_mM),
+                           Mg_mM=ifelse(name=="MgSO4-2_000.040_mM" , .04, Mg_mM),
+                           Mg_mM=ifelse(name=="MgSO4-2_000.080_mM" , .08, Mg_mM))->doublingTimeData
+
+
+doublingTimeData %>% dplyr::mutate(Na_mM=ifelse(experiment!="Na_concentration",5,NA),
+                           Na_mM=ifelse(name=="NaCl_100_mM" , 100, Na_mM),
+                           Na_mM=ifelse(name=="NaCl_200_mM" , 200, Na_mM),
+                           Na_mM=ifelse(name=="NaCl_300_mM" , 300, Na_mM))->doublingTimeData
+###*****************************
+
+
+###*****************************
+# summarize data
+doublingTimeData %>% 
+  dplyr::mutate(name_base=name)%>%
+  dplyr::mutate(name_base=ifelse(experiment=="base","base",as.character(name))) %>%
+  dplyr::group_by(name_base) %>%
+  dplyr::summarise(experiment=unique(experiment),
+                   carbonSource=unique(carbonSource),
+                   Mg_mM=unique(Mg_mM),
+                   Na_mM=unique(Na_mM),
+                   meanDT=mean(doubling.time.minutes),
+                   stdDT=sd(doubling.time.minutes),
+                   rep=n(),
+                   stderrDT=sd(doubling.time.minutes)/sqrt(n()))->doublingTimeData_sum
+###*****************************
+
+
+###*****************************
+# seperate the data frame into 3 data frames
+doublingTimeData_sum %>% dplyr::filter(experiment %in% c("carbonSource", "base"))->carbonSourceData
+doublingTimeData_sum %>% dplyr::filter(experiment %in% c("Mg_concentration", "base"))->mgStressData
+doublingTimeData_sum %>% dplyr::filter(experiment %in% c("Na_concentration", "base"))->naStressData
 ###*****************************
 
 
 ###*****************************
 #Figures associated with carbon source
-metaData %>%
-  dplyr::filter(experiment==c("glucose_time_course","glycerol_time_course",
-                              "lactate_growth","gluconate_growth")) %>%
-  dplyr::group_by(experiment) %>%
-  dplyr::summarize(doublingTimeMinutes=unique(doublingTimeMinutes), 
-                   doublingTimeMinutes.95m=unique(doublingTimeMinutes.95m), 
-                   doublingTimeMinutes_95p=unique(doublingTimeMinutes_95p)) %>%
-  dplyr::mutate(carbonSource=replace_fun(input_vector = as.vector(experiment),
-                                        initialVal = c("glucose_time_course","glycerol_time_course",
-                                                       "lactate_growth","gluconate_growth"),
-                                        finalVal = c("glucose","glycerol","lactate","gluconate")))-> carbonSourceData
 carbonSourceData$carbonSource<-factor(carbonSourceData$carbonSource,
-                                          levels=c("glucose","glycerol","lactate","gluconate"))
+                                      levels=c("glucose","glycerol","lactate","gluconate"))
 
-carbonSourceData%>%dplyr::filter(carbonSource=="glucose")%>%.$doublingTimeMinutes->base_y_carbonSource
-fig01<-ggplot(carbonSourceData,aes(x=carbonSource,y=doublingTimeMinutes))+
-  geom_point()+
-  geom_errorbar(aes(ymax = doublingTimeMinutes_95p, ymin=doublingTimeMinutes.95m),width=0)+
-  geom_vline(xintercept = 1, color="orange", linetype = "longdash")+
-  geom_hline(yintercept = base_y_carbonSource, 
+carbonSourceData%>%dplyr::filter(experiment=="base")%>%.$meanDT->base_y
+
+fig01<-ggplot(carbonSourceData,aes(x=carbonSource,y=as.numeric(meanDT)))+
+  geom_vline(xintercept = as.numeric(1), color="orange", linetype = "longdash")+
+  geom_hline(yintercept = base_y, 
              color="orange", linetype = "longdash")+
+  scale_x_discrete()+
   geom_point()+
-  geom_errorbar(aes(ymax = doublingTimeMinutes_95p, ymin=doublingTimeMinutes.95m),width=0)+
+  geom_errorbar(aes(ymax = meanDT+stderrDT, ymin=meanDT-stderrDT),width=0)+
   expand_limits(x = 0, y = 0)+
   ylim(0,120)+
   theme_bw()+
@@ -85,27 +141,16 @@ fig01<-ggplot(carbonSourceData,aes(x=carbonSource,y=doublingTimeMinutes))+
         legend.title=element_text(size=14),
         legend.text=element_text(size=14))
 
-###*****************************
+print(fig01)
 
 
-
-###*****************************
-#Figures associated with Mg levels
-metaData %>%
-  dplyr::filter(experiment %in% c("MgSO4_stress_low", "MgSO4_stress_high")) %>%
-  dplyr::group_by(experiment,Mg_mM) %>%
-  dplyr::summarize(doublingTimeMinutes=unique(doublingTimeMinutes), 
-                   doublingTimeMinutes.95m=unique(doublingTimeMinutes.95m), 
-                   doublingTimeMinutes_95p=unique(doublingTimeMinutes_95p))->mgStressData
-
-mgStressData%>%dplyr::filter(Mg_mM==.8)%>%.$doublingTimeMinutes->base_y_mgStress
-fig02<-ggplot(mgStressData,aes(x=Mg_mM,y=doublingTimeMinutes))+
+fig02<-ggplot(mgStressData,aes(x=Mg_mM,y=meanDT))+
   geom_point()+
-  geom_errorbar(aes(ymax = doublingTimeMinutes_95p, ymin=doublingTimeMinutes.95m),width=0)+
+  geom_errorbar(aes(ymax = meanDT+stderrDT, ymin=meanDT-stderrDT),width=0)+
   geom_vline(xintercept = .8, color="orange", linetype = "longdash")+
-  geom_hline(yintercept = base_y_mgStress, color="orange", linetype = "longdash")+
+  geom_hline(yintercept = base_y, color="orange", linetype = "longdash")+
   geom_point()+
-  geom_errorbar(aes(ymax = doublingTimeMinutes_95p, ymin=doublingTimeMinutes.95m),width=0)+
+  geom_errorbar(aes(ymax = meanDT+stderrDT, ymin=meanDT-stderrDT),width=0)+
   expand_limits(x = 0, y = 0)+
   ylim(0,120)+
   scale_x_log10(breaks=c(0.01,0.1,1,10,100))+
@@ -124,26 +169,16 @@ fig02<-ggplot(mgStressData,aes(x=Mg_mM,y=doublingTimeMinutes))+
         axis.title.y=element_text(size=16),
         legend.title=element_text(size=14),
         legend.text=element_text(size=14))
-###*****************************
+
+print(fig02)
 
 
-###*****************************
-#Figures associated with Na levels
-metaData %>%
-  dplyr::filter(experiment %in% c("NaCl_stress")) %>%
-  dplyr::group_by(Na_mM) %>%
-  dplyr::summarize(doublingTimeMinutes=unique(doublingTimeMinutes), 
-                   doublingTimeMinutes.95m=unique(doublingTimeMinutes.95m), 
-                   doublingTimeMinutes_95p=unique(doublingTimeMinutes_95p))->naStressData
 
-naStressData%>%dplyr::filter(Na_mM==5)%>%.$doublingTimeMinutes->base_y_naStress
-fig03<-ggplot(naStressData,aes(x=Na_mM,y=doublingTimeMinutes))+
-  geom_point()+
-  geom_errorbar(aes(ymax = doublingTimeMinutes_95p, ymin=doublingTimeMinutes.95m),width=0)+
+fig03<-ggplot(naStressData,aes(x=Na_mM,y=meanDT))+
   geom_vline(xintercept = 5, color="orange", linetype = "longdash")+
-  geom_hline(yintercept = base_y_naStress, color="orange", linetype = "longdash")+
+  geom_hline(yintercept = base_y, color="orange", linetype = "longdash")+
   geom_point()+
-  geom_errorbar(aes(ymax = doublingTimeMinutes_95p, ymin=doublingTimeMinutes.95m),width=0)+
+  geom_errorbar(aes(ymax = meanDT+stderrDT, ymin=meanDT-stderrDT),width=0)+
   expand_limits(x = 0, y = 0)+
   ylim(0,120)+
   theme_bw()+
@@ -161,16 +196,16 @@ fig03<-ggplot(naStressData,aes(x=Na_mM,y=doublingTimeMinutes))+
         axis.title.y=element_text(size=16),
         legend.title=element_text(size=14),
         legend.text=element_text(size=14))
+
+print(fig03)
 ###*****************************
 
-print(fig01)
-print(fig02)
-print(fig03)
 
-
+###*****************************
 figAll<-cowplot::plot_grid(plotlist = list(fig01, fig02, fig03), 
                            align = "v", ncol = 1, scale = .95,labels = c("A", "B", "C"))
 
 print(figAll)
 
 cowplot::save_plot(filename = "../a_figures/duplicationTime.pdf",plot = figAll,ncol = 2,nrow = 3)
+###*****************************
