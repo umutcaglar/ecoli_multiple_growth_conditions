@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.80.0 (TeX Live 2015) (rev 5238)  (format=lualatex 2015.5.24)  20 SEP 2016 10:54
+This is LuaTeX, Version beta-0.80.0 (TeX Live 2015) (rev 5238)  (format=lualatex 2015.5.24)  28 SEP 2016 16:05
  restricted \write18 enabled.
 **supplementaryText_MolecPhentypeDifferentGrowthConditions.tex
 (./supplementaryText_MolecPhentypeDifferentGrowthConditions.tex
@@ -767,29 +767,15 @@ File: ../../d_figures/mf_n_05.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../../d_figures/mf_n_05.pdf used on input line 193.
 (pdftex.def)             Requested size: 452.9679pt x 197.32079pt.
  [25<../../d_figures/mf_n_05.pdf>]
-<../supplementary_figures/figS2_FluxSta.pdf, id=248, 953.5625pt x 982.67125pt>
-File: ../supplementary_figures/figS2_FluxSta.pdf Graphic file (type pdf)
-
-<use ../supplementary_figures/figS2_FluxSta.pdf>
-Package pdftex.def Info: ../supplementary_figures/figS2_FluxSta.pdf used on inpu
-t line 200.
-(pdftex.def)             Requested size: 452.9679pt x 466.80368pt.
- [26
-
-
-
-
-
-<../supplementary_figures/figS2_FluxSta.pdf>]
 (./supplementaryText_MolecPhentypeDifferentGrowthConditions.aux))
 
 Here is how much of LuaTeX's memory you used:
- 13825 strings out of 494693
+ 13815 strings out of 494693
  100000,319454 words of node,token memory allocated
- 359 words of node memory still in use:
-   5 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 46 glue_spec, 1 write nodes
-   avail lists: 2:21,3:144,4:1023,5:154,6:2735,7:79,9:239,10:261
- 16764 multiletter control sequences out of 65536+600000
+ 370 words of node memory still in use:
+   5 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 46 glue_spec, 5 write nodes
+   avail lists: 2:21,3:135,4:1003,5:152,6:2713,7:79,9:232,10:259
+ 16760 multiletter control sequences out of 65536+600000
  50 fonts using 1975895 bytes
  62i,7n,56p,572b,298s stack positions out of 5000i,500n,10000p,200000b,100000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<</
@@ -803,10 +789,10 @@ xlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><</usr/local/texl
 ive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><</usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
 Output written on supplementaryText_MolecPhentypeDifferentGrowthConditions.pdf (
-26 pages, 302174 bytes).
+25 pages, 282759 bytes).
 
-PDF statistics: 291 PDF objects out of 1000 (max. 8388607)
- 205 compressed objects within 3 object streams
+PDF statistics: 279 PDF objects out of 1000 (max. 8388607)
+ 197 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

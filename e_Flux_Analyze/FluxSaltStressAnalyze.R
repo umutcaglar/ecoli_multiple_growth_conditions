@@ -29,6 +29,7 @@ library(purrr)  # for map(), reduce()
 library(ggplot2) # for ggplot()
 library(cowplot) # for plot_grid() making publication ready figures
 library(stringr) # for str_extract()
+library(broom) # for doing lm fit in parallel to calculate slopes
 ###*****************************
 
 
@@ -222,8 +223,26 @@ write.csv(x = data_plots, file = "../e_results/flux_data.csv")
 # 
 # data_plots %>%dplyr::filter(Salt=="MGSO4") ->data_plots_Mg
 # data_plots %>%dplyr::filter(Salt=="NACL")->data_plots_Na
+###*****************************
 
 
+###*****************************
+# Best line calculation
+data_plots %>%
+  dplyr::mutate(Conc_transf = ifelse(Salt=='MGSO4', log(Conc), Conc)) %>%
+  dplyr::group_by(Salt, Phase, Branch) %>%
+  dplyr::do(broom::tidy(lm(MeanFluxRatio ~ Conc_transf, data=.))) %>%
+  dplyr::filter(term == 'Conc_transf') %>%
+  dplyr::ungroup() %>%
+  dplyr::group_by(Phase) %>%
+  dplyr::mutate(p.adjusted = p.adjust(p.value, method="fdr")) -> data_plot_fits
+
+write.csv(x = data_plot_fits,file = "../e_results/flux_p_values.csv")
+
+###*****************************
+
+
+###*****************************
 data_plots %>%dplyr::filter(Salt=="MGSO4", Phase=="EXP") ->data_plots_Mg_exp
 data_plots %>%dplyr::filter(Salt=="NACL", Phase=="EXP")->data_plots_Na_exp
 data_plots %>%dplyr::filter(Salt=="MGSO4", Phase=="STA") ->data_plots_Mg_sta
