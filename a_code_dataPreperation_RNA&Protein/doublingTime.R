@@ -85,6 +85,9 @@ doublingTimeData %>% dplyr::mutate(Na_mM=ifelse(experiment!="Na_concentration",5
 
 
 ###*****************************
+doublingTimeData %>%
+  dplyr::mutate(name=gsub("-2","",name))->doublingTimeData
+
 # summarize data
 doublingTimeData %>% 
   dplyr::mutate(name_base=name)%>%
@@ -116,12 +119,15 @@ carbonSourceData$carbonSource<-factor(carbonSourceData$carbonSource,
 
 carbonSourceData%>%dplyr::filter(experiment=="base")%>%.$meanDT->base_y
 
-fig01<-ggplot(carbonSourceData,aes(x=carbonSource,y=as.numeric(meanDT)))+
-  geom_vline(xintercept = as.numeric(1), color="orange", linetype = "longdash")+
+sizeValue=2.5
+
+fig01<-ggplot(carbonSourceData,aes(x=carbonSource,y=as.numeric(meanDT), colour=experiment))+
+  #geom_vline(xintercept = as.numeric(1), color="orange", linetype = "longdash")+
   geom_hline(yintercept = base_y, 
              color="orange", linetype = "longdash")+
   scale_x_discrete()+
-  geom_point()+
+  geom_point(size=sizeValue)+
+  scale_color_manual(values=c("Red", "Black"))+
   geom_errorbar(aes(ymax = meanDT+stderrDT, ymin=meanDT-stderrDT),width=0)+
   expand_limits(x = 0, y = 0)+
   ylim(0,120)+
@@ -129,7 +135,7 @@ fig01<-ggplot(carbonSourceData,aes(x=carbonSource,y=as.numeric(meanDT)))+
   xlab("Carbon sources")+
   ylab("Doubling time (min)")+
   theme(axis.line.y = element_blank(),
-        legend.position="bottom",
+        legend.position="none",
         panel.grid.minor=element_blank(),
         panel.grid.major.x=element_blank(),
         strip.text.x = element_text(size = 16),
@@ -144,12 +150,11 @@ fig01<-ggplot(carbonSourceData,aes(x=carbonSource,y=as.numeric(meanDT)))+
 print(fig01)
 
 
-fig02<-ggplot(mgStressData,aes(x=Mg_mM,y=meanDT))+
-  geom_point()+
-  geom_errorbar(aes(ymax = meanDT+stderrDT, ymin=meanDT-stderrDT),width=0)+
-  geom_vline(xintercept = .8, color="orange", linetype = "longdash")+
+fig02<-ggplot(mgStressData,aes(x=Mg_mM,y=meanDT, colour=experiment))+
+  #geom_vline(xintercept = .8, color="orange", linetype = "longdash")+
   geom_hline(yintercept = base_y, color="orange", linetype = "longdash")+
-  geom_point()+
+  geom_point(size=sizeValue)+
+  scale_color_manual(values=c("Red", "Black"))+
   geom_errorbar(aes(ymax = meanDT+stderrDT, ymin=meanDT-stderrDT),width=0)+
   expand_limits(x = 0, y = 0)+
   ylim(0,120)+
@@ -158,7 +163,7 @@ fig02<-ggplot(mgStressData,aes(x=Mg_mM,y=meanDT))+
   xlab("Mg Concentration mM")+
   ylab("Doubling time (min)")+
   theme(axis.line.y = element_blank(),
-        legend.position="bottom",
+        legend.position="none",
         panel.grid.minor=element_blank(),
         panel.grid.major.x=element_blank(),
         strip.text.x = element_text(size = 16),
@@ -174,10 +179,11 @@ print(fig02)
 
 
 
-fig03<-ggplot(naStressData,aes(x=Na_mM,y=meanDT))+
-  geom_vline(xintercept = 5, color="orange", linetype = "longdash")+
+fig03<-ggplot(naStressData,aes(x=Na_mM,y=meanDT, colour=experiment))+
+  #geom_vline(xintercept = 5, color="orange", linetype = "longdash")+
   geom_hline(yintercept = base_y, color="orange", linetype = "longdash")+
-  geom_point()+
+  geom_point(size=sizeValue)+
+  scale_color_manual(values=c("Red", "Black"))+
   geom_errorbar(aes(ymax = meanDT+stderrDT, ymin=meanDT-stderrDT),width=0)+
   expand_limits(x = 0, y = 0)+
   ylim(0,120)+
@@ -185,7 +191,7 @@ fig03<-ggplot(naStressData,aes(x=Na_mM,y=meanDT))+
   xlab("Na Concentration mM")+
   ylab("Doubling time (min)")+
   theme(axis.line.y = element_blank(),
-        legend.position="bottom",
+        legend.position="none",
         panel.grid.minor=element_blank(),
         panel.grid.major.x=element_blank(),
         strip.text.x = element_text(size = 16),
