@@ -25,6 +25,7 @@ require("ggplot2")
 require("RColorBrewer")
 require("scales")
 require("cowplot")
+require("Cairo")
 ###*****************************
 
 
@@ -92,8 +93,16 @@ kegg_metabolism_df %>%
   dplyr::group_by(pick_data, growthPhase, contrast)%>%
   dplyr::arrange(FDR_KEGG_Path)%>%
   dplyr::mutate(rank=seq(1:n()))%>%
-  dplyr::filter(rank<6) %>%
-  tidyr::complete(rank)->kegg_metabolism_summary
+  #dplyr::filter(rank<6) %>%
+  tidyr::complete(rank) %>%
+  dplyr::mutate(PlusMinusRatio=numSigP/numSigN) %>%
+  dplyr::mutate(PlusMinusSign=ifelse(PlusMinusRatio>=95/5,"\u25B2\u25B2\u25B2","none"),
+                PlusMinusSign=ifelse(PlusMinusRatio>=80/20 & PlusMinusRatio < 95/5, "\u25B2\u25B2",PlusMinusSign),
+                PlusMinusSign=ifelse(PlusMinusRatio>=60/40 & PlusMinusRatio < 80/20, "\u25B2",PlusMinusSign),
+                PlusMinusSign=ifelse(PlusMinusRatio>=40/60 & PlusMinusRatio < 60/40, "\u25B2 \u25BC",PlusMinusSign),
+                PlusMinusSign=ifelse(PlusMinusRatio>=20/80 & PlusMinusRatio < 40/60, "\u25BC",PlusMinusSign),
+                PlusMinusSign=ifelse(PlusMinusRatio>=5/95 & PlusMinusRatio < 20/80, "\u25BC\u25BC",PlusMinusSign),
+                PlusMinusSign=ifelse(PlusMinusRatio < 5/95, "\u25BC\u25BC\u25BC",PlusMinusSign))->kegg_metabolism_summary
 
 
 kegg_metabolism_summary$grouping <- factor(kegg_metabolism_summary$grouping, 
@@ -133,8 +142,16 @@ mf_metabolism_df %>%
   dplyr::group_by(pick_data, growthPhase, contrast)%>%
   dplyr::arrange(FDR_MF)%>%
   dplyr::mutate(rank=seq(1:n()))%>%
-  dplyr::filter(rank<6) %>%
-  tidyr::complete(rank)->mf_metabolism_summary
+  #dplyr::filter(rank<6) %>%
+  tidyr::complete(rank)%>%
+  dplyr::mutate(PlusMinusRatio=numSigP/numSigN)%>%
+  dplyr::mutate(PlusMinusSign=ifelse(PlusMinusRatio>=95/5,"\u25B2\u25B2\u25B2","none"),
+                PlusMinusSign=ifelse(PlusMinusRatio>=80/20 & PlusMinusRatio < 95/5, "\u25B2\u25B2",PlusMinusSign),
+                PlusMinusSign=ifelse(PlusMinusRatio>=60/40 & PlusMinusRatio < 80/20, "\u25B2",PlusMinusSign),
+                PlusMinusSign=ifelse(PlusMinusRatio>=40/60 & PlusMinusRatio < 60/40, "\u25B2 \u25BC",PlusMinusSign),
+                PlusMinusSign=ifelse(PlusMinusRatio>=20/80 & PlusMinusRatio < 40/60, "\u25BC",PlusMinusSign),
+                PlusMinusSign=ifelse(PlusMinusRatio>=5/95 & PlusMinusRatio < 20/80, "\u25BC\u25BC",PlusMinusSign),
+                PlusMinusSign=ifelse(PlusMinusRatio < 5/95, "\u25BC\u25BC\u25BC",PlusMinusSign))->mf_metabolism_summary
 
 mf_metabolism_summary$grouping <- factor(mf_metabolism_summary$grouping, 
                                          levels = rev(c("Exp-lowMg", "Exp-highMg", "Exp-highNa",
@@ -172,7 +189,7 @@ mf_metabolism_summary%>%
 fig01<-ggplot(kegg_metabolism_summary, aes( y=rank,x="condition"))+
   ylim(5.5,0.5)+
   scale_x_continuous(limits=c(0,1), expand=c(0,0)) +
-  geom_text(aes(label=paste(rank, KEGG_Path_short, sep=". "), x=0.02),size=3, hjust=0)+
+  geom_text(aes(label=paste0(rank, ".", KEGG_Path_short, "  ", PlusMinusSign), x=0.02),size=3, hjust=0)+
   facet_grid(growthPhase+contrast~pick_data,drop = FALSE) +
   panel_border() +
   theme(  axis.line = element_blank(), 
@@ -184,10 +201,11 @@ fig01<-ggplot(kegg_metabolism_summary, aes( y=rank,x="condition"))+
 
 print(fig01)
 
+
 fig02<-ggplot(mf_metabolism_summary, aes( y=rank,x="condition"))+
   ylim(5.5,0.5)+
   scale_x_continuous(limits=c(0,1), expand=c(0,0)) +
-  geom_text(aes(label=paste(rank, MF_Short, sep=". "), x=0.02),size=3, hjust=0)+
+  geom_text(aes(label=paste0(rank, ".", MF_Short, "  ", PlusMinusSign), x=0.02),size=3, hjust=0)+
   facet_grid(growthPhase+contrast~pick_data,drop = FALSE)+
   panel_border() +
   theme(  axis.line = element_blank(), 
@@ -202,7 +220,7 @@ print(fig02)
 fig01a<-ggplot(kegg_metabolism_summary_exp, aes( y=rank,x="condition"))+
   ylim(5.5,0.5)+
   scale_x_continuous(limits=c(0,1), expand=c(0,0)) +
-  geom_text(aes(label=paste(rank, KEGG_Path_short, sep=". "), x=0.02),size=3, hjust=0)+
+  geom_text(aes(label=paste0(rank, ".", KEGG_Path_short, "  ", PlusMinusSign), x=0.02),size=3, hjust=0)+
   facet_grid(contrast~pick_data,drop = FALSE) +
   panel_border() +
   theme(  axis.line = element_blank(), 
@@ -215,7 +233,7 @@ fig01a<-ggplot(kegg_metabolism_summary_exp, aes( y=rank,x="condition"))+
 fig01b<-ggplot(kegg_metabolism_summary_sta, aes( y=rank,x="condition"))+
   ylim(5.5,0.5)+
   scale_x_continuous(limits=c(0,1), expand=c(0,0)) +
-  geom_text(aes(label=paste(rank, KEGG_Path_short, sep=". "), x=0.02),size=3, hjust=0)+
+  geom_text(aes(label=paste0(rank, ".", KEGG_Path_short, "  ", PlusMinusSign), x=0.02),size=3, hjust=0)+
   facet_grid(contrast~pick_data,drop = FALSE) +
   panel_border() +
   theme(  axis.line = element_blank(), 
@@ -228,7 +246,7 @@ fig01b<-ggplot(kegg_metabolism_summary_sta, aes( y=rank,x="condition"))+
 fig02a<-ggplot(mf_metabolism_summary_exp, aes( y=rank,x="condition"))+
   ylim(5.5,0.5)+
   scale_x_continuous(limits=c(0,1), expand=c(0,0)) +
-  geom_text(aes(label=paste(rank, MF_Short, sep=". "), x=0.02),size=3, hjust=0)+
+  geom_text(aes(label=paste0(rank, ".", MF_Short, "  ", PlusMinusSign), x=0.02),size=3, hjust=0)+
   facet_grid(contrast~pick_data, drop = FALSE) +
   panel_border() +
   theme(  axis.line = element_blank(), 
@@ -243,7 +261,7 @@ fig02a<-ggplot(mf_metabolism_summary_exp, aes( y=rank,x="condition"))+
 fig02b<-ggplot(mf_metabolism_summary_sta, aes( y=rank,x="condition"))+
   ylim(5.5,0.5)+
   scale_x_continuous(limits=c(0,1), expand=c(0,0)) +
-  geom_text(aes(label=paste(rank, MF_Short, sep=". "), x=0.02),size=3, hjust=0)+
+  geom_text(aes(label=paste0(rank, ".", MF_Short, "  ", PlusMinusSign), x=0.02),size=3, hjust=0)+
   facet_grid(contrast~pick_data,drop = FALSE) +
   panel_border() +
   theme(  axis.line = element_blank(), 
@@ -265,23 +283,29 @@ mf_figure<-cowplot::plot_grid(fig02a,fig02b,labels = c("A","B"),ncol=1,scale = .
 ###*****************************
 # Save Figures
 cowplot::save_plot(filename = paste0("../d_figures/resultTable_kegg.pdf"),
-                   plot = fig01,ncol = 2,nrow=4,limitsize = FALSE)
+                   plot = fig01,ncol = 2,nrow=4,limitsize = FALSE, device=cairo_pdf)
 
 cowplot::save_plot(filename = paste0("../d_figures/resultTable_mf.pdf"),
-                   plot = fig02,ncol = 2,nrow=4,limitsize = FALSE)
+                   plot = fig02,ncol = 2,nrow=4,limitsize = FALSE, device=cairo_pdf)
 
 cowplot::save_plot(filename = paste0("../d_figures/resultTable_kegg_exp.pdf"),
-                   plot = fig01a,ncol = 2,nrow=1.7,limitsize = FALSE)
+                   plot = fig01a,ncol = 2,nrow=1.7,limitsize = FALSE, device=cairo_pdf)
 cowplot::save_plot(filename = paste0("../d_figures/resultTable_kegg_sta.pdf"),
-                   plot = fig01b,ncol = 2,nrow= 1.7,limitsize = FALSE)
+                   plot = fig01b,ncol = 2,nrow= 1.7,limitsize = FALSE, device=cairo_pdf)
 cowplot::save_plot(filename = paste0("../d_figures/resultTable_mf_exp.pdf"),
-                   plot = fig02a,ncol = 2,nrow=1.7,limitsize = FALSE)
+                   plot = fig02a,ncol = 2,nrow=1.7,limitsize = FALSE, device=cairo_pdf)
 cowplot::save_plot(filename = paste0("../d_figures/resultTable_mf_sta.pdf"),
-                   plot = fig02b,ncol = 2.05,nrow=1.7,limitsize = FALSE)
+                   plot = fig02b,ncol = 2.05,nrow=1.7,limitsize = FALSE, device=cairo_pdf)
 
 
 cowplot::save_plot(filename = paste0("../d_figures/resultTable_kegg.pdf"),
-                   plot = kegg_figure, ncol = 2,nrow=3.4,limitsize = FALSE)
+                   plot = kegg_figure, ncol = 2,nrow=3.4,limitsize = FALSE, device=cairo_pdf)
+
+cowplot::save_plot(filename = paste0("../d_figures/resultTable_kegg.png"),
+                   plot = kegg_figure, ncol = 2,nrow=3.4,limitsize = FALSE, dpi = 600)
 
 cowplot::save_plot(filename = paste0("../d_figures/resultTable_mf.pdf"),
-                   plot = mf_figure, ncol = 2,nrow=3.4,limitsize = FALSE)
+                   plot = mf_figure, ncol = 2,nrow=3.4,limitsize = FALSE, device=cairo_pdf)
+
+cowplot::save_plot(filename = paste0("../d_figures/resultTable_mf.png"),
+                   plot = mf_figure, ncol = 2,nrow=3.4,limitsize = FALSE, dpi = 600)
