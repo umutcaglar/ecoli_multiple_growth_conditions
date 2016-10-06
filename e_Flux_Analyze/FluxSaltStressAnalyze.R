@@ -81,8 +81,10 @@ data_unnest$Conc[(data_unnest$sampleID) %in% seq(140,140,6)]<-200
 data_unnest$Conc[(data_unnest$sampleID) %in% seq(111,129,6)]<-400
 
 data_unnest$Phase<-NA
-data_unnest$Phase[(data_unnest$sampleID) %in% c(seq(61,64,1),seq(69,72,1),seq(77,80,1),seq(106,111,1),seq(118,123,1),seq(130,132,1))]<-"EXP"
-data_unnest$Phase[(data_unnest$sampleID) %in% c(seq(65,68,1),seq(73,76,1),seq(81,84,1),seq(112,117,1),seq(124,129,1),seq(136,140,1))]<-"STA"
+data_unnest$Phase[(data_unnest$sampleID) %in% c(seq(61,64,1),seq(69,72,1),seq(77,80,1),
+                                                seq(106,111,1),seq(118,123,1),seq(130,132,1))]<-"EXP"
+data_unnest$Phase[(data_unnest$sampleID) %in% c(seq(65,68,1),seq(73,76,1),seq(81,84,1),
+                                                seq(112,117,1),seq(124,129,1),seq(136,140,1))]<-"STA"
 
 data_unnest$Replicate<-NA
 data_unnest$Replicate[(data_unnest$sampleID) %in% seq(61,68,1)]<-1
@@ -243,6 +245,12 @@ write.csv(x = data_plot_fits,file = "../e_results/flux_p_values.csv")
 
 
 ###*****************************
+# Font size
+facetFontSize=12
+###*****************************
+
+
+###*****************************
 data_plots %>%dplyr::filter(Salt=="MGSO4", Phase=="EXP") ->data_plots_Mg_exp
 data_plots %>%dplyr::filter(Salt=="NACL", Phase=="EXP")->data_plots_Na_exp
 data_plots %>%dplyr::filter(Salt=="MGSO4", Phase=="STA") ->data_plots_Mg_sta
@@ -262,8 +270,12 @@ fig_Na_exp<-ggplot2::ggplot(data_plots_Na_exp,aes(x=Conc, y=MeanFluxRatio, colou
   labs(y="Flux Ratio", x="Concentration") +
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
-        strip.text.x = element_text(size = 6, face = "bold"),
-        strip.text.y = element_text(face = "bold"),
+        strip.text.x = element_text(size = facetFontSize, face = "bold"),
+        strip.text.y = element_text(size = facetFontSize,face = "bold"),
+        axis.text.x=element_text(size=12),
+        axis.text.y=element_text(size=12),
+        axis.title.x=element_text(size=20),
+        axis.title.y=element_text(size=20),
         legend.position="none",
         panel.grid.minor = element_blank())
 
@@ -283,8 +295,12 @@ fig_Na_sta<-ggplot2::ggplot(data_plots_Na_sta,aes(x=Conc, y=MeanFluxRatio, colou
   labs(y="Flux Ratio", x="Concentration") +
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
-        strip.text.x = element_text(size = 6, face = "bold"),
-        strip.text.y = element_text(face = "bold"),
+        strip.text.x = element_text(size = facetFontSize, face = "bold"),
+        strip.text.y = element_text(size = facetFontSize, face = "bold"),
+        axis.text.x=element_text(size=12),
+        axis.text.y=element_text(size=12),
+        axis.title.x=element_text(size=20),
+        axis.title.y=element_text(size=20),
         legend.position="none",
         panel.grid.minor = element_blank())
 
@@ -306,8 +322,12 @@ fig_Mg_exp<-ggplot2::ggplot(data_plots_Mg_exp,aes(x=Conc, y=MeanFluxRatio, colou
   labs(y="Flux Ratio", x="Concentration") +
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
-        strip.text.x = element_text(size = 6, face = "bold"),
-        strip.text.y = element_text(face = "bold"),
+        strip.text.x = element_text(size = facetFontSize, face = "bold"),
+        strip.text.y = element_text(size = facetFontSize, face = "bold"),
+        axis.text.x=element_text(size=12),
+        axis.text.y=element_text(size=12),
+        axis.title.x=element_text(size=20),
+        axis.title.y=element_text(size=20),
         legend.position="none",
         panel.grid.minor = element_blank())
 
@@ -329,8 +349,12 @@ fig_Mg_sta<-ggplot2::ggplot(data_plots_Mg_sta,aes(x=Conc, y=MeanFluxRatio, colou
   labs(y="Flux Ratio", x="Concentration") +
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
-        strip.text.x = element_text(size = 6, face = "bold"),
-        strip.text.y = element_text(face = "bold"),
+        strip.text.x = element_text(size = facetFontSize, face = "bold"),
+        strip.text.y = element_text(size = facetFontSize, face = "bold"),
+        axis.text.x=element_text(size=12),
+        axis.text.y=element_text(size=12),
+        axis.title.x=element_text(size=20),
+        axis.title.y=element_text(size=20),
         legend.position="none",
         panel.grid.minor = element_blank())
 
@@ -338,10 +362,10 @@ print(fig_Mg_sta)
 
 
 # Combine plots 
-fig_exp<-cowplot::plot_grid(fig_Na_exp, fig_Mg_exp, labels = c("A", "B"), nrow = 2)
+fig_exp<-cowplot::plot_grid(fig_Na_exp, fig_Mg_exp, labels = c("A", "B"), nrow = 2, scale = .95)
 print(fig_exp)
 
-fig_sta<-cowplot::plot_grid(fig_Na_sta, fig_Mg_sta, labels = c("A", "B"), nrow = 2)
+fig_sta<-cowplot::plot_grid(fig_Na_sta, fig_Mg_sta, labels = c("A", "B"), nrow = 2, scale = .95)
 print(fig_sta)
 
 

@@ -340,6 +340,13 @@ cowplot::save_plot(filename = paste0("../c_figures/difExpressedGenes_protein",".
 
 
 ###*****************************
+# Font sizes for Venn Diagrams
+categoryNameFontSize=1.8
+mainTextFontSizeVector=1.6
+###*****************************
+
+
+###*****************************
 ###*****************************
 # INDIVIDUAL VENN DIAGRAM
 
@@ -348,32 +355,40 @@ venn.grid = venn.diagram(x=exp_mrna_list, filename="../c_figures/exp_mrna_venn.j
                          euler.d=FALSE,scaled=FALSE,
                          print.mode=c("raw","percent"),force.unique=TRUE, 
                          fill=c("purple","cyan","orange"), 
-                         fontface = "bold", cex=rep(1.3,7), cat.fontface="bold", 
-                         cat.cex=c(1.4,1.4,1.4),cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.04)
+                         fontface = "bold", cex=rep(mainTextFontSizeVector,7), cat.fontface="bold", 
+                         fontfamily="Helvetica", main.fontfamily =  "Helvetica", sub.fontfamily = "Helvetica", cat.fontfamily = "Helvetica",
+                         cat.cex=c(categoryNameFontSize,categoryNameFontSize,categoryNameFontSize),
+                         cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.04)
 
 exp_protein_list = list("Carbon \nsource"=exp_protein_Carb, "Mg stress"=exp_protein_Mg, "Na stress"=exp_protein_Na)
 venn.grid = venn.diagram(x=exp_protein_list, filename="../c_figures/exp_protein_venn.jpeg", 
                          euler.d=FALSE,scaled=FALSE,
                          print.mode=c("raw","percent"),force.unique=TRUE, 
                          fill=c("purple","cyan","orange"), 
-                         fontface = "bold", cex=rep(1.3,7), cat.fontface="bold", 
-                         cat.cex=c(1.4,1.4,1.4),cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.04)
+                         fontface = "bold", cex=rep(mainTextFontSizeVector,7), cat.fontface="bold", 
+                         fontfamily="Helvetica", main.fontfamily =  "Helvetica", sub.fontfamily = "Helvetica", cat.fontfamily = "Helvetica",
+                         cat.cex=c(categoryNameFontSize,categoryNameFontSize,categoryNameFontSize),
+                         cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.04)
 
 sta_mrna_list = list("Carbon \nsource"=sta_mrna_Carb, "Mg stress"=sta_mrna_Mg, "Na stress"=sta_mrna_Na)
 venn.grid = venn.diagram(x=sta_mrna_list, filename="../c_figures/sta_mrna_venn.jpeg", 
                          euler.d=FALSE,scaled=FALSE,
                          print.mode=c("raw","percent"),force.unique=TRUE, 
                          fill=c("purple","cyan","orange"), 
-                         fontface = "bold", cex=rep(1.3,7), cat.fontface="bold", 
-                         cat.cex=c(1.4,1.4,1.4),cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.04)
+                         fontface = "bold", cex=rep(mainTextFontSizeVector,7), cat.fontface="bold", 
+                         fontfamily="Helvetica", main.fontfamily =  "Helvetica", sub.fontfamily = "Helvetica", cat.fontfamily = "Helvetica",
+                         cat.cex=c(categoryNameFontSize,categoryNameFontSize,categoryNameFontSize),
+                         cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.04)
 
 sta_protein_list = list("Carbon \nsource"=sta_protein_Carb, "Mg stress"=sta_protein_Mg, "Na stress"=sta_protein_Na)
 venn.grid = venn.diagram(x=sta_protein_list, filename="../c_figures/sta_protein_venn.jpeg", 
                          euler.d=FALSE,scaled=FALSE,
                          print.mode=c("raw","percent"),force.unique=TRUE, 
                          fill=c("purple","cyan","orange"), 
-                         fontface = "bold", cex=rep(1.3,7), cat.fontface="bold", 
-                         cat.cex=c(1.4,1.4,1.4),cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.04)
+                         fontface = "bold", cex=rep(mainTextFontSizeVector,7), cat.fontface="bold", 
+                         fontfamily="Helvetica", main.fontfamily =  "Helvetica", sub.fontfamily = "Helvetica", cat.fontfamily = "Helvetica",
+                         cat.cex=c(categoryNameFontSize,categoryNameFontSize,categoryNameFontSize),
+                         cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.04)
 
 
 ###*****************************
@@ -385,8 +400,10 @@ exp_mrna_fig = venn.diagram(x=exp_mrna_list, filename=NULL,
                             euler.d=FALSE,scaled=FALSE,
                             print.mode=c("raw","percent"),force.unique=TRUE, 
                             fill=c("purple","cyan","orange"), 
-                            fontface = "bold", cex=rep(1.3,7), cat.fontface="bold", 
-                            cat.cex=c(1.4,1.4,1.4),cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.07,
+                            fontface = "bold", cex=rep(mainTextFontSizeVector,7), cat.fontface="bold", 
+                            fontfamily="Helvetica", main.fontfamily =  "Helvetica", sub.fontfamily = "Helvetica", cat.fontfamily = "Helvetica",
+                            cat.cex=c(categoryNameFontSize,categoryNameFontSize,categoryNameFontSize),
+                            cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.07,
                             main = "A", main.pos = c(0.05,1), main.fontface = "bold", main.cex = 2.5)
 
 exp_protein_list = list("Carbon \nsource"=exp_protein_Carb, "Mg stress"=exp_protein_Mg, "Na stress"=exp_protein_Na)
@@ -394,8 +411,10 @@ exp_protein_fig = venn.diagram(x=exp_protein_list, filename=NULL,
                                euler.d=FALSE,scaled=FALSE,
                                print.mode=c("raw","percent"),force.unique=TRUE, 
                                fill=c("purple","cyan","orange"), 
-                               fontface = "bold", cex=rep(1.3,7), cat.fontface="bold", 
-                               cat.cex=c(1.4,1.4,1.4),cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.07,
+                               fontface = "bold", cex=rep(mainTextFontSizeVector,7), cat.fontface="bold", 
+                               fontfamily="Helvetica", main.fontfamily =  "Helvetica", sub.fontfamily = "Helvetica",  cat.fontfamily = "Helvetica",
+                               cat.cex=c(categoryNameFontSize,categoryNameFontSize,categoryNameFontSize),
+                               cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.07,
                                main = "B", main.pos = c(0.05,1), main.fontface = "bold", main.cex = 2.5)
 
 sta_mrna_list = list("Carbon \nsource"=sta_mrna_Carb, "Mg stress"=sta_mrna_Mg, "Na stress"=sta_mrna_Na)
@@ -403,8 +422,10 @@ sta_mrna_fig = venn.diagram(x=sta_mrna_list, filename=NULL,
                             euler.d=FALSE,scaled=FALSE,
                             print.mode=c("raw","percent"),force.unique=TRUE, 
                             fill=c("purple","cyan","orange"), 
-                            fontface = "bold", cex=rep(1.3,7), cat.fontface="bold", 
-                            cat.cex=c(1.4,1.4,1.4),cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.07,
+                            fontface = "bold", cex=rep(mainTextFontSizeVector,7), cat.fontface="bold", 
+                            fontfamily="Helvetica", main.fontfamily =  "Helvetica", sub.fontfamily = "Helvetica", cat.fontfamily = "Helvetica",
+                            cat.cex=c(categoryNameFontSize,categoryNameFontSize,categoryNameFontSize),
+                            cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.07,
                             main = "C", main.pos = c(0.05,1), main.fontface = "bold", main.cex = 2.5)
 
 sta_protein_list = list("Carbon \nsource"=sta_protein_Carb, "Mg stress"=sta_protein_Mg, "Na stress"=sta_protein_Na)
@@ -412,8 +433,10 @@ sta_protein_fig = venn.diagram(x=sta_protein_list, filename=NULL,
                                euler.d=FALSE,scaled=FALSE,
                                print.mode=c("raw","percent"),force.unique=TRUE, 
                                fill=c("purple","cyan","orange"), 
-                               fontface = "bold", cex=rep(1.3,7), cat.fontface="bold", 
-                               cat.cex=c(1.4,1.4,1.4),cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.07,
+                               fontface = "bold", cex=rep(mainTextFontSizeVector,7), cat.fontface="bold", 
+                               fontfamily="Helvetica", main.fontfamily =  "Helvetica", sub.fontfamily = "Helvetica", cat.fontfamily = "Helvetica",
+                               cat.cex=c(categoryNameFontSize,categoryNameFontSize,categoryNameFontSize),
+                               cat.dist=c(0.1, 0.08, 0.05) ,margin = 0.07,
                                main = "D", main.pos = c(0.05,1), main.fontface = "bold", main.cex = 2.5)
 
 

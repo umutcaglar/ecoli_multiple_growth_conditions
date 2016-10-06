@@ -140,7 +140,7 @@ fig01<-ggplot(carbonSourceData,aes(x=carbonSource,y=as.numeric(meanDT), colour=e
         panel.grid.major.x=element_blank(),
         strip.text.x = element_text(size = 16),
         strip.text.y = element_text(size = 16),
-        axis.text.x=element_text(size=10),
+        axis.text.x=element_text(size=12),
         axis.text.y=element_text(size=12),
         axis.title.x=element_text(size=16),
         axis.title.y=element_text(size=16),
@@ -158,7 +158,7 @@ fig02<-ggplot(mgStressData,aes(x=Mg_mM,y=meanDT, colour=experiment))+
   geom_errorbar(aes(ymax = meanDT+stderrDT, ymin=meanDT-stderrDT),width=0)+
   expand_limits(x = 0, y = 0)+
   ylim(0,120)+
-  scale_x_log10(breaks=c(0.01,0.1,1,10,100))+
+  scale_x_log10(breaks=c(0.01,0.1,1,10,100), labels = comma)+
   theme_bw()+
   xlab("Mg Concentration mM")+
   ylab("Doubling time (min)")+
@@ -168,7 +168,7 @@ fig02<-ggplot(mgStressData,aes(x=Mg_mM,y=meanDT, colour=experiment))+
         panel.grid.major.x=element_blank(),
         strip.text.x = element_text(size = 16),
         strip.text.y = element_text(size = 16),
-        axis.text.x=element_text(size=10),
+        axis.text.x=element_text(size=12),
         axis.text.y=element_text(size=12),
         axis.title.x=element_text(size=16),
         axis.title.y=element_text(size=16),
@@ -196,7 +196,7 @@ fig03<-ggplot(naStressData,aes(x=Na_mM,y=meanDT, colour=experiment))+
         panel.grid.major.x=element_blank(),
         strip.text.x = element_text(size = 16),
         strip.text.y = element_text(size = 16),
-        axis.text.x=element_text(size=10),
+        axis.text.x=element_text(size=12),
         axis.text.y=element_text(size=12),
         axis.title.x=element_text(size=16),
         axis.title.y=element_text(size=16),

@@ -305,6 +305,12 @@ flux_doublingTime_MgNa_exp %>%dplyr::filter(Salt=="NACL")->flux_doublingTime_Na_
 
 
 ###*****************************
+# Font size
+facetFontSize=12
+###*****************************
+
+
+###*****************************
 fig_Mg_exp<-ggplot2::ggplot(flux_doublingTime_Mg_exp,aes(x=meanDT, y=MeanFluxRatio, colour=Branch)) + 
   geom_point(size=1.5) +
   #geom_line() +
@@ -320,8 +326,12 @@ fig_Mg_exp<-ggplot2::ggplot(flux_doublingTime_Mg_exp,aes(x=meanDT, y=MeanFluxRat
   labs(y="Flux Ratio", x="Doubling time") +
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
-        strip.text.x = element_text(size = 6, face = "bold"),
-        strip.text.y = element_text(face = "bold"),
+        strip.text.x = element_text(size = facetFontSize, face = "bold"),
+        strip.text.y = element_text(size = facetFontSize, face = "bold"),
+        axis.text.x=element_text(size=12),
+        axis.text.y=element_text(size=12),
+        axis.title.x=element_text(size=20),
+        axis.title.y=element_text(size=20),
         legend.position="none",
         panel.grid.minor = element_blank())
 
@@ -345,8 +355,12 @@ fig_Na_exp<-ggplot2::ggplot(flux_doublingTime_Na_exp,aes(x=meanDT, y=MeanFluxRat
   labs(y="Flux Ratio", x="Doubling time") +
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
-        strip.text.x = element_text(size = 6, face = "bold"),
-        strip.text.y = element_text(face = "bold"),
+        strip.text.x = element_text(size = facetFontSize, face = "bold"),
+        strip.text.y = element_text(size = facetFontSize, face = "bold"),
+        axis.text.x=element_text(size=12),
+        axis.text.y=element_text(size=12),
+        axis.title.x=element_text(size=20),
+        axis.title.y=element_text(size=20),
         legend.position="none",
         panel.grid.minor = element_blank())
 
@@ -370,8 +384,12 @@ fig_MgNa_exp<-ggplot2::ggplot(flux_doublingTime_MgNa_exp,aes(x=meanDT, y=MeanFlu
   labs(y="Flux Ratio", x="Doubling time") +
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
-        strip.text.x = element_text(size = 6, face = "bold"),
-        strip.text.y = element_text(face = "bold"),
+        strip.text.x = element_text(size = facetFontSize, face = "bold"),
+        strip.text.y = element_text(size = facetFontSize, face = "bold"),
+        axis.text.x=element_text(size=12),
+        axis.text.y=element_text(size=12),
+        axis.title.x=element_text(size=20),
+        axis.title.y=element_text(size=20),
         legend.position="none",
         panel.grid.minor = element_blank())
 
@@ -414,8 +432,12 @@ fig_GLYfromSER<-ggplot2::ggplot(GLYfromSER,aes(x=meanDT, y=MeanFluxRatio)) +
   labs(y="Flux Ratio", x="Doubling time") +
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
-        strip.text.x = element_text(size = 6, face = "bold"),
-        strip.text.y = element_text(face = "bold"),
+        strip.text.x = element_text(size = facetFontSize, face = "bold"),
+        strip.text.y = element_text(size = facetFontSize, face = "bold"),
+        axis.text.x=element_text(size=12),
+        axis.text.y=element_text(size=12),
+        axis.title.x=element_text(size=20),
+        axis.title.y=element_text(size=20),
         legend.position="none",
         panel.grid.minor = element_blank())
 
@@ -429,7 +451,7 @@ write.csv(x = flux_doublingTime_fits_seperate, file = "../e_results/flux_doublin
 write.csv(x = flux_doublingTime_fits_together, file = "../e_results/flux_doublingTime_fits_tog.csv")
 
 # Save figures
-fig_flux_double_exp_sep<-cowplot::plot_grid(fig_Na_exp, fig_Mg_exp, labels = c("A", "B"), nrow = 2)
+fig_flux_double_exp_sep<-cowplot::plot_grid(fig_Na_exp, fig_Mg_exp, labels = c("A", "B"), nrow = 2, scale = .95)
 cowplot::save_plot(filename = "../e_figures/Exp_flux_vs_doub_sep.pdf",plot = fig_flux_double_exp_sep,nrow = 1.7*2,ncol = 3)
 cowplot::save_plot(filename = "../e_figures/Exp_flux_vs_doub_tog.pdf",plot = fig_MgNa_exp,nrow = 1.7,ncol = 3)
 cowplot::save_plot(filename = "../e_figures/GLYfromSER.pdf",plot = fig_GLYfromSER,nrow = 1,ncol = 1)
