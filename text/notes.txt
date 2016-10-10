@@ -1,3 +1,0 @@
-Gluconate should not be abbreviated as "glu", since this looks like glucose (Fig. 4). Jeff Barrick suggests "glc" for gluconate.
-
-We may want to discuss in the discussion that the Mg results in stationary phase may reflect that the Mg samples were still growing at that time.
