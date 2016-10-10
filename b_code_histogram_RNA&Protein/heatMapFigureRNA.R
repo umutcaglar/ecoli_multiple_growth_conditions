@@ -93,7 +93,7 @@ heatMapName=paste(heatMapName,collapse = "_")
 mainDataFrame=read.csv(file = paste0("../a_results/",dataName,".csv"),header = TRUE,row.names = 1)
 condition=read.csv(file = paste0("../a_results/",metaDataName,".csv"),header = TRUE)
 ###*****************************
-browser()
+
 
 ###*****************************
 # Generate a new column to condition df that uniquely defines the condition named dataSet2
@@ -287,7 +287,7 @@ newLevels=replace_fun(input_vector = oldLevels,
                                      "baseNa","highNa",
                                      "lowMg", "baseMg", "highMg",
                                      "glucose", "glycerol", "lactate", "gluconate"), 
-                      finalVal=c("Exponential","Stationary","Late-Stationary",
+                      finalVal=c("Exponential","Stationary","Late Stationary",
                                  "Base Na", "High Na", 
                                  "Low Mg", "Base Mg", "High Mg",
                                  "Glucose", "Glycerol", "Lactate", "Gluconate"))
