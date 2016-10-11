@@ -224,7 +224,7 @@ dist_x=dist(t(mainDataFrame),
             upper = FALSE, 
             p = 2)
 
-browser()
+
 METree_x = flashClust(dist_x, method = "complete");
 METree_x_d = as.dendrogram(METree_x)
 
