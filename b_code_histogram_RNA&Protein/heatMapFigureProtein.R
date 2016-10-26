@@ -277,10 +277,10 @@ conditionSummaryTidy$condition <- factor(conditionSummaryTidy$condition, levels 
 conditionSummaryTidy$columnName <- factor(conditionSummaryTidy$columnName, levels = 
                                             rev(c("growthPhase", "Na_mM_Levels", "Mg_mM_Levels","carbonSource")))
 
-listColors=c("#bae4b3","#74c476","#238b45",
-             "#fdbe85","#fd8d3c",
-             "#bdd7e7","#6baed6","#2171b5",
-             "#bcbddc","#9e9ac8","#807dba","#6a51a3")
+listColors=c("#bae4b3","#74c476","#238b45", #growth
+             "#fdbe85","#fd8d3c", # Na
+             "#bdd7e7","#6baed6","#2171b5", # Mg
+             "#bcbddc","#9e9ac8","#807dba","#6a51a3") # carbon
 
 
 # Renaming condition levels for figure

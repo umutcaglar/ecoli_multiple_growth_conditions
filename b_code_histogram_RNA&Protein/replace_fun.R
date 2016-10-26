@@ -5,6 +5,7 @@ replace_fun<-function(input_vector,initialVal, finalVal)
   if(length(initialVal)!=length(unique(initialVal)))
     {stop("there should not be any repeats in initialVal")}
   
+  input_vector=as.vector(input_vector)
   midStepVar=paste0("midStep",initialVal)
   
   for(counter01 in 1:length(initialVal))
