@@ -1,2 +1,2 @@
 # ecoli_multiple_growth_conditions
-the mian repository for e.coli multiple growth conditions experiments.
+the main repository for E.coli multiple growth condition experiments.
