@@ -120,6 +120,7 @@ if(objectName$normalizationMethodChoice=="noNorm" & runDeSeqForDifExp)
     dictionaryEz%>%dplyr::rename("gene_name"=From, "ez_gene_id"=To)->dictionaryEz
   }
   ###*****************************
+  browser()
   
   
   ###*****************************
