@@ -1,205 +1,205 @@
 "","X","Category","MF","Count","X.","PValue","List.Total","Pop.Hits","Pop.Total","Fold.Enrichment","Bonferroni","Benjamini","FDR_MF","MF_Short","gene_number","gene_name_ez","gene_name","padj_gene","log2","signChange","score_gene","abs_score","rank","numSigP","numSigN","MF_Long","pick_data","growthPhase","test_for","base","contrast","df_category"
 "1",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_17","949057","rplU",0.0482677080506827,-1.00643376378242,-1,-1.31634332278009,1.31634332278009,-1,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "2",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_17","949057","rplU",0.0482677080506827,-1.00643376378242,-1,-1.31634332278009,1.31634332278009,-1,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "3",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_28","947819","rplW",0.0288181009062545,-1.19594502879684,-1,-1.54033464229751,1.54033464229751,-2,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "4",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_28","947819","rplW",0.0288181009062545,-1.19594502879684,-1,-1.54033464229751,1.54033464229751,-2,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "5",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_38","948216","rpmH",0.028431840360835,-1.2346957356454,-1,-1.54619502800962,1.54619502800962,-3,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "6",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_38","948216","rpmH",0.028431840360835,-1.2346957356454,-1,-1.54619502800962,1.54619502800962,-3,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "7",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_15","947828","rplM",0.014535178098133,-1.281925503372,-1,-1.83757964249262,1.83757964249262,-4,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "8",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_15","947828","rplM",0.014535178098133,-1.281925503372,-1,-1.83757964249262,1.83757964249262,-4,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "9",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_03","945152","rplT",0.00518740041115349,-1.64294598712688,-1,-2.28505022788017,2.28505022788017,-5,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "10",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_03","945152","rplT",0.00518740041115349,-1.64294598712688,-1,-2.28505022788017,2.28505022788017,-5,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "11",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_06","947802","rpsH",0.00166939488051148,-1.69791934176176,-1,-2.77744092267198,2.77744092267198,-6,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "12",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_06","947802","rpsH",0.00166939488051148,-1.69791934176176,-1,-2.77744092267198,2.77744092267198,-6,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "13",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_14","947686","rpsO",0.00140559905775009,-1.68539248306244,-1,-2.852138542644,2.852138542644,-7,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "14",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_14","947686","rpsO",0.00140559905775009,-1.68539248306244,-1,-2.852138542644,2.852138542644,-7,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "15",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_37","947804","rplR",0.0011689362767369,-1.69729846431878,-1,-2.9322091632743,2.9322091632743,-8,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "16",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_37","947804","rplR",0.0011689362767369,-1.69729846431878,-1,-2.9322091632743,2.9322091632743,-8,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "17",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_47","947793","rpsD",0.000496895942927188,-2.14203587196965,-1,-3.30373454918228,3.30373454918228,-9,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "18",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_47","947793","rpsD",0.000496895942927188,-2.14203587196965,-1,-3.30373454918228,3.30373454918228,-9,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "19",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_13","948723","rpsF",0.000454479857397806,-1.91554590842771,-1,-3.3424853599994,3.3424853599994,-10,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "20",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_13","948723","rpsF",0.000454479857397806,-1.91554590842771,-1,-3.3424853599994,3.3424853599994,-10,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "21",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_12","948721","rpsR",0.000429807215593843,-1.40524895317974,-1,-3.36672629785741,3.36672629785741,-11,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "22",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_12","948721","rpsR",0.000429807215593843,-1.40524895317974,-1,-3.36672629785741,3.36672629785741,-11,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "23",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_41","945190","rpmA",0.000380564971539281,-1.89362424590527,-1,-3.41957118811229,3.41957118811229,-12,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "24",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_41","945190","rpmA",0.000380564971539281,-1.89362424590527,-1,-3.41957118811229,3.41957118811229,-12,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "25",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_08","947845","rpsL",0.000322815562684456,-2.18569215888412,-1,-3.49104553644977,3.49104553644977,-13,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "26",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_08","947845","rpsL",0.000322815562684456,-2.18569215888412,-1,-3.49104553644977,3.49104553644977,-13,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "27",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_05","947801","rpsN",0.000277292174016938,-1.96678499734245,-1,-3.55706238728914,3.55706238728914,-14,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "28",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_05","947801","rpsN",0.000277292174016938,-1.96678499734245,-1,-3.55706238728914,3.55706238728914,-14,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "29",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_18","946349","rpmI",0.000247880930952205,-2.27038674145016,-1,-3.6057568814644,3.6057568814644,-15,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "30",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_18","946349","rpmI",0.000247880930952205,-2.27038674145016,-1,-3.6057568814644,3.6057568814644,-15,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "31",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_27","947817","rplC",0.00023719594271105,-1.79763805602039,-1,-3.6248927439472,3.6248927439472,-16,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "32",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_27","947817","rplC",0.00023719594271105,-1.79763805602039,-1,-3.6248927439472,3.6248927439472,-16,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "33",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_34","947807","rpmC",0.000218601042188281,-1.85960727653067,-1,-3.66034777186692,3.66034777186692,-17,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "34",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_34","947807","rpmC",0.000218601042188281,-1.85960727653067,-1,-3.66034777186692,3.66034777186692,-17,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "35",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_09","946318","rpmG",0.000172669509258334,-2.18551848681293,-1,-3.76278434529269,3.76278434529269,-18,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "36",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_09","946318","rpmG",0.000172669509258334,-2.18551848681293,-1,-3.76278434529269,3.76278434529269,-18,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "37",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_01","947577","rpsU",0.000137754909470957,-1.83128858004466,-1,-3.86089291430448,3.86089291430448,-19,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "38",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_01","947577","rpsU",0.000137754909470957,-1.83128858004466,-1,-3.86089291430448,3.86089291430448,-19,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "39",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_23","947096","rplS",0.000133599074253702,-1.7161177006665,-1,-3.87419655120106,3.87419655120106,-20,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "40",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_23","947096","rplS",0.000133599074253702,-1.7161177006665,-1,-3.87419655120106,3.87419655120106,-20,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "41",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_20","948489","rplL",3.29128809825023e-05,-1.5513772986609,-1,-4.48263410068828,4.48263410068828,-21,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "42",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_20","948489","rplL",3.29128809825023e-05,-1.5513772986609,-1,-4.48263410068828,4.48263410068828,-21,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "43",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_42","947813","rplV",2.83281758548064e-05,-1.77675955073616,-1,-4.54778139024123,4.54778139024123,-22,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "44",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_42","947813","rplV",2.83281758548064e-05,-1.77675955073616,-1,-4.54778139024123,4.54778139024123,-22,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "45",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_39","947809","rplN",2.44326040456613e-05,-1.86835127558306,-1,-4.61203024312104,4.61203024312104,-23,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "46",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_39","947809","rplN",2.44326040456613e-05,-1.86835127558306,-1,-4.61203024312104,4.61203024312104,-23,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "47",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_04","947800","rplE",1.19005687897486e-05,-1.94123305893023,-1,-4.92443228093135,4.92443228093135,-24,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "48",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_04","947800","rplE",1.19005687897486e-05,-1.94123305893023,-1,-4.92443228093135,4.92443228093135,-24,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "49",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_50","948425","rpmE",8.78053155625416e-06,-2.59156542885438,-1,-5.0564791919572,5.0564791919572,-25,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "50",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_50","948425","rpmE",8.78053155625416e-06,-2.59156542885438,-1,-5.0564791919572,5.0564791919572,-25,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "51",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_10","947846","rpsG",6.7754269256617e-06,-1.7941268612116,-1,-5.16906333431076,5.16906333431076,-26,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "52",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_10","947846","rpsG",6.7754269256617e-06,-1.7941268612116,-1,-5.16906333431076,5.16906333431076,-26,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "53",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_48","947792","rpsK",5.49564219042102e-06,-1.75200394009966,-1,-5.25998155101843,5.25998155101843,-27,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "54",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_48","947792","rpsK",5.49564219042102e-06,-1.75200394009966,-1,-5.25998155101843,5.25998155101843,-27,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "55",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_43","947797","rpmD",3.05364118887703e-06,-1.72360256416297,-1,-5.51518199506139,5.51518199506139,-28,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "56",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_43","947797","rpmD",3.05364118887703e-06,-1.72360256416297,-1,-5.51518199506139,5.51518199506139,-28,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "57",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_11","948720","rplI",1.89373131037501e-06,-1.93756878693121,-1,-5.72268164027431,5.72268164027431,-29,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "58",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_11","948720","rplI",1.89373131037501e-06,-1.93756878693121,-1,-5.72268164027431,5.72268164027431,-29,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "59",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_21","948484","rplK",1.20479205620753e-06,-2.17321482807861,-1,-5.91908790465318,5.91908790465318,-30,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "60",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_21","948484","rplK",1.20479205620753e-06,-2.17321482807861,-1,-5.91908790465318,5.91908790465318,-30,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "61",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_19","945536","rpsA",1.06975959661276e-06,-1.91270251714838,-1,-5.97071380885219,5.97071380885219,-31,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "62",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_19","945536","rpsA",1.06975959661276e-06,-1.91270251714838,-1,-5.97071380885219,5.97071380885219,-31,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "63",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_40","947808","rpsQ",1.06975959661276e-06,-2.75019753118808,-1,-5.97071380885219,5.97071380885219,-32,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "64",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_40","947808","rpsQ",1.06975959661276e-06,-2.75019753118808,-1,-5.97071380885219,5.97071380885219,-32,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "65",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_16","947874","rpsB",9.7034106549726e-07,-1.91049583388969,-1,-6.01307558859097,6.01307558859097,-33,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "66",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_16","947874","rpsB",9.7034106549726e-07,-1.91049583388969,-1,-6.01307558859097,6.01307558859097,-33,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "67",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_51","947791","rpsM",9.32047000803367e-07,-2.31356489605145,-1,-6.03056218670732,6.03056218670732,-34,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "68",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_51","947791","rpsM",9.32047000803367e-07,-2.31356489605145,-1,-6.03056218670732,6.03056218670732,-34,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "69",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_33","946941","rpmB",5.50277156726642e-07,-2.10049924878766,-1,-6.25941851537979,6.25941851537979,-35,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "70",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_33","946941","rpmB",5.50277156726642e-07,-2.10049924878766,-1,-6.25941851537979,6.25941851537979,-35,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "71",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_32","945618","rplY",3.15982439334981e-07,-1.95933275615168,-1,-6.50033705254562,6.50033705254562,-36,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "72",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_32","945618","rplY",3.15982439334981e-07,-1.95933275615168,-1,-6.50033705254562,6.50033705254562,-36,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "73",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_44","947814","rpsC",2.94318214908435e-07,-1.98452759470838,-1,-6.5311828592411,6.5311828592411,-37,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "74",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_44","947814","rpsC",2.94318214908435e-07,-1.98452759470838,-1,-6.5311828592411,6.5311828592411,-37,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "75",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_29","947820","rplB",2.87760828276239e-07,-1.95054055076538,-1,-6.54096832513644,6.54096832513644,-38,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "76",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_29","947820","rplB",2.87760828276239e-07,-1.95054055076538,-1,-6.54096832513644,6.54096832513644,-38,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "77",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_31","949000","rpsI",2.3593553555693e-07,-1.9127573289978,-1,-6.62720664269215,6.62720664269215,-39,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "78",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_31","949000","rpsI",2.3593553555693e-07,-1.9127573289978,-1,-6.62720664269215,6.62720664269215,-39,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "79",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_46","947798","rplO",1.40716866139931e-07,-1.74012637094089,-1,-6.85165384547563,6.85165384547563,-40,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "80",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_46","947798","rplO",1.40716866139931e-07,-1.74012637094089,-1,-6.85165384547563,6.85165384547563,-40,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "81",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_36","947806","rplP",1.05868090365512e-07,-2.17208175990289,-1,-6.97523492059563,6.97523492059563,-41,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "82",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_36","947806","rplP",1.05868090365512e-07,-2.17208175990289,-1,-6.97523492059563,6.97523492059563,-41,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "83",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_02","948490","rplJ",4.95151502519866e-08,-2.26780937762489,-1,-7.30526189876064,7.30526189876064,-42,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "84",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_02","948490","rplJ",4.95151502519866e-08,-2.26780937762489,-1,-7.30526189876064,7.30526189876064,-42,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "85",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_45","947811","rpsS",3.17889673626308e-08,-2.49243921122396,-1,-7.49772357954025,7.49772357954025,-43,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "86",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_45","947811","rpsS",3.17889673626308e-08,-2.49243921122396,-1,-7.49772357954025,7.49772357954025,-43,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "87",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_22","948483","rplA",1.74704655268088e-08,-2.47645673164072,-1,-7.75769552243375,7.75769552243375,-44,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "88",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_22","948483","rplA",1.74704655268088e-08,-2.47645673164072,-1,-7.75769552243375,7.75769552243375,-44,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "89",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_24","947103","rpsP",1.55880062730514e-08,-1.9652074328673,-1,-7.80720942810702,7.80720942810702,-45,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "90",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_24","947103","rpsP",1.55880062730514e-08,-1.9652074328673,-1,-7.80720942810702,7.80720942810702,-45,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "91",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_07","947803","rplF",5.32298051034737e-09,-2.21423828864977,-1,-8.27384512395764,8.27384512395764,-46,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "92",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_07","947803","rplF",5.32298051034737e-09,-2.21423828864977,-1,-8.27384512395764,8.27384512395764,-46,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "93",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_30","944759","rpsT",3.11237481321087e-09,-2.45153336741243,-1,-8.50690810785608,8.50690810785608,-47,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "94",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_30","944759","rpsT",3.11237481321087e-09,-2.45153336741243,-1,-8.50690810785608,8.50690810785608,-47,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "95",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_35","945657","rpmF",2.23291744097722e-09,-2.28257364437882,-1,-8.65112733406733,8.65112733406733,-48,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "96",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_35","945657","rpmF",2.23291744097722e-09,-2.28257364437882,-1,-8.65112733406733,8.65112733406733,-48,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "97",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_25","947816","rpsJ",1.996625355906e-09,-2.27338220508541,-1,-8.69970341791683,8.69970341791683,-49,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "98",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_25","947816","rpsJ",1.996625355906e-09,-2.27338220508541,-1,-8.69970341791683,8.69970341791683,-49,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "99",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_49","947795","rpsE",1.49157822027661e-09,-2.74475406970586,-1,-8.82635396674459,8.82635396674459,-50,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "100",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_49","947795","rpsE",1.49157822027661e-09,-2.74475406970586,-1,-8.82635396674459,8.82635396674459,-50,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "101",1,"GOTERM_MF_ALL","GO:0003735~structural constituent of ribosome",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural constituent of ribosome","gene_26","947818","rplD",9.01558592162117e-10,-2.2745903076742,-1,-9.045006043289,9.045006043289,-51,0,51,"structural constituent of ribosome
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"
 "102",2,"GOTERM_MF_ALL","GO:0005198~structural molecule activity",51,4.13961038961039,2.25051585801002e-09,69,56,108,1.42546583850932,1.14776303683506e-07,1.14776303683506e-07,2.17714132277891e-08,"structural molecule activity","gene_26","947818","rplD",9.01558592162117e-10,-2.2745903076742,-1,-9.045006043289,9.045006043289,-51,0,51,"structural molecule activity
- padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","kegg"
+ padj:0.00000 N( -51/ +0/ 56)","protein","Sta","Na_mM_Levels","baseNa","highNa","mf"

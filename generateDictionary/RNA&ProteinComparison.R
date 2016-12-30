@@ -35,8 +35,8 @@ require("cowplot")
 
 ###*****************************
 # Install data
-mrna_protein<-read.csv(file = "measured_Genes&Proteins.csv")
-dictionary=read.csv(file = "../generateDictionary/nameDictionary_Protein.csv")
+mrna_protein<-read.csv(file = "measured_rna&Proteins.csv")
+dictionary=read.csv(file = "../generateDictionary/nameDictionary_RNA&Protein.csv")
 ###*****************************
 
 
@@ -85,4 +85,19 @@ rna_names %>%
 length(as.vector(intersecting_protein_names$mRNA_ID))
 length(as.vector(intersecting_protein_names$mRNA_ID))
 setdiff(as.vector(intersecting_protein_names$mRNA_ID),as.vector(intersecting_protein_names$mRNA_ID))
+###*****************************
+
+
+###*****************************
+# find unique ones
+setdiff(intersecting_rna_names$mRNA_ID, intersecting_protein_names$mRNA_ID)->unique_in_rna
+setdiff(intersecting_protein_names$mRNA_ID, intersecting_rna_names$mRNA_ID)->unique_in_protein
+
+intersecting_rna_names %>% 
+  dplyr::filter(mRNA_ID %in% unique_in_rna) %>% 
+  dplyr::select(mRNA_ID, type, Protein_id, gene_name)->unique_in_rnaDF
+
+intersecting_protein_names %>% 
+  dplyr::filter(mRNA_ID %in% unique_in_protein) %>% 
+  dplyr::select(mRNA_ID, type, Protein_id, gene_name)->unique_in_proteinDF
 ###*****************************
