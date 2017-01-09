@@ -35,7 +35,7 @@ filter_data<-function(dataType, # can be "rna", "mrna", "protein", "protein_wo_N
     mainData_internal=pick_NaLevel(dataInput = mainData_internal, NaLevelVector=NaLevelVector)
     mainData_internal=pick_growthPhase(dataInput = mainData_internal, 
                                        growthPhaseVector = growthPhaseVector)
-    mainData_internal=filter_rows(dataInput=mainData_internal, filterGenes=filterGenes)
+    mainData_internal=filter_rows(dataInput=mainData_internal, filterGenes=filterGenes, threshold=threshold)
   }
   mainData_internal=sizefactors_deseq(dataInput=mainData_internal, deSeqSfChoice)
   mainData_internal=normalizeData(dataInput=mainData_internal, normalizationMethodChoice)
@@ -722,10 +722,25 @@ pick_growthPhase<-function(dataInput,growthPhaseVector)
 #   "meanFilter" (filter out the rows whose mean is below threshold)
 #   "maxFilter" (filter out the rows whose max is below threshold)
 #   "sdFilter" (filter out the rows whose standard deviation is below threshold)
+#   "noMatchFilter" (filter out the rows corresponding to genes that are not matching between mRNA and Protein)
 # @param threshold the threshold related with relevant model. Default is 0.
 # @Description The function filter out the meaningless rows from data
 filter_rows<-function(dataInput, filterGenes, threshold=NA)
 {
+  
+  # Check for consistent input
+  
+  
+  # check if the names are in the list
+  if(length(setdiff(filterGenes,c("noFilter","meanFilter","maxFilter","sdFilter", "noMatchFilter")))!=0)
+  {stop("filter names must be a combination of noFilter,meanFilter,maxFilter,sdFilter, noMatchFilter")}
+  
+  # check if the name is "noFilter"
+  if(length(filterGenes)!=1 & "noFilter" %in% filterGenes)
+  {stop("if filter is chosen as noFilter there must not be any other filter")}
+  
+  
+  
   # Seperate data input
   objectName=dataInput$objectName
   rawData=dataInput$rawData
@@ -739,7 +754,7 @@ filter_rows<-function(dataInput, filterGenes, threshold=NA)
     tidyr::gather_(key = "dataSet", 
                    value = "numRead", 
                    selected_colnames)%>% 
-    dplyr::group_by_(unselected_colnames) %>% 
+    dplyr::group_by_(.dots = unselected_colnames) %>% 
     dplyr::summarize(meanValue=mean(numRead),
                      sdValue=sd(numRead),
                      maxValue=max(numRead))->rawData_summarize
@@ -749,25 +764,41 @@ filter_rows<-function(dataInput, filterGenes, threshold=NA)
   
   
   # Do the filtering
-  if(filterGenes=="noFilter"){rawData = rawData }
-  if(filterGenes=="meanFilter")
-  {rawData %>%dplyr::filter(meanValue>threshold)->rawData}
+  if("noFilter" %in% filterGenes){rawData = rawData }
+  if("meanFilter" %in% filterGenes)
+  {rawData %>%dplyr::filter(meanValue>threshold["meanFilter"])->rawData}
   
-  if(filterGenes=="sdFilter")
-  {rawData %>% dplyr::filter(sdValue>threshold)->rawData}
+  if("sdFilter" %in% filterGenes)
+  {rawData %>% dplyr::filter(sdValue>threshold["sdFilter"])->rawData}
   
-  if(filterGenes=="maxFilter")
-  {rawData %>% dplyr::filter(maxValue>threshold)->rawData}
+  if("maxFilter" %in% filterGenes)
+  {rawData %>% dplyr::filter(maxValue>threshold["maxFilter"])->rawData}
+  
+  if("noMatchFilter" %in% filterGenes)
+  {intersectingGenes= read.csv("../generateDictionary/oldNewDifference.csv")
+  intersectingGenes %>% tibble::column_to_rownames(var= "X") %>% .$x %>% as.vector(.)->intersectingGenes
+  
+  if(objectName$pick_data=="mrna")
+  {rawData %>% dplyr::filter(!as.vector(gene_ID) %in% intersectingGenes) -> rawData}
+  if(objectName$pick_data=="protein")
+  {rawData %>% dplyr::filter(!as.vector(gene_id) %in% intersectingGenes) -> rawData}
+  }
   
   # get rid of additional columns
   rawData %>%
     dplyr::select(-meanValue, -maxValue, -sdValue)->rawData
   
   # add information to file name
-  if(filterGenes=="noFilter")
-  {objectName$filter_Name=paste(filterGenes)}
-  if(!filterGenes=="noFilter")
-  {objectName$filter_Name=paste0(filterGenes, "_", threshold)}
+  part0=ifelse("noFilter" %in% filterGenes, "noFilter", "")
+  part1=ifelse("meanFilter" %in% filterGenes, paste0("meanFilter",threshold["meanFilter"]), "")
+  part2=ifelse("sdFilter" %in% filterGenes, paste0("sdFilter",threshold["sdFilter"]), "")
+  part3=ifelse("maxFilter" %in% filterGenes, paste0("maxFilter",threshold["maxFilter"]), "")
+  part4=ifelse("noMatchFilter" %in% filterGenes, "noMatchFilter", "")
+  combinedFilterName=paste(part0, part1, part2, part3, part4,sep = "_")
+  for(counter01 in 1:10){gsub(pattern = "__",replacement = "_",x = combinedFilterName)->combinedFilterName}
+  gsub(pattern = "^_",replacement = "",x = combinedFilterName)->combinedFilterName
+  gsub(pattern = "_$",replacement = "",x = combinedFilterName)->combinedFilterName
+  objectName$filter_Name=combinedFilterName
   
   objectName=as.data.frame(objectName)
   
@@ -891,7 +922,7 @@ normalizeData<-function(dataInput=mainData_internal, normalizationMethodChoice)
   if(!normalizationMethodChoice %in% c("vst", "rlog" , "log10", "noNorm"))
   {stop("normalizationMethodChoice should be one of vst, rlog, log10, noNorm")}
   
-
+  
   if(normalizationMethodChoice == "vst")
   {
     objectName$normalizationMethodChoice="vst"

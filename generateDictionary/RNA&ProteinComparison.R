@@ -101,3 +101,21 @@ intersecting_protein_names %>%
   dplyr::filter(mRNA_ID %in% unique_in_protein) %>% 
   dplyr::select(mRNA_ID, type, Protein_id, gene_name)->unique_in_proteinDF
 ###*****************************
+
+
+###*****************************
+# List of problematic genes
+oldNewDifference<-c(as.vector(non_intersecting_rna_names$mRNA_ID),
+                     as.vector(non_intersecting_protein_names$Protein_id),
+                     as.vector(unique_in_rnaDF$mRNA_ID),
+                     as.vector(unique_in_rnaDF$Protein_id),
+                     as.vector(unique_in_rnaDF$gene_name),
+                     as.vector(unique_in_proteinDF$mRNA_ID),
+                     as.vector(unique_in_proteinDF$Protein_id),
+                     as.vector(unique_in_proteinDF$gene_name))
+###*****************************
+
+
+###*****************************
+write.csv(x = oldNewDifference, file = "oldNewDifference.csv")
+###*****************************

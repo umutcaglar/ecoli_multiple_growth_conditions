@@ -11,7 +11,7 @@ name_data<-function(initialValue, # can be "genes0.05", "genes_P0.05Fold2"
                     MgLevelVector, # can be "lowMg","baseMg","highMg" // "allMg"
                     NaLevelVector, # can be "baseNa","highNa" // "allNa"
                     growthPhaseVector, # can be "exponential","stationary","late_stationary" // "allPhase"
-                    filterGenes, # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
+                    filterGenes, # can be "noFilter", "meanFilter", "maxFilter", "sdFilter", "noMatchFilter" and any combination of them
                     threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
                     roundData,
                     sumTechnicalReplicates,
@@ -38,7 +38,7 @@ name_data<-function(initialValue, # can be "genes0.05", "genes_P0.05Fold2"
     mainData_internal=pick_NaLevel_n(dataInput = mainData_internal, NaLevelVector=NaLevelVector)
     mainData_internal=pick_growthPhase_n(dataInput = mainData_internal, 
                                          growthPhaseVector = growthPhaseVector)
-    mainData_internal=filter_rows_n(dataInput=mainData_internal, filterGenes=filterGenes)
+    mainData_internal=filter_rows_n(dataInput=mainData_internal, filterGenes=filterGenes, threshold=threshold)
   }
   mainData_internal=sizefactors_deseq_n(dataInput=mainData_internal, deSeqSfChoice)
   mainData_internal=normalizeData_n(dataInput=mainData_internal, normalizationMethodChoice)
@@ -597,11 +597,25 @@ filter_rows_n<-function(dataInput, filterGenes, threshold=NA)
   objectName=dataInput$objectName
   metaData=dataInput$metaData
   
+  # check if the names are in the list
+  if(length(setdiff(filterGenes,c("noFilter","meanFilter","maxFilter","sdFilter", "noMatchFilter")))!=0)
+  {stop("filter names must be a combination of noFilter,meanFilter,maxFilter,sdFilter, noMatchFilter")}
+  
+  # check if the name is "noFilter"
+  if(length(filterGenes)!=1 & "noFilter" %in% filterGenes)
+  {stop("if filter is chosen as noFilter there must not be any other filter")}
+  
   # add information to file name
-  if(filterGenes=="noFilter")
-  {objectName$filter_Name=paste(filterGenes)}
-  if(!filterGenes=="noFilter")
-  {objectName$filter_Name=paste0(filterGenes, "_", threshold)}
+  part0=ifelse("noFilter" %in% filterGenes, "noFilter", "")
+  part1=ifelse("meanFilter" %in% filterGenes, paste0("meanFilter",threshold["meanFilter"]), "")
+  part2=ifelse("sdFilter" %in% filterGenes, paste0("sdFilter",threshold["sdFilter"]), "")
+  part3=ifelse("maxFilter" %in% filterGenes, paste0("maxFilter",threshold["maxFilter"]), "")
+  part4=ifelse("noMatchFilter" %in% filterGenes, "noMatchFilter", "")
+  combinedFilterName=paste(part0, part1, part2, part3, part4,sep = "_")
+  for(counter01 in 1:10){gsub(pattern = "__",replacement = "_",x = combinedFilterName)->combinedFilterName}
+  gsub(pattern = "^_",replacement = "",x = combinedFilterName)->combinedFilterName
+  gsub(pattern = "_$",replacement = "",x = combinedFilterName)->combinedFilterName
+  objectName$filter_Name=combinedFilterName
   
   objectName=as.data.frame(objectName)
   

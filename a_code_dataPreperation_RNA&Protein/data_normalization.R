@@ -43,7 +43,7 @@ source("../a_code_dataPreperation_RNA&Protein/data_filter_normalization_function
 saveFiles=TRUE
 runDeSeqForDifExp=FALSE
 # The data filtering function that controls sub functions.
-mainData=filter_data(dataType = "mrna", # can be "rna", "mrna", "protein", "protein_wo_NA"
+mainData=filter_data(dataType = "protein", # can be "rna", "mrna", "protein", "protein_wo_NA"
                      badDataSet = "set00", # can be "set00",set01","set02", "set03"
                      # referenceParameters can be a vector like
                      # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
@@ -65,8 +65,8 @@ mainData=filter_data(dataType = "mrna", # can be "rna", "mrna", "protein", "prot
                      NaLevelVector = c("allNa"), # can be "baseNa","highNa" // "allNa"
                      # can be "exponential","stationary","late_stationary" // "allPhase"
                      growthPhaseVector = c("allPhase"), 
-                     filterGenes = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
-                     threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
+                     filterGenes = c("meanFilter","noMatchFilter"), # can be either "noFilter", or any combination of c("meanFilter", "maxFilter", "sdFilter", "noMatchFilter")
+                     threshold=c(meanFilter=0), # the threshold value for "meanFilter", "maxFilter", "sdFilter" can be  c(meanFilter=5,maxFilter=3,sdFilter=7)
                      roundData=TRUE,
                      sumTechnicalReplicates=TRUE,
                      deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf", "noSf"

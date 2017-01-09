@@ -103,7 +103,12 @@ does the same multiple times for all generated ez files.
  difExpGene_Figures.R 
 generate fig5 and fig6 for the paper.
 
+ combinedDataFrameForDeSeq2Results.R 
+combines the (genes_... .csv) files and generate "combinedDifferentiallyExpressedGenes_DeSeq.csv"
+combined the (resDf... .csv) files and generate "combinedOutputDF_DeSeq.csv"
+
  /test_DeSeq2/ folder includes file to generate some test to understand the behavior of DeSeq under different circumstances.
+
 
 D- Mf Pathway Analyse 
    Aim of the folder is to generate some figures from results of DAVID runs

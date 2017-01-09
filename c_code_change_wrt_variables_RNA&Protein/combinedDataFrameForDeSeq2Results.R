@@ -34,6 +34,7 @@ require("stringr")
 
 
 ###*****************************
+# Combine for Genes
 # get file names convert into df divide into parts
 dir() %>%
   data.frame(fullFileName=.) %>%
@@ -80,4 +81,52 @@ browser()
 ###*****************************
 write.csv(x = fullList, file = "combinedDifferentiallyExpressedGenes_DeSeq.csv")
 ###*****************************
+
+
+###*****************************
+# Combine for Data Frames
+# get file names convert into df divide into parts
+dir() %>%
+  data.frame(fullFileName=.) %>%
+  dplyr::mutate(ffN=fullFileName) %>%
+  dplyr::group_by(fullFileName) %>%
+  dplyr::filter(grepl(pattern = "resDf_",x = fullFileName)) %>%
+  dplyr::mutate(ffN=gsub(pattern = "_mM_Levels","",ffN)) %>%
+  dplyr::mutate(ffN=gsub(pattern = ".csv","",ffN)) %>%
+  tidyr::separate(data = ., col = ffN, into = c("v1","thresholds_for_input_genes","dataType", 
+                                                "sumTechnicalReplicates", "preEleminationOfData", "experiments",
+                                                "carbonSource","Mg","Na",
+                                                "growthPhase","filter","plus1SizeFactor",
+                                                "normalization","empty","investigatedEffect",
+                                                "empty2","testVSbase","database","v19"),sep = "_") %>%
+  dplyr::group_by() %>%
+  dplyr::select(-v1, -sumTechnicalReplicates, -preEleminationOfData, -experiments,
+                -filter, -plus1SizeFactor, -normalization, -empty, -empty2, -v19, -database)->allResultFiles
+
+
+for(counter01 in 1:nrow(allResultFiles))
+{
+  print(counter01)
+  m<-read.csv(file = as.vector(allResultFiles$fullFileName[counter01]))
+  #colnames(m)<-gsub(pattern = "KEGG_", replacement = "KEGG_MF_", colnames(m))
+  #colnames(m)<-gsub(pattern = "MF_", replacement = "KEGG_MF_", colnames(m))
+  #colnames(m)<-gsub(pattern = "_MF", replacement = "", colnames(m))
+  m %>% dplyr::mutate(fullFileName = as.vector(allResultFiles$fullFileName[counter01])) ->m
+  
+  if(nrow(m)!=0)
+  {
+    if(counter01==1){fullList<-m}
+    if(counter01!=1){fullList=bind_rows(fullList,m)}
+  }
+}
+###*****************************
+
+
+###*****************************
+# Combine with experiment properties
+dplyr::left_join(fullList, allResultFiles)->fullList
+###*****************************
+
+###*****************************
+write.csv(x = fullList, file = "combinedOutputDF_DeSeq.csv")
 ###*****************************
