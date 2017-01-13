@@ -152,8 +152,8 @@ for(counter01 in 1:length(differentCompartisonsList))
                      MgLevelVector = c("allMg"), # can be "lowMg","baseMg","highMg" // "allMg"
                      NaLevelVector = c("allNa"), # can be "baseNa","highNa" // "allNa"
                      growthPhaseVector = c(phaseChoice), # can be "exponential","stationary","late_stationary" // "allPhase"
-                     filterGenes = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
-                     threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
+                     filterGenes = "noMatchFilter",  # can be either "noFilter", or any combination of c("meanFilter", "maxFilter", "sdFilter", "noMatchFilter") 
+                     threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter" can be  c(meanFilter=5,maxFilter=3,sdFilter=7)
                      roundData=TRUE,
                      sumTechnicalReplicates=TRUE,
                      deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf"
@@ -173,7 +173,7 @@ for(counter01 in 1:length(differentCompartisonsList))
   # check if exist
   objectName_df$initial="ez_P0.05Fold2"
   objectName=paste(objectName_df,collapse = "_")
-  if(paste0(objectName,"_kegg.csv") %in% dir("../c_results/david_results/"))
+  if(paste0(objectName,"_kegg.csv") %in% dir("../c_results/david_results_batch/"))
   {
     
     # The file is the list of significantly altered genes (without the information how much they are altered)
@@ -190,7 +190,7 @@ for(counter01 in 1:length(differentCompartisonsList))
     # The only problem is it gives the ez ids for genes
     objectName_df$initial="ez_P0.05Fold2"
     objectName=paste(objectName_df,collapse = "_")
-    kegg_result<-read.csv(file=paste0("../c_results/david_results/",objectName,"_kegg.csv"),header = TRUE)
+    kegg_result<-read.csv(file=paste0("../c_results/david_results_batch/",objectName,"_kegg.csv"),header = TRUE)
     
     # the file makes the transition between official gene names and ez name
     if(objectName_df$pick_data=="mrna")
@@ -260,7 +260,7 @@ for(counter01 in 1:length(differentCompartisonsList))
                       numSigN=abs(min(rank)))%>%
         dplyr::group_by(gene_name,KEGG_Path)%>%
         dplyr::mutate(KEGG_Path_long=paste0(sub(".*:","",KEGG_Path),
-                                            "\n padj:",
+                                            " padj:",
                                             sprintf("%.5f", FDR_KEGG_Path),
                                             " N( -",numSigN,"/ +",numSigP,"/ ",Pop.Hits,")"))%>%
         dplyr::mutate(KEGG_Path_short=paste0(sub(".*:","",KEGG_Path)))%>%
@@ -349,11 +349,17 @@ for(counter01 in 1:length(differentCompartisonsList))
         return(newStr)
       }
       
+      
       kegg_tidy_organized_simp %>%
         dplyr::group_by(KEGG_Path_Short,gene_number)%>%
         dplyr::mutate(KEGG_Path_Short_2Line=stringCutLocationKEGG(KEGG_Path_Short))->kegg_tidy_organized_simp
-      ###*****************************
       
+      titleText=paste0("kegg","_",
+                       unique(kegg_input_df[,c("pick_data")]),"_",
+                       unique(kegg_input_df[,c("growthPhase")]),"_",
+                       unique(kegg_input_df[,c("contrast")]),"VS",unique(kegg_input_df[,c("base")]))
+      ###*****************************
+
       
       ###*****************************
       # simple figure with geom point
@@ -368,9 +374,7 @@ for(counter01 in 1:length(differentCompartisonsList))
         geom_vline(xintercept = c(log2(1/2),log2(2)), colour="orange", linetype = "longdash")+
         geom_vline(xintercept = c(log2(1)), colour="black", linetype = "longdash")+
         geom_text_repel(aes(label=gene_name),size=3, colour="Black", fontface="plain")+
-        ggtitle(paste0("Significatly altered KEGG pathways ", phaseChoice, " ",dataTypeChoice,
-                       "\nTest For: ", test_forChoice, " ", 
-                       test_contrastChoice, "_VS_", test_baseChoice))+
+        ggtitle(titleText)+
         theme_bw()+
         scale_x_continuous(breaks=seq(floor(minimumFold),ceiling(maximumFold)))+
         xlab("Log2 Fold Change")+
@@ -384,7 +388,6 @@ for(counter01 in 1:length(differentCompartisonsList))
               axis.text.x=element_text(size=10),
               axis.text.y=element_text(size=12),
               axis.title.x=element_text(size=16),
-              axis.title.y=element_text(size=16),
               legend.title=element_text(size=14),
               legend.text=element_text(size=14))
       
@@ -407,7 +410,6 @@ for(counter01 in 1:length(differentCompartisonsList))
               axis.text.x=element_text(size=10),
               axis.text.y=element_text(size=12),
               axis.title.x=element_text(size=16),
-              axis.title.y=element_text(size=16),
               legend.title=element_text(size=14),
               legend.text=element_text(size=14))
       

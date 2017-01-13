@@ -65,8 +65,8 @@ dataName=name_data(initialValue="genes_P0.05Fold2", # can be "genes0.05", "genes
                    MgLevelVector = c("allMg"), # can be "lowMg","baseMg","highMg" // "allMg"
                    NaLevelVector = c("allNa"), # can be "baseNa","highNa" // "allNa"
                    growthPhaseVector = c("exponential"), # can be "exponential","stationary","late_stationary" // "allPhase"
-                   filterGenes = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
-                   threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
+                   filterGenes = "noMatchFilter",  # can be either "noFilter", or any combination of c("meanFilter", "maxFilter", "sdFilter", "noMatchFilter") 
+                   threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter" can be  c(meanFilter=5,maxFilter=3,sdFilter=7)
                    roundData=TRUE,
                    sumTechnicalReplicates=TRUE,
                    deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf"
@@ -97,7 +97,7 @@ kegg_input_df<-read.csv(file = paste0("../c_results/",objectName,".csv"),header 
 # The only problem is it gives the ez ids for genes
 objectName_df$initial="ez_P0.05Fold2"
 objectName=paste(objectName_df,collapse = "_")
-kegg_result<-read.csv(file=paste0("../c_results/david_results/",objectName,"_kegg.csv"),header = TRUE)
+kegg_result<-read.csv(file=paste0("../c_results/david_results_batch/",objectName,"_kegg.csv"),header = TRUE)
 
 # the file makes the transition between official gene names and ez name
 if(objectName_df$pick_data=="mrna")
@@ -237,7 +237,6 @@ fig02=ggplot(kegg_tidy_organized_simp, aes( x=log2,y=KEGG_Path_short)) +
         axis.text.x=element_text(size=10),
         axis.text.y=element_text(size=12),
         axis.title.x=element_text(size=16),
-        axis.title.y=element_text(size=16),
         legend.title=element_text(size=14),
         legend.text=element_text(size=14))
 

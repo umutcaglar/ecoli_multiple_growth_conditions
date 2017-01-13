@@ -37,8 +37,8 @@ source("../b_code_histogram_RNA&Protein/replace_fun.R")
 
 ###*****************************
 # Load files
-f1_data<-read.csv("../d_results/ez_P0.05Fold2_mrna_trT_set00_StcAllEx_SYAN_baseMgAllMg_baseNaAllNa_Exp_noFilter_p1Sf_noNorm__batchNumberPLUSMg_mM_Levels__highMgVSbaseMg_kegg.csv")
-f2_data<-read.csv("../d_results/ez_P0.05Fold2_protein_trT_set00_StcYtcNasAgrNgrMgh_SYAN_baseMgAllMg_baseNaAllNa_Exp_noFilter_p1Sf_noNorm__batchNumberPLUScarbonSource__lactateVSglucose_kegg.csv")
+f1_data<-read.csv("../d_results/ez_P0.05Fold2_mrna_trT_set00_StcAllEx_SYAN_baseMgAllMg_baseNaAllNa_Exp_noMatchFilter_p1Sf_noNorm__batchNumberPLUSMg_mM_Levels__highMgVSbaseMg_kegg.csv")
+f2_data<-read.csv("../d_results/ez_P0.05Fold2_protein_trT_set00_StcYtcNasAgrNgrMgh_SYAN_baseMgAllMg_baseNaAllNa_Exp_noMatchFilter_p1Sf_noNorm__batchNumberPLUScarbonSource__lactateVSglucose_kegg.csv")
 ###*****************************
 
 
@@ -69,7 +69,6 @@ fig01=ggplot(f1_data, aes( x=log2,y=KEGG_Path_Short)) +
         axis.text.x=element_text(size=10),
         axis.text.y=element_text(size=12),
         axis.title.x=element_text(size=16),
-        axis.title.y=element_text(size=16),
         legend.title=element_text(size=14),
         legend.text=element_text(size=14))
 
@@ -104,7 +103,6 @@ fig02=ggplot(f2_data, aes( x=log2,y=KEGG_Path_Short)) +
         axis.text.x=element_text(size=10),
         axis.text.y=element_text(size=12),
         axis.title.x=element_text(size=16),
-        axis.title.y=element_text(size=16),
         legend.title=element_text(size=14),
         legend.text=element_text(size=14))
 

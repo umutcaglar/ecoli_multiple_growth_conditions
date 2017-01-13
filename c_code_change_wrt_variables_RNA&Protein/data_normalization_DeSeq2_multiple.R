@@ -144,8 +144,8 @@ for(counter01 in 1:length(differentCompartisonsList))
                        NaLevelVector = c("allNa"), # can be "baseNa","highNa" // "allNa"
                        # can be "exponential","stationary","late_stationary" // "allPhase"
                        growthPhaseVector = c(phaseChoice), 
-                       filterGenes = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
-                       threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
+                       filterGenes = "noMatchFilter", # can be either "noFilter", or any combination of c("meanFilter", "maxFilter", "sdFilter", "noMatchFilter") 
+                       threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter" can be  c(meanFilter=5,maxFilter=3,sdFilter=7)
                        roundData=TRUE,
                        sumTechnicalReplicates=TRUE,
                        deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf", "noSf"
@@ -193,7 +193,7 @@ for(counter01 in 1:length(differentCompartisonsList))
     }
     if(objectName$pick_data %in% c("protein","protein_wo_NA"))
     {
-      dictionary=read.csv(file = "../generateDictionary/nameDictionary_Protein.csv")
+      dictionary=read.csv(file = "../generateDictionary/nameDictionary_RNA&Protein.csv")
       colnames(dictionary)[1]<-"id"
       dictionaryEz=read.csv(file="../generateDictionary/rna_tidy_eColi_ez.csv",row.names = 1)			
       dictionaryEz%>%dplyr::rename("gene_name"=From, "ez_gene_id"=To)->dictionaryEz

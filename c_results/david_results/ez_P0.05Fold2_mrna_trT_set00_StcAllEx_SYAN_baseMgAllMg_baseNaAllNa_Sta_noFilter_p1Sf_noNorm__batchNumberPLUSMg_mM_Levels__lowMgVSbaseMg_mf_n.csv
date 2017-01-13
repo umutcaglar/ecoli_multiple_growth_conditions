@@ -1,4 +1,0 @@
-"","Category","Term","Count","X.","PValue","Genes","List.Total","Pop.Hits","Pop.Total","Fold.Enrichment","Bonferroni","Benjamini","FDR"
-"1","GOTERM_MF_ALL","GO:0003824~catalytic activity",1,1.66666666666667,1,"948159",1,16,108,6.75,1,1,100
-"2","GOTERM_MF_ALL","GO:0016787~hydrolase activity",1,1.66666666666667,1,"948159",1,15,108,7.2,1,1,100
-"3","GOTERM_MF_ALL","GO:0008233~peptidase activity",1,1.66666666666667,1,"948159",1,8,108,13.5,1,1,100

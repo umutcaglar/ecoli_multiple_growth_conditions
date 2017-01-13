@@ -1,0 +1,5 @@
+"","Category","Term","Count","X.","PValue","Genes","List.Total","Pop.Hits","Pop.Total","Fold.Enrichment","Bonferroni","Benjamini","FDR"
+"1","KEGG_PATHWAY","eco01100:Metabolic pathways",1,100,1,"946362",1,697,1575,2.2596843615495,1,1,100
+"2","KEGG_PATHWAY","eco00030:Pentose phosphate pathway",1,100,1,"946362",1,30,1575,52.5,1,1,100
+"3","KEGG_PATHWAY","eco01200:Carbon metabolism",1,100,1,"946362",1,108,1575,14.5833333333333,1,1,100
+"4","KEGG_PATHWAY","eco01120:Microbial metabolism in diverse environments",1,100,1,"946362",1,239,1575,6.58995815899582,1,1,100

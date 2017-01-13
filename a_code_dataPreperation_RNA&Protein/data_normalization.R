@@ -65,12 +65,12 @@ mainData=filter_data(dataType = "protein", # can be "rna", "mrna", "protein", "p
                      NaLevelVector = c("allNa"), # can be "baseNa","highNa" // "allNa"
                      # can be "exponential","stationary","late_stationary" // "allPhase"
                      growthPhaseVector = c("allPhase"), 
-                     filterGenes = c("meanFilter","noMatchFilter"), # can be either "noFilter", or any combination of c("meanFilter", "maxFilter", "sdFilter", "noMatchFilter")
-                     threshold=c(meanFilter=0), # the threshold value for "meanFilter", "maxFilter", "sdFilter" can be  c(meanFilter=5,maxFilter=3,sdFilter=7)
+                     filterGenes = c("noMatchFilter"), # can be either "noFilter", or any combination of c("meanFilter", "maxFilter", "sdFilter", "noMatchFilter")
+                     threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter" can be  c(meanFilter=5,maxFilter=3,sdFilter=7)
                      roundData=TRUE,
                      sumTechnicalReplicates=TRUE,
                      deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf", "noSf"
-                     normalizationMethodChoice= "vst") # can be "vst", "rlog", "log10", "noNorm"
+                     normalizationMethodChoice = "vst") # can be "vst", "rlog", "log10", "noNorm"
 
 # DeSeq2 parameters
 test_for="carbonSource"

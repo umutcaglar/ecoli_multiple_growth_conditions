@@ -77,7 +77,7 @@ for(counter01 in 1:nrow(allResultFiles))
 dplyr::left_join(fullList, allResultFiles)->fullList
 ###*****************************
 
-browser()
+
 ###*****************************
 write.csv(x = fullList, file = "combinedDifferentiallyExpressedGenes_DeSeq.csv")
 ###*****************************

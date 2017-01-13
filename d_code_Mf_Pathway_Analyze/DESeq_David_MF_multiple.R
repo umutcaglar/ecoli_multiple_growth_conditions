@@ -150,8 +150,8 @@ for(counter01 in 1:length(differentCompartisonsList))
                      MgLevelVector = c("allMg"), # can be "lowMg","baseMg","highMg" // "allMg"
                      NaLevelVector = c("allNa"), # can be "baseNa","highNa" // "allNa"
                      growthPhaseVector = c(phaseChoice), # can be "exponential","stationary","late_stationary" // "allPhase"
-                     filterGenes = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
-                     threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
+                     filterGenes = "noMatchFilter", # can be either "noFilter", or any combination of c("meanFilter", "maxFilter", "sdFilter", "noMatchFilter")
+                     threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter" can be  c(meanFilter=5,maxFilter=3,sdFilter=7)
                      roundData=TRUE,
                      sumTechnicalReplicates=TRUE,
                      deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf"
@@ -172,7 +172,7 @@ for(counter01 in 1:length(differentCompartisonsList))
   # check if exist
   objectName_df$initial="ez_P0.05Fold2"
   objectName=paste(objectName_df,collapse = "_")
-  if(paste0(objectName,"_mf_n.csv") %in% dir("../c_results/david_results/"))
+  if(paste0(objectName,"_mf_n.csv") %in% dir("../c_results/david_results_batch/"))
   {
     
     # The file is the list of significantly altered genes (without the information how much they are altered)
@@ -189,7 +189,7 @@ for(counter01 in 1:length(differentCompartisonsList))
     # The only problem is it gives the ez ids for genes
     objectName_df$initial="ez_P0.05Fold2"
     objectName=paste(objectName_df,collapse = "_")
-    mf_result<-read.csv(file=paste0("../c_results/david_results/",objectName,"_mf_n.csv"),header = TRUE)
+    mf_result<-read.csv(file=paste0("../c_results/david_results_batch/",objectName,"_mf_n.csv"),header = TRUE)
     
     # the file makes the transition between official gene names and ez name
     if(objectName_df$pick_data=="mrna")
@@ -248,6 +248,7 @@ for(counter01 in 1:length(differentCompartisonsList))
     
     if(nrow(mf_result_tidy)!=0)
     {
+      
       counter02=counter02+1 
       mf_result_tidy %>%
         dplyr::mutate(abs_score=abs(score_gene))%>%
@@ -258,11 +259,11 @@ for(counter01 in 1:length(differentCompartisonsList))
         dplyr::mutate(numSigP=(max(rank)+abs(max(rank)))/2,
                       numSigN=abs(min(rank)))%>%
         dplyr::group_by(gene_name,MF)%>%
-        dplyr::mutate(MF_Long=paste0(sub(".*~","",MF),
-                                     "\n padj:",
+        dplyr::mutate(MF_Short=paste0(sub(".*~","",MF)))%>%
+        dplyr::mutate(MF_Long=paste0(MF_Short,
+                                     " padj:",
                                      sprintf("%.5f", FDR_MF),
                                      " N( -",numSigN,"/ +",numSigP,"/ ",Pop.Hits,")"))%>%
-        dplyr::mutate(MF_Short=paste0(sub(".*~","",MF)))%>%
         dplyr::group_by(MF)%>%
         dplyr::arrange(desc(score_gene))->mf_tidy_organized
       
@@ -315,9 +316,9 @@ for(counter01 in 1:length(differentCompartisonsList))
         string00=as.character(string00)
         lengthOfString=nchar(as.character(string00))
         locationOfSpaces=as.vector(gregexpr(' ',string00)[[1]])
-        if(lengthOfString>28)
+        if(lengthOfString>30)
         {
-          locationOfSpaces1<-locationOfSpaces[locationOfSpaces<28]
+          locationOfSpaces1<-locationOfSpaces[locationOfSpaces<30]
           maxLoc1=max(locationOfSpaces1)
           iniStr=substr(string00, 1, maxLoc1-1)
           finStr=substr(string00, maxLoc1+1, lengthOfString)
@@ -340,17 +341,24 @@ for(counter01 in 1:length(differentCompartisonsList))
           maxLoc1=max(locationOfSpaces1)
           iniStr=substr(string00, 1, maxLoc1-1)
           finStr=substr(string00, maxLoc1+1, lengthOfString)
-          if(finStr=="NA"){browser()}
+          #if(finStr=="NA"){browser()}
           newStr=paste0(iniStr,"\n",finStr)
         }
         
-        if(newStr=="NA\nNA"){browser()}
+        #if(newStr=="NA\nNA"){browser()}
         return(newStr)
       }
       
+      #if(counter01==11){browser()}
       mf_tidy_organized_simp %>%
         dplyr::group_by(MF_Short,gene_number)%>%
         dplyr::mutate(MF_Short_2Line=stringCutLocationMF(MF_Short))->mf_tidy_organized_simp
+      
+      
+      titleText=paste0("mf","_",
+                       unique(mf_input_df[,c("pick_data")]),"_",
+                       unique(mf_input_df[,c("growthPhase")]),"_",
+                       contrast=unique(mf_input_df[,c("contrast")]),"VS",base=unique(mf_input_df[,c("base")]))
       ###*****************************
       
       
@@ -362,14 +370,12 @@ for(counter01 in 1:length(differentCompartisonsList))
       maximumFold=max(mf_tidy_organized_simp$log2)
       if(maximumFold<1){maximumFold=1}
       
-      figAA=ggplot(mf_tidy_organized_simp, aes( x=log2,y=MF_Short_2Line)) +
+      fig_withTitle=ggplot(mf_tidy_organized_simp, aes( x=log2,y=MF_Short_2Line)) +
         geom_point(colour="blue", size=2.5)+
         geom_vline(xintercept = c(log2(1/2),log2(2)), colour="orange", linetype = "longdash")+
         geom_vline(xintercept = c(log2(1)), colour="black", linetype = "longdash")+
         geom_text_repel(aes(label=gene_name),size=3, colour="Black", fontface="plain")+
-        ggtitle(paste0("Significatly altered GO annotations associated with MF ", phaseChoice, " ",
-                       dataTypeChoice,"\nTest For: ", test_forChoice, " ", 
-                       test_contrastChoice, "_VS_", test_baseChoice))+
+        ggtitle(titleText)+
         theme_bw()+
         scale_x_continuous(breaks=seq(floor(minimumFold),ceiling(maximumFold)))+
         xlab("Log2 Fold Change")+
@@ -383,18 +389,41 @@ for(counter01 in 1:length(differentCompartisonsList))
               axis.text.x=element_text(size=10),
               axis.text.y=element_text(size=12),
               axis.title.x=element_text(size=16),
-              axis.title.y=element_text(size=16),
               legend.title=element_text(size=14),
               legend.text=element_text(size=14))
       
-      #print(figAA)
+      
+      fig_woutTitle=ggplot(mf_tidy_organized_simp, aes( x=log2,y=MF_Short_2Line)) +
+        geom_point(colour="blue", size=2.5)+
+        geom_vline(xintercept = c(log2(1/2),log2(2)), colour="orange", linetype = "longdash")+
+        geom_vline(xintercept = c(log2(1)), colour="black", linetype = "longdash")+
+        geom_text_repel(aes(label=gene_name),size=3, colour="Black", fontface="plain")+
+        theme_bw()+
+        scale_x_continuous(breaks=seq(floor(minimumFold),ceiling(maximumFold)))+
+        xlab("Log2 Fold Change")+
+        theme(axis.line.y = element_blank(),
+              legend.position="bottom",
+              axis.title.y = element_blank(),
+              panel.grid.minor=element_blank(),
+              panel.grid.major.x=element_blank(),
+              strip.text.x = element_text(size = 16),
+              strip.text.y = element_text(size = 16),
+              axis.text.x=element_text(size=10),
+              axis.text.y=element_text(size=12),
+              axis.title.x=element_text(size=16),
+              legend.title=element_text(size=14),
+              legend.text=element_text(size=14))
       ###*****************************
       
       
       ###*****************************
       # Rename figure
-      figNum=sprintf("fig%02d", counter02)
-      assign(x = figNum, value = figAA)
+      figNum=sprintf("fig_withTitle%02d", counter02)
+      assign(x = figNum, value = fig_withTitle)
+      
+      figNum=sprintf("fig_woutTitle%02d", counter02)
+      assign(x = figNum, value = fig_woutTitle)
+      
       rowNumberVec[counter02]<-nrow(mf_organized_summary)
       figureList[[counter02]]<-get(figNum)
       ###*****************************
@@ -411,16 +440,24 @@ for(counter01 in 1:length(differentCompartisonsList))
                       df_category="mf")->mf_tidy_organized
       
       
+      #if(counter01==11){browser()}
       write.csv(x = mf_tidy_organized, file = paste0("../d_results/",objectName,"_mf_n.csv"))
       ###*****************************
       
       
       ###*****************************
-      # Save figure
+      # Save figures
       rowWidth=ifelse(nrow(mf_organized_summary)*1<3,3,nrow(mf_organized_summary)*1)
       
-      cowplot::save_plot(filename = paste0("../d_figures/simple",objectName,"_mf_n.pdf"),
-                         plot = figAA,
+      cowplot::save_plot(filename = paste0("../d_figures/simple_",objectName,"_mf_n_withTitle.pdf"),
+                         plot = fig_withTitle,
+                         base_height = rowWidth,
+                         ncol=2.2,
+                         nrow=1.2,
+                         limitsize = FALSE)
+      
+      cowplot::save_plot(filename = paste0("../d_figures/simple_",objectName,"_mf_n_woutTitle.pdf"),
+                         plot = fig_woutTitle,
                          base_height = rowWidth,
                          ncol=2.2,
                          nrow=1.2,

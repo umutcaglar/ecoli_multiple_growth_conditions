@@ -10,8 +10,8 @@ filter_data<-function(dataType, # can be "rna", "mrna", "protein", "protein_wo_N
                       MgLevelVector, # can be "lowMg","baseMg","highMg" // "allMg"
                       NaLevelVector, # can be "baseNa","highNa" // "allNa"
                       growthPhaseVector, # can be "exponential","stationary","late_stationary" // "allPhase"
-                      filterGenes, # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
-                      threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
+                      filterGenes, # can be either "noFilter", or any combination of c("meanFilter", "maxFilter", "sdFilter", "noMatchFilter")
+                      threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter" can be  c(meanFilter=5,maxFilter=3,sdFilter=7)
                       roundData,
                       sumTechnicalReplicates,
                       deSeqSfChoice, # can be "regSf", "p1Sf", "noSf"

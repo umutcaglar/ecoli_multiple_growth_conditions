@@ -1,0 +1,6 @@
+"","Category","Term","Count","X.","PValue","Genes","List.Total","Pop.Hits","Pop.Total","Fold.Enrichment","Bonferroni","Benjamini","FDR"
+"1","GOTERM_MF_ALL","GO:0016829~lyase activity",1,100,1,"946362",1,189,3186,16.8571428571429,1,1,100
+"2","GOTERM_MF_ALL","GO:0016836~hydro-lyase activity",1,100,1,"946362",1,58,3186,54.9310344827586,1,1,100
+"3","GOTERM_MF_ALL","GO:0004456~phosphogluconate dehydratase activity",1,100,1,"946362",1,1,3186,3186,1,1,100
+"4","GOTERM_MF_ALL","GO:0016835~carbon-oxygen lyase activity",1,100,1,"946362",1,79,3186,40.3291139240506,1,1,100
+"5","GOTERM_MF_ALL","GO:0003824~catalytic activity",1,100,1,"946362",1,2036,3186,1.56483300589391,1,1,100

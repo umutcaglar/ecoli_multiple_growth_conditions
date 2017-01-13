@@ -1,4 +1,4 @@
-# ecoli_multiple_growth_conditions
+ecoli_multiple_growth_conditions
 the main repository for E.coli multiple growth condition experiments.
 
 
@@ -35,7 +35,7 @@ Aim is to combine distinct count files into single unique ones for mRNA and prot
  generating_Protein_RawCount.R
  generating_Meta_data.R
 
-do this steps
+the files listed above  steps
 
  fun_order.R
 

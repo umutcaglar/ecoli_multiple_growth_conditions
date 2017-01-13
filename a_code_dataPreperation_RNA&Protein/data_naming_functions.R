@@ -11,8 +11,8 @@ name_data<-function(initialValue, # can be "genes0.05", "genes_P0.05Fold2"
                     MgLevelVector, # can be "lowMg","baseMg","highMg" // "allMg"
                     NaLevelVector, # can be "baseNa","highNa" // "allNa"
                     growthPhaseVector, # can be "exponential","stationary","late_stationary" // "allPhase"
-                    filterGenes, # can be "noFilter", "meanFilter", "maxFilter", "sdFilter", "noMatchFilter" and any combination of them
-                    threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
+                    filterGenes, # can be either "noFilter", or any combination of c("meanFilter", "maxFilter", "sdFilter", "noMatchFilter")
+                    threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter" can be  c(meanFilter=5,maxFilter=3,sdFilter=7)
                     roundData,
                     sumTechnicalReplicates,
                     deSeqSfChoice, # can be "regSf", "p1Sf", "noSf"

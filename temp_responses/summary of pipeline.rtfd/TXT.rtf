@@ -1,0 +1,340 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf760
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Calibri;\f2\fmodern\fcharset0 Courier;
+\f3\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red14\green14\blue14;\red234\green233\blue255;\red210\green0\blue53;
+\red173\green173\blue173;\red255\green255\blue255;\red242\green242\blue242;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c6667\c6667\c6667;\cssrgb\c93333\c93333\c100000;\cssrgb\c86667\c6667\c26667;
+\cssrgb\c73333\c73333\c73333;\cssrgb\c100000\c100000\c100000;\csgray\c95825;\csgray\c0\c85000;}
+\paperw23820\paperh16840\margl1440\margr1440\vieww14240\viewh15720\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Part A\
+\
+run: generating_RNA_RawCount.R\
+\
+generates\
+- a_results / rnaRawData.Rda\
+\
+- a_results / rnaMatrix_meta.csv\
+- a_results / rnaMatrix_mRNA.csv\
+- a_results / rnaMatrix_RNA.csv\
+- a_results / rnaMatrix_rRNA.csv\
+- a_results / rnaMatrix_tRNA.csv\
+- a_results / rnaMatrix.csv\
+\
+- a_figures / log2AmountDensity.pdf\
+\
+run: generating_Protein_RawCount.R\
+\
+generates\
+\
+- a_results / proteinMatrix_w_NA.csv\
+- a_results / proteinMatrix_wo_NA.csv\
+- a_results / proteinMatrix.csv\
+\
+run: generating_Meta_data.R\
+\
+generates\
+\
+- a_results / sampleSizeDf.csv\
+- a_results / metaData.csv\
+- a_results / metaProtein.csv\
+- a_results / metaRNA.csv\
+\
+- a_results / metaRawData.Rda\
+\
+\
+run: doublingTime.R\
+\
+generates\
+\
+- a_figures / duplicationTime.pdf\
+\
+\
+run: data.normalization.R with parameters.R (RUNS 1 and 2)\
+\
+\
+\
+those runs generate\
+\
+run No 1:\
+- a_results / metaData_mrna_trT_set00_StcAllEx_SYAN_baseMgAllMg_baseNaAllNa_ExpAllPhase_noMatchFilter_p1Sf_noNorm.csv\
+- a_results / resDf_mrna_trT_set00_StcAllEx_SYAN_baseMgAllMg_baseNaAllNa_ExpAllPhase_noMatchFilter_p1Sf_noNorm.csv\
+\
+run No 2:\
+- a_results / metaData_protein_trT_set00_StcYtcNasAgrNgrMgh_SYAN_baseMgAllMg_baseNaAllNa_ExpAllPhase_noMatchFilter_p1Sf_noNorm.csv\
+- a_results / resDf_protein_trT_set00_StcYtcNasAgrNgrMgh_SYAN_baseMgAllMg_baseNaAllNa_ExpAllPhase_noMatchFilter_p1Sf_noNorm.csv\
+\
+\
+run: qualityControl_mRNA.R\
+\
+generates\
+\
+- qualityControl_mRNA_heatMap.pdf\
+- qualityControl_mRNA.pdf\
+\
+run: qualityControl_protein.R\
+\
+generates\
+\
+- a_figures / qualityControl_protein.pdf\
+- a_figures / qualityControl_protein_heatMap.pdf\
+\
+run: data.normalization.R with parameters.R (RUNS 3 and 4)\
+\
+run No 3:\
+- a_results / metaData_mrna_trT_set00_StcAllEx_SYAN_baseMgAllMg_baseNaAllNa_ExpAllPhase_noMatchFilter_p1Sf_vst.csv\
+- a_results / resDf_mrna_trT_set00_StcAllEx_SYAN_baseMgAllMg_baseNaAllNa_ExpAllPhase_noMatchFilter_p1Sf_vst.csv\
+\
+run No 4:\
+- a_results / metaData_protein_trT_set00_StcYtcNasAgrNgrMgh_SYAN_baseMgAllMg_baseNaAllNa_ExpAllPhase_noMatchFilter_p1Sf_vst.csv\
+- a_results / resDf_protein_trT_set00_StcYtcNasAgrNgrMgh_SYAN_baseMgAllMg_baseNaAllNa_ExpAllPhase_noMatchFilter_p1Sf_vst.csv\
+\
+\
+\
+PART B\
+\
+run: heatMapFigureRNA.R\
+\
+generates (num rows: 4196)\
+\
+- b_figures/ heatMap_mrna_trT_set00_StcAllEx_SYAN_baseMgAllMg_baseNaAllNa_ExpAllPhase_noMatchFilter_p1Sf_vst.png\
+- b_figures/ mRNAHeatmap.pdf\
+\
+- b_results / treeData_mrna_trT_set00_StcAllEx_SYAN_baseMgAllMg_baseNaAllNa_ExpAllPhase_noMatchFilter_p1Sf_vst.RData\
+\
+run: heatMapFigureProtein.R\
+\
+generates (num rows: 4196)\
+\
+- b_figures/ heatMap_protein_trT_set00_StcYtcNasAgrNgrMgh_SYAN_baseMgAllMg_baseNaAllNa_ExpAllPhase_noMatchFilter_p1Sf_vst.png\
+- b_figures/ proteinHeatmap.pdf\
+\
+- b_results / treeData_protein_trT_set00_StcYtcNasAgrNgrMgh_SYAN_baseMgAllMg_baseNaAllNa_ExpAllPhase_noMatchFilter_p1Sf_vst.RData\
+\
+\
+run: distance_table_mrna.R \
+\
+generates\
+- b_results / clustering_mrna_trT_set00_StcAllEx_SYAN_baseMgAllMg_baseNaAllNa_ExpAllPhase_noMatchFilter_p1Sf_vst_cophenetic.csv\
+\
+run: distance_table_protein.R \
+\
+generates\
+- b_results / clustering_mrna_trT_set00_StcAllEx_SYAN_baseMgAllMg_baseNaAllNa_ExpAllPhase_noMatchFilter_p1Sf_vst_cophenetic.csv\
+\
+\
+PART C\
+\
+run: data_normalization_DeSeq2_multiple.R\
+\
+This will make 24 different DeSeq2 runs\
+\
+\pard\pardeftab720\ri3004\partightenfactor0
+
+\f1 \cf0 run	data source Phase 	Test 				base_condition 	test_for 	control\
+1	mrna		exp		carbon source		glucose		glycerol	batchNumber\
+2	mrna		exp		carbon source		glucose		gluconate	batchNumber\
+3	mrna		exp		carbon source		glucose		lactate		batchNumber\
+4	protein		exp		carbon source		glucose		glycerol	batchNumber\
+5	protein		exp		carbon source		glucose		gluconate	batchNumber\
+6	protein		exp		carbon source		glucose		lactate		batchNumber\
+7	mrna		sta		carbon source		glucose		glycerol	batchNumber\
+8	mrna		sta		carbon source		glucose		gluconate	batchNumber\
+9	mrna		sta		carbon source		glucose		lactate		batchNumber\
+10	protein		sta		carbon source		glucose		glycerol	batchNumber\
+11	protein		sta		carbon source		glucose		gluconate	batchNumber\
+12	protein		sta		carbon source		glucose		lactate		batchNumber\
+13	mrna		exp		Mg_mM_Levels	base Mg		low Mg	batchNumber\
+14	mrna		exp		Mg_mM_Levels	base Mg		high Mg	batchNumber\
+15	protein		exp		Mg_mM_Levels	base Mg		low Mg	batchNumber\
+16	protein		exp		Mg_mM_Levels	base Mg		high Mg	batchNumber\
+17	mrna		sta		Mg_mM_Levels	base Mg		low Mg	batchNumber\
+18	mrna		sta		Mg_mM_Levels	base Mg		high Mg	batchNumber\
+19	protein		sta		Mg_mM_Levels	base Mg		low Mg	batchNumber\
+20	protein		sta		Mg_mM_Levels	base Mg		high Mg	batchNumber\
+21	mrna		exp		Na_mM_Levels	base Na		high Na	batchNumber\
+22	protein		exp		Na_mM_Levels	base Na		high Na	batchNumber\
+23	mrna		sta		Na_mM_Levels	base Na		high Na	batchNumber\
+24	protein		sta		Na_mM_Levels	base Na		high Na	batchNumber
+\fs11 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\
+each run will generate 4 different csv files under c_results folder\
+1. c_results \\ resDf_... .csv (results of DeSeq2)\
+2. c_results \\ metaData_... .csv (associated meta data file)\
+3. c_results \\ genes_P0.05Fold2_... .csv (plain enriched gene names with p<0.05 and fold change >2)\
+4. c_results \\ ez_... .csv (corresponding ez names for DAVID)\
+\
+run: data_normalization_DeSeq2_growthRate_multiple.R\
+\
+This will make 24 different DeSeq2 runs with additional growth rate control\
+\
+\
+\
+\pard\pardeftab720\ri3004\partightenfactor0
+
+\f1 \cf0 run	data source Phase 	Test 				base_condition 	test_for 	control\
+1	mrna		exp		carbon source		glucose		glycerol	batchNumber + growthRate\
+2	mrna		exp		carbon source		glucose		gluconate	batchNumber + growthRate\
+3	mrna		exp		carbon source		glucose		lactate		batchNumber + growthRate\
+4	protein		exp		carbon source		glucose		glycerol	batchNumber + growthRate\
+5	protein		exp		carbon source		glucose		gluconate	batchNumber + growthRate\
+6	protein		exp		carbon source		glucose		lactate		batchNumber + growthRate\
+7	mrna		sta		carbon source		glucose		glycerol	batchNumber + growthRate\
+8	mrna		sta		carbon source		glucose		gluconate	batchNumber + growthRate\
+9	mrna		sta		carbon source		glucose		lactate		batchNumber + growthRate\
+10	protein		sta		carbon source		glucose		glycerol	batchNumber + growthRate\
+11	protein		sta		carbon source		glucose		gluconate	batchNumber + growthRate\
+12	protein		sta		carbon source		glucose		lactate		batchNumber + growthRate\
+13	mrna		exp		Mg_mM_Levels	base Mg		low Mg	batchNumber + growthRate\
+14	mrna		exp		Mg_mM_Levels	base Mg		high Mg	batchNumber + growthRate\
+15	protein		exp		Mg_mM_Levels	base Mg		low Mg	batchNumber + growthRate\
+16	protein		exp		Mg_mM_Levels	base Mg		high Mg	batchNumber + growthRate\
+17	mrna		sta		Mg_mM_Levels	base Mg		low Mg	batchNumber + growthRate\
+18	mrna		sta		Mg_mM_Levels	base Mg		high Mg	batchNumber + growthRate\
+19	protein		sta		Mg_mM_Levels	base Mg		low Mg	batchNumber + growthRate\
+20	protein		sta		Mg_mM_Levels	base Mg		high Mg	batchNumber + growthRate\
+21	mrna		exp		Na_mM_Levels	base Na		high Na	batchNumber + growthRate\
+22	protein		exp		Na_mM_Levels	base Na		high Na	batchNumber + growthRate\
+23	mrna		sta		Na_mM_Levels	base Na		high Na	batchNumber + growthRate\
+24	protein		sta		Na_mM_Levels	base Na		high Na	batchNumber + growthRate
+\fs11 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\
+each run will generate 4 different csv files under c_results folder\
+1. c_results \\ resDf_... .csv (results of DeSeq2)\
+2. c_results \\ metaData_... .csv (associated meta data file)\
+3. c_results \\ genes_P0.05Fold2_... .csv (plain enriched gene names with p<0.05 and fold change >2)\
+4. c_results \\ ez_... .csv (corresponding ez names for DAVID)\
+\
+\
+** the resDf*.* files generated by "data_normalization_DeSeq2_multiple.R" are copied to c_results \\ DeSeq2_diffGene_batch_Results\\\
+** the resDf*.* files generated by "data_normalization_DeSeq2_growthRate_multiple.R" are copied to c_results \\ DeSeq2_diffGene_batchGrowth_Results\\\
+\
+\
+run: difExpGene_batch_Figures.R\
+\
+generate \
+\
+- c_figures \\ exp_mrna_batch_venn.jpeg\
+- c_figures \\ exp_protein_batch_venn.jpeg\
+- c_figures \\ sta_mrna_batch_venn.jpeg\
+- c_figures \\ sta_protein_batch_venn.jpeg\
+- c_figures \\ venn_batch.png\
+\
+- c_figures \\ difExpressedGenesBatch_mrna.pdf\
+- c_figures \\ difExpressedGenesBatch_protein.pdf\
+- c_figures \\ difExpressedGenesBatch.pdf\
+- c_figures \\ venn_batch.pdf\
+\
+\
+run: difExpGene_batchGrowth_Figures.R\
+\
+generate \
+\
+- c_figures \\ exp_mrna_batchGrowth_venn.jpeg\
+- c_figures \\ exp_protein_batchGrowth_venn.jpeg\
+- c_figures \\ sta_mrna_batchGrowth_venn.jpeg\
+- c_figures \\ sta_protein_batchGrowth_venn.jpeg\
+- c_figures \\ venn_batchGrowth.png\
+\
+- c_figures \\ difExpressedGenesBatchGrowth_mrna.pdf\
+- c_figures \\ difExpressedGenesBatchGrowth_protein.pdf\
+- c_figures \\ difExpressedGenesBatchGrowth.pdf\
+- c_figures \\ venn_batchGrowth.pdf\
+\
+run: combinedDataFrameForDeSeq2Results.R\
+\
+generate\
+\
+- c_results \\ combinedDifferentiallyExpressedGenes_DeSeq.csv  (all significantly altered genes from all 48 tests)\
+- c_results \\ combinedOutputDF_DeSeq.csv (all genes from all results)\
+\
+\
+run: change_with_growth_Figure.R\
+\
+generates\
+\
+-c_figures \\ difference_rtw_GrowthControl.pdf (the figure shows the change between the results of DeSeq2 with controlled and not controlled growth)\
+\
+\
+\
+\
+the DAVIDWebInterfaces should run through command line and before running them java should be setup properly \
+\
+new version of Xcode is needed.\
+install last version of java\
+\
+\pard\pardeftab720\sl340\partightenfactor0
+
+\f2\fs30 \cf2 \cb3 \expnd0\expndtw0\kerning0
+dyn.load(\cf4 '/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/server/libjvm.dylib'\cf2 )\cf5 \
+\cf2 \cb6 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 The DAVID codes should run through terminals. Go to the correct folder\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f3\fs20 \cf7 \cb8 \CocoaLigature0 cd GitHub/ecoli_multiple_growth_conditions/c_code_change_wrt_variables_RNA\\&Protein/
+\f0\fs24 \cf0 \cb1 \CocoaLigature1 \
+\
+and run the R script\
+
+\f3\fs20 \cf7 \cb8 \CocoaLigature0 Rscript DAVIDWebInterface_batch_multiple.R 
+\f0\fs24 \cf0 \cb1 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0  and\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f3\fs20 \cf7 \cb8 \CocoaLigature0 Rscript DAVIDWebInterface_batchGrowth_multiple.R 
+\f0\fs24 \cf0 \cb1 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+these 2 scripts generate results from DAVID WEB SERVICES for each one of given 24 x 2 conditions they generate 3 results. \
+So total of (2 (batch, batch&growth) x  24 (individual test) x (3 figure for each test: kegg, mf_n, mf_o)) =  144 - >133 .csv files\
+If there is no significantly altered pathway/gene then there is no corresponding data frame\
+\
+- 1. enhanced KEGG pathways (New version of david)\
+- 2. enhanced GO annotations related with molecular function (New version of david)\
+- 3. enhanced GO annotations related with molecular function (Old version of david)\
+\
+\
+\
+PART D\
+\
+the part aims to generate figures related with pathways.\
+\
+there are two single test run files (One for KEGG pathways and the other is for GO Annotations related with Molecular Function)\
+\
+1. DESeq_David_MF.R\
+2. DESeq_David_kegg.R\
+\
+Then there are corresponding codes for generating multiple kegg and go annotation figures\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 1. DESeq_David_MF_multiple.R\
+2. DESeq_David_kegg_multiple.R\
+\
+Those codes generate\
+ - individual figures for each condition\
+ - a corresponding data frame for each DAVID RUN that shows the significantly changing pathways and related conditions\
+ - \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}

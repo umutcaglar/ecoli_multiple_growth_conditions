@@ -66,8 +66,8 @@ dataName=name_data(initialValue=c("resDf"), # can be c("genes0.05","genes_P0.05F
                    MgLevelVector = c("allMg"), # can be "lowMg","baseMg","highMg" // "allMg"
                    NaLevelVector = c("allNa"), # can be "baseNa","highNa" // "allNa"
                    growthPhaseVector = c("allPhase"), # can be "exponential","stationary","late_stationary" // "allPhase"
-                   filterGenes = "noFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
-                   threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
+                   filterGenes = "noMatchFilter", # can be either "noFilter", or any combination of c("meanFilter", "maxFilter", "sdFilter", "noMatchFilter")
+                   threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter" can be  c(meanFilter=5,maxFilter=3,sdFilter=7)
                    roundData=TRUE,
                    sumTechnicalReplicates=TRUE,
                    deSeqSfChoice="p1Sf", # can be "regSf", "p1Sf", "noSf"
