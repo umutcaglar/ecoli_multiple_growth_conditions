@@ -1,6 +1,11 @@
 # the difference between controling on growth and not controlling on growth
 
 ###*****************************
+# Set Up java
+dyn.load('/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/server/libjvm.dylib')
+###*****************************
+
+###*****************************
 # INITIAL COMMANDS TO RESET THE SYSTEM
 rm(list = ls())
 if (is.integer(dev.list())){dev.off()}
@@ -26,6 +31,9 @@ require("cowplot")
 require("VennDiagram")
 require("gtable")
 require("gridExtra")
+
+require("RDAVIDWebService")
+require(org.Hs.eg.db)
 ###*****************************
 
 
@@ -107,3 +115,120 @@ cowplot::save_plot(filename = paste0("../c_figures/difference_rtw_GrowthControl"
                    base_height = 3.075,base_width = 5.5,
                    units = "in",useDingbats=FALSE)
 ###*****************************
+
+
+###*****************************
+# Generate 2 data frames related with change
+joined_data %>%
+  dplyr::filter(dataType=="protein") %>%
+  dplyr::filter(exist_in=="controlled for Growth") %>%
+  dplyr::filter(test_for %in% c("Gly", "Glc", "Lac")) %>%
+  dplyr::filter(growthPhase == "Exp") %>%
+  .$genes %>% as.vector(.) %>% sort(.) %>%unique(.)-> changedExp
+
+write.csv(x = changedExp, file = "../c_results/changedExp.csv")
+
+joined_data %>%
+  dplyr::filter(dataType=="protein") %>%
+  dplyr::filter(exist_in=="controlled for Growth") %>%
+  dplyr::filter(test_for %in% c("Gly", "Glc", "Lac"))%>%
+  dplyr::filter(growthPhase == "Sta") %>%
+  .$genes %>% as.vector(.) %>% sort(.) %>%unique(.)-> changedSta
+
+write.csv(x = changedSta, file = "../c_results/changedSta.csv")
+###*****************************
+
+
+###*****************************
+# Prepeare dictionaries
+dictionaryEz=read.csv(file="../generateDictionary/protein_tidy_eColi_ez.csv",row.names = 1)
+dictionaryEz%>%dplyr::rename("gene_name"=From, "ez_gene_id"=To)->dictionaryEz
+###*****************************
+browser()
+
+###*****************************
+dictionaryEz%>%
+  dplyr::filter(gene_name %in% changedExp) %>%
+  .$ez_gene_id %>% as.vector(.) %>% unique(.) %>% sort(.)->changedExp_ez
+
+dictionaryEz%>%
+  dplyr::filter(gene_name %in% changedSta) %>%
+  .$ez_gene_id %>% as.vector(.) %>% unique(.) %>% sort(.)->changedSta_ez
+###*****************************
+
+
+###*****************************
+# Connect to david for analyse #EXP
+david_d<-DAVIDWebService(email="umut.caglar@utexas.edu",
+                         url="https://david.ncifcrf.gov/webservice/services/DAVIDWebService.DAVIDWebServiceHttpSoap12Endpoint/")
+#result<-addList(david_d, davidInputData, idType="OFFICIAL_GENE_SYMBOL", listName="testList", listType="Gene")
+result<-addList(david_d, changedExp_ez, idType="ENTREZ_GENE_ID", listName="testList", listType="Gene")
+###*****************************
+
+
+###*****************************
+# Set species and backround
+selectedSpecie="Escherichia coli str. K-12 substr. MG1655"
+backgroundLocation=grep(selectedSpecie,RDAVIDWebService::getBackgroundListNames(david_d))
+specieLocation=grep(selectedSpecie,RDAVIDWebService::getSpecieNames(david_d))
+setCurrentSpecies(object=david_d, species=specieLocation);
+setCurrentBackgroundPosition(object=david_d,position=backgroundLocation)
+###*****************************
+
+
+###*****************************
+# KEGG TEST
+setAnnotationCategories(david_d, c("KEGG_PATHWAY"))
+
+keggObject<- as.data.frame(getFunctionalAnnotationChart(object=david_d,  threshold=1, count=0L))
+write.csv(x =keggObject ,file = paste0("../c_results/","changedExp_DAVID_kegg",".csv"))
+###*****************************
+
+
+###*****************************
+# MF NEW TEST
+setAnnotationCategories(david_d, c("GOTERM_MF_ALL"))
+
+mfObject<- as.data.frame(getFunctionalAnnotationChart(object=david_d,  threshold=1, count=0L))
+write.csv(x =mfObject ,file = paste0("../c_results/","changedExp_DAVID_MF",".csv"))
+###*****************************
+
+
+
+###*****************************
+# Connect to david for analyse #STA
+david_d<-DAVIDWebService(email="umut.caglar@utexas.edu",
+                         url="https://david.ncifcrf.gov/webservice/services/DAVIDWebService.DAVIDWebServiceHttpSoap12Endpoint/")
+#result<-addList(david_d, davidInputData, idType="OFFICIAL_GENE_SYMBOL", listName="testList", listType="Gene")
+result<-addList(david_d, changedSta_ez, idType="ENTREZ_GENE_ID", listName="testList", listType="Gene")
+###*****************************
+
+
+###*****************************
+# Set species and backround
+selectedSpecie="Escherichia coli str. K-12 substr. MG1655"
+backgroundLocation=grep(selectedSpecie,RDAVIDWebService::getBackgroundListNames(david_d))
+specieLocation=grep(selectedSpecie,RDAVIDWebService::getSpecieNames(david_d))
+setCurrentSpecies(object=david_d, species=specieLocation);
+setCurrentBackgroundPosition(object=david_d,position=backgroundLocation)
+###*****************************
+
+
+###*****************************
+# KEGG TEST
+setAnnotationCategories(david_d, c("KEGG_PATHWAY"))
+
+keggObject<- as.data.frame(getFunctionalAnnotationChart(object=david_d,  threshold=1, count=0L))
+write.csv(x =keggObject ,file = paste0("../c_results/","changedSta_DAVID_KEGG",".csv"))
+###*****************************
+
+
+###*****************************
+# MF NEW TEST
+setAnnotationCategories(david_d, c("GOTERM_MF_ALL"))
+
+mfObject<- as.data.frame(getFunctionalAnnotationChart(object=david_d,  threshold=1, count=0L))
+write.csv(x =mfObject ,file = paste0("../c_results/","changedSta_DAVID_MF",".csv"))
+###*****************************
+
+

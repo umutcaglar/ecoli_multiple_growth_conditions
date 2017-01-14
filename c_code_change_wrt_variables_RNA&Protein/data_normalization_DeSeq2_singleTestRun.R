@@ -114,7 +114,7 @@ if(objectName$normalizationMethodChoice=="noNorm" & runDeSeqForDifExp)
   }
   if(objectName$pick_data %in% c("protein","protein_wo_NA"))
   {
-    dictionary=read.csv(file = "../generateDictionary/nameDictionary_Protein.csv")
+    dictionary=read.csv(file = "../generateDictionary/nameDictionary_RNA&Protein.csv")
     colnames(dictionary)[1]<-"id"
     dictionaryEz=read.csv(file="../generateDictionary/protein_tidy_eColi_ez.csv",row.names = 1)
     dictionaryEz%>%dplyr::rename("gene_name"=From, "ez_gene_id"=To)->dictionaryEz
@@ -159,6 +159,7 @@ if(objectName$normalizationMethodChoice=="noNorm" & runDeSeqForDifExp)
   listOfFilledCells=setdiff(seq(1,length(genes_0.05)),listOfEmptyCells)
   genes_0.05<-genes_0.05[listOfFilledCells]
   
+  browser()
   dictionaryEz %>% 
     dplyr::filter(gene_name %in% genes_0.05)%>%
     .[["ez_gene_id"]]%>%

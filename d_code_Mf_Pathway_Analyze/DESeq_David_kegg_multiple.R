@@ -288,11 +288,17 @@ for(counter01 in 1:length(differentCompartisonsList))
       if(length(unique(as.vector(kegg_tidy_organized$FDR_KEGG_Path)))<maxPathway)
       {maxPathway=length(unique(as.vector(kegg_tidy_organized$FDR_KEGG_Path)))}
       
-      FDR_KEGG_PathTopn=sort(unique(as.vector(kegg_tidy_organized$FDR_KEGG_Path)))[maxPathway]
+      # FDR_KEGG_PathTopn=sort(unique(as.vector(kegg_tidy_organized$FDR_KEGG_Path)))[maxPathway]
+      kegg_tidy_organized %>%
+        dplyr::group_by(KEGG_Path) %>%
+        dplyr::summarize(FDR_KEGG_Path=unique(FDR_KEGG_Path)) %>%
+        dplyr::arrange(FDR_KEGG_Path)%>%
+        .[1:maxPathway,] %>%
+        .$KEGG_Path %>% as.vector(.)->topKeggList
       
       kegg_tidy_organized %>%
         dplyr::group_by()%>%
-        dplyr::filter(FDR_KEGG_Path<=FDR_KEGG_PathTopn) %>%
+        dplyr::filter(KEGG_Path %in% topKeggList) %>%
         dplyr::group_by(KEGG_Path) %>%
         dplyr::arrange(desc(abs_score))%>%
         dplyr::top_n(n=maxGene, wt = abs_score)%>%
@@ -354,12 +360,12 @@ for(counter01 in 1:length(differentCompartisonsList))
         dplyr::group_by(KEGG_Path_Short,gene_number)%>%
         dplyr::mutate(KEGG_Path_Short_2Line=stringCutLocationKEGG(KEGG_Path_Short))->kegg_tidy_organized_simp
       
-      titleText=paste0("kegg","_",
+      titleText=paste0("KEGG","_",
                        unique(kegg_input_df[,c("pick_data")]),"_",
                        unique(kegg_input_df[,c("growthPhase")]),"_",
                        unique(kegg_input_df[,c("contrast")]),"VS",unique(kegg_input_df[,c("base")]))
       ###*****************************
-
+      
       
       ###*****************************
       # simple figure with geom point
@@ -445,17 +451,26 @@ for(counter01 in 1:length(differentCompartisonsList))
       
       
       ###*****************************
+      # Generate figure name
+      fileName=paste0(sprintf("KEGG%02d", counter02),"_",
+                      unique(kegg_input_df[,c("pick_data")]),"_",
+                      unique(kegg_input_df[,c("growthPhase")]),"_",
+                      unique(kegg_input_df[,c("contrast")]),"VS",unique(kegg_input_df[,c("base")]))
+      ###*****************************
+      
+      
+      ###*****************************
       # Save figures
       rowWidth=ifelse(nrow(kegg_organized_summary)*1<3,3,nrow(kegg_organized_summary)*1)
       
-      cowplot::save_plot(filename = paste0("../d_figures/simple_",objectName,"_kegg_withTitle.pdf"),
+      cowplot::save_plot(filename = paste0("../d_figures/",fileName,"_withTitle.pdf"),
                          plot = fig_withTitle,
                          base_height = rowWidth,
                          ncol=2.2,
                          nrow=1.2,
                          limitsize = FALSE)
       
-      cowplot::save_plot(filename = paste0("../d_figures/simple_",objectName,"_kegg_woutTitle.pdf"),
+      cowplot::save_plot(filename = paste0("../d_figures/",fileName,"_woutTitle.pdf"),
                          plot = fig_woutTitle,
                          base_height = rowWidth,
                          ncol=2.2,

@@ -288,11 +288,18 @@ for(counter01 in 1:length(differentCompartisonsList))
       if(length(unique(as.vector(mf_tidy_organized$FDR_MF)))<maxPathway)
       {maxPathway=length(unique(as.vector(mf_tidy_organized$FDR_MF)))}
       
-      FDR_MFTopn=sort(unique(as.vector(mf_tidy_organized$FDR_MF)))[maxPathway]
+      #FDR_MFTopn=sort(unique(as.vector(mf_tidy_organized$FDR_MF)))[maxPathway]
+      
+      mf_tidy_organized %>%
+        dplyr::group_by(MF) %>%
+        dplyr::summarize(FDR_MF=unique(FDR_MF)) %>%
+        dplyr::arrange(FDR_MF)%>%
+        .[1:maxPathway,] %>%
+        .$MF %>% as.vector(.)->topMfList
       
       mf_tidy_organized %>%
         dplyr::group_by()%>%
-        dplyr::filter(FDR_MF<=FDR_MFTopn) %>%
+        dplyr::filter(MF %in% topMfList) %>%
         dplyr::group_by(MF) %>%
         dplyr::arrange(desc(abs_score))%>%
         dplyr::top_n(n=maxGene, wt = abs_score)%>%
@@ -355,7 +362,7 @@ for(counter01 in 1:length(differentCompartisonsList))
         dplyr::mutate(MF_Short_2Line=stringCutLocationMF(MF_Short))->mf_tidy_organized_simp
       
       
-      titleText=paste0("mf","_",
+      titleText=paste0("MF","_",
                        unique(mf_input_df[,c("pick_data")]),"_",
                        unique(mf_input_df[,c("growthPhase")]),"_",
                        contrast=unique(mf_input_df[,c("contrast")]),"VS",base=unique(mf_input_df[,c("base")]))
@@ -446,17 +453,26 @@ for(counter01 in 1:length(differentCompartisonsList))
       
       
       ###*****************************
+      # Generate figure name
+      titleText=paste0(sprintf("MF%02d", counter02),"_",
+                       unique(mf_input_df[,c("pick_data")]),"_",
+                       unique(mf_input_df[,c("growthPhase")]),"_",
+                       contrast=unique(mf_input_df[,c("contrast")]),"VS",base=unique(mf_input_df[,c("base")]))
+      ###*****************************
+      
+      
+      ###*****************************
       # Save figures
       rowWidth=ifelse(nrow(mf_organized_summary)*1<3,3,nrow(mf_organized_summary)*1)
       
-      cowplot::save_plot(filename = paste0("../d_figures/simple_",objectName,"_mf_n_withTitle.pdf"),
+      cowplot::save_plot(filename = paste0("../d_figures/",titleText,"_withTitle.pdf"),
                          plot = fig_withTitle,
                          base_height = rowWidth,
                          ncol=2.2,
                          nrow=1.2,
                          limitsize = FALSE)
       
-      cowplot::save_plot(filename = paste0("../d_figures/simple_",objectName,"_mf_n_woutTitle.pdf"),
+      cowplot::save_plot(filename = paste0("../d_figures/",titleText,"_woutTitle.pdf"),
                          plot = fig_woutTitle,
                          base_height = rowWidth,
                          ncol=2.2,
