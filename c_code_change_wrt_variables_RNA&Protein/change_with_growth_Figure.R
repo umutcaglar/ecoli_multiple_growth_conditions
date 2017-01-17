@@ -126,7 +126,7 @@ joined_data %>%
   dplyr::filter(growthPhase == "Exp") %>%
   .$genes %>% as.vector(.) %>% sort(.) %>%unique(.)-> changedExp
 
-write.csv(x = changedExp, file = "../c_results/changedExp.csv")
+# write.csv(x = changedExp, file = "../c_results/changedExp.csv")
 
 joined_data %>%
   dplyr::filter(dataType=="protein") %>%
@@ -135,7 +135,18 @@ joined_data %>%
   dplyr::filter(growthPhase == "Sta") %>%
   .$genes %>% as.vector(.) %>% sort(.) %>%unique(.)-> changedSta
 
-write.csv(x = changedSta, file = "../c_results/changedSta.csv")
+# write.csv(x = changedSta, file = "../c_results/changedSta.csv")
+###*****************************
+
+###*****************************
+joined_data %>%
+  dplyr::filter(dataType=="protein") %>%
+  dplyr::filter(exist_in=="controlled for Growth") %>%
+  dplyr::select(-uncontrolled, -controlled) %>%
+  dplyr::filter(test_for %in% c("Gly", "Glc", "Lac")) %>%
+  dplyr::filter(growthPhase %in% c("Exp", "Sta")) -> changedGenes_ExpSta
+
+write.csv(x = changedGenes_ExpSta, file = "../c_results/changed_protein_carbonSource_ExpSta.csv")
 ###*****************************
 
 
@@ -144,7 +155,6 @@ write.csv(x = changedSta, file = "../c_results/changedSta.csv")
 dictionaryEz=read.csv(file="../generateDictionary/protein_tidy_eColi_ez.csv",row.names = 1)
 dictionaryEz%>%dplyr::rename("gene_name"=From, "ez_gene_id"=To)->dictionaryEz
 ###*****************************
-browser()
 
 ###*****************************
 dictionaryEz%>%
@@ -180,8 +190,9 @@ setCurrentBackgroundPosition(object=david_d,position=backgroundLocation)
 # KEGG TEST
 setAnnotationCategories(david_d, c("KEGG_PATHWAY"))
 
-keggObject<- as.data.frame(getFunctionalAnnotationChart(object=david_d,  threshold=1, count=0L))
-write.csv(x =keggObject ,file = paste0("../c_results/","changedExp_DAVID_kegg",".csv"))
+DavidChanged_exp_kegg<- as.data.frame(getFunctionalAnnotationChart(object=david_d,  threshold=1, count=0L))
+DavidChanged_exp_kegg %>% dplyr::mutate(phase="Exp", name="changed", test="Kegg") -> DavidChanged_exp_kegg
+# write.csv(x =DavidChanged_exp_kegg ,file = paste0("../c_results/","changedExp_DAVID_kegg",".csv"))
 ###*****************************
 
 
@@ -189,8 +200,9 @@ write.csv(x =keggObject ,file = paste0("../c_results/","changedExp_DAVID_kegg","
 # MF NEW TEST
 setAnnotationCategories(david_d, c("GOTERM_MF_ALL"))
 
-mfObject<- as.data.frame(getFunctionalAnnotationChart(object=david_d,  threshold=1, count=0L))
-write.csv(x =mfObject ,file = paste0("../c_results/","changedExp_DAVID_MF",".csv"))
+DavidChanged_exp_mf<- as.data.frame(getFunctionalAnnotationChart(object=david_d,  threshold=1, count=0L))
+DavidChanged_exp_mf %>% dplyr::mutate(phase="Exp", name="changed", test="Mf") -> DavidChanged_exp_mf
+# write.csv(x =DavidChanged_exp_mf ,file = paste0("../c_results/","changedExp_DAVID_MF",".csv"))
 ###*****************************
 
 
@@ -218,8 +230,9 @@ setCurrentBackgroundPosition(object=david_d,position=backgroundLocation)
 # KEGG TEST
 setAnnotationCategories(david_d, c("KEGG_PATHWAY"))
 
-keggObject<- as.data.frame(getFunctionalAnnotationChart(object=david_d,  threshold=1, count=0L))
-write.csv(x =keggObject ,file = paste0("../c_results/","changedSta_DAVID_KEGG",".csv"))
+DavidChanged_sta_kegg<- as.data.frame(getFunctionalAnnotationChart(object=david_d,  threshold=1, count=0L))
+DavidChanged_sta_kegg %>% dplyr::mutate(phase="Sta", name="changed", test="Kegg") -> DavidChanged_sta_kegg
+# write.csv(x =DavidChanged_sta_kegg ,file = paste0("../c_results/","changedSta_DAVID_KEGG",".csv"))
 ###*****************************
 
 
@@ -227,8 +240,17 @@ write.csv(x =keggObject ,file = paste0("../c_results/","changedSta_DAVID_KEGG","
 # MF NEW TEST
 setAnnotationCategories(david_d, c("GOTERM_MF_ALL"))
 
-mfObject<- as.data.frame(getFunctionalAnnotationChart(object=david_d,  threshold=1, count=0L))
-write.csv(x =mfObject ,file = paste0("../c_results/","changedSta_DAVID_MF",".csv"))
+DavidChanged_sta_mf<- as.data.frame(getFunctionalAnnotationChart(object=david_d,  threshold=1, count=0L))
+DavidChanged_sta_mf %>% dplyr::mutate(phase="Sta", 
+                                     name="changed",
+                                     test="Mf") -> DavidChanged_sta_mf
+# write.csv(x =DavidChanged_sta_mf ,file = paste0("../c_results/","changedSta_DAVID_MF",".csv"))
 ###*****************************
 
 
+###*****************************
+# Combine all outputs of kegg
+dplyr::bind_rows(DavidChanged_exp_kegg,DavidChanged_exp_mf,DavidChanged_sta_kegg,DavidChanged_sta_mf)->DavidChanged
+DavidChanged %>% dplyr::filter(FDR < 0.05) -> DavidChanged
+write.csv(x =DavidChanged ,file = paste0("../c_results/","changed_DAVID_P05",".csv"))
+###*****************************

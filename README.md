@@ -39,15 +39,13 @@ the aim of the folder is to find enriched genes with help of DeSeq2 for given da
 
 
 D- Mf Pathway Analyse 
-   Aim of the folder is to generate some figures from results of DAVID runs
+   Aim of the folder is to generate some figures and edited tables from results of DAVID runs
 
 E- FLUX Analysis 
    Aim of this folder is to do the flux data analysis.
    FluxSaltStressAnalyze.R generates concentration vs flux figures for RNA and Proteins and for exponential (figS23) and stationary phases.
 
-More details of the pipe can be found in 
-	"summary of the pipeline" 
-text
+More details of the pipe can be found in instructions_for_pipeline.docx
 
 
 
