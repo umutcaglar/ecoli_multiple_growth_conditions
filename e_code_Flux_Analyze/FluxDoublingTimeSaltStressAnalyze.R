@@ -325,10 +325,9 @@ fig_Mg_exp<-ggplot2::ggplot(flux_doublingTime_Mg_exp,aes(x=meanDT, y=MeanFluxRat
                  data = flux_doublingTime_Mg_exp)+
   labs(y="Flux Ratio", x="Doubling time") +
   theme_bw()+
-  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5, size=12),
         strip.text.x = element_text(size = facetFontSize, face = "bold"),
         strip.text.y = element_text(size = facetFontSize, face = "bold"),
-        axis.text.x=element_text(size=12),
         axis.text.y=element_text(size=12),
         axis.title.x=element_text(size=20),
         axis.title.y=element_text(size=20),
@@ -354,10 +353,9 @@ fig_Na_exp<-ggplot2::ggplot(flux_doublingTime_Na_exp,aes(x=meanDT, y=MeanFluxRat
                  data = flux_doublingTime_Na_exp)+
   labs(y="Flux Ratio", x="Doubling time") +
   theme_bw()+
-  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5, size=12),
         strip.text.x = element_text(size = facetFontSize, face = "bold"),
         strip.text.y = element_text(size = facetFontSize, face = "bold"),
-        axis.text.x=element_text(size=12),
         axis.text.y=element_text(size=12),
         axis.title.x=element_text(size=20),
         axis.title.y=element_text(size=20),
@@ -383,10 +381,9 @@ fig_MgNa_exp<-ggplot2::ggplot(flux_doublingTime_MgNa_exp,aes(x=meanDT, y=MeanFlu
                  data = flux_doublingTime_MgNa_exp)+
   labs(y="Flux Ratio", x="Doubling time") +
   theme_bw()+
-  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5, size=12),
         strip.text.x = element_text(size = facetFontSize, face = "bold"),
         strip.text.y = element_text(size = facetFontSize, face = "bold"),
-        axis.text.x=element_text(size=12),
         axis.text.y=element_text(size=12),
         axis.title.x=element_text(size=20),
         axis.title.y=element_text(size=20),
@@ -431,10 +428,9 @@ fig_GLYfromSER<-ggplot2::ggplot(GLYfromSER,aes(x=meanDT, y=MeanFluxRatio)) +
                  data = GLYfromSER)+
   labs(y="Flux Ratio", x="Doubling time") +
   theme_bw()+
-  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5, size=12),
         strip.text.x = element_text(size = facetFontSize, face = "bold"),
         strip.text.y = element_text(size = facetFontSize, face = "bold"),
-        axis.text.x=element_text(size=12),
         axis.text.y=element_text(size=12),
         axis.title.x=element_text(size=20),
         axis.title.y=element_text(size=20),

@@ -41,7 +41,7 @@ source("distance_table_functions.R")
 # Parameters
 
 # Number of Runs
-numRuns=10000
+numRuns=2000
 # the distance type (cophenetic / euclidean)
 distanceType="cophenetic"
 ###*****************************

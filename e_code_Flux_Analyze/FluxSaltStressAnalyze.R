@@ -269,10 +269,9 @@ fig_Na_exp<-ggplot2::ggplot(data_plots_Na_exp,aes(x=Conc, y=MeanFluxRatio, colou
                 data = data_plots_Na_exp)+
   labs(y="Flux Ratio", x="Concentration") +
   theme_bw()+
-  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5, size=12),
         strip.text.x = element_text(size = facetFontSize, face = "bold"),
         strip.text.y = element_text(size = facetFontSize,face = "bold"),
-        axis.text.x=element_text(size=12),
         axis.text.y=element_text(size=12),
         axis.title.x=element_text(size=20),
         axis.title.y=element_text(size=20),
@@ -294,10 +293,9 @@ fig_Na_sta<-ggplot2::ggplot(data_plots_Na_sta,aes(x=Conc, y=MeanFluxRatio, colou
                 data = data_plots_Na_sta)+
   labs(y="Flux Ratio", x="Concentration") +
   theme_bw()+
-  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5, size=12),
         strip.text.x = element_text(size = facetFontSize, face = "bold"),
         strip.text.y = element_text(size = facetFontSize, face = "bold"),
-        axis.text.x=element_text(size=12),
         axis.text.y=element_text(size=12),
         axis.title.x=element_text(size=20),
         axis.title.y=element_text(size=20),
@@ -321,10 +319,9 @@ fig_Mg_exp<-ggplot2::ggplot(data_plots_Mg_exp,aes(x=Conc, y=MeanFluxRatio, colou
                 data = data_plots_Mg_exp)+
   labs(y="Flux Ratio", x="Concentration") +
   theme_bw()+
-  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5, size=12),
         strip.text.x = element_text(size = facetFontSize, face = "bold"),
         strip.text.y = element_text(size = facetFontSize, face = "bold"),
-        axis.text.x=element_text(size=12),
         axis.text.y=element_text(size=12),
         axis.title.x=element_text(size=20),
         axis.title.y=element_text(size=20),
@@ -348,10 +345,9 @@ fig_Mg_sta<-ggplot2::ggplot(data_plots_Mg_sta,aes(x=Conc, y=MeanFluxRatio, colou
                 data = data_plots_Mg_sta)+
   labs(y="Flux Ratio", x="Concentration") +
   theme_bw()+
-  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5, size=12),
         strip.text.x = element_text(size = facetFontSize, face = "bold"),
         strip.text.y = element_text(size = facetFontSize, face = "bold"),
-        axis.text.x=element_text(size=12),
         axis.text.y=element_text(size=12),
         axis.title.x=element_text(size=20),
         axis.title.y=element_text(size=20),

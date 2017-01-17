@@ -33,9 +33,13 @@ require("stringr")
 ###*****************************
 
 
+
 ###*****************************
 # Combine for Genes
 # get file names convert into df divide into parts
+dictionary=read.csv(file = "../generateDictionary/nameDictionary_RNA&Protein.csv")
+
+
 dir() %>%
   data.frame(fullFileName=.) %>%
   dplyr::mutate(ffN=fullFileName) %>%
@@ -93,7 +97,7 @@ dir() %>%
   dplyr::filter(grepl(pattern = "resDf_",x = fullFileName)) %>%
   dplyr::mutate(ffN=gsub(pattern = "_mM_Levels","",ffN)) %>%
   dplyr::mutate(ffN=gsub(pattern = ".csv","",ffN)) %>%
-  tidyr::separate(data = ., col = ffN, into = c("v1","thresholds_for_input_genes","dataType", 
+  tidyr::separate(data = ., col = ffN, into = c("v1","dataType", 
                                                 "sumTechnicalReplicates", "preEleminationOfData", "experiments",
                                                 "carbonSource","Mg","Na",
                                                 "growthPhase","filter","plus1SizeFactor",
@@ -108,9 +112,6 @@ for(counter01 in 1:nrow(allResultFiles))
 {
   print(counter01)
   m<-read.csv(file = as.vector(allResultFiles$fullFileName[counter01]))
-  #colnames(m)<-gsub(pattern = "KEGG_", replacement = "KEGG_MF_", colnames(m))
-  #colnames(m)<-gsub(pattern = "MF_", replacement = "KEGG_MF_", colnames(m))
-  #colnames(m)<-gsub(pattern = "_MF", replacement = "", colnames(m))
   m %>% dplyr::mutate(fullFileName = as.vector(allResultFiles$fullFileName[counter01])) ->m
   
   if(nrow(m)!=0)
@@ -124,8 +125,10 @@ for(counter01 in 1:nrow(allResultFiles))
 
 ###*****************************
 # Combine with experiment properties
-dplyr::left_join(fullList, allResultFiles)->fullList
+dplyr::left_join(fullList, allResultFiles, by="fullFileName")->fullList
+fullList %>% dplyr::select(-mRNA_ID, -b.)->fullList
 ###*****************************
+
 
 ###*****************************
 write.csv(x = fullList, file = "combinedOutputDF_DeSeq.csv")
