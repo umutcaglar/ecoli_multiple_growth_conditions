@@ -13,7 +13,7 @@ set.seed(14159)
 # Set Working Directory
 # One needs to arrange the correct pathway if this is not umut's computer ;)
 if(as.vector(Sys.info()["effective_user"]=="umut"))
-{setwd(paste0("/Users/umut/Desktop/responses/"))} # mac computer
+{setwd(paste0("/Users/umut/GitHub/ecoli_multiple_growth_conditions/temp_responses/"))} # mac computer
 ###*****************************
 
 
@@ -130,4 +130,64 @@ dataFile2 %>%
 ###*****************************
 # save it
 write.csv(x = dataFile2, file = "organized_md5.csv", na = "")
+###*****************************
+
+
+###*****************************
+# Compare to find the change
+newDataFile<-data.frame(dir("../../../../../Volumes/external st/mehmet_umut_caglar/fastqGZfiles/"))
+colnames(newDataFile)<-"newData"
+newDataFile %>%
+  dplyr::filter(grepl(pattern = "*.fastq.gz",x = newData)) %>%
+  dplyr::mutate(short=gsub(pattern = "fastq.gz",replacement = "fastq",x = newData))-> newDataFile
+
+newDataList=as.vector(newDataFile$short)
+oldDataList=as.vector(dataFile2$short)
+
+intersect(oldDataList,newDataList)->intersectionList
+setdiff(newDataList, oldDataList)->differenceList
+
+print(differenceList)
+###*****************************
+
+
+###*****************************
+# Load data new
+dataFileNew = read.csv(file = "../../../../../Volumes/external st/mehmet_umut_caglar/fastqGZfiles/checkList.csv",header = F)
+colnames(dataFileNew)<-"V1"
+###*****************************
+
+
+###*****************************
+# Seperate to multiple columns
+dataFileNew %>%
+  tibble::rownames_to_column()%>%
+  dplyr::group_by(rowname)%>%
+  dplyr::filter(grepl(pattern = "*.fastq.gz", x = V1)) %>%
+  dplyr::mutate(V1 = gsub(pattern = "MD5 \\(", replacement = "", x = V1)) %>%
+  dplyr::mutate(V1 = gsub(pattern = "\\) =", replacement = "", x = V1)) %>%
+  tidyr::separate(data = ., col = "V1", into = c("short", "md5sum"), sep = " ")->dataFileNew
+###*****************************
+
+
+###*****************************
+dataFileNew %>%
+  dplyr::mutate(MURI=gsub(pattern="_SA*.*", replacement = " ", x = short)) %>%
+  dplyr::mutate(L=stringr::str_extract(string = short, pattern = "L...")) %>%
+  dplyr::mutate(R=gsub(pattern = "_", replacement = "", 
+                       stringr::str_extract(string = short, pattern = "_R._")))->dataFileNew
+###*****************************
+
+
+###*****************************
+# generate numbers to reoder data
+dataFileNew %>%
+  dplyr::mutate(MURI_num=as.numeric(gsub(pattern = "*.*_",replacement = "",x = MURI))) %>%
+  dplyr::arrange(MURI_num, R, L)->dataFileNew
+###*****************************
+
+
+###*****************************
+# save it
+write.csv(x = dataFileNew, file = "organized_md5_new.csv", na = "")
 ###*****************************

@@ -38,6 +38,12 @@ require(org.Hs.eg.db)
 
 
 ###*****************************
+# Required functions
+source("../b_code_histogram_RNA&Protein/replace_fun.R")
+###*****************************
+
+
+###*****************************
 # Read significantly altered gene list
 data<-read.csv(file = "../c_results/combinedDifferentiallyExpressedGenes_DeSeq.csv")
 data %>% 
@@ -82,14 +88,24 @@ joined_data$exist_in <- factor(joined_data$exist_in, levels=c("controlled for Gr
 
 
 ###*****************************
+# change mrna to mRNA
+joined_data$dataType<-replace_fun(input_vector = as.vector(joined_data$dataType), 
+                                  initialVal = "mrna",
+                                  finalVal = "mRNA")
+###*****************************
+
+
+###*****************************
 # Figure
 fig01<-ggplot(joined_data, aes(x = test_for)) +
   geom_bar(aes(fill = exist_in), position = "fill") +
   facet_grid(growthPhase ~ dataType) +
-  #scale_y_continuous(expand = c(0, 0),limits = c(0,2000))+
+  scale_fill_discrete(name="Analysis",
+                      labels=c("w/ doubling time", "either w/ or w/out \ndoubling time", "w/out doubling time"))+
   theme_bw()+
   xlab("Test Condition") + 
-  ylab("Number of differentially expressed genes") +
+  ylab("Fraction of differentially expressed genes") +
+  scale_y_continuous(expand = c(0, 0))+
   theme(panel.margin.y = unit(2, "lines"),
         panel.grid.minor.x = element_blank(),
         strip.text.x = element_text(size = 16),
@@ -100,6 +116,10 @@ fig01<-ggplot(joined_data, aes(x = test_for)) +
         axis.title.y=element_text(size=16),
         legend.title=element_text(size=14),
         legend.text=element_text(size=14),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        legend.key.height=unit(2,"line"),
+        #theme(legend.key.width=unit(5,"line")) +
         legend.background = element_rect(fill=alpha(colour = "white",
                                                     alpha = .4)))
 
