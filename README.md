@@ -12,7 +12,7 @@ In addition to these five groups of folders, we have data folders named:
 - `RNA_reads_06_13_2016`: contains RNA abundances
 - `Protein_reads_06_16_2016`: contains protein abundances
 - `DoublingTimeRawData`: contains doubling times
--`Flux_reads_06_21_2016`: contains flux data
+- `Flux_reads_06_21_2016`: contains flux data
 
 We also have a folder `text` that contains the manuscript and a folder `dictionary` that includes files that map "YP" names for proteins to "ECB" names for RNAs.
 
