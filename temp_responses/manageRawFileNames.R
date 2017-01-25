@@ -46,7 +46,7 @@ dataFile %>%
 dataFile %>%
   dplyr::mutate(MURI=gsub(pattern="_SA*.*", replacement = " ", x = short)) %>%
   dplyr::mutate(L=stringr::str_extract(string = short, pattern = "L...")) %>%
-  dplyr::mutate(R=gsub(pattern = "_", replacement = "", 
+  dplyr::mutate(R=gsub(pattern = "_", replacement = "",
                        stringr::str_extract(string = short, pattern = "_R._"))) %>%
   dplyr::select(-V1)->dataFile
 ###*****************************
@@ -66,7 +66,7 @@ dataFile %>%
 dataFile %>%
   dplyr::group_by() %>%
   dplyr::select(-L,-R) %>%
-  tidyr::spread(data = ., key = L_count, value = short)->dataFile 
+  tidyr::spread(data = ., key = L_count, value = short)->dataFile
 ###*****************************
 
 
@@ -74,7 +74,7 @@ dataFile %>%
 # generate numbers to reoder data
 dataFile %>%
   dplyr::mutate(MURI_num=as.numeric(gsub(pattern = "*.*_",replacement = "",x = MURI))) %>%
-  dplyr::arrange(MURI_num)->dataFile 
+  dplyr::arrange(MURI_num)->dataFile
 ###*****************************
 
 
@@ -112,7 +112,7 @@ dataFile2 %>%
 dataFile2 %>%
   dplyr::mutate(MURI=gsub(pattern="_SA*.*", replacement = " ", x = short)) %>%
   dplyr::mutate(L=stringr::str_extract(string = short, pattern = "L...")) %>%
-  dplyr::mutate(R=gsub(pattern = "_", replacement = "", 
+  dplyr::mutate(R=gsub(pattern = "_", replacement = "",
                        stringr::str_extract(string = short, pattern = "_R._"))) %>%
   dplyr::select(-V1)->dataFile2
 ###*****************************
@@ -174,8 +174,9 @@ dataFileNew %>%
 dataFileNew %>%
   dplyr::mutate(MURI=gsub(pattern="_SA*.*", replacement = " ", x = short)) %>%
   dplyr::mutate(L=stringr::str_extract(string = short, pattern = "L...")) %>%
-  dplyr::mutate(R=gsub(pattern = "_", replacement = "", 
-                       stringr::str_extract(string = short, pattern = "_R._")))->dataFileNew
+  dplyr::mutate(R=gsub(pattern = "_", replacement = "",
+                       stringr::str_extract(string = short, pattern = "_R._"))) %>%
+  dplyr::mutate(SA = stringr::str_extract(string = short, pattern = "SA....."))->dataFileNew
 ###*****************************
 
 
@@ -183,11 +184,37 @@ dataFileNew %>%
 # generate numbers to reoder data
 dataFileNew %>%
   dplyr::mutate(MURI_num=as.numeric(gsub(pattern = "*.*_",replacement = "",x = MURI))) %>%
-  dplyr::arrange(MURI_num, R, L)->dataFileNew
+  dplyr::arrange(MURI_num, R, L, SA)->dataFileNew
 ###*****************************
 
 
 ###*****************************
 # save it
 write.csv(x = dataFileNew, file = "organized_md5_new.csv", na = "")
+###*****************************
+
+###*****************************
+# Divide dataFileNew into 2 different parts
+dataFileNew %>%
+  dplyr::group_by() %>%
+  dplyr::filter(R == "R1") %>%
+  dplyr::select(-R, -md5sum, -rowname, short_R1 = short,
+                MURI, L, MURI_num)-> dataFileNewR1
+
+dataFileNew %>%
+  dplyr::group_by() %>%
+  dplyr::filter(R == "R2") %>%
+  dplyr::select(-R, -md5sum, -rowname, short_R2 = short,
+                MURI, L, MURI_num)-> dataFileNewR2
+
+dplyr::left_join(dataFileNewR1, dataFileNewR2) ->pairExperiments
+
+pairExperiments %>%
+  dplyr::select(MURI, MURI_num, L, SA, short_R1, short_R2)->pairExperiments
+###*****************************
+
+
+###*****************************
+# save it
+write.csv(x = pairExperiments, file = "pairExperiments.csv")
 ###*****************************
