@@ -285,4 +285,89 @@
 \end{figure}
 
 
+
+
+\clearpage
+
+\section*{Supplementary Tables}
+
+\subsection*{Supplementary Table S1}
+File name: tableS1\_meta\_data.csv
+
+Meta data table that gives information about all samples. Includes information about MURI numbers, experiment name, the time that sample is collected, harvest date, number of RNA samples (tech. replicates), number of protein samples (tech. replicates), batch numbers, Mg 2+, Na + concentrations, growth phase, Mg2+ and Na+ levels, growth phases, doubling time related information (mean, +-95\% confidence intervals, r\^2)
+
+\subsection*{Supplementary Table S2}
+File name: tableS2\_fluxData.csv
+
+Raw flux data for 13 branches for exponential and stationary phase
+
+\subsection*{Supplementary Table S3}
+File name: tableS3\_mRNA\_normalized\_raw\_data.csv
+
+mRNA data after normalization with DeSeq2 for size factors. Includes information for 4197 distinct proteins, and for 105 samples
+
+\subsection*{Supplementary Table S4}
+File name: tableS4\_protein\_normalized\_raw\_data.csv
+
+Protein data after normalization with DeSeq2 for size factors. Includes information for 4197 distinct proteins, and for 152 samples
+
+\subsection*{Supplementary Table S5}
+File name: tableS5\_clustering\_mrna\_cophenetic.csv
+
+Influence of parameter changes on overall mRNA data. This is measured by clustering scores for individual conditions and sub-conditions including batches for mRNA data
+
+\subsection*{Supplementary Table S6}
+File name: tableS6\_clustering\_protein\_cophenetic.csv
+
+Influence of parameter changes on overall protein data. This is measured by clustering scores for individual conditions and sub-conditions including batches for protein data
+
+\subsection*{Supplementary Table S7}
+File name: tableS7\_combinedOutputDF\_DeSeq.csv
+
+DeSeq2 enrichment analyse results for all genes and for all distinct tests. 
+Table contains information about :
+\begin{itemize}
+\item Id (ECB number for mRNA and YP number for proteins), and corresponding gene name
+\item Direct outcomes of DeSeq2 such as base mean value, log2FoldChange, ifcSE, stat, pvalue, padj.
+\item Direction of the change wrt base level ("+1" for increase "-1" for decrease)
+\item Data type (mRNA or protein)
+growth phase
+\item What is tested; base value and contrast.
+\item Individual output file name 
+\item Carbon Source, Mg\textsuperscript{2+} and Na\textsuperscript{+} levels and growth phase of test data 
+\item Control parameters of the test (batch or batch + growth rate)
+\end{itemize}
+
+\subsection*{Supplementary Table S8}
+File name: tableS8\_combinedDifferentiallyExpressedGenes\_DeSeq.csv
+
+Filtered version of supplementary table S7 with P<0.05 and log2FoldChange>2
+
+\subsection*{Supplementary Table S9}
+File name: tableS9\_combinedResultList\_DAVID.csv
+
+The DAVID web service outputs for KEGG and MF tests. Includes information for 24 tests which were controlled for batch effect
+
+\subsection*{Supplementary Table S10}
+File name: tableS10\_changed\_protein\_carbonSource\_ExpSta.csv
+
+Newly appeared genes when we control for "batch + growth rate" instead of "batch"; for proteins, and tested for carbon source. For both exponential and stationary phase
+
+\subsection*{Supplementary Table S11}
+File name: tableS11\_changed\_DAVID\_P05.csv
+
+Enriched KEGG pathways and molecular functions based on the genes listed on supplementary table S10
+
+\subsection*{Supplementary Table S12}
+File name: tableS12\_flux\_vs\_conc\_Pvalues.csv
+
+P values obtained by likelihood maximization for flux vs concentration for individual flux branches with individual phase (either exponential or stationary) and with individual salt (Mg\textsuperscript{2+} or Na\textsuperscript{+}) 
+
+\subsection*{Supplementary Table S13}
+File name: tableS13\_flux\_vs\_doublingTime\_Pvalues\_tog.csv
+
+P values obtained by likelihood maximization for flux vs doubling time for individual flux branches
+
+
+
 \end{document}
