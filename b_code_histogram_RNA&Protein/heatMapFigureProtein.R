@@ -217,6 +217,7 @@ desiredOrderText.x=as.vector(conditionSummary$dataSet)
 
 
 ###*****************************
+browser()
 # Do Dendogram for data sets
 dist_x=dist(t(mainDataFrame), 
             method = "euclidean", 
