@@ -23,7 +23,7 @@ if(as.vector(Sys.info()["effective_user"]=="umut"))
 
 ###*****************************
 # DOWNLOAD LIBRARIES
-require("Biobase") 
+require("Biobase")
 require("dplyr")
 require("tidyr")
 require("DESeq2")
@@ -46,23 +46,23 @@ dataName=name_data(initialValue=c("ez_P0.05Fold2"), # can be c("genes0.05","gene
                    # referenceParameters can be a vector like
                    # c("growthPhase", "Mg_mM_Levels", "Na_mM_Levels", "carbonSource", "experiment")
                    referenceParameters=c("growthPhase",
-                                         "Mg_mM_Levels", 
-                                         "Na_mM_Levels", 
-                                         "carbonSource", 
+                                         "Mg_mM_Levels",
+                                         "Na_mM_Levels",
+                                         "carbonSource",
                                          "experiment"),
                    # referenceLevels can be a vector like
                    # c("exponential", "baseMg", "baseNa", "glucose", "glucose_time_course")
                    referenceLevels=c("exponential",
-                                     "baseMg", 
-                                     "baseNa", 
-                                     "glucose", 
+                                     "baseMg",
+                                     "baseNa",
+                                     "glucose",
                                      "glucose_time_course"),
                    experimentVector = c("allEx"), # can be "Stc","Ytc","Nas","Agr","Ngr","Mgl","Mgh" // "allEx"
                    carbonSourceVector = "SYAN", # can be any sub combination of "SYAN"
                    MgLevelVector = c("allMg"), # can be "lowMg","baseMg","highMg" // "allMg"
                    NaLevelVector = c("allNa"), # can be "baseNa","highNa" // "allNa"
                    growthPhaseVector = c("exponential"), # can be "exponential","stationary","late_stationary" // "allPhase"
-                   filterGenes = "noMatchFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter" 
+                   filterGenes = "noMatchFilter", # can be "noFilter", "meanFilter", "maxFilter", "sdFilter"
                    threshold=NA, # the threshold value for "meanFilter", "maxFilter", "sdFilter"
                    roundData=TRUE,
                    sumTechnicalReplicates=TRUE,
